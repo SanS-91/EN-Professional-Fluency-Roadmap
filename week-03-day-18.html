@@ -1,0 +1,2562 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Day 18: Food & Culture Stories | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #ED8936;
+            --primary-dark: #C05621;
+            --primary-light: #F6AD55;
+            --primary-soft: #FFFAF0;
+            --secondary: #D53F8C;
+            --secondary-soft: #FFF5F7;
+            --accent: #38B2AC;
+            --accent-soft: #E6FFFA;
+            --warm: #F6AD55;
+            --warm-soft: #FFFAF0;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, var(--warm-soft) 50%, var(--secondary-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(237,137,54,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(213,63,140,0.15) 0%, transparent 40%);
+        }
+        
+        .day-header::after {
+            content: '🍜';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-subtitle strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-orange { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #FEEBC8; }
+        .section-pink { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #FED7E3; }
+        .section-teal { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #B2F5EA; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--biz-bg) 100%); border-color: #BEE3F8; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E9D8FD; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), var(--warm-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #9B2C2C;
+            font-style: italic;
+        }
+        
+        .problem-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .problem-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .problem-box li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--life-dark);
+            font-style: italic;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARD ========== */
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pattern-number {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pattern-phonetic {
+            color: var(--text-muted);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .freq-badge, .register-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .freq-badge {
+            background: var(--warm-soft);
+            color: #744210;
+        }
+        
+        .register-badge {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--primary-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--primary-dark);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong { color: var(--primary-dark); }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary);
+            position: relative;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        
+        .audio-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-left: 8px;
+        }
+        
+        .audio-btn:hover {
+            background: var(--primary-light);
+            transform: scale(1.1);
+        }
+        
+        .audio-btn.playing {
+            background: var(--secondary);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .usage-note {
+            background: var(--warm-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+            margin-top: 12px;
+            border-left: 3px solid var(--warm);
+        }
+        
+        .usage-note strong { color: #744210; }
+        
+        /* ========== STORYTELLING EXAMPLE ========== */
+        .storytelling-example {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        
+        .storytelling-example h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .storytelling-text {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .storytelling-text strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .storytelling-analysis {
+            background: var(--life-bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.6;
+        }
+        
+        .storytelling-analysis h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        .storytelling-analysis ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .storytelling-analysis li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .storytelling-analysis li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PRONUNCIATION TABLE ========== */
+        .pronunciation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            font-size: 13px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .pronunciation-table tr:last-child td { border-bottom: none; }
+        
+        .pronunciation-table code {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--primary-dark);
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--primary-soft), var(--warm-soft));
+            border-color: var(--primary);
+        }
+        
+        .scenario-card.challenge {
+            background: linear-gradient(135deg, var(--warm-soft), var(--accent-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--primary); }
+        .scenario-card.challenge .scenario-badge { background: var(--warning); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: var(--primary-dark); }
+        .scenario-card.challenge h4 { color: #744210; }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: var(--primary-dark); }
+        .scenario-card.challenge p { color: #744210; }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-requirements { color: var(--primary-dark); }
+        .scenario-card.challenge .scenario-requirements { color: #744210; }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--primary); color: var(--primary-dark); }
+        .scenario-card.challenge .record-btn { border-color: var(--warning); color: #744210; }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--primary); color: white; }
+        .scenario-card.challenge .record-btn:hover { background: var(--warning); color: white; }
+        
+        /* ========== REALITY TASK ========== */
+        .task-levels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+        
+        .task-level {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 2px solid;
+            position: relative;
+        }
+        
+        .task-level.easy { border-color: var(--life); }
+        .task-level.standard { border-color: var(--biz); }
+        .task-level.challenge { border-color: var(--warning); }
+        
+        .task-level-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+        
+        .task-level.easy .task-level-badge { background: var(--life); }
+        .task-level.standard .task-level-badge { background: var(--biz); }
+        .task-level.challenge .task-level-badge { background: var(--warning); }
+        
+        .task-level h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 8px 0 6px;
+        }
+        
+        .task-level.easy h4 { color: var(--life-dark); }
+        .task-level.standard h4 { color: var(--biz-dark); }
+        .task-level.challenge h4 { color: #744210; }
+        
+        .task-time {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--bg);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .task-level p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .task-requirements {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .task-requirements ul {
+            padding-left: 16px;
+            margin-top: 4px;
+        }
+        
+        .task-requirements li {
+            padding: 2px 0;
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 10px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-tip strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(237,137,54,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            .day-header::after { font-size: 2.5rem; top: 20px; right: 20px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .task-levels { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-03.html" class="nav-back">← Week 3 Hub</a>
+            <div class="nav-progress">
+                <span>Day 18 / 21</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 86%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-03.html" class="day-tab">Overview</a>
+                <a href="week-03-day-15.html" class="day-tab">Day 15</a>
+                <a href="week-03-day-16.html" class="day-tab">Day 16</a>
+                <a href="week-03-day-17.html" class="day-tab">Day 17</a>
+                <a href="week-03-day-18.html" class="day-tab active">Day 18</a>
+                <a href="week-03-day-19.html" class="day-tab">Day 19</a>
+                <a href="week-03-day-20.html" class="day-tab">Day 20</a>
+                <a href="week-03-day-21.html" class="day-tab">Day 21</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-03.html">Week 3</a>
+                <span>›</span>
+                <span>Day 18</span>
+            </div>
+            <h1 class="day-title">🍜 Food & Culture Stories</h1>
+            <p class="day-subtitle">Food isn't just about taste. It's about <strong>culture, memory, and connection</strong>. The best food stories make people feel like they're there with you — tasting, smelling, feeling every moment.</p>
+            <div class="day-meta">
+                <span class="meta-tag">🍜 Food & Culture</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 5 storytelling patterns</span>
+                <span class="meta-tag">🌍 Sensory & cultural</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>🍜 From Yelp Review to Food Story</h4>
+                <p>Most people describe food flatly: "The food was delicious. I really enjoyed it." But C1 storytellers create <strong>sensory experiences</strong>: "The first time I tried authentic phở, I was blown away. What makes it special isn't just the taste — it's the ritual." The difference? <strong>Sensory details. Cultural insights. Emotional connections.</strong></p>
+            </div>
+            
+            <div class="problem-box">
+                <h4>❌ Why most food stories are boring</h4>
+                <div class="comparison">
+                    "The food was delicious. I really enjoyed it. The restaurant was nice. I'd recommend it."
+                </div>
+                <p>Nghe như Yelp review. Không có sensory details. Không có cultural context. Không có emotional connection.</p>
+                <ul style="margin-top: 8px;">
+                    <li>Không có sensory details (taste, smell, texture, sight)</li>
+                    <li>Không có cultural insights về food culture</li>
+                    <li>Không có emotional connections qua food</li>
+                    <li>Không có memorable moments hay surprises</li>
+                </ul>
+            </div>
+            
+            <div class="solution-box">
+                <h4>✅ What C1 storytellers do differently</h4>
+                <div class="comparison">
+                    "The first time I tried authentic phở in Hanoi, I was blown away. What makes it special isn't just the taste — it's the ritual. You watch the chef carefully arrange the herbs, the way the broth steams, the sound of the noodles being pulled. It reminded me of my grandmother's kitchen, but with this incredible energy you only get in Vietnam. The funny thing was that the 'simple' bowl of phở took 12 hours to make. I'll never forget that meal because it taught me that the best food isn't just about ingredients — it's about the story behind it."
+                </div>
+                <ul>
+                    <li><strong>"The first time I tried..."</strong> - First experience với reaction</li>
+                    <li><strong>"What makes it special is..."</strong> - Cultural significance</li>
+                    <li><strong>Sensory details</strong>: "watch the chef", "broth steams", "sound of noodles"</li>
+                    <li><strong>"It reminded me of..."</strong> - Emotional connection, memory</li>
+                    <li><strong>"The funny thing was..."</strong> - Cultural observation, surprise</li>
+                    <li><strong>"I'll never forget..."</strong> - Lasting impact, lesson learned</li>
+                    <li><strong>Cultural insight</strong>: "best food isn't just about ingredients — it's about the story"</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">5 Patterns</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Food & culture patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎭</div>
+                    <div class="plan-block-title">Examples</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Integrated stories</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗣️</div>
+                    <div class="plan-block-title">Speaking</div>
+                    <div class="plan-block-time">25 min</div>
+                    <div class="plan-block-desc">4 scenarios + record</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎴</div>
+                    <div class="plan-block-title">Review</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Flashcards + quiz</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5 Food & Culture Patterns -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">📚</span> 5 Food & Culture Patterns</h2>
+            <p class="section-desc">5 patterns để tạo sensory food stories với cultural insights và emotional connections. Click 🔊 để nghe phát âm.</p>
+            
+            <!-- Pattern 1 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">1</div>
+                    <div>"The first time I tried [food], I [reaction]"</div>
+                </div>
+                <div class="pattern-phonetic">/ðə fɜːrst taɪm aɪ traɪd [fuːd], aɪ [riˈækʃən]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Describe first experience với food, kèm reaction. Tạo curiosity về food và experience.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "The first time I tried" = set up first experience. "I [reaction]" = show emotional response. Tạo curiosity về food và experience. Natural storytelling structure cho food stories.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The first time I tried authentic ramen in Tokyo, I was blown away by the depth of flavor.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The first time I tried</strong> authentic ramen in Tokyo, <strong>I was blown away</strong> by the depth of flavor."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The first time I tried durian, I was shocked — it smelled terrible but tasted amazing.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The first time I tried</strong> durian, <strong>I was shocked</strong> — it smelled terrible but tasted amazing."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The first time I tried omakase, I realized how much attention to detail goes into Japanese cuisine.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>The first time I tried</strong> omakase, <strong>I realized</strong> how much attention to detail goes into Japanese cuisine."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The first time I tried molecular gastronomy, I was amazed at how science can transform food.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>The first time I tried</strong> molecular gastronomy, <strong>I was amazed</strong> at how science can transform food."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để describe first experience với food. Reaction phải strong hoặc unexpected. Tạo emotional connection với listener.
+                </div>
+            </div>
+            
+            <!-- Pattern 2 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">2</div>
+                    <div>"What makes it special is [cultural detail]"</div>
+                </div>
+                <div class="pattern-phonetic">/wʌt meɪks ɪt ˈspɛʃəl ɪz [ˈkʌltʃərəl dɪˈteɪl]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Explain cultural significance hoặc unique aspect của food. Show cultural understanding.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "What makes it special is" = highlight unique aspect. "cultural detail" = show cultural understanding. Demonstrate depth beyond just taste. Natural way để share cultural insights.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What makes it special is not just the taste — it is the ritual of sharing the meal with family.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>What makes it special</strong> isn't just the taste — it's <strong>the ritual</strong> of sharing the meal with family."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What makes it special is the way they use ingredients that have been passed down for generations.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>What makes it special</strong> is <strong>the way they use ingredients</strong> that have been passed down for generations."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'What makes it special is the attention to detail — every dish tells a story about the region.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>What makes it special</strong> is <strong>the attention to detail</strong> — every dish tells a story about the region."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'What makes it special is the balance of flavors that reflects the culture philosophy of harmony.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>What makes it special</strong> is <strong>the balance of flavors</strong> that reflects the culture's philosophy of harmony."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để explain cultural significance. Detail phải meaningful hoặc unique. Show cultural understanding và appreciation.
+                </div>
+            </div>
+            
+            <!-- Pattern 3 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">3</div>
+                    <div>"It reminded me of [memory/connection]"</div>
+                </div>
+                <div class="pattern-phonetic">/ɪt rɪˈmaɪndɪd miː əv [ˈmɛməri/kəˈnɛkʃən]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Connect food với memory hoặc emotional connection. Tạo emotional depth trong story.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "It reminded me of" = create emotional connection. "memory/connection" = show personal connection. Tạo emotional depth trong story. Natural way để connect food với life.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'It reminded me of my grandmother kitchen — the same smells, the same warmth.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>It reminded me of</strong> my grandmother's kitchen — the same smells, the same warmth."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'It reminded me of my first trip to Italy — the simplicity, the freshness, the joy.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>It reminded me of</strong> my first trip to Italy — the simplicity, the freshness, the joy."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'It reminded me of my first business trip to Japan — the precision, the respect, the attention to detail.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>It reminded me of</strong> my first business trip to Japan — the precision, the respect, the attention to detail."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'It reminded me of why I got into this industry — the passion, the creativity, the impact.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>It reminded me of</strong> why I got into this industry — the passion, the creativity, the impact."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để connect food với memory hoặc emotion. Memory phải meaningful hoặc relatable. Tạo emotional connection với listener.
+                </div>
+            </div>
+            
+            <!-- Pattern 4 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">4</div>
+                    <div>"The funny thing about [food culture] was [observation]"</div>
+                </div>
+                <div class="pattern-phonetic">/ðə ˈfʌni θɪŋ əˈbaʊt [fuːd ˈkʌltʃər] wʌz [ˌɒbzərˈveɪʃən]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Casual</span>
+                </div>
+                <p class="pattern-meaning">Share cultural observation hoặc surprise về food culture. Add humor và insight.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "The funny thing about" = signal of cultural observation. "observation" = show cultural understanding. Add humor và insight vào story. Natural way để share cultural insights.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The funny thing about Japanese food culture was how seriously they take even the simplest dishes.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The funny thing about</strong> Japanese food culture <strong>was</strong> how seriously they take even the simplest dishes."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The funny thing about Italian food culture was how everyone has an opinion on the right way to make pasta.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The funny thing about</strong> Italian food culture <strong>was</strong> how everyone has an opinion on the 'right' way to make pasta."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The funny thing about French dining culture was how a 3-hour lunch is considered normal.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>The funny thing about</strong> French dining culture <strong>was</strong> how a 3-hour lunch is considered normal."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The funny thing about Korean food culture was how everything comes with dozens of side dishes.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>The funny thing about</strong> Korean food culture <strong>was</strong> how everything comes with dozens of side dishes."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để share cultural observation. Observation phải interesting hoặc surprising. Add humor và cultural insight.
+                </div>
+            </div>
+            
+            <!-- Pattern 5 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">5</div>
+                    <div>"I'll never forget [meal/food experience] because [reason]"</div>
+                </div>
+                <div class="pattern-phonetic">/aɪl ˈnɛvər fərˈɡɛt [miːl/fuːd ɪkspɪəriəns] bɪˈkɒz [ˈriːzən]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Express lasting impact của food experience. Show how food experience changed you.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "I'll never forget" = express lasting impact. "because [reason]" = explain why memorable. Show how food experience changed you. Natural way để end food story.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I will never forget that meal because it was the first time I realized food could be art.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>I'll never forget</strong> that meal <strong>because</strong> it was the first time I realized food could be art."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I will never forget that street food experience because it taught me that the best food does not need to be fancy.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>I'll never forget</strong> that street food experience <strong>because</strong> it taught me that the best food doesn't need to be fancy."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I will never forget that business dinner because it taught me the importance of building relationships over meals.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>I'll never forget</strong> that business dinner <strong>because</strong> it taught me the importance of building relationships over meals."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I will never forget that cooking class because it changed how I think about attention to detail.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>I'll never forget</strong> that cooking class <strong>because</strong> it changed how I think about attention to detail."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để express lasting impact. Reason phải meaningful hoặc life-changing. Tạo emotional depth và lasting impression.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Integrated Story Examples -->
+        <section class="section section-teal">
+            <h2 class="section-title"><span class="section-icon">🎭</span> Integrated Story Examples</h2>
+            <p class="section-desc">Xem cách 5 food & culture patterns được kết hợp trong 2 stories hoàn chỉnh. Click 🔊 để nghe từng story.</p>
+            
+            <!-- Story 1 -->
+            <div class="storytelling-example">
+                <h4>🍜 Story 1: The First Authentic Phở</h4>
+                <button class="audio-btn" onclick="playAudio(this, 'The first time I tried authentic pho in Hanoi, I was blown away. What makes it special is not just the taste — it is the ritual. You watch the chef carefully arrange the herbs, the way the broth steams, the sound of the noodles being pulled. It reminded me of my grandmother kitchen, but with this incredible energy you only get in Vietnam. The funny thing was that the simple bowl of pho took 12 hours to make. I will never forget that meal because it taught me that the best food is not just about ingredients — it is about the story behind it.')" style="float: right; margin-top: -30px;">🔊</button>
+                <div class="storytelling-text">
+                    "<strong>The first time I tried</strong> authentic phở in Hanoi, <strong>I was blown away</strong>.
+                    <br><br>
+                    <strong>What makes it special</strong> isn't just the taste — it's <strong>the ritual</strong>. You watch the chef carefully arrange the herbs, the way the broth steams, the sound of the noodles being pulled.
+                    <br><br>
+                    <strong>It reminded me of</strong> my grandmother's kitchen, but with this incredible energy you only get in Vietnam.
+                    <br><br>
+                    <strong>The funny thing was</strong> that the 'simple' bowl of phở took 12 hours to make.
+                    <br><br>
+                    <strong>I'll never forget</strong> that meal <strong>because</strong> it taught me that the best food isn't just about ingredients — it's about the story behind it."
+                </div>
+                <div class="storytelling-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li><strong>"The first time I tried..."</strong> - First experience với reaction ("blown away")</li>
+                        <li><strong>"What makes it special is..."</strong> - Cultural significance (ritual, not just taste)</li>
+                        <li><strong>Sensory details</strong>: Visual (watch the chef), auditory (sound of noodles), tactile (broth steams)</li>
+                        <li><strong>"It reminded me of..."</strong> - Emotional connection (grandmother's kitchen)</li>
+                        <li><strong>"The funny thing was..."</strong> - Cultural observation (12 hours for "simple" dish)</li>
+                        <li><strong>"I'll never forget..."</strong> - Lasting impact (lesson about food and story)</li>
+                        <li><strong>Cultural insight</strong>: Food is about story, not just ingredients</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Story 2 -->
+            <div class="storytelling-example" style="margin-top: 20px;">
+                <h4>🍣 Story 2: The Business Dinner in Japan</h4>
+                <button class="audio-btn" onclick="playAudio(this, 'The first time I had omakase in Tokyo, I was amazed at how much attention to detail goes into every dish. What makes it special is the chef philosophy — each piece of sushi tells a story about the season, the region, the fisherman. It reminded me of my first business trip to Japan — the precision, the respect, the commitment to excellence. The funny thing about Japanese dining culture was how the chef spent 10 minutes just preparing one piece of fish. I will never forget that dinner because it taught me that excellence is not about speed — it is about care.')" style="float: right; margin-top: -30px;">🔊</button>
+                <div class="storytelling-text">
+                    "<strong>The first time I had</strong> omakase in Tokyo, <strong>I was amazed</strong> at how much attention to detail goes into every dish.
+                    <br><br>
+                    <strong>What makes it special</strong> is <strong>the chef's philosophy</strong> — each piece of sushi tells a story about the season, the region, the fisherman.
+                    <br><br>
+                    <strong>It reminded me of</strong> my first business trip to Japan — the precision, the respect, the commitment to excellence.
+                    <br><br>
+                    <strong>The funny thing about</strong> Japanese dining culture <strong>was</strong> how the chef spent 10 minutes just preparing one piece of fish.
+                    <br><br>
+                    <strong>I'll never forget</strong> that dinner <strong>because</strong> it taught me that excellence isn't about speed — it's about care."
+                </div>
+                <div class="storytelling-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li><strong>"The first time I had..."</strong> - First experience với reaction ("amazed")</li>
+                        <li><strong>"What makes it special is..."</strong> - Cultural significance (philosophy, story)</li>
+                        <li><strong>"It reminded me of..."</strong> - Business connection (first business trip)</li>
+                        <li><strong>"The funny thing about..."</strong> - Cultural observation (10 minutes for one piece)</li>
+                        <li><strong>"I'll never forget..."</strong> - Business lesson (excellence = care, not speed)</li>
+                        <li><strong>Cultural insight</strong>: Japanese philosophy of excellence and care</li>
+                        <li><strong>Business connection</strong>: Connect food culture với business values</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pronunciation -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Pronunciation Focus</h2>
+            <p class="section-desc">Food & culture phrases pronunciation và sensory vocabulary.</p>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 0 0 12px; color: var(--text-primary);">🔤 Food & Culture Phrases</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Phrase</th>
+                        <th>IPA</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>The first time I tried</strong></td>
+                        <td><code>/ðə fɜːrst taɪm aɪ traɪd/</code></td>
+                        <td>"tried" = /traɪd/</td>
+                    </tr>
+                    <tr>
+                        <td><strong>What makes it special</strong></td>
+                        <td><code>/wʌt meɪks ɪt ˈspɛʃəl/</code></td>
+                        <td>Stress on "spe"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>It reminded me of</strong></td>
+                        <td><code>/ɪt rɪˈmaɪndɪd miː əv/</code></td>
+                        <td>Linking: "reminded me"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The funny thing about</strong></td>
+                        <td><code>/ðə ˈfʌni θɪŋ əˈbaʊt/</code></td>
+                        <td>"thing" = /θɪŋ/ (not /tɪŋ/)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>I'll never forget</strong></td>
+                        <td><code>/aɪl ˈnɛvər fərˈɡɛt/</code></td>
+                        <td>Linking: "I'll never"</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🌶️ Sensory Vocabulary</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>IPA</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>aroma</strong></td>
+                        <td><code>/əˈroʊmə/</code></td>
+                        <td>Stress on "ro"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>texture</strong></td>
+                        <td><code>/ˈtɛkstʃər/</code></td>
+                        <td>Stress on "tex"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>flavor</strong></td>
+                        <td><code>/ˈfleɪvər/</code></td>
+                        <td>Stress on "fla"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>simmer</strong></td>
+                        <td><code>/ˈsɪmər/</code></td>
+                        <td>Stress on "sim"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>garnish</strong></td>
+                        <td><code>/ˈɡɑːrnɪʃ/</code></td>
+                        <td>Stress on "gar"</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+            
+            <div style="background: var(--bg); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--life); font-size: 13px; line-height: 1.8;">
+                <div><code>"The first time I tried..."</code> ↗ - Rising (create curiosity)</div>
+                <div><code>"What makes it special is..."</code> ↘ - Falling (highlight significance)</div>
+                <div><code>"It reminded me of..."</code> ↗↘ - Rise-fall (emotional connection)</div>
+                <div><code>"The funny thing was..."</code> ↗↘ - Rise-fall (humor, observation)</div>
+                <div><code>"I'll never forget..."</code> ↘ - Falling (lasting impact)</div>
+            </div>
+        </section>
+        
+        <!-- Speaking Scenarios -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🗣️</span> Speaking: 4 Scenarios</h2>
+            <p class="section-desc">4 scenarios để practice food & culture storytelling. Mỗi scenario có sample flow để bạn tham khảo. Click vào nút để xem chi tiết.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1 -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - 3-4 min</span>
+                    <h4>Scenario 1: Memorable Food Experience</h4>
+                    <p>Bạn đang nói chuyện với bạn về một memorable food experience trong chuyến đi.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 food & culture patterns</li>
+                            <li>Có sensory details (taste, smell, texture, sight)</li>
+                            <li>Có cultural insights</li>
+                            <li>Có emotional connection</li>
+                            <li>Có lasting impact</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('food')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business - 3-4 min</span>
+                    <h4>Scenario 2: Food Culture Insight</h4>
+                    <p>Bạn đang nói chuyện với colleague về food culture insight từ business trip.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 food & culture patterns</li>
+                            <li>Professional tone nhưng vẫn engaging</li>
+                            <li>Có cultural insights về business culture</li>
+                            <li>Connect food với business values</li>
+                            <li>Có lasting impact</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('business')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 3 -->
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">🔄 Mixed - 3-4 min</span>
+                    <h4>Scenario 3: Food & Culture Story</h4>
+                    <p>Bạn đang ở networking event, ai đó hỏi về memorable food experiences.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 food & culture patterns</li>
+                            <li>Balance professional và personal</li>
+                            <li>Story phải memorable và engaging</li>
+                            <li>Connect food với broader insight</li>
+                            <li>Keep conversation flowing</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('networking')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 4 -->
+                <div class="scenario-card challenge">
+                    <span class="scenario-badge">🔥 Challenge - 5 min</span>
+                    <h4>Scenario 4: Podcast Interview</h4>
+                    <p>Bạn đang trong podcast/video, được hỏi về memorable food experiences.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng TẤT CẢ 5 food & culture patterns</li>
+                            <li>Story phải có sensory details</li>
+                            <li>Có cultural insights</li>
+                            <li>Có emotional depth</li>
+                            <li>Keep listener engaged for 5 minutes</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('podcast')">🎙️ Xem Sample Flow</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reality Task -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Reality Task - Choose Your Level</h2>
+            <p class="section-desc">Bài tập THỰC TẾ - apply food & culture patterns vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+            
+            <div class="task-levels">
+                <div class="task-level easy">
+                    <div class="task-level-badge">EASY</div>
+                    <h4>📝 Write a Food & Culture Story</h4>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p>Viết 150-word story về một memorable food experience dùng ít nhất 3 patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng "The first time I tried..." hoặc "What makes it special is..."</li>
+                            <li>Dùng "It reminded me of..." hoặc "The funny thing was..."</li>
+                            <li>Dùng "I'll never forget... because..."</li>
+                            <li>Có sensory details</li>
+                            <li>Có cultural insights</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--life-bg); border-radius: 6px; font-size: 12px; color: var(--life-dark);">
+                        <strong>Deliverable:</strong> Text post (LinkedIn hoặc gửi cho bạn)
+                    </div>
+                </div>
+                
+                <div class="task-level standard">
+                    <div class="task-level-badge">STANDARD</div>
+                    <h4>🎙️ Tell a Food & Culture Story</h4>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p>Record 3-minute story về một memorable food experience dùng ít nhất 4 patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng ít nhất 4 food & culture patterns</li>
+                            <li>Có sensory details (taste, smell, texture, sight)</li>
+                            <li>Có cultural insights</li>
+                            <li>Natural delivery (không đọc script)</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--biz-bg); border-radius: 6px; font-size: 12px; color: var(--biz-dark);">
+                        <strong>Deliverable:</strong> Audio recording
+                    </div>
+                </div>
+                
+                <div class="task-level challenge">
+                    <div class="task-level-badge">CHALLENGE</div>
+                    <h4>🎥 5-Minute Food & Culture Storytelling</h4>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p>Record 5-minute story về một memorable food experience dùng TẤT CẢ 5 patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng TẤT CẢ 5 food & culture patterns</li>
+                            <li>Story có sensory details và cultural insights</li>
+                            <li>Có emotional depth và lasting impact</li>
+                            <li>Engaging delivery</li>
+                            <li>Record 3 iterations (Content → Delivery → Polish)</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--warm-soft); border-radius: 6px; font-size: 12px; color: #744210;">
+                        <strong>Deliverable:</strong> Video file HOẶC LinkedIn post
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard Review</h2>
+            <p class="section-desc">6 flashcards với food & culture patterns và tips. Mặt trước: pattern. Mặt sau: example + tip.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-pattern" id="fc-pattern">The first time I tried [food], I [reaction]</div>
+                            <div class="card-hint">Tap to reveal example →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-example" id="fc-example">"The first time I tried authentic ramen in Tokyo, I was blown away by the depth of flavor."</div>
+                            <div class="card-tip" id="fc-tip">
+                                <strong>💡 Tip:</strong>
+                                Describe first experience với strong reaction. Tạo curiosity và emotional connection. Reaction phải strong hoặc unexpected.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Food & Culture</h2>
+            <p class="section-desc">7 câu hỏi về food & culture patterns. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Pattern nào describe first food experience tốt nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "The food was delicious."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "The first time I tried authentic ramen, I was blown away."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "I really enjoyed the meal."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "The restaurant was nice."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. "What makes it special is..." dùng để làm gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. Describe taste</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. Explain cultural significance</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. Share personal opinion</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. Create hook</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">3. "It reminded me of..." thêm gì vào food story?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Sensory details</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. Cultural insights</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. Emotional connection, memory</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. Humor</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. "The funny thing about [food culture] was..." dùng khi nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. Khi muốn describe taste</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. Khi muốn share cultural observation hoặc surprise</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. Khi muốn summarize</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. Khi muốn share lesson</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. "I'll never forget [meal] because..." thể hiện điều gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. Disappointment</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Lasting impact của food experience</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Regret</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. Indifference</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">6. Story nào là food & culture storytelling C1 style?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. "The food was delicious. I really enjoyed it."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. "The first time I tried authentic phở, I was blown away. What makes it special is the ritual — watching the chef, the steaming broth, the sound of noodles. It reminded me of my grandmother's kitchen. The funny thing was that the 'simple' bowl took 12 hours to make. I'll never forget that meal because it taught me that the best food is about the story behind it."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. "I really enjoyed the meal. The restaurant was nice."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. "The food was delicious. I'd recommend it."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Pattern nào KHÔNG phải food & culture pattern?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. "The first time I tried..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. "What makes it special is..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. "At first, I thought..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. "It reminded me of..."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-03-day-17.html" class="nav-btn">
+                <div class="nav-label">← Previous Day</div>
+                <div class="nav-title">Day 17: People I Met</div>
+            </a>
+            <a href="week-03-day-19.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 19: Lessons Learned</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 18 Complete & Continue to Day 19</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#ED8936"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#ED8936"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#ED8936" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#ED8936" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#ED8936"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Chef hat -->
+            <ellipse cx="100" cy="45" rx="25" ry="12" fill="white"/>
+            <rect x="75" y="45" width="50" height="15" fill="white"/>
+            <ellipse cx="100" cy="45" rx="20" ry="8" fill="#F7FAFC"/>
+        </svg>
+        <div class="mascot-speech">Bon appétit! 🍜</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 3 · Day 18 · Food & Culture Stories</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 0.9;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = audioSpeed;
+                utterance.pitch = 1.05;
+                
+                const voices = speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US' && (v.name.includes('Google') || v.name.includes('Natural'))) 
+                             || voices.find(v => v.lang === 'en-US')
+                             || voices[0];
+                if (usVoice) utterance.voice = usVoice;
+                
+                if (btn) {
+                    btn.classList.add('playing');
+                    utterance.onend = () => btn.classList.remove('playing');
+                    utterance.onerror = () => btn.classList.remove('playing');
+                }
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
+        
+        // ========== SCENARIO DETAILS ==========
+        function showScenarioDetails(scenario) {
+            const details = {
+                food: `🏠 FOOD SCENARIO (3-4 phút):
+
+Context: Bạn đang nói chuyện với bạn về một memorable food experience trong chuyến đi.
+
+Sample flow:
+Friend: "Tell me about a memorable meal from your trip."
+
+You: "The first time I tried authentic ramen in Tokyo, I was 
+blown away. What makes it special isn't just the taste — it's 
+the ritual. You watch the chef carefully prepare each bowl, 
+the way the broth steams, the sound of the noodles. It 
+reminded me of my grandmother's cooking, but with this 
+incredible precision you only get in Japan. The funny thing 
+was that the 'simple' bowl of ramen took 3 days to prepare 
+the broth. I'll never forget that meal because it taught me 
+that the best food is about patience and care."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 food & culture patterns
+✅ Có sensory details (taste, smell, texture, sight)
+✅ Có cultural insights
+✅ Có emotional connection
+✅ Có lasting impact
+
+💡 Mẹo: Focus vào sensory details, không chỉ taste.`,
+
+                business: `💼 BUSINESS SCENARIO (3-4 phút):
+
+Context: Bạn đang nói chuyện với colleague về food culture insight từ business trip.
+
+Sample flow:
+Colleague: "Tell me about your business trip to France."
+
+You: "The first time I had a 3-hour business lunch in Paris, 
+I was amazed at how seriously they take dining. What makes it 
+special is the philosophy — lunch isn't just eating, it's 
+relationship building. It reminded me of why I got into 
+international business — the respect for human connection. 
+The funny thing about French business culture was how the 
+best deals happened over coffee, not in the boardroom. I'll 
+never forget that trip because it taught me that relationships 
+are built over meals, not presentations."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 food & culture patterns
+✅ Professional tone nhưng vẫn engaging
+✅ Có cultural insights về business culture
+✅ Connect food với business values
+✅ Có lasting impact
+
+💡 Mẹo: Balance professional và personal.`,
+
+                networking: `🔄 NETWORKING SCENARIO (3-4 phút):
+
+Context: Bạn đang ở networking event, ai đó hỏi về memorable food experiences.
+
+Sample flow:
+Person: "Tell me about a food experience that changed how you think."
+
+You: "The first time I tried street food in Bangkok, I was 
+blown away. What makes it special isn't just the taste — it's 
+the community. Everyone gathers around the cart, sharing 
+stories, laughing together. It reminded me of my childhood 
+in Vietnam, where food was about connection, not just 
+nutrition. The funny thing was that the 'simple' street food 
+had more flavor than any fancy restaurant I'd been to. I'll 
+never forget that experience because it taught me that the 
+best food brings people together."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 food & culture patterns
+✅ Balance professional + personal
+✅ Story phải memorable và engaging
+✅ Connect food với broader insight
+✅ Keep conversation flowing
+
+💡 Mẹo: Đây là scenario khó nhất - phải balance 2 contexts.`,
+
+                podcast: `🎙️ PODCAST SCENARIO (5 phút):
+
+Context: Bạn đang trong podcast/video, được hỏi về memorable food experiences.
+
+Structure:
+1. First experience (30s): "The first time I tried..."
+2. Cultural significance (1 min): "What makes it special is..."
+3. Sensory details (1 min): Describe taste, smell, texture, sight
+4. Emotional connection (1 min): "It reminded me of..."
+5. Cultural observation (30s): "The funny thing was..."
+6. Lasting impact (1 min): "I'll never forget... because..."
+7. Takeaway (30s): Memorable closing line
+
+Yêu cầu:
+✅ Dùng TẤT CẢ 5 food & culture patterns
+✅ Story phải có sensory details
+✅ Có cultural insights
+✅ Có emotional depth
+✅ Keep listener engaged for 5 minutes
+
+💡 Mẹo: Practice 3 lần trước khi record chính thức. So sánh lần 1 vs lần 3.`
+            };
+            
+            alert(details[scenario]);
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                pattern: "The first time I tried [food], I [reaction]",
+                example: '"The first time I tried authentic ramen in Tokyo, I was blown away by the depth of flavor."',
+                tip: '💡 Tip: Describe first experience với strong reaction. Tạo curiosity và emotional connection.'
+            },
+            { 
+                pattern: "What makes it special is [cultural detail]",
+                example: '"What makes it special isn\'t just the taste — it\'s the ritual of sharing the meal with family."',
+                tip: '💡 Tip: Explain cultural significance. Show cultural understanding và appreciation.'
+            },
+            { 
+                pattern: "It reminded me of [memory/connection]",
+                example: '"It reminded me of my grandmother\'s kitchen — the same smells, the same warmth."',
+                tip: '💡 Tip: Connect food với memory hoặc emotion. Tạo emotional depth.'
+            },
+            { 
+                pattern: "The funny thing about [food culture] was [observation]",
+                example: '"The funny thing about Japanese food culture was how seriously they take even the simplest dishes."',
+                tip: '💡 Tip: Share cultural observation. Add humor và insight.'
+            },
+            { 
+                pattern: "I'll never forget [meal/food experience] because [reason]",
+                example: '"I\'ll never forget that meal because it taught me that the best food isn\'t just about ingredients — it\'s about the story behind it."',
+                tip: '💡 Tip: Express lasting impact. Reason phải meaningful hoặc life-changing.'
+            },
+            { 
+                pattern: "Integrated food & culture storytelling",
+                example: '"The first time I tried... What makes it special is... It reminded me of... The funny thing was... I\'ll never forget... because..."',
+                tip: '💡 Tip: Kết hợp tất cả patterns để tạo story với sensory details, cultural insights, và emotional depth.'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-pattern').textContent = card.pattern;
+            document.getElementById('fc-example').textContent = card.example;
+            document.getElementById('fc-tip').innerHTML = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'b', q3: 'c', q4: 'b', q5: 'b', q6: 'b', q7: 'c' };
+        const explanations = {
+            q1: 'B describe first experience với strong reaction ("blown away"). A, C, D quá generic, không có sensory details hoặc emotional connection.',
+            q2: '"What makes it special is..." = explain cultural significance hoặc unique aspect của food. Không phải describe taste, share personal opinion, hay create hook.',
+            q3: '"It reminded me of..." = connect food với memory hoặc emotion. Tạo emotional depth trong story.',
+            q4: '"The funny thing about..." = signal of cultural observation. Dùng khi muốn share cultural observation hoặc surprise. Add humor và insight.',
+            q5: '"I\'ll never forget [meal] because..." = express lasting impact của food experience. Show how food experience changed you.',
+            q6: 'B là food & culture storytelling C1 style với các patterns: "The first time I tried", "What makes it special is", "It reminded me of", "The funny thing was", "I\'ll never forget... because". A, C, D quá generic.',
+            q7: 'C "At first, I thought..." là Day 16 pattern (Unexpected Moments), không phải Day 18 pattern. A, B, D là food & culture patterns.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered food & culture storytelling!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the storytelling examples.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the patterns section.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the day content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week3Days') || '[]');
+            
+            if (!completed.includes(18)) {
+                completed.push(18);
+                localStorage.setItem('week3Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(3)) {
+                        completedWeeks.push(3);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 3 completed! You can now tell engaging food & culture stories! 🦊');
+                } else {
+                    alert(`✅ Day 18 completed! ${7 - completed.length} days left in Week 3. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-03-day-19.html';
+            } else {
+                if (confirm('✅ Day 18 already completed! Go to Day 19?')) {
+                    location.href = 'week-03-day-19.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
