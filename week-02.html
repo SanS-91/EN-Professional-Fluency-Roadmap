@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Everyday Fluency | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #319795;
+            --primary-dark: #2C7A7B;
+            --primary-light: #4FD1C5;
+            --primary-soft: #E6FFFA;
+            --secondary: #F6AD55;
+            --secondary-soft: #FFFAF0;
+            --accent: #805AD5;
+            --accent-soft: #F5F0FF;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+        }
+        
+        /* ========== HEADER ========== */
+        .week-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #B2F5EA 50%, var(--secondary-soft) 100%);
+            padding: 56px 0 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .week-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(49,151,149,0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(246,173,85,0.15) 0%, transparent 40%);
+        }
+        
+        .week-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .week-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-breadcrumb a:hover { color: var(--primary); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .week-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .week-subtitle strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .week-philosophy {
+            background: white;
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            position: relative;
+            max-width: 700px;
+        }
+        
+        .week-philosophy::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 3rem;
+            color: var(--primary);
+            font-family: 'Fraunces', serif;
+            opacity: 0.3;
+        }
+        
+        .week-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-teal { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #B2F5EA; }
+        .section-orange { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #FEEBC8; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #E9D8FD; }
+        .section-mint { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--biz-bg) 100%); border-color: #BEE3F8; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.6rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), #B2F5EA);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM/SOLUTION ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #9B2C2C;
+            font-style: italic;
+        }
+        
+        .problem-box p {
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--life-dark);
+            font-style: italic;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== DAYS GRID ========== */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .day-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+        }
+        
+        .day-num {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .day-emoji {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .day-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .day-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .day-tag {
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .day-tag.life {
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .day-tag.biz {
+            background: var(--biz-bg);
+            color: var(--biz-dark);
+        }
+        
+        .day-tag.patterns {
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+        
+        /* ========== PATTERNS PREVIEW ========== */
+        .patterns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .pattern-category {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .pattern-category h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .pattern-list {
+            list-style: none;
+        }
+        
+        .pattern-list li {
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 4px 0;
+            padding-left: 16px;
+            position: relative;
+            line-height: 1.4;
+        }
+        
+        .pattern-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* ========== MILESTONE PREVIEW ========== */
+        .milestone-preview {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #B2F5EA 50%, var(--secondary-soft) 100%);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--primary);
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .milestone-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+        
+        .milestone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+        
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .milestone-abilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .ability-item {
+            background: white;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .ability-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        /* ========== WEEK 1 RECAP ========== */
+        .recap-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-top: 16px;
+        }
+        
+        .recap-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .recap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .recap-item {
+            background: var(--bg);
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .recap-item strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .start-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(49,151,149,0.3);
+            text-decoration: none;
+            text-align: center;
+            max-width: 400px;
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(49,151,149,0.4);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(49,151,149,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .week-title { font-size: 1.8rem; }
+            .week-header { padding: 40px 0 32px; }
+            
+            .days-grid { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .milestone-title { font-size: 1.5rem; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">← Roadmap</a>
+            <div class="nav-progress">
+                <span>Week 2 / 24</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 8%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="week-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span>Week 2</span>
+            </div>
+            <h1 class="week-title">🌅 Everyday Fluency</h1>
+            <p class="week-subtitle">Tuần 2 tập trung vào <strong>cuộc sống hàng ngày</strong> và <strong>cách làm việc</strong> - những chủ đề giúp bạn build relationships sâu hơn với colleagues, clients, và connections.</p>
+            <div class="week-philosophy">
+                People don't connect over job titles. They connect over how they live and work.
+            </div>
+            <div class="week-meta">
+                <span class="meta-tag">🌅 7 days</span>
+                <span class="meta-tag">⏱️ 60 min/day</span>
+                <span class="meta-tag">🏠 50% Life</span>
+                <span class="meta-tag">💼 50% Business</span>
+                <span class="meta-tag">📚 30+ patterns</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-teal">
+            <h2 class="section-title"><span class="section-icon">💡</span> Week 2 Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>🌅 Từ "First Impressions" đến "Everyday Life"</h4>
+                <p>Tuần 1 bạn đã học cách <strong>giới thiệu bản thân</strong>. Tuần 2 bạn sẽ học cách <strong>nói về cuộc sống</strong> - những chủ đề giúp build relationships sâu hơn. Khi ai đó hỏi "What's your daily routine like?" hoặc "What do you do on weekends?", bạn sẽ trả lời với <strong>personality, depth, và natural flow</strong>.</p>
+            </div>
+            
+            <div class="problem-box">
+                <h4>❌ Vấn đề của người B2</h4>
+                <div class="comparison">
+                    "I wake up at 6 AM. I exercise. I work. I go home."
+                </div>
+                <p>Nghe như robot. Không có personality. Không có depth. Không có gì để đối phương bám vào.</p>
+            </div>
+            
+            <div class="solution-box">
+                <h4>✅ C1 speakers làm gì khác?</h4>
+                <div class="comparison">
+                    "I'm an early bird — I usually start my day around 5:30 with a 30-minute run, mostly around the lake near my place, but sometimes I switch to yoga when the weather's bad. I've found that morning exercise sets the tone for the whole day."
+                </div>
+                <ul>
+                    <li>"I'm an early bird" - personality touch</li>
+                    <li>"mostly X, but sometimes Y" - nuance (pattern từ tuần 1!)</li>
+                    <li>"I've found that..." - insight</li>
+                    <li>Specific details: 5:30, 30-minute run</li>
+                    <li>Hooks: "morning exercise sets the tone"</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 7 Days Preview -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">📅</span> 7 Days Preview</h2>
+            <p class="section-desc">Tuần 2 có nhịp cảm xúc đa dạng: từ gentle start → intensity peak → relaxation → sensory fun → energy → curiosity → celebration.</p>
+            
+            <div class="days-grid">
+                <a href="week-02-day-8.html" class="day-card">
+                    <div class="day-num">DAY 8</div>
+                    <div class="day-emoji">🌅</div>
+                    <div class="day-title">Morning Routines</div>
+                    <div class="day-desc">Describe morning routine với personality. "I'm an early bird..." hoặc "I'm not a morning person, but..."</div>
+                    <div class="day-tags">
+                        <span class="day-tag life">🏠 Life</span>
+                        <span class="day-tag biz">💼 Business</span>
+                        <span class="day-tag patterns">5 patterns</span>
+                    </div>
+                </a>
+                
+                <a href="week-02-day-9.html" class="day-card">
+                    <div class="day-num">DAY 9</div>
+                    <div class="day-emoji">⚡</div>
+                    <div class="day-title">Deep Work & Flow</div>
+                    <div class="day-desc">Explain productivity systems với critical thinking. "What works for me is..." hoặc "I struggle with..., so I..."</div>
+                    <div class="day-tags">
+                        <span class="day-tag life">🏠 Life</span>
+                        <span class="day-tag biz">💼 Business</span>
+                        <span class="day-tag patterns">5 patterns</span>
+                    </div>
+                </a>
+                
+                <a href="week-02-day-10.html" class="day-card">
+                    <div class="day-num">DAY 10</div>
+                    <div class="day-emoji">🌴</div>
+                    <div class="day-title">Weekend & Downtime</div>
+                    <div class="day-desc">Share weekend activities và relaxation. "On weekends, I usually..." hoặc "I make sure to... to avoid burnout"</div>
+                    <div class="day-tags">
+                        <span class="day-tag life">🏠 Life</span>
+                        <span class="day-tag biz">💼 Business</span>
+                        <span class="day-tag patterns">5 patterns</span>
+                    </div>
+                </a>
+                
+                <a href="week-02-day-11.html" class="day-card">
+                    <div class="day-num">DAY 11</div>
+                    <div class="day-emoji">🍳</div>
+                    <div class="day-title">Cooking & Food</div>
+                    <div class="day-desc">Talk about cooking, favorite dishes, food culture. "I love cooking..." hoặc "My specialty is..."</div>
+                    <div class="day-tags">
+                        <span class="day-tag life">🏠 Life</span>
+                        <span class="day-tag biz">💼 Business</span>
+                        <span class="day-tag patterns">5 patterns</span>
+                    </div>
+                </a>
+                
+                <a href="week-02-day-12.html" class="day-card">
+                    <div class="day-num">DAY 12</div>
+                    <div class="day-emoji">🏃</div>
+                    <div class="day-title">Fitness & Movement</div>
+                    <div class="day-desc">Discuss exercise, fitness routines, health. "I've been doing yoga..." hoặc "I take walking meetings when..."</div>
+                    <div class="day-tags">
+                        <span class="day-tag life">🏠 Life</span>
+                        <span class="day-tag biz">💼 Business</span>
+                        <span class="day-tag patterns">5 patterns</span>
+                    </div>
+                </a>
+                
+                <a href="week-02-day-13.html" class="day-card">
+                    <div class="day-num">DAY 13</div>
+                    <div class="day-emoji">📚</div>
+                    <div class="day-title">Learning & Hobbies</div>
+                    <div class="day-desc">Share learning journey, hobbies, interests. "I'm learning guitar..." hoặc "I read 1 book per week..."</div>
+                    <div class="day-tags">
+                        <span class="day-tag life">🏠 Life</span>
+                        <span class="day-tag biz">💼 Business</span>
+                        <span class="day-tag patterns">5 patterns</span>
+                    </div>
+                </a>
+                
+                <a href="week-02-day-14.html" class="day-card">
+                    <div class="day-num">DAY 14</div>
+                    <div class="day-emoji">🏆</div>
+                    <div class="day-title">Review + Milestone</div>
+                    <div class="day-desc">Integrate tất cả patterns, complete Milestone 2: "Everyday Fluency"</div>
+                    <div class="day-tags">
+                        <span class="day-tag life">🏠 Life</span>
+                        <span class="day-tag biz">💼 Business</span>
+                        <span class="day-tag patterns">30+ patterns</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Patterns Preview -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">📚</span> 30+ Patterns Preview</h2>
+            <p class="section-desc">Tuần 2 sẽ dạy bạn 30+ patterns mới, chia thành 6 categories. Tất cả đều có ví dụ Life & Business.</p>
+            
+            <div class="patterns-grid">
+                <div class="pattern-category">
+                    <h4>🌅 Morning & Routines</h4>
+                    <ul class="pattern-list">
+                        <li>"I'm an early bird / night owl"</li>
+                        <li>"I usually start my day with [activity]"</li>
+                        <li>"I've found that [habit] sets the tone for..."</li>
+                        <li>"The first [time] of my day is for [activity]"</li>
+                        <li>"I block out [time] for [activity]"</li>
+                    </ul>
+                </div>
+                
+                <div class="pattern-category">
+                    <h4>⚡ Productivity & Flow</h4>
+                    <ul class="pattern-list">
+                        <li>"What works for me is [system]"</li>
+                        <li>"I've been using [method] for [time]"</li>
+                        <li>"The key is [principle], not [misconception]"</li>
+                        <li>"I struggle with [challenge], so I [solution]"</li>
+                        <li>"My system is simple: [1], [2], [3]"</li>
+                    </ul>
+                </div>
+                
+                <div class="pattern-category">
+                    <h4>🌴 Weekend & Balance</h4>
+                    <ul class="pattern-list">
+                        <li>"On weekends, I usually [activity]"</li>
+                        <li>"I make sure to [habit] to avoid burnout"</li>
+                        <li>"I've set a boundary: [rule]"</li>
+                        <li>"The key is [principle], not [approach]"</li>
+                        <li>"It helps me [benefit]"</li>
+                    </ul>
+                </div>
+                
+                <div class="pattern-category">
+                    <h4>🍳 Food & Lifestyle</h4>
+                    <ul class="pattern-list">
+                        <li>"I love cooking [dish] — it's my specialty"</li>
+                        <li>"I've been trying to [habit] more"</li>
+                        <li>"I switched from [X] to [Y] because [reason]"</li>
+                        <li>"It's not perfect — [limitation] — but..."</li>
+                        <li>"If I could recommend one [thing], it would be..."</li>
+                    </ul>
+                </div>
+                
+                <div class="pattern-category">
+                    <h4>🏃 Fitness & Health</h4>
+                    <ul class="pattern-list">
+                        <li>"I've built a habit of [habit]"</li>
+                        <li>"It started when [origin story]"</li>
+                        <li>"The system is: [trigger] → [action] → [reward]"</li>
+                        <li>"Consistency matters more than [belief]"</li>
+                        <li>"The biggest lesson I've learned is [insight]"</li>
+                    </ul>
+                </div>
+                
+                <div class="pattern-category">
+                    <h4>💬 Response & Empathy</h4>
+                    <ul class="pattern-list">
+                        <li>"That makes sense."</li>
+                        <li>"I've had the same experience."</li>
+                        <li>"I'm still figuring that out."</li>
+                        <li>"It depends on the situation."</li>
+                        <li>"I see what you mean, but..."</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="recap-box">
+                <h4>🔗 Patterns từ tuần 1 sẽ được áp dụng:</h4>
+                <div class="recap-grid">
+                    <div class="recap-item">
+                        <strong>"Mostly X, but sometimes Y"</strong>
+                        "I usually run in the morning, mostly around the lake, but sometimes I switch to yoga"
+                    </div>
+                    <div class="recap-item">
+                        <strong>"Actually, [elaboration]"</strong>
+                        "I'm an early bird. Actually, I've been waking up at 5:30 for the past 2 years"
+                    </div>
+                    <div class="recap-item">
+                        <strong>"That reminds me of..."</strong>
+                        "I use Notion for everything. That reminds me of a colleague who swears by Obsidian"
+                    </div>
+                    <div class="recap-item">
+                        <strong>Specific details</strong>
+                        "I've been using Todoist for 3 years, and it's helped me close 50+ projects"
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Milestone Preview -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">🏆</span> Milestone 2 Preview</h2>
+            
+            <div class="milestone-preview">
+                <div class="milestone-icon">🌅</div>
+                <div class="milestone-title">Everyday Fluency</div>
+                <div class="milestone-subtitle">
+                    Sau tuần 2, bạn sẽ có thể nói về cuộc sống hàng ngày và cách làm việc với personality, depth, và natural flow.
+                </div>
+                
+                <div class="milestone-abilities">
+                    <div class="ability-item">
+                        <div class="ability-icon">🎤</div>
+                        <span>Describe daily routine 5 phút không ngừng</span>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">💬</div>
+                        <span>Share weekend activities với nuance</span>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">🍳</div>
+                        <span>Explain cooking/food preferences</span>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">🏃</div>
+                        <span>Discuss fitness & health habits</span>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">📚</div>
+                        <span>Talk about learning & hobbies</span>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">⚖️</div>
+                        <span>Explain work-life balance approach</span>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">🔄</div>
+                        <span>Integrate 60+ patterns (tuần 1 + 2)</span>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">🎯</div>
+                        <span>Complete Reality Task (Life or Business)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Week 2 Preview Quiz</h2>
+            <p class="section-desc">7 câu hỏi để chuẩn bị tinh thần cho tuần 2. Không cần biết đáp án bây giờ - đây chỉ là teaser!</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Theo triết lý của tuần 2, người ta connect qua cái gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. Job titles và chức danh</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. Cách họ sống và làm việc</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. Bằng cấp và chứng chỉ</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. Số năm kinh nghiệm</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">2. Câu trả lời nào nghe "C1" hơn?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. "I wake up at 6 AM. I exercise. I work."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. "My routine is very simple and boring."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. "I'm an early bird — I usually start with a 30-minute run, mostly around the lake, but sometimes I switch to yoga when the weather's bad."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. "I have a very productive morning routine."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">3. Tuần 2 có bao nhiêu ngày?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. 5 ngày</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. 7 ngày</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. 10 ngày</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. 14 ngày</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">4. Pattern "mostly X, but sometimes Y" từ tuần nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. Week 2</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. Week 3</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. Week 1 (Day 3)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. Week 4</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. Tuần 2 sẽ dạy bao nhiêu patterns mới?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. 10 patterns</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. 30+ patterns</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. 50 patterns</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. 100 patterns</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">6. Milestone 2 tên là gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. Productivity Professional</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. Daily Life Communicator</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. Everyday Fluency</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. Life & Work Master</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">7. Tuần 2 balance Life/Business như thế nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. 70% Business, 30% Life</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. 50% Life, 50% Business</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. 30% Life, 70% Business</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. 100% Business</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-01.html" class="nav-btn">
+                <div class="nav-label">← Previous Week</div>
+                <div class="nav-title">Week 1: First Impressions</div>
+            </a>
+            <a href="week-03.html" class="nav-btn disabled">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 3: Coming Soon</div>
+            </a>
+        </div>
+        
+        <a href="week-02-day-8.html" class="start-btn">🚀 Start Week 2: Day 8 - Morning Routines</a>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#319795"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#319795"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#319795" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#319795" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#319795"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Clock for productivity -->
+            <circle cx="65" cy="155" r="12" fill="white" stroke="#2D3748" stroke-width="2"/>
+            <line x1="65" y1="155" x2="65" y2="148" stroke="#2D3748" stroke-width="2"/>
+            <line x1="65" y1="155" x2="70" y2="155" stroke="#2D3748" stroke-width="2"/>
+        </svg>
+        <div class="mascot-speech">Let's talk about life! 🌅</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 2 · Everyday Fluency · Life & Business</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'c', q3: 'b', q4: 'c', q5: 'b', q6: 'c', q7: 'b' };
+        const explanations = {
+            q1: 'Triết lý: "People don\'t connect over job titles. They connect over how they live and work." - Đây là nền tảng của tuần 2.',
+            q2: 'C có personality ("I\'m an early bird"), nuance ("mostly X, but sometimes Y"), specific details (30-minute run, lake), và hooks ("sets the tone"). Đây chính là C1 speaking.',
+            q3: 'Tuần 2 có 7 ngày: Day 8-14. Mỗi ngày 60 phút.',
+            q4: '"Mostly X, but sometimes Y" là pattern từ Week 1 Day 3 (Conversation Extension). Tuần 2 sẽ áp dụng pattern này vào nhiều contexts mới.',
+            q5: 'Tuần 2 sẽ dạy 30+ patterns mới, chia thành 6 categories. Cộng với 30+ patterns từ tuần 1, bạn sẽ có 60+ patterns trong "vũ khí" của mình.',
+            q6: 'Milestone 2 tên là "Everyday Fluency" - bao quát cả Life & Business, không chỉ thiên về productivity.',
+            q7: 'Tuần 2 balance 50% Life, 50% Business. Mỗi ngày đều có ví dụ và patterns cho cả 2 contexts.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'re ready for Week 2!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great! You understand the Week 2 philosophy!';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Review the preview above.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Re-read the preview and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>

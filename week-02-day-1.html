@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Day 8: Morning Routines | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #319795;
+            --primary-dark: #2C7A7B;
+            --primary-light: #4FD1C5;
+            --primary-soft: #E6FFFA;
+            --secondary: #F6AD55;
+            --secondary-dark: #DD6B20;
+            --secondary-soft: #FFFAF0;
+            --accent: #805AD5;
+            --accent-soft: #F5F0FF;
+            --warm: #F6AD55;
+            --warm-soft: #FFFAF0;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .day-tab.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #B2F5EA 40%, var(--secondary-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(246,173,85,0.25) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(49,151,149,0.2) 0%, transparent 40%);
+        }
+        
+        .day-header::after {
+            content: '☀️';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FEEBC8; }
+        .section-teal { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #B2F5EA; }
+        .section-orange { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #FEEBC8; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #E9D8FD; }
+        .section-mint { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-sky { background: linear-gradient(135deg, #FFFFFF 0%, var(--biz-bg) 100%); border-color: #BEE3F8; }
+        .section-sunrise { 
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #B2F5EA 50%, var(--secondary-soft) 100%); 
+            border-color: var(--primary);
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), #B2F5EA);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #9B2C2C;
+            font-style: italic;
+        }
+        
+        .problem-box p {
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--life-dark);
+            font-style: italic;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARD ========== */
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pattern-number {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pattern-phonetic {
+            color: var(--text-muted);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .freq-badge, .register-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .freq-badge {
+            background: var(--warm-soft);
+            color: #744210;
+        }
+        
+        .register-badge {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--primary-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--primary-dark);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong { color: var(--primary-dark); }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary);
+            position: relative;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        
+        .audio-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-left: 8px;
+        }
+        
+        .audio-btn:hover {
+            background: var(--primary-light);
+            transform: scale(1.1);
+        }
+        
+        .audio-btn.playing {
+            background: var(--secondary);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .hedging-box {
+            background: var(--secondary-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+            margin-top: 10px;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .hedging-box strong { color: #744210; display: block; margin-bottom: 4px; }
+        
+        .context-note {
+            background: var(--warm-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--warning);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+        }
+        
+        .context-note strong { color: #744210; }
+        
+        .mistake-box {
+            background: #FED7D7;
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--error);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        /* ========== EMPATHY RESPONSES ========== */
+        .empathy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .empathy-category {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        
+        .empathy-category h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .empathy-list {
+            list-style: none;
+        }
+        
+        .empathy-list li {
+            padding: 6px 10px;
+            background: var(--bg);
+            border-radius: 6px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            border-left: 3px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .empathy-list li:hover {
+            background: var(--primary-soft);
+            border-left-color: var(--secondary);
+        }
+        
+        /* ========== TRANSCRIPT ========== */
+        .transcript-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        
+        .transcript-line {
+            padding: 10px 0;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px dashed var(--border-light);
+        }
+        
+        .transcript-line:last-child { border-bottom: none; }
+        
+        .speaker {
+            font-weight: 700;
+            margin-right: 6px;
+        }
+        
+        .speaker.minh { color: var(--primary-dark); }
+        .speaker.sarah { color: var(--secondary-dark); }
+        
+        .highlight {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--primary-dark);
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .annotation {
+            color: var(--text-muted);
+            font-size: 11px;
+            font-style: italic;
+            margin-left: 4px;
+        }
+        
+        /* ========== AUDIO PLAYER ========== */
+        .audio-player {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .play-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .play-btn:hover { transform: scale(1.1); }
+        
+        .play-btn.playing {
+            background: var(--secondary);
+            color: white;
+            animation: pulse 1s infinite;
+        }
+        
+        .audio-info { flex: 1; }
+        
+        .audio-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .audio-meta {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        /* ========== PRONUNCIATION TABLE ========== */
+        .pronunciation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            font-size: 13px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .pronunciation-table tr:last-child td { border-bottom: none; }
+        
+        .pronunciation-table code {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--primary-dark);
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            border-color: var(--primary);
+        }
+        
+        .scenario-card.challenge {
+            background: linear-gradient(135deg, var(--warm-soft), var(--secondary-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--primary); }
+        .scenario-card.challenge .scenario-badge { background: var(--warning); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: var(--primary-dark); }
+        .scenario-card.challenge h4 { color: #744210; }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: var(--primary-dark); }
+        .scenario-card.challenge p { color: #744210; }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-requirements { color: var(--primary-dark); }
+        .scenario-card.challenge .scenario-requirements { color: #744210; }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--primary); color: var(--primary-dark); }
+        .scenario-card.challenge .record-btn { border-color: var(--warning); color: #744210; }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--primary); color: white; }
+        .scenario-card.challenge .record-btn:hover { background: var(--warning); color: white; }
+        
+        /* ========== REALITY TASK ========== */
+        .task-levels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+        
+        .task-level {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 2px solid;
+            position: relative;
+        }
+        
+        .task-level.easy { border-color: var(--life); }
+        .task-level.standard { border-color: var(--biz); }
+        .task-level.challenge { border-color: var(--warning); }
+        
+        .task-level-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+        
+        .task-level.easy .task-level-badge { background: var(--life); }
+        .task-level.standard .task-level-badge { background: var(--biz); }
+        .task-level.challenge .task-level-badge { background: var(--warning); }
+        
+        .task-level h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 8px 0 6px;
+        }
+        
+        .task-level.easy h4 { color: var(--life-dark); }
+        .task-level.standard h4 { color: var(--biz-dark); }
+        .task-level.challenge h4 { color: #744210; }
+        
+        .task-time {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--bg);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .task-level p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .task-requirements {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .task-requirements ul {
+            padding-left: 16px;
+            margin-top: 4px;
+        }
+        
+        .task-requirements li {
+            padding: 2px 0;
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 10px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-tip strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(49,151,149,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            .day-header::after { font-size: 2.5rem; top: 20px; right: 20px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .task-levels { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-02.html" class="nav-back">← Week 2 Hub</a>
+            <div class="nav-progress">
+                <span>Day 8 / 14</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 57%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-02.html" class="day-tab">Overview</a>
+                <a href="week-02-day-8.html" class="day-tab active">Day 8</a>
+                <a href="week-02-day-9.html" class="day-tab">Day 9</a>
+                <a href="week-02-day-10.html" class="day-tab">Day 10</a>
+                <a href="week-02-day-11.html" class="day-tab">Day 11</a>
+                <a href="week-02-day-12.html" class="day-tab">Day 12</a>
+                <a href="week-02-day-13.html" class="day-tab">Day 13</a>
+                <a href="week-02-day-14.html" class="day-tab">Day 14</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-02.html">Week 2</a>
+                <span>›</span>
+                <span>Day 8</span>
+            </div>
+            <h1 class="day-title">🌅 Morning Routines</h1>
+            <p class="day-subtitle">Your morning routine is a <strong>window into who you are</strong>. Describe it with personality, depth, and insight — and people will understand you better.</p>
+            <div class="day-meta">
+                <span class="meta-tag">🌅 Morning Routines</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 5 new patterns</span>
+                <span class="meta-tag">💬 5 empathy responses</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>🌅 Morning routines reveal personality</h4>
+                <p>When someone asks "What's your morning routine like?", they're not just asking about your schedule — they're asking <strong>who you are</strong>. A C1 speaker describes their routine with <strong>personality, insight, and specific details</strong> that create hooks for deeper conversation.</p>
+            </div>
+            
+            <div class="problem-box">
+                <h4>❌ Why most people sound boring</h4>
+                <div class="comparison">
+                    "I wake up at 6 AM. I exercise. I have breakfast. I go to work."
+                </div>
+                <p>Nghe như robot đọc list. Không có personality. Không có insight. Không có gì để đối phương bám vào để hỏi tiếp.</p>
+            </div>
+            
+            <div class="solution-box">
+                <h4>✅ C1 speakers làm gì khác?</h4>
+                <div class="comparison">
+                    "I'm kind of an early bird — I usually start my day around 5:30 with a 30-minute run, mostly around the lake near my place, but sometimes I switch to yoga when the weather's bad. I've found that morning exercise really sets the tone for the whole day."
+                </div>
+                <ul>
+                    <li><strong>"I'm kind of an early bird"</strong> - personality + hedging</li>
+                    <li><strong>"mostly X, but sometimes Y"</strong> - nuance (pattern từ tuần 1!)</li>
+                    <li><strong>"I've found that..."</strong> - personal insight</li>
+                    <li><strong>Specific details:</strong> 5:30, 30-minute run, lake</li>
+                    <li><strong>Hooks:</strong> "sets the tone for the whole day"</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">5 Patterns</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Morning routine patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">💬</div>
+                    <div class="plan-block-title">Empathy</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Response patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎧</div>
+                    <div class="plan-block-title">Listening</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Annotated transcript</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗣️</div>
+                    <div class="plan-block-title">Speaking</div>
+                    <div class="plan-block-time">20 min</div>
+                    <div class="plan-block-desc">4 scenarios + record</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5 Morning Patterns -->
+        <section class="section section-teal">
+            <h2 class="section-title"><span class="section-icon">📚</span> 5 Morning Routine Patterns</h2>
+            <p class="section-desc">5 patterns để mô tả morning routine với personality, depth, và insight. Click 🔊 để nghe phát âm.</p>
+            
+            <!-- Pattern 1 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">1</div>
+                    <div>"I'm an early bird / night owl"</div>
+                </div>
+                <div class="pattern-phonetic">/aɪm ən ˈɜːrli bɜːrd/ | /aɪm ə naɪt aʊl/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Tự nhận mình là người dậy sớm / thức khuya. Idiom tự nhiên, nghe native hơn "I wake up early".</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> Idiom tự nhiên, có thể thêm hedging: "kind of", "mostly", "I guess". Tạo personality ngay câu đầu.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am kind of an early bird. I love those quiet morning hours before everyone else wakes up.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I'm <strong>kind of</strong> an early bird — I love those quiet morning hours before everyone else wakes up."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am definitely a night owl. My best ideas come after 10 PM.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I'm <strong>definitely</strong> a night owl. My best ideas come after 10 PM."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am mostly an early bird, but sometimes I work late when I am in flow state.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I'm <strong>mostly</strong> an early bird, but sometimes I work late when I'm in flow state."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I used to be a night owl, but I have been trying to shift to mornings for productivity.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I <strong>used to be</strong> a night owl, but I've been trying to shift to mornings for productivity."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Hedging variations:</strong>
+                    "I'm <strong>kind of</strong> an early bird" (soft) · "I'm <strong>mostly</strong> an early bird" (mostly true) · "I <strong>guess</strong> I'm an early bird" (uncertain) · "I'm <strong>definitely</strong> a night owl" (strong)
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ "I am early bird" (thiếu "an") → ✅ "I'm <strong>an</strong> early bird"
+                </div>
+            </div>
+            
+            <!-- Pattern 2 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">2</div>
+                    <div>"I usually start my day with [activity]"</div>
+                </div>
+                <div class="pattern-phonetic">/aɪ ˈjuːʒuəli stɑːrt maɪ deɪ wɪð/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Mô tả hoạt động đầu tiên trong ngày. "Usually" = hedging (không phải luôn luôn).</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Usually" = hedging tự nhiên. "Start my day with" = natural collocation. Có thể elaborate với "mostly X, but sometimes Y".
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I usually start my day with a cup of coffee and 10 minutes of reading.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I <strong>usually</strong> start my day with a cup of coffee and 10 minutes of reading."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I usually start my day with meditation. It helps me feel centered.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I <strong>usually</strong> start my day with meditation — it helps me feel centered."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I usually start my day by reviewing my calendar and prioritizing tasks.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I <strong>usually</strong> start my day by reviewing my calendar and prioritizing tasks."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I usually start my day with a quick walk. It clears my head before meetings.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I <strong>usually</strong> start my day with a quick walk — it clears my head before meetings."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Variations:</strong>
+                    "I <strong>usually</strong> start my day with..." (default) · "I <strong>typically</strong> start my day with..." (more formal) · "I <strong>tend to</strong> start my day with..." (hedging) · "These days, I start my day with..." (recent change)
+                </div>
+            </div>
+            
+            <!-- Pattern 3 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">3</div>
+                    <div>"I've found that [habit] sets the tone for..."</div>
+                </div>
+                <div class="pattern-phonetic">/aɪv faʊnd ðæt [habit] sɛts ðə toʊn fɔːr/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Chia sẻ insight về tác dụng của 1 habit. "Sets the tone for..." = sophisticated idiom.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "I've found that..." = personal insight (không phải fact chung). "Sets the tone for..." = sophisticated idiom. Thể hiện self-awareness.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have found that morning exercise sets the tone for the whole day. I feel more energetic and focused.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I've found that morning exercise <strong>sets the tone for</strong> the whole day — I feel more energetic and focused."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have found that making my bed first thing sets the tone for a productive day.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I've found that making my bed first thing <strong>sets the tone for</strong> a productive day."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have found that blocking out morning time for deep work sets the tone for a successful week.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I've found that blocking out morning time for deep work <strong>sets the tone for</strong> a successful week."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have found that starting with the hardest task sets the tone for the rest of the day.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I've found that starting with the hardest task <strong>sets the tone for</strong> the rest of the day."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Alternative idioms:</strong>
+                    "...sets the tone for..." (most common) · "...lays the foundation for..." (more formal) · "...kicks off..." (more casual) · "...gets me in the right mindset for..." (psychological)
+                </div>
+            </div>
+            
+            <!-- Pattern 4 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">4</div>
+                    <div>"The first [time period] of my day is for [activity]"</div>
+                </div>
+                <div class="pattern-phonetic">/ðə fɜːrst [taɪm] əv maɪ deɪ ɪz fɔːr/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Allocate specific time for specific activity. Thể hiện deliberate planning.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "The first X of my day" = specific time framing. "Is for [activity]" = intentional allocation. Thể hiện deliberate planning.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The first hour of my day is for myself. No phone, no emails, just me.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "The <strong>first hour</strong> of my day is for myself — no phone, no emails, just me."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The first 30 minutes of my day is for stretching and mindfulness.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "The <strong>first 30 minutes</strong> of my day is for stretching and mindfulness."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The first 2 hours of my day is for deep work. That is when I am most productive.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "The <strong>first 2 hours</strong> of my day is for deep work — that's when I'm most productive."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The first part of my day is for strategic thinking, before meetings take over.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "The <strong>first part</strong> of my day is for strategic thinking, before meetings take over."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Variations:</strong>
+                    "The first <strong>hour</strong> of my day is for..." · "The first <strong>two hours</strong> of my day is for..." · "The <strong>morning</strong> of my day is for..." · "<strong>Before 9 AM</strong>, my day is for..."
+                </div>
+            </div>
+            
+            <!-- Pattern 5 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">5</div>
+                    <div>"I block out [time] for [activity]"</div>
+                </div>
+                <div class="pattern-phonetic">/aɪ blɒk aʊt [taɪm] fɔːr/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High (Business)</span>
+                    <span class="register-badge">Semi-formal → Formal</span>
+                </div>
+                <p class="pattern-meaning">Deliberately reserve time for something. Business collocation cho calendar management.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Block out" = business collocation. Thể hiện intentional time management. Rất phổ biến trong productivity discussions.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I block out Saturday mornings for family time. No work allowed.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I <strong>block out</strong> Saturday mornings for family time — no work allowed."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I block out an hour every evening for reading.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I <strong>block out</strong> an hour every evening for reading."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I block out 8 to 10 AM for deep work. No meetings, no emails.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I <strong>block out</strong> 8-10 AM for deep work — no meetings, no emails."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I block out Friday afternoons for admin tasks and planning.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I <strong>block out</strong> Friday afternoons for admin tasks and planning."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Related expressions:</strong>
+                    "I <strong>block out</strong> time for..." (most common) · "I <strong>set aside</strong> time for..." (similar) · "I <strong>reserve</strong> time for..." (more formal) · "I <strong>protect</strong> that time for..." (stronger boundary)
+                </div>
+            </div>
+        </section>
+        
+        <!-- Empathy Responses -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">💬</span> Response & Empathy Patterns</h2>
+            <p class="section-desc">Khi ai đó chia sẻ morning routine của họ, bạn cần biết cách phản hồi. Đây là 5 patterns phản hồi giúp conversation tự nhiên hơn.</p>
+            
+            <div class="empathy-grid">
+                <div class="empathy-category">
+                    <h4>🤝 Đồng cảm</h4>
+                    <ul class="empathy-list">
+                        <li onclick="playAudio(this, 'That makes sense.')">"That makes sense."</li>
+                        <li onclick="playAudio(this, 'I have had the same experience.')">"I've had the same experience."</li>
+                        <li onclick="playAudio(this, 'I totally get that.')">"I totally get that."</li>
+                    </ul>
+                </div>
+                
+                <div class="empathy-category">
+                    <h4>🤔 Chưa chắc chắn</h4>
+                    <ul class="empathy-list">
+                        <li onclick="playAudio(this, 'I am still figuring that out.')">"I'm still figuring that out."</li>
+                        <li onclick="playAudio(this, 'It depends on the situation.')">"It depends on the situation."</li>
+                    </ul>
+                </div>
+                
+                <div class="empathy-category">
+                    <h4>💭 Phản hồi thận trọng</h4>
+                    <ul class="empathy-list">
+                        <li onclick="playAudio(this, 'I see what you mean, but...')">"I see what you mean, but..."</li>
+                        <li onclick="playAudio(this, 'That is true to some extent.')">"That's true to some extent."</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: var(--primary-soft); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--primary); margin-top: 16px;">
+                <strong style="color: var(--primary-dark);">💡 Tip:</strong>
+                <span style="color: var(--text-secondary);"> Dùng empathy responses thay vì "um" hoặc generic responses như "OK", "Interesting". Giúp conversation tự nhiên và sâu hơn.</span>
+            </div>
+        </section>
+        
+        <!-- Listening -->
+        <section class="section section-sky">
+            <h2 class="section-title"><span class="section-icon">🎧</span> Listening: Morning Conversation</h2>
+            <p class="section-desc">Minh và Sarah (colleagues) đang nói chuyện ở office kitchen vào buổi sáng. Listen và note các patterns được dùng.</p>
+            
+            <div class="audio-player">
+                <button class="play-btn" id="mainPlayBtn" onclick="playFullTranscript(this)">▶</button>
+                <div class="audio-info">
+                    <div class="audio-label">Morning Chat at the Office Kitchen</div>
+                    <div class="audio-meta">🇺🇸 US Accent · ~1 min · Casual conversation</div>
+                </div>
+            </div>
+            
+            <div class="transcript-box">
+                <h4 style="font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 14px; color: var(--text-primary);">📄 Transcript with Annotations</h4>
+                
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Morning, Sarah! You're here early.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> Hey Minh! Yeah, I'm <span class="highlight">kind of an early bird</span>. I <span class="highlight">usually start my day with</span> a run around 6 AM. <span class="annotation">[Pattern 1 + 2]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Nice! I'm more of a night owl, actually. <span class="annotation">[Actually pattern from Week 1]</span> But <span class="highlight">I've found that</span> when I do wake up early, it <span class="highlight">sets the tone for</span> a really productive day. <span class="annotation">[Pattern 3]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> <span class="highlight">That makes sense.</span> <span class="annotation">[Empathy response]</span> I've been trying to shift my schedule lately. <span class="highlight">The first 2 hours of my day are for</span> deep work now — no emails, no meetings. <span class="annotation">[Pattern 4]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> <span class="highlight">I totally get that.</span> I <span class="highlight">block out</span> 8-10 AM for the same thing. <span class="annotation">[Empathy + Pattern 5]</span> What do you usually do in those 2 hours?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> <span class="highlight">Mostly</span> strategic planning and writing, <span class="highlight">but sometimes</span> I'll jump on a call if it's urgent. <span class="annotation">[Mostly X, but sometimes Y from Week 1]</span> <span class="highlight">What about you?</span> How's your morning routine these days? <span class="annotation">[Bounce back from Week 1]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Honestly, <span class="highlight">I'm still figuring that out.</span> <span class="annotation">[Uncertainty response]</span> I've been <span class="highlight">trying to</span> meditate every morning, but it's been inconsistent. <span class="highlight">It depends on</span> how crazy the night before was.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> <span class="highlight">I've had the same experience.</span> I tried meditation for a while, but I could never make it stick. What's been working for you, even if it's inconsistent?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Well, when I do meditate, even just 5 minutes, <span class="highlight">I've found that</span> it really helps me stay calm during meetings. So I'm trying to build the habit.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> That's a great insight. Maybe start small — even 2 minutes counts.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Good point. Thanks for the tip!
+                </div>
+            </div>
+            
+            <div style="background: var(--primary-soft); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--primary); margin-top: 16px;">
+                <strong style="color: var(--primary-dark);">📊 Pattern Count:</strong>
+                <ul style="margin-top: 8px; padding-left: 20px; font-size: 13px; color: var(--text-secondary); line-height: 1.7;">
+                    <li><strong>Early bird / night owl:</strong> 2 lần</li>
+                    <li><strong>"Usually start my day with":</strong> 1 lần</li>
+                    <li><strong>"I've found that... sets the tone":</strong> 2 lần</li>
+                    <li><strong>"The first [time] of my day is for":</strong> 1 lần</li>
+                    <li><strong>"I block out [time] for":</strong> 1 lần</li>
+                    <li><strong>Empathy responses:</strong> 4 lần</li>
+                    <li><strong>Patterns từ tuần 1:</strong> 3 lần ("Actually", "Mostly X, but sometimes Y", "What about you?")</li>
+                </ul>
+                <p style="margin-top: 8px; font-size: 13px; color: var(--primary-dark);"><strong>Tổng cộng: 14 patterns trong 1 conversation ngắn!</strong></p>
+            </div>
+        </section>
+        
+        <!-- Pronunciation -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Pronunciation Focus</h2>
+            <p class="section-desc">Morning-related vocabulary và connected speech patterns.</p>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 0 0 12px; color: var(--text-primary);">🔤 Key Vocabulary</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>IPA</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>morning</strong></td>
+                        <td><code>/ˈmɔːrnɪŋ/</code></td>
+                        <td>US: /ɔːr/ sound, không phải /ɒ/</td>
+                    </tr>
+                    <tr>
+                        <td><strong>routine</strong></td>
+                        <td><code>/ruːˈtiːn/</code></td>
+                        <td>Stress trên âm 2, KHÔNG phải âm 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>usually</strong></td>
+                        <td><code>/ˈjuːʒuəli/</code></td>
+                        <td>/ʒ/ sound, không phải /dʒ/</td>
+                    </tr>
+                    <tr>
+                        <td><strong>meditation</strong></td>
+                        <td><code>/ˌmɛdɪˈteɪʃən/</code></td>
+                        <td>Stress trên âm 3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>productive</strong></td>
+                        <td><code>/prəˈdʌktɪv/</code></td>
+                        <td>Stress trên âm 2</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🔗 Connected Speech</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Phrase</th>
+                        <th>Natural Pronunciation</th>
+                        <th>Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"start my day"</td>
+                        <td><code>/stɑːr(t) maɪ deɪ/</code></td>
+                        <td>Optional /t/ elision</td>
+                    </tr>
+                    <tr>
+                        <td>"found that"</td>
+                        <td><code>/faʊnd ðæt/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                    <tr>
+                        <td>"sets the tone"</td>
+                        <td><code>/sɛts ðə toʊn/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                    <tr>
+                        <td>"block out"</td>
+                        <td><code>/blɒk aʊt/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                    <tr>
+                        <td>"first 2 hours"</td>
+                        <td><code>/fɜːrst tuː aʊərz/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+            
+            <div style="background: var(--bg); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--life); font-size: 13px; line-height: 1.8;">
+                <div><code>"I'm kind of an early bird ↘"</code> - falling (statement)</div>
+                <div><code>"That makes sense ↘"</code> - falling (agreement)</div>
+                <div><code>"What about you? ↗"</code> - rising (question)</div>
+                <div><code>"Mostly strategic planning, but sometimes calls ↗↘"</code> - rise-fall (contrast)</div>
+            </div>
+        </section>
+        
+        <!-- Speaking Scenarios -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🗣️</span> Speaking: 4 Scenarios</h2>
+            <p class="section-desc">Progression từ casual → business → mixed → challenge. Mỗi scenario áp dụng patterns đã học.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1 -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - 2-3 min</span>
+                    <h4>Scenario 1: Café với bạn mới quen</h4>
+                    <p>Bạn gặp ai đó ở café qua bạn chung. Sau khi giới thiệu bản thân, conversation chuyển sang morning routines.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 patterns mới</li>
+                            <li>Thêm personality ("I'm kind of...")</li>
+                            <li>Specific details (giờ, activities)</li>
+                            <li>Bounce back với specific question</li>
+                            <li>Response với empathy</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('cafe')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business - 2-3 min</span>
+                    <h4>Scenario 2: Meeting với đồng nghiệp mới</h4>
+                    <p>Small talk trước meeting với đồng nghiệp mới từ office khác. Conversation về work habits.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Semi-formal register</li>
+                            <li>Dùng "block out" và "the first [time]"</li>
+                            <li>Specific về work habits</li>
+                            <li>Professional nhưng có personality</li>
+                            <li>Response: "That makes sense"</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('meeting')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 3 -->
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">🔄 Mixed - 2-3 min</span>
+                    <h4>Scenario 3: Networking event</h4>
+                    <p>Networking event, đang nói chuyện với professional khác. Conversation chuyển từ work sang personal habits.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Balance professional + personal</li>
+                            <li>Dùng "I've found that... sets the tone"</li>
+                            <li>Share insight, không chỉ facts</li>
+                            <li>Response với empathy + follow-up</li>
+                            <li>Transition tự nhiên giữa topics</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('networking')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 4 -->
+                <div class="scenario-card challenge">
+                    <span class="scenario-badge">🔥 Challenge - 5 min</span>
+                    <h4>Scenario 4: Morning Routine Deep Dive</h4>
+                    <p>Bạn đang trong podcast/video interview, được hỏi sâu về morning routine. Nói liên tục 5 phút.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Nói liên tục 5 phút không ngừng</li>
+                            <li>Dùng TẤT CẢ 5 patterns mới</li>
+                            <li>Integrate patterns từ tuần 1</li>
+                            <li>Có origin story (tại sao routine này)</li>
+                            <li>Share insights và lessons learned</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('podcast')">🎙️ Start Challenge</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reality Task -->
+        <section class="section section-sunrise">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Reality Task - Choose Your Level</h2>
+            <p class="section-desc">Bài tập THỰC TẾ - apply patterns vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+            
+            <div class="task-levels">
+                <div class="task-level easy">
+                    <div class="task-level-badge">EASY</div>
+                    <h4>📝 Write Your Morning Routine</h4>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p>Viết 150-word description về morning routine của bạn.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng ít nhất 3 patterns mới</li>
+                            <li>Có specific details (giờ, activities)</li>
+                            <li>Có personality touch ("I'm kind of...")</li>
+                            <li>Có insight ("I've found that...")</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--life-bg); border-radius: 6px; font-size: 12px; color: var(--life-dark);">
+                        <strong>Deliverable:</strong> Text post (LinkedIn hoặc gửi cho bạn)
+                    </div>
+                </div>
+                
+                <div class="task-level standard">
+                    <div class="task-level-badge">STANDARD</div>
+                    <h4>🤝 Describe to International Friend</h4>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p>Có 5-minute conversation với 1 người bạn quốc tế về morning routines.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng ít nhất 5 patterns mới</li>
+                            <li>Response với empathy khi họ chia sẻ</li>
+                            <li>Ask follow-up questions</li>
+                            <li>Share both Life & Business aspects</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--biz-bg); border-radius: 6px; font-size: 12px; color: var(--biz-dark);">
+                        <strong>Deliverable:</strong> Audio recording HOẶC written notes
+                    </div>
+                </div>
+                
+                <div class="task-level challenge">
+                    <div class="task-level-badge">CHALLENGE</div>
+                    <h4>🎥 Morning Routine Video</h4>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p>Record 3-minute video về morning routine. Upload LinkedIn hoặc gửi cho 3 người bạn để get feedback.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Video 3 phút (không dài hơn)</li>
+                            <li>Dùng TẤT CẢ 5 patterns mới</li>
+                            <li>Integrate patterns từ tuần 1</li>
+                            <li>Có origin story</li>
+                            <li>Record 3 iterations</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--warm-soft); border-radius: 6px; font-size: 12px; color: #744210;">
+                        <strong>Deliverable:</strong> Video file HOẶC LinkedIn post
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard Review</h2>
+            <p class="section-desc">6 flashcards với patterns và tips. Mặt trước: pattern. Mặt sau: example + tip.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-pattern" id="fc-pattern">I'm an early bird / night owl</div>
+                            <div class="card-hint">Tap to reveal example →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-example" id="fc-example">"I'm kind of an early bird — I love those quiet morning hours before everyone else wakes up."</div>
+                            <div class="card-tip" id="fc-tip">
+                                <strong>💡 Tip:</strong>
+                                Thêm hedging: "kind of", "mostly", "I guess", "definitely". Tạo personality và nuance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-teal">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Morning Routines</h2>
+            <p class="section-desc">7 câu hỏi về patterns và empathy responses. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Câu nào NGHE natural nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "I am early bird."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "I'm kind of an early bird."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "I wake up early every day."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "Morning person, me."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. "I usually start my day with..." khác "I always start my day with..." như thế nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. Không khác nhau</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. "Usually" = hedging, "always" = absolute</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. "Always" nghe natural hơn</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. "Usually" chỉ dùng trong business</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">3. "Sets the tone for..." nghĩa là gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Làm ồn</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. Tạo nền tảng, ảnh hưởng đến</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. Phá hủy</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. Bắt đầu lại</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. "I block out 8-10 AM for deep work" - "block out" nghĩa là gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. Hủy bỏ</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. Dành riêng, reserve</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. Chặn</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. Quên</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. Khi ai đó chia sẻ morning routine, response nào THỂ HIỆN EMPATHY tốt nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. "OK."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. "That makes sense. I've had the same experience."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. "Interesting."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. "I don't do that."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">6. "I'm still figuring that out" dùng khi nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. Khi bạn chắc chắn 100%</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. Khi bạn đang học, chưa master</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. Khi bạn không quan tâm</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. Khi bạn đồng ý</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Pattern nào KHÔNG phải là morning routine pattern?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. "I'm an early bird"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. "I block out time for..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. "Mostly X, but sometimes Y"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. "I've found that... sets the tone"</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-01-day-7.html" class="nav-btn">
+                <div class="nav-label">← Previous Day</div>
+                <div class="nav-title">Day 7: Review & Milestone</div>
+            </a>
+            <a href="week-02-day-9.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 9: Deep Work & Flow</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 8 Complete & Continue to Day 9</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#319795"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#319795"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#319795" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#319795" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#319795"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Coffee cup for morning -->
+            <g transform="translate(55, 145)">
+                <rect x="0" y="5" width="20" height="22" fill="white" stroke="#2D3748" stroke-width="2" rx="2"/>
+                <path d="M 20 10 Q 28 10 28 17 Q 28 24 20 24" stroke="#2D3748" stroke-width="2" fill="none"/>
+                <ellipse cx="10" cy="8" rx="8" ry="2" fill="#8B6F4E"/>
+                <!-- Steam -->
+                <path d="M 5 0 Q 3 -5 5 -8" stroke="#B8B3BE" stroke-width="1.5" fill="none" opacity="0.6"/>
+                <path d="M 10 0 Q 12 -5 10 -8" stroke="#B8B3BE" stroke-width="1.5" fill="none" opacity="0.6"/>
+                <path d="M 15 0 Q 17 -5 15 -8" stroke="#B8B3BE" stroke-width="1.5" fill="none" opacity="0.6"/>
+            </g>
+        </svg>
+        <div class="mascot-speech">Good morning! ☕</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 2 · Day 8 · Morning Routines</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 0.9;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = audioSpeed;
+                utterance.pitch = 1.05;
+                
+                const voices = speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US' && (v.name.includes('Google') || v.name.includes('Natural'))) 
+                             || voices.find(v => v.lang === 'en-US')
+                             || voices[0];
+                if (usVoice) utterance.voice = usVoice;
+                
+                if (btn) {
+                    btn.classList.add('playing');
+                    utterance.onend = () => btn.classList.remove('playing');
+                    utterance.onerror = () => btn.classList.remove('playing');
+                }
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
+        
+        function playFullTranscript(btn) {
+            const text = `Morning, Sarah! You're here early. Hey Minh! Yeah, I'm kind of an early bird. I usually start my day with a run around 6 AM. Nice! I'm more of a night owl, actually. But I've found that when I do wake up early, it sets the tone for a really productive day. That makes sense. I've been trying to shift my schedule lately. The first 2 hours of my day are for deep work now. No emails, no meetings. I totally get that. I block out 8 to 10 AM for the same thing. What do you usually do in those 2 hours? Mostly strategic planning and writing, but sometimes I'll jump on a call if it's urgent. What about you? How's your morning routine these days? Honestly, I'm still figuring that out. I've been trying to meditate every morning, but it's been inconsistent. It depends on how crazy the night before was. I've had the same experience. I tried meditation for a while, but I could never make it stick. What's been working for you, even if it's inconsistent? Well, when I do meditate, even just 5 minutes, I've found that it really helps me stay calm during meetings. So I'm trying to build the habit. That's a great insight. Maybe start small. Even 2 minutes counts. Good point. Thanks for the tip!`;
+            
+            playAudio(btn, text);
+        }
+        
+        // ========== SCENARIO DETAILS ==========
+        function showScenarioDetails(scenario) {
+            const details = {
+                cafe: `☕ CAFÉ SCENARIO (2-3 phút):
+
+Context: Gặp ai đó ở café qua bạn chung.
+
+Flow gợi ý:
+• You: "So what's your morning routine like?"
+• Them: [shares]
+• You: "That makes sense. I'm kind of an early bird myself..."
+  [elaborate với patterns]
+• You: "What about you on weekends? Same routine?"
+• Them: [shares]
+• You: "I totally get that..."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 patterns mới
+✅ Thêm personality ("I'm kind of...", "I guess I'm...")
+✅ Specific details (giờ, activities, locations)
+✅ Bounce back với specific question
+✅ Response với empathy khi họ chia sẻ
+
+💡 Mẹo: Record 2-3 phút. Listen back. Count patterns used.`,
+
+                meeting: `💼 MEETING SCENARIO (2-3 phút):
+
+Context: Small talk trước meeting với đồng nghiệp mới.
+
+Flow gợi ý:
+• Them: "So how do you usually structure your mornings?"
+• You: "I usually start my day with reviewing my calendar..."
+  [elaborate với patterns]
+• You: "I block out 8-10 AM for deep work. What about you?"
+• Them: [shares]
+• You: "I've had the same experience with that..."
+
+Yêu cầu:
+✅ Semi-formal register (không quá casual)
+✅ Dùng "block out" và "the first [time] of my day"
+✅ Specific về work habits
+✅ Professional nhưng vẫn có personality
+✅ Response với "That makes sense" hoặc "I've had the same experience"
+
+💡 Mẹo: Focus vào work context, nhưng vẫn có personal touch.`,
+
+                networking: `🔄 NETWORKING SCENARIO (2-3 phút):
+
+Context: Networking event, conversation chuyển từ work sang personal.
+
+Flow gợi ý:
+• Them: "So what keeps you productive?"
+• You: "I've found that morning exercise really sets the tone..."
+  [share insight]
+• You: "Mostly running, but sometimes yoga when weather's bad."
+• Them: [shares]
+• You: "That makes sense. What about weekends?"
+
+Yêu cầu:
+✅ Balance professional + personal
+✅ Dùng "I've found that... sets the tone"
+✅ Share insight, không chỉ facts
+✅ Response với empathy + follow-up question
+✅ Transition tự nhiên giữa topics
+
+💡 Mẹo: Đây là scenario khó nhất - phải balance 2 contexts.`,
+
+                podcast: `🎙️ PODCAST SCENARIO (5 phút):
+
+Context: Bạn đang trong podcast/video interview.
+
+Structure gợi ý:
+1. Intro (30s): "I'm kind of an early bird..."
+2. Current routine (1 min): "I usually start my day with..."
+3. Deep work block (1 min): "The first 2 hours are for..."
+4. Insight (1 min): "I've found that... sets the tone..."
+5. Evolution (1 min): "I'm still figuring that out..."
+6. Weekend variation (30s): "On weekends, it depends..."
+
+Yêu cầu:
+✅ Nói liên tục 5 phút không ngừng
+✅ Dùng TẤT CẢ 5 patterns mới
+✅ Integrate patterns từ tuần 1
+✅ Có origin story (tại sao bạn có routine này)
+✅ Share insights và lessons learned
+
+💡 Mẹo: Record 3 lần (iterations). So sánh lần 1 vs lần 3.`
+            };
+            
+            alert(details[scenario]);
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                pattern: "I'm an early bird / night owl",
+                example: '"I\'m kind of an early bird — I love those quiet morning hours before everyone else wakes up."',
+                tip: '💡 Tip: Thêm hedging: "kind of", "mostly", "I guess", "definitely". Tạo personality và nuance.'
+            },
+            { 
+                pattern: "I usually start my day with [activity]",
+                example: '"I usually start my day with a cup of coffee and 10 minutes of reading."',
+                tip: '💡 Tip: Variations: "typically", "tend to", "these days". "Usually" = hedging tự nhiên.'
+            },
+            { 
+                pattern: "I've found that [habit] sets the tone for...",
+                example: '"I\'ve found that morning exercise sets the tone for the whole day."',
+                tip: '💡 Tip: "Sets the tone" = sophisticated idiom. Alternatives: "lays the foundation", "kicks off".'
+            },
+            { 
+                pattern: "The first [time] of my day is for [activity]",
+                example: '"The first 2 hours of my day are for deep work — no emails, no meetings."',
+                tip: '💡 Tip: Specific time framing = intentional planning. Thể hiện deliberate time management.'
+            },
+            { 
+                pattern: "I block out [time] for [activity]",
+                example: '"I block out 8-10 AM for deep work."',
+                tip: '💡 Tip: Business collocation. Related: "set aside", "reserve", "protect" that time.'
+            },
+            { 
+                pattern: "Empathy responses",
+                example: '"That makes sense." / "I\'ve had the same experience." / "I totally get that."',
+                tip: '💡 Tip: Dùng thay vì "um" hoặc generic responses. Giúp conversation tự nhiên và sâu hơn.'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-pattern').textContent = card.pattern;
+            document.getElementById('fc-example').textContent = card.example;
+            document.getElementById('fc-tip').innerHTML = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b', q6: 'b', q7: 'c' };
+        const explanations = {
+            q1: 'B nghe natural nhất vì có hedging "kind of" - thể hiện personality và nuance. A thiếu "an" (grammar error). C và D nghe robotic hoặc quá casual.',
+            q2: '"Usually" = hedging (không phải luôn luôn), nghe natural hơn. "Always" = absolute, nghe quá strong và ít tự nhiên. Trong conversation, hedging = authenticity.',
+            q3: '"Sets the tone for..." = idiom nghĩa là tạo nền tảng, ảnh hưởng đến những gì theo sau. Ví dụ: "Morning exercise sets the tone for the whole day" = morning exercise ảnh hưởng đến cả ngày.',
+            q4: '"Block out" = business collocation nghĩa là deliberately reserve time. Không phải "hủy bỏ" hay "chặn". Rất phổ biến trong productivity discussions.',
+            q5: 'B vừa đồng ý ("That makes sense") vừa chia sẻ kinh nghiệm tương tự ("I\'ve had the same experience"). Đây là empathy response tốt nhất. A, C quá generic. D là disagreement, không phải empathy.',
+            q6: '"I\'m still figuring that out" = thành thật về việc đang học, chưa master. Thể hiện humility và authenticity. Rất natural trong conversation.',
+            q7: 'C "Mostly X, but sometimes Y" là pattern từ Week 1 Day 3 (Conversation Extension), không phải morning-specific. Tuy nhiên, CÓ THỂ áp dụng vào morning context (như trong transcript: "Mostly running, but sometimes yoga").'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered morning routine patterns!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the patterns you missed.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the patterns section.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the day content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week2Days') || '[]');
+            
+            if (!completed.includes(8)) {
+                completed.push(8);
+                localStorage.setItem('week2Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(2)) {
+                        completedWeeks.push(2);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 2 completed! You can now describe your daily life with personality! 🦊');
+                } else {
+                    alert(`✅ Day 8 completed! ${7 - completed.length} days left in Week 2. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-02-day-9.html';
+            } else {
+                if (confirm('✅ Day 8 already completed! Go to Day 9?')) {
+                    location.href = 'week-02-day-9.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
