@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 3: Conversation Extension | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #88D8B0;
+            --primary-light: #B5E8CC;
+            --primary-soft: #E8F8F0;
+            --secondary: #7BC8E8;
+            --secondary-soft: #E0F2FA;
+            --accent: #F9D4B8;
+            --accent-soft: #FFF5EB;
+            --warm: #F9D4B8;
+            --warm-soft: #FFF5EB;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(136,216,176,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(123,200,232,0.15) 0%, transparent 40%);
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        .section-mint { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #C6F6D5; }
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #BEE3F8; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E8DDF5; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-accent { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #FDE8D4; }
+        .section-red { background: linear-gradient(135deg, #FFFFFF 0%, #FED7D7 100%); border-color: #FEB2B2; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--life-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box pre {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box p {
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.55;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box pre {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            margin-bottom: 10px;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--life-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARD ========== */
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pattern-number {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pattern-phrase {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .pattern-phonetic {
+            color: var(--text-muted);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .freq-badge, .register-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .freq-badge {
+            background: var(--warm-soft);
+            color: #744210;
+        }
+        
+        .register-badge {
+            background: var(--secondary-soft);
+            color: var(--biz-dark);
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--primary-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--life-dark);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong { color: var(--life-dark); }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid;
+            position: relative;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        .example-item.casual { border-left-color: var(--accent); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        .example-item.casual .example-context { color: #744210; }
+        
+        .audio-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-left: 8px;
+        }
+        
+        .audio-btn:hover {
+            background: var(--primary-light);
+            transform: scale(1.1);
+        }
+        
+        .context-note {
+            background: var(--warm-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--warning);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+        }
+        
+        .context-note strong { color: #744210; }
+        
+        .mistake-box {
+            background: #FED7D7;
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--error);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .alternatives-box {
+            background: var(--life-bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--life);
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .alternatives-box strong { display: block; margin-bottom: 4px; }
+        
+        /* ========== TRANSCRIPT ========== */
+        .transcript-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        
+        .transcript-line {
+            padding: 8px 0;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .transcript-line:last-child { border-bottom: none; }
+        
+        .speaker {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-right: 6px;
+        }
+        
+        .speaker.minh { color: var(--life-dark); }
+        .speaker.lisa { color: var(--biz-dark); }
+        
+        .highlight {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-weight: 500;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        /* ========== AUDIO PLAYER ========== */
+        .audio-player {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .play-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .play-btn:hover { transform: scale(1.1); }
+        
+        .audio-info { flex: 1; }
+        
+        .audio-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .audio-meta {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .speed-control {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .speed-control:hover { background: rgba(255,255,255,0.3); }
+        
+        /* ========== HOOKS TABLE ========== */
+        .hooks-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            font-size: 13px;
+        }
+        
+        .hooks-table th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .hooks-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        
+        .hooks-table tr:last-child td { border-bottom: none; }
+        .hooks-table tr:hover { background: var(--bg); }
+        
+        /* ========== PRONUNCIATION TABLE ========== */
+        .pronunciation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            font-size: 13px;
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .pronunciation-table tr:last-child td { border-bottom: none; }
+        
+        .pronunciation-table code {
+            background: var(--primary-soft);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--life-dark);
+        }
+        
+        /* ========== TIP BOX ========== */
+        .tip-box {
+            background: var(--primary-soft);
+            padding: 14px 16px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--primary);
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.55;
+            margin-top: 14px;
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--warm-soft), var(--accent-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--warning); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: #744210; }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: #744210; }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-requirements { color: #744210; }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--warning); color: #744210; }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--warning); color: white; }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-function {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .flashcard-back .card-when {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 8px 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-warning {
+            font-size: 11px;
+            color: #9B2C2C;
+            margin-top: 8px;
+            padding: 6px 10px;
+            background: #FED7D7;
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--life) 0%, #38A169 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(136,216,176,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .hooks-table, .pronunciation-table { font-size: 12px; }
+            .hooks-table th, .hooks-table td,
+            .pronunciation-table th, .pronunciation-table td { padding: 8px 10px; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-01.html" class="nav-back">← Week 1 Hub</a>
+            <div class="nav-progress">
+                <span>Day 3 / 7</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 42%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-01.html" class="day-tab">Overview</a>
+                <a href="week-01-day-1.html" class="day-tab">Day 1</a>
+                <a href="week-01-day-2.html" class="day-tab">Day 2</a>
+                <a href="week-01-day-3.html" class="day-tab active">Day 3</a>
+                <a href="week-01-day-4.html" class="day-tab">Day 4</a>
+                <a href="week-01-day-5.html" class="day-tab">Day 5</a>
+                <a href="week-01-day-6.html" class="day-tab">Day 6</a>
+                <a href="week-01-day-7.html" class="day-tab">Day 7</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-01.html">Week 1</a>
+                <span>›</span>
+                <span>Day 3</span>
+            </div>
+            <h1 class="day-title">💬 Conversation Extension</h1>
+            <p class="day-subtitle">B2 trả lời câu hỏi. C1 <strong>biến câu hỏi thành conversation</strong>. Hôm nay bạn sẽ học cách elaborate, bounce back, và kéo dài conversation 5-10 phút mà không awkward.</p>
+            <div class="day-meta">
+                <span class="meta-tag">💬 Conversation Extension</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 6 extension patterns</span>
+                <span class="meta-tag">🎯 No more awkward silence</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>💬 B2 answers questions. C1 builds conversations.</h4>
+                <p>Người B2 trả lời đúng câu hỏi. Người C1 <strong>biến mỗi câu hỏi thành cơ hội</strong> để elaborate, connect, và kéo dài conversation. Hôm nay bạn sẽ học 6 patterns để không bao giờ bị "awkward silence" nữa.</p>
+            </div>
+            
+            <!-- Problem -->
+            <div class="problem-box">
+                <h4>❌ Conversation chết như thế nào?</h4>
+                <pre>A: "What do you do?"
+B: "I work in finance."
+A: "Oh, nice."
+[AWKWARD SILENCE]</pre>
+                <p><strong>Lý do conversation chết:</strong></p>
+                <ul style="margin-top: 8px; padding-left: 20px;">
+                    <li>Trả lời quá ngắn (1 sentence, không elaborate)</li>
+                    <li>Không bounce back (không hỏi lại)</li>
+                    <li>Follow-up question quá generic ("And you?")</li>
+                    <li>Không có "hooks" để đối phương bám vào</li>
+                </ul>
+            </div>
+            
+            <!-- Solution -->
+            <div class="solution-box">
+                <h4>✅ C1 speakers làm gì khác?</h4>
+                <pre>A: "What do you do?"
+B: "I'm in real estate private equity — mostly logistics, 
+    actually. I've been in the space for about 8 years now. 
+    It's kind of niche, but I find it fascinating because 
+    Southeast Asia's e-commerce is growing so fast. 
+    What about you? Are you in the investment space too?"
+A: "Oh cool! Yeah, I'm at Saigon Capital. We mostly do 
+    early-stage tech, but we've been looking at logistics 
+    lately..."
+[CONVERSATION CONTINUES NATURALLY]</pre>
+                <p><strong>Sự khác biệt:</strong></p>
+                <ul>
+                    <li>Elaborate với "mostly", "actually", "kind of"</li>
+                    <li>Có hooks: "Southeast Asia's e-commerce", "8 years"</li>
+                    <li>Bounce back với SPECIFIC question</li>
+                    <li>Đối phương bám vào hook để elaborate tiếp</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">6 Patterns</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Conversation extension patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎧</div>
+                    <div class="plan-block-title">Listening</div>
+                    <div class="plan-block-time">20 min</div>
+                    <div class="plan-block-desc">5-minute café conversation</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗣️</div>
+                    <div class="plan-block-title">Speaking</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">4 scenarios (short → long)</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎴</div>
+                    <div class="plan-block-title">Review</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Flashcards + 7-question quiz</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6 Conversation Extension Patterns -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">📚</span> 6 Conversation Extension Patterns</h2>
+            <p class="section-desc">Mỗi pattern là 1 công cụ để kéo dài conversation. Click 🔊 để nghe ví dụ. Học theo thứ tự để build skills từ dễ đến khó.</p>
+            
+            <!-- Pattern 1 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">1</div>
+                    <div>Actually, [elaboration with surprise]</div>
+                </div>
+                <div class="pattern-phonetic">/ˈæktʃuəli/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Thêm thông tin bất ngờ/thú vị sau câu trả lời ban đầu. Tạo "hook" để đối phương bám vào.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Actually" = discourse marker thể hiện có thêm information. Tạo surprise element → đối phương muốn hỏi thêm. Natural hơn "Also" hoặc "In addition".
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I work in finance. Actually, I just switched to real estate private equity last year. It has been a big change, but I am loving it.')">🔊</button>
+                    <span class="example-context">🏠 Life - Hàng xóm hỏi về work</span>
+                    "I work in finance. <strong>Actually</strong>, I just switched to real estate private equity last year — it's been a big change, but I'm loving it."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am into running. Actually, I just signed up for my first ultra-marathon. 100 kilometers in Da Lat. Kind of crazy, I know.')">🔊</button>
+                    <span class="example-context">☕ Life - Gym buddy</span>
+                    "I'm into running. <strong>Actually</strong>, I just signed up for my first ultra-marathon — 100km in Da Lat. Kind of crazy, I know."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am in logistics. Actually, we just closed a series A with a startup that is modernizing last-mile delivery. Pretty exciting stuff.')">🔊</button>
+                    <span class="example-context">💼 Business - Networking</span>
+                    "I'm in logistics. <strong>Actually</strong>, we just closed a series A with a startup that's modernizing last-mile delivery — pretty exciting stuff."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Nuance:</strong> "Actually" ở đây KHÔNG phải để correct (như "Actually, that's wrong") mà để ADD surprising information. Intonation: nhấn "actually", pause nhẹ trước elaboration.
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ Dùng "actually" để correct ai đó khi không cần → nghe pedantic. ✅ Dùng để thêm information thú vị.
+                </div>
+                
+                <div class="alternatives-box">
+                    <strong>Alternatives:</strong>
+                    • "Funny you should ask — I actually just..."<br>
+                    • "You know what's interesting? I actually..."<br>
+                    • "Believe it or not, I actually..."
+                </div>
+            </div>
+            
+            <!-- Pattern 2 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">2</div>
+                    <div>Mostly [X], but sometimes [Y]</div>
+                </div>
+                <div class="pattern-phonetic">/ˈmoʊstli eks bʌt ˈsʌmtaɪmz waɪ/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Elaborate với nuance - không chỉ 1 chiều. Thể hiện depth + complexity, tạo 2 hooks.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Mostly X" = primary focus. "But sometimes Y" = adds nuance, complexity. Tạo 2 hooks để đối phương chọn bám vào cái nào. Natural hơn "I do X and Y".
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am into photography, mostly street photography, but sometimes I do portraits for friends weddings.')">🔊</button>
+                    <span class="example-context">🏠 Life - Hỏi về hobbies</span>
+                    "I'm into photography — <strong>mostly</strong> street photography, <strong>but sometimes</strong> I do portraits for friends' weddings."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'I work in finance, mostly real estate these days, but sometimes I still consult on tech deals from my old life.')">🔊</button>
+                    <span class="example-context">☕ Life - Hỏi về work</span>
+                    "I work in finance — <strong>mostly</strong> real estate these days, <strong>but sometimes</strong> I still consult on tech deals from my old life."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'We focus on Southeast Asia, mostly Vietnam and Thailand, but sometimes we look at opportunities in Indonesia if they are compelling enough.')">🔊</button>
+                    <span class="example-context">💼 Business - Networking</span>
+                    "We focus on Southeast Asia — <strong>mostly</strong> Vietnam and Thailand, <strong>but sometimes</strong> we look at opportunities in Indonesia if they're compelling enough."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Nuance:</strong> Pause nhẹ trước "but sometimes" để tạo emphasis. Intonation xuống ở "mostly X", lên nhẹ ở "but sometimes Y".
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ "Mostly X and sometimes Y" (thiếu contrast) → ✅ "Mostly X, <strong>but</strong> sometimes Y"
+                </div>
+                
+                <div class="alternatives-box">
+                    <strong>Alternatives:</strong>
+                    • "Primarily X, though I also do Y"<br>
+                    • "Mostly X, with the occasional Y"<br>
+                    • "X is my main focus, but I dabble in Y too"
+                </div>
+            </div>
+            
+            <!-- Pattern 3 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">3</div>
+                    <div>That reminds me of...</div>
+                </div>
+                <div class="pattern-phonetic">/ðæt rɪˈmaɪndz miː əv/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Connect current topic với câu chuyện/kinh nghiệm cá nhân. Tạo personal connection, biến abstract thành concrete.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> Tạo personal connection. Biến abstract topic thành concrete story. Khiến conversation memorable hơn. Natural hơn "By the way" hoặc "Speaking of which".
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Oh, that reminds me of this amazing coffee shop I found in Da Lat last year. Have you been to La Viet Coffee?')">🔊</button>
+                    <span class="example-context">🏠 Life - Đối phương nói về Đà Lạt</span>
+                    "Oh, <strong>that reminds me of</strong> this amazing coffee shop I found in Da Lat last year — have you been to La Viet Coffee?"
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'That reminds me of my first marathon. I trained for 6 months and almost quit at kilometer 30, haha.')">🔊</button>
+                    <span class="example-context">☕ Life - Đối phương nói về running</span>
+                    "<strong>That reminds me of</strong> my first marathon — I trained for 6 months and almost quit at km 30, haha."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'That reminds me of a similar company we looked at last year. They got acquired by Shopee. Do you know about that space?')">🔊</button>
+                    <span class="example-context">💼 Business - Đối phương nói về logistics startup</span>
+                    "<strong>That reminds me of</strong> a similar company we looked at last year — they got acquired by Shopee. Do you know about that space?"
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Nuance:</strong> "That reminds me of" = spontaneous connection, không rehearsed. Thường kèm theo personal anecdote ngắn (1-2 sentences).
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ Dùng quá nhiều lần trong 1 conversation → nghe scattered. ✅ Dùng 1-2 lần, đúng lúc.
+                </div>
+                
+                <div class="alternatives-box">
+                    <strong>Alternatives:</strong>
+                    • "Speaking of which, ..."<br>
+                    • "On a related note, ..."<br>
+                    • "That actually makes me think of..."
+                </div>
+            </div>
+            
+            <!-- Pattern 4 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">4</div>
+                    <div>What about you? How's [specific topic] going?</div>
+                </div>
+                <div class="pattern-phonetic">/wʌt əˈbaʊt juː haʊz [topic] ˈɡoʊɪŋ/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Bounce back với SPECIFIC question (không generic "And you?"). Thể hiện genuine interest, kéo dài conversation.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "And you?" = generic, kill conversation. "How's [specific] going?" = shows you were listening. Đối phương dễ trả lời hơn (có context cụ thể). Thể hiện emotional intelligence.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What about you? How is the new job going? You mentioned you were switching companies.')">🔊</button>
+                    <span class="example-context">🏠 Life - Sau khi nói về work</span>
+                    "<strong>What about you? How's</strong> the new job going? You mentioned you were switching companies."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'What about you? How is the photography project coming along? Last time we talked you were working on that street series.')">🔊</button>
+                    <span class="example-context">☕ Life - Sau khi nói về hobbies</span>
+                    "<strong>What about you? How's</strong> the photography project coming along? Last time we talked you were working on that street series."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'What about you? How is the series B going for your portfolio company? I remember you mentioned they were in discussions.')">🔊</button>
+                    <span class="example-context">💼 Business - Sau khi nói về deal</span>
+                    "<strong>What about you? How's</strong> the series B going for your portfolio company? I remember you mentioned they were in discussions."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Nuance:</strong> Question phải SPECIFIC — reference điều đối phương đã nói trước đó. Thể hiện bạn ĐANG LẮNG NGHE, không chỉ chờ đến lượt mình nói.
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ "What about you?" (quá generic) → ✅ "What about you? How's <strong>[specific]</strong> going?"
+                </div>
+                
+                <div class="alternatives-box">
+                    <strong>Alternatives:</strong>
+                    • "How about you? Still working on [X]?"<br>
+                    • "What's new with you? Last time we talked, [reference]"<br>
+                    • "Enough about me — how's [specific] going?"
+                </div>
+            </div>
+            
+            <!-- Pattern 5 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">5</div>
+                    <div>Speaking of [topic], ...</div>
+                </div>
+                <div class="pattern-phonetic">/ˈspiːkɪŋ əv [topic]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Transition sang related topic một cách tự nhiên. Keep conversation flowing, avoid awkward silence.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> Transition marker rất natural. Cho phép shift topic mà không abrupt. Thể hiện conversational fluency. Natural hơn "By the way" hoặc "Changing the subject".
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Speaking of coffee, have you tried that new place on Nguyen Hue? I have been meaning to check it out.')">🔊</button>
+                    <span class="example-context">🏠 Life - Đang nói về coffee</span>
+                    "<strong>Speaking of</strong> coffee, have you tried that new place on Nguyen Hue? I've been meaning to check it out."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'Speaking of work, I heard there is a big conference next month. Are you planning to go?')">🔊</button>
+                    <span class="example-context">☕ Life - Đang nói về work</span>
+                    "<strong>Speaking of</strong> work, I heard there's a big conference next month — are you planning to go?"
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Speaking of logistics, I just read that Shopee is expanding their warehouse network. Have you seen that?')">🔊</button>
+                    <span class="example-context">💼 Business - Đang nói về logistics</span>
+                    "<strong>Speaking of</strong> logistics, I just read that Shopee is expanding their warehouse network — have you seen that?"
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Nuance:</strong> "Speaking of X" = X đã được mention trong conversation. Nếu X chưa được mention, dùng "On a related note" hoặc "By the way".
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ "Speaking of X" khi X chưa được mention → ✅ Chỉ dùng khi X đã được discuss
+                </div>
+                
+                <div class="alternatives-box">
+                    <strong>Alternatives:</strong>
+                    • "On the topic of [X], ..."<br>
+                    • "That actually brings up [related topic]..."<br>
+                    • "While we're on the subject, ..."
+                </div>
+            </div>
+            
+            <!-- Pattern 6 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">6</div>
+                    <div>Oh, before I forget, ...</div>
+                </div>
+                <div class="pattern-phonetic">/oʊ bɪˈfɔːr aɪ fərˈɡɛt/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Thêm afterthought hoặc reminder vào cuối conversation. Kết thúc với value-add, không abrupt.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> Natural way để add last-minute information. Thể hiện thoughtfulness. Khiến conversation end memorable. Natural hơn "Also" hoặc "One more thing".
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Oh, before I forget, there is a community meeting next Thursday about the new park. You should come if you are interested.')">🔊</button>
+                    <span class="example-context">🏠 Life - Kết thúc với hàng xóm</span>
+                    "<strong>Oh, before I forget</strong>, there's a community meeting next Thursday about the new park — you should come if you're interested."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'Oh, before I forget, I have that running route map I promised to send you. I will text it tonight.')">🔊</button>
+                    <span class="example-context">☕ Life - Kết thúc với gym buddy</span>
+                    "<strong>Oh, before I forget</strong>, I have that running route map I promised to send you — I'll text it tonight."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Oh, before I forget, I have a friend who works at that company you mentioned. I would be happy to make an intro if that is helpful.')">🔊</button>
+                    <span class="example-context">💼 Business - Kết thúc với networking contact</span>
+                    "<strong>Oh, before I forget</strong>, I have a friend who works at [company] you mentioned — I'd be happy to make an intro if that's helpful."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Nuance:</strong> Dùng ở CUỐI conversation, trước khi exit. Intonation: "Oh" lên nhẹ, "before I forget" nói nhanh, pause trước thông tin chính.
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ Dùng giữa conversation → nghe scattered. ✅ Chỉ dùng khi wrapping up
+                </div>
+                
+                <div class="alternatives-box">
+                    <strong>Alternatives:</strong>
+                    • "Oh, one more thing before I let you go..."<br>
+                    • "Before I forget, I wanted to mention..."<br>
+                    • "Oh, and one last thing..."
+                </div>
+            </div>
+        </section>
+        
+        <!-- Listening Section -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">🎧</span> Natural Listening: 5-Minute Café Conversation</h2>
+            <p class="section-desc">Minh và Lisa (gặp ở Day 2 networking) gặp lại nhau ở café để follow-up. Conversation kéo dài 5 phút, thể hiện TẤT CẢ 6 patterns. Nghe và note lại mỗi pattern được dùng.</p>
+            
+            <div class="audio-player">
+                <button class="play-btn" id="mainPlayBtn" onclick="playFullTranscript(this)">▶</button>
+                <div class="audio-info">
+                    <div class="audio-label">5-Minute Café Conversation: Minh & Lisa</div>
+                    <div class="audio-meta">🇺🇸 US Accent · ~5 min · 145 WPM</div>
+                </div>
+                <button class="speed-control" onclick="changeSpeed(this)">1.0x</button>
+            </div>
+            
+            <div class="transcript-box">
+                <h4 style="font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 14px; color: var(--text-primary);">📄 Full Transcript</h4>
+                
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Lisa! Great to see you again. How've you been since the conference?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> Oh hey Minh! I've been good, thanks. <span class="highlight">Actually</span>, I just got back from a trip to Bangkok — we were doing due diligence on a logistics startup there. It was intense but exciting.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Oh nice! <span class="highlight">That reminds me of</span> this trip I took to Bangkok last year — I went for a real estate conference and ended up visiting some warehouses in the outer districts. Fascinating how different the logistics landscape is there compared to Vietnam.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> Totally! <span class="highlight">Speaking of</span> Vietnam logistics, I wanted to ask you more about that series A deal you mentioned at the conference. The one with the last-mile delivery startup?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Yeah, that's been a fun one. We're <span class="highlight">mostly</span> focused on their technology stack, <span class="highlight">but sometimes</span> we also help them with operational strategy. They've got this really interesting AI routing system that cuts delivery times by 30%.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> That's impressive. What's the unit economics look like?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Pretty solid, <span class="highlight">actually</span>. Their CAC is about $15, LTV around $200. <span class="highlight">Actually</span>, I just saw their latest metrics — they hit profitability last quarter, which is earlier than we projected.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> No way! That's great news. <span class="highlight">Speaking of</span> profitability, how's your fund performing overall this year?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Pretty well, thanks. We're up about 18% YTD. <span class="highlight">Mostly</span> driven by our real estate portfolio, <span class="highlight">but sometimes</span> our tech co-investments surprise us — like this logistics deal.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> Nice! <span class="highlight">What about your firm</span>? How's the fundraising going for Fund III?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> (laughs) No worries! Yeah, Fund III is going well. We're about 60% subscribed. <span class="highlight">Actually</span>, we just closed a cornerstone LP from a Singaporean sovereign fund last week, which was a big validation.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> That's awesome! Congrats. <span class="highlight">Oh, before I forget</span>, I have a friend who runs a family office in Hong Kong — they've been looking at Vietnam-focused funds. Would you be open to an intro?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Absolutely, that would be amazing! <span class="highlight">Oh, before I forget</span> as well — I have that report on Southeast Asia logistics trends I promised to share. I'll email it to you tonight.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> Perfect! Thanks Minh. This was great catching up.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Yeah, same here. <span class="highlight">Speaking of</span> which, there's a real estate tech meetup next Thursday — you should come if you're free.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> Oh, I'd love to! Send me the details?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Will do. Alright, I'll let you go — have a great rest of your day!
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker lisa">Lisa:</span> You too! See you soon.
+                </div>
+            </div>
+            
+            <!-- Pattern Usage Analysis -->
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 24px 0 12px; color: var(--text-primary);">📊 Pattern Usage Analysis</h3>
+            
+            <table class="hooks-table">
+                <thead>
+                    <tr>
+                        <th>Pattern</th>
+                        <th>Lần dùng</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>"Actually, ..."</strong></td>
+                        <td>3 lần</td>
+                        <td>Thêm surprising info, tạo hooks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>"Mostly X, but sometimes Y"</strong></td>
+                        <td>2 lần</td>
+                        <td>Elaborate với nuance, complexity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>"That reminds me of..."</strong></td>
+                        <td>1 lần</td>
+                        <td>Personal connection, concrete story</td>
+                    </tr>
+                    <tr>
+                        <td><strong>"Speaking of..."</strong></td>
+                        <td>3 lần</td>
+                        <td>Transition tự nhiên giữa topics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>"What about you? How's..."</strong></td>
+                        <td>1 lần</td>
+                        <td>Specific bounce-back</td>
+                    </tr>
+                    <tr>
+                        <td><strong>"Before I forget..."</strong></td>
+                        <td>2 lần</td>
+                        <td>Value-add khi kết thúc</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Conversation Hooks -->
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 24px 0 12px; color: var(--text-primary);">🎣 Conversation Hooks được tạo</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">
+                Mỗi hook = 1 cơ hội để conversation tiếp tục. Trong 5 phút, Minh và Lisa tạo ra 7 hooks:
+            </p>
+            
+            <table class="hooks-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Hook</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>"Bangkok trip"</td>
+                        <td>Minh nhớ lại trip của mình → "That reminds me of..."</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>"Series A deal"</td>
+                        <td>Lisa hỏi sâu hơn về deal</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>"AI routing system"</td>
+                        <td>Lisa hỏi về unit economics</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>"Profitability"</td>
+                        <td>Lisa shift sang fund performance</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>"Fund III fundraising"</td>
+                        <td>Lisa offer intro với family office</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>"Report on logistics trends"</td>
+                        <td>Minh offer share report</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>"Real estate tech meetup"</td>
+                        <td>Minh invite Lisa → future connection</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="tip-box">
+                <strong>💡 C1 Tip:</strong> Conversation hay = nhiều hooks được tạo và bám vào. Nếu đối phương đưa hook, BẠN phải bám vào. Nếu bạn đưa hook, ĐỐI PHƯƠNG sẽ bám vào. Đây là "dance" của conversation.
+            </div>
+        </section>
+        
+        <!-- Pronunciation Section -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Pronunciation: Conversation Flow</h2>
+            <p class="section-desc">Mỗi pattern có intonation riêng. Master intonation = master conversation flow.</p>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 0 0 12px; color: var(--text-primary);">🎵 Intonation cho Follow-up Questions</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Intonation</th>
+                        <th>Effect</th>
+                        <th>Khi nào dùng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>"What about you? ↗"</code> (rising)</td>
+                        <td>Generic, hơi lazy</td>
+                        <td>Khi không có gì specific để hỏi</td>
+                    </tr>
+                    <tr>
+                        <td><code>"What about you? How's [X] going? ↘"</code> (falling)</td>
+                        <td>Specific, thoughtful</td>
+                        <td>Khi muốn thể hiện genuine interest</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="tip-box">
+                <strong>💡 C1 Tip:</strong> Luôn dùng specific version. Rising intonation ở cuối câu hỏi YES/NO, falling ở WH-questions.
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">⏸️ Pause Patterns cho Elaboration</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Pattern</th>
+                        <th>Pause Location</th>
+                        <th>Intonation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>"Mostly X [PAUSE] but sometimes Y"</code></td>
+                        <td>0.5s trước "but sometimes"</td>
+                        <td>↓ ở "mostly X", ↑ nhẹ ở "but sometimes Y"</td>
+                    </tr>
+                    <tr>
+                        <td><code>"Actually, [PAUSE] elaboration"</code></td>
+                        <td>Sau "actually"</td>
+                        <td>"Actually" ↗, elaboration ↘</td>
+                    </tr>
+                    <tr>
+                        <td><code>"Speaking of X, [PAUSE] new topic"</code></td>
+                        <td>Sau "Speaking of X"</td>
+                        <td>"Speaking of X" ↗, new topic ↘</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🎤 Discourse Marker Intonation</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Marker</th>
+                        <th>Intonation</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>"Actually, ..."</code></td>
+                        <td>"Actually" ↗ + pause + elaboration ↘</td>
+                        <td>Surprise, thêm info</td>
+                    </tr>
+                    <tr>
+                        <td><code>"Speaking of X, ..."</code></td>
+                        <td>"Speaking of X" ↗ + pause + new topic ↘</td>
+                        <td>Transition</td>
+                    </tr>
+                    <tr>
+                        <td><code>"That reminds me of..."</code></td>
+                        <td>"That reminds me of" ↗ + story ↘</td>
+                        <td>Personal connection</td>
+                    </tr>
+                    <tr>
+                        <td><code>"Before I forget, ..."</code></td>
+                        <td>"Before I forget" nói nhanh + info ↘</td>
+                        <td>Afterthought</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">💭 Hesitation Markers cho Natural Flow</h3>
+            
+            <div class="tip-box">
+                <strong>💡 C1 Tip:</strong> Conversation extension cần hesitation để nghe natural. Hesitation markers ở GIỮA elaboration, không ở đầu câu. Giúp bạn có time để think trong khi vẫn sounding natural.
+                <br><br>
+                <strong>Ví dụ:</strong>
+                <br>• "We're <strong>mostly</strong> focused on their tech stack, <strong>but, um, sometimes</strong> we also help with operations."
+                <br>• "<strong>Actually</strong>, I, <strong>uh</strong>, just saw their latest metrics..."
+                <br>• "<strong>Speaking of</strong> logistics, <strong>I, um, I</strong> just read that Shopee..."
+            </div>
+        </section>
+        
+        <!-- Speaking Practice -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🗣️</span> Speaking: 4 Scenarios (Short → Long)</h2>
+            <p class="section-desc">Progression từ conversation ngắn (2-3 phút) đến dài (10 phút). Record và listen back để self-assess.</p>
+            
+            <div class="scenario-grid">
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - 3-5 min</span>
+                    <h4>Scenario 1: Café với bạn mới quen</h4>
+                    <p>Bạn gặp ai đó ở café qua bạn chung. Đã nói 2-3 câu basic. Bây giờ cần kéo dài conversation thêm 3-5 phút.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 patterns từ hôm nay</li>
+                            <li>Tạo ít nhất 3 hooks để đối phương bám vào</li>
+                            <li>Bounce back với specific questions</li>
+                            <li>Transition tự nhiên giữa topics</li>
+                            <li>Kết thúc với "before I forget" value-add</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('cafe')">🎙️ Record (3-5 min)</button>
+                </div>
+                
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - 2-3 min</span>
+                    <h4>Scenario 2: Gặp lại người quen ở gym</h4>
+                    <p>Bạn gặp ai đó ở gym mà đã nói chuyện vài lần. Hôm nay muốn có conversation dài hơn bình thường.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Reference điều họ đã nói lần trước (thể hiện listening)</li>
+                            <li>Dùng "That reminds me of" để connect</li>
+                            <li>Elaborate với "mostly X, but sometimes Y"</li>
+                            <li>Ask specific follow-up: "How's [X] going?"</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('gym')">🎙️ Record (2-3 min)</button>
+                </div>
+                
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business - 5 min</span>
+                    <h4>Scenario 3: Follow-up coffee với networking contact</h4>
+                    <p>Bạn gặp lại ai đó từ networking event để follow-up. Mục tiêu: deepen relationship, explore potential collaboration.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng "Speaking of X" để transition giữa business topics</li>
+                            <li>Elaborate về work với "mostly X, but sometimes Y"</li>
+                            <li>Share surprising info với "Actually, ..."</li>
+                            <li>Offer value: "Before I forget, I have..."</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('followup')">🎙️ Record (5 min)</button>
+                </div>
+                
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">🎯 Challenge - 10 min</span>
+                    <h4>Scenario 4: 10-Minute Conversation Marathon</h4>
+                    <p>Bạn stuck ở elevator với 1 người lạ trong 10 phút (giả lập). Phải keep conversation going mà không awkward.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng TẤT CẢ 6 patterns ít nhất 1 lần</li>
+                            <li>Tạo ít nhất 5 hooks</li>
+                            <li>Transition giữa ít nhất 3 topics khác nhau</li>
+                            <li>KHÔNG để có silence quá 5 giây</li>
+                            <li>Kết thúc conversation gracefully</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('marathon')">🎙️ Record (10 min)</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-accent">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard Review: Theo Function</h2>
+            <p class="section-desc">Khác với Day 1 (từ vựng) và Day 2 (ý muốn nói), Day 3 flashcard theo <strong>FUNCTION</strong>. Mặt trước: function (tiếng Việt). Mặt sau: pattern + example + when to use.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-function" id="fc-function">Thêm thông tin bất ngờ/thú vị</div>
+                            <div class="card-hint">Tap to reveal pattern →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-pattern" id="fc-pattern">"Actually, [elaboration]"</div>
+                            <div class="card-example" id="fc-example">"I'm in finance. Actually, I just switched to real estate private equity last year — it's been a big change, but I'm loving it."</div>
+                            <div class="card-when" id="fc-when">💡 When to use: Khi muốn tạo surprise element, khiến đối phương muốn hỏi thêm.</div>
+                            <div class="card-warning" id="fc-warning">⚠️ KHÔNG dùng để correct ai đó khi không cần.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Conversation Extension</h2>
+            <p class="section-desc">7 câu hỏi về conversation killers, follow-up quality, và pattern usage. Chọn đáp án TỐT NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Câu nào là <strong>CONVERSATION KILLER</strong> (giết conversation)?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "I'm in real estate — mostly logistics, actually. It's been fascinating watching the space evolve."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "I work in finance."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "I'm in tech. Actually, I just launched a new product last month — pretty exciting stuff."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "I'm a photographer — mostly street stuff, but sometimes I do portraits too."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">2. Ai đó vừa nói "I just got back from Japan". Follow-up nào <strong>TỐT NHẤT</strong>?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. "Oh, nice. And you?"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. "Cool. What did you do there?"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. "Oh nice! What part of Japan? I've been meaning to go — I've heard Kyoto is amazing this time of year."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. "That's interesting."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">3. Bạn muốn elaborate về work. Câu nào <strong>TỐT NHẤT</strong>?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. "I work in finance."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. "I'm in real estate private equity. We do deals."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. "I'm in real estate private equity — mostly logistics these days, but sometimes we look at industrial properties too. It's been fascinating watching e-commerce transform the space."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. "I work in real estate. It's interesting."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. Bạn đang nói về coffee, muốn transition sang work. Câu nào <strong>TỰ NHIÊN NHẤT</strong>?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. "Changing the subject, let me tell you about work."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. "Speaking of caffeine, I've been working on this crazy project lately..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. "Anyway, work."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. "I want to talk about work now."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">5. Bạn vừa trả lời về work. Bounce-back nào <strong>TỐT NHẤT</strong>?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. "And you?"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. "What about you?"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. "What about you? Are you in the same space, or something completely different?"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. "Your turn."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">6. Đối phương vừa nói về trip đến Đà Lạt. Response nào <strong>KÉO DÀI conversation TỐT NHẤT</strong>?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. "Cool."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. "Nice. I've been there too."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. "Oh, that reminds me of this amazing coffee shop I found in Da Lat last year — La Viet Coffee. Have you been? The owner is this super interesting guy who used to work in tech."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. "Da Lat is nice."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Bạn muốn kết thúc conversation mà vẫn để lại ấn tượng tốt. Cách nào <strong>TỐT NHẤT</strong>?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. "OK, I have to go. Bye."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. "Anyway, bye!"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. "Oh, before I forget, I have that article I promised to send you — I'll email it tonight. It was great catching up!"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. "Let's stop talking now."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-01.html" class="nav-btn">
+                <div class="nav-label">← Back to</div>
+                <div class="nav-title">Week 1 Hub</div>
+            </a>
+            <a href="week-01-day-4.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 4: Listening Deep Dive</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 3 Complete & Continue to Day 4</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#88D8B0"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#88D8B0"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#88D8B0" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#88D8B0" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#88D8B0"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <rect x="65" y="150" width="28" height="20" fill="#B8C5E8" rx="3"/>
+            <line x1="79" y1="150" x2="79" y2="170" stroke="#2D3748" stroke-width="1.5"/>
+        </svg>
+        <div class="mascot-speech">Keep talking! 💬</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 1 · Day 3 · Conversation Extension</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 1.0;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = 'en-US';
+                u.rate = audioSpeed;
+                
+                const voices = window.speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US') || voices[0];
+                if (usVoice) u.voice = usVoice;
+                
+                window.speechSynthesis.speak(u);
+            }
+        }
+        
+        function playFullTranscript(btn) {
+            const text = `Lisa! Great to see you again. How have you been since the conference? Oh hey Minh! I have been good, thanks. Actually, I just got back from a trip to Bangkok. We were doing due diligence on a logistics startup there. It was intense but exciting. Oh nice! That reminds me of this trip I took to Bangkok last year. I went for a real estate conference and ended up visiting some warehouses in the outer districts. Fascinating how different the logistics landscape is there compared to Vietnam. Totally! Speaking of Vietnam logistics, I wanted to ask you more about that series A deal you mentioned at the conference. The one with the last mile delivery startup? Yeah, that has been a fun one. We are mostly focused on their technology stack, but sometimes we also help them with operational strategy. They have got this really interesting AI routing system that cuts delivery times by 30 percent. That is impressive. What is the unit economics look like? Pretty solid, actually. Their CAC is about 15 dollars, LTV around 200. Actually, I just saw their latest metrics. They hit profitability last quarter, which is earlier than we projected. No way! That is great news. Speaking of profitability, how is your fund performing overall this year? Pretty well, thanks. We are up about 18 percent year to date. Mostly driven by our real estate portfolio, but sometimes our tech co investments surprise us, like this logistics deal. Nice! What about your firm? How is the fundraising going for Fund III? No worries! Yeah, Fund III is going well. We are about 60 percent subscribed. Actually, we just closed a cornerstone LP from a Singaporean sovereign fund last week, which was a big validation. That is awesome! Congrats. Oh, before I forget, I have a friend who runs a family office in Hong Kong. They have been looking at Vietnam focused funds. Would you be open to an intro? Absolutely, that would be amazing! Oh, before I forget as well, I have that report on Southeast Asia logistics trends I promised to share. I will email it to you tonight. Perfect! Thanks Minh. This was great catching up. Yeah, same here. Speaking of which, there is a real estate tech meetup next Thursday. You should come if you are free. Oh, I would love to! Send me the details? Will do. Alright, I will let you go. Have a great rest of your day! You too! See you soon.`;
+            
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = 'en-US';
+                u.rate = audioSpeed;
+                
+                const voices = window.speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US') || voices[0];
+                if (usVoice) u.voice = usVoice;
+                
+                window.speechSynthesis.speak(u);
+            }
+        }
+        
+        function changeSpeed(btn) {
+            const speeds = [0.75, 1.0, 1.25];
+            const current = speeds.indexOf(audioSpeed);
+            audioSpeed = speeds[(current + 1) % speeds.length];
+            btn.textContent = audioSpeed + 'x';
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                function: "Thêm thông tin bất ngờ/thú vị",
+                pattern: '"Actually, [elaboration]"',
+                example: '"I\'m in finance. Actually, I just switched to real estate private equity last year — it\'s been a big change, but I\'m loving it."',
+                when: '💡 Khi muốn tạo surprise element, khiến đối phương muốn hỏi thêm.',
+                warning: '⚠️ KHÔNG dùng để correct ai đó khi không cần.'
+            },
+            { 
+                function: "Elaborate với nuance (không chỉ 1 chiều)",
+                pattern: '"Mostly X, but sometimes Y"',
+                example: '"I\'m into photography — mostly street photography, but sometimes I do portraits for friends\' weddings."',
+                when: '💡 Khi muốn thể hiện depth + complexity, tạo 2 hooks.',
+                warning: '⚠️ Nhớ pause trước "but sometimes" để tạo emphasis.'
+            },
+            { 
+                function: "Connect với câu chuyện cá nhân",
+                pattern: '"That reminds me of..."',
+                example: '"Oh, that reminds me of this amazing coffee shop I found in Da Lat last year — have you been to La Viet Coffee?"',
+                when: '💡 Khi muốn tạo personal connection, biến abstract thành concrete.',
+                warning: '⚠️ Dùng 1-2 lần/conversation, không quá nhiều.'
+            },
+            { 
+                function: "Specific bounce-back question",
+                pattern: '"What about you? How\'s [specific] going?"',
+                example: '"What about you? How\'s the new job going? You mentioned you were switching companies."',
+                when: '💡 Khi muốn thể hiện genuine interest, reference điều đối phương đã nói.',
+                warning: '⚠️ Tránh "And you?" - quá generic, kill conversation.'
+            },
+            { 
+                function: "Transition sang related topic",
+                pattern: '"Speaking of [topic], ..."',
+                example: '"Speaking of coffee, have you tried that new place on Nguyen Hue? I\'ve been meaning to check it out."',
+                when: '💡 Khi topic đã được mention trong conversation, muốn shift tự nhiên.',
+                warning: '⚠️ Chỉ dùng khi X đã được discuss. Nếu chưa, dùng "By the way".'
+            },
+            { 
+                function: "Afterthought khi kết thúc conversation",
+                pattern: '"Oh, before I forget, ..."',
+                example: '"Oh, before I forget, I have that report I promised to share — I\'ll email it to you tonight."',
+                when: '💡 Khi muốn add value lúc kết thúc, khiến conversation end memorable.',
+                warning: '⚠️ Chỉ dùng ở CUỐI conversation, không phải giữa.'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-function').textContent = card.function;
+            document.getElementById('fc-pattern').textContent = card.pattern;
+            document.getElementById('fc-example').textContent = card.example;
+            document.getElementById('fc-when').textContent = card.when;
+            document.getElementById('fc-warning').textContent = card.warning;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'c', q3: 'c', q4: 'b', q5: 'c', q6: 'c', q7: 'c' };
+        const explanations = {
+            q1: 'B quá ngắn, không elaborate, không có hooks. A, C, D đều có elaboration + hooks ("mostly", "actually", "but sometimes").',
+            q2: 'C specific ("What part"), thể hiện genuine interest, thêm personal touch ("I\'ve been meaning to go"), tạo hook để đối phương elaborate. A generic. B OK nhưng không có personal touch. D kill conversation.',
+            q3: 'C có "mostly X, but sometimes Y" + elaboration + hook ("e-commerce transform"). A, B, D quá ngắn.',
+            q4: 'B dùng "Speaking of X" để transition tự nhiên, connect coffee → work qua "caffeine". A quá abrupt. C, D quá direct, không natural.',
+            q5: 'C specific, cho đối phương 2 options để trả lời (same space OR different), dễ elaborate. A, B quá generic. D nghe như game show.',
+            q6: 'C dùng "That reminds me of" + personal story + specific detail + question. Tạo nhiều hooks để đối phương bám vào. A, B, D kill conversation.',
+            q7: 'C dùng "before I forget" để add value + appreciation + clear exit. A, B abrupt. D rude.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered conversation extension!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the patterns you missed and try again.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the 6 patterns carefully.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the patterns and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== RECORDING TIPS ==========
+        function showRecordingTips(scenario) {
+            const tips = {
+                cafe: `☕ TIPS FOR CAFÉ SCENARIO (3-5 min):
+
+• Dùng ít nhất 3 patterns:
+  - "Actually, ..." (tạo surprise)
+  - "Mostly X, but sometimes Y" (elaborate)
+  - "Speaking of X, ..." (transition)
+  - "Before I forget, ..." (value-add khi kết thúc)
+
+• Tạo 3 hooks:
+  - Hook 1: Personal story ("That reminds me of...")
+  - Hook 2: Specific detail (con số, tên, địa điểm)
+  - Hook 3: Question ngược lại
+
+• Bounce back với specific questions:
+  "What about you? How's [specific] going?"
+
+💡 Mẹo: Record 3-5 phút. Listen back. Check: có awkward silence không?`,
+
+                gym: `🏃 TIPS FOR GYM SCENARIO (2-3 min):
+
+• Reference điều họ đã nói lần trước:
+  "Last time we talked, you mentioned [X]..."
+  → Thể hiện bạn ĐANG LẮNG NGHE
+
+• Dùng "That reminds me of" để connect:
+  "That reminds me of when I..."
+
+• Elaborate với "mostly X, but sometimes Y":
+  "I'm mostly into [X], but sometimes [Y]..."
+
+• Ask specific follow-up:
+  "How's [X] going?" (không phải "And you?")
+
+💡 Mẹo: Focus vào listening + reference. Đây là superpower của C1.`,
+
+                followup: `💼 TIPS FOR FOLLOW-UP SCENARIO (5 min):
+
+• Dùng "Speaking of X" để transition giữa business topics:
+  "Speaking of logistics, have you seen..."
+
+• Elaborate về work với "mostly X, but sometimes Y":
+  "We're mostly focused on X, but sometimes Y..."
+
+• Share surprising info với "Actually, ...":
+  "Actually, we just closed a deal..."
+
+• Offer value khi kết thúc:
+  "Oh, before I forget, I have [report/intro/resource]..."
+
+💡 Mẹo: Follow-up coffee là cơ hội VÀNG để build relationship. 
+Chuẩn bị 2-3 value-adds trước khi gặp.`,
+
+                marathon: `🎯 TIPS FOR 10-MINUTE MARATHON (Challenge):
+
+Đây là scenario KHÓ NHẤT - phải keep conversation 10 phút.
+
+Strategy:
+1. Minute 0-2: Small talk + "Actually, ..." để tạo hook
+2. Minute 2-4: "Mostly X, but sometimes Y" để elaborate
+3. Minute 4-6: "That reminds me of..." để connect
+4. Minute 6-8: "Speaking of X..." để transition
+5. Minute 8-10: "Before I forget..." để wrap up
+
+Rules:
+• KHÔNG để silence quá 5 giây
+• Dùng TẤT CẢ 6 patterns
+• Tạo ít nhất 5 hooks
+• Transition giữa ít nhất 3 topics
+
+💡 Mẹo: Record 10 phút. Nghe lại. Count: bao nhiêu lần mỗi pattern được dùng?`
+            };
+            
+            alert(tips[scenario]);
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week1Days') || '[]');
+            
+            if (!completed.includes(3)) {
+                completed.push(3);
+                localStorage.setItem('week1Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(1)) {
+                        completedWeeks.push(1);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 1 completed! You can now keep conversations flowing naturally! 🦊');
+                } else {
+                    alert(`✅ Day 3 completed! ${7 - completed.length} days left in Week 1. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-01-day-4.html';
+            } else {
+                if (confirm('✅ Day 3 already completed! Go to Day 4?')) {
+                    location.href = 'week-01-day-4.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
