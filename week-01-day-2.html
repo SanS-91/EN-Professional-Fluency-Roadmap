@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 2: Register Shifting | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #F4A8A8;
+            --primary-light: #F9C4C4;
+            --primary-soft: #FFF0F0;
+            --secondary: #B8C5E8;
+            --secondary-soft: #F0F3FF;
+            --accent: #D4B8E8;
+            --accent-soft: #F5F0FF;
+            --warm: #F9D4B8;
+            --warm-soft: #FFF5EB;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--accent-soft) 0%, var(--secondary-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(212,184,232,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(184,197,232,0.15) 0%, transparent 40%);
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        .section-pink { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #FDE0E0; }
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #DDE5F5; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E8DDF5; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-accent { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #E8DDF5; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--accent-soft), var(--secondary-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--accent);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--accent); }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: #553C9A;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== REGISTER TABLE (NEW) ========== */
+        .register-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            font-size: 13px;
+        }
+        
+        .register-table th {
+            background: linear-gradient(135deg, var(--accent), #B794D6);
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .register-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        
+        .register-table tr:last-child td { border-bottom: none; }
+        .register-table tr:hover { background: var(--bg); }
+        
+        .register-badge-table {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .register-badge-table.casual { background: var(--life-bg); color: var(--life-dark); }
+        .register-badge-table.semi { background: var(--biz-bg); color: var(--biz-dark); }
+        .register-badge-table.formal { background: var(--accent-soft); color: #553C9A; }
+        
+        /* ========== PAIR CARD ========== */
+        .pair-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pair-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pair-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pair-number {
+            background: linear-gradient(135deg, var(--accent), #B794D6);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        /* ========== EXAMPLES ========== */
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid;
+            position: relative;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        .example-item.casual { border-left-color: var(--accent); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        .example-item.casual .example-context { color: #553C9A; }
+        
+        .audio-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-left: 8px;
+        }
+        
+        .audio-btn:hover {
+            background: #B794D6;
+            transform: scale(1.1);
+        }
+        
+        /* ========== CONTEXT NOTE ========== */
+        .context-note {
+            background: #FFF5EB;
+            padding: 14px 16px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--warning);
+            margin-top: 14px;
+            font-size: 13px;
+            color: #744210;
+            line-height: 1.55;
+        }
+        
+        .context-note strong { color: #744210; }
+        
+        .context-note ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+        
+        .context-note li {
+            margin-bottom: 4px;
+        }
+        
+        /* ========== MISTAKE BOX ========== */
+        .mistake-box {
+            background: #FED7D7;
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--error);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        /* ========== US/UK BOX ========== */
+        .us-uk-box {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid var(--border);
+            margin-top: 14px;
+        }
+        
+        .us-uk-box h5 {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .us-uk-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .us-uk-column {
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .us-uk-column.uk {
+            background: var(--secondary-soft);
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .us-uk-column.us {
+            background: var(--life-bg);
+            border-left: 3px solid var(--life);
+        }
+        
+        .us-uk-column strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .us-uk-column.uk strong { color: var(--biz-dark); }
+        .us-uk-column.us strong { color: var(--life-dark); }
+        
+        .us-uk-note {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        /* ========== CONTINUUM BOX ========== */
+        .continuum-box {
+            background: linear-gradient(135deg, var(--warm-soft), var(--secondary-soft));
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--warning);
+            margin: 20px 0;
+        }
+        
+        .continuum-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        
+        .continuum-box p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 10px;
+        }
+        
+        .continuum-visual {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin: 12px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-align: center;
+            letter-spacing: 0.5px;
+            overflow-x: auto;
+        }
+        
+        .continuum-box ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .continuum-box li {
+            padding: 5px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .continuum-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--life);
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        /* ========== NATIVE TIP BOX ========== */
+        .native-tip-box {
+            background: linear-gradient(135deg, var(--life-bg), var(--secondary-soft));
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin: 20px 0;
+        }
+        
+        .native-tip-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .native-tip-box p {
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.55;
+            margin-bottom: 8px;
+        }
+        
+        .native-tip-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .native-tip-box li {
+            padding: 5px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .native-tip-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== TRANSCRIPT ========== */
+        .transcript-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        
+        .transcript-line {
+            padding: 8px 0;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .transcript-line:last-child { border-bottom: none; }
+        
+        .speaker {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-right: 6px;
+        }
+        
+        .highlight {
+            background: #FFF5EB;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-weight: 500;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .conversation-label {
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            margin: 14px 0 10px;
+            font-size: 13px;
+            font-weight: 600;
+            border-left: 3px solid;
+        }
+        
+        .conversation-label.conv1 {
+            background: var(--life-bg);
+            border-left-color: var(--life);
+            color: var(--life-dark);
+        }
+        
+        .conversation-label.conv2 {
+            background: var(--biz-bg);
+            border-left-color: var(--biz);
+            color: var(--biz-dark);
+        }
+        
+        .conversation-label.conv3 {
+            background: var(--accent-soft);
+            border-left-color: var(--accent);
+            color: #553C9A;
+        }
+        
+        /* ========== AUDIO PLAYER ========== */
+        .audio-player {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .play-btn {
+            background: white;
+            color: var(--accent);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .play-btn:hover { transform: scale(1.1); }
+        
+        .audio-info { flex: 1; }
+        
+        .audio-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .audio-meta {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .speed-control {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .speed-control:hover { background: rgba(255,255,255,0.3); }
+        
+        /* ========== TIP BOX ========== */
+        .tip-box {
+            background: var(--warm-soft);
+            padding: 14px 16px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--warning);
+            font-size: 13px;
+            color: #744210;
+            line-height: 1.55;
+            margin-top: 14px;
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--warm-soft), var(--accent-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--warning); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: #744210; }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: #744210; }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-requirements { color: #744210; }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--warning); color: #744210; }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--warning); color: white; }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 300px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--accent) 0%, #B794D6 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-word {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--accent);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-phonetic {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .flashcard-back .card-registers {
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        
+        .flashcard-back .card-registers div {
+            padding: 8px 10px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 6px;
+            border-left: 3px solid;
+        }
+        
+        .flashcard-back .card-registers .reg-casual {
+            background: var(--life-bg);
+            border-left-color: var(--life);
+        }
+        
+        .flashcard-back .card-registers .reg-semi {
+            background: var(--biz-bg);
+            border-left-color: var(--biz);
+        }
+        
+        .flashcard-back .card-registers .reg-formal {
+            background: var(--accent-soft);
+            border-left-color: var(--accent);
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 10px;
+            padding: 8px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--accent);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--life) 0%, #38A169 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(212,184,232,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            .us-uk-grid { grid-template-columns: 1fr; }
+            
+            .register-table { font-size: 12px; }
+            .register-table th, .register-table td { padding: 10px; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-01.html" class="nav-back">← Week 1 Hub</a>
+            <div class="nav-progress">
+                <span>Day 2 / 7</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 28%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-01.html" class="day-tab">Overview</a>
+                <a href="week-01-day-1.html" class="day-tab">Day 1</a>
+                <a href="week-01-day-2.html" class="day-tab active">Day 2</a>
+                <a href="week-01-day-3.html" class="day-tab">Day 3</a>
+                <a href="week-01-day-4.html" class="day-tab">Day 4</a>
+                <a href="week-01-day-5.html" class="day-tab">Day 5</a>
+                <a href="week-01-day-6.html" class="day-tab">Day 6</a>
+                <a href="week-01-day-7.html" class="day-tab">Day 7</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-01.html">Week 1</a>
+                <span>›</span>
+                <span>Day 2</span>
+            </div>
+            <h1 class="day-title">🎭 Register Shifting & Context Awareness</h1>
+            <p class="day-subtitle">C1 không phải biết NHIỀU từ — mà là biết dùng <strong>ĐÚNG từ, ĐÚNG lúc, với ĐÚNG người</strong>. Hôm nay bạn sẽ học cách shift register linh hoạt giữa Casual / Semi-formal / Formal cho cùng 1 ý.</p>
+            <div class="day-meta">
+                <span class="meta-tag">🎭 Register Shifting</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 6 register pairs</span>
+                <span class="meta-tag">🎯 Context-aware</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>🎯 C1 = Context-aware, not just vocabulary-rich</h4>
+                <p>Người B2 biết nhiều từ. Người C1 biết <strong>khi nào dùng từ nào</strong>. Hôm nay bạn sẽ học cách nói <strong>cùng 1 ý</strong> theo <strong>3 cách khác nhau</strong> tùy context.</p>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">6 Pairs</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Register-shifting pairs với context notes</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎧</div>
+                    <div class="plan-block-title">Listening</div>
+                    <div class="plan-block-time">20 min</div>
+                    <div class="plan-block-desc">1 person, 3 conversations, 3 registers</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗣️</div>
+                    <div class="plan-block-title">Speaking</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">4 scenarios với register requirements</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎴</div>
+                    <div class="plan-block-title">Review</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Flashcards + 7-question quiz</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6 Register Pairs -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">📚</span> 6 Register-Shifting Pairs</h2>
+            <p class="section-desc">Cùng 1 ý, nhưng nói 3 cách khác nhau tùy context. Click 🔊 để nghe từng register.</p>
+            
+            <!-- Pair 1 -->
+            <div class="pair-card">
+                <div class="pair-header">
+                    <div class="pair-number">1</div>
+                    <div>Nói về công việc</div>
+                </div>
+                
+                <table class="register-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 22%;">Register</th>
+                            <th style="width: 40%;">Phrase</th>
+                            <th style="width: 38%;">Khi nào dùng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="register-badge-table casual">🏠 Casual</span></td>
+                            <td>"I work in [field]"</td>
+                            <td>Gặp hàng xóm, bạn mới, party</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table semi">☕ Semi-formal</span></td>
+                            <td>"I'm in [field]"</td>
+                            <td>Networking casual, peer meeting</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table formal">💼 Formal</span></td>
+                            <td>"I work as a [role] at [company]"</td>
+                            <td>Interview, client meeting, senior leaders</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I work in finance, nothing too exciting, haha.')">🔊</button>
+                    <span class="example-context">🏠 Casual - Hàng xóm hỏi</span>
+                    "I work in finance — nothing too exciting, haha."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am in real estate private equity, mostly logistics.')">🔊</button>
+                    <span class="example-context">☕ Semi-formal - Networking peer</span>
+                    "I'm in real estate private equity, mostly logistics."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'I work as an Investment Director at Horizon Partners, overseeing our Southeast Asia portfolio.')">🔊</button>
+                    <span class="example-context">💼 Formal - Client meeting</span>
+                    "I work as an Investment Director at Horizon Partners, overseeing our Southeast Asia portfolio."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Insight:</strong> "I'm in [field]" nghe tự nhiên hơn "I work in [field]" ở semi-formal contexts. Người Mỹ dùng "I'm in tech/finance/real estate" RẤT NHIỀU.
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ Dùng formal register với bạn mới quen → nghe xa cách, như đang interview.
+                </div>
+            </div>
+            
+            <!-- Pair 2 -->
+            <div class="pair-card">
+                <div class="pair-header">
+                    <div class="pair-number">2</div>
+                    <div>Nói về sở thích</div>
+                </div>
+                
+                <table class="register-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 22%;">Register</th>
+                            <th style="width: 40%;">Phrase</th>
+                            <th style="width: 38%;">Khi nào dùng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="register-badge-table casual">🏠 Casual</span></td>
+                            <td>"I'm really into X"</td>
+                            <td>Bạn bè, party, gym</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table semi">☕ Semi-formal</span></td>
+                            <td>"I'm quite keen on X" (UK)<br>"I'm a big fan of X" (US)</td>
+                            <td>Networking, đồng nghiệp mới</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table formal">💼 Formal</span></td>
+                            <td>"I have a strong interest in X"</td>
+                            <td>Interview, formal settings</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am really into trail running, mostly long-distance stuff.')">🔊</button>
+                    <span class="example-context">🏠 Casual - Gym buddy</span>
+                    "I'm really into trail running — mostly long-distance stuff."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I am quite keen on photography, particularly street photography.')">🔊</button>
+                    <span class="example-context">☕ Semi-formal - Đồng nghiệp mới</span>
+                    "I'm quite keen on photography, particularly street photography."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have a strong interest in sustainable development. It is something I have been following closely.')">🔊</button>
+                    <span class="example-context">💼 Formal - Interview</span>
+                    "I have a strong interest in sustainable development — it's something I've been following closely."
+                </div>
+                
+                <div class="us-uk-box">
+                    <h5>🇺🇸 US vs 🇬🇧 UK Note</h5>
+                    <div class="us-uk-grid">
+                        <div class="us-uk-column uk">
+                            <strong>🇬🇧 British</strong>
+                            "I'm quite keen on X"
+                            <br><small style="color: var(--text-muted);">Nghe British, dùng nhiều ở UK, Australia</small>
+                        </div>
+                        <div class="us-uk-column us">
+                            <strong>🇺🇸 American</strong>
+                            "I'm really into X"<br>
+                            "I'm a big fan of X"<br>
+                            "I'm pretty passionate about X"
+                            <br><small style="color: var(--text-muted);">Nghe American, dùng nhiều ở US</small>
+                        </div>
+                    </div>
+                    <p class="us-uk-note">Cả 2 đều đúng, chỉ khác phong cách. Nếu roadmap ưu tiên US English, dùng American versions.</p>
+                </div>
+            </div>
+            
+            <!-- Pair 3 -->
+            <div class="pair-card">
+                <div class="pair-header">
+                    <div class="pair-number">3</div>
+                    <div>Nói về thời gian làm việc</div>
+                </div>
+                
+                <table class="register-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 22%;">Register</th>
+                            <th style="width: 40%;">Phrase</th>
+                            <th style="width: 38%;">Khi nào dùng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="register-badge-table casual">🏠 Casual</span></td>
+                            <td>"I've been doing X for a while now"</td>
+                            <td>Bạn bè, hàng xóm</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table semi">☕ Semi-formal</span></td>
+                            <td>"I've been in [field] for about X years"</td>
+                            <td>Networking, peer</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table formal">💼 Formal</span></td>
+                            <td>"I bring over X years of experience in [field]"</td>
+                            <td>Interview, client pitch</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have been doing this for a while now, about 8 years, actually.')">🔊</button>
+                    <span class="example-context">🏠 Casual - Hàng xóm</span>
+                    "I've been doing this for a while now — about 8 years, actually."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have been in real estate for about 8 years now, mostly on the investment side.')">🔊</button>
+                    <span class="example-context">☕ Semi-formal - Networking</span>
+                    "I've been in real estate for about 8 years now, mostly on the investment side."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'I bring over 8 years of experience in real estate private equity, with a focus on value-add opportunities across Southeast Asia.')">🔊</button>
+                    <span class="example-context">💼 Formal - Client pitch</span>
+                    "I bring over 8 years of experience in real estate private equity, with a focus on value-add opportunities across Southeast Asia."
+                </div>
+                
+                <div class="context-note">
+                    <strong>⚠️ Context Note cho Formal:</strong> "I bring over X years of experience" là cách nói RẤT MẠNH, thường dùng trong:
+                    <ul>
+                        <li>✅ Job interviews</li>
+                        <li>✅ Client pitches</li>
+                        <li>✅ Khi bạn MUỐN position expertise của mình</li>
+                    </ul>
+                    <br>
+                    ❌ KHÔNG dùng khi gặp senior ở conference và họ hỏi casual "What do you do?"
+                    <br><br>
+                    Trong trường hợp đó, bắt đầu nhẹ nhàng: "I've been in real estate for about 8 years now" → rồi elaborate nếu họ hỏi thêm.
+                </div>
+            </div>
+            
+            <!-- Pair 4 -->
+            <div class="pair-card">
+                <div class="pair-header">
+                    <div class="pair-number">4</div>
+                    <div>Thể hiện sự quan tâm đến ai đó</div>
+                </div>
+                
+                <table class="register-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 22%;">Register</th>
+                            <th style="width: 40%;">Phrase</th>
+                            <th style="width: 38%;">Khi nào dùng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="register-badge-table casual">🏠 Casual</span></td>
+                            <td>"That sounds cool!" / "That's awesome!"</td>
+                            <td>Bạn bè, peer</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table semi">☕ Semi-formal</span></td>
+                            <td>"That's really interesting" / "That's fascinating"</td>
+                            <td>Networking, đồng nghiệp</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table formal">💼 Formal</span></td>
+                            <td>"That's quite compelling" / "I find that particularly intriguing"</td>
+                            <td>Senior leaders, clients</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'That sounds cool! I have been meaning to go there.')">🔊</button>
+                    <span class="example-context">🏠 Casual - Bạn kể về trip</span>
+                    "That sounds cool! I've been meaning to go there."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'That is really interesting. I would love to hear more about that.')">🔊</button>
+                    <span class="example-context">☕ Semi-formal - Peer nói về project</span>
+                    "That's really interesting — I'd love to hear more about that."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'That is quite compelling. I find your approach to impact investing particularly intriguing.')">🔊</button>
+                    <span class="example-context">💼 Formal - Client nói về strategy</span>
+                    "That's quite compelling. I find your approach to impact investing particularly intriguing."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Insight:</strong> "That's interesting" là万能 response ở semi-formal. Nhưng nếu dùng QUÁ NHIỀU, nghe generic. Native C1 speakers thay đổi: "That's fascinating", "That's quite something", "I hadn't thought of it that way".
+                </div>
+            </div>
+            
+            <!-- Pair 5 -->
+            <div class="pair-card">
+                <div class="pair-header">
+                    <div class="pair-number">5</div>
+                    <div>Đề xuất gặp lại</div>
+                </div>
+                
+                <table class="register-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 22%;">Register</th>
+                            <th style="width: 40%;">Phrase</th>
+                            <th style="width: 38%;">Khi nào dùng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="register-badge-table casual">🏠 Casual</span></td>
+                            <td>"We should definitely grab [coffee/drinks] sometime"</td>
+                            <td>Bạn mới, hàng xóm, gym buddy</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table semi">☕ Semi-formal</span></td>
+                            <td>"Let's definitely connect again soon"</td>
+                            <td>Networking peer, đồng nghiệp mới</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table formal">💼 Formal</span></td>
+                            <td>"I'd welcome the opportunity to continue this conversation"</td>
+                            <td>Senior leader, client, investor</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'We should definitely grab coffee sometime. I would love to hear more about your travels.')">🔊</button>
+                    <span class="example-context">🏠 Casual - Hàng xóm</span>
+                    "We should definitely grab coffee sometime — I'd love to hear more about your travels."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Let us definitely connect again soon. I think there is some potential synergy here.')">🔊</button>
+                    <span class="example-context">☕ Semi-formal - Networking peer</span>
+                    "Let's definitely connect again soon — I think there's some potential synergy here."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'I would welcome the opportunity to continue this conversation at your convenience. Perhaps we could schedule a follow-up call next week?')">🔊</button>
+                    <span class="example-context">💼 Formal - Investor</span>
+                    "I'd welcome the opportunity to continue this conversation at your convenience. Perhaps we could schedule a follow-up call next week?"
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Insight:</strong> "Let's connect" là business casual phrase rất phổ biến. "Connect" nghe professional hơn "meet" nhưng không quá formal. Dùng nhiều ở LinkedIn và networking.
+                </div>
+            </div>
+            
+            <!-- Pair 6 -->
+            <div class="pair-card">
+                <div class="pair-header">
+                    <div class="pair-number">6</div>
+                    <div>Kết thúc conversation</div>
+                </div>
+                
+                <table class="register-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 22%;">Register</th>
+                            <th style="width: 40%;">Phrase</th>
+                            <th style="width: 38%;">Khi nào dùng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="register-badge-table casual">🏠 Casual</span></td>
+                            <td>"Anyway, I'll let you go" / "Good chatting with you!"</td>
+                            <td>Bạn mới, hàng xóm, party</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table semi">☕ Semi-formal</span></td>
+                            <td>"It was great connecting with you"</td>
+                            <td>Networking, đồng nghiệp</td>
+                        </tr>
+                        <tr>
+                            <td><span class="register-badge-table formal">💼 Formal</span></td>
+                            <td>"Thank you for your time. I look forward to our next conversation"</td>
+                            <td>Senior leader, client</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Anyway, I will let you go. Nice meeting you, Sarah!')">🔊</button>
+                    <span class="example-context">🏠 Casual - Hàng xóm</span>
+                    "Anyway, I'll let you go — nice meeting you, Sarah!"
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'It was great connecting with you, Sarah. Let us definitely keep in touch.')">🔊</button>
+                    <span class="example-context">☕ Semi-formal - Networking peer</span>
+                    "It was great connecting with you, Sarah. Let's definitely keep in touch."
+                </div>
+                <div class="example-item casual">
+                    <button class="audio-btn" onclick="playAudio(this, 'Thank you for your time today, Mr. Thompson. I look forward to our next conversation.')">🔊</button>
+                    <span class="example-context">💼 Formal - Client</span>
+                    "Thank you for your time today, Mr. Thompson. I look forward to our next conversation."
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ "I have to go now" → nghe abrupt, như bạn đang vội. ✅ "Anyway, I'll let you go" → nghe polite, cho đối phương space.
+                </div>
+            </div>
+            
+            <!-- Continuum Box -->
+            <div class="continuum-box">
+                <h4>💡 Register là Continuum, không phải 3 hộp cứng</h4>
+                <p>Thực tế, register là một <strong>SPECTRUM liên tục</strong>:</p>
+                <div class="continuum-visual">
+                    Casual ←→ Casual-Semi ←→ Semi-formal ←→ Semi-Formal-Formal ←→ Formal
+                </div>
+                <p><strong>Ví dụ:</strong></p>
+                <ul>
+                    <li>Startup environment: Thường nằm giữa casual và semi-formal</li>
+                    <li>Tech company: Có thể casual hơn finance company</li>
+                    <li>International team: Semi-formal là safe choice</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>Đừng quá cứng nhắc phân loại. Quan trọng là:</strong></p>
+                <ul>
+                    <li>✅ Đọc được context</li>
+                    <li>✅ Adjust linh hoạt</li>
+                    <li>✅ Khi không chắc → chọn semi-formal (safe choice)</li>
+                </ul>
+            </div>
+            
+            <!-- Native Tip Box -->
+            <div class="native-tip-box">
+                <h4>💡 Native Tip: Khi không chắc, chọn Semi-formal</h4>
+                <p>Nếu bạn không chắc nên dùng register nào → <strong>Chọn SEMI-FORMAL</strong></p>
+                <p><strong>Lý do:</strong></p>
+                <ul>
+                    <li>An toàn nhất trong hầu hết môi trường quốc tế</li>
+                    <li>Không quá casual (risk of being unprofessional)</li>
+                    <li>Không quá formal (risk of sounding distant/robotic)</li>
+                    <li>Phù hợp với peer, senior, client đều được</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>Chỉ dùng Casual khi:</strong></p>
+                <ul>
+                    <li>Chắc chắn đối phương comfortable với casual</li>
+                    <li>Context rõ ràng casual (party, gym, bar)</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>Chỉ dùng Formal khi:</strong></p>
+                <ul>
+                    <li>Interview, pitch, hoặc context rất formal</li>
+                    <li>Đối phương là C-level, senior leader</li>
+                    <li>Bạn MUỐN position mình rất professional</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Listening Section -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">🎧</span> Natural Listening: 3 Conversations in 10 Minutes</h2>
+            <p class="section-desc">Cùng 1 người (Minh), nói chuyện với 3 đối tượng khác nhau, ở 3 registers khác nhau. Đây là điều xảy ra HÀNG NGÀY trong thực tế.</p>
+            
+            <div class="audio-player">
+                <button class="play-btn" id="mainPlayBtn" onclick="playFullTranscript(this)">▶</button>
+                <div class="audio-info">
+                    <div class="audio-label">3 Conversations: Casual → Semi-formal → Formal</div>
+                    <div class="audio-meta">🇺🇸 US Accent · ~3 min total</div>
+                </div>
+                <button class="speed-control" onclick="changeSpeed(this)">1.0x</button>
+            </div>
+            
+            <div class="transcript-box">
+                <h4 style="font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 14px; color: var(--text-primary);">📄 Full Transcript</h4>
+                
+                <!-- Conversation 1 -->
+                <div class="conversation-label conv1">
+                    [Conversation 1: Casual - Gặp bạn của bạn ở bar]
+                </div>
+                
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Oh hey, Tom! I didn't know you'd be here. Who's your friend?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Tom:</span> Minh, this is Jake — we play basketball together. Jake, this is Minh, my old college buddy.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Jake:</span> Hey Minh, nice to meet you! Tom's told me a lot about you.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Hey Jake, nice to meet you too! So, um, what do you do, Jake?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Jake:</span> Oh, I'm in marketing — mostly digital stuff. I work at this agency downtown.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Oh cool, <span class="highlight">that sounds awesome!</span> I'm in finance — nothing too exciting, haha.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Jake:</span> (laughs) I bet it's more exciting than you think. What, like, investment banking?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Nah, more like real estate private equity. <span class="highlight">I've been doing it for a while now</span> — about 8 years.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Jake:</span> Oh nice! I've been meaning to learn more about that, actually.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Oh, <span class="highlight">we should definitely grab beer sometime</span> — I could explain it in non-boring terms, haha.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Jake:</span> (laughs) Deal! Here, let me give you my number.
+                </div>
+                
+                <!-- Conversation 2 -->
+                <div class="conversation-label conv2">
+                    [Conversation 2: Semi-formal - Gặp peer ở networking event]
+                </div>
+                
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Hi there — I don't believe we've met. I'm Minh Nguyen, from Horizon Partners.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Lisa:</span> Oh hi Minh! I'm Lisa Tran, from Saigon Capital. <span class="highlight">Great to finally meet you in person</span> — I've been following your firm's work for a while.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Oh really? <span class="highlight">That's great to hear.</span> What, um, what specifically caught your attention?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Lisa:</span> Well, <span class="highlight">I'm quite keen on</span> early-stage tech investments, and I saw your recent series A deal with that logistics startup. <span class="highlight">That's really interesting</span> approach.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Oh yeah! That was a fun one. <span class="highlight">I've been in real estate for about 8 years now</span>, mostly on the investment side, but we've been diversifying into tech co-investments lately.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Lisa:</span> <span class="highlight">That's fascinating.</span> I find the convergence of real estate and tech particularly compelling.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Totally. <span class="highlight">Let's definitely connect again soon</span> — I think there's some potential synergy between our firms.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Lisa:</span> Absolutely. Here's my card — let's set up a coffee sometime next week.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Perfect. <span class="highlight">It was great connecting with you</span>, Lisa.
+                </div>
+                
+                <!-- Conversation 3 -->
+                <div class="conversation-label conv3">
+                    [Conversation 3: Formal - Gặp senior investor]
+                </div>
+                
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Good evening, Mr. Thompson. I'm Minh Nguyen from Horizon Partners. Thank you for making time to speak with me.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Mr. Thompson:</span> Please, call me David. And thank you for coming. I've been reviewing your firm's recent performance — quite impressive.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Thank you, David. I appreciate that. <span class="highlight">I bring over 8 years of experience in real estate private equity</span>, with a focus on value-add opportunities across Southeast Asia.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Mr. Thompson:</span> I find your approach to logistics particularly intriguing. Could you elaborate on your thesis there?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> Certainly. We've observed that e-commerce penetration in Southeast Asia is growing at 25% annually, but logistics infrastructure hasn't kept pace. We see a significant arbitrage opportunity in modernizing Class B warehouses in secondary cities.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Mr. Thompson:</span> <span class="highlight">That's quite compelling.</span> I'd be interested in seeing your latest fund deck.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> <span class="highlight">I'd welcome the opportunity to share that with you.</span> Perhaps we could schedule a follow-up call next week at your convenience?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Mr. Thompson:</span> Yes, let's do that. My assistant will be in touch.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker">Minh:</span> <span class="highlight">Thank you for your time today, David. I look forward to our next conversation.</span>
+                </div>
+            </div>
+            
+            <!-- Register Shifting Table -->
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 24px 0 12px; color: var(--text-primary);">🔄 Register Shifting trong 1 người</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">
+                Chú ý cách Minh SHIFT register giữa 3 conversations:
+            </p>
+            
+            <table class="register-table">
+                <thead>
+                    <tr>
+                        <th>Ý</th>
+                        <th><span class="register-badge-table casual">Casual (Jake)</span></th>
+                        <th><span class="register-badge-table semi">Semi-formal (Lisa)</span></th>
+                        <th><span class="register-badge-table formal">Formal (Mr. Thompson)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nói về work</strong></td>
+                        <td>"I'm in finance — nothing too exciting, haha"</td>
+                        <td>"I've been in real estate for about 8 years now"</td>
+                        <td>"I bring over 8 years of experience in real estate PE"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thể hiện interest</strong></td>
+                        <td>"That sounds awesome!"</td>
+                        <td>"That's fascinating"</td>
+                        <td>"That's quite compelling"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Đề xuất gặp lại</strong></td>
+                        <td>"We should definitely grab beer sometime"</td>
+                        <td>"Let's definitely connect again soon"</td>
+                        <td>"I'd welcome the opportunity to continue this conversation"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kết thúc</strong></td>
+                        <td>"Deal!"</td>
+                        <td>"It was great connecting with you"</td>
+                        <td>"Thank you for your time today, David"</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="context-note" style="margin-top: 16px;">
+                <strong>💡 C1 Insight:</strong> Cùng 1 người, nhưng register KHÁC NHAU tùy đối tượng. Đây là C1 — không phải fancy vocabulary, mà là <strong>CONTEXT AWARENESS</strong>.
+            </div>
+        </section>
+        
+        <!-- Pronunciation Section -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Pronunciation: Intonation theo Register</h2>
+            <p class="section-desc">Mỗi register có intonation pattern riêng. Chú ý sự khác biệt khi nghe transcript trên.</p>
+            
+            <table class="register-table">
+                <thead>
+                    <tr>
+                        <th>Register</th>
+                        <th>Intonation</th>
+                        <th>Ví dụ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="register-badge-table casual">Casual</span></td>
+                        <td>Lên xuống nhiều, năng lượng cao, có laughter</td>
+                        <td>"Oh cool, that sounds <strong>AWESOME!</strong> ↗↘"</td>
+                    </tr>
+                    <tr>
+                        <td><span class="register-badge-table semi">Semi-formal</span></td>
+                        <td>Ổn định hơn, emphasis vừa phải</td>
+                        <td>"That's really <strong>in-TER-sting</strong>. ↘"</td>
+                    </tr>
+                    <tr>
+                        <td><span class="register-badge-table formal">Formal</span></td>
+                        <td>Chậm hơn, đều hơn, ít variation</td>
+                        <td>"That's quite <strong>com-PEL-ling</strong>. ↘"</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🎵 Pace theo Register</h3>
+            
+            <table class="register-table">
+                <thead>
+                    <tr>
+                        <th>Register</th>
+                        <th>WPM</th>
+                        <th>Đặc điểm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="register-badge-table casual">Casual</span></td>
+                        <td>150-170</td>
+                        <td>Nhanh, nhiều fillers, interruptions</td>
+                    </tr>
+                    <tr>
+                        <td><span class="register-badge-table semi">Semi-formal</span></td>
+                        <td>130-150</td>
+                        <td>Vừa phải, có pauses có chủ đích</td>
+                    </tr>
+                    <tr>
+                        <td><span class="register-badge-table formal">Formal</span></td>
+                        <td>110-130</td>
+                        <td>Chậm, rõ ràng, deliberate pauses</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🗣️ Hesitation Markers theo Register</h3>
+            
+            <table class="register-table">
+                <thead>
+                    <tr>
+                        <th>Register</th>
+                        <th>Hesitation Markers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="register-badge-table casual">Casual</span></td>
+                        <td>"um", "uh", "like", "you know", "I mean"</td>
+                    </tr>
+                    <tr>
+                        <td><span class="register-badge-table semi">Semi-formal</span></td>
+                        <td>"um", "well", "actually" (ít "like" hơn)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="register-badge-table formal">Formal</span></td>
+                        <td>Rất ít — chỉ "um" hoặc pause im lặng</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="tip-box">
+                <strong>💡 C1 Tip:</strong> Ở formal contexts, thay vì "um", dùng <strong>pause im lặng</strong> 1-2 giây. Nghe professional hơn nhiều.
+            </div>
+        </section>
+        
+        <!-- Speaking Practice -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🗣️</span> Speaking: 4 Scenarios với Register Requirements</h2>
+            <p class="section-desc">Mỗi scenario yêu cầu 1 register cụ thể. Scenario 4 là challenge: phải shift register liên tục.</p>
+            
+            <div class="scenario-grid">
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - Casual</span>
+                    <h4>Scenario 1: Gặp bạn của bạn ở party</h4>
+                    <p>Bạn của bạn introduce bạn với 1 người họ mới quen ở party. Không khí casual, có nhạc, mọi người đang uống bia.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Register: <strong>Casual</strong></li>
+                            <li>Dùng "I'm in [field]" (không phải formal)</li>
+                            <li>Elaborate về hobbies với "I'm really into X"</li>
+                            <li>End với "We should definitely grab [coffee/drinks] sometime"</li>
+                            <li>Có laughter, fillers tự nhiên</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('party')">🎙️ Record (60-90s)</button>
+                </div>
+                
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">☕ Semi-formal</span>
+                    <h4>Scenario 2: Gặp đồng nghiệp mới của sếp</h4>
+                    <p>Sếp introduce bạn với 1 đồng nghiệp mới từ office khác sang. Không khí semi-formal, đang ở pantry.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Register: <strong>Semi-formal</strong></li>
+                            <li>Dùng "I've been in [field] for about X years"</li>
+                            <li>Thể hiện interest với "That's really interesting"</li>
+                            <li>End với "It was great connecting with you"</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('pantry')">🎙️ Record (60s)</button>
+                </div>
+                
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business - Formal</span>
+                    <h4>Scenario 3: Pitch ngắn với investor</h4>
+                    <p>Bạn có 60 giây elevator pitch với 1 angel investor ở conference.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Register: <strong>Formal</strong></li>
+                            <li>Dùng "I bring over X years of experience"</li>
+                            <li>Elaborate về investment thesis</li>
+                            <li>End với "I'd welcome the opportunity to..."</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('pitch')">🎙️ Record (60s)</button>
+                </div>
+                
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">🎯 Challenge - Mixed</span>
+                    <h4>Scenario 4: 3 conversations trong 3 phút</h4>
+                    <p>Bạn đi networking event. Trong 3 phút, bạn nói chuyện với:</p>
+                    <div class="scenario-requirements">
+                        <ol style="margin-top: 6px; padding-left: 16px;">
+                            <li>1 peer (semi-formal)</li>
+                            <li>1 bạn cũ tình cờ gặp (casual)</li>
+                            <li>1 senior leader (formal)</li>
+                        </ol>
+                    </div>
+                    <div class="scenario-requirements" style="margin-top: 8px;">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Shift register LINH HOẠT giữa 3 conversations</li>
+                            <li>Không bị "stuck" ở 1 register</li>
+                            <li>Mỗi conversation có opening + elaboration + closing</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('mixed')">🎙️ Record (3 min)</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-accent">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard Review: Theo Ý muốn nói</h2>
+            <p class="section-desc">Khác với Day 1 (flashcard theo từ vựng), Day 2 flashcard theo <strong>Ý MUỐN NÓI</strong>. Mặt trước: ý (tiếng Việt). Mặt sau: 3 registers.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-word" id="fc-word">Nói về công việc của bạn</div>
+                            <div class="card-hint">Tap to reveal 3 registers →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-phonetic" id="fc-phonetic">🏠 Casual → ☕ Semi-formal → 💼 Formal</div>
+                            <div class="card-registers" id="fc-registers">
+                                <div class="reg-casual">
+                                    <strong>🏠 Casual:</strong> "I work in finance — nothing too exciting, haha."
+                                </div>
+                                <div class="reg-semi">
+                                    <strong>☕ Semi-formal:</strong> "I'm in real estate private equity, mostly logistics."
+                                </div>
+                                <div class="reg-formal">
+                                    <strong>💼 Formal:</strong> "I work as an Investment Director at Horizon Partners, overseeing our Southeast Asia portfolio."
+                                </div>
+                            </div>
+                            <div class="card-tip" id="fc-tip">💡 "I'm in X" nghe tự nhiên hơn "I work in X" ở semi-formal.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Register Awareness</h2>
+            <p class="section-desc">7 câu hỏi về register appropriateness. Chọn đáp án ĐÚNG NHẤT cho context.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Bạn gặp <strong>hàng xóm mới</strong> ở hành lang. Câu nào NGHE TỰ NHIÊN NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "I bring over 8 years of experience in finance."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "I'm in finance — nothing too exciting, haha."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "I have a strong interest in financial services."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "I'd welcome the opportunity to discuss my professional background."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. Câu nào có <strong>REGISTER MISMATCH</strong>?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. (Gặp bạn mới ở party) "I'm in tech — mostly backend stuff."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. (Gặp CEO đối tác) "I'm in tech — mostly backend stuff, haha."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. (Gặp đồng nghiệp mới) "I'm in tech — mostly backend stuff."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. (Gặp hàng xóm) "I'm in tech — mostly backend stuff."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">3. Ai đó hỏi "What do you do?" ở networking event. Câu nào TỐT NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. "I work in finance."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. "I'm in real estate private equity — mostly logistics. I've been in the space for about 8 years now."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. "I bring over 8 years of experience in real estate private equity, with a focus on value-add opportunities across Southeast Asia."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. "Finance."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. Bạn muốn kết thúc conversation với peer ở networking event. Câu nào TỐT NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. "I have to go now."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. "Anyway, I'll let you go. It was great connecting with you!"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. "Thank you for your time. I look forward to our next conversation."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. "Goodbye."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. Ai đó nói "I'm into photography". Câu follow-up nào TỐT NHẤT để kéo dài conversation?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. "That's nice."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. "Oh cool! What kind of photography are you into?"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. "I have a strong interest in visual arts as well."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. "That's quite compelling."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">6. Bạn đang nói chuyện với peer ở networking (semi-formal). Peer hỏi về hobbies. Câu nào TỐT NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. "I'm really into trail running — mostly long-distance stuff."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. "I'm quite keen on trail running, particularly long-distance endurance events."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. "I'm a big fan of trail running — mostly long-distance stuff."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. "I have a strong interest in long-distance running."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Bạn vừa kết thúc cuộc họp với client lớn. Câu closing nào TỐT NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. "Cool, catch you later!"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. "It was great connecting with you!"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. "Thank you for your time today, Mr. Thompson. I look forward to our next conversation."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. "Anyway, I'll let you go."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-01.html" class="nav-btn">
+                <div class="nav-label">← Back to</div>
+                <div class="nav-title">Week 1 Hub</div>
+            </a>
+            <a href="week-01-day-3.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 3: Conversation Extension</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 2 Complete & Continue to Day 3</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#D4B8E8"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#D4B8E8"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#D4B8E8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#D4B8E8" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#D4B8E8"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <rect x="65" y="150" width="28" height="20" fill="#B8C5E8" rx="3"/>
+            <line x1="79" y1="150" x2="79" y2="170" stroke="#2D3748" stroke-width="1.5"/>
+        </svg>
+        <div class="mascot-speech">Context matters! 🎭</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 1 · Day 2 · Register Shifting</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 1.0;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = 'en-US';
+                u.rate = audioSpeed;
+                
+                const voices = window.speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US') || voices[0];
+                if (usVoice) u.voice = usVoice;
+                
+                window.speechSynthesis.speak(u);
+            }
+        }
+        
+        function playFullTranscript(btn) {
+            const text = `Oh hey, Tom! I didn't know you'd be here. Who's your friend? Minh, this is Jake, we play basketball together. Jake, this is Minh, my old college buddy. Hey Minh, nice to meet you! Tom's told me a lot about you. Hey Jake, nice to meet you too! So, um, what do you do, Jake? Oh, I'm in marketing, mostly digital stuff. I work at this agency downtown. Oh cool, that sounds awesome! I'm in finance, nothing too exciting, haha. I bet it's more exciting than you think. What, like, investment banking? Nah, more like real estate private equity. I've been doing it for a while now, about 8 years. Oh nice! I've been meaning to learn more about that, actually. Oh, we should definitely grab beer sometime. I could explain it in non boring terms, haha. Deal! Here, let me give you my number. Hi there. I don't believe we've met. I'm Minh Nguyen, from Horizon Partners. Oh hi Minh! I'm Lisa Tran, from Saigon Capital. Great to finally meet you in person. I've been following your firm's work for a while. Oh really? That's great to hear. What, um, what specifically caught your attention? Well, I'm quite keen on early stage tech investments, and I saw your recent series A deal with that logistics startup. That's really interesting approach. Oh yeah! That was a fun one. I've been in real estate for about 8 years now, mostly on the investment side, but we've been diversifying into tech co investments lately. That's fascinating. I find the convergence of real estate and tech particularly compelling. Totally. Let's definitely connect again soon. I think there's some potential synergy between our firms. Absolutely. Here's my card. Let's set up a coffee sometime next week. Perfect. It was great connecting with you, Lisa. Good evening, Mr. Thompson. I'm Minh Nguyen from Horizon Partners. Thank you for making time to speak with me. Please, call me David. And thank you for coming. I've been reviewing your firm's recent performance. Quite impressive. Thank you, David. I appreciate that. I bring over 8 years of experience in real estate private equity, with a focus on value add opportunities across Southeast Asia. I find your approach to logistics particularly intriguing. Could you elaborate on your thesis there? Certainly. We've observed that e commerce penetration in Southeast Asia is growing at 25 percent annually, but logistics infrastructure hasn't kept pace. We see a significant arbitrage opportunity in modernizing Class B warehouses in secondary cities. That's quite compelling. I'd be interested in seeing your latest fund deck. I'd welcome the opportunity to share that with you. Perhaps we could schedule a follow up call next week at your convenience? Yes, let's do that. My assistant will be in touch. Thank you for your time today, David. I look forward to our next conversation.`;
+            
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = 'en-US';
+                u.rate = audioSpeed;
+                
+                const voices = window.speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US') || voices[0];
+                if (usVoice) u.voice = usVoice;
+                
+                window.speechSynthesis.speak(u);
+            }
+        }
+        
+        function changeSpeed(btn) {
+            const speeds = [0.75, 1.0, 1.25];
+            const current = speeds.indexOf(audioSpeed);
+            audioSpeed = speeds[(current + 1) % speeds.length];
+            btn.textContent = audioSpeed + 'x';
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                word: "Nói về công việc của bạn",
+                phonetic: "🏠 Casual → ☕ Semi-formal → 💼 Formal",
+                registers: [
+                    { class: 'reg-casual', label: '🏠 Casual', text: '"I work in finance — nothing too exciting, haha."' },
+                    { class: 'reg-semi', label: '☕ Semi-formal', text: '"I\'m in real estate private equity, mostly logistics."' },
+                    { class: 'reg-formal', label: '💼 Formal', text: '"I work as an Investment Director at Horizon Partners, overseeing our Southeast Asia portfolio."' }
+                ],
+                tip: '💡 "I\'m in X" nghe tự nhiên hơn "I work in X" ở semi-formal.'
+            },
+            { 
+                word: "Nói về sở thích",
+                phonetic: "🏠 Casual → ☕ Semi-formal → 💼 Formal",
+                registers: [
+                    { class: 'reg-casual', label: '🏠 Casual', text: '"I\'m really into trail running — mostly long-distance stuff."' },
+                    { class: 'reg-semi', label: '☕ Semi-formal', text: '"I\'m quite keen on photography, particularly street photography."' },
+                    { class: 'reg-formal', label: '💼 Formal', text: '"I have a strong interest in sustainable development."' }
+                ],
+                tip: '💡 "Quite keen on" nghe British. US: "I\'m really into X" / "I\'m a big fan of X"'
+            },
+            { 
+                word: "Nói về thời gian làm việc",
+                phonetic: "🏠 Casual → ☕ Semi-formal → 💼 Formal",
+                registers: [
+                    { class: 'reg-casual', label: '🏠 Casual', text: '"I\'ve been doing this for a while now — about 8 years, actually."' },
+                    { class: 'reg-semi', label: '☕ Semi-formal', text: '"I\'ve been in real estate for about 8 years now, mostly on the investment side."' },
+                    { class: 'reg-formal', label: '💼 Formal', text: '"I bring over 8 years of experience in real estate private equity."' }
+                ],
+                tip: '⚠️ Formal chỉ dùng trong interview/pitch. Khi gặp senior casual, dùng semi-formal.'
+            },
+            { 
+                word: "Thể hiện sự quan tâm",
+                phonetic: "🏠 Casual → ☕ Semi-formal → 💼 Formal",
+                registers: [
+                    { class: 'reg-casual', label: '🏠 Casual', text: '"That sounds cool!" / "That\'s awesome!"' },
+                    { class: 'reg-semi', label: '☕ Semi-formal', text: '"That\'s really interesting" / "That\'s fascinating"' },
+                    { class: 'reg-formal', label: '💼 Formal', text: '"That\'s quite compelling" / "I find that particularly intriguing"' }
+                ],
+                tip: '💡 "That\'s interesting" là万能 response ở semi-formal. Thay đổi để không generic.'
+            },
+            { 
+                word: "Đề xuất gặp lại",
+                phonetic: "🏠 Casual → ☕ Semi-formal → 💼 Formal",
+                registers: [
+                    { class: 'reg-casual', label: '🏠 Casual', text: '"We should definitely grab coffee sometime"' },
+                    { class: 'reg-semi', label: '☕ Semi-formal', text: '"Let\'s definitely connect again soon"' },
+                    { class: 'reg-formal', label: '💼 Formal', text: '"I\'d welcome the opportunity to continue this conversation"' }
+                ],
+                tip: '💡 "Let\'s connect" là business casual phrase rất phổ biến.'
+            },
+            { 
+                word: "Kết thúc conversation",
+                phonetic: "🏠 Casual → ☕ Semi-formal → 💼 Formal",
+                registers: [
+                    { class: 'reg-casual', label: '🏠 Casual', text: '"Anyway, I\'ll let you go" / "Good chatting with you!"' },
+                    { class: 'reg-semi', label: '☕ Semi-formal', text: '"It was great connecting with you"' },
+                    { class: 'reg-formal', label: '💼 Formal', text: '"Thank you for your time. I look forward to our next conversation"' }
+                ],
+                tip: '⚠️ Tránh "I have to go now" - nghe abrupt. Dùng "I\'ll let you go" thay thế.'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-word').textContent = card.word;
+            document.getElementById('fc-phonetic').textContent = card.phonetic;
+            
+            const registersEl = document.getElementById('fc-registers');
+            registersEl.innerHTML = card.registers.map(r => 
+                `<div class="${r.class}"><strong>${r.label}:</strong> ${r.text}</div>`
+            ).join('');
+            
+            document.getElementById('fc-tip').textContent = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b', q6: 'c', q7: 'c' };
+        const explanations = {
+            q1: 'A, C, D đều quá formal cho hàng xóm. B casual, có humor, phù hợp context gặp hàng xóm lần đầu.',
+            q2: '"haha" và "mostly stuff" quá casual cho CEO meeting. Nên dùng "I work as a backend engineer at [company]" thay thế.',
+            q3: 'A quá ngắn, không elaborate. C quá formal cho networking peer. D quá ngắn, rude. B perfect — có elaboration với "mostly", có time marker, nghe natural.',
+            q4: 'A nghe abrupt, như đang chạy trốn. C quá formal cho peer. D quá ngắn. B natural, polite, có closing phrase phù hợp.',
+            q5: 'A quá generic, giết conversation. C quá formal. D quá formal. B casual, thể hiện genuine curiosity, mở ra elaboration.',
+            q6: 'A hơi quá casual ("stuff") cho semi-formal. B hơi quá formal. D quá formal. C perfect balance — "big fan of" nghe semi-formal, "mostly long-distance stuff" vẫn natural.',
+            q7: 'A quá casual cho client. B semi-formal, không đủ formal. D casual. C perfect formal closing với title, appreciation, và forward-looking statement.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered register shifting!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the pairs you missed and try again.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the register pairs carefully.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the 6 pairs and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== RECORDING TIPS ==========
+        function showRecordingTips(scenario) {
+            const tips = {
+                party: `🎉 TIPS FOR PARTY SCENARIO (Casual):
+
+• Register: Casual (như nói với bạn)
+• Dùng "I'm in [field]" (không phải formal)
+• Elaborate hobbies với "I'm really into X"
+• Có hesitation markers tự nhiên (um, uh, like)
+• Có laughter khi phù hợp
+• End với "We should definitely grab [drinks] sometime"
+
+💡 Mẹo: Dùng Voice Memo trên điện thoại. Record 60-90s.`,
+
+                pantry: `☕ TIPS FOR PANTRY SCENARIO (Semi-formal):
+
+• Register: Semi-formal
+• Dùng "I've been in [field] for about X years"
+• Thể hiện interest với "That's really interesting"
+• End với "It was great connecting with you"
+• Không dùng "haha" hay "stuff"
+• Pace vừa phải, rõ ràng
+
+💡 Mẹo: Professional nhưng vẫn warm.`,
+
+                pitch: `💼 TIPS FOR PITCH SCENARIO (Formal):
+
+• Register: Formal
+• Dùng "I bring over X years of experience"
+• Elaborate về investment thesis
+• End với "I'd welcome the opportunity to..."
+• KHÔNG dùng hesitation markers nhiều
+• Pause im lặng thay vì "um"
+• Pace chậm, rõ ràng
+
+💡 Mẹo: Đây là lúc position expertise của bạn.`,
+
+                mixed: `🎯 TIPS FOR MIXED SCENARIO (Challenge):
+
+Đây là scenario KHÓ NHẤT - phải shift register liên tục.
+
+Conversation 1 (peer - semi-formal):
+• "I've been in [field] for about X years"
+• "Let's definitely connect again soon"
+
+Conversation 2 (bạn cũ - casual):
+• "I'm in [field] — nothing too exciting, haha"
+• "We should definitely grab beer sometime"
+
+Conversation 3 (senior - formal):
+• "I bring over X years of experience"
+• "I'd welcome the opportunity to continue..."
+
+💡 Mẹo: Record 3 lần riêng, rồi nghe lại để so sánh register shifting.`
+            };
+            
+            alert(tips[scenario]);
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week1Days') || '[]');
+            
+            if (!completed.includes(2)) {
+                completed.push(2);
+                localStorage.setItem('week1Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(1)) {
+                        completedWeeks.push(1);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 1 completed! You\'ve mastered register shifting! 🦊');
+                } else {
+                    alert(`✅ Day 2 completed! ${7 - completed.length} days left in Week 1. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-01-day-3.html';
+            } else {
+                if (confirm('✅ Day 2 already completed! Go to Day 3?')) {
+                    location.href = 'week-01-day-3.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>

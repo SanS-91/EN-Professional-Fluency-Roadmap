@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 1: Natural Introductions | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #F4A8A8;
+            --primary-light: #F9C4C4;
+            --primary-soft: #FFF0F0;
+            --secondary: #B8C5E8;
+            --secondary-soft: #F0F3FF;
+            --accent: #D4B8E8;
+            --accent-soft: #F5F0FF;
+            --warm: #F9D4B8;
+            --warm-soft: #FFF5EB;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--warm-soft) 0%, var(--primary-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(249,212,184,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(244,168,168,0.15) 0%, transparent 40%);
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        .section-pink { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #FDE0E0; }
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #DDE5F5; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E8DDF5; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-accent { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #E8DDF5; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong {
+            color: var(--primary);
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARDS ========== */
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+        }
+        
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 8px;
+        }
+        
+        .pattern-phrase {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        
+        .audio-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 14px;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .audio-btn:hover {
+            background: var(--primary-light);
+            transform: scale(1.1);
+        }
+        
+        .audio-btn.playing {
+            background: var(--life);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .pattern-phonetic {
+            color: var(--text-muted);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .freq-badge, .register-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .freq-badge {
+            background: var(--warm-soft);
+            color: #744210;
+        }
+        
+        .register-badge {
+            background: var(--secondary-soft);
+            color: var(--biz-dark);
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--accent-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: #553C9A;
+            border-left: 3px solid var(--accent);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong {
+            color: #553C9A;
+        }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 6px;
+            border-left: 3px solid;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        .example-item.casual { border-left-color: var(--warm); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        .example-item.casual .example-context { color: #744210; }
+        
+        .pattern-mistake {
+            background: #FED7D7;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-alternatives {
+            margin-top: 10px;
+            padding: 10px 12px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .pattern-alternatives strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        /* ========== TRANSCRIPT ========== */
+        .transcript-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .transcript-tab {
+            padding: 8px 16px;
+            background: white;
+            border: 1.5px solid var(--border);
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .transcript-tab:hover {
+            border-color: var(--primary);
+        }
+        
+        .transcript-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .transcript-content {
+            display: none;
+        }
+        
+        .transcript-content.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .transcript-context {
+            background: white;
+            padding: 14px 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .transcript-context-icon {
+            font-size: 1.5rem;
+        }
+        
+        .transcript-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        
+        .transcript-line {
+            padding: 8px 0;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .transcript-line:last-child { border-bottom: none; }
+        
+        .speaker {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-right: 6px;
+        }
+        
+        .highlight {
+            background: #FFF5EB;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-weight: 500;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .hesitation {
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 13px;
+        }
+        
+        .stage-direction {
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 12px;
+        }
+        
+        /* ========== LEGEND ========== */
+        .legend {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        
+        .legend-title {
+            font-family: 'Fraunces', serif;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+        
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        
+        /* ========== AUDIO PLAYER ========== */
+        .audio-player {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .play-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .play-btn:hover { transform: scale(1.1); }
+        
+        .play-btn.playing {
+            background: var(--life);
+            color: white;
+            animation: pulse 1s infinite;
+        }
+        
+        .audio-info { flex: 1; }
+        
+        .audio-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .audio-meta {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .speed-control {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .speed-control:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* ========== PRONUNCIATION ========== */
+        .pronunciation-box {
+            background: var(--life-bg);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 14px;
+        }
+        
+        .pronunciation-box h4 {
+            color: var(--life-dark);
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .pronunciation-box ul {
+            list-style: none;
+        }
+        
+        .pronunciation-box li {
+            padding: 6px 0;
+            padding-left: 22px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .pronunciation-box li::before {
+            content: '🎯';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        .pronunciation-box code {
+            background: white;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+        
+        .tip-box {
+            background: var(--warm-soft);
+            padding: 14px 16px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--warning);
+            font-size: 13px;
+            color: #744210;
+            line-height: 1.5;
+            margin-top: 14px;
+        }
+        
+        /* ========== STEPS ========== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .step-num {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin: 0 auto 10px;
+        }
+        
+        .step-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .step-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== SPEAKING ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn {
+            border-color: var(--life);
+            color: var(--life-dark);
+        }
+        
+        .scenario-card.biz .record-btn {
+            border-color: var(--biz);
+            color: var(--biz-dark);
+        }
+        
+        .record-btn:hover {
+            background: var(--life);
+            color: white;
+        }
+        
+        .scenario-card.biz .record-btn:hover {
+            background: var(--biz);
+            color: white;
+        }
+        
+        /* ========== TEMPLATE ========== */
+        .template-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid var(--primary-light);
+            margin-bottom: 16px;
+        }
+        
+        .template-title {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .template-content {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        
+        .template-content strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .template-content em {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        /* ========== CHECKLIST ========== */
+        .checklist {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        
+        .checklist h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        
+        .checklist ul {
+            list-style: none;
+        }
+        
+        .checklist li {
+            padding: 7px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .checklist li::before {
+            content: '☐';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .checklist li.checked::before {
+            content: '✅';
+        }
+        
+        .checklist li.checked {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 260px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-word {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-phonetic {
+            font-family: 'Courier New', monospace;
+            color: var(--text-muted);
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .flashcard-back .card-meaning {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.5;
+            padding: 8px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.selected {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+            color: var(--text-primary);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--life) 0%, #38A169 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(244,168,168,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            
+            .pattern-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-01.html" class="nav-back">← Week 1 Hub</a>
+            <div class="nav-progress">
+                <span>Day 1 / 7</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 14%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-01.html" class="day-tab">Overview</a>
+                <a href="week-01-day-1.html" class="day-tab active">Day 1</a>
+                <a href="week-01-day-2.html" class="day-tab">Day 2</a>
+                <a href="week-01-day-3.html" class="day-tab">Day 3</a>
+                <a href="week-01-day-4.html" class="day-tab">Day 4</a>
+                <a href="week-01-day-5.html" class="day-tab">Day 5</a>
+                <a href="week-01-day-6.html" class="day-tab">Day 6</a>
+                <a href="week-01-day-7.html" class="day-tab">Day 7</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-01.html">Week 1</a>
+                <span>›</span>
+                <span>Day 1</span>
+            </div>
+            <h1 class="day-title">🏠 Natural Introductions at C1</h1>
+            <p class="day-subtitle">C1 không phải là nói hoa mỹ — mà là nói <strong>tự nhiên nhưng chính xác</strong>. Hôm nay bạn sẽ học 6 high-frequency patterns mà native C1 speakers dùng hàng ngày, trong mọi context từ gặp hàng xóm đến networking event.</p>
+            <div class="day-meta">
+                <span class="meta-tag">🎯 Natural C1</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 6 patterns</span>
+                <span class="meta-tag">🏠 50% Life</span>
+                <span class="meta-tag">💼 50% Business</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>❌ C1 ≠ Nói hoa mỹ</h4>
+                <p>"It's a pleasure to make your acquaintance" nghe fancy nhưng <strong>người Mỹ gần như không dùng</strong> trong networking bình thường. Họ sẽ nói "Great to finally meet you in person" — tự nhiên hơn, chính xác hơn.</p>
+            </div>
+            
+            <div class="philosophy-box" style="background: linear-gradient(135deg, var(--life-bg), var(--secondary-soft)); border-left-color: var(--life);">
+                <h4>✅ C1 = Natural + Precise + Context-aware</h4>
+                <p>Biết dùng <strong>đúng pattern</strong>, ở <strong>đúng context</strong>, với <strong>đúng register</strong>. Hôm nay bạn sẽ học 6 patterns mà native C1 speakers dùng HÀNG NGÀY — không phải "fancy phrases" từ textbook.</p>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">6 Patterns</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">High-frequency C1 patterns với register awareness</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎧</div>
+                    <div class="plan-block-title">Listening</div>
+                    <div class="plan-block-time">20 min</div>
+                    <div class="plan-block-desc">Natural speech với hesitation & self-corrections</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗣️</div>
+                    <div class="plan-block-title">Speaking</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">4 scenarios (2 life, 2 business)</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎴</div>
+                    <div class="plan-block-title">Review</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Flashcards + 7-question quiz</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6 C1 Patterns -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">📚</span> 6 High-Frequency C1 Patterns</h2>
+            <p class="section-desc">Click 🔊 để nghe phát âm US. Mỗi pattern có 3 examples (life casual, life semi-formal, business). Đọc to mỗi câu 3 lần.</p>
+            
+            <div class="pattern-grid">
+                
+                <!-- Pattern 1 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-phrase">I'm based in X, but I'm originally from Y</div>
+                        <button class="audio-btn" onclick="playAudio(this, 'I am based in Saigon, but I am originally from Da Nang. Moved here for work.')">🔊</button>
+                    </div>
+                    <div class="pattern-phonetic">/aɪm beɪst ɪn eks bʌt aɪm əˈrɪdʒənəli frɒm waɪ/</div>
+                    <div class="pattern-meta">
+                        <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                        <span class="register-badge">Casual → Semi-formal</span>
+                    </div>
+                    <p class="pattern-meaning">Nói về nơi ở hiện tại + nguồn gốc. Thể hiện background phức tạp, tạo conversation hook.</p>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong> "Based in" nghe flexible hơn "live in" (thể hiện có thể di chuyển). "Originally from" tạo hook để người kia hỏi thêm. Natural hơn "I live in X and I come from Y".
+                    </div>
+                    <div class="examples-label">Examples</div>
+                    <div class="example-item life">
+                        <span class="example-context">🏠 Life - Gặp hàng xóm</span>
+                        "I'm based in District 2, but I'm originally from Da Nang. Just moved here a few months ago."
+                    </div>
+                    <div class="example-item casual">
+                        <span class="example-context">☕ Life - Gym buddy</span>
+                        "I'm based around here, but I'm originally from the States. Just visiting for a few months."
+                    </div>
+                    <div class="example-item biz">
+                        <span class="example-context">💼 Business - Networking</span>
+                        "I'm based in Saigon, but I'm originally from Hanoi. I've been here for about 5 years now."
+                    </div>
+                    <div class="pattern-mistake">
+                        <strong>⚠️ Common mistake:</strong> ❌ "I'm based in X <strong>and</strong> originally from Y" → ✅ "I'm based in X, <strong>but</strong> I'm originally from Y" (contrast)
+                    </div>
+                    <div class="pattern-alternatives">
+                        <strong>Alternatives:</strong>
+                        • "I'm from X originally, but I've been living in Y for a while now"<br>
+                        • "I grew up in X, but I'm based in Y these days"
+                    </div>
+                </div>
+                
+                <!-- Pattern 2 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-phrase">I've been [verb+ing] for a while now</div>
+                        <button class="audio-btn" onclick="playAudio(this, 'I have been working in finance for a while now, about 8 years actually.')">🔊</button>
+                    </div>
+                    <div class="pattern-phonetic">/aɪv bɪn ˈvɜːbɪŋ fɔːr ə waɪl naʊ/</div>
+                    <div class="pattern-meta">
+                        <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                        <span class="register-badge">Casual → Semi-formal</span>
+                    </div>
+                    <p class="pattern-meaning">Đã làm gì đó được 1 thời gian. Thể hiện continuity, không chỉ 1-time action.</p>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong> Present perfect continuous + "for a while now" = natural emphasis. "For a while now" nghe tự nhiên hơn "for X years". "Actually" ở cuối = self-emphasis, rất common trong spoken English.
+                    </div>
+                    <div class="examples-label">Examples</div>
+                    <div class="example-item life">
+                        <span class="example-context">🏠 Life - Hàng xóm hỏi về work</span>
+                        "I've been working in finance for a while now — about 8 years, actually."
+                    </div>
+                    <div class="example-item casual">
+                        <span class="example-context">🏃 Life - Gym buddy</span>
+                        "I've been going to this gym for a while now. It's become kind of a routine."
+                    </div>
+                    <div class="example-item biz">
+                        <span class="example-context">💼 Business - Networking</span>
+                        "I've been focusing on real estate investments for a while now, particularly in the logistics sector."
+                    </div>
+                    <div class="pattern-mistake">
+                        <strong>⚠️ Common mistake:</strong> ❌ "I've been working for a while" (thiếu "now") → ✅ "I've been working for a while <strong>now</strong>"
+                    </div>
+                    <div class="pattern-alternatives">
+                        <strong>Alternatives:</strong>
+                        • "I've been doing X for quite some time now"<br>
+                        • "It's been a while since I started [verb+ing]"<br>
+                        • "I've been at it for a while now" (very casual)
+                    </div>
+                </div>
+                
+                <!-- Pattern 3 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-phrase">I'm into X — mostly [specific detail]</div>
+                        <button class="audio-btn" onclick="playAudio(this, 'I am into photography, mostly street photography actually. I love capturing candid moments.')">🔊</button>
+                    </div>
+                    <div class="pattern-phonetic">/aɪm ˈɪntuː eks ˈmoʊstli waɪ/</div>
+                    <div class="pattern-meta">
+                        <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                        <span class="register-badge">Casual</span>
+                    </div>
+                    <p class="pattern-meaning">Đam mê gì đó + elaborate với chi tiết cụ thể. Dash để pause rồi elaborate.</p>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong> "Into" = casual nhưng natural (không phải "interested in"). "Mostly" = elaboration marker, thể hiện depth. Pattern "X — mostly Y" = dash để elaborate, rất common trong spoken English.
+                    </div>
+                    <div class="examples-label">Examples</div>
+                    <div class="example-item life">
+                        <span class="example-context">🏠 Life - Gặp ở café</span>
+                        "I'm into photography — mostly street photography, actually. I love capturing candid moments."
+                    </div>
+                    <div class="example-item casual">
+                        <span class="example-context">🏃 Life - Gym</span>
+                        "I'm into running — mostly long-distance. I've done a few marathons now."
+                    </div>
+                    <div class="example-item biz">
+                        <span class="example-context">💼 Business - Casual networking</span>
+                        "I'm into tech startups — mostly early-stage. I find the uncertainty exciting."
+                    </div>
+                    <div class="pattern-mistake">
+                        <strong>⚠️ Common mistake:</strong> ❌ "I'm into X mostly Y" (thiếu dash/pause) → ✅ "I'm into X <strong>—</strong> mostly Y"
+                    </div>
+                    <div class="pattern-alternatives">
+                        <strong>Alternatives:</strong>
+                        • "I'm really into X, particularly Y"<br>
+                        • "X is kind of my thing — especially Y"<br>
+                        • "I'm a big fan of X, mostly Y"
+                    </div>
+                </div>
+                
+                <!-- Pattern 4 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-phrase">It's been on my list to [verb]</div>
+                        <button class="audio-btn" onclick="playAudio(this, 'That new Vietnamese restaurant on the corner, it has been on my list to try for weeks.')">🔊</button>
+                    </div>
+                    <div class="pattern-phonetic">/ɪts bɪn ɒn maɪ lɪst tuː vɜːb/</div>
+                    <div class="pattern-meta">
+                        <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                        <span class="register-badge">Casual → Semi-formal</span>
+                    </div>
+                    <p class="pattern-meaning">Đã định làm gì đó (nhưng chưa làm). Natural hơn "I've been meaning to".</p>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong> "On my list" = casual metaphor, rất common. Natural hơn "I've been meaning to" (nghe hơi formal). Thể hiện intention mà chưa action.
+                    </div>
+                    <div class="examples-label">Examples</div>
+                    <div class="example-item life">
+                        <span class="example-context">🏠 Life - Gặp hàng xóm</span>
+                        "That new Vietnamese restaurant on the corner? It's been on my list to try for weeks."
+                    </div>
+                    <div class="example-item casual">
+                        <span class="example-context">🏃 Life - Gym buddy</span>
+                        "I've been meaning to try that new yoga class — it's been on my list to check out."
+                    </div>
+                    <div class="example-item biz">
+                        <span class="example-context">💼 Business - Casual networking</span>
+                        "I've been wanting to read that book you mentioned — it's been on my list for a while."
+                    </div>
+                    <div class="pattern-mistake">
+                        <strong>⚠️ Common mistake:</strong> ❌ "It's been on my list for trying" → ✅ "It's been on my list <strong>to try</strong>"
+                    </div>
+                    <div class="pattern-alternatives">
+                        <strong>Alternatives:</strong>
+                        • "I've been meaning to [verb] for a while"<br>
+                        • "It's something I've been meaning to do"<br>
+                        • "I've had it in the back of my mind to [verb]"
+                    </div>
+                </div>
+                
+                <!-- Pattern 5 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-phrase">Great to finally meet you in person</div>
+                        <button class="audio-btn" onclick="playAudio(this, 'Great to finally meet you in person! I have been following your work on LinkedIn for a while.')">🔊</button>
+                    </div>
+                    <div class="pattern-phonetic">/ɡreɪt tuː ˈfaɪnəli miːt juː ɪn ˈpɜːrsn/</div>
+                    <div class="pattern-meta">
+                        <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                        <span class="register-badge">Semi-formal</span>
+                    </div>
+                    <p class="pattern-meaning">Rất vui được gặp trực tiếp (sau khi đã interact online). Natural hơn "It's a pleasure to make your acquaintance".</p>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong> "Finally" = emphasis, thể hiện đã mong đợi. "In person" = contrast với online/phone. Pattern này dùng khi đã có prior connection (email, social media, mutual friend).
+                    </div>
+                    <div class="examples-label">Examples</div>
+                    <div class="example-item life">
+                        <span class="example-context">🏠 Life - Gặp bạn online</span>
+                        "Great to finally meet you in person! I've heard so much about you from [mutual friend]."
+                    </div>
+                    <div class="example-item casual">
+                        <span class="example-context">☕ Life - Gặp qua app</span>
+                        "Great to finally meet you in person! Your profile made you seem really interesting."
+                    </div>
+                    <div class="example-item biz">
+                        <span class="example-context">💼 Business - Networking</span>
+                        "Great to finally meet you in person. I've been following your firm's work for a while."
+                    </div>
+                    <div class="pattern-mistake">
+                        <strong>⚠️ Khi nào KHÔNG dùng:</strong> Khi gặp ai đó lần đầu mà KHÔNG có prior connection → dùng "Nice to meet you" hoặc "Great to meet you"
+                    </div>
+                    <div class="pattern-alternatives">
+                        <strong>Alternatives:</strong>
+                        • "It's great to meet you in person"<br>
+                        • "So nice to finally meet you face-to-face"<br>
+                        • "Great to put a face to the name" (idiomatic)
+                    </div>
+                </div>
+                
+                <!-- Pattern 6 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-phrase">We should definitely [verb] sometime</div>
+                        <button class="audio-btn" onclick="playAudio(this, 'We should definitely grab coffee sometime. I would love to hear more about your travels.')">🔊</button>
+                    </div>
+                    <div class="pattern-phonetic">/wiː ʃʊd ˈdefɪnətli vɜːb ˈsʌmtaɪm/</div>
+                    <div class="pattern-meta">
+                        <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                        <span class="register-badge">Casual → Semi-formal</span>
+                    </div>
+                    <p class="pattern-meaning">Đề xuất làm gì đó cùng nhau (không cam kết cụ thể). Natural way để end conversation.</p>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong> "Definitely" = emphasis, thể hiện sincerity. "Sometime" = vague, không cam kết thời gian cụ thể. Natural way để end conversation và suggest future interaction.
+                    </div>
+                    <div class="examples-label">Examples</div>
+                    <div class="example-item life">
+                        <span class="example-context">🏠 Life - Gặp hàng xóm</span>
+                        "We should definitely grab coffee sometime — I'd love to hear more about your travels."
+                    </div>
+                    <div class="example-item casual">
+                        <span class="example-context">🏃 Life - Gym buddy</span>
+                        "We should definitely do a run together sometime this week."
+                    </div>
+                    <div class="example-item biz">
+                        <span class="example-context">💼 Business - Networking</span>
+                        "We should definitely grab lunch sometime — I'd love to learn more about your work."
+                    </div>
+                    <div class="pattern-mistake">
+                        <strong>⚠️ Common mistake:</strong> ❌ "We should definitely [verb] <strong>some time</strong>" (2 words) → ✅ "<strong>sometime</strong>" (1 word, meaning "at some point")
+                    </div>
+                    <div class="pattern-alternatives">
+                        <strong>Alternatives:</strong>
+                        • "Let's definitely [verb] sometime"<br>
+                        • "We should [verb] sometime soon"<br>
+                        • "I'd love to [verb] together sometime"
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- Listening Section -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">🎧</span> Natural Listening Practice</h2>
+            <p class="section-desc">2 transcripts: 1 Life (gặp hàng xóm), 1 Business (networking). Chú ý: hesitation markers, false starts, self-corrections — đây là NORMAL trong spoken English, không phải lỗi!</p>
+            
+            <!-- Legend -->
+            <div class="legend">
+                <div class="legend-title">🔍 Transcript Legend</div>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: var(--primary);"></span>
+                        <span><strong>Highlight</strong> = C1 patterns</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="hesitation" style="font-style: italic;">um, uh</span>
+                        <span>= Hesitation markers</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="stage-direction">(laughs)</span>
+                        <span>= Stage direction</span>
+                    </div>
+                    <div class="legend-item">
+                        <span style="color: var(--text-muted); font-style: italic;">or, wait,</span>
+                        <span>= Self-correction</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="transcript-tabs">
+                <button class="transcript-tab active" onclick="switchTranscript('life', this)">🏠 Life: Gặp hàng xóm</button>
+                <button class="transcript-tab" onclick="switchTranscript('biz', this)">💼 Business: Networking</button>
+            </div>
+            
+            <!-- Life Transcript -->
+            <div class="transcript-content active" id="transcript-life">
+                <div class="transcript-context">
+                    <div class="transcript-context-icon">🏢</div>
+                    <div>
+                        <strong>Context:</strong> Hành lang chung cư. Minh (new resident) gặp Sarah (neighbor) khi đang lấy đồ.
+                        <br><span style="font-size: 12px; color: var(--text-muted);">Register: Casual · Duration: ~60s · Speed: 145 WPM</span>
+                    </div>
+                </div>
+                
+                <div class="audio-player">
+                    <button class="play-btn" onclick="playAudio(this, `Oh, hi! Um, I don't think we've met. I'm Minh. I just moved into 12B a few months ago. Oh, hi Minh! I'm Sarah, 12A. Nice to meet you! Welcome to the building, I guess, though you've been here a while now, haha. Yeah, thanks! It's been about 3 months actually. I'm based in Saigon, but I'm originally from Da Nang. Moved here for work. Oh, cool! What do you do? I work in finance. I've been doing that for a while now, about 8 years. But, um, outside of work, I'm into, uh, photography. Mostly street photography. I love just walking around the city and, you know, capturing moments. That's so cool! I'm actually a graphic designer, so I totally get that. I've been meaning to get into photography for a while, but, I keep putting it off. Oh, you should definitely try it! It's been on my list to, like, teach a friend how to use a camera properly. We should definitely grab coffee sometime. I could show you some basics if you want. Oh, that would be amazing! Yeah, let's definitely do that. I'm usually free on weekends. Perfect! Um, I'll text you my number. Or, wait, do you have Zalo? Yeah, same number works. Great! Cool, nice meeting you, Sarah. You too! See you around.`)">▶</button>
+                    <div class="audio-info">
+                        <div class="audio-label">Life: Neighbor Conversation</div>
+                        <div class="audio-meta">🇺🇸 US Accent · ~60s · 145 WPM</div>
+                    </div>
+                    <button class="speed-control" onclick="changeSpeed(this)">1.0x</button>
+                </div>
+                
+                <div class="transcript-box">
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Oh, hi! <span class="hesitation">Um,</span> I don't think we've met — I'm Minh. I just, <span class="hesitation">uh,</span> moved into 12B a few months ago.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Oh, hi Minh! I'm Sarah, 12A. Nice to meet you! Welcome to the building, I guess — though you've been here a while now, <span class="stage-direction">(laughs)</span>
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> <span class="stage-direction">(laughs)</span> Yeah, thanks! It's been, <span class="hesitation">um,</span> about 3 months actually. <span class="highlight">I'm based in Saigon, but I'm originally from Da Nang.</span> Moved here for work.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Oh, cool! What do you do?
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> I work in finance — <span class="highlight">I've been doing that for a while now</span>, about 8 years. But, <span class="hesitation">um,</span> outside of work, <span class="highlight">I'm into, uh, photography — mostly street photography.</span> I love just walking around the city and, you know, capturing moments.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> That's so cool! I'm actually a graphic designer, so I totally get that. I've been meaning to get into photography for a while, but... <span class="stage-direction">(laughs)</span> I keep putting it off.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Oh, you should definitely try it! <span class="highlight">It's been on my list to</span>, like, teach a friend how to use a camera properly. <span class="highlight">We should definitely grab coffee sometime</span> — I could show you some basics if you want.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Oh, that would be amazing! Yeah, let's definitely do that. I'm usually free on weekends.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Perfect! <span class="hesitation">Um,</span> I'll, <span class="hesitation">uh,</span> text you my number — or, wait, do you have Zalo?
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Yeah, same number works.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Great! Cool, nice meeting you, Sarah.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> You too! See you around.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business Transcript -->
+            <div class="transcript-content" id="transcript-biz">
+                <div class="transcript-context">
+                    <div class="transcript-context-icon">🎤</div>
+                    <div>
+                        <strong>Context:</strong> Industry conference coffee station. Minh gặp Sarah (đã follow nhau trên LinkedIn).
+                        <br><span style="font-size: 12px; color: var(--text-muted);">Register: Semi-formal · Duration: ~60s · Speed: 150 WPM</span>
+                    </div>
+                </div>
+                
+                <div class="audio-player">
+                    <button class="play-btn" onclick="playAudio(this, `Hi there. Um, I don't believe we've met. I'm Minh Nguyen, from Horizon Partners. Oh, hi Minh! I'm Sarah Chen, from Vertex Capital. Great to finally meet you in person. I've, um, I've been following your firm's work for a while now. Oh, really? That's, uh, that's great to hear. What, um, what specifically caught your attention? Well, I'm mostly into, uh, early-stage tech investments, and I saw your recent, um, series A deal with that logistics startup. It was, like, really interesting approach. Oh, yeah! That was, um, that was a fun one. I've been focusing on, uh, logistics and supply chain for a while now. We should definitely grab lunch sometime. I'd love to hear more about Vertex's approach to impact investing. Oh, definitely! Yeah, let's, um, let's definitely do that. Are you, um, are you around next week? Yeah, I'm pretty flexible. Um, I'll shoot you an email. Or, wait, do you have LinkedIn? Yeah, same name, Vertex Capital. Perfect. Great, nice meeting you, Sarah. You too! Looking forward to it.`)">▶</button>
+                    <div class="audio-info">
+                        <div class="audio-label">Business: Networking Event</div>
+                        <div class="audio-meta">🇺🇸 US Accent · ~60s · 150 WPM</div>
+                    </div>
+                    <button class="speed-control" onclick="changeSpeed(this)">1.0x</button>
+                </div>
+                
+                <div class="transcript-box">
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Hi there. <span class="hesitation">Um,</span> I don't believe we've met. I'm Minh Nguyen, from Horizon Partners.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Oh, hi Minh! I'm Sarah Chen, from Vertex Capital. <span class="highlight">Great to finally meet you in person.</span> I've, <span class="hesitation">um,</span> I've been following your firm's work for a while now.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Oh, really? That's, <span class="hesitation">uh,</span> that's great to hear. What, <span class="hesitation">um,</span> what specifically caught your attention?
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Well, <span class="highlight">I'm mostly into, uh, early-stage tech investments</span>, and I saw your recent, <span class="hesitation">um,</span> series A deal with that logistics startup. It was, like, really interesting approach.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Oh, yeah! That was, <span class="hesitation">um,</span> that was a fun one. <span class="highlight">I've been focusing on, uh, logistics and supply chain for a while now.</span>
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Totally makes sense. <span class="highlight">I've been meaning to</span>, <span class="hesitation">um,</span> reach out about potential synergies, but, you know, things get busy.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> <span class="stage-direction">(laughs)</span> Yeah, tell me about it. <span class="hesitation">Um,</span> <span class="highlight">we should definitely grab lunch sometime</span> — I'd love to, <span class="hesitation">uh,</span> hear more about Vertex's approach to impact investing.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Oh, definitely! Yeah, let's, <span class="hesitation">um,</span> let's definitely do that. Are you, <span class="hesitation">um,</span> are you around next week?
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Yeah, I'm pretty flexible. <span class="hesitation">Um,</span> I'll shoot you an email — or, wait, do you have LinkedIn?
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> Yeah, same name, Vertex Capital.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Minh:</span> Perfect. Great, nice meeting you, Sarah.
+                    </div>
+                    <div class="transcript-line">
+                        <span class="speaker">Sarah:</span> You too! Looking forward to it.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3-step method -->
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 24px 0 12px; color: var(--text-primary);">🎯 3-Step Listening Method</h3>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <div class="step-title">Gist (3 min)</div>
+                    <div class="step-desc">Không nhìn transcript. Note: Who? Context? Relationship? Register?</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <div class="step-title">Detailed (7 min)</div>
+                    <div class="step-desc">Đọc transcript. Highlight: 🔵 C1 patterns 🟡 Hesitation 🔴 Self-corrections</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <div class="step-title">Shadow (10 min)</div>
+                    <div class="step-desc">Nhại lại theo speaker. Include hesitation markers naturally!</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pronunciation Section -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Pronunciation: Natural C1 Speech</h2>
+            <p class="section-desc">C1 không phải nói "perfect" — mà là nói natural với hesitation, connected speech, và intonation đúng.</p>
+            
+            <div class="pronunciation-box">
+                <h4>🎤 Hesitation Markers — KHÔNG PHẢI LỖI!</h4>
+                <ul>
+                    <li><strong>"um"</strong> <code>/ʌm/</code> — khi đang nghĩ</li>
+                    <li><strong>"uh"</strong> <code>/ʌ/</code> — khi đang search word</li>
+                    <li><strong>"like"</strong> <code>/laɪk/</code> — khi elaborating hoặc hedging</li>
+                    <li><strong>"you know"</strong> <code>/juː noʊ/</code> — khi seeking agreement</li>
+                    <li><strong>"I mean"</strong> <code>/aɪ miːn/</code> — khi self-correcting</li>
+                </ul>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 C1 Tip:</strong> Native speakers dùng hesitation markers RẤT NHIỀU. Nếu bạn dùng đúng chỗ, nghe sẽ natural hơn. Nếu KHÔNG dùng, nghe robotic.
+                <br><br>
+                <strong>❌ Robotic:</strong> "I work in finance. I have been doing that for eight years."<br>
+                <strong>✅ Natural:</strong> "I work in finance — I've been, <em>um</em>, doing that for, <em>like</em>, 8 years now."
+            </div>
+            
+            <div class="pronunciation-box" style="margin-top: 14px;">
+                <h4>🔗 Connected Speech với Hesitation</h4>
+                <ul>
+                    <li><strong>"split my time"</strong>: Slow <code>/splɪt maɪ taɪm/</code> → Fast <code>/splɪt̬maɪtaɪm/</code> (flap T)</li>
+                    <li><strong>"grown accustomed to"</strong>: <code>/ɡroʊnəˈkʌstəmdə/</code> (linking)</li>
+                    <li><strong>"welcome the opportunity"</strong>: <code>/ˈwɛlkəmðiˌɒpərˈtjuːnədi/</code></li>
+                </ul>
+            </div>
+            
+            <div class="pronunciation-box">
+                <h4>🎵 Intonation Patterns</h4>
+                <ul>
+                    <li><strong>Show interest:</strong> "How <strong>fas</strong>cinating↘" (rising-falling, không phải rising — nghe sarcastic)</li>
+                    <li><strong>Hedging:</strong> "I <strong>tend</strong> to..." (flat, không nhấn mạnh)</li>
+                    <li><strong>Emphasis:</strong> "I'm <strong>really</strong> into..." (nhấn "really")</li>
+                    <li><strong>Self-correction:</strong> "I'll text you — or, <strong>wait</strong>↗, do you have Zalo?"</li>
+                </ul>
+            </div>
+            
+            <div class="pronunciation-box">
+                <h4>↩️ False Starts & Self-Corrections</h4>
+                <ul>
+                    <li><strong>False start pattern:</strong> [Start] → [hesitation] → [Restart]<br>
+                    "I've been, <em>um</em>, I've been working in finance for 8 years"</li>
+                    <li><strong>Self-correction pattern:</strong> [Statement] → "or, wait," → [Correction]<br>
+                    "I'll text you — or, wait, do you have Zalo?"</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Speaking Practice -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🗣️</span> Speaking: 4 Scenarios</h2>
+            <p class="section-desc">2 life scenarios + 2 business scenarios. Record 60-90s cho mỗi scenario. Dùng ít nhất 3 patterns từ hôm nay.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1: Life -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life</span>
+                    <h4>Scenario 1: Gặp hàng xóm mới</h4>
+                    <p>Bạn đang lấy đồ ở hành lang chung cư. Hàng xóm mới chuyển đến đứng cạnh bạn.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Register: Casual</li>
+                            <li>Dùng "I'm based in X, but originally from Y"</li>
+                            <li>Dùng "I'm into X — mostly Y"</li>
+                            <li>Có hesitation markers tự nhiên</li>
+                            <li>End với "We should definitely..."</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('neighbor')">🎙️ Record (60-90s)</button>
+                </div>
+                
+                <!-- Scenario 2: Life -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life</span>
+                    <h4>Scenario 2: Gặp người mới ở gym</h4>
+                    <p>Bạn đang ở phòng gym. Có người đang đợi máy tập cạnh bạn.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Register: Casual</li>
+                            <li>Dùng "I've been [verb+ing] for a while now"</li>
+                            <li>Small talk về workout routines</li>
+                            <li>Elaborate về fitness goals</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('gym')">🎙️ Record (60s)</button>
+                </div>
+                
+                <!-- Scenario 3: Business -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business</span>
+                    <h4>Scenario 3: Networking event</h4>
+                    <p>Bạn đang tại industry conference. Có 60s để introduce yourself với 1 professional khác ở coffee station. Đã biết qua LinkedIn.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Register: Semi-formal</li>
+                            <li>Dùng "Great to finally meet you in person"</li>
+                            <li>Elaborate về professional background</li>
+                            <li>Suggest follow-up với "We should definitely..."</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('networking')">🎙️ Record (60s)</button>
+                </div>
+                
+                <!-- Scenario 4: Semi-formal -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">☕ Semi-formal</span>
+                    <h4>Scenario 4: Café - bạn của bạn</h4>
+                    <p>Bạn của bạn introduce bạn với người họ mới quen ở café. Không quá formal, không quá casual.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Register: Semi-formal (mix casual + professional)</li>
+                            <li>Dùng cả life AND business patterns</li>
+                            <li>Show genuine curiosity</li>
+                            <li>End với follow-up suggestion</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showRecordingTips('cafe')">🎙️ Record (60s)</button>
+                </div>
+            </div>
+            
+            <!-- Template -->
+            <div class="template-box">
+                <div class="template-title">📝 Speaking Template (fill in the blanks)</div>
+                <div class="template-content">
+                    "Hi! <em>[hesitation]</em> I don't think we've met — I'm <strong>[name]</strong>. <strong>I'm based in [area], but I'm originally from [place].</strong> I work in <strong>[field]</strong> — <strong>I've been doing that for a while now.</strong> But, <em>[hesitation]</em> outside of work, <strong>I'm into [hobby] — mostly [specific detail].</strong> Actually, <strong>[something on your list to do].</strong> <strong>We should definitely [verb] sometime!</strong>"
+                </div>
+            </div>
+            
+            <!-- Self Assessment -->
+            <div class="checklist">
+                <h4>✅ Self-Assessment Checklist (click to check)</h4>
+                <ul id="selfChecklist">
+                    <li>Tôi đã dùng ít nhất 3 patterns C1 từ hôm nay</li>
+                    <li>Có hesitation markers tự nhiên (không nghe robotic)</li>
+                    <li>Register phù hợp với context (casual vs semi-formal)</li>
+                    <li>Có elaboration với "mostly" hoặc specific details</li>
+                    <li>Pace vừa phải (120-150 WPM), không quá nhanh</li>
+                    <li>Có "smiling voice" — nghe thân thiện, ấm áp</li>
+                    <li>Intonation tự nhiên — lên xuống đúng chỗ</li>
+                    <li>End conversation với follow-up suggestion</li>
+                    <li>Có đặt câu hỏi ngược lại cho đối phương</li>
+                    <li>Cảm thấy comfortable khi nghe lại recording của mình</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-accent">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard Review</h2>
+            <p class="section-desc">Click vào card để lật. Cố gắng nhớ nghĩa, register, và example trước khi lật.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-word" id="fc-word">I'm based in X, but I'm originally from Y</div>
+                            <div class="card-hint">Tap to reveal →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-phonetic" id="fc-phonetic">⭐⭐⭐⭐⭐ · Casual → Semi-formal</div>
+                            <div class="card-meaning" id="fc-meaning">Nơi ở hiện tại + nguồn gốc. "Based in" nghe flexible hơn "live in".</div>
+                            <div class="card-example" id="fc-example">"I'm based in Saigon, but I'm originally from Da Nang. Moved here for work."</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Natural C1</h2>
+            <p class="section-desc">7 câu hỏi về register awareness, naturalness, và C1 patterns. Chọn đáp án ĐÚNG NHẤT (không phải "correct" mà là "most natural").</p>
+            
+            <!-- Q1 -->
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">1. Bạn gặp <strong>hàng xóm mới</strong> ở hành lang. Câu nào NGHE TỰ NHIÊN NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "It's a pleasure to make your acquaintance."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "Great to finally meet you in person."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "Nice to meet you! I'm Minh, by the way."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "Good day to you, sir/madam."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <!-- Q2 -->
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. Ai đó hỏi "What do you do for fun?". Câu nào NGHE TỰ NHIÊN NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. "I'm an avid photography enthusiast."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. "I'm into photography — mostly street photography, actually."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. "Photography is my primary recreational pursuit."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. "I engage in photographic activities."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <!-- Q3 -->
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">3. Câu nào thể hiện <strong>hedging TỐT NHẤT</strong> (không absolute)?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. "I always go hiking on weekends."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. "I tend to go hiking when I have downtime."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. "I definitely go hiking every weekend."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. "I never miss a hiking opportunity."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <!-- Q4 -->
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. Câu nào NGHE TỰ NHIÊN NHẤT (có hesitation markers đúng chỗ)?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. "I have been working in finance for eight years."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. "I've been, um, working in finance for, like, 8 years now."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. "I have been, um, working in finance for eight years."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. "I've been working in finance for eight years, um."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <!-- Q5 -->
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">5. Trong transcript, Minh nói: "I'll text you — or, wait, do you have Zalo?" Đây là ví dụ của:</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. Grammar mistake</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Hesitation marker</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Self-correction</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. False start</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <!-- Q6 -->
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">6. Bạn muốn nói về hobby "photography" ở level C1. Câu nào TỐT NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. "I like photography."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. "I'm into photography — mostly street photography, actually."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. "Photography is my hobby."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. "I do photography sometimes."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <!-- Q7 -->
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">7. Bạn muốn suggest gặp lại ai đó sau networking event. Câu nào TỐT NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. "I would welcome the opportunity to meet again."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. "We should definitely grab lunch sometime."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. "It would be my pleasure to schedule a future meeting."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. "I propose that we arrange a subsequent encounter."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-01.html" class="nav-btn">
+                <div class="nav-label">← Back to</div>
+                <div class="nav-title">Week 1 Hub</div>
+            </a>
+            <a href="week-01-day-2.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 2: Register Shifting</div>
+            </a>
+        </div>
+        
+        <!-- Complete Button -->
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 1 Complete & Continue to Day 2</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#F4A8A8"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#F4A8A8"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#F4A8A8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#F4A8A8" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#F4A8A8"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <rect x="65" y="150" width="28" height="20" fill="#B8C5E8" rx="3"/>
+            <line x1="79" y1="150" x2="79" y2="170" stroke="#2D3748" stroke-width="1.5"/>
+        </svg>
+        <div class="mascot-speech">Natural C1! 🎯</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 1 · Day 1 · Natural Introductions at C1</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 1.0;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = 'en-US';
+                u.rate = audioSpeed;
+                
+                const voices = window.speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US' && v.name.includes('Female')) 
+                             || voices.find(v => v.lang === 'en-US')
+                             || voices[0];
+                if (usVoice) u.voice = usVoice;
+                
+                btn.classList.add('playing');
+                btn.textContent = '⏸';
+                u.onend = () => {
+                    btn.classList.remove('playing');
+                    btn.textContent = '▶';
+                };
+                u.onerror = () => {
+                    btn.classList.remove('playing');
+                    btn.textContent = '▶';
+                };
+                
+                window.speechSynthesis.speak(u);
+            } else {
+                alert('Text-to-Speech not supported in your browser');
+            }
+        }
+        
+        function changeSpeed(btn) {
+            const speeds = [0.75, 1.0, 1.25];
+            const current = speeds.indexOf(audioSpeed);
+            audioSpeed = speeds[(current + 1) % speeds.length];
+            btn.textContent = audioSpeed + 'x';
+        }
+        
+        // ========== TRANSCRIPT TABS ==========
+        function switchTranscript(id, btn) {
+            document.querySelectorAll('.transcript-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.transcript-content').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('transcript-' + id).classList.add('active');
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                word: "I'm based in X, but I'm originally from Y", 
+                phonetic: "⭐⭐⭐⭐⭐ · Casual → Semi-formal", 
+                meaning: "Nơi ở hiện tại + nguồn gốc. 'Based in' nghe flexible hơn 'live in'.", 
+                example: '"I\'m based in Saigon, but I\'m originally from Da Nang. Moved here for work."' 
+            },
+            { 
+                word: "I've been [verb+ing] for a while now", 
+                phonetic: "⭐⭐⭐⭐⭐ · Casual → Semi-formal", 
+                meaning: "Đã làm gì đó được 1 thời gian. 'For a while now' nghe tự nhiên hơn 'for X years'.", 
+                example: '"I\'ve been working in finance for a while now — about 8 years, actually."' 
+            },
+            { 
+                word: "I'm into X — mostly [specific detail]", 
+                phonetic: "⭐⭐⭐⭐⭐ · Casual", 
+                meaning: "Đam mê gì đó + elaborate với chi tiết cụ thể. Dash để pause rồi elaborate.", 
+                example: '"I\'m into photography — mostly street photography, actually."' 
+            },
+            { 
+                word: "It's been on my list to [verb]", 
+                phonetic: "⭐⭐⭐⭐ · Casual → Semi-formal", 
+                meaning: "Đã định làm gì đó (nhưng chưa làm). Natural hơn 'I've been meaning to'.", 
+                example: '"That new restaurant? It\'s been on my list to try for weeks."' 
+            },
+            { 
+                word: "Great to finally meet you in person", 
+                phonetic: "⭐⭐⭐⭐⭐ · Semi-formal", 
+                meaning: "Rất vui được gặp trực tiếp (sau khi đã interact online).", 
+                example: '"Great to finally meet you in person! I\'ve been following your work."' 
+            },
+            { 
+                word: "We should definitely [verb] sometime", 
+                phonetic: "⭐⭐⭐⭐⭐ · Casual → Semi-formal", 
+                meaning: "Đề xuất làm gì đó cùng nhau (không cam kết cụ thể).", 
+                example: '"We should definitely grab coffee sometime — I\'d love to hear more."' 
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-word').textContent = card.word;
+            document.getElementById('fc-phonetic').textContent = card.phonetic;
+            document.getElementById('fc-meaning').textContent = card.meaning;
+            document.getElementById('fc-example').textContent = card.example;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'c', q2: 'b', q3: 'b', q4: 'b', q5: 'c', q6: 'b', q7: 'b' };
+        const explanations = {
+            q1: 'A quá formal cho hàng xóm (nghe như gặp CEO). B chỉ dùng khi đã biết qua online. D quá formal, nghe robotic. C natural, casual, phù hợp context gặp hàng xóm lần đầu.',
+            q2: 'A nghe như written English, không phải spoken. C và D quá formal, nghe robotic. B có elaboration pattern "X — mostly Y", có discourse marker "actually", nghe natural và sophisticated.',
+            q3: '"Tend to" = hedging, không absolute. Native C1 speakers dùng hedging để sound humble và accurate. A, C, D quá absolute, nghe naive.',
+            q4: 'B có hesitation markers ở vị trí tự nhiên (giữa clause), có "like" để elaborate, có "now" ở cuối để emphasize. A không có hesitation, nghe robotic. C hesitation marker ở vị trí không tự nhiên. D hesitation marker ở cuối, nghe awkward.',
+            q5: '"Or, wait" = self-correction marker. Minh ban đầu định nói "text you", nhưng self-correct thành "do you have Zalo?". Đây là NORMAL trong spoken English, không phải mistake.',
+            q6: 'B có elaboration pattern "X — mostly Y", có discourse marker "actually", nghe natural và sophisticated. A, C, D quá basic (B1 level).',
+            q7: 'B natural, casual nhưng professional, có "definitely" để emphasize, có "sometime" để không commit cụ thể. A và C quá formal cho casual follow-up. D nghe như legal document.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                // Reset all options
+                options.forEach(opt => {
+                    opt.classList.remove('selected', 'correct', 'wrong');
+                });
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    // Highlight correct answer
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) {
+                            opt.classList.add('correct');
+                        }
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            // Show score
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered natural C1 introductions!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the patterns you missed and try again.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the patterns section carefully.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the 6 patterns and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== CHECKLIST ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.checklist li').forEach(item => {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('checked');
+                    
+                    // Save to localStorage
+                    const checked = Array.from(document.querySelectorAll('.checklist li.checked'))
+                        .map(el => Array.from(el.parentNode.children).indexOf(el));
+                    localStorage.setItem('day1Checklist', JSON.stringify(checked));
+                });
+            });
+            
+            // Restore checklist
+            const saved = JSON.parse(localStorage.getItem('day1Checklist') || '[]');
+            const items = document.querySelectorAll('.checklist li');
+            saved.forEach(idx => {
+                if (items[idx]) items[idx].classList.add('checked');
+            });
+            
+            renderCard();
+            
+            // Load voices for TTS
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.getVoices();
+            }
+        });
+        
+        // ========== RECORDING TIPS ==========
+        function showRecordingTips(scenario) {
+            const tips = {
+                neighbor: `🏠 TIPS FOR NEIGHBOR SCENARIO:
+
+• Register: Casual (như nói với bạn)
+• Dùng "I'm based in X, but originally from Y"
+• Elaborate hobbies với "mostly"
+• Có hesitation markers tự nhiên (um, uh, like)
+• End với "We should definitely grab coffee sometime"
+
+💡 Mẹo: Dùng Voice Memo trên điện thoại. Record 60-90s.
+Listen back và check checklist.`,
+
+                gym: `🏃 TIPS FOR GYM SCENARIO:
+
+• Register: Casual
+• Dùng "I've been [verb+ing] for a while now"
+• Small talk về workout routines
+• Show genuine curiosity về对方's routine
+• Có thể suggest workout together
+
+💡 Mẹo: Focus vào natural flow, không quá rehearsed.`,
+
+                networking: `💼 TIPS FOR NETWORKING SCENARIO:
+
+• Register: Semi-formal
+• Dùng "Great to finally meet you in person" (vì đã biết qua LinkedIn)
+• Elaborate về professional background
+• Show interest trong对方's work
+• End với "We should definitely grab lunch sometime"
+
+💡 Mẹo: Professional nhưng vẫn warm. Không quá formal.`,
+
+                cafe: `☕ TIPS FOR CAFÉ SCENARIO:
+
+• Register: Semi-formal (mix casual + professional)
+• Dùng cả life AND business patterns
+• Show genuine curiosity
+• Có thể dùng "I'm into X — mostly Y" cho hobbies
+• End với follow-up suggestion
+
+💡 Mẹo: Đây là scenario khó nhất - phải balance casual và professional.`
+            };
+            
+            alert(tips[scenario]);
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week1Days') || '[]');
+            
+            if (!completed.includes(1)) {
+                completed.push(1);
+                localStorage.setItem('week1Days', JSON.stringify(completed));
+                
+                // Check if all 7 days done
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(1)) {
+                        completedWeeks.push(1);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 1 completed! You\'ve mastered natural C1 introductions! 🦊');
+                } else {
+                    alert(`✅ Day 1 completed! Great start! ${7 - completed.length} days left in Week 1. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-01-day-2.html';
+            } else {
+                if (confirm('✅ Day 1 already completed! Go to Day 2?')) {
+                    location.href = 'week-01-day-2.html';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
