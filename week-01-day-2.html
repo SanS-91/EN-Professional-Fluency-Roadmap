@@ -2774,5 +2774,349 @@ Conversation 3 (senior - formal):
             }
         });
     </script>
+<!-- ========== AUDIO SETTINGS PANEL ========== -->
+<div id="audioSettingsPanel" style="
+    position: fixed;
+    bottom: 110px;
+    right: 24px;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    width: 320px;
+    z-index: 999;
+    display: none;
+    border: 1px solid #E2E8F0;
+    font-family: 'Inter', sans-serif;
+">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-family: 'Fraunces', serif; font-size: 16px; margin: 0;">🎤 Audio Settings</h3>
+        <button onclick="toggleAudioSettings()" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #718096;">×</button>
+    </div>
+    
+    <!-- Voice Selection -->
+    <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 12px; font-weight: 600; color: #4A5568; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;">
+            Voice Quality
+        </label>
+        <select id="voiceSelect" style="
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            font-size: 13px;
+            background: white;
+            cursor: pointer;
+        ">
+            <option>Loading voices...</option>
+        </select>
+        <div id="voiceQuality" style="font-size: 11px; color: #718096; margin-top: 4px;"></div>
+    </div>
+    
+    <!-- Rate Control -->
+    <div style="margin-bottom: 16px;">
+        <label style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: #4A5568; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;">
+            <span>Speed</span>
+            <span id="rateValue" style="color: #805AD5;">0.9x</span>
+        </label>
+        <input type="range" id="rateSlider" min="0.5" max="1.5" step="0.05" value="0.9" style="width: 100%; accent-color: #805AD5;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; color: #A0AEC0; margin-top: 2px;">
+            <span>Slow</span>
+            <span>Normal</span>
+            <span>Fast</span>
+        </div>
+    </div>
+    
+    <!-- Pitch Control -->
+    <div style="margin-bottom: 16px;">
+        <label style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: #4A5568; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;">
+            <span>Pitch</span>
+            <span id="pitchValue" style="color: #805AD5;">1.05</span>
+        </label>
+        <input type="range" id="pitchSlider" min="0.5" max="1.5" step="0.05" value="1.05" style="width: 100%; accent-color: #805AD5;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; color: #A0AEC0; margin-top: 2px;">
+            <span>Low</span>
+            <span>Normal</span>
+            <span>High</span>
+        </div>
+    </div>
+    
+    <!-- Test Button -->
+    <button onclick="testVoice()" style="
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(135deg, #805AD5, #B794D6);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 13px;
+        cursor: pointer;
+        margin-bottom: 8px;
+    ">🔊 Test Voice</button>
+    
+    <!-- Save Button -->
+    <button onclick="saveAudioSettings()" style="
+        width: 100%;
+        padding: 10px;
+        background: #48BB78;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 13px;
+        cursor: pointer;
+    ">💾 Save Settings</button>
+    
+    <!-- Help Text -->
+    <div style="margin-top: 12px; padding: 10px; background: #F7FAFC; border-radius: 8px; font-size: 11px; color: #718096; line-height: 1.5;">
+        💡 <strong>Tip:</strong> For best quality, choose voices with "Google" or "Neural" in the name. Chrome has the best voices.
+    </div>
+</div>
+
+<!-- Settings Toggle Button -->
+<button onclick="toggleAudioSettings()" style="
+    position: fixed;
+    bottom: 110px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #805AD5, #B794D6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(128,90,213,0.3);
+    font-size: 20px;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    🎤
+</button>
+
+<script>
+// ========== ENHANCED AUDIO SYSTEM ==========
+
+// Audio settings
+let audioSettings = {
+    voiceURI: null,
+    rate: 0.9,
+    pitch: 1.05,
+    volume: 1.0
+};
+
+// Load saved settings
+function loadAudioSettings() {
+    const saved = localStorage.getItem('audioSettings');
+    if (saved) {
+        audioSettings = JSON.parse(saved);
+        document.getElementById('rateSlider').value = audioSettings.rate;
+        document.getElementById('pitchSlider').value = audioSettings.pitch;
+        document.getElementById('rateValue').textContent = audioSettings.rate + 'x';
+        document.getElementById('pitchValue').textContent = audioSettings.pitch;
+    }
+}
+
+// Save settings
+function saveAudioSettings() {
+    audioSettings.rate = parseFloat(document.getElementById('rateSlider').value);
+    audioSettings.pitch = parseFloat(document.getElementById('pitchSlider').value);
+    
+    const voiceSelect = document.getElementById('voiceSelect');
+    if (voiceSelect.value) {
+        audioSettings.voiceURI = voiceSelect.value;
+    }
+    
+    localStorage.setItem('audioSettings', JSON.stringify(audioSettings));
+    
+    // Show success message
+    const btn = event.target;
+    const originalText = btn.textContent;
+    btn.textContent = '✅ Saved!';
+    btn.style.background = '#38A169';
+    setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '#48BB78';
+    }, 1500);
+}
+
+// Toggle settings panel
+function toggleAudioSettings() {
+    const panel = document.getElementById('audioSettingsPanel');
+    panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+}
+
+// Rate slider update
+document.getElementById('rateSlider').addEventListener('input', function() {
+    document.getElementById('rateValue').textContent = this.value + 'x';
+    audioSettings.rate = parseFloat(this.value);
+});
+
+// Pitch slider update
+document.getElementById('pitchSlider').addEventListener('input', function() {
+    document.getElementById('pitchValue').textContent = this.value;
+    audioSettings.pitch = parseFloat(this.value);
+});
+
+// Voice quality rating
+function getVoiceQuality(voice) {
+    const name = voice.name.toLowerCase();
+    
+    // Best quality voices
+    if (name.includes('neural') || name.includes('wavenet') || name.includes('natural')) {
+        return { rating: 3, label: '⭐⭐⭐ Excellent', color: '#48BB78' };
+    }
+    if (name.includes('google') && name.includes('us')) {
+        return { rating: 3, label: '⭐⭐⭐ Excellent', color: '#48BB78' };
+    }
+    if (name.includes('microsoft') && (name.includes('aria') || name.includes('jenny') || name.includes('guy'))) {
+        return { rating: 3, label: '⭐⭐⭐ Excellent', color: '#48BB78' };
+    }
+    
+    // Good quality voices
+    if (name.includes('google') || name.includes('microsoft')) {
+        return { rating: 2, label: '⭐⭐ Good', color: '#ECC94B' };
+    }
+    if (name.includes('samantha') || name.includes('daniel') || name.includes('karen')) {
+        return { rating: 2, label: '⭐⭐ Good', color: '#ECC94B' };
+    }
+    
+    // Basic quality
+    return { rating: 1, label: '⭐ Basic', color: '#A0AEC0' };
+}
+
+// Populate voice list
+function populateVoices() {
+    const voices = speechSynthesis.getVoices();
+    const voiceSelect = document.getElementById('voiceSelect');
+    
+    // Filter US English voices
+    const usVoices = voices.filter(v => v.lang === 'en-US' || v.lang.startsWith('en-US'));
+    
+    // Sort by quality
+    usVoices.sort((a, b) => {
+        const qa = getVoiceQuality(a).rating;
+        const qb = getVoiceQuality(b).rating;
+        return qb - qa;
+    });
+    
+    voiceSelect.innerHTML = '';
+    
+    if (usVoices.length === 0) {
+        voiceSelect.innerHTML = '<option>No US English voices found</option>';
+        return;
+    }
+    
+    usVoices.forEach((voice, index) => {
+        const quality = getVoiceQuality(voice);
+        const option = document.createElement('option');
+        option.value = voice.voiceURI;
+        option.textContent = `${quality.label} - ${voice.name}`;
+        option.style.color = quality.color;
+        
+        if (audioSettings.voiceURI === voice.voiceURI || (index === 0 && !audioSettings.voiceURI)) {
+            option.selected = true;
+            document.getElementById('voiceQuality').innerHTML = 
+                `<span style="color: ${quality.color}">Quality: ${quality.label}</span>`;
+        }
+        
+        voiceSelect.appendChild(option);
+    });
+    
+    // Update quality display on change
+    voiceSelect.addEventListener('change', function() {
+        const selectedVoice = usVoices.find(v => v.voiceURI === this.value);
+        if (selectedVoice) {
+            const quality = getVoiceQuality(selectedVoice);
+            document.getElementById('voiceQuality').innerHTML = 
+                `<span style="color: ${quality.color}">Quality: ${quality.label}</span>`;
+        }
+    });
+}
+
+// Text preprocessing for more natural speech
+function preprocessText(text) {
+    // Add natural pauses
+    text = text.replace(/\.\.\./g, ', ... ');
+    text = text.replace(/([.!?])\s+/g, '$1 ... ');
+    
+    // Add emphasis pauses for important phrases
+    text = text.replace(/actually,/gi, 'actually, ... ');
+    text = text.replace(/mostly/gi, 'mostly, ... ');
+    text = text.replace(/but sometimes/gi, ', but sometimes, ... ');
+    
+    // Normalize contractions for better pronunciation
+    text = text.replace(/I'm/g, 'I am');
+    text = text.replace(/I've/g, 'I have');
+    text = text.replace(/don't/g, 'do not');
+    text = text.replace(/it's/g, 'it is');
+    
+    return text;
+}
+
+// Enhanced playAudio function
+function playAudio(btn, text) {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        
+        // Preprocess text for natural speech
+        const processedText = preprocessText(text);
+        
+        const utterance = new SpeechSynthesisUtterance(processedText);
+        utterance.lang = 'en-US';
+        utterance.rate = audioSettings.rate;
+        utterance.pitch = audioSettings.pitch;
+        utterance.volume = audioSettings.volume;
+        
+        // Find selected voice
+        const voices = speechSynthesis.getVoices();
+        if (audioSettings.voiceURI) {
+            const selectedVoice = voices.find(v => v.voiceURI === audioSettings.voiceURI);
+            if (selectedVoice) {
+                utterance.voice = selectedVoice;
+            }
+        } else {
+            // Fallback: find best US voice
+            const usVoice = voices.find(v => v.lang === 'en-US' && 
+                (v.name.includes('Google') || v.name.includes('Neural') || v.name.includes('Natural')));
+            if (usVoice) utterance.voice = usVoice;
+        }
+        
+        // Visual feedback
+        if (btn) {
+            btn.classList.add('playing');
+            utterance.onend = () => btn.classList.remove('playing');
+            utterance.onerror = () => btn.classList.remove('playing');
+        }
+        
+        window.speechSynthesis.speak(utterance);
+    } else {
+        alert('Text-to-Speech not supported in your browser. Please use Chrome or Edge for best experience.');
+    }
+}
+
+// Test voice function
+function testVoice() {
+    const testText = "Hi there! This is a test of your selected voice. How does it sound?";
+    playAudio(null, testText);
+}
+
+// Initialize audio system
+function initAudioSystem() {
+    loadAudioSettings();
+    
+    // Load voices (async in some browsers)
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = populateVoices;
+    }
+    populateVoices();
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', initAudioSystem);
+</script>
 </body>
 </html>
