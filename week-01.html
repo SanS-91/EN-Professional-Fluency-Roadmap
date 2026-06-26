@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1: First Impressions | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #F4A8A8;
+            --primary-light: #F9C4C4;
+            --primary-soft: #FFF0F0;
+            --secondary: #B8C5E8;
+            --secondary-soft: #F0F3FF;
+            --accent: #D4B8E8;
+            --warm: #F9D4B8;
+            --warm-soft: #FFF5EB;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --milestone: #ED8936;
+            --milestone-bg: #FFFAF0;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.5s;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .week-header {
+            background: linear-gradient(135deg, var(--warm-soft) 0%, var(--primary-soft) 100%);
+            padding: 56px 0 48px;
+            position: relative;
+        }
+        
+        .week-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(249,212,184,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(244,168,168,0.15) 0%, transparent 40%);
+        }
+        
+        .week-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .week-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-breadcrumb a:hover { color: var(--primary); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .week-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 650px;
+            line-height: 1.55;
+            margin-bottom: 24px;
+            position: relative;
+        }
+        
+        .week-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-overview { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        .section-plan { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #FDE0E0; }
+        .section-progress { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #DDE5F5; }
+        .section-cta { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); border: none; color: white; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-cta .section-title { color: white; }
+        
+        .section-icon { font-size: 1.6rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== GOALS ========== */
+        .goals-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 18px;
+        }
+        
+        .goal-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .goal-card.life { background: var(--life-bg); border-color: var(--life); }
+        .goal-card.biz { background: var(--biz-bg); border-color: var(--biz); }
+        
+        .goal-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .goal-card.life h4 { color: var(--life-dark); }
+        .goal-card.biz h4 { color: var(--biz-dark); }
+        
+        .goal-card p {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .goal-card.life p { color: var(--life-dark); }
+        .goal-card.biz p { color: var(--biz-dark); }
+        
+        /* ========== STATS ========== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-top: 18px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 18px 12px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        
+        .stat-icon { font-size: 1.8rem; margin-bottom: 6px; }
+        
+        .stat-value {
+            font-family: 'Fraunces', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 2px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        /* ========== DAYS GRID ========== */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+        
+        .day-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 22px;
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .day-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .day-card.completed {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .day-card.completed::before {
+            background: linear-gradient(90deg, var(--life), #38A169);
+        }
+        
+        .day-num {
+            font-family: 'Fraunces', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .day-card.completed .day-num {
+            background: linear-gradient(135deg, var(--life), #38A169);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+        }
+        
+        .day-focus {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .day-topics {
+            list-style: none;
+            margin-bottom: 12px;
+        }
+        
+        .day-topics li {
+            padding: 3px 0;
+            padding-left: 18px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .day-topics li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .day-card.completed .day-topics li::before {
+            color: var(--life);
+        }
+        
+        .day-time {
+            display: inline-block;
+            background: var(--bg);
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+        
+        .day-status {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            font-size: 1.2rem;
+        }
+        
+        /* ========== PROGRESS ========== */
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        
+        .progress-header h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+        }
+        
+        .progress-percent {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border: 1px solid var(--border);
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        .progress-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .days-progress {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin-top: 18px;
+        }
+        
+        .day-progress {
+            background: white;
+            padding: 12px 6px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .day-progress:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .day-progress.done {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .day-progress-label {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        
+        .day-progress-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* ========== CTA ========== */
+        .cta-content {
+            text-align: center;
+        }
+        
+        .cta-content h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .cta-content p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 12px 28px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== NAV BUTTONS ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        /* ========== MILESTONE BOX ========== */
+        .milestone-box {
+            background: linear-gradient(135deg, var(--milestone-bg), #FFF5EB);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px dashed var(--milestone);
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .milestone-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .milestone-content h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: #744210;
+            margin-bottom: 4px;
+        }
+        
+        .milestone-content p {
+            font-size: 13px;
+            color: #744210;
+            line-height: 1.5;
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(244,168,168,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 44px 0 32px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2.2rem; margin-bottom: 10px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .week-title { font-size: 1.7rem; }
+            .week-header { padding: 40px 0 36px; }
+            
+            .goals-grid,
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .days-grid { grid-template-columns: 1fr; }
+            
+            .days-progress {
+                gap: 4px;
+            }
+            
+            .day-progress {
+                padding: 8px 2px;
+            }
+            
+            .day-progress-label {
+                font-size: 10px;
+            }
+            
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .milestone-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">← Roadmap</a>
+            <div class="nav-progress">
+                <span id="navProgressText">Week 1/24</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" id="navProgressBar" style="width: 4%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-01.html" class="day-tab active">Overview</a>
+                <a href="week-01-day-1.html" class="day-tab">Day 1</a>
+                <a href="week-01-day-2.html" class="day-tab">Day 2</a>
+                <a href="week-01-day-3.html" class="day-tab">Day 3</a>
+                <a href="week-01-day-4.html" class="day-tab">Day 4</a>
+                <a href="week-01-day-5.html" class="day-tab">Day 5</a>
+                <a href="week-01-day-6.html" class="day-tab">Day 6</a>
+                <a href="week-01-day-7.html" class="day-tab">Day 7</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="week-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span>Phase 1: Reactivation</span>
+                <span>›</span>
+                <span>Week 1</span>
+            </div>
+            <h1 class="week-title">👋 First Impressions & Identity</h1>
+            <p class="week-subtitle">Master introducing yourself in casual and professional settings. Learn natural collocations and adapt your language for any situation.</p>
+            <div class="week-tags">
+                <span class="tag">🌱 Phase 1</span>
+                <span class="tag">⏱️ 7 days × 60 min</span>
+                <span class="tag">🏠 50% Life</span>
+                <span class="tag">💼 50% Business</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Overview -->
+        <section class="section section-overview" id="overview">
+            <h2 class="section-title"><span class="section-icon">🎯</span> This Week</h2>
+            <p class="section-desc">Learn to introduce yourself confidently in both casual and professional settings. Master 12 natural collocations, understand register differences, and create your elevator pitch.</p>
+            
+            <div class="goals-grid">
+                <div class="goal-card life">
+                    <h4>🏠 Life Goal</h4>
+                    <p>Introduce yourself naturally at social events, make small talk, and build rapport with new people.</p>
+                </div>
+                <div class="goal-card biz">
+                    <h4>💼 Business Goal</h4>
+                    <p>Deliver a polished 60-second elevator pitch for networking events and professional conferences.</p>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Collocations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎧</div>
+                    <div class="stat-value">2h</div>
+                    <div class="stat-label">Listening</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🗣️</div>
+                    <div class="stat-value">2h</div>
+                    <div class="stat-label">Speaking</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✍️</div>
+                    <div class="stat-value">1h</div>
+                    <div class="stat-label">Writing</div>
+                </div>
+            </div>
+            
+            <!-- Milestone Box -->
+            <div class="milestone-box">
+                <div class="milestone-icon">🏆</div>
+                <div class="milestone-content">
+                    <h4>End-of-Week Milestone</h4>
+                    <p>Record a 60-second self-introduction (both life & business versions) and compare with your Day 1 baseline. You should notice clearer pronunciation and more natural collocations.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7-Day Plan -->
+        <section class="section section-plan">
+            <h2 class="section-title"><span class="section-icon">📅</span> 7-Day Plan</h2>
+            <p class="section-desc">Each day focuses on a specific skill. Complete them in order for best results.</p>
+            
+            <div class="days-grid">
+                <a href="week-01-day-1.html" class="day-card" data-day="1">
+                    <div class="day-status">⬜</div>
+                    <div class="day-num">01</div>
+                    <div class="day-title">Life Vocabulary</div>
+                    <div class="day-focus">🏠 Casual Introductions</div>
+                    <ul class="day-topics">
+                        <li>6 life collocations</li>
+                        <li>Casual conversation</li>
+                        <li>US pronunciation</li>
+                        <li>Flashcards</li>
+                    </ul>
+                    <span class="day-time">⏱️ 60 min</span>
+                </a>
+                
+                <a href="week-01-day-2.html" class="day-card" data-day="2">
+                    <div class="day-status">⬜</div>
+                    <div class="day-num">02</div>
+                    <div class="day-title">Business Vocabulary</div>
+                    <div class="day-focus">💼 Professional Introductions</div>
+                    <ul class="day-topics">
+                        <li>6 business collocations</li>
+                        <li>Register comparison</li>
+                        <li>Transform exercises</li>
+                        <li>Flashcards</li>
+                    </ul>
+                    <span class="day-time">⏱️ 60 min</span>
+                </a>
+                
+                <a href="week-01-day-3.html" class="day-card" data-day="3">
+                    <div class="day-status">⬜</div>
+                    <div class="day-num">03</div>
+                    <div class="day-title">Functional Language</div>
+                    <div class="day-focus">🎯 4-Part Formula</div>
+                    <ul class="day-topics">
+                        <li>Introduction framework</li>
+                        <li>Example analysis</li>
+                        <li>Writing practice</li>
+                        <li>Self-assessment</li>
+                    </ul>
+                    <span class="day-time">⏱️ 60 min</span>
+                </a>
+                
+                <a href="week-01-day-4.html" class="day-card" data-day="4">
+                    <div class="day-status">⬜</div>
+                    <div class="day-num">04</div>
+                    <div class="day-title">Listening</div>
+                    <div class="day-focus">🎧 Intensive Practice</div>
+                    <ul class="day-topics">
+                        <li>2 conversations</li>
+                        <li>3-step method</li>
+                        <li>Shadowing</li>
+                        <li>Quiz</li>
+                    </ul>
+                    <span class="day-time">⏱️ 60 min</span>
+                </a>
+                
+                <a href="week-01-day-5.html" class="day-card" data-day="5">
+                    <div class="day-status">⬜</div>
+                    <div class="day-num">05</div>
+                    <div class="day-title">Speaking</div>
+                    <div class="day-focus">🗣️ Record & Improve</div>
+                    <ul class="day-topics">
+                        <li>Life recording</li>
+                        <li>Business recording</li>
+                        <li>Self-assess</li>
+                        <li>Iterate</li>
+                    </ul>
+                    <span class="day-time">⏱️ 60 min</span>
+                </a>
+                
+                <a href="week-01-day-6.html" class="day-card" data-day="6">
+                    <div class="day-status">⬜</div>
+                    <div class="day-num">06</div>
+                    <div class="day-title">Reading & Writing</div>
+                    <div class="day-focus">✍️ LinkedIn Profile</div>
+                    <ul class="day-topics">
+                        <li>Real examples</li>
+                        <li>Write LinkedIn</li>
+                        <li>Peer review</li>
+                        <li>Polish</li>
+                    </ul>
+                    <span class="day-time">⏱️ 60 min</span>
+                </a>
+                
+                <a href="week-01-day-7.html" class="day-card" data-day="7">
+                    <div class="day-status">⬜</div>
+                    <div class="day-num">07</div>
+                    <div class="day-title">Review & Reality</div>
+                    <div class="day-focus">🎯 Real Task</div>
+                    <ul class="day-topics">
+                        <li>Comprehensive review</li>
+                        <li>Reality task</li>
+                        <li>Self-assess</li>
+                        <li>Week 2 preview</li>
+                    </ul>
+                    <span class="day-time">⏱️ 60 min</span>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Progress -->
+        <section class="section section-progress">
+            <div class="progress-header">
+                <h3>📊 Your Progress</h3>
+                <div class="progress-percent" id="progressPercent">0%</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+            <p class="progress-text"><span id="completedDays">0</span> / 7 days completed this week</p>
+            
+            <div class="days-progress">
+                <a href="week-01-day-1.html" class="day-progress" data-day="1">
+                    <div class="day-progress-label">Day 1</div>
+                    <div class="day-progress-icon">⬜</div>
+                </a>
+                <a href="week-01-day-2.html" class="day-progress" data-day="2">
+                    <div class="day-progress-label">Day 2</div>
+                    <div class="day-progress-icon">⬜</div>
+                </a>
+                <a href="week-01-day-3.html" class="day-progress" data-day="3">
+                    <div class="day-progress-label">Day 3</div>
+                    <div class="day-progress-icon">⬜</div>
+                </a>
+                <a href="week-01-day-4.html" class="day-progress" data-day="4">
+                    <div class="day-progress-label">Day 4</div>
+                    <div class="day-progress-icon">⬜</div>
+                </a>
+                <a href="week-01-day-5.html" class="day-progress" data-day="5">
+                    <div class="day-progress-label">Day 5</div>
+                    <div class="day-progress-icon">⬜</div>
+                </a>
+                <a href="week-01-day-6.html" class="day-progress" data-day="6">
+                    <div class="day-progress-label">Day 6</div>
+                    <div class="day-progress-icon">⬜</div>
+                </a>
+                <a href="week-01-day-7.html" class="day-progress" data-day="7">
+                    <div class="day-progress-label">Day 7</div>
+                    <div class="day-progress-icon">⬜</div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- CTA -->
+        <section class="section section-cta">
+            <div class="cta-content">
+                <h3>🚀 Ready to Start?</h3>
+                <p>Begin with Day 1 and follow the path. Each day builds on the previous one.</p>
+                <a href="week-01-day-1.html" class="cta-btn">Start Day 1 →</a>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-btn">
+                <div class="nav-label">← Back to</div>
+                <div class="nav-title">Roadmap Home</div>
+            </a>
+            <a href="week-02.html" class="nav-btn">
+                <div class="nav-label">Next →</div>
+                <div class="nav-title">Week 2: Daily Rhythm</div>
+            </a>
+        </div>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#F4A8A8"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#F4A8A8"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#F4A8A8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#F4A8A8" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#F4A8A8"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <rect x="65" y="150" width="28" height="20" fill="#B8C5E8" rx="3"/>
+            <line x1="79" y1="150" x2="79" y2="170" stroke="#2D3748" stroke-width="1.5"/>
+        </svg>
+        <div class="mascot-speech">Welcome to Week 1! 👋</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 1 of 24 · First Impressions & Identity</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== PROGRESS TRACKING FOR WEEK 1 ==========
+        function updateProgress() {
+            const completedDays = JSON.parse(localStorage.getItem('week1Days') || '[]');
+            const count = completedDays.length;
+            const percent = (count / 7) * 100;
+            
+            // Update progress bar
+            document.getElementById('progressFill').style.width = percent + '%';
+            document.getElementById('progressPercent').textContent = Math.round(percent) + '%';
+            document.getElementById('completedDays').textContent = count;
+            
+            // Update day progress indicators
+            document.querySelectorAll('.day-progress').forEach(el => {
+                const day = parseInt(el.getAttribute('data-day'));
+                const icon = el.querySelector('.day-progress-icon');
+                if (completedDays.includes(day)) {
+                    el.classList.add('done');
+                    if (icon) icon.textContent = '✅';
+                } else {
+                    el.classList.remove('done');
+                    if (icon) icon.textContent = '⬜';
+                }
+            });
+            
+            // Update day cards
+            document.querySelectorAll('.day-card').forEach(card => {
+                const day = parseInt(card.getAttribute('data-day'));
+                const status = card.querySelector('.day-status');
+                if (completedDays.includes(day)) {
+                    card.classList.add('completed');
+                    if (status) status.textContent = '✅';
+                } else {
+                    card.classList.remove('completed');
+                    if (status) status.textContent = '⬜';
+                }
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', updateProgress);
+    </script>
+</body>
+</html>
