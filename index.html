@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Fluency Roadmap - B2 to C1 in 24 Weeks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           PROFESSIONAL FLUENCY ROADMAP - FAT FOX EDITION
+           ============================================ */
+        
+        :root {
+            /* Soft pastel palette */
+            --coral: #FF9A8B;
+            --coral-soft: #FFB5A7;
+            --coral-deep: #FF7E6B;
+            --lavender: #B8A9E8;
+            --lavender-soft: #D4C8F5;
+            --lavender-deep: #9B8AD9;
+            --mint: #88D8B0;
+            --mint-soft: #B5E8CC;
+            --mint-deep: #6BC295;
+            --peach: #FFE5B4;
+            --peach-soft: #FFF0D4;
+            --rose: #FFD3E0;
+            --sky: #B5D8F7;
+            
+            /* Neutrals */
+            --cream: #FFFBF5;
+            --cream-deep: #FFF5E8;
+            --ink: #2D2A32;
+            --ink-soft: #4A4550;
+            --ink-muted: #8A8590;
+            --ink-faint: #B8B3BE;
+            --line: #F0EBE3;
+            
+            /* Life & Biz */
+            --life: #6BC295;
+            --life-bg: #E8F5EE;
+            --biz: #7B9EE8;
+            --biz-bg: #E5EEFB;
+            --milestone: #E8A87C;
+            --milestone-bg: #FCEBD9;
+            
+            /* Effects */
+            --shadow-xs: 0 2px 8px rgba(45, 42, 50, 0.04);
+            --shadow-sm: 0 4px 16px rgba(45, 42, 50, 0.06);
+            --shadow-md: 0 8px 32px rgba(45, 42, 50, 0.08);
+            --shadow-lg: 0 16px 48px rgba(45, 42, 50, 0.10);
+            --shadow-xl: 0 24px 64px rgba(45, 42, 50, 0.12);
+            --shadow-glow: 0 8px 32px rgba(255, 154, 139, 0.25);
+            
+            /* Radius */
+            --r-sm: 12px;
+            --r-md: 20px;
+            --r-lg: 28px;
+            --r-xl: 40px;
+            --r-2xl: 56px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(255, 181, 167, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(184, 169, 232, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(136, 216, 176, 0.08) 0%, transparent 50%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+        }
+        
+        /* Serif for elegant headings */
+        .serif {
+            font-family: 'Fraunces', serif;
+            font-optical-sizing: auto;
+        }
+        
+        /* ============================================
+           ANIMATED BACKGROUND BLOBS
+           ============================================ */
+        .bg-blobs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: blobFloat 20s ease-in-out infinite;
+        }
+        
+        .blob-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--coral-soft);
+            top: -150px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+        
+        .blob-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--lavender-soft);
+            top: 30%;
+            right: -100px;
+            animation-delay: -7s;
+        }
+        
+        .blob-3 {
+            width: 450px;
+            height: 450px;
+            background: var(--mint-soft);
+            bottom: 10%;
+            left: 20%;
+            animation-delay: -14s;
+        }
+        
+        @keyframes blobFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.95); }
+        }
+        
+        /* ============================================
+           MASCOT CONTAINER - ENHANCED
+           ============================================ */
+        .mascot-container {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 1000;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .mascot-container:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+        
+        .mascot-wrapper {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0 12px 24px rgba(255, 126, 107, 0.35));
+        }
+        
+        .mascot-fox {
+            width: 100%;
+            height: 100%;
+            animation: mascotBob 3s ease-in-out infinite;
+            transition: opacity 0.5s ease;
+        }
+        
+        .mascot-fox.fade-out {
+            opacity: 0;
+        }
+        
+        @keyframes mascotBob {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+        
+        /* Floating hearts/stars around mascot */
+        .mascot-effect {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0;
+            animation: floatUp 2s ease-out infinite;
+        }
+        
+        .effect-1 {
+            top: -10px;
+            right: 10px;
+            font-size: 1.2rem;
+            animation-delay: 0s;
+        }
+        
+        .effect-2 {
+            top: 20px;
+            right: -15px;
+            font-size: 1rem;
+            animation-delay: 0.5s;
+        }
+        
+        .effect-3 {
+            top: -5px;
+            right: -10px;
+            font-size: 0.9rem;
+            animation-delay: 1s;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(0.5);
+            }
+            50% {
+                opacity: 0.8;
+                transform: translateY(-15px) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-30px) scale(0.8);
+            }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: calc(100% + 12px);
+            right: 0;
+            background: white;
+            padding: 10px 18px;
+            border-radius: 20px 20px 4px 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--ink);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(10px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+            max-width: 200px;
+        }
+        
+        .mascot-container:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+        /* ============================================
+           HERO - MESH GRADIENT + FLOATING SHAPES
+           ============================================ */
+        .hero {
+            position: relative;
+            padding: 100px 0 140px;
+            text-align: center;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 181, 167, 0.4) 0%, 
+                    rgba(212, 200, 245, 0.35) 50%, 
+                    rgba(181, 232, 204, 0.4) 100%);
+            border-radius: 0 0 var(--r-2xl) var(--r-2xl);
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 40%);
+        }
+        
+        /* Floating decorative shapes */
+        .hero-shape {
+            position: absolute;
+            opacity: 0.6;
+            animation: shapeFloat 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        .shape-1 {
+            top: 15%;
+            left: 8%;
+            width: 60px;
+            height: 60px;
+            background: var(--coral);
+            border-radius: 50%;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            top: 25%;
+            right: 10%;
+            width: 40px;
+            height: 40px;
+            background: var(--lavender);
+            border-radius: 12px;
+            transform: rotate(45deg);
+            animation-delay: -2s;
+        }
+        
+        .shape-3 {
+            bottom: 25%;
+            left: 15%;
+            width: 50px;
+            height: 50px;
+            background: var(--mint);
+            border-radius: 50% 50% 50% 0;
+            animation-delay: -4s;
+        }
+        
+        .shape-4 {
+            bottom: 20%;
+            right: 12%;
+            width: 45px;
+            height: 45px;
+            background: var(--peach);
+            border-radius: 50%;
+            animation-delay: -6s;
+        }
+        
+        .shape-5 {
+            top: 50%;
+            left: 5%;
+            width: 30px;
+            height: 30px;
+            background: var(--rose);
+            border-radius: 8px;
+            animation-delay: -3s;
+        }
+        
+        @keyframes shapeFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: var(--ink);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: var(--shadow-sm);
+            animation: fadeUp 0.8s ease-out;
+        }
+        
+        .hero-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 600;
+            line-height: 1.05;
+            margin-bottom: 24px;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+            animation: fadeUp 0.8s ease-out 0.1s backwards;
+        }
+        
+        .hero-title .italic {
+            font-style: italic;
+            font-weight: 400;
+            background: linear-gradient(135deg, var(--coral-deep), var(--lavender-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--ink-soft);
+            margin-bottom: 48px;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeUp 0.8s ease-out 0.2s backwards;
+        }
+        
+        .hero-subtitle strong {
+            font-weight: 600;
+            color: var(--ink);
+            padding: 2px 12px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeUp 0.8s ease-out 0.3s backwards;
+        }
+        
+        .stat-pill {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: var(--ink);
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.3s;
+        }
+        
+        .stat-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .stat-emoji {
+            font-size: 1.1rem;
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ============================================
+           PROGRESS SECTION
+           ============================================ */
+        .progress-section {
+            padding: 40px 0 80px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .progress-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: var(--r-xl);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .progress-header h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--ink);
+        }
+        
+        .progress-percent {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--coral-deep), var(--lavender-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-variation-settings: "opsz" 144;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: var(--line);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--coral), var(--lavender), var(--mint));
+            border-radius: 20px;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .progress-text {
+            color: var(--ink-muted);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+        }
+        
+        .phase-progress {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        
+        .phase-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            padding: 16px 8px;
+            border-radius: var(--r-md);
+            background: var(--cream);
+            transition: all 0.3s;
+        }
+        
+        .phase-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .phase-item span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--ink);
+        }
+        
+        .phase-item small {
+            color: var(--ink-muted);
+            font-weight: 400;
+            font-size: 0.8rem;
+        }
+        
+        .phase-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            margin-bottom: 4px;
+            position: relative;
+        }
+        
+        .phase-dot::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: inherit;
+            opacity: 0.3;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.3); opacity: 0; }
+        }
+        
+        .phase-dot.phase-1 { background: var(--mint); }
+        .phase-dot.phase-2 { background: var(--biz); }
+        .phase-dot.phase-3 { background: var(--lavender); }
+        .phase-dot.phase-4 { background: var(--coral); }
+        
+        /* ============================================
+           SECTION TITLES
+           ============================================ */
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+            font-variation-settings: "opsz" 144;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--ink-muted);
+            font-size: 1.05rem;
+            margin-bottom: 56px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* ============================================
+           ROADMAP
+           ============================================ */
+        .roadmap-section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .phase-block {
+            margin-bottom: 72px;
+            scroll-margin-top: 80px;
+        }
+        
+        .phase-block:last-child {
+            margin-bottom: 0;
+        }
+        
+        .phase-header-card {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 32px 36px;
+            border-radius: var(--r-xl);
+            margin-bottom: 28px;
+            color: white;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phase-header-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .phase-1-bg { background: linear-gradient(135deg, #88D8B0, #6BC295); }
+        .phase-2-bg { background: linear-gradient(135deg, #7B9EE8, #5A82D4); }
+        .phase-3-bg { background: linear-gradient(135deg, #B8A9E8, #9B8AD9); }
+        .phase-4-bg { background: linear-gradient(135deg, #FF9A8B, #FF7E6B); }
+        
+        .phase-icon {
+            font-size: 3.5rem;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .phase-info {
+            flex: 1;
+            min-width: 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .phase-label {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        
+        .phase-info h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            margin: 6px 0 10px;
+            line-height: 1.1;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        
+        .phase-info p {
+            opacity: 0.95;
+            font-size: 1rem;
+        }
+        
+        .weeks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .week-card {
+            background: white;
+            border-radius: var(--r-lg);
+            padding: 24px;
+            text-decoration: none;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: var(--shadow-xs);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--line);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .week-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--coral), var(--lavender));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .week-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        
+        .week-card:hover::before {
+            opacity: 1;
+        }
+        
+        .week-card-final {
+            background: linear-gradient(135deg, var(--peach-soft), var(--rose));
+            border: 2px solid var(--milestone);
+        }
+        
+        .week-card-final:hover {
+            border-color: var(--coral-deep);
+        }
+        
+        .week-number {
+            font-family: 'Fraunces', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--coral), var(--lavender-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            min-width: 60px;
+            flex-shrink: 0;
+            font-variation-settings: "opsz" 144;
+            line-height: 1;
+        }
+        
+        .week-card-final .week-number {
+            background: linear-gradient(135deg, var(--milestone), var(--coral-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .week-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .week-emoji {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .week-card:hover .week-emoji {
+            transform: scale(1.2) rotate(-10deg);
+        }
+        
+        .week-content h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.3;
+            color: var(--ink);
+        }
+        
+        .week-theme {
+            color: var(--ink-muted);
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+        
+        .week-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .tag {
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .tag.life {
+            background: var(--life-bg);
+            color: var(--life);
+        }
+        
+        .tag.biz {
+            background: var(--biz-bg);
+            color: var(--biz);
+        }
+        
+        .tag.milestone {
+            background: var(--milestone-bg);
+            color: var(--milestone);
+        }
+        
+        .tag.challenge {
+            background: #FDE2E4;
+            color: #E63946;
+        }
+        
+        .week-arrow {
+            font-size: 1.3rem;
+            color: var(--ink-faint);
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+        
+        .week-card:hover .week-arrow {
+            transform: translateX(6px);
+            color: var(--coral);
+        }
+        
+        /* ============================================
+           SCHEDULE
+           ============================================ */
+        .schedule-section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+        
+        .schedule-card {
+            background: white;
+            padding: 32px 24px;
+            border-radius: var(--r-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--line);
+        }
+        
+        .schedule-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--lavender), var(--mint));
+        }
+        
+        .schedule-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .schedule-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: inline-block;
+            transition: transform 0.4s;
+        }
+        
+        .schedule-card:hover .schedule-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+        
+        .schedule-time {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--coral), var(--lavender-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            font-variation-settings: "opsz" 144;
+        }
+        
+        .schedule-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--ink);
+            font-weight: 600;
+        }
+        
+        .schedule-card p {
+            color: var(--ink-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* ============================================
+           RHYTHM
+           ============================================ */
+        .rhythm-section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .rhythm-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 12px;
+            margin: 0 -24px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        
+        .rhythm-wrapper::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .rhythm-wrapper::-webkit-scrollbar-track {
+            background: var(--line);
+            border-radius: 10px;
+        }
+        
+        .rhythm-wrapper::-webkit-scrollbar-thumb {
+            background: linear-gradient(90deg, var(--coral), var(--lavender));
+            border-radius: 10px;
+        }
+        
+        .rhythm-grid {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(100px, 1fr));
+            gap: 14px;
+            min-width: 800px;
+        }
+        
+        .rhythm-day {
+            text-align: center;
+        }
+        
+        .day-label {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--ink);
+            font-size: 1rem;
+        }
+        
+        .day-bar {
+            height: 100px;
+            border-radius: var(--r-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-bar::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.25) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .day-bar:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .day-text {
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .day-bar.life-heavy { background: linear-gradient(135deg, #88D8B0, #6BC295); }
+        .day-bar.biz-heavy { background: linear-gradient(135deg, #7B9EE8, #5A82D4); }
+        .day-bar.balanced { background: linear-gradient(135deg, #B8A9E8, #9B8AD9); }
+        .day-bar.review { background: linear-gradient(135deg, #FFB88C, #E8A87C); }
+        .day-bar.reality { background: linear-gradient(135deg, #FF9A8B, #FF7E6B); }
+        
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .main-footer {
+            background: linear-gradient(135deg, var(--ink) 0%, #1a1820 100%);
+            color: white;
+            padding: 80px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--coral), var(--lavender), var(--mint), transparent);
+        }
+        
+        .footer-content {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-fox {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: mascotBob 3s ease-in-out infinite;
+        }
+        
+        .footer-title {
+            margin-bottom: 12px;
+        }
+        
+        .footer-title strong {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--coral-soft), var(--lavender-soft), var(--mint-soft));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        
+        .footer-copy {
+            opacity: 0.4;
+            font-size: 0.85rem;
+            margin-top: 24px;
+        }
+        
+        /* ============================================
+           SCROLL REVEAL
+           ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 992px) {
+            .weeks-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 70px 0 100px;
+            }
+            
+            .hero-shape { opacity: 0.4; }
+            .shape-1 { width: 40px; height: 40px; }
+            .shape-2 { width: 30px; height: 30px; }
+            .shape-3 { width: 35px; height: 35px; }
+            .shape-4 { width: 30px; height: 30px; }
+            .shape-5 { width: 25px; height: 25px; }
+            
+            .progress-card { padding: 28px 24px; }
+            
+            .phase-progress {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .phase-header-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 28px 24px;
+                gap: 16px;
+            }
+            
+            .phase-info h3 { font-size: 1.6rem; }
+            
+            .weeks-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .week-card { padding: 20px; }
+            
+            .week-number {
+                font-size: 2rem;
+                min-width: 50px;
+            }
+            
+            .schedule-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+            
+            .schedule-card { padding: 24px 16px; }
+            
+            .schedule-icon { font-size: 2.5rem; }
+            
+            .schedule-time { font-size: 1.5rem; }
+            
+            .mascot-container {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .mascot-wrapper {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 8px 16px;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .stat-pill {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .schedule-grid { grid-template-columns: 1fr; }
+            
+            .phase-info h3 { font-size: 1.4rem; }
+            
+            .week-content h4 { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Animated Background Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    
+    <!-- Floating Mascot Fox - ROTATING COLLECTION -->
+    <div class="mascot-container" id="mascot">
+        <div class="mascot-wrapper">
+            <!-- Fox SVG will be dynamically inserted here -->
+            <div id="fox-svg-container"></div>
+        </div>
+        <!-- Floating effects -->
+        <span class="mascot-effect effect-1">✨</span>
+        <span class="mascot-effect effect-2">💫</span>
+        <span class="mascot-effect effect-3">🌟</span>
+        <div class="mascot-speech" id="mascot-speech">Hi! I'm Felix 🦊</div>
+    </div>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        
+        <!-- Floating decorative shapes -->
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+        <div class="hero-shape shape-3"></div>
+        <div class="hero-shape shape-4"></div>
+        <div class="hero-shape shape-5"></div>
+        
+        <div class="container">
+            <div class="hero-badge">✨ 24-Week Journey to Fluency</div>
+            <h1 class="hero-title">
+                Professional<br>
+                <span class="italic">Fluency</span> Roadmap
+            </h1>
+            <p class="hero-subtitle">
+                From B2 to C1 — English for <strong>Life</strong> & <strong>Business</strong>
+            </p>
+            <div class="hero-stats">
+                <div class="stat-pill">
+                    <span class="stat-emoji">🏠</span>
+                    <span>50% Life</span>
+                </div>
+                <div class="stat-pill">
+                    <span class="stat-emoji">💼</span>
+                    <span>50% Business</span>
+                </div>
+                <div class="stat-pill">
+                    <span class="stat-emoji">⏱️</span>
+                    <span>60 min/day</span>
+                </div>
+                <div class="stat-pill">
+                    <span class="stat-emoji">🇺🇸</span>
+                    <span>US + SG Accent</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Progress Overview -->
+    <section class="progress-section">
+        <div class="container">
+            <div class="progress-card reveal">
+                <div class="progress-header">
+                    <h3>📊 Your Journey</h3>
+                    <span class="progress-percent" id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                <p class="progress-text"><span id="completedWeeks">0</span> / 24 weeks completed</p>
+                
+                <div class="phase-progress">
+                    <div class="phase-item">
+                        <div class="phase-dot phase-1"></div>
+                        <span>Phase 1</span>
+                        <small>Reactivation</small>
+                    </div>
+                    <div class="phase-item">
+                        <div class="phase-dot phase-2"></div>
+                        <span>Phase 2</span>
+                        <small>Core</small>
+                    </div>
+                    <div class="phase-item">
+                        <div class="phase-dot phase-3"></div>
+                        <span>Phase 3</span>
+                        <small>Specialization</small>
+                    </div>
+                    <div class="phase-item">
+                        <div class="phase-dot phase-4"></div>
+                        <span>Phase 4</span>
+                        <small>Mastery</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Roadmap Timeline -->
+    <section class="roadmap-section">
+        <div class="container">
+            <h2 class="section-title reveal">🗺️ The 24-Week Journey</h2>
+            <p class="section-subtitle reveal">Each week blends Life & Business English seamlessly</p>
+            
+            <!-- Phase 1 -->
+            <div class="phase-block reveal">
+                <div class="phase-header-card phase-1-bg">
+                    <div class="phase-icon">🌱</div>
+                    <div class="phase-info">
+                        <span class="phase-label">Phase 1 · Weeks 1-4</span>
+                        <h3>Reactivation</h3>
+                        <p>Wake up your English · Build the habit · B2+ foundation</p>
+                    </div>
+                </div>
+                <div class="weeks-grid">
+                    <a href="week-1.html" class="week-card">
+                        <div class="week-number">01</div>
+                        <div class="week-content">
+                            <div class="week-emoji">👋</div>
+                            <h4>First Impressions</h4>
+                            <p class="week-theme">Identity & Introduction</p>
+                            <div class="week-tags">
+                                <span class="tag life">🏠 Life</span>
+                                <span class="tag biz">💼 Biz</span>
+                            </div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-2.html" class="week-card">
+                        <div class="week-number">02</div>
+                        <div class="week-content">
+                            <div class="week-emoji">☀️</div>
+                            <h4>Daily Rhythm</h4>
+                            <p class="week-theme">Productivity & Habits</p>
+                            <div class="week-tags">
+                                <span class="tag life">🏠 Life</span>
+                                <span class="tag biz">💼 Biz</span>
+                            </div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-3.html" class="week-card">
+                        <div class="week-number">03</div>
+                        <div class="week-content">
+                            <div class="week-emoji">💬</div>
+                            <h4>Communication Channels</h4>
+                            <p class="week-theme">Email, Text, Phone, Zoom</p>
+                            <div class="week-tags">
+                                <span class="tag life">🏠 Life</span>
+                                <span class="tag biz">💼 Biz</span>
+                            </div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-4.html" class="week-card">
+                        <div class="week-number">04</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🤝</div>
+                            <h4>Socializing</h4>
+                            <p class="week-theme">Small Talk & Networking</p>
+                            <div class="week-tags">
+                                <span class="tag life">🏠 Life</span>
+                                <span class="tag biz">💼 Biz</span>
+                                <span class="tag milestone">🏆 Milestone</span>
+                            </div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Phase 2 -->
+            <div class="phase-block reveal">
+                <div class="phase-header-card phase-2-bg">
+                    <div class="phase-icon">🚀</div>
+                    <div class="phase-info">
+                        <span class="phase-label">Phase 2 · Weeks 5-12</span>
+                        <h3>Professional Core</h3>
+                        <p>Work & Live fluently · Master core situations</p>
+                    </div>
+                </div>
+                <div class="weeks-grid">
+                    <a href="week-5.html" class="week-card">
+                        <div class="week-number">05</div>
+                        <div class="week-content">
+                            <div class="week-emoji">📋</div>
+                            <h4>Meetings That Matter</h4>
+                            <p class="week-theme">From family to boardroom</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-6.html" class="week-card">
+                        <div class="week-number">06</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🎤</div>
+                            <h4>Storytelling</h4>
+                            <p class="week-theme">Presentations & Toasts</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-7.html" class="week-card">
+                        <div class="week-number">07</div>
+                        <div class="week-content">
+                            <div class="week-emoji">📊</div>
+                            <h4>Data Visualization</h4>
+                            <p class="week-theme">Charts, trends, insights</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-8.html" class="week-card">
+                        <div class="week-number">08</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🤝</div>
+                            <h4>Negotiation</h4>
+                            <p class="week-theme">Market to boardroom</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-9.html" class="week-card">
+                        <div class="week-number">09</div>
+                        <div class="week-content">
+                            <div class="week-emoji">✈️</div>
+                            <h4>Travel & Trips</h4>
+                            <p class="week-theme">Vacation & business travel</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-10.html" class="week-card">
+                        <div class="week-number">10</div>
+                        <div class="week-content">
+                            <div class="week-emoji">⚡</div>
+                            <h4>Conflict Resolution</h4>
+                            <p class="week-theme">Difficult conversations</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-11.html" class="week-card">
+                        <div class="week-number">11</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🧘</div>
+                            <h4>Health & Wellness</h4>
+                            <p class="week-theme">Body, mind, work-life</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-12.html" class="week-card">
+                        <div class="week-number">12</div>
+                        <div class="week-content">
+                            <div class="week-emoji">💻</div>
+                            <h4>Technology</h4>
+                            <p class="week-theme">Modern life & digital work</p>
+                            <div class="week-tags">
+                                <span class="tag life">🏠 Life</span>
+                                <span class="tag biz">💼 Biz</span>
+                                <span class="tag milestone">🏆 Milestone</span>
+                            </div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Phase 3 -->
+            <div class="phase-block reveal">
+                <div class="phase-header-card phase-3-bg">
+                    <div class="phase-icon">🎯</div>
+                    <div class="phase-info">
+                        <span class="phase-label">Phase 3 · Weeks 13-20</span>
+                        <h3>Specialization</h3>
+                        <p>Finance · Real Estate · Leadership · Culture · Media</p>
+                    </div>
+                </div>
+                <div class="weeks-grid">
+                    <a href="week-13.html" class="week-card">
+                        <div class="week-number">13</div>
+                        <div class="week-content">
+                            <div class="week-emoji">💰</div>
+                            <h4>Finance</h4>
+                            <p class="week-theme">Personal & corporate</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-14.html" class="week-card">
+                        <div class="week-number">14</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🌍</div>
+                            <h4>Culture</h4>
+                            <p class="week-theme">Global mindset</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-15.html" class="week-card">
+                        <div class="week-number">15</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🏢</div>
+                            <h4>Real Estate</h4>
+                            <p class="week-theme">Home & investment</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-16.html" class="week-card">
+                        <div class="week-number">16</div>
+                        <div class="week-content">
+                            <div class="week-emoji">📣</div>
+                            <h4>Marketing</h4>
+                            <p class="week-theme">Persuasion & branding</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-17.html" class="week-card">
+                        <div class="week-number">17</div>
+                        <div class="week-content">
+                            <div class="week-emoji">👑</div>
+                            <h4>Leadership</h4>
+                            <p class="week-theme">Influence & vision</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-18.html" class="week-card">
+                        <div class="week-number">18</div>
+                        <div class="week-content">
+                            <div class="week-emoji">⚖️</div>
+                            <h4>Law & Ethics</h4>
+                            <p class="week-theme">Rights & contracts</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-19.html" class="week-card">
+                        <div class="week-number">19</div>
+                        <div class="week-content">
+                            <div class="week-emoji">📰</div>
+                            <h4>Media & News</h4>
+                            <p class="week-theme">Current affairs</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-20.html" class="week-card">
+                        <div class="week-number">20</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🔮</div>
+                            <h4>Future & Dreams</h4>
+                            <p class="week-theme">Innovation & vision</p>
+                            <div class="week-tags">
+                                <span class="tag life">🏠 Life</span>
+                                <span class="tag biz">💼 Biz</span>
+                                <span class="tag milestone">🏆 Milestone</span>
+                            </div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Phase 4 -->
+            <div class="phase-block reveal">
+                <div class="phase-header-card phase-4-bg">
+                    <div class="phase-icon">👑</div>
+                    <div class="phase-info">
+                        <span class="phase-label">Phase 4 · Weeks 21-24</span>
+                        <h3>Mastery</h3>
+                        <p>C1 Integration · Simulation · Certification</p>
+                    </div>
+                </div>
+                <div class="weeks-grid">
+                    <a href="week-21.html" class="week-card">
+                        <div class="week-number">21</div>
+                        <div class="week-content">
+                            <div class="week-emoji">📚</div>
+                            <h4>Sophisticated Reading</h4>
+                            <p class="week-theme">HBR, Economist, academic</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-22.html" class="week-card">
+                        <div class="week-number">22</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🎭</div>
+                            <h4>Sophisticated Speaking</h4>
+                            <p class="week-theme">Debate, humor, rhetoric</p>
+                            <div class="week-tags"><span class="tag life">🏠 Life</span><span class="tag biz">💼 Biz</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-23.html" class="week-card">
+                        <div class="week-number">23</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🎬</div>
+                            <h4>Full Simulation</h4>
+                            <p class="week-theme">Real-world scenarios</p>
+                            <div class="week-tags"><span class="tag challenge">⚡ Challenge Week</span></div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                    <a href="week-24.html" class="week-card week-card-final">
+                        <div class="week-number">24</div>
+                        <div class="week-content">
+                            <div class="week-emoji">🏆</div>
+                            <h4>Graduation</h4>
+                            <p class="week-theme">C1 Certification & Beyond</p>
+                            <div class="week-tags">
+                                <span class="tag milestone">🎓 Final Milestone</span>
+                            </div>
+                        </div>
+                        <div class="week-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Daily Schedule -->
+    <section class="schedule-section">
+        <div class="container">
+            <h2 class="section-title reveal">⏰ Your Daily 60 Minutes</h2>
+            <p class="section-subtitle reveal">A balanced routine to build lasting fluency</p>
+            <div class="schedule-grid">
+                <div class="schedule-card reveal">
+                    <div class="schedule-icon">📚</div>
+                    <div class="schedule-time">15 min</div>
+                    <h4>Vocabulary & Phrases</h4>
+                    <p>Collocations, functional language, spaced repetition</p>
+                </div>
+                <div class="schedule-card reveal">
+                    <div class="schedule-icon">🎧</div>
+                    <div class="schedule-time">15 min</div>
+                    <h4>Listening Input</h4>
+                    <p>Podcasts, meetings, real conversations</p>
+                </div>
+                <div class="schedule-card reveal">
+                    <div class="schedule-icon">🗣️</div>
+                    <div class="schedule-time">15 min</div>
+                    <h4>Speaking Output</h4>
+                    <p>Shadowing, recording, role-play</p>
+                </div>
+                <div class="schedule-card reveal">
+                    <div class="schedule-icon">✍️</div>
+                    <div class="schedule-time">15 min</div>
+                    <h4>Reading/Writing</h4>
+                    <p>Articles, emails, essays, reflection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Weekly Rhythm -->
+    <section class="rhythm-section">
+        <div class="container">
+            <h2 class="section-title reveal">🎼 Weekly Rhythm</h2>
+            <p class="section-subtitle reveal">Balance between Life & Business to avoid burnout</p>
+            <div class="rhythm-wrapper reveal">
+                <div class="rhythm-grid">
+                    <div class="rhythm-day">
+                        <div class="day-label">Mon</div>
+                        <div class="day-bar life-heavy"><span class="day-text">Life focus</span></div>
+                    </div>
+                    <div class="rhythm-day">
+                        <div class="day-label">Tue</div>
+                        <div class="day-bar balanced"><span class="day-text">Balanced</span></div>
+                    </div>
+                    <div class="rhythm-day">
+                        <div class="day-label">Wed</div>
+                        <div class="day-bar biz-heavy"><span class="day-text">Biz focus</span></div>
+                    </div>
+                    <div class="rhythm-day">
+                        <div class="day-label">Thu</div>
+                        <div class="day-bar balanced"><span class="day-text">Balanced</span></div>
+                    </div>
+                    <div class="rhythm-day">
+                        <div class="day-label">Fri</div>
+                        <div class="day-bar life-heavy"><span class="day-text">Life focus</span></div>
+                    </div>
+                    <div class="rhythm-day">
+                        <div class="day-label">Sat</div>
+                        <div class="day-bar review"><span class="day-text">Review</span></div>
+                    </div>
+                    <div class="rhythm-day">
+                        <div class="day-label">Sun</div>
+                        <div class="day-bar reality"><span class="day-text">Reality Task</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-fox">🦊</div>
+                <p class="footer-title"><strong>Professional Fluency Roadmap</strong></p>
+                <p class="footer-tagline">English for Life & Business · 24 weeks · B2 → C1</p>
+                <p class="footer-copy">© 2026 · Built with passion for real-world fluency</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // ============================================
+        // FAT FOX COLLECTION
+        // ============================================
+        const foxCollection = [
+            // Fox 1: Waving Hello
+            `<svg class="mascot-fox" viewBox="0 0 200 200">
+                <ellipse cx="100" cy="140" rx="65" ry="55" fill="#FF9A8B"/>
+                <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+                <circle cx="100" cy="85" r="50" fill="#FF9A8B"/>
+                <ellipse cx="70" cy="50" rx="18" ry="28" fill="#FF9A8B" transform="rotate(-20 70 50)"/>
+                <ellipse cx="130" cy="50" rx="18" ry="28" fill="#FF9A8B" transform="rotate(20 130 50)"/>
+                <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+                <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+                <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+                <circle cx="82" cy="82" r="8" fill="#2D2A32"/>
+                <circle cx="118" cy="82" r="8" fill="#2D2A32"/>
+                <circle cx="84" cy="80" r="3" fill="#FFF"/>
+                <circle cx="120" cy="80" r="3" fill="#FFF"/>
+                <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+                <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+                <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D2A32"/>
+                <path d="M 88 108 Q 100 116 112 108" stroke="#2D2A32" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#FF9A8B"/>
+                <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+                <rect x="65" y="150" width="28" height="20" fill="#B8A9E8" rx="3"/>
+                <line x1="79" y1="150" x2="79" y2="170" stroke="#2D2A32" stroke-width="1.5"/>
+            </svg>`,
+            
+            // Fox 2: Coffee Lover
+            `<svg class="mascot-fox" viewBox="0 0 200 200">
+                <ellipse cx="100" cy="140" rx="65" ry="55" fill="#FF9A8B"/>
+                <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+                <circle cx="100" cy="85" r="50" fill="#FF9A8B"/>
+                <ellipse cx="70" cy="50" rx="18" ry="28" fill="#FF9A8B" transform="rotate(-20 70 50)"/>
+                <ellipse cx="130" cy="50" rx="18" ry="28" fill="#FF9A8B" transform="rotate(20 130 50)"/>
+                <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+                <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+                <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+                <path d="M 74 82 Q 82 78 90 82" stroke="#2D2A32" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M 110 82 Q 118 78 126 82" stroke="#2D2A32" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+                <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+                <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D2A32"/>
+                <path d="M 92 108 Q 100 112 108 108" stroke="#2D2A32" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#FF9A8B"/>
+                <rect x="140" y="125" width="25" height="30" fill="#FFF" rx="3"/>
+                <rect x="140" y="125" width="25" height="8" fill="#8B6F4E" rx="2"/>
+                <text x="155" y="75" font-family="Arial" font-size="14" fill="#B8A9E8" font-weight="bold">Zzz</text>
+            </svg>`,
+            
+            // Fox 3: Tech Fox
+            `<svg class="mascot-fox" viewBox="0 0 200 200">
+                <ellipse cx="100" cy="140" rx="65" ry="55" fill="#FF9A8B"/>
+                <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+                <circle cx="100" cy="85" r="50" fill="#FF9A8B"/>
+                <ellipse cx="70" cy="50" rx="18" ry="28" fill="#FF9A8B" transform="rotate(-20 70 50)"/>
+                <ellipse cx="130" cy="50" rx="18" ry="28" fill="#FF9A8B" transform="rotate(20 130 50)"/>
+                <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+                <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+                <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+                <circle cx="82" cy="82" r="10" stroke="#2D2A32" stroke-width="2.5" fill="none"/>
+                <circle cx="118" cy="82" r="10" stroke="#2D2A32" stroke-width="2.5" fill="none"/>
+                <line x1="92" y1="82" x2="108" y2="82" stroke="#2D2A32" stroke-width="2.5"/>
+                <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+                <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+                <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D2A32"/>
+                <path d="M 88 108 Q 100 116 112 108" stroke="#2D2A32" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#FF9A8B"/>
+                <rect x="60" y="145" width="50" height="35" fill="#2D2A32" rx="3"/>
+                <rect x="63" y="148" width="44" height="28" fill="#B8A9E8" rx="1"/>
+            </svg>`,
+            
+            // Fox 4: Party Fox
+            `<svg class="mascot-fox" viewBox="0 0 200 200">
+                <ellipse cx="100" cy="140" rx="65" ry="55" fill="#FF9A8B"/>
+                <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+                <circle cx="100" cy="85" r="50" fill="#FF9A8B"/>
+                <path d="M 75 55 L 100 15 L 125 55 Z" fill="#FFD3E0"/>
+                <circle cx="100" cy="15" r="6" fill="#FF7E6B"/>
+                <ellipse cx="70" cy="50" rx="18" ry="28" fill="#FF9A8B" transform="rotate(-20 70 50)"/>
+                <ellipse cx="130" cy="50" rx="18" ry="28" fill="#FF9A8B" transform="rotate(20 130 50)"/>
+                <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+                <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+                <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+                <circle cx="82" cy="82" r="8" fill="#2D2A32"/>
+                <circle cx="118" cy="82" r="8" fill="#2D2A32"/>
+                <circle cx="84" cy="80" r="3" fill="#FFF"/>
+                <circle cx="120" cy="80" r="3" fill="#FFF"/>
+                <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+                <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+                <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D2A32"/>
+                <path d="M 85 105 Q 100 120 115 105" stroke="#2D2A32" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#FF9A8B"/>
+                <ellipse cx="150" cy="75" rx="12" ry="15" fill="#88D8B0"/>
+            </svg>`
+        ];
+        
+        const foxMessages = [
+            "Hi! I'm Felix 🦊",
+            "Ready to learn? ✨",
+            "Let's go! 💪",
+            "You got this! 🌟",
+            "50/50 Life & Biz ⚖️",
+            "C1 is coming! 🚀",
+            "Stay curious! 📚",
+            "Practice daily! 💫"
+        ];
+        
+        // ============================================
+        // FOX ROTATION SYSTEM
+        // ============================================
+        let currentFoxIndex = 0;
+        let currentMessageIndex = 0;
+        
+        function rotateFox() {
+            const container = document.getElementById('fox-svg-container');
+            const fox = document.querySelector('.mascot-fox');
+            
+            if (fox) {
+                fox.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    currentFoxIndex = (currentFoxIndex + 1) % foxCollection.length;
+                    container.innerHTML = foxCollection[currentFoxIndex];
+                    
+                    const newFox = document.querySelector('.mascot-fox');
+                    if (newFox) {
+                        newFox.classList.remove('fade-out');
+                    }
+                }, 500);
+            }
+        }
+        
+        function rotateMessage() {
+            const speech = document.getElementById('mascot-speech');
+            if (!speech) return;
+            
+            currentMessageIndex = (currentMessageIndex + 1) % foxMessages.length;
+            speech.style.opacity = '0';
+            
+            setTimeout(() => {
+                speech.textContent = foxMessages[currentMessageIndex];
+                speech.style.opacity = '';
+            }, 300);
+        }
+        
+        // ============================================
+        // SCROLL REVEAL
+        // ============================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        // ============================================
+        // PROGRESS
+        // ============================================
+        function updateProgress() {
+            const completed = parseInt(localStorage.getItem('completedWeeks') || '0');
+            const percentage = (completed / 24) * 100;
+            
+            const progressFill = document.getElementById('progressFill');
+            const progressPercent = document.getElementById('progressPercent');
+            const completedWeeks = document.getElementById('completedWeeks');
+            
+            if (progressFill) progressFill.style.width = percentage + '%';
+            if (progressPercent) progressPercent.textContent = Math.round(percentage) + '%';
+            if (completedWeeks) completedWeeks.textContent = completed;
+        }
+        
+        // ============================================
+        // INIT
+        // ============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set initial fox
+            document.getElementById('fox-svg-container').innerHTML = foxCollection[0];
+            
+            updateProgress();
+            
+            // Rotate fox every 8 seconds
+            setInterval(rotateFox, 8000);
+            
+            // Rotate message every 5 seconds
+            setInterval(rotateMessage, 5000);
+            
+            // Click to rotate immediately
+            document.getElementById('mascot').addEventListener('click', () => {
+                rotateFox();
+                rotateMessage();
+            });
+        });
+    </script>
+</body>
+</html>
