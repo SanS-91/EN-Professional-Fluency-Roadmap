@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Day 14: Review & Milestone | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #F6AD55;
+            --primary-dark: #DD6B20;
+            --primary-light: #FBD38D;
+            --primary-soft: #FFFAF0;
+            --secondary: #ED8936;
+            --secondary-dark: #C05621;
+            --secondary-soft: #FFFAF0;
+            --accent: #48BB78;
+            --accent-soft: #F0FFF4;
+            --warm: #ED8936;
+            --warm-soft: #FFFAF0;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            --gold: #F6AD55;
+            --gold-dark: #DD6B20;
+            --gold-soft: #FFFAF0;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #FEEBC8 40%, var(--secondary-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(246,173,85,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(237,137,54,0.2) 0%, transparent 40%);
+        }
+        
+        .day-header::after {
+            content: '🏆';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        .meta-tag.milestone {
+            background: var(--gold);
+            color: white;
+            border-color: var(--gold);
+            font-weight: 700;
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FEEBC8; }
+        .section-gold { background: linear-gradient(135deg, #FFFFFF 0%, var(--gold-soft) 100%); border-color: #FEEBC8; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--biz-bg) 100%); border-color: #BEE3F8; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E9D8FD; }
+        .section-celebration { 
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #FEEBC8 50%, var(--secondary-soft) 100%); 
+            border: 2px solid var(--gold);
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--gold-soft), #FEEBC8);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--gold);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--gold-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .problem-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .problem-box li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PATTERNS REVIEW ========== */
+        .patterns-day {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        
+        .patterns-day-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .patterns-day-icon {
+            font-size: 2rem;
+        }
+        
+        .patterns-day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .patterns-day-subtitle {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        
+        .pattern-detail {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .pattern-detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .pattern-detail-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .pattern-detail-number {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gold-dark);
+            background: var(--gold-soft);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        
+        .pattern-detail-example {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 8px;
+            padding-left: 12px;
+            border-left: 2px solid var(--border);
+        }
+        
+        .pattern-detail-usage {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        
+        .pattern-detail-usage strong {
+            color: var(--text-primary);
+        }
+        
+        /* ========== INTEGRATED SCENARIO ========== */
+        .scenario-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        
+        .scenario-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .scenario-icon {
+            font-size: 2rem;
+        }
+        
+        .scenario-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .scenario-context {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            border-left: 3px solid var(--gold);
+            line-height: 1.6;
+        }
+        
+        .scenario-requirement {
+            background: var(--gold-soft);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--gold-dark);
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        
+        .scenario-transcript {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .scenario-transcript strong {
+            color: var(--gold-dark);
+            font-weight: 600;
+        }
+        
+        .scenario-analysis {
+            background: var(--life-bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.6;
+        }
+        
+        .scenario-analysis h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        .scenario-analysis ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .scenario-analysis li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .scenario-analysis li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        .audio-btn {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 16px;
+        }
+        
+        .audio-btn:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+        }
+        
+        .audio-btn.playing {
+            background: var(--secondary);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* ========== SELF-ASSESSMENT ========== */
+        .assessment-section {
+            margin-bottom: 24px;
+        }
+        
+        .assessment-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .checklist {
+            list-style: none;
+        }
+        
+        .checklist li {
+            padding: 12px 0;
+            padding-left: 36px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+        
+        .checklist li:hover {
+            color: var(--text-primary);
+            background: var(--bg);
+        }
+        
+        .checklist li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            background: white;
+            transition: all 0.2s;
+        }
+        
+        .checklist li.checked::before {
+            content: '✓';
+            background: var(--gold);
+            border-color: var(--gold);
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
+        .checklist li.checked {
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+        
+        .assessment-score {
+            background: var(--gold-soft);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 20px;
+            text-align: center;
+            border: 2px solid var(--gold);
+        }
+        
+        .assessment-score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin-bottom: 4px;
+        }
+        
+        .assessment-score-label {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== REFLECTION ========== */
+        .reflection-question {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        
+        .reflection-question label {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            font-family: 'Fraunces', serif;
+        }
+        
+        .reflection-question .guiding-question {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 2px solid var(--border);
+        }
+        
+        .reflection-question textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 80px;
+            line-height: 1.6;
+        }
+        
+        .reflection-question textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        /* ========== CELEBRATION ========== */
+        .celebration-card {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #FEEBC8 50%, var(--secondary-soft) 100%);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--gold);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .celebration-trophy {
+            font-size: 5rem;
+            margin-bottom: 16px;
+            animation: trophyBounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes trophyBounce {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        .celebration-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin-bottom: 12px;
+        }
+        
+        .celebration-message {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        
+        .celebration-achievements {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        
+        .celebration-achievements h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        
+        .celebration-achievements ul {
+            list-style: none;
+        }
+        
+        .celebration-achievements li {
+            padding: 8px 0;
+            padding-left: 32px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .celebration-achievements li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        
+        .celebration-activities {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        
+        .celebration-activities h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        
+        .celebration-activities ul {
+            list-style: none;
+        }
+        
+        .celebration-activities li {
+            padding: 8px 0;
+            padding-left: 32px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .celebration-activities li::before {
+            content: '🎉';
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        
+        /* ========== WEEK 3 PREVIEW ========== */
+        .preview-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        
+        .preview-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .preview-icon {
+            font-size: 2rem;
+        }
+        
+        .preview-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .preview-days {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .preview-day {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--gold);
+        }
+        
+        .preview-day-num {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .preview-day-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .preview-day-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        .preview-day-patterns {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding-top: 8px;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .preview-day-patterns strong {
+            color: var(--text-primary);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--gold);
+            background: var(--gold-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--gold);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 28px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(246,173,85,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== CELEBRATION ANIMATION ========== */
+        .celebration-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
+        }
+        
+        .celebration-overlay.show {
+            display: flex;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .celebration-modal {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #FEEBC8 50%, var(--secondary-soft) 100%);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 3px solid var(--gold);
+            max-width: 500px;
+            text-align: center;
+            animation: scaleIn 0.5s;
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .celebration-modal-trophy {
+            font-size: 6rem;
+            margin-bottom: 20px;
+            animation: trophyBounce 1.5s ease-in-out infinite;
+        }
+        
+        .celebration-modal-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin-bottom: 16px;
+        }
+        
+        .celebration-modal-message {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .celebration-modal-btn {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .celebration-modal-btn:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            .day-header::after { font-size: 2.5rem; top: 20px; right: 20px; }
+            
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .preview-days { grid-template-columns: 1fr; }
+            
+            .celebration-modal { padding: 24px; margin: 20px; }
+            .celebration-modal-trophy { font-size: 4rem; }
+            .celebration-modal-title { font-size: 1.5rem; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-02.html" class="nav-back">← Week 2 Hub</a>
+            <div class="nav-progress">
+                <span>Day 14 / 14</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-02.html" class="day-tab">Overview</a>
+                <a href="week-02-day-8.html" class="day-tab">Day 8</a>
+                <a href="week-02-day-9.html" class="day-tab">Day 9</a>
+                <a href="week-02-day-10.html" class="day-tab">Day 10</a>
+                <a href="week-02-day-11.html" class="day-tab">Day 11</a>
+                <a href="week-02-day-12.html" class="day-tab">Day 12</a>
+                <a href="week-02-day-13.html" class="day-tab">Day 13</a>
+                <a href="week-02-day-14.html" class="day-tab active">Day 14 🏆</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-02.html">Week 2</a>
+                <span>›</span>
+                <span>Day 14</span>
+            </div>
+            <h1 class="day-title">🏆 Review & Milestone</h1>
+            <p class="day-subtitle">Review is not repetition. Review is <strong>integration</strong>. It's where separate skills become one fluent voice. Today you'll review all patterns from Week 2, practice integrated conversations, and celebrate your milestone achievement!</p>
+            <div class="day-meta">
+                <span class="meta-tag">🏆 Review & Milestone</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 30 patterns review</span>
+                <span class="meta-tag milestone">🎉 Week 2 Complete!</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>🏆 Review is integration, not repetition</h4>
+                <p>Today is not about learning new patterns. It's about <strong>integrating</strong> all 30 patterns from Week 2 into natural, fluent conversation. This is where separate skills become one fluent voice.</p>
+            </div>
+            
+            <div class="problem-box">
+                <h4>❌ Why many learners forget what they learned</h4>
+                <ul>
+                    <li>Biết từng pattern riêng lẻ nhưng không kết hợp được</li>
+                    <li>Không biết khi nào dùng pattern nào</li>
+                    <li>Cảm giác "học rồi nhưng không dùng được"</li>
+                    <li>Không có integrated practice</li>
+                    <li>Không celebrate achievement (não không ghi nhận progress)</li>
+                </ul>
+            </div>
+            
+            <div class="solution-box">
+                <h4>✅ What we'll do today</h4>
+                <ul>
+                    <li>Review chi tiết tất cả 30 patterns từ tuần 2</li>
+                    <li>Practice integrated conversations (dùng nhiều patterns cùng lúc)</li>
+                    <li>Self-assess progress chi tiết (biết mình mạnh/yếu ở đâu)</li>
+                    <li>Celebrate milestone (não ghi nhận achievement)</li>
+                    <li>Preview tuần 3 và set goals chi tiết</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 16px;">
+                <div style="background: white; padding: 16px; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 6px;">📚</div>
+                    <div style="font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; margin-bottom: 4px;">Patterns Review</div>
+                    <div style="font-size: 12px; color: var(--text-muted);">15 min</div>
+                </div>
+                <div style="background: white; padding: 16px; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 6px;">🎧</div>
+                    <div style="font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; margin-bottom: 4px;">Integrated Practice</div>
+                    <div style="font-size: 12px; color: var(--text-muted);">20 min</div>
+                </div>
+                <div style="background: white; padding: 16px; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 6px;">📊</div>
+                    <div style="font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; margin-bottom: 4px;">Self-Assessment</div>
+                    <div style="font-size: 12px; color: var(--text-muted);">10 min</div>
+                </div>
+                <div style="background: white; padding: 16px; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 6px;">🎉</div>
+                    <div style="font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; margin-bottom: 4px;">Celebration</div>
+                    <div style="font-size: 12px; color: var(--text-muted);">15 min</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Patterns Review - Chi tiết từng pattern -->
+        <section class="section section-gold">
+            <h2 class="section-title"><span class="section-icon">📚</span> Week 2 Patterns Review - Chi Tiết</h2>
+            <p class="section-desc">Tổng hợp chi tiết 30 patterns từ 6 ngày học. Mỗi pattern có example và usage notes. Đọc lại và tự kiểm tra xem bạn nhớ được bao nhiêu.</p>
+            
+            <!-- Day 8: Morning Routines -->
+            <div class="patterns-day">
+                <div class="patterns-day-header">
+                    <div class="patterns-day-icon">🌅</div>
+                    <div>
+                        <div class="patterns-day-title">Day 8: Morning Routines</div>
+                        <div class="patterns-day-subtitle">5 patterns về morning routines và fitness</div>
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've been [working out/running] for [time] now"</div>
+                        <div class="pattern-detail-number">Pattern 1</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've been running for about 6 months now."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Present perfect continuous - thể hiện ongoing action từ quá khứ đến hiện tại. Dùng để nói về thói quen đã bắt đầu và vẫn đang tiếp tục.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"My go-to [workout] is [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 2</div>
+                    </div>
+                    <div class="pattern-detail-example">"My go-to workout is a 5K run because it's challenging but manageable."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> "Go-to" = favorite, reliable choice. Dùng để nói về lựa chọn ưa thích nhất, kèm theo reasoning.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I struggle with [challenge], but I've noticed [improvement]"</div>
+                        <div class="pattern-detail-number">Pattern 3</div>
+                    </div>
+                    <div class="pattern-detail-example">"I struggle with consistency, but I've noticed I have more energy."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Vulnerability + progress. Thừa nhận khó khăn nhưng cũng chia sẻ progress. Thể hiện self-awareness và growth mindset.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"What I've learned is that [insight]"</div>
+                        <div class="pattern-detail-number">Pattern 4</div>
+                    </div>
+                    <div class="pattern-detail-example">"What I've learned is that consistency matters more than intensity."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Personal insight từ experience. Dùng để chia sẻ bài học cá nhân, không phải generic advice.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"If I could recommend one [activity], it would be [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 5</div>
+                    </div>
+                    <div class="pattern-detail-example">"If I could recommend one activity, it would be running because you can do it anywhere."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Sophisticated conditional structure. Recommendation kèm theo reasoning. Mở ra conversation.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 9: Deep Work -->
+            <div class="patterns-day">
+                <div class="patterns-day-header">
+                    <div class="patterns-day-icon">⚡</div>
+                    <div>
+                        <div class="patterns-day-title">Day 9: Deep Work & Productivity</div>
+                        <div class="patterns-day-subtitle">5 patterns về deep work và productivity</div>
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've been trying to [focus more] lately"</div>
+                        <div class="pattern-detail-number">Pattern 6</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've been trying to focus more on deep work lately."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Ongoing effort. Thể hiện đang cố gắng làm gì đó, nhưng chưa hoàn toàn thành công.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"My go-to [method] is [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 7</div>
+                    </div>
+                    <div class="pattern-detail-example">"My go-to method is the Pomodoro technique because it helps me stay focused."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Favorite method kèm reasoning. Tương tự pattern 2 nhưng cho methods/tools.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've noticed that [observation/insight]"</div>
+                        <div class="pattern-detail-number">Pattern 8</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've noticed that taking breaks actually helps me stay productive."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Observation từ personal experience. Thể hiện self-awareness và reflection.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"It's not just about [X] — it's also about [Y]"</div>
+                        <div class="pattern-detail-number">Pattern 9</div>
+                    </div>
+                    <div class="pattern-detail-example">"It's not just about working hard — it's also about working smart."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Contrast structure. Show depth beyond surface level. Thể hiện sophisticated thinking.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"If I could recommend one [tool], it would be [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 10</div>
+                    </div>
+                    <div class="pattern-detail-example">"If I could recommend one tool, it would be Forest app because it blocks distractions."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Recommendation cho tools/apps. Sophisticated conditional structure.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 10: Weekend -->
+            <div class="patterns-day">
+                <div class="patterns-day-header">
+                    <div class="patterns-day-icon">🌴</div>
+                    <div>
+                        <div class="patterns-day-title">Day 10: Weekend & Downtime</div>
+                        <div class="patterns-day-subtitle">5 patterns về weekend activities và downtime</div>
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've been really into [hobby] lately"</div>
+                        <div class="pattern-detail-number">Pattern 11</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've been really into photography lately."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Ongoing passion. "Really into" = passion, không chỉ "like". Thể hiện enthusiasm.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"My favorite [activity] so far has been [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 12</div>
+                    </div>
+                    <div class="pattern-detail-example">"My favorite activity so far has been hiking because it helps me clear my mind."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Favorite activity kèm reasoning. "So far" = up to now, thể hiện experience.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've noticed that [observation]"</div>
+                        <div class="pattern-detail-number">Pattern 13</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've noticed that disconnecting on weekends helps me recharge."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Observation từ experience. Tương tự pattern 8 nhưng cho weekend context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"It's not just about [X] — it's also about [Y]"</div>
+                        <div class="pattern-detail-number">Pattern 14</div>
+                    </div>
+                    <div class="pattern-detail-example">"It's not just about relaxing — it's also about recharging."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Contrast structure. Show depth. Tương tự pattern 9 nhưng cho weekend context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"If I could recommend one [place], it would be [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 15</div>
+                    </div>
+                    <div class="pattern-detail-example">"If I could recommend one place, it would be the park near my house because it's peaceful."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Recommendation cho places. Sophisticated conditional structure.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 11: Cooking -->
+            <div class="patterns-day">
+                <div class="patterns-day-header">
+                    <div class="patterns-day-icon">🍳</div>
+                    <div>
+                        <div class="patterns-day-title">Day 11: Cooking & Food</div>
+                        <div class="patterns-day-subtitle">5 patterns về cooking và food experiences</div>
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've been really into [cooking/baking] lately"</div>
+                        <div class="pattern-detail-number">Pattern 16</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've been really into cooking Vietnamese food lately."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Ongoing passion cho cooking. Tương tự pattern 11 nhưng cho cooking context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"My favorite [dish] so far has been [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 17</div>
+                    </div>
+                    <div class="pattern-detail-example">"My favorite dish so far has been phở because it connects me to my culture."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Favorite dish kèm reasoning. Tương tự pattern 12 nhưng cho dishes.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've noticed that [observation]"</div>
+                        <div class="pattern-detail-number">Pattern 18</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've noticed that cooking at home helps me save money and eat healthier."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Observation từ cooking experience. Tương tự pattern 13 nhưng cho cooking context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"It's not just about [X] — it's also about [Y]"</div>
+                        <div class="pattern-detail-number">Pattern 19</div>
+                    </div>
+                    <div class="pattern-detail-example">"It's not just about cooking — it's also about connecting with my culture."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Contrast structure. Show depth. Tương tự pattern 14 nhưng cho cooking context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"If I could recommend one [recipe], it would be [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 20</div>
+                    </div>
+                    <div class="pattern-detail-example">"If I could recommend one recipe, it would be my grandmother's phở recipe because it's authentic."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Recommendation cho recipes. Sophisticated conditional structure.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 12: Fitness -->
+            <div class="patterns-day">
+                <div class="patterns-day-header">
+                    <div class="patterns-day-icon">🏃</div>
+                    <div>
+                        <div class="patterns-day-title">Day 12: Fitness & Movement</div>
+                        <div class="patterns-day-subtitle">5 patterns về fitness và movement</div>
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've been [running/yoga] for [time] now"</div>
+                        <div class="pattern-detail-number">Pattern 21</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've been doing yoga for a year now."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Ongoing fitness journey. Tương tự pattern 1 nhưng cho fitness cụ thể.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"My go-to [exercise] is [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 22</div>
+                    </div>
+                    <div class="pattern-detail-example">"My go-to exercise is yoga because it helps me relax after a long day."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Favorite exercise kèm reasoning. Tương tự pattern 2 nhưng cho exercises.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I struggle with [challenge], but I've noticed [improvement]"</div>
+                        <div class="pattern-detail-number">Pattern 23</div>
+                    </div>
+                    <div class="pattern-detail-example">"I struggle with consistency, but I've noticed I have more energy."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Vulnerability + progress. Tương tự pattern 3 nhưng cho fitness context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"What I've learned is that [insight]"</div>
+                        <div class="pattern-detail-number">Pattern 24</div>
+                    </div>
+                    <div class="pattern-detail-example">"What I've learned is that progress matters more than perfection."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Personal insight. Tương tự pattern 4 nhưng cho fitness context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"If I could recommend one [activity], it would be [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 25</div>
+                    </div>
+                    <div class="pattern-detail-example">"If I could recommend one activity, it would be yoga because it's accessible to everyone."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Recommendation. Tương tự pattern 5 nhưng cho fitness context.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 13: Learning -->
+            <div class="patterns-day">
+                <div class="patterns-day-header">
+                    <div class="patterns-day-icon">📚</div>
+                    <div>
+                        <div class="patterns-day-title">Day 13: Learning & Hobbies</div>
+                        <div class="patterns-day-subtitle">5 patterns về learning và hobbies</div>
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've been really into [learning/reading] lately"</div>
+                        <div class="pattern-detail-number">Pattern 26</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've been really into reading business books lately."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Ongoing passion cho learning. Tương tự pattern 11 nhưng cho learning context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"My favorite [book/course] so far has been [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 27</div>
+                    </div>
+                    <div class="pattern-detail-example">"My favorite book so far has been 'Atomic Habits' because it provides actionable insights."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Favorite book/course kèm reasoning. Tương tự pattern 12 nhưng cho learning context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"I've noticed that [observation]"</div>
+                        <div class="pattern-detail-number">Pattern 28</div>
+                    </div>
+                    <div class="pattern-detail-example">"I've noticed that reading helps me grow both personally and professionally."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Observation từ learning experience. Tương tự pattern 13 nhưng cho learning context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"It's not just about [X] — it's also about [Y]"</div>
+                        <div class="pattern-detail-number">Pattern 29</div>
+                    </div>
+                    <div class="pattern-detail-example">"It's not just about learning — it's also about applying what you learn."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Contrast structure. Show depth. Tương tự pattern 14 nhưng cho learning context.
+                    </div>
+                </div>
+                
+                <div class="pattern-detail">
+                    <div class="pattern-detail-header">
+                        <div class="pattern-detail-pattern">"If I could recommend one [resource], it would be [X] because [reason]"</div>
+                        <div class="pattern-detail-number">Pattern 30</div>
+                    </div>
+                    <div class="pattern-detail-example">"If I could recommend one resource, it would be that book because it changed my habits."</div>
+                    <div class="pattern-detail-usage">
+                        <strong>Usage:</strong> Recommendation cho resources. Sophisticated conditional structure.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Integrated Practice Scenarios -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">🎧</span> Integrated Practice Scenarios</h2>
+            <p class="section-desc">3 scenarios để practice dùng nhiều patterns cùng lúc. Mỗi scenario có full transcript để bạn có thể practice theo. Click vào từng scenario để nghe sample response.</p>
+            
+            <!-- Scenario 1: Coffee Chat -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon">☕</div>
+                    <div class="scenario-title">Scenario 1: Coffee Chat Integration</div>
+                </div>
+                <div class="scenario-context">
+                    <strong>Context:</strong> Bạn gặp bạn cũ ở café sau 2 tuần không gặp. Họ hỏi "What have you been up to lately?"
+                </div>
+                <div class="scenario-requirement">
+                    <strong>Yêu cầu:</strong> Dùng ít nhất 10 patterns từ tuần 2 trong conversation tự nhiên.
+                </div>
+                <button class="audio-btn" onclick="playScenario(1)">🔊 Listen to Sample Response</button>
+                <div class="scenario-transcript" id="scenario-1" style="display: none;">
+                    "Oh, a lot! Let me tell you... I've been <strong>really into running lately</strong> (11). I've been <strong>running for about 3 months now</strong> (1). My <strong>go-to workout is a 5K run because</strong> it's challenging but manageable (2). I <strong>struggle with consistency, but I've noticed</strong> I have more energy throughout the day (3). <strong>What I've learned is that consistency matters more than intensity</strong> (4). <strong>If I could recommend one activity, it would be running because</strong> you can do it anywhere (5). I've also been <strong>trying to focus more on deep work</strong> (6). My <strong>go-to method is the Pomodoro technique because</strong> it helps me stay focused (7). I've <strong>noticed that taking breaks actually helps</strong> me stay productive (8). <strong>It's not just about working hard — it's also about working smart</strong> (9). <strong>If I could recommend one tool, it would be Forest app because</strong> it blocks distractions (10)."
+                </div>
+                <div class="scenario-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li>10 patterns được dùng tự nhiên trong conversation</li>
+                        <li>Không cảm giác "list" mà là conversation tự nhiên</li>
+                        <li>Có transitions giữa các topics (running → deep work)</li>
+                        <li>Có personal stories và insights</li>
+                        <li>Mỗi pattern được dùng trong context phù hợp</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Scenario 2: Networking -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon">🤝</div>
+                    <div class="scenario-title">Scenario 2: Networking Integration</div>
+                </div>
+                <div class="scenario-context">
+                    <strong>Context:</strong> Bạn đang ở networking event. Ai đó hỏi "So what have you been up to lately?"
+                </div>
+                <div class="scenario-requirement">
+                    <strong>Yêu cầu:</strong> Dùng ít nhất 8 patterns từ tuần 2, tập trung vào professional context.
+                </div>
+                <button class="audio-btn" onclick="playScenario(2)">🔊 Listen to Sample Response</button>
+                <div class="scenario-transcript" id="scenario-2" style="display: none;">
+                    "Great question! Let me share a few things... I've been <strong>really into improving my productivity lately</strong> (6). My <strong>go-to method is time-blocking because</strong> it helps me prioritize deep work (7). I've <strong>noticed that blocking out 2 hours in the morning helps</strong> me get my most important work done (8). <strong>What I've learned is that it's not just about working hard — it's also about working smart</strong> (9). On weekends, I've been <strong>really into learning about AI and machine learning</strong> (26). My <strong>favorite course so far has been the one from DeepLearning.AI because</strong> it's practical (27). I've <strong>noticed that learning these skills helps</strong> me stay relevant in my field (28). <strong>It's not just about learning — it's also about applying</strong> these skills to real business problems (29). I've also been <strong>running for about 6 months now</strong> (1). My <strong>go-to workout is a 10K run because</strong> it challenges me (2). I <strong>struggle with consistency, but I've noticed</strong> I have more energy and focus (3). <strong>What I've learned is that consistency matters more than intensity</strong> (4). <strong>If I could recommend one habit, it would be morning exercise because</strong> it sets the tone for the whole day (5)."
+                </div>
+                <div class="scenario-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li>8+ patterns được dùng trong professional context</li>
+                        <li>Focus vào productivity và learning (professional topics)</li>
+                        <li>Professional tone nhưng vẫn personal</li>
+                        <li>Có structure rõ ràng (productivity → learning → fitness)</li>
+                        <li>Mỗi pattern được customize cho professional context</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Scenario 3: Podcast Interview -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon">🎙️</div>
+                    <div class="scenario-title">Scenario 3: Podcast Interview Integration</div>
+                </div>
+                <div class="scenario-context">
+                    <strong>Context:</strong> Bạn đang được phỏng vấn trên podcast về "How to build better habits". Host hỏi về các thói quen bạn đã xây dựng.
+                </div>
+                <div class="scenario-requirement">
+                    <strong>Yêu cầu:</strong> Dùng TẤT CẢ 30 patterns từ tuần 2 trong interview tự nhiên.
+                </div>
+                <button class="audio-btn" onclick="playScenario(3)">🔊 Listen to Sample Response</button>
+                <div class="scenario-transcript" id="scenario-3" style="display: none;">
+                    "Great question! Let me walk you through my journey... First, I've been <strong>running for about 6 months now</strong> (1). My <strong>go-to workout is a 5K run because</strong> it's challenging but manageable (2). I <strong>struggle with consistency, but I've noticed</strong> I have more energy throughout the day (3). <strong>What I've learned is that consistency matters more than intensity</strong> (4). <strong>If I could recommend one activity, it would be running because</strong> you can do it anywhere (5). Second, I've been <strong>trying to focus more on deep work</strong> (6). My <strong>go-to method is the Pomodoro technique because</strong> it helps me stay focused (7). I've <strong>noticed that taking breaks actually helps</strong> me stay productive (8). <strong>It's not just about working hard — it's also about working smart</strong> (9). <strong>If I could recommend one tool, it would be Forest app because</strong> it blocks distractions (10). Third, on weekends, I've been <strong>really into cooking Vietnamese food</strong> (16). My <strong>favorite dish so far has been phở because</strong> it connects me to my culture (17). I've <strong>noticed that cooking at home helps</strong> me save money and eat healthier (18). <strong>It's not just about cooking — it's also about connecting</strong> with my roots (19). <strong>If I could recommend one recipe, it would be my grandmother's phở recipe because</strong> it's authentic (20). Fourth, I've been <strong>really into reading business books lately</strong> (26). My <strong>favorite book so far has been 'Atomic Habits' because</strong> it provides actionable insights (27). I've <strong>noticed that reading helps</strong> me grow both personally and professionally (28). <strong>It's not just about learning — it's also about applying</strong> what you learn (29). <strong>If I could recommend one resource, it would be that book because</strong> it changed my habits (30)."
+                </div>
+                <div class="scenario-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li>TẤT CẢ 30 patterns được dùng trong interview format</li>
+                        <li>Có structure rõ ràng (First, Second, Third, Fourth)</li>
+                        <li>Interview format tự nhiên, không cảm giác "list"</li>
+                        <li>Có personal stories và insights cho mỗi pattern</li>
+                        <li>Mỗi pattern được dùng trong context phù hợp</li>
+                        <li>Transitions giữa các topics tự nhiên</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Self-Assessment -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">📊</span> Self-Assessment Checklist</h2>
+            <p class="section-desc">Tự đánh giá progress của bạn sau tuần 2. Tick vào những gì bạn đã làm được. Be honest - đây là để bạn biết mình mạnh/yếu ở đâu.</p>
+            
+            <div class="assessment-section">
+                <div class="assessment-title">Patterns Mastery (6 items)</div>
+                <ul class="checklist" id="checklist-1">
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng pattern 1-5 (Morning Routines) tự nhiên mà không cần suy nghĩ</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng pattern 6-10 (Deep Work) tự nhiên mà không cần suy nghĩ</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng pattern 11-15 (Weekend) tự nhiên mà không cần suy nghĩ</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng pattern 16-20 (Cooking) tự nhiên mà không cần suy nghĩ</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng pattern 21-25 (Fitness) tự nhiên mà không cần suy nghĩ</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng pattern 26-30 (Learning) tự nhiên mà không cần suy nghĩ</li>
+                </ul>
+            </div>
+            
+            <div class="assessment-section">
+                <div class="assessment-title">Integrated Skills (4 items)</div>
+                <ul class="checklist" id="checklist-2">
+                    <li onclick="toggleCheck(this)">Tôi có thể kết hợp 5+ patterns trong 1 conversation mà không cảm giác "list"</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể transition giữa các topics tự nhiên (ví dụ: từ running sang cooking)</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng patterns trong cả Life và Business contexts</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể customize patterns cho phù hợp với context cụ thể</li>
+                </ul>
+            </div>
+            
+            <div class="assessment-section">
+                <div class="assessment-title">Pronunciation (3 items)</div>
+                <ul class="checklist" id="checklist-3">
+                    <li onclick="toggleCheck(this)">Tôi phát âm đúng các key words từ tuần 2 (consistency, intensity, productivity, etc.)</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng connected speech tự nhiên (I've been, I've noticed, etc.)</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng intonation patterns phù hợp (falling cho statements, rising cho questions)</li>
+                </ul>
+            </div>
+            
+            <div class="assessment-section">
+                <div class="assessment-title">Confidence (3 items)</div>
+                <ul class="checklist" id="checklist-4">
+                    <li onclick="toggleCheck(this)">Tôi cảm thấy tự tin khi dùng patterns từ tuần 2 trong real conversations</li>
+                    <li onclick="toggleCheck(this)">Tôi có thể dùng patterns mà không cần suy nghĩ nhiều về grammar</li>
+                    <li onclick="toggleCheck(this)">Tôi cảm thấy progress rõ ràng so với tuần 1</li>
+                </ul>
+            </div>
+            
+            <div class="assessment-score">
+                <div class="assessment-score-value" id="assessment-score">0/16</div>
+                <div class="assessment-score-label">Overall Score</div>
+            </div>
+        </section>
+        
+        <!-- Reflection Questions -->
+        <section class="section section-gold">
+            <h2 class="section-title"><span class="section-icon">💭</span> Reflection Questions</h2>
+            <p class="section-desc">Trả lời các câu hỏi reflection để consolidate learning từ tuần 2. Viết ít nhất 2-3 câu cho mỗi câu hỏi.</p>
+            
+            <div class="reflection-question">
+                <label>1. Pattern nào bạn thấy hữu ích nhất trong tuần 2?</label>
+                <div class="guiding-question">Gợi ý: Pattern nào bạn đã dùng nhiều nhất? Pattern nào giúp bạn nói tự nhiên hơn?</div>
+                <textarea placeholder="Ví dụ: 'I've been really into...' vì tôi có thể dùng nó để nói về nhiều hobbies khác nhau. Tôi đã dùng pattern này khi nói chuyện với bạn về running, cooking, và reading. Pattern này giúp tôi nói tự nhiên hơn vì nó thể hiện passion, không chỉ 'like'."></textarea>
+            </div>
+            
+            <div class="reflection-question">
+                <label>2. Pattern nào bạn thấy khó dùng nhất?</label>
+                <div class="guiding-question">Gợi ý: Pattern nào bạn thấy khó nhớ? Pattern nào bạn thấy khó dùng trong conversation tự nhiên?</div>
+                <textarea placeholder="Ví dụ: 'It's not just about X — it's also about Y' vì cấu trúc phức tạp. Tôi thấy khó nhớ thứ tự và khó dùng trong conversation tự nhiên. Cần practice thêm."></textarea>
+            </div>
+            
+            <div class="reflection-question">
+                <label>3. Bạn đã dùng patterns từ tuần 2 trong real life chưa?</label>
+                <div class="guiding-question">Gợi ý: Bạn đã dùng pattern nào? Trong context nào? Kết quả như thế nào?</div>
+                <textarea placeholder="Ví dụ: Đã dùng 'I've been really into running lately' khi nói chuyện với bạn ở café. Bạn ấy hỏi lại 'Oh really? How long have you been running?' và conversation tiếp tục tự nhiên. Cảm giác tự tin hơn."></textarea>
+            </div>
+            
+            <div class="reflection-question">
+                <label>4. Bạn cảm thấy progress như thế nào so với tuần 1?</label>
+                <div class="guiding-question">Gợi ý: So sánh tuần 1 và tuần 2. Bạn thấy mình tiến bộ ở đâu? Còn yếu ở đâu?</div>
+                <textarea placeholder="Ví dụ: Tuần 1 chỉ biết patterns riêng lẻ, tuần 2 có thể kết hợp chúng. Tuần 1 cần suy nghĩ nhiều về grammar, tuần 2 có thể dùng patterns tự nhiên hơn. Còn yếu ở pronunciation và intonation."></textarea>
+            </div>
+            
+            <div class="reflection-question">
+                <label>5. Mục tiêu cho tuần 3 là gì?</label>
+                <div class="guiding-question">Gợi ý: Bạn muốn học gì trong tuần 3? Bạn muốn cải thiện gì? Bạn sẽ làm gì để đạt mục tiêu?</div>
+                <textarea placeholder="Ví dụ: Mục tiêu tuần 3 là học 30 patterns mới về travel & experiences. Muốn cải thiện pronunciation và intonation. Sẽ practice 30 phút mỗi ngày, record và listen back."></textarea>
+            </div>
+        </section>
+        
+        <!-- Celebration -->
+        <section class="section section-celebration">
+            <h2 class="section-title"><span class="section-icon">🎉</span> Milestone Celebration</h2>
+            
+            <div class="celebration-card">
+                <div class="celebration-trophy">🏆</div>
+                <div class="celebration-title">Congratulations! You've Completed Week 2!</div>
+                <div class="celebration-message">
+                    You've learned 30 new patterns and practiced using them in integrated conversations. You can now talk about morning routines, deep work, weekend activities, cooking, fitness, and learning. Most importantly, you can now COMBINE these patterns naturally in conversations. That's real fluency!
+                </div>
+                
+                <div class="celebration-achievements">
+                    <h4>Your Week 2 Achievements:</h4>
+                    <ul>
+                        <li>Học 30 patterns mới về everyday topics</li>
+                        <li>Practice integrated conversations với 3 scenarios</li>
+                        <li>Self-assess progress chi tiết (16 items)</li>
+                        <li>Reflection chi tiết (5 questions)</li>
+                        <li>Build confidence trong everyday topics</li>
+                        <li>Develop skills: morning routines, deep work, weekend, cooking, fitness, learning</li>
+                        <li>Integrated patterns vào natural conversation</li>
+                    </ul>
+                </div>
+                
+                <div class="celebration-activities">
+                    <h4>Celebration Activities:</h4>
+                    <ul>
+                        <li>Treat yourself to something nice (coffee, dessert, etc.)</li>
+                        <li>Share your achievement with friends/family</li>
+                        <li>Take a break and relax - you've earned it!</li>
+                        <li>Review your reflection answers và set goals cho tuần 3</li>
+                    </ul>
+                </div>
+                
+                <button class="celebration-modal-btn" onclick="showCelebration()">🎉 Celebrate Achievement!</button>
+            </div>
+        </section>
+        
+        <!-- Week 3 Preview -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🔮</span> Week 3 Preview: Travel & Experiences</h2>
+            <p class="section-desc">Preview chi tiết nội dung tuần 3 và set goals cho tuần tiếp theo. Tuần 3 sẽ tập trung vào travel & experiences.</p>
+            
+            <div class="preview-card">
+                <div class="preview-header">
+                    <div class="preview-icon">✈️</div>
+                    <div class="preview-title">Week 3: Travel & Experiences</div>
+                </div>
+                
+                <div class="preview-days">
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 15</div>
+                        <div class="preview-day-title">Travel Experiences</div>
+                        <div class="preview-day-desc">Share travel stories và experiences</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "I've always wanted to visit..."<br>
+                            • "The most memorable experience was..."<br>
+                            • "What surprised me most was..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 16</div>
+                        <div class="preview-day-title">Cultural Experiences</div>
+                        <div class="preview-day-desc">Cultural insights và observations</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "What I found most interesting was..."<br>
+                            • "It was fascinating to see..."<br>
+                            • "The biggest difference was..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 17</div>
+                        <div class="preview-day-title">Food Experiences</div>
+                        <div class="preview-day-desc">Food adventures và culinary experiences</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "The best thing I ate was..."<br>
+                            • "What made it special was..."<br>
+                            • "I'd recommend trying..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 18</div>
+                        <div class="preview-day-title">Adventure Experiences</div>
+                        <div class="preview-day-desc">Adventure stories và challenges</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "The most challenging part was..."<br>
+                            • "What I learned from that was..."<br>
+                            • "If I could do it again, I would..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 19</div>
+                        <div class="preview-day-title">Learning Experiences</div>
+                        <div class="preview-day-desc">Learning journeys và insights</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "The most valuable lesson was..."<br>
+                            • "What changed my perspective was..."<br>
+                            • "I'd recommend this experience because..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 20</div>
+                        <div class="preview-day-title">Week 3 Review</div>
+                        <div class="preview-day-desc">Review & milestone celebration</div>
+                        <div class="preview-day-patterns">
+                            <strong>Focus:</strong><br>
+                            • Review 30 patterns từ tuần 3<br>
+                            • Integrated practice<br>
+                            • Self-assessment<br>
+                            • Celebration
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--bg); padding: 20px; border-radius: 12px; margin-top: 20px;">
+                    <strong style="color: var(--text-primary); font-family: 'Fraunces', serif; font-size: 1.1rem;">Week 3 Goals:</strong>
+                    <ul style="margin-top: 12px; padding-left: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.7;">
+                        <li>Học 30 patterns mới về travel & experiences</li>
+                        <li>Practice integrated conversations về experiences</li>
+                        <li>Self-assess progress chi tiết</li>
+                        <li>Celebrate milestone Week 3</li>
+                        <li>Build confidence trong storytelling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Week 2 Final Quiz</h2>
+            <p class="section-desc">Kiểm tra kiến thức tổng hợp từ tuần 2. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">1. Pattern "I've been [activity] for [time] now" thuộc thì nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. Present simple</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. Past simple</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. Present perfect continuous</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. Future perfect</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. Pattern "It's not just about X — it's also about Y" thể hiện điều gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. Just statement</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. Depth beyond surface level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. Complaint</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. Apology</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">3. Pattern "What I've learned is that..." thể hiện điều gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Generic advice</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. Personal reflection/insight</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. Future plan</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. Hypothetical</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="a">
+                <div class="quiz-question">4. Pattern "If I could recommend one X, it would be Y because..." là cấu trúc gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. Conditional + recommendation + reasoning</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. Simple statement</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. Question</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. Command</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. Pattern "I struggle with X, but I've noticed Y" thể hiện điều gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. Just complaint</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Vulnerability + progress</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Boasting</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. Apology</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/5</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-02-day-13.html" class="nav-btn">
+                <div class="nav-label">← Previous Day</div>
+                <div class="nav-title">Day 13: Learning & Hobbies</div>
+            </a>
+            <a href="week-03.html" class="nav-btn">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 3: Travel & Experiences</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeWeek()">🏆 Complete Week 2 & Start Week 3</button>
+        
+    </div>
+    
+    <!-- Celebration Overlay -->
+    <div class="celebration-overlay" id="celebrationOverlay">
+        <div class="celebration-modal">
+            <div class="celebration-modal-trophy">🏆</div>
+            <div class="celebration-modal-title">🎉 Congratulations! 🎉</div>
+            <div class="celebration-modal-message">
+                You've completed Week 2: Everyday Fluency!<br><br>
+                You've learned 30 new patterns and practiced using them in integrated conversations. You can now talk about morning routines, deep work, weekend activities, cooking, fitness, and learning.<br><br>
+                Most importantly, you can now COMBINE these patterns naturally in conversations. That's real fluency!<br><br>
+                Take a moment to celebrate this achievement. You've earned it!
+            </div>
+            <button class="celebration-modal-btn" onclick="closeCelebration()">🎉 Continue to Week 3</button>
+        </div>
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#F6AD55"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#F6AD55"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#F6AD55" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#F6AD55" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 85 105 Q 100 120 115 105" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#F6AD55"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Trophy -->
+            <g transform="translate(55, 140)">
+                <path d="M 10 0 L 30 0 L 28 15 L 12 15 Z" fill="#F6AD55"/>
+                <rect x="15" y="15" width="10" height="8" fill="#DD6B20"/>
+                <rect x="12" y="23" width="16" height="4" fill="#DD6B20"/>
+                <path d="M 5 5 Q 0 10 5 15" stroke="#F6AD55" stroke-width="3" fill="none"/>
+                <path d="M 35 5 Q 40 10 35 15" stroke="#F6AD55" stroke-width="3" fill="none"/>
+            </g>
+        </svg>
+        <div class="mascot-speech">Week 2 complete! 🏆</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 2 · Day 14 · Review & Milestone</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 0.9;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = audioSpeed;
+                utterance.pitch = 1.05;
+                
+                const voices = speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US' && (v.name.includes('Google') || v.name.includes('Natural'))) 
+                             || voices.find(v => v.lang === 'en-US')
+                             || voices[0];
+                if (usVoice) utterance.voice = usVoice;
+                
+                if (btn) {
+                    btn.classList.add('playing');
+                    utterance.onend = () => btn.classList.remove('playing');
+                    utterance.onerror = () => btn.classList.remove('playing');
+                }
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
+        
+        function playScenario(num) {
+            const transcript = document.getElementById(`scenario-${num}`);
+            const btn = event.target;
+            
+            if (transcript.style.display === 'none') {
+                transcript.style.display = 'block';
+                const text = transcript.innerText;
+                playAudio(btn, text);
+            } else {
+                transcript.style.display = 'none';
+                window.speechSynthesis.cancel();
+                btn.classList.remove('playing');
+            }
+        }
+        
+        // ========== CHECKLIST ==========
+        function toggleCheck(item) {
+            item.classList.toggle('checked');
+            updateAssessmentScore();
+            saveChecklist();
+        }
+        
+        function updateAssessmentScore() {
+            const total = document.querySelectorAll('.checklist li').length;
+            const checked = document.querySelectorAll('.checklist li.checked').length;
+            document.getElementById('assessment-score').textContent = `${checked}/${total}`;
+        }
+        
+        function saveChecklist() {
+            const checked = [];
+            document.querySelectorAll('.checklist li').forEach((item, index) => {
+                if (item.classList.contains('checked')) {
+                    checked.push(index);
+                }
+            });
+            localStorage.setItem('week2Checklist', JSON.stringify(checked));
+        }
+        
+        function loadChecklist() {
+            const checked = JSON.parse(localStorage.getItem('week2Checklist') || '[]');
+            document.querySelectorAll('.checklist li').forEach((item, index) => {
+                if (checked.includes(index)) {
+                    item.classList.add('checked');
+                }
+            });
+            updateAssessmentScore();
+        }
+        
+        // ========== CELEBRATION ==========
+        function showCelebration() {
+            document.getElementById('celebrationOverlay').classList.add('show');
+        }
+        
+        function closeCelebration() {
+            document.getElementById('celebrationOverlay').classList.remove('show');
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'c', q2: 'b', q3: 'b', q4: 'a', q5: 'b' };
+        const explanations = {
+            q1: '"I\'ve been [activity] for [time] now" = present perfect continuous. Thể hiện ongoing action từ quá khứ đến hiện tại.',
+            q2: '"It\'s not just X — it\'s also about Y" = show depth beyond surface level. Contrast structure = sophisticated.',
+            q3: '"What I\'ve learned is..." = personal reflection, growth mindset. Không phải generic advice, mà là insight từ personal experience.',
+            q4: '"If I could recommend one X, it would be Y because..." = sophisticated conditional structure với recommendation và reasoning.',
+            q5: '"I struggle with... but I\'ve noticed..." = vulnerability + progress. Balance honesty về struggle + progress noticed. Mature communication.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered Week 2!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the patterns you missed.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the patterns section.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the day content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE WEEK ==========
+        function completeWeek() {
+            const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+            
+            if (!completedWeeks.includes(2)) {
+                completedWeeks.push(2);
+                localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                localStorage.setItem('completedWeeks', completedWeeks.length);
+            }
+            
+            showCelebration();
+            
+            setTimeout(() => {
+                location.href = 'week-03.html';
+            }, 3000);
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            loadChecklist();
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
