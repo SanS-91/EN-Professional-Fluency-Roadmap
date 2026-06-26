@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3: Storytelling & Experiences | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #4299E1;
+            --primary-dark: #2B6CB0;
+            --primary-light: #63B3ED;
+            --primary-soft: #EBF8FF;
+            --secondary: #38B2AC;
+            --secondary-dark: #2C7A7B;
+            --secondary-soft: #E6FFFA;
+            --accent: #ED8936;
+            --accent-soft: #FFFAF0;
+            --warm: #ED8936;
+            --warm-soft: #FFFAF0;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== HEADER ========== */
+        .week-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 50%, var(--accent-soft) 100%);
+            padding: 56px 0 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .week-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(66,153,225,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(56,178,172,0.2) 0%, transparent 40%);
+        }
+        
+        .week-header::after {
+            content: '✈️';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        
+        .week-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .week-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-breadcrumb a:hover { color: var(--primary); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .week-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .week-subtitle strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .week-philosophy {
+            background: white;
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            position: relative;
+            max-width: 700px;
+        }
+        
+        .week-philosophy::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.3;
+            font-family: 'Fraunces', serif;
+        }
+        
+        .week-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #BEE3F8; }
+        .section-teal { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #B2F5EA; }
+        .section-orange { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #FEEBC8; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E9D8FD; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.6rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== DAYS GRID ========== */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .day-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .day-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .day-num {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .day-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .day-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .day-patterns {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .day-patterns strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 6px;
+        }
+        
+        .day-patterns ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .day-patterns li {
+            padding: 3px 0;
+            padding-left: 16px;
+            position: relative;
+            font-size: 12px;
+        }
+        
+        .day-patterns li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* ========== STORYTELLING PREVIEW ========== */
+        .storytelling-preview {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-top: 20px;
+        }
+        
+        .storytelling-preview h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        
+        .storytelling-example {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-style: italic;
+        }
+        
+        .storytelling-example strong {
+            color: var(--primary-dark);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        /* ========== SELF-ASSESSMENT ========== */
+        .assessment-section {
+            margin-bottom: 24px;
+        }
+        
+        .assessment-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .checklist {
+            list-style: none;
+        }
+        
+        .checklist li {
+            padding: 12px 0;
+            padding-left: 36px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+        
+        .checklist li:hover {
+            color: var(--text-primary);
+            background: var(--bg);
+        }
+        
+        .checklist li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            background: white;
+            transition: all 0.2s;
+        }
+        
+        .checklist li.checked::before {
+            content: '✓';
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
+        .checklist li.checked {
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+        
+        /* ========== CELEBRATION ========== */
+        .celebration-card {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 50%, var(--accent-soft) 100%);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--primary);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .celebration-trophy {
+            font-size: 5rem;
+            margin-bottom: 16px;
+            animation: trophyBounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes trophyBounce {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        .celebration-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+        
+        .celebration-message {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        
+        .celebration-achievements {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        
+        .celebration-achievements h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        
+        .celebration-achievements ul {
+            list-style: none;
+        }
+        
+        .celebration-achievements li {
+            padding: 8px 0;
+            padding-left: 32px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .celebration-achievements li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        
+        /* ========== WEEK 4 PREVIEW ========== */
+        .preview-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        
+        .preview-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .preview-icon {
+            font-size: 2rem;
+        }
+        
+        .preview-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .preview-days {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .preview-day {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .preview-day-num {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .preview-day-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .preview-day-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        .preview-day-patterns {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding-top: 8px;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .preview-day-patterns strong {
+            color: var(--text-primary);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .start-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 28px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
+            text-align: center;
+            max-width: 400px;
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(66,153,225,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .week-title { font-size: 1.8rem; }
+            .week-header { padding: 40px 0 32px; }
+            .week-header::after { font-size: 2.5rem; top: 20px; right: 20px; }
+            
+            .days-grid { grid-template-columns: 1fr; }
+            .preview-days { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">← Roadmap</a>
+            <div class="nav-progress">
+                <span>Week 3 / 24</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 12%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="week-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span>Week 3</span>
+            </div>
+            <h1 class="week-title">✈️ Storytelling & Experiences</h1>
+            <p class="week-subtitle">Week 3 không phải về <strong>mô tả địa điểm</strong>. Week 3 là về <strong>kể những câu chuyện mà người khác thích nghe</strong>. Travel chỉ là bối cảnh - câu chuyện mới là điều quan trọng.</p>
+            <div class="week-philosophy">
+                Travel isn't about describing places. It's about telling stories that people enjoy listening to.
+            </div>
+            <div class="week-meta">
+                <span class="meta-tag">✈️ Storytelling Focus</span>
+                <span class="meta-tag">⏱️ 7 days</span>
+                <span class="meta-tag">📚 30 storytelling patterns</span>
+                <span class="meta-tag">🎯 Narrative skills</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">💡</span> Week 3 Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>✈️ From Description to Storytelling</h4>
+                <p>Week 1-2 đã dạy bạn <strong>describe</strong> (I am..., I have..., I like...). Week 3 sẽ dạy bạn <strong>tell stories</strong> (You'll never believe..., So there I was..., Looking back...). Đây là sự khác biệt giữa <strong>biết tiếng Anh</strong> và <strong>khiến người khác thích nghe bạn nói</strong>.</p>
+            </div>
+            
+            <div class="storytelling-preview">
+                <h4>Storytelling vs Description</h4>
+                <div class="storytelling-example">
+                    <strong>❌ Description (IELTS style):</strong> "The most memorable experience was hiking Mount Fuji because the view was breathtaking."<br><br>
+                    <strong>✅ Storytelling (C1 style):</strong> "<strong>You'll never believe</strong> what happened when we hiked Mount Fuji. <strong>So there I was</strong>, exhausted at 3 AM, wondering why I signed up for this. But then the sun came up, and it was the most breathtaking thing I've ever seen. <strong>The funny thing was</strong> that the person I was complaining about being slow ended up being the one who helped me when I struggled."
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7 Days -->
+        <section class="section section-teal">
+            <h2 class="section-title"><span class="section-icon">📅</span> 7 Days of Storytelling</h2>
+            <p class="section-desc">Mỗi ngày tập trung vào 1 khía cạnh của storytelling. Không phải mô tả - mà là kể chuyện.</p>
+            
+            <div class="days-grid">
+                <a href="week-03-day-15.html" class="day-card">
+                    <div class="day-num">DAY 15</div>
+                    <div class="day-emoji">🗺️</div>
+                    <div class="day-title">Travel Stories</div>
+                    <div class="day-desc">Mở đầu câu chuyện, tạo hook, kéo người nghe vào</div>
+                    <div class="day-patterns">
+                        <strong>Key patterns:</strong>
+                        <ul>
+                            <li>"You'll never believe what happened when..."</li>
+                            <li>"So there I was, [situation]..."</li>
+                            <li>"Funny story..."</li>
+                            <li>"Long story short..."</li>
+                            <li>"The whole time, I was thinking..."</li>
+                        </ul>
+                    </div>
+                </a>
+                
+                <a href="week-03-day-16.html" class="day-card">
+                    <div class="day-num">DAY 16</div>
+                    <div class="day-emoji">🎭</div>
+                    <div class="day-title">Unexpected Moments</div>
+                    <div class="day-desc">Plot twists, surprises, turning points</div>
+                    <div class="day-patterns">
+                        <strong>Key patterns:</strong>
+                        <ul>
+                            <li>"At first, I thought... but it turned out..."</li>
+                            <li>"It turned out that..."</li>
+                            <li>"Looking back, I realize..."</li>
+                            <li>"The funny thing was..."</li>
+                            <li>"I wasn't expecting... but..."</li>
+                        </ul>
+                    </div>
+                </a>
+                
+                <a href="week-03-day-17.html" class="day-card">
+                    <div class="day-num">DAY 17</div>
+                    <div class="day-emoji">👥</div>
+                    <div class="day-title">People I Met</div>
+                    <div class="day-desc">Character-driven stories, memorable encounters</div>
+                    <div class="day-patterns">
+                        <strong>Key patterns:</strong>
+                        <ul>
+                            <li>"I met this [person] who..."</li>
+                            <li>"What struck me about them was..."</li>
+                            <li>"They told me... and it made me realize..."</li>
+                            <li>"We ended up [action] together"</li>
+                            <li>"I'll never forget [person] because..."</li>
+                        </ul>
+                    </div>
+                </a>
+                
+                <a href="week-03-day-18.html" class="day-card">
+                    <div class="day-num">DAY 18</div>
+                    <div class="day-emoji">🍜</div>
+                    <div class="day-title">Food & Culture Stories</div>
+                    <div class="day-desc">Sensory stories, cultural immersion</div>
+                    <div class="day-patterns">
+                        <strong>Key patterns:</strong>
+                        <ul>
+                            <li>"I'll never forget the first time I tried..."</li>
+                            <li>"The thing about [food/culture] is that..."</li>
+                            <li>"What I didn't realize was..."</li>
+                            <li>"It reminded me of..."</li>
+                            <li>"By the end, I couldn't imagine..."</li>
+                        </ul>
+                    </div>
+                </a>
+                
+                <a href="week-03-day-19.html" class="day-card">
+                    <div class="day-num">DAY 19</div>
+                    <div class="day-emoji">💡</div>
+                    <div class="day-title">Lessons Learned</div>
+                    <div class="day-desc">Reflective storytelling, personal growth</div>
+                    <div class="day-patterns">
+                        <strong>Key patterns:</strong>
+                        <ul>
+                            <li>"Looking back, I realize..."</li>
+                            <li>"What I learned from that was..."</li>
+                            <li>"If I could do it again, I would..."</li>
+                            <li>"The biggest takeaway was..."</li>
+                            <li>"It made me realize that..."</li>
+                        </ul>
+                    </div>
+                </a>
+                
+                <a href="week-03-day-20.html" class="day-card">
+                    <div class="day-num">DAY 20</div>
+                    <div class="day-emoji">✨</div>
+                    <div class="day-title">Stories Worth Telling</div>
+                    <div class="day-desc">Polished storytelling, stories worth sharing</div>
+                    <div class="day-patterns">
+                        <strong>Key patterns:</strong>
+                        <ul>
+                            <li>"Let me tell you about..."</li>
+                            <li>"The reason I bring this up is..."</li>
+                            <li>"What I love about... is that..."</li>
+                            <li>"The thing is..."</li>
+                            <li>"If there's one thing I want you to take away..."</li>
+                        </ul>
+                    </div>
+                </a>
+                
+                <a href="week-03-day-21.html" class="day-card">
+                    <div class="day-num">DAY 21</div>
+                    <div class="day-emoji">🏆</div>
+                    <div class="day-title">Week 3 Review</div>
+                    <div class="day-desc">Review 30 patterns, integrated practice, celebration</div>
+                    <div class="day-patterns">
+                        <strong>Focus:</strong>
+                        <ul>
+                            <li>Review all 30 storytelling patterns</li>
+                            <li>Integrated storytelling practice</li>
+                            <li>Self-assessment & reflection</li>
+                            <li>Celebrate Week 3 milestone</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Storytelling Examples -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">🎭</span> Storytelling in Action</h2>
+            <p class="section-desc">Xem cách storytelling patterns được dùng trong conversation thực tế. Không phải presentation - mà là conversation.</p>
+            
+            <div class="storytelling-preview">
+                <h4>Day 15: Travel Stories</h4>
+                <div class="storytelling-example">
+                    "<strong>You'll never believe</strong> what happened when we went to Japan. <strong>So there I was</strong>, lost in a small town with no phone signal. <strong>Funny story</strong> — we ended up having dinner with a local family who didn't speak any English, but we communicated through gestures and had the best time. <strong>Long story short</strong>, we missed our train but ended up having the most memorable experience of the trip. <strong>The whole time</strong>, I was thinking this was a disaster, but it turned out to be the highlight."
+                </div>
+            </div>
+            
+            <div class="storytelling-preview" style="margin-top: 20px;">
+                <h4>Day 16: Unexpected Moments</h4>
+                <div class="storytelling-example">
+                    "<strong>At first, I thought</strong> the hiking trip was going to be exhausting, but <strong>it turned out</strong> to be the most refreshing experience. <strong>Looking back, I realize</strong> that pushing myself out of my comfort zone was exactly what I needed. <strong>The funny thing was</strong> that the person I was complaining about being slow ended up being the one who helped me when I struggled. <strong>I wasn't expecting</strong> to learn so much about myself, but that trip changed my perspective on challenges."
+                </div>
+            </div>
+            
+            <div class="storytelling-preview" style="margin-top: 20px;">
+                <h4>Day 17: People I Met</h4>
+                <div class="storytelling-example">
+                    "<strong>I met this</strong> elderly woman at the hostel <strong>who</strong> had been traveling solo for 20 years. <strong>What struck me about her was</strong> how she could connect with anyone, regardless of language barriers. <strong>She told me</strong> about her journey through South America, and <strong>it made me realize</strong> that fear is the only real barrier to travel. <strong>We ended up</strong> having dinner together and talking for hours about our adventures. <strong>I'll never forget her because</strong> she showed me that it's never too late to start exploring the world."
+                </div>
+            </div>
+        </section>
+        
+        <!-- Self-Assessment Preview -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">📊</span> What You'll Master</h2>
+            <p class="section-desc">Cuối tuần 3, bạn sẽ có thể kể chuyện tự nhiên, engaging, và khiến người khác thích nghe bạn nói.</p>
+            
+            <div class="assessment-section">
+                <div class="assessment-title">Storytelling Skills</div>
+                <ul class="checklist">
+                    <li>Tôi có thể mở đầu câu chuyện với hook hấp dẫn</li>
+                    <li>Tôi có thể tạo suspense và kéo người nghe vào câu chuyện</li>
+                    <li>Tôi có thể kể về plot twists và unexpected moments</li>
+                    <li>Tôi có thể kể về people I met với character details</li>
+                    <li>Tôi có thể kể về food & culture với sensory details</li>
+                    <li>Tôi có thể share lessons learned với reflective insights</li>
+                    <li>Tôi có thể kết thúc câu chuyện với memorable takeaway</li>
+                </ul>
+            </div>
+            
+            <div class="assessment-section">
+                <div class="assessment-title">Conversation Skills</div>
+                <ul class="checklist">
+                    <li>Tôi có thể transition giữa các parts của câu chuyện tự nhiên</li>
+                    <li>Tôi có thể dùng storytelling patterns trong real conversations</li>
+                    <li>Tôi có thể kể chuyện trong cả Life và Business contexts</li>
+                    <li>Tôi có thể customize stories cho different audiences</li>
+                    <li>Tôi có thể khiến người khác thích nghe tôi nói</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Week 4 Preview -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🔮</span> Week 4 Preview: Professional Stories</h2>
+            <p class="section-desc">Preview tuần 4 - áp dụng storytelling vào professional contexts.</p>
+            
+            <div class="preview-card">
+                <div class="preview-header">
+                    <div class="preview-icon">💼</div>
+                    <div class="preview-title">Week 4: Professional Stories</div>
+                </div>
+                
+                <div class="preview-days">
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 22</div>
+                        <div class="preview-day-title">Career Stories</div>
+                        <div class="preview-day-desc">Kể về career journey, challenges, achievements</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "The reason I got into [field] was..."<br>
+                            • "Looking back, the best decision was..."<br>
+                            • "What surprised me about [industry] was..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 23</div>
+                        <div class="preview-day-title">Project Stories</div>
+                        <div class="preview-day-desc">Kể về projects, challenges, solutions</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "The challenge we faced was..."<br>
+                            • "What I learned from that project was..."<br>
+                            • "The turning point was when..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 24</div>
+                        <div class="preview-day-title">Client Stories</div>
+                        <div class="preview-day-desc">Kể về client interactions, successes</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "I'll never forget this client who..."<br>
+                            • "What made this project special was..."<br>
+                            • "The reason this worked was..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 25</div>
+                        <div class="preview-day-title">Team Stories</div>
+                        <div class="preview-day-desc">Kể về team experiences, collaborations</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "What I love about my team is..."<br>
+                            • "The funny thing about working with them was..."<br>
+                            • "What I learned from my team was..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 26</div>
+                        <div class="preview-day-title">Leadership Stories</div>
+                        <div class="preview-day-desc">Kể về leadership moments, decisions</div>
+                        <div class="preview-day-patterns">
+                            <strong>Sample patterns:</strong><br>
+                            • "The toughest decision I had to make was..."<br>
+                            • "What I learned about leadership was..."<br>
+                            • "Looking back, I realize..."
+                        </div>
+                    </div>
+                    <div class="preview-day">
+                        <div class="preview-day-num">Day 27</div>
+                        <div class="preview-day-title">Week 4 Review</div>
+                        <div class="preview-day-desc">Review & milestone celebration</div>
+                        <div class="preview-day-patterns">
+                            <strong>Focus:</strong><br>
+                            • Review professional storytelling<br>
+                            • Integrated practice<br>
+                            • Self-assessment<br>
+                            • Celebration
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--bg); padding: 20px; border-radius: 12px; margin-top: 20px;">
+                    <strong style="color: var(--text-primary); font-family: 'Fraunces', serif; font-size: 1.1rem;">Week 4 Goals:</strong>
+                    <ul style="margin-top: 12px; padding-left: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.7;">
+                        <li>Áp dụng storytelling vào professional contexts</li>
+                        <li>Kể chuyện về career, projects, clients, team</li>
+                        <li>Build professional storytelling skills</li>
+                        <li>Celebrate Week 4 milestone</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Week 3 Preview Quiz</h2>
+            <p class="section-desc">Kiểm tra hiểu biết về storytelling vs description. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Storytelling khác description ở điểm nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. Storytelling dài hơn description</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. Storytelling tạo engagement và emotion, description chỉ cung cấp facts</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. Storytelling chỉ dùng trong informal contexts</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. Không có sự khác biệt</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. Pattern nào là storytelling pattern?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. "The most memorable experience was..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. "You'll never believe what happened when..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. "I'd recommend visiting..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. "The best thing about... was..."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">3. Triết lý của Week 3 là gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Travel is about describing places</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. Travel is about recommending places</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. Travel isn't about describing places. It's about telling stories that people enjoy listening to</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. Travel is about sharing facts</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="a">
+                <div class="quiz-question">4. Câu nào là storytelling C1 style?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. "You'll never believe what happened. So there I was, lost in Tokyo. Funny story — we ended up having dinner with locals. Long story short, it was the best experience ever."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. "The most memorable experience was getting lost in Tokyo because we met interesting people."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. "I'd recommend getting lost in Tokyo because it's an interesting experience."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. "The best thing about Tokyo is that you can get lost and meet people."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. Week 3 tập trung vào kỹ năng gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. Description skills</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Storytelling skills</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Recommendation skills</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. Presentation skills</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/5</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-02-day-21.html" class="nav-btn">
+                <div class="nav-label">← Previous Week</div>
+                <div class="nav-title">Week 2: Everyday Fluency</div>
+            </a>
+            <a href="week-04.html" class="nav-btn disabled">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 4: Coming Soon</div>
+            </a>
+        </div>
+        
+        <a href="week-03-day-15.html" class="start-btn">🚀 Start Week 3: Day 15 - Travel Stories</a>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#4299E1"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#4299E1"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#4299E1" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#4299E1" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#4299E1"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Backpack -->
+            <rect x="60" y="130" width="25" height="30" fill="#2B6CB0" rx="3"/>
+            <rect x="65" y="135" width="15" height="10" fill="#4299E1" rx="2"/>
+        </svg>
+        <div class="mascot-speech">Let's tell stories! ✈️</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 3 · Storytelling & Experiences</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'b', q3: 'c', q4: 'a', q5: 'b' };
+        const explanations = {
+            q1: 'Storytelling tạo engagement và emotion, khiến người khác thích nghe. Description chỉ cung cấp facts mà không tạo engagement.',
+            q2: '"You\'ll never believe what happened when..." là storytelling pattern - tạo hook và kéo người nghe vào câu chuyện. Các pattern còn lại là description/recommendation patterns.',
+            q3: 'Triết lý của Week 3: "Travel isn\'t about describing places. It\'s about telling stories that people enjoy listening to." Đây là sự khác biệt giữa Week 3 và các giáo trình travel English thông thường.',
+            q4: 'Câu A là storytelling C1 style với các storytelling patterns: "You\'ll never believe", "So there I was", "Funny story", "Long story short". Các câu còn lại là description/recommendation style.',
+            q5: 'Week 3 tập trung vào storytelling skills - kể chuyện tự nhiên, engaging, khiến người khác thích nghe. Không phải description, recommendation, hay presentation skills.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You understand storytelling!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the storytelling examples.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the philosophy section.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the week content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
