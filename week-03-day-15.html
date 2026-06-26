@@ -1,0 +1,2548 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Day 15: Travel Stories | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #4299E1;
+            --primary-dark: #2B6CB0;
+            --primary-light: #63B3ED;
+            --primary-soft: #EBF8FF;
+            --secondary: #38B2AC;
+            --secondary-dark: #2C7A7B;
+            --secondary-soft: #E6FFFA;
+            --accent: #ED8936;
+            --accent-soft: #FFFAF0;
+            --warm: #ED8936;
+            --warm-soft: #FFFAF0;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 50%, var(--accent-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(66,153,225,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(56,178,172,0.2) 0%, transparent 40%);
+        }
+        
+        .day-header::after {
+            content: '🗺️';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-subtitle strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #BEE3F8; }
+        .section-teal { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #B2F5EA; }
+        .section-orange { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #FEEBC8; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E9D8FD; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #9B2C2C;
+            font-style: italic;
+        }
+        
+        .problem-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .problem-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .problem-box li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--life-dark);
+            font-style: italic;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARD ========== */
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pattern-number {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pattern-phonetic {
+            color: var(--text-muted);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .freq-badge, .register-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .freq-badge {
+            background: var(--warm-soft);
+            color: #744210;
+        }
+        
+        .register-badge {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--primary-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--primary-dark);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong { color: var(--primary-dark); }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary);
+            position: relative;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        
+        .audio-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-left: 8px;
+        }
+        
+        .audio-btn:hover {
+            background: var(--primary-light);
+            transform: scale(1.1);
+        }
+        
+        .audio-btn.playing {
+            background: var(--secondary);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .usage-note {
+            background: var(--accent-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+            margin-top: 12px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .usage-note strong { color: #744210; }
+        
+        /* ========== STORYTELLING EXAMPLE ========== */
+        .storytelling-example {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        
+        .storytelling-example h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .storytelling-text {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .storytelling-text strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .storytelling-analysis {
+            background: var(--life-bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.6;
+        }
+        
+        .storytelling-analysis h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        .storytelling-analysis ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .storytelling-analysis li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .storytelling-analysis li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PRONUNCIATION TABLE ========== */
+        .pronunciation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            font-size: 13px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .pronunciation-table tr:last-child td { border-bottom: none; }
+        
+        .pronunciation-table code {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--primary-dark);
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            border-color: var(--primary);
+        }
+        
+        .scenario-card.challenge {
+            background: linear-gradient(135deg, var(--warm-soft), var(--accent-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--primary); }
+        .scenario-card.challenge .scenario-badge { background: var(--warning); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: var(--primary-dark); }
+        .scenario-card.challenge h4 { color: #744210; }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: var(--primary-dark); }
+        .scenario-card.challenge p { color: #744210; }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-requirements { color: var(--primary-dark); }
+        .scenario-card.challenge .scenario-requirements { color: #744210; }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--primary); color: var(--primary-dark); }
+        .scenario-card.challenge .record-btn { border-color: var(--warning); color: #744210; }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--primary); color: white; }
+        .scenario-card.challenge .record-btn:hover { background: var(--warning); color: white; }
+        
+        /* ========== REALITY TASK ========== */
+        .task-levels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+        
+        .task-level {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 2px solid;
+            position: relative;
+        }
+        
+        .task-level.easy { border-color: var(--life); }
+        .task-level.standard { border-color: var(--biz); }
+        .task-level.challenge { border-color: var(--warning); }
+        
+        .task-level-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+        
+        .task-level.easy .task-level-badge { background: var(--life); }
+        .task-level.standard .task-level-badge { background: var(--biz); }
+        .task-level.challenge .task-level-badge { background: var(--warning); }
+        
+        .task-level h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 8px 0 6px;
+        }
+        
+        .task-level.easy h4 { color: var(--life-dark); }
+        .task-level.standard h4 { color: var(--biz-dark); }
+        .task-level.challenge h4 { color: #744210; }
+        
+        .task-time {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--bg);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .task-level p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .task-requirements {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .task-requirements ul {
+            padding-left: 16px;
+            margin-top: 4px;
+        }
+        
+        .task-requirements li {
+            padding: 2px 0;
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 10px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-tip strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(66,153,225,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            .day-header::after { font-size: 2.5rem; top: 20px; right: 20px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .task-levels { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-03.html" class="nav-back">← Week 3 Hub</a>
+            <div class="nav-progress">
+                <span>Day 15 / 21</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 71%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-03.html" class="day-tab">Overview</a>
+                <a href="week-03-day-15.html" class="day-tab active">Day 15</a>
+                <a href="week-03-day-16.html" class="day-tab">Day 16</a>
+                <a href="week-03-day-17.html" class="day-tab">Day 17</a>
+                <a href="week-03-day-18.html" class="day-tab">Day 18</a>
+                <a href="week-03-day-19.html" class="day-tab">Day 19</a>
+                <a href="week-03-day-20.html" class="day-tab">Day 20</a>
+                <a href="week-03-day-21.html" class="day-tab">Day 21</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-03.html">Week 3</a>
+                <span>›</span>
+                <span>Day 15</span>
+            </div>
+            <h1 class="day-title">🗺️ Travel Stories</h1>
+            <p class="day-subtitle">Travel stories aren't about <strong>where you went</strong>. They're about <strong>what happened</strong> and <strong>how it changed you</strong>. Today you'll learn to open stories with hooks, create suspense, and keep listeners engaged.</p>
+            <div class="day-meta">
+                <span class="meta-tag">🗺️ Travel Stories</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 5 storytelling patterns</span>
+                <span class="meta-tag">🎯 Hook & suspense</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>🗺️ From Description to Storytelling</h4>
+                <p>Most people describe their trips: "I went to Japan. It was beautiful." But C1 storytellers <strong>tell stories</strong> that pull listeners in: "You'll never believe what happened when we got lost in Tokyo..." The difference? <strong>Story vs. description. Engagement vs. information.</strong></p>
+            </div>
+            
+            <div class="problem-box">
+                <h4>❌ Why most travel stories are boring</h4>
+                <div class="comparison">
+                    "I went to Japan. It was beautiful. The food was good. I'd recommend visiting Kyoto."
+                </div>
+                <p>Nghe như đọc từ brochure. Không có story. Không có emotion. Không có gì để người nghe nhớ.</p>
+                <ul style="margin-top: 8px;">
+                    <li>Không có hook để kéo người nghe vào</li>
+                    <li>Không có suspense hay plot twists</li>
+                    <li>Không có emotional moments</li>
+                    <li>Không có personal insights</li>
+                </ul>
+            </div>
+            
+            <div class="solution-box">
+                <h4>✅ What C1 storytellers do differently</h4>
+                <div class="comparison">
+                    "You'll never believe what happened when we went to Japan. So there I was, lost in a small town with no phone signal at 11 PM. Funny story — we ended up having dinner with this elderly couple who didn't speak any English, but we communicated through gestures and had the most amazing time. Long story short, we missed our train but ended up having the most memorable experience of the entire trip."
+                </div>
+                <ul>
+                    <li><strong>"You'll never believe..."</strong> - Hook kéo người nghe vào</li>
+                    <li><strong>"So there I was..."</strong> - Set the scene, immersive</li>
+                    <li><strong>"Funny story..."</strong> - Light-hearted transition</li>
+                    <li><strong>"Long story short..."</strong> - Summarize, keep engagement</li>
+                    <li><strong>Plot twist</strong>: "missed our train but ended up having the most memorable experience"</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">5 Patterns</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Storytelling openers</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎭</div>
+                    <div class="plan-block-title">Examples</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Integrated stories</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗣️</div>
+                    <div class="plan-block-title">Speaking</div>
+                    <div class="plan-block-time">25 min</div>
+                    <div class="plan-block-desc">4 scenarios + record</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎴</div>
+                    <div class="plan-block-title">Review</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Flashcards + quiz</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5 Storytelling Patterns -->
+        <section class="section section-teal">
+            <h2 class="section-title"><span class="section-icon">📚</span> 5 Travel Storytelling Patterns</h2>
+            <p class="section-desc">5 patterns để mở đầu câu chuyện, tạo hook, và kéo người nghe vào câu chuyện của bạn. Click 🔊 để nghe phát âm.</p>
+            
+            <!-- Pattern 1 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">1</div>
+                    <div>"You'll never believe what happened when..."</div>
+                </div>
+                <div class="pattern-phonetic">/juːl ˈnɛvər bɪˈliːv wʌt ˈhæpənd wɛn/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Tạo hook, kéo người nghe vào câu chuyện với suspense. Hyperbole tạo curiosity.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "You'll never believe" = hyperbole tạo curiosity. "what happened when" = promise of story. Mở đầu engaging, không phải "I went to...". Khiến người nghe muốn nghe tiếp.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'You will never believe what happened when we tried to cook pasta in our Airbnb.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>You'll never believe</strong> what happened when we tried to cook pasta in our Airbnb."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'You will never believe what happened when we got lost in the mountains.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>You'll never believe</strong> what happened when we got lost in the mountains."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'You will never believe what happened when we pitched to that client.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>You'll never believe</strong> what happened when we pitched to that client."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'You will never believe what happened when we launched the product.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>You'll never believe</strong> what happened when we launched the product."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng khi có story thú vị, unexpected. Không dùng cho stories bình thường. Phải có payoff (kết thúc thú vị).
+                </div>
+            </div>
+            
+            <!-- Pattern 2 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">2</div>
+                    <div>"So there I was, [situation]..."</div>
+                </div>
+                <div class="pattern-phonetic">/soʊ ðɛr aɪ wʌz [sɪtʃuˈeɪʃən]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Set the scene, immersive storytelling. Tạo visual image trong đầu người nghe.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "So there I was" = immediate immersion. Tạo visual image trong đầu người nghe. Khiến người nghe feel like they're there. Natural storytelling opener.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'So there I was, standing in the middle of a rice field with no idea where I was.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>So there I was</strong>, standing in the middle of a rice field with no idea where I was."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'So there I was, trying to order food in Japanese with zero confidence.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>So there I was</strong>, trying to order food in Japanese with zero confidence."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'So there I was, presenting to the board with my slides frozen on the screen.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>So there I was</strong>, presenting to the board with my slides frozen on the screen."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'So there I was, negotiating with a client who kept changing the terms.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>So there I was</strong>, negotiating with a client who kept changing the terms."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để set scene, tạo context. Thường đi sau hook hoặc opening. Thêm details để make it vivid.
+                </div>
+            </div>
+            
+            <!-- Pattern 3 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">3</div>
+                    <div>"Funny story..."</div>
+                </div>
+                <div class="pattern-phonetic">/ˈfʌni ˈstɔːri/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Casual</span>
+                </div>
+                <p class="pattern-meaning">Light-hearted story opener, transition. Signal of humor.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Funny story" = signal of humor. Tạo expectation of entertainment. Natural transition trong conversation. Khiến conversation lighter, more engaging.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Funny story, we ended up having dinner with a local family instead of going to the restaurant.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Funny story</strong> — we ended up having dinner with a local family instead of going to the restaurant."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Funny story, the hidden gem hotel turned out to be right next to a construction site.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Funny story</strong> — the 'hidden gem' hotel turned out to be right next to a construction site."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Funny story, the client who was hardest to reach ended up being our biggest client.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Funny story</strong> — the client who was hardest to reach ended up being our biggest client."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Funny story, the presentation that went wrong ended up leading to a better solution.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Funny story</strong> — the presentation that went wrong ended up leading to a better solution."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng khi story có humorous element. Không dùng cho serious stories. Tạo lighter tone trong conversation.
+                </div>
+            </div>
+            
+            <!-- Pattern 4 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">4</div>
+                    <div>"Long story short..."</div>
+                </div>
+                <div class="pattern-phonetic">/lɒŋ ˈstɔːri ʃɔːrt/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Summarize long story, get to the point. Show respect for listener's time.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Long story short" = acknowledge story is long. Show respect for listener's time. Natural way to summarize. Keep conversation flowing.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Long story short, we missed our train but ended up having the best weekend ever.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Long story short</strong>, we missed our train but ended up having the best weekend ever."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Long story short, we got lost for 3 hours but found this amazing hidden beach.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Long story short</strong>, we got lost for 3 hours but found this amazing hidden beach."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Long story short, the deal fell through but we learned a valuable lesson.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Long story short</strong>, the deal fell through but we learned a valuable lesson."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Long story short, the project took twice as long but the results were worth it.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Long story short</strong>, the project took twice as long but the results were worth it."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng khi story có nhiều details. Transition đến conclusion/payoff. Show consideration for listener.
+                </div>
+            </div>
+            
+            <!-- Pattern 5 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">5</div>
+                    <div>"The whole time, I was thinking..."</div>
+                </div>
+                <div class="pattern-phonetic">/ðə hoʊl taɪm aɪ wʌz ˈθɪŋkɪŋ/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Share internal thoughts, create empathy. Add emotional depth to story.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "The whole time" = emphasize duration. "I was thinking" = share internal state. Create empathy với listener. Add emotional depth to story.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The whole time, I was thinking this was a terrible idea, but it turned out amazing.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The whole time</strong>, I was thinking this was a terrible idea, but it turned out amazing."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The whole time, I was wondering if we would ever find our way back.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The whole time</strong>, I was wondering if we'd ever find our way back."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The whole time, I was thinking the presentation was going too long, but the client loved it.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>The whole time</strong>, I was thinking the presentation was going too long, but the client loved it."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The whole time, I was worried about the budget, but we ended up under budget.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>The whole time</strong>, I was worried about the budget, but we ended up under budget."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để share internal thoughts/feelings. Create contrast với outcome. Add emotional depth. Show vulnerability.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Integrated Story Examples -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">🎭</span> Integrated Story Examples</h2>
+            <p class="section-desc">Xem cách 5 storytelling patterns được kết hợp trong 2 stories hoàn chỉnh. Click 🔊 để nghe từng story.</p>
+            
+            <!-- Story 1 -->
+            <div class="storytelling-example">
+                <h4>🗺️ Story 1: Travel Mishap in Japan</h4>
+                <button class="audio-btn" onclick="playAudio(this, 'You will never believe what happened when we went to Japan. We had this amazing itinerary planned. So there I was, at the train station in Kyoto, trying to figure out how to get to our ryokan. Funny story, I had printed out the directions in English, but of course, no one could read them. Long story short, we ended up asking this elderly couple for help, and they did not speak any English, but they invited us to have dinner with them. The whole time, I was thinking we were going to miss our train and ruin the whole trip, but it turned out to be the most memorable experience of the entire trip. We communicated through gestures, had this amazing home-cooked meal, and they even walked us to the ryokan themselves. Looking back, that was the moment that made the trip special. Not the temples or the food we had planned for, but this unexpected connection with strangers who became friends for a night.')" style="float: right; margin-top: -30px;">🔊</button>
+                <div class="storytelling-text">
+                    "<strong>You'll never believe</strong> what happened when we went to Japan. We had this amazing itinerary planned — Tokyo, Kyoto, Osaka, the whole thing. <strong>So there I was</strong>, at the train station in Kyoto, trying to figure out how to get to our ryokan. <strong>Funny story</strong> — I had printed out the directions in English, but of course, no one could read them.
+                    <br><br>
+                    <strong>Long story short</strong>, we ended up asking this elderly couple for help, and they didn't speak any English, but they invited us to have dinner with them. <strong>The whole time</strong>, I was thinking we were going to miss our train and ruin the whole trip, but it turned out to be the most memorable experience of the entire trip. We communicated through gestures, had this amazing home-cooked meal, and they even walked us to the ryokan themselves.
+                    <br><br>
+                    Looking back, that was the moment that made the trip special. Not the temples or the food we'd planned for — but this unexpected connection with strangers who became friends for a night."
+                </div>
+                <div class="storytelling-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li><strong>"You'll never believe..."</strong> - Hook tạo curiosity</li>
+                        <li><strong>"So there I was..."</strong> - Set scene, immersive</li>
+                        <li><strong>"Funny story..."</strong> - Light transition</li>
+                        <li><strong>"Long story short..."</strong> - Summarize</li>
+                        <li><strong>"The whole time, I was thinking..."</strong> - Internal thoughts, empathy</li>
+                        <li><strong>Plot twist</strong>: "miss our train" → "most memorable experience"</li>
+                        <li><strong>Emotional arc</strong>: Worry → Surprise → Gratitude</li>
+                        <li><strong>Reflective ending</strong>: "Looking back..."</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Story 2 -->
+            <div class="storytelling-example" style="margin-top: 20px;">
+                <h4>💼 Story 2: Business Travel Story in Singapore</h4>
+                <button class="audio-btn" onclick="playAudio(this, 'You will never believe what happened when we flew to Singapore for that client pitch. So there I was, in the airport at 6 AM, realizing I had left my laptop bag in the Uber. Funny story, I had to borrow a laptop from a stranger at the gate, and it turned out he was from the same company we were pitching to. Long story short, we ended up having coffee together before the flight, and he gave me some insider tips about what the client was really looking for. The whole time, I was thinking my presentation was going to be a disaster without my slides, but it turned out to be the best pitch we had ever done. Looking back, that disaster turned into one of our most successful client relationships. Sometimes the universe has a funny way of helping you out.')" style="float: right; margin-top: -30px;">🔊</button>
+                <div class="storytelling-text">
+                    "<strong>You'll never believe</strong> what happened when we flew to Singapore for that client pitch. <strong>So there I was</strong>, in the airport at 6 AM, realizing I'd left my laptop bag in the Uber. <strong>Funny story</strong> — I had to borrow a laptop from a stranger at the gate, and it turned out he was from the same company we were pitching to.
+                    <br><br>
+                    <strong>Long story short</strong>, we ended up having coffee together before the flight, and he gave me some insider tips about what the client was really looking for. <strong>The whole time</strong>, I was thinking my presentation was going to be a disaster without my slides, but it turned out to be the best pitch we'd ever done.
+                    <br><br>
+                    Looking back, that 'disaster' turned into one of our most successful client relationships. Sometimes the universe has a funny way of helping you out."
+                </div>
+                <div class="storytelling-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li><strong>"You'll never believe..."</strong> - Hook</li>
+                        <li><strong>"So there I was..."</strong> - Set scene</li>
+                        <li><strong>"Funny story..."</strong> - Light transition</li>
+                        <li><strong>"Long story short..."</strong> - Summarize</li>
+                        <li><strong>"The whole time, I was thinking..."</strong> - Internal thoughts</li>
+                        <li><strong>Plot twist</strong>: "disaster" → "best pitch"</li>
+                        <li><strong>Emotional arc</strong>: Panic → Surprise → Success</li>
+                        <li><strong>Reflective ending</strong>: "Looking back..."</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pronunciation -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Pronunciation Focus</h2>
+            <p class="section-desc">Storytelling phrases pronunciation và connected speech patterns.</p>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 0 0 12px; color: var(--text-primary);">🔤 Storytelling Phrases</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Phrase</th>
+                        <th>IPA</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>You'll never believe</strong></td>
+                        <td><code>/juːl ˈnɛvər bɪˈliːv/</code></td>
+                        <td>Linking: "You'll" = /juːl/</td>
+                    </tr>
+                    <tr>
+                        <td><strong>So there I was</strong></td>
+                        <td><code>/soʊ ðɛr aɪ wʌz/</code></td>
+                        <td>"there" = /ðɛr/ (not /ðɛə/)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Funny story</strong></td>
+                        <td><code>/ˈfʌni ˈstɔːri/</code></td>
+                        <td>Stress on "fun" and "sto"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Long story short</strong></td>
+                        <td><code>/lɒŋ ˈstɔːri ʃɔːrt/</code></td>
+                        <td>Linking: "story short"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The whole time</strong></td>
+                        <td><code>/ðə hoʊl taɪm/</code></td>
+                        <td>"whole" = /hoʊl/</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🔗 Connected Speech</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Phrase</th>
+                        <th>Natural Pronunciation</th>
+                        <th>Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"You'll never believe"</td>
+                        <td><code>/juːl ˈnɛvər bɪˈliːv/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                    <tr>
+                        <td>"So there I was"</td>
+                        <td><code>/soʊ ðɛr aɪ wʌz/</code></td>
+                        <td>Smooth flow</td>
+                    </tr>
+                    <tr>
+                        <td>"Long story short"</td>
+                        <td><code>/lɒŋ ˈstɔːri ʃɔːrt/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                    <tr>
+                        <td>"The whole time"</td>
+                        <td><code>/ðə hoʊl taɪm/</code></td>
+                        <td>Smooth</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+            
+            <div style="background: var(--bg); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--life); font-size: 13px; line-height: 1.8;">
+                <div><code>"You'll never believe what happened..."</code> ↗ - Rising (create suspense)</div>
+                <div><code>"So there I was..."</code> ↘ - Falling (set scene)</div>
+                <div><code>"Funny story..."</code> ↗↘ - Rise-fall (humor)</div>
+                <div><code>"Long story short..."</code> ↘ - Falling (summarize)</div>
+                <div><code>"The whole time, I was thinking..."</code> ↘ - Falling (reflective)</div>
+            </div>
+        </section>
+        
+        <!-- Speaking Scenarios -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🗣️</span> Speaking: 4 Scenarios</h2>
+            <p class="section-desc">4 scenarios để practice storytelling. Mỗi scenario có sample flow để bạn tham khảo. Click vào nút để xem chi tiết.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1 -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - 3-4 min</span>
+                    <h4>Scenario 1: Travel Story với bạn</h4>
+                    <p>Bạn đang nói chuyện với bạn về chuyến đi gần nhất.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 storytelling patterns</li>
+                            <li>Tạo hook hấp dẫn</li>
+                            <li>Có plot twist hoặc unexpected moment</li>
+                            <li>Share internal thoughts/feelings</li>
+                            <li>Có reflective ending</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('friend')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business - 3-4 min</span>
+                    <h4>Scenario 2: Business Travel Story</h4>
+                    <p>Bạn đang nói chuyện với colleague về business trip.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 storytelling patterns</li>
+                            <li>Professional tone nhưng vẫn engaging</li>
+                            <li>Có business lesson learned</li>
+                            <li>Share professional insight</li>
+                            <li>Connect story với work context</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('colleague')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 3 -->
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">🔄 Mixed - 3-4 min</span>
+                    <h4>Scenario 3: Networking Event</h4>
+                    <p>Bạn đang ở networking event, ai đó hỏi về travel.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 storytelling patterns</li>
+                            <li>Balance professional và personal</li>
+                            <li>Story phải memorable và engaging</li>
+                            <li>Connect travel với broader insight</li>
+                            <li>Keep conversation flowing</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('networking')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 4 -->
+                <div class="scenario-card challenge">
+                    <span class="scenario-badge">🔥 Challenge - 5 min</span>
+                    <h4>Scenario 4: Podcast Interview</h4>
+                    <p>Bạn đang trong podcast/video, được hỏi về memorable travel experience.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng TẤT CẢ 5 storytelling patterns</li>
+                            <li>Story phải có arc (beginning, middle, end)</li>
+                            <li>Có emotional depth</li>
+                            <li>Có reflective insight</li>
+                            <li>Keep listener engaged for 5 minutes</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('podcast')">🎙️ Xem Sample Flow</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reality Task -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Reality Task - Choose Your Level</h2>
+            <p class="section-desc">Bài tập THỰC TẾ - apply storytelling patterns vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+            
+            <div class="task-levels">
+                <div class="task-level easy">
+                    <div class="task-level-badge">EASY</div>
+                    <h4>📝 Write a Travel Story</h4>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p>Viết 150-word travel story dùng ít nhất 3 storytelling patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng "You'll never believe..." hoặc "So there I was..."</li>
+                            <li>Dùng "Funny story..." hoặc "Long story short..."</li>
+                            <li>Dùng "The whole time, I was thinking..."</li>
+                            <li>Có plot twist hoặc unexpected moment</li>
+                            <li>Có reflective ending</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--life-bg); border-radius: 6px; font-size: 12px; color: var(--life-dark);">
+                        <strong>Deliverable:</strong> Text post (LinkedIn hoặc gửi cho bạn)
+                    </div>
+                </div>
+                
+                <div class="task-level standard">
+                    <div class="task-level-badge">STANDARD</div>
+                    <h4>🎙️ Tell a Travel Story</h4>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p>Record 3-minute travel story dùng ít nhất 4 storytelling patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng ít nhất 4 storytelling patterns</li>
+                            <li>Có clear story arc (beginning, middle, end)</li>
+                            <li>Có emotional depth</li>
+                            <li>Natural delivery (không đọc script)</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--biz-bg); border-radius: 6px; font-size: 12px; color: var(--biz-dark);">
+                        <strong>Deliverable:</strong> Audio recording
+                    </div>
+                </div>
+                
+                <div class="task-level challenge">
+                    <div class="task-level-badge">CHALLENGE</div>
+                    <h4>🎥 5-Minute Travel Storytelling</h4>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p>Record 5-minute travel story dùng TẤT CẢ 5 storytelling patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng TẤT CẢ 5 storytelling patterns</li>
+                            <li>Story có clear arc</li>
+                            <li>Có emotional depth và insight</li>
+                            <li>Engaging delivery</li>
+                            <li>Record 3 iterations (Content → Delivery → Polish)</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--warm-soft); border-radius: 6px; font-size: 12px; color: #744210;">
+                        <strong>Deliverable:</strong> Video file HOẶC LinkedIn post
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard Review</h2>
+            <p class="section-desc">6 flashcards với storytelling patterns và tips. Mặt trước: pattern. Mặt sau: example + tip.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-pattern" id="fc-pattern">You'll never believe what happened when...</div>
+                            <div class="card-hint">Tap to reveal example →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-example" id="fc-example">"You'll never believe what happened when we got lost in Tokyo."</div>
+                            <div class="card-tip" id="fc-tip">
+                                <strong>💡 Tip:</strong>
+                                Tạo hook, kéo người nghe vào story. Dùng khi có unexpected moment. Hyperbole tạo curiosity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-teal">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Travel Storytelling</h2>
+            <p class="section-desc">7 câu hỏi về storytelling patterns. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Pattern nào tạo hook tốt nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "I went to Japan last year."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "You'll never believe what happened when we went to Japan."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "Japan was a beautiful country."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "I'd recommend visiting Japan."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">2. "So there I was, lost in the mountains" - pattern này làm gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. Summarize story</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. Create hook</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. Set scene, create immersion</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. Share lesson learned</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">3. "Funny story..." dùng khi nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Khi story serious</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. Khi story có humorous element</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. Khi muốn summarize</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. Khi muốn share lesson</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">4. "Long story short..." dùng để làm gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. Tạo hook</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. Set scene</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. Summarize long story</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. Share internal thoughts</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">5. "The whole time, I was thinking..." thêm gì vào story?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. Plot twist</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Scene setting</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Emotional depth, internal thoughts</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. Summary</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">6. Story nào là storytelling C1 style?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. "I went to Japan. It was beautiful. The food was good."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. "You'll never believe what happened. So there I was, lost in Tokyo. Funny story — we ended up having dinner with locals. Long story short, it was the best experience ever."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. "Japan is a great country to visit. I'd recommend it."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. "The most memorable experience was getting lost in Tokyo."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Pattern nào KHÔNG phải storytelling pattern?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. "You'll never believe..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. "So there I was..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. "The most memorable experience was..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. "Long story short..."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-03.html" class="nav-btn">
+                <div class="nav-label">← Back to</div>
+                <div class="nav-title">Week 3 Hub</div>
+            </a>
+            <a href="week-03-day-16.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 16: Unexpected Moments</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 15 Complete & Continue to Day 16</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#4299E1"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#4299E1"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#4299E1" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#4299E1" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#4299E1"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Map -->
+            <rect x="60" y="140" width="25" height="20" fill="#FFF" stroke="#2D3748" stroke-width="1.5" rx="2"/>
+            <line x1="65" y1="145" x2="80" y2="145" stroke="#4299E1" stroke-width="1"/>
+            <line x1="65" y1="150" x2="80" y2="150" stroke="#4299E1" stroke-width="1"/>
+            <line x1="65" y1="155" x2="80" y2="155" stroke="#4299E1" stroke-width="1"/>
+        </svg>
+        <div class="mascot-speech">Let's tell stories! 🗺️</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 3 · Day 15 · Travel Stories</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 0.9;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = audioSpeed;
+                utterance.pitch = 1.05;
+                
+                const voices = speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US' && (v.name.includes('Google') || v.name.includes('Natural'))) 
+                             || voices.find(v => v.lang === 'en-US')
+                             || voices[0];
+                if (usVoice) utterance.voice = usVoice;
+                
+                if (btn) {
+                    btn.classList.add('playing');
+                    utterance.onend = () => btn.classList.remove('playing');
+                    utterance.onerror = () => btn.classList.remove('playing');
+                }
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
+        
+        // ========== SCENARIO DETAILS ==========
+        function showScenarioDetails(scenario) {
+            const details = {
+                friend: `🏠 FRIEND SCENARIO (3-4 phút):
+
+Context: Bạn đang nói chuyện với bạn về chuyến đi gần nhất.
+
+Sample flow:
+Friend: "How was your trip to Thailand?"
+
+You: "You'll never believe what happened when we went to Bangkok. 
+So there I was, at the airport at 2 AM, realizing we'd booked the 
+wrong hotel. Funny story — we ended up finding this amazing hidden 
+guesthouse that wasn't even on any booking site. The whole time, 
+I was thinking we were going to be stuck sleeping at the airport, 
+but it turned out to be the best accommodation of the whole trip. 
+Long story short, the owner became our guide for the whole week 
+and showed us places we never would have found on our own."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 storytelling patterns
+✅ Tạo hook hấp dẫn
+✅ Có plot twist hoặc unexpected moment
+✅ Share internal thoughts/feelings
+✅ Có reflective ending
+
+💡 Mẹo: Focus vào emotional arc, không chỉ facts.`,
+
+                colleague: `💼 COLLEAGUE SCENARIO (3-4 phút):
+
+Context: Bạn đang nói chuyện với colleague về business trip.
+
+Sample flow:
+Colleague: "How did the client meeting in Singapore go?"
+
+You: "You'll never believe what happened. So there I was, in the 
+boardroom, and the client started asking questions in Mandarin — 
+which I don't speak. Funny story — our interpreter was stuck in 
+traffic, so I had to use the little Mandarin I learned in college. 
+Long story short, the client was so impressed that we tried that 
+they ended up expanding the scope of the project. The whole time, 
+I was thinking I was going to embarrass the company, but it turned 
+out to be the breakthrough we needed."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 storytelling patterns
+✅ Professional tone nhưng vẫn engaging
+✅ Có business lesson learned
+✅ Share professional insight
+✅ Connect story với work context
+
+💡 Mẹo: Balance professional và personal.`,
+
+                networking: `🔄 NETWORKING SCENARIO (3-4 phút):
+
+Context: Bạn đang ở networking event, ai đó hỏi về travel.
+
+Sample flow:
+Person: "Do you travel much for work?"
+
+You: "You'll never believe what happened on my last business trip 
+to Japan. So there I was, lost in this tiny town with no phone 
+signal, and I stumbled into this tiny ramen shop. Funny story — 
+the owner didn't speak any English, but we ended up having this 
+amazing conversation through gestures and broken Japanese. Long 
+story short, he invited me to see his ramen-making process the 
+next morning. The whole time, I was thinking I was going to miss 
+my flight, but it turned out to be the most memorable part of the 
+trip. It reminded me that sometimes the best business connections 
+happen when you least expect them."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 storytelling patterns
+✅ Balance professional + personal
+✅ Story phải memorable và engaging
+✅ Connect travel với broader insight
+✅ Keep conversation flowing
+
+💡 Mẹo: Đây là scenario khó nhất - phải balance 2 contexts.`,
+
+                podcast: `🎙️ PODCAST SCENARIO (5 phút):
+
+Context: Bạn đang trong podcast/video, được hỏi về memorable travel experience.
+
+Structure:
+1. Hook (30s): "You'll never believe what happened when..."
+2. Set scene (1 min): "So there I was..."
+3. Complication (1 min): "Funny story..." / problem arises
+4. Resolution (1 min): "Long story short..." / resolution
+5. Reflection (1 min): "The whole time, I was thinking..." / insight
+6. Takeaway (30s): "Looking back..." / lesson learned
+
+Yêu cầu:
+✅ Dùng TẤT CẢ 5 storytelling patterns
+✅ Story phải có arc (beginning, middle, end)
+✅ Có emotional depth
+✅ Có reflective insight
+✅ Keep listener engaged for 5 minutes
+
+💡 Mẹo: Practice 3 lần trước khi record chính thức. So sánh lần 1 vs lần 3.`
+            };
+            
+            alert(details[scenario]);
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                pattern: "You'll never believe what happened when...",
+                example: '"You\'ll never believe what happened when we got lost in Tokyo."',
+                tip: '💡 Tip: Tạo hook, kéo người nghe vào story. Dùng khi có unexpected moment. Hyperbole tạo curiosity.'
+            },
+            { 
+                pattern: "So there I was, [situation]...",
+                example: '"So there I was, standing in the rain with no umbrella."',
+                tip: '💡 Tip: Set scene, tạo visual image. Khiến người nghe feel like they\'re there.'
+            },
+            { 
+                pattern: "Funny story...",
+                example: '"Funny story — we ended up having dinner with locals."',
+                tip: '💡 Tip: Light-hearted transition. Dùng khi story có humorous element.'
+            },
+            { 
+                pattern: "Long story short...",
+                example: '"Long story short, we missed the train but had the best time."',
+                tip: '💡 Tip: Summarize long story. Show respect for listener\'s time.'
+            },
+            { 
+                pattern: "The whole time, I was thinking...",
+                example: '"The whole time, I was thinking this was a disaster, but it turned out amazing."',
+                tip: '💡 Tip: Share internal thoughts. Create empathy. Add emotional depth.'
+            },
+            { 
+                pattern: "Integrated storytelling",
+                example: '"You\'ll never believe... So there I was... Funny story... Long story short... The whole time..."',
+                tip: '💡 Tip: Kết hợp tất cả patterns để tạo engaging story với arc.'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-pattern').textContent = card.pattern;
+            document.getElementById('fc-example').textContent = card.example;
+            document.getElementById('fc-tip').innerHTML = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'c', q3: 'b', q4: 'c', q5: 'c', q6: 'b', q7: 'c' };
+        const explanations = {
+            q1: 'B tạo curiosity và suspense với "You\'ll never believe". A, C, D là description/recommendation, không phải storytelling.',
+            q2: '"So there I was..." = set scene, tạo visual image, khiến người nghe feel like they\'re there. Không phải summarize, hook, hay lesson.',
+            q3: '"Funny story..." = signal of humor, light-hearted transition. Dùng khi story có humorous element.',
+            q4: '"Long story short..." = summarize long story, get to the point. Show respect for listener\'s time.',
+            q5: '"The whole time, I was thinking..." = share internal thoughts, create empathy, add emotional depth.',
+            q6: 'B là storytelling C1 style với các storytelling patterns: "You\'ll never believe", "So there I was", "Funny story", "Long story short". A, C, D là description/recommendation style.',
+            q7: 'C "The most memorable experience was..." là description pattern, không phải storytelling pattern. A, B, D là storytelling patterns.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered travel storytelling!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the storytelling examples.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the patterns section.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the day content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week3Days') || '[]');
+            
+            if (!completed.includes(15)) {
+                completed.push(15);
+                localStorage.setItem('week3Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(3)) {
+                        completedWeeks.push(3);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 3 completed! You can now tell engaging travel stories! 🦊');
+                } else {
+                    alert(`✅ Day 15 completed! ${7 - completed.length} days left in Week 3. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-03-day-16.html';
+            } else {
+                if (confirm('✅ Day 15 already completed! Go to Day 16?')) {
+                    location.href = 'week-03-day-16.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
