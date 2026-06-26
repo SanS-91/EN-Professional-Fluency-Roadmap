@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Day 9: Deep Work & Flow | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #805AD5;
+            --primary-dark: #6B46C1;
+            --primary-light: #B794D6;
+            --primary-soft: #F5F0FF;
+            --secondary: #F6AD55;
+            --secondary-dark: #DD6B20;
+            --secondary-soft: #FFFAF0;
+            --accent: #319795;
+            --accent-soft: #E6FFFA;
+            --warm: #F6AD55;
+            --warm-soft: #FFFAF0;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #E9D8FD 40%, var(--secondary-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(128,90,213,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(246,173,85,0.2) 0%, transparent 40%);
+        }
+        
+        .day-header::after {
+            content: '⚡';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FEEBC8; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #E9D8FD; }
+        .section-orange { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #FEEBC8; }
+        .section-mint { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-sky { background: linear-gradient(135deg, #FFFFFF 0%, var(--biz-bg) 100%); border-color: #BEE3F8; }
+        .section-accent { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #B2F5EA; }
+        .section-focus { 
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #E9D8FD 50%, var(--secondary-soft) 100%); 
+            border-color: var(--primary);
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), #E9D8FD);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #9B2C2C;
+            font-style: italic;
+        }
+        
+        .problem-box p {
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--life-dark);
+            font-style: italic;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARD ========== */
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pattern-number {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pattern-phonetic {
+            color: var(--text-muted);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .freq-badge, .register-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .freq-badge {
+            background: var(--warm-soft);
+            color: #744210;
+        }
+        
+        .register-badge {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--primary-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--primary-dark);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong { color: var(--primary-dark); }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary);
+            position: relative;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        
+        .audio-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-left: 8px;
+        }
+        
+        .audio-btn:hover {
+            background: var(--primary-light);
+            transform: scale(1.1);
+        }
+        
+        .audio-btn.playing {
+            background: var(--secondary);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .hedging-box {
+            background: var(--secondary-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+            margin-top: 10px;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .hedging-box strong { color: #744210; display: block; margin-bottom: 4px; }
+        
+        .context-note {
+            background: var(--warm-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--warning);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+        }
+        
+        .context-note strong { color: #744210; }
+        
+        .mistake-box {
+            background: #FED7D7;
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--error);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        /* ========== EMPATHY RESPONSES ========== */
+        .empathy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .empathy-category {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        
+        .empathy-category h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .empathy-list {
+            list-style: none;
+        }
+        
+        .empathy-list li {
+            padding: 6px 10px;
+            background: var(--bg);
+            border-radius: 6px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            border-left: 3px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .empathy-list li:hover {
+            background: var(--primary-soft);
+            border-left-color: var(--secondary);
+        }
+        
+        /* ========== TRANSCRIPT ========== */
+        .transcript-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        
+        .transcript-line {
+            padding: 10px 0;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px dashed var(--border-light);
+        }
+        
+        .transcript-line:last-child { border-bottom: none; }
+        
+        .speaker {
+            font-weight: 700;
+            margin-right: 6px;
+        }
+        
+        .speaker.minh { color: var(--primary-dark); }
+        .speaker.sarah { color: var(--secondary-dark); }
+        
+        .highlight {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--primary-dark);
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .annotation {
+            color: var(--text-muted);
+            font-size: 11px;
+            font-style: italic;
+            margin-left: 4px;
+        }
+        
+        /* ========== AUDIO PLAYER ========== */
+        .audio-player {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .play-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .play-btn:hover { transform: scale(1.1); }
+        
+        .play-btn.playing {
+            background: var(--secondary);
+            color: white;
+            animation: pulse 1s infinite;
+        }
+        
+        .audio-info { flex: 1; }
+        
+        .audio-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .audio-meta {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        /* ========== PRONUNCIATION TABLE ========== */
+        .pronunciation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            font-size: 13px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .pronunciation-table tr:last-child td { border-bottom: none; }
+        
+        .pronunciation-table code {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--primary-dark);
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            border-color: var(--primary);
+        }
+        
+        .scenario-card.challenge {
+            background: linear-gradient(135deg, var(--warm-soft), var(--secondary-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--primary); }
+        .scenario-card.challenge .scenario-badge { background: var(--warning); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: var(--primary-dark); }
+        .scenario-card.challenge h4 { color: #744210; }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: var(--primary-dark); }
+        .scenario-card.challenge p { color: #744210; }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-requirements { color: var(--primary-dark); }
+        .scenario-card.challenge .scenario-requirements { color: #744210; }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--primary); color: var(--primary-dark); }
+        .scenario-card.challenge .record-btn { border-color: var(--warning); color: #744210; }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--primary); color: white; }
+        .scenario-card.challenge .record-btn:hover { background: var(--warning); color: white; }
+        
+        /* ========== REALITY TASK ========== */
+        .task-levels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+        
+        .task-level {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 2px solid;
+            position: relative;
+        }
+        
+        .task-level.easy { border-color: var(--life); }
+        .task-level.standard { border-color: var(--biz); }
+        .task-level.challenge { border-color: var(--warning); }
+        
+        .task-level-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+        
+        .task-level.easy .task-level-badge { background: var(--life); }
+        .task-level.standard .task-level-badge { background: var(--biz); }
+        .task-level.challenge .task-level-badge { background: var(--warning); }
+        
+        .task-level h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 8px 0 6px;
+        }
+        
+        .task-level.easy h4 { color: var(--life-dark); }
+        .task-level.standard h4 { color: var(--biz-dark); }
+        .task-level.challenge h4 { color: #744210; }
+        
+        .task-time {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--bg);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .task-level p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .task-requirements {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .task-requirements ul {
+            padding-left: 16px;
+            margin-top: 4px;
+        }
+        
+        .task-requirements li {
+            padding: 2px 0;
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 10px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-tip strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(128,90,213,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            .day-header::after { font-size: 2.5rem; top: 20px; right: 20px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .task-levels { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-02.html" class="nav-back">← Week 2 Hub</a>
+            <div class="nav-progress">
+                <span>Day 9 / 14</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 64%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-02.html" class="day-tab">Overview</a>
+                <a href="week-02-day-8.html" class="day-tab">Day 8</a>
+                <a href="week-02-day-9.html" class="day-tab active">Day 9</a>
+                <a href="week-02-day-10.html" class="day-tab">Day 10</a>
+                <a href="week-02-day-11.html" class="day-tab">Day 11</a>
+                <a href="week-02-day-12.html" class="day-tab">Day 12</a>
+                <a href="week-02-day-13.html" class="day-tab">Day 13</a>
+                <a href="week-02-day-14.html" class="day-tab">Day 14</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-02.html">Week 2</a>
+                <span>›</span>
+                <span>Day 9</span>
+            </div>
+            <h1 class="day-title">⚡ Deep Work & Flow</h1>
+            <p class="day-subtitle">Productivity isn't about doing more. It's about <strong>doing what matters, deeply</strong>. Learn to share your productivity system with critical thinking, vulnerability, and evidence-based insights.</p>
+            <div class="day-meta">
+                <span class="meta-tag">⚡ Deep Work & Flow</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 5 new patterns</span>
+                <span class="meta-tag">💬 5 empathy responses</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>⚡ Deep work requires deep communication</h4>
+                <p>When someone asks "How do you stay productive?", they're not just asking for tips — they're asking <strong>how you think</strong>. A C1 speaker shares their system with <strong>critical thinking, evidence, and vulnerability</strong> — not generic advice.</p>
+            </div>
+            
+            <div class="problem-box">
+                <h4>❌ Why most people sound generic</h4>
+                <div class="comparison">
+                    "I use a to-do list. I try to focus. I avoid distractions."
+                </div>
+                <p>Nghe như đọc từ blog generic. Không có personal insight. Không có critical thinking. Không có gì để đối phương học được.</p>
+            </div>
+            
+            <div class="solution-box">
+                <h4>✅ C1 speakers làm gì khác?</h4>
+                <div class="comparison">
+                    "What works for me is blocking out 2 hours every morning for deep work — no email, no Slack. I've been using this for 6 months, and I've noticed my output has doubled. The key is protecting that time ruthlessly, not just 'finding time' — because you never 'find' time, you make it."
+                </div>
+                <ul>
+                    <li><strong>"What works for me is..."</strong> - personal system (không generic)</li>
+                    <li><strong>"I've been using... for 6 months, and I've noticed..."</strong> - evidence-based</li>
+                    <li><strong>"The key is X, not Y"</strong> - contrast + critical thinking</li>
+                    <li><strong>Specific details:</strong> 2 hours, every morning, 6 months</li>
+                    <li><strong>Insight:</strong> "you never 'find' time, you make it"</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">5 Patterns</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Productivity patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">💬</div>
+                    <div class="plan-block-title">Empathy</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Response patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎧</div>
+                    <div class="plan-block-title">Listening</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Annotated transcript</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗣️</div>
+                    <div class="plan-block-title">Speaking</div>
+                    <div class="plan-block-time">20 min</div>
+                    <div class="plan-block-desc">4 scenarios + record</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5 Deep Work Patterns -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">📚</span> 5 Deep Work Patterns</h2>
+            <p class="section-desc">5 patterns để chia sẻ productivity system với critical thinking, evidence, và vulnerability. Click 🔊 để nghe phát âm.</p>
+            
+            <!-- Pattern 1 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">1</div>
+                    <div>"What works for me is [system/approach]"</div>
+                </div>
+                <div class="pattern-phonetic">/wʌt wɜːks fɔːr miː ɪz/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Chia sẻ personal system (không phải generic advice). Implicit hedging - không áp đặt.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "What works for me" = personal, không áp đặt. Mở ra conversation: đối phương có thể share theirs. Contrast với generic advice: "You should..."
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What works for me is reading physical books before bed. No screens for at least 30 minutes.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "What works for me is reading physical books before bed — no screens for at least 30 minutes."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What works for me is learning in 25 minute chunks. I cannot focus for longer than that.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "What works for me is learning in 25-minute chunks — I can't focus for longer than that."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'What works for me is blocking out 2 hours every morning for deep work. No email, no Slack.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "What works for me is blocking out 2 hours every morning for deep work — no email, no Slack."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'What works for me is having one priority per day. Not a to-do list with 20 items.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "What works for me is having one priority per day — not a to-do list with 20 items."
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ "What works for me <strong>are</strong>..." (plural) → ✅ "What works for me <strong>is</strong>..." (singular - "what" là singular subject)
+                </div>
+            </div>
+            
+            <!-- Pattern 2 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">2</div>
+                    <div>"I've been using [method] for [time], and I've noticed..."</div>
+                </div>
+                <div class="pattern-phonetic">/aɪv bɪn ˈjuːzɪŋ [method] fɔːr [taɪm]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Chia sẻ experience-based insight (không phải theory). Evidence-based thinking.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> Present perfect continuous = ongoing experience. "I've noticed..." = personal observation (không phải universal truth). Thể hiện evidence-based thinking.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have been using the Pomodoro technique for about 3 months now, and I have noticed I can study 3 times longer without burning out.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I've been using the Pomodoro technique for about 3 months now, and I've noticed I can study 3x longer without burning out."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have been journaling every morning for a year, and I have noticed it really helps me process emotions.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I've been journaling every morning for a year, and I've noticed it really helps me process emotions."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have been using time-blocking for 6 months, and I have noticed my output has doubled.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I've been using time-blocking for 6 months, and I've noticed my output has doubled."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I have been doing no-meeting Wednesdays for a quarter, and I have noticed the team is much more productive.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I've been doing 'no-meeting Wednesdays' for a quarter, and I've noticed the team is much more productive."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Variations:</strong>
+                    "I've been doing X for [time], and <strong>I've noticed</strong>..." (observation) · "I've been doing X for [time], and <strong>I've found</strong>..." (discovery) · "I've been doing X for [time], and <strong>the result has been</strong>..." (outcome)
+                </div>
+            </div>
+            
+            <!-- Pattern 3 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">3</div>
+                    <div>"The key is [principle], not [common misconception]"</div>
+                </div>
+                <div class="pattern-phonetic">/ðə kiː ɪz [principle], nɒt [misconception]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Contrast giữa principle đúng và misconception phổ biến. Thể hiện critical thinking.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "The key is X, not Y" = sophisticated contrast structure. Thể hiện critical thinking về topic. Cho thấy depth of understanding.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The key to learning a language is consistency, not intensity. 15 minutes daily beats 3 hours once a week.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "The key to learning a language is <strong>consistency, not intensity</strong> — 15 minutes daily beats 3 hours once a week."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The key to good sleep is protecting your wind-down routine, not just going to bed early.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "The key to good sleep is <strong>protecting your wind-down routine, not just going to bed early</strong>."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The key to productivity is protecting your focus time, not just finding time. Because you never find time, you make it.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "The key to productivity is <strong>protecting your focus time, not just 'finding time'</strong> — because you never 'find' time, you make it."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The key to good meetings is having a clear agenda, not having more meetings.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "The key to good meetings is <strong>having a clear agenda, not having more meetings</strong>."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Alternative structures:</strong>
+                    "The key is X, not Y" (most common) · "What matters is X, not Y" (similar) · "It's about X, not Y" (more casual) · "The secret is X, not Y" (more intriguing)
+                </div>
+            </div>
+            
+            <!-- Pattern 4 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">4</div>
+                    <div>"I struggle with [challenge], so I [solution]"</div>
+                </div>
+                <div class="pattern-phonetic">/aɪ ˈstrʌɡəl wɪð [challenge], soʊ aɪ/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Vulnerability + solution. Thể hiện self-awareness và proactivity.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "I struggle with..." = vulnerability (không phải weakness). "so I..." = solution-oriented thinking. Balance: honesty + proactivity. Tạo deeper connection.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I struggle with phone distractions, so I put it in another room when I read.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I struggle with phone distractions, so I put it in another room when I read."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'I struggle with consistency, so I use habit stacking. I attach new habits to existing ones.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "I struggle with consistency, so I use habit stacking — I attach new habits to existing ones."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I struggle with Slack notifications, so I turn them off during deep work blocks.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I struggle with Slack notifications, so I turn them off during deep work blocks."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'I struggle with saying no to meetings, so I block out focus time on my calendar first thing in the morning.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "I struggle with saying no to meetings, so I block out focus time on my calendar first thing in the morning."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Related expressions:</strong>
+                    "I struggle with X, so I Y" (most common) · "X is a challenge for me, so I Y" (similar) · "I have trouble with X, so I Y" (more casual) · "X is my weakness, so I Y" (stronger admission)
+                </div>
+            </div>
+            
+            <!-- Pattern 5 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">5</div>
+                    <div>"My system is simple: [principle 1], [principle 2], [principle 3]"</div>
+                </div>
+                <div class="pattern-phonetic">/maɪ ˈsɪstəm ɪz ˈsɪmpəl/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Present personal framework rõ ràng, dễ nhớ. Confident but humble.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "My system is simple" = confident but humble. Colon structure = sophisticated punctuation trong speech. List of 3 = memorable framework.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'My system is simple: one book at a time, 30 minutes daily, no distractions.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "My system is simple: <strong>one book at a time, 30 minutes daily, no distractions</strong>."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'My system is simple: plan the night before, prioritize top 3, execute without overthinking.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "My system is simple: <strong>plan the night before, prioritize top 3, execute without overthinking</strong>."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'My system is simple: one priority per day, 2 hour deep work block, phone in another room.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "My system is simple: <strong>one priority per day, 2-hour deep work block, phone in another room</strong>."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'My system is simple: no meetings before 10 AM, batch emails twice a day, protect focus time.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "My system is simple: <strong>no meetings before 10 AM, batch emails twice a day, protect focus time</strong>."
+                </div>
+                
+                <div class="hedging-box">
+                    <strong>💡 Variations:</strong>
+                    "My system is simple: [1], [2], [3]" (most common) · "My approach has 3 parts: [1], [2], [3]" (more structured) · "I follow 3 rules: [1], [2], [3]" (more authoritative) · "My framework is: [1], [2], [3]" (more business-like)
+                </div>
+            </div>
+        </section>
+        
+        <!-- Empathy Responses -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">💬</span> Response & Empathy Patterns</h2>
+            <p class="section-desc">Khi ai đó chia sẻ productivity struggles, đây là cách phản hồi. Click vào từng phrase để nghe phát âm.</p>
+            
+            <div class="empathy-grid">
+                <div class="empathy-category">
+                    <h4>🤝 Đồng cảm với struggle</h4>
+                    <ul class="empathy-list">
+                        <li onclick="playAudio(this, 'I have been there.')">"I've been there."</li>
+                        <li onclick="playAudio(this, 'That is a common challenge.')">"That's a common challenge."</li>
+                        <li onclick="playAudio(this, 'I totally get that. Distractions are the worst.')">"I totally get that — distractions are the worst."</li>
+                    </ul>
+                </div>
+                
+                <div class="empathy-category">
+                    <h4>💡 Gợi ý nhẹ nhàng</h4>
+                    <ul class="empathy-list">
+                        <li onclick="playAudio(this, 'Have you tried turning off notifications during focus blocks?')">"Have you tried [X]?"</li>
+                        <li onclick="playAudio(this, 'One thing that worked for me was taking a 10 minute walk after lunch.')">"One thing that worked for me was..."</li>
+                        <li onclick="playAudio(this, 'I found time-blocking helpful, but it might not work for everyone.')">"I found [X] helpful, but it might not work for everyone."</li>
+                    </ul>
+                </div>
+                
+                <div class="empathy-category">
+                    <h4>🎯 Normalize struggle</h4>
+                    <ul class="empathy-list">
+                        <li onclick="playAudio(this, 'Everyone struggles with that.')">"Everyone struggles with that."</li>
+                        <li onclick="playAudio(this, 'It took me months to figure this out.')">"It took me months to figure this out."</li>
+                        <li onclick="playAudio(this, 'The first few weeks were the hardest.')">"The first few weeks were the hardest."</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: var(--primary-soft); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--primary); margin-top: 16px;">
+                <strong style="color: var(--primary-dark);">💡 Tip:</strong>
+                <span style="color: var(--text-secondary);"> Khi share solution, luôn kèm theo humility: "it might not work for everyone" hoặc "it took me time to figure out". Tránh áp đặt.</span>
+            </div>
+        </section>
+        
+        <!-- Listening -->
+        <section class="section section-sky">
+            <h2 class="section-title"><span class="section-icon">🎧</span> Listening: Productivity Conversation</h2>
+            <p class="section-desc">Minh và Sarah (colleagues) đang nói chuyện ở office về productivity systems. Listen và note các patterns được dùng.</p>
+            
+            <div class="audio-player">
+                <button class="play-btn" id="mainPlayBtn" onclick="playFullTranscript(this)">▶</button>
+                <div class="audio-info">
+                    <div class="audio-label">Productivity Chat at the Office</div>
+                    <div class="audio-meta">🇺🇸 US Accent · ~1.5 min · Casual conversation</div>
+                </div>
+            </div>
+            
+            <div class="transcript-box">
+                <h4 style="font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 14px; color: var(--text-primary);">📄 Transcript with Annotations</h4>
+                
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Hey Sarah, quick question — how do you stay productive with all these meetings?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> Oh, good question. <span class="highlight">What works for me is</span> blocking out 2 hours every morning for deep work — no email, no Slack, no meetings. <span class="annotation">[Pattern 1]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Nice! I've been trying to do something similar. <span class="highlight">I've been using</span> time-blocking <span class="highlight">for about 3 months now, and I've noticed</span> my output has definitely improved. <span class="annotation">[Pattern 2]</span> But I still struggle with Slack notifications popping up.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> <span class="highlight">I've been there.</span> <span class="annotation">[Empathy]</span> <span class="highlight">The key is</span> protecting that time ruthlessly, <span class="highlight">not just</span> "finding time" — because let's be honest, you never "find" time, you make it. <span class="annotation">[Pattern 3]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> That's such a good point. I <span class="highlight">struggle with</span> saying no to meetings, <span class="highlight">so I</span> started blocking out focus time on my calendar first thing in the morning. <span class="annotation">[Pattern 4]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> <span class="highlight">That's a common challenge.</span> <span class="annotation">[Empathy]</span> <span class="highlight">Have you tried</span> the "no-meeting Wednesdays" thing? Some teams do that.
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> Not yet, but I've heard good things. What about you — do you have a full system, or just the morning block?
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> I have a full system now. <span class="highlight">My system is simple:</span> one priority per day, 2-hour deep work block in the morning, and phone in another room during that time. <span class="annotation">[Pattern 5]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> <span class="highlight">That makes sense.</span> <span class="annotation">[Empathy]</span> I like the "phone in another room" part — <span class="highlight">I've been meaning to</span> try that. <span class="annotation">[Pattern from Week 1]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> It's game-changing. <span class="highlight">Mostly</span> I get my deep work done before 10 AM, <span class="highlight">but sometimes</span> I need a second block in the afternoon if the morning was meeting-heavy. <span class="annotation">[Mostly X, but sometimes Y from Week 1]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> <span class="highlight">I totally get that.</span> <span class="annotation">[Empathy]</span> <span class="highlight">What about</span> weekends? Same routine? <span class="annotation">[Bounce back from Week 1]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker sarah">Sarah:</span> Weekends are different. I <span class="highlight">usually</span> do more creative work — reading, writing, learning. <span class="annotation">[Pattern from Day 8]</span> <span class="highlight">I've found that</span> weekends are great for deep thinking because there's no urgency. <span class="annotation">[Pattern from Day 8]</span>
+                </div>
+                <div class="transcript-line">
+                    <span class="speaker minh">Minh:</span> That's a great insight. I should try that.
+                </div>
+            </div>
+            
+            <div style="background: var(--primary-soft); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--primary); margin-top: 16px;">
+                <strong style="color: var(--primary-dark);">📊 Pattern Count:</strong>
+                <ul style="margin-top: 8px; padding-left: 20px; font-size: 13px; color: var(--text-secondary); line-height: 1.7;">
+                    <li><strong>"What works for me is...":</strong> 1 lần</li>
+                    <li><strong>"I've been using... for... and I've noticed...":</strong> 1 lần</li>
+                    <li><strong>"The key is X, not Y":</strong> 1 lần</li>
+                    <li><strong>"I struggle with X, so I Y":</strong> 1 lần</li>
+                    <li><strong>"My system is simple: [1], [2], [3]":</strong> 1 lần</li>
+                    <li><strong>Empathy responses:</strong> 5 lần</li>
+                    <li><strong>Patterns từ tuần 1:</strong> 2 lần ("Mostly X, but sometimes Y", "What about you?")</li>
+                    <li><strong>Patterns từ Day 8:</strong> 3 lần ("I've been meaning to", "usually", "I've found that")</li>
+                </ul>
+                <p style="margin-top: 8px; font-size: 13px; color: var(--primary-dark);"><strong>Tổng cộng: 15 patterns trong 1 conversation!</strong></p>
+            </div>
+        </section>
+        
+        <!-- Pronunciation -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Pronunciation Focus</h2>
+            <p class="section-desc">Productivity-related vocabulary và connected speech patterns.</p>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 0 0 12px; color: var(--text-primary);">🔤 Key Vocabulary</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>IPA</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>productivity</strong></td>
+                        <td><code>/ˌproʊdʌkˈtɪvəti/</code></td>
+                        <td>Stress trên âm 4, KHÔNG phải âm 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>priority</strong></td>
+                        <td><code>/praɪˈɔːrəti/</code></td>
+                        <td>Stress trên âm 2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>distraction</strong></td>
+                        <td><code>/dɪˈstrækʃən/</code></td>
+                        <td>Stress trên âm 2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>consistency</strong></td>
+                        <td><code>/kənˈsɪstənsi/</code></td>
+                        <td>Stress trên âm 2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ruthlessly</strong></td>
+                        <td><code>/ˈruːθləsli/</code></td>
+                        <td>/θ/ sound - lưỡi giữa 2 răng</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🔗 Connected Speech</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Phrase</th>
+                        <th>Natural Pronunciation</th>
+                        <th>Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"works for me"</td>
+                        <td><code>/wɜːks fɔːr miː/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                    <tr>
+                        <td>"struggle with"</td>
+                        <td><code>/ˈstrʌɡəl wɪð/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                    <tr>
+                        <td>"been using"</td>
+                        <td><code>/bɪn ˈjuːzɪŋ/</code></td>
+                        <td>Elision of /g/</td>
+                    </tr>
+                    <tr>
+                        <td>"key is"</td>
+                        <td><code>/kiː ɪz/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                    <tr>
+                        <td>"system is"</td>
+                        <td><code>/ˈsɪstəm ɪz/</code></td>
+                        <td>Linking</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+            
+            <div style="background: var(--bg); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--life); font-size: 13px; line-height: 1.8;">
+                <div><code>"What works for me is X ↘"</code> - falling (statement)</div>
+                <div><code>"The key is X, not Y ↗↘"</code> - rise-fall (contrast)</div>
+                <div><code>"Have you tried X? ↗"</code> - rising (question)</div>
+                <div><code>"I've been there ↘"</code> - falling (empathy)</div>
+            </div>
+        </section>
+        
+        <!-- Speaking Scenarios -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🗣️</span> Speaking: 4 Scenarios</h2>
+            <p class="section-desc">Progression từ life → business → mixed → challenge. Mỗi scenario áp dụng patterns đã học.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1 -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - 2-3 min</span>
+                    <h4>Scenario 1: Hobby cần focus</h4>
+                    <p>Bạn đang nói chuyện với bạn về 1 hobby cần deep focus (đọc sách, học nhạc cụ, viết lách, chơi cờ...).</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 patterns mới</li>
+                            <li>Share personal system (không generic)</li>
+                            <li>Vulnerability về struggles</li>
+                            <li>Response với empathy</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('hobby')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business - 2-3 min</span>
+                    <h4>Scenario 2: Explain system ở team</h4>
+                    <p>Team meeting về productivity. Bạn được hỏi về system của mình.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Semi-formal register</li>
+                            <li>Critical thinking (principle vs misconception)</li>
+                            <li>Evidence-based (I've noticed...)</li>
+                            <li>Vulnerability về struggles</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('team')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 3 -->
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">🔄 Mixed - 2-3 min</span>
+                    <h4>Scenario 3: Networking về productivity</h4>
+                    <p>Networking event, conversation chuyển từ work sang productivity habits.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Balance professional + personal</li>
+                            <li>Critical thinking (contrast myth vs reality)</li>
+                            <li>Share insight, không chỉ facts</li>
+                            <li>Response với empathy + follow-up</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('networking')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 4 -->
+                <div class="scenario-card challenge">
+                    <span class="scenario-badge">🔥 Challenge - 5 min</span>
+                    <h4>Scenario 4: Deep Work Deep Dive</h4>
+                    <p>Bạn đang trong podcast/video, được hỏi sâu về productivity system. Nói liên tục 5 phút.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Nói liên tục 5 phút không ngừng</li>
+                            <li>Dùng TẤT CẢ 5 patterns mới</li>
+                            <li>Integrate patterns từ tuần 1 + Day 8</li>
+                            <li>Có evolution story (how system evolved)</li>
+                            <li>Share insights và lessons learned</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('podcast')">🎙️ Start Challenge</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reality Task -->
+        <section class="section section-focus">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Reality Task - Choose Your Level</h2>
+            <p class="section-desc">Bài tập THỰC TẾ - apply patterns vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+            
+            <div class="task-levels">
+                <div class="task-level easy">
+                    <div class="task-level-badge">EASY</div>
+                    <h4>📝 Write Productivity System</h4>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p>Viết 150-word description về productivity system của bạn.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng ít nhất 3 patterns mới</li>
+                            <li>Có critical thinking (principle vs misconception)</li>
+                            <li>Vulnerability về struggles</li>
+                            <li>Clear framework (3 principles)</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--life-bg); border-radius: 6px; font-size: 12px; color: var(--life-dark);">
+                        <strong>Deliverable:</strong> Text post (LinkedIn hoặc gửi cho colleague)
+                    </div>
+                </div>
+                
+                <div class="task-level standard">
+                    <div class="task-level-badge">STANDARD</div>
+                    <h4>🤝 Exchange Productivity Tips</h4>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p>Có 5-minute conversation với colleague về productivity systems.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng ít nhất 5 patterns mới</li>
+                            <li>Response với empathy khi họ chia sẻ struggles</li>
+                            <li>Share evidence-based insights</li>
+                            <li>Ask follow-up questions</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--biz-bg); border-radius: 6px; font-size: 12px; color: var(--biz-dark);">
+                        <strong>Deliverable:</strong> Written notes về conversation
+                    </div>
+                </div>
+                
+                <div class="task-level challenge">
+                    <div class="task-level-badge">CHALLENGE</div>
+                    <h4>🎥 Deep Work Video</h4>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p>Record 3-minute video về productivity system. Upload LinkedIn hoặc gửi cho 3 colleagues để get feedback.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Video 3 phút (không dài hơn)</li>
+                            <li>Dùng TẤT CẢ 5 patterns mới</li>
+                            <li>Integrate patterns từ tuần 1 + Day 8</li>
+                            <li>Có evolution story</li>
+                            <li>Critical thinking về productivity myths</li>
+                            <li>Record 3 iterations</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--warm-soft); border-radius: 6px; font-size: 12px; color: #744210;">
+                        <strong>Deliverable:</strong> Video file HOẶC LinkedIn post
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard Review</h2>
+            <p class="section-desc">6 flashcards với patterns và tips. Mặt trước: pattern. Mặt sau: example + tip.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-pattern" id="fc-pattern">What works for me is [system]</div>
+                            <div class="card-hint">Tap to reveal example →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-example" id="fc-example">"What works for me is blocking out 2 hours every morning for deep work — no email, no Slack."</div>
+                            <div class="card-tip" id="fc-tip">
+                                <strong>💡 Tip:</strong>
+                                Personal, không áp đặt. Mở ra conversation. Contrast với generic advice: "You should..."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Deep Work & Flow</h2>
+            <p class="section-desc">7 câu hỏi về productivity patterns và critical thinking. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Câu nào THỂ HIỆN critical thinking tốt nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "You should avoid distractions."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "The key is protecting focus time, not just finding time."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "I think productivity is important."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "Everyone should use a to-do list."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. "I've been using time-blocking for 6 months, and I've noticed my output has doubled" - thì nào được dùng?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. Present simple</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. Present perfect continuous + present perfect</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. Past simple</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. Future perfect</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">3. "What works for me is..." khác "You should..." như thế nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Không khác nhau</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. "What works for me" = personal, "You should" = áp đặt</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. "You should" nghe natural hơn</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. "What works for me" chỉ dùng trong business</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. Khi ai đó nói "I struggle with staying focused", response nào THỂ HIỆN empathy tốt nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. "That's too bad."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. "I've been there. One thing that worked for me was..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. "You should try harder."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. "Everyone struggles with that."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="a">
+                <div class="quiz-question">5. "My system is simple: one priority, 2-hour block, phone away" - cấu trúc gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. List với colon</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Conditional</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Passive voice</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. Reported speech</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="a">
+                <div class="quiz-question">6. "I struggle with Slack, so I turn off notifications" - đây là pattern gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. Vulnerability + solution</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. Hypothetical</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. Past experience</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. Future plan</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Câu nào KHÔNG phải là productivity pattern từ Day 9?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. "What works for me is..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. "The key is X, not Y"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. "Mostly X, but sometimes Y"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. "My system is simple: [1], [2], [3]"</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-02-day-8.html" class="nav-btn">
+                <div class="nav-label">← Previous Day</div>
+                <div class="nav-title">Day 8: Morning Routines</div>
+            </a>
+            <a href="week-02-day-10.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 10: Weekend & Downtime</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 9 Complete & Continue to Day 10</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#805AD5"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#805AD5"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#805AD5" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#805AD5" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#805AD5"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Headphones for focus -->
+            <path d="M 60 75 Q 55 60 70 55" stroke="#2D3748" stroke-width="3" fill="none"/>
+            <path d="M 140 75 Q 145 60 130 55" stroke="#2D3748" stroke-width="3" fill="none"/>
+            <ellipse cx="58" cy="80" rx="7" ry="10" fill="#2D3748"/>
+            <ellipse cx="142" cy="80" rx="7" ry="10" fill="#2D3748"/>
+            <ellipse cx="58" cy="80" rx="4" ry="6" fill="#B794D6"/>
+            <ellipse cx="142" cy="80" rx="4" ry="6" fill="#B794D6"/>
+        </svg>
+        <div class="mascot-speech">Deep focus! ⚡</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 2 · Day 9 · Deep Work & Flow</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 0.9;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = audioSpeed;
+                utterance.pitch = 1.05;
+                
+                const voices = speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US' && (v.name.includes('Google') || v.name.includes('Natural'))) 
+                             || voices.find(v => v.lang === 'en-US')
+                             || voices[0];
+                if (usVoice) utterance.voice = usVoice;
+                
+                if (btn) {
+                    btn.classList.add('playing');
+                    utterance.onend = () => btn.classList.remove('playing');
+                    utterance.onerror = () => btn.classList.remove('playing');
+                }
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
+        
+        function playFullTranscript(btn) {
+            const text = `Hey Sarah, quick question. How do you stay productive with all these meetings? Oh, good question. What works for me is blocking out 2 hours every morning for deep work. No email, no Slack, no meetings. Nice! I've been trying to do something similar. I've been using time-blocking for about 3 months now, and I've noticed my output has definitely improved. But I still struggle with Slack notifications popping up. I've been there. The key is protecting that time ruthlessly, not just finding time. Because let's be honest, you never find time, you make it. That's such a good point. I struggle with saying no to meetings, so I started blocking out focus time on my calendar first thing in the morning. That's a common challenge. Have you tried the no-meeting Wednesdays thing? Some teams do that. Not yet, but I've heard good things. What about you? Do you have a full system, or just the morning block? I have a full system now. My system is simple: one priority per day, 2 hour deep work block in the morning, and phone in another room during that time. That makes sense. I like the phone in another room part. I've been meaning to try that. It's game-changing. Mostly I get my deep work done before 10 AM, but sometimes I need a second block in the afternoon if the morning was meeting-heavy. I totally get that. What about weekends? Same routine? Weekends are different. I usually do more creative work. Reading, writing, learning. I've found that weekends are great for deep thinking because there's no urgency. That's a great insight. I should try that.`;
+            
+            playAudio(btn, text);
+        }
+        
+        // ========== SCENARIO DETAILS ==========
+        function showScenarioDetails(scenario) {
+            const details = {
+                hobby: `🎸 HOBBY SCENARIO (2-3 phút):
+
+Context: Nói về hobby cần deep focus (guitar, reading, writing, chess...).
+
+Flow gợi ý:
+• Them: "So what are you into these days?"
+• You: "I've been learning guitar for 6 months. What works 
+      for me is 20 minutes daily, not long weekend sessions."
+• Them: "That makes sense. I tried that but couldn't stay 
+      consistent."
+• You: "I've been there. The key is attaching it to an 
+      existing habit — I practice right after morning coffee."
+• Them: "Smart. Any struggles?"
+• You: "Yeah, I struggle with finger pain, so I started 
+      with shorter sessions. My system is simple: 20 minutes 
+      daily, one song at a time, record myself weekly."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 patterns mới
+✅ Vulnerability về struggles
+✅ Response với empathy khi họ chia sẻ
+✅ Clear framework (3 principles)
+
+💡 Mẹo: Focus vào personal system, không generic advice.`,
+
+                team: `💼 TEAM SCENARIO (2-3 phút):
+
+Context: Team meeting về productivity. Bạn được hỏi về system.
+
+Flow gợi ý:
+• Colleague: "Minh, how do you manage to get so much done?"
+• You: "What works for me is blocking out 2 hours every 
+      morning for deep work. I've been using this for 6 
+      months, and I've noticed my output has doubled."
+• Colleague: "That's impressive. How do you protect that time?"
+• You: "The key is putting it on the calendar first thing, 
+      not 'finding time' between meetings. I still struggle 
+      with Slack, so I turn off notifications during deep work."
+• Colleague: "Smart. What's your full system?"
+• You: "My system is simple: one priority per day, 2-hour 
+      morning block, phone in another room."
+
+Yêu cầu:
+✅ Semi-formal register
+✅ Critical thinking (principle vs misconception)
+✅ Evidence-based (I've noticed...)
+✅ Vulnerability về struggles
+
+💡 Mẹo: Balance professional + personal touch.`,
+
+                networking: `🔄 NETWORKING SCENARIO (2-3 phút):
+
+Context: Networking event, conversation chuyển sang productivity.
+
+Flow gợi ý:
+• Them: "So what keeps you productive?"
+• You: "I've found that morning exercise really sets the 
+      tone. What works for me is blocking out 2 hours for 
+      deep work right after."
+• Them: "That makes sense. I struggle with afternoon slumps."
+• You: "I've been there. One thing that worked for me was 
+      taking a 10-minute walk after lunch. The key is 
+      protecting energy, not just time."
+• Them: "Interesting. What's your full system?"
+• You: "My system is simple: morning exercise, 2-hour deep 
+      work block, afternoon walk, one priority per day."
+
+Yêu cầu:
+✅ Balance professional + personal
+✅ Critical thinking (contrast myth vs reality)
+✅ Share insight, không chỉ facts
+✅ Response với empathy + follow-up
+
+💡 Mẹo: Đây là scenario khó nhất - phải balance 2 contexts.`,
+
+                podcast: `🎙️ PODCAST SCENARIO (5 phút):
+
+Context: Bạn đang trong podcast/video interview.
+
+Structure gợi ý:
+1. Intro (30s): "What works for me is..."
+2. Evidence (1 min): "I've been using... for... and I've 
+   noticed..."
+3. Contrast (1 min): "The key is X, not Y..."
+4. Vulnerability (1 min): "I struggle with... so I..."
+5. Framework (1 min): "My system is simple: [1], [2], [3]"
+6. Evolution (30s): "It took me X months to figure this out..."
+
+Yêu cầu:
+✅ Nói liên tục 5 phút không ngừng
+✅ Dùng TẤT CẢ 5 patterns mới
+✅ Integrate patterns từ tuần 1 + Day 8
+✅ Có evolution story (how system evolved over time)
+✅ Share insights và lessons learned
+✅ Critical thinking về productivity myths
+
+💡 Mẹo: Record 3 lần (iterations). So sánh lần 1 vs lần 3.`
+            };
+            
+            alert(details[scenario]);
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                pattern: "What works for me is [system]",
+                example: '"What works for me is blocking out 2 hours every morning for deep work — no email, no Slack."',
+                tip: '💡 Tip: Personal, không áp đặt. Mở ra conversation. Contrast với generic advice: "You should..."'
+            },
+            { 
+                pattern: "I've been using [method] for [time], and I've noticed...",
+                example: '"I\'ve been using time-blocking for 6 months, and I\'ve noticed my output has doubled."',
+                tip: '💡 Tip: Evidence-based. Present perfect continuous = ongoing experience. "I\'ve noticed" = personal observation.'
+            },
+            { 
+                pattern: "The key is [principle], not [misconception]",
+                example: '"The key is protecting focus time, not just \'finding time\' — because you never \'find\' time, you make it."',
+                tip: '💡 Tip: Contrast structure. Thể hiện critical thinking. Alternatives: "What matters is...", "It\'s about..."'
+            },
+            { 
+                pattern: "I struggle with [challenge], so I [solution]",
+                example: '"I struggle with Slack notifications, so I turn them off during deep work blocks."',
+                tip: '💡 Tip: Vulnerability + solution. Tạo deeper connection. Related: "X is a challenge for me, so I Y"'
+            },
+            { 
+                pattern: "My system is simple: [1], [2], [3]",
+                example: '"My system is simple: one priority per day, 2-hour deep work block, phone in another room."',
+                tip: '💡 Tip: Clear framework. Memorable. Confident but humble. Variations: "My approach has 3 parts...", "I follow 3 rules..."'
+            },
+            { 
+                pattern: "Empathy responses cho productivity struggles",
+                example: '"I\'ve been there." / "That\'s a common challenge." / "Have you tried...?"',
+                tip: '💡 Tip: Normalize struggle. Gentle suggestions. Không áp đặt. Luôn kèm humility: "it might not work for everyone"'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-pattern').textContent = card.pattern;
+            document.getElementById('fc-example').textContent = card.example;
+            document.getElementById('fc-tip').innerHTML = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'a', q6: 'a', q7: 'c' };
+        const explanations = {
+            q1: 'B thể hiện critical thinking qua contrast structure "X, not Y" - cho thấy depth of understanding. A là generic advice (áp đặt). C quá vague. D cũng là áp đặt.',
+            q2: '"I\'ve been using" = present perfect continuous (ongoing action). "I\'ve noticed" = present perfect (result). Kết hợp cả hai = ongoing experience + observed result.',
+            q3: '"What works for me" = personal, không áp đặt, mở ra conversation. "You should" = áp đặt, đóng conversation. Trong C1 conversation, personal > prescriptive.',
+            q4: 'B vừa đồng cảm ("I\'ve been there") vừa share solution ("One thing that worked for me was..."). A quá generic. C là blame. D normalize nhưng không giúp gì.',
+            q5: 'Colon (:) dùng để introduce list. "My system is simple: [1], [2], [3]" = list of 3 principles. Đây là sophisticated punctuation trong speech.',
+            q6: '"I struggle with X, so I Y" = vulnerability + solution. Admit struggle (honesty) + show solution (proactivity). Balance tạo deeper connection.',
+            q7: 'C "Mostly X, but sometimes Y" là pattern từ Week 1 Day 3 (Conversation Extension), không phải Day 9. Tuy nhiên, CÓ THỂ áp dụng vào productivity context (như trong transcript: "Mostly I get my deep work done before 10 AM, but sometimes...").'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered deep work patterns!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the patterns you missed.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the patterns section.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the day content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week2Days') || '[]');
+            
+            if (!completed.includes(9)) {
+                completed.push(9);
+                localStorage.setItem('week2Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(2)) {
+                        completedWeeks.push(2);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 2 completed! You can now share your productivity system with critical thinking! 🦊');
+                } else {
+                    alert(`✅ Day 9 completed! ${7 - completed.length} days left in Week 2. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-02-day-10.html';
+            } else {
+                if (confirm('✅ Day 9 already completed! Go to Day 10?')) {
+                    location.href = 'week-02-day-10.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
