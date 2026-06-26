@@ -1,0 +1,2721 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 7: Review & Reality Task | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #D69E2E;
+            --primary-dark: #B7791F;
+            --primary-light: #ECC94B;
+            --primary-soft: #FFFBEB;
+            --secondary: #805AD5;
+            --secondary-soft: #F5F0FF;
+            --accent: #7BC8E8;
+            --accent-soft: #E0F2FA;
+            --warm: #F9D4B8;
+            --warm-soft: #FFF5EB;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .day-tab.done {
+            background: var(--life-bg);
+            border-color: var(--life);
+            color: var(--life-dark);
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #FEF3C7 50%, var(--warm-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(214,158,46,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(236,201,75,0.2) 0%, transparent 40%);
+        }
+        
+        .day-header::after {
+            content: '🏆';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 5rem;
+            opacity: 0.15;
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        .meta-tag.milestone {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            font-weight: 600;
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        .section-gold { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #FEF3C7; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #E9D8FD; }
+        .section-sky { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #BEE3F8; }
+        .section-mint { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-peach { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        .section-milestone { 
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #FEF3C7 50%, var(--warm-soft) 100%); 
+            border: 2px solid var(--primary);
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), #FEF3C7);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #9B2C2C;
+        }
+        
+        .problem-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .problem-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .problem-box li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== MIND MAP ========== */
+        .mindmap {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--primary);
+            margin: 16px 0;
+        }
+        
+        .mindmap-center {
+            text-align: center;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .mindmap-days {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 14px;
+        }
+        
+        .mindmap-day {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid;
+        }
+        
+        .mindmap-day.day-1 { border-left-color: #F4A8A8; }
+        .mindmap-day.day-2 { border-left-color: #B794D6; }
+        .mindmap-day.day-3 { border-left-color: #88D8B0; }
+        .mindmap-day.day-4 { border-left-color: #7BC8E8; }
+        .mindmap-day.day-5 { border-left-color: #F9D4B8; }
+        .mindmap-day.day-6 { border-left-color: #805AD5; }
+        
+        .mindmap-day-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .mindmap-day-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .mindmap-day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .mindmap-patterns {
+            list-style: none;
+        }
+        
+        .mindmap-patterns li {
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 3px 0;
+            padding-left: 16px;
+            position: relative;
+            line-height: 1.4;
+        }
+        
+        .mindmap-patterns li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* ========== KEY TAKEAWAYS ========== */
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .takeaway-card {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            display: flex;
+            gap: 12px;
+        }
+        
+        .takeaway-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .takeaway-text {
+            flex: 1;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .takeaway-text strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 2px;
+        }
+        
+        /* ========== CONVERSATION SCRIPT ========== */
+        .conversation-script {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin: 16px 0;
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .conversation-line {
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border-light);
+        }
+        
+        .conversation-line:last-child { border-bottom: none; }
+        
+        .conversation-speaker {
+            font-weight: 700;
+            margin-right: 6px;
+        }
+        
+        .conversation-speaker.you { color: var(--primary-dark); }
+        .conversation-speaker.lisa { color: var(--biz-dark); }
+        
+        .conversation-highlight {
+            background: var(--primary-soft);
+            padding: 1px 6px;
+            border-radius: 4px;
+            color: var(--primary-dark);
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .pattern-checklist {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-top: 16px;
+        }
+        
+        .pattern-checklist h5 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        
+        .pattern-checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+        }
+        
+        .pattern-check-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            background: white;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid var(--border);
+        }
+        
+        .pattern-check-item:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .pattern-check-item.checked {
+            background: var(--life-bg);
+            border-color: var(--life);
+            color: var(--life-dark);
+        }
+        
+        .pattern-check-item input {
+            width: 14px;
+            height: 14px;
+            accent-color: var(--life);
+        }
+        
+        /* ========== REALITY TASK ========== */
+        .task-levels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+        
+        .task-level {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 2px solid;
+            position: relative;
+        }
+        
+        .task-level.easy { border-color: var(--life); }
+        .task-level.standard { border-color: var(--biz); }
+        .task-level.challenge { border-color: var(--warning); }
+        
+        .task-level-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+        
+        .task-level.easy .task-level-badge { background: var(--life); }
+        .task-level.standard .task-level-badge { background: var(--biz); }
+        .task-level.challenge .task-level-badge { background: var(--warning); }
+        
+        .task-level h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 8px 0 6px;
+        }
+        
+        .task-level.easy h4 { color: var(--life-dark); }
+        .task-level.standard h4 { color: var(--biz-dark); }
+        .task-level.challenge h4 { color: #744210; }
+        
+        .task-time {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--bg);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .task-level p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .task-requirements {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .task-requirements ul {
+            padding-left: 16px;
+            margin-top: 4px;
+        }
+        
+        .task-requirements li {
+            padding: 2px 0;
+        }
+        
+        /* ========== COMPARISON TABLE ========== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            font-size: 13px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .comparison-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .comparison-table tr:last-child td { border-bottom: none; }
+        
+        .comparison-table tr.total-row {
+            background: var(--primary-soft);
+            font-weight: 700;
+        }
+        
+        .comparison-table tr.total-row td {
+            color: var(--primary-dark);
+            border-bottom: none;
+        }
+        
+        .score-input {
+            width: 50px;
+            padding: 4px 8px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 13px;
+            text-align: center;
+        }
+        
+        .improvement-cell {
+            font-weight: 600;
+            color: var(--life-dark);
+        }
+        
+        /* ========== GAP ANALYSIS ========== */
+        .gap-form {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin: 16px 0;
+        }
+        
+        .gap-item {
+            background: var(--bg);
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            border-left: 3px solid var(--warning);
+        }
+        
+        .gap-item h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .gap-item label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            margin-top: 8px;
+        }
+        
+        .gap-item label:first-of-type {
+            margin-top: 0;
+        }
+        
+        .gap-item input[type="text"],
+        .gap-item textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        
+        .gap-item textarea {
+            min-height: 60px;
+        }
+        
+        .gap-item input:focus,
+        .gap-item textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(214,158,46,0.1);
+        }
+        
+        /* ========== MILESTONE CELEBRATION ========== */
+        .milestone-card {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #FEF3C7 50%, var(--warm-soft) 100%);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--primary);
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .milestone-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(236,201,75,0.2) 0%, transparent 70%);
+            animation: milestoneGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes milestoneGlow {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .milestone-trophy {
+            font-size: 5rem;
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+            animation: trophyBounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes trophyBounce {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        .milestone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            position: relative;
+        }
+        
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .milestone-achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .achievement-item {
+            background: white;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .achievement-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .milestone-message {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            text-align: left;
+            position: relative;
+        }
+        
+        .milestone-message strong {
+            color: var(--primary-dark);
+        }
+        
+        /* ========== WEEK 2 PREVIEW ========== */
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .preview-day {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .preview-day-num {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--accent-soft);
+            color: var(--biz-dark);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .preview-day h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .preview-day p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 300px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-question {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-answer {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        
+        .flashcard-back .card-answer strong {
+            color: var(--primary-dark);
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(214,158,46,0.3);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(214,158,46,0.4);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(214,158,46,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            .day-header::after { font-size: 3rem; top: 20px; right: 20px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .task-levels { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .milestone-trophy { font-size: 4rem; }
+            .milestone-title { font-size: 1.5rem; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-01.html" class="nav-back">← Week 1 Hub</a>
+            <div class="nav-progress">
+                <span>Day 7 / 7 · Week Complete!</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-01.html" class="day-tab">Overview</a>
+                <a href="week-01-day-1.html" class="day-tab done">Day 1 ✓</a>
+                <a href="week-01-day-2.html" class="day-tab done">Day 2 ✓</a>
+                <a href="week-01-day-3.html" class="day-tab done">Day 3 ✓</a>
+                <a href="week-01-day-4.html" class="day-tab done">Day 4 ✓</a>
+                <a href="week-01-day-5.html" class="day-tab done">Day 5 ✓</a>
+                <a href="week-01-day-6.html" class="day-tab done">Day 6 ✓</a>
+                <a href="week-01-day-7.html" class="day-tab active">Day 7 🏆</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-01.html">Week 1</a>
+                <span>›</span>
+                <span>Day 7 · Milestone</span>
+            </div>
+            <h1 class="day-title">🏆 Review & Reality Task</h1>
+            <p class="day-subtitle">"Review is where learning becomes permanent." Hôm nay bạn sẽ <strong>recap 30+ patterns</strong>, <strong>integrate tất cả vào 1 conversation hoàn chỉnh</strong>, và <strong>complete Reality Task</strong> để kết thúc tuần 1 với Milestone 1.</p>
+            <div class="day-meta">
+                <span class="meta-tag">🔄 Integration Day</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 30+ patterns recap</span>
+                <span class="meta-tag milestone">🏆 Milestone 1</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>🔄 Review is where learning becomes permanent</h4>
+                <p>Sau 6 ngày học, bạn đã nạp <strong>30+ patterns</strong>. Nhưng nếu không review, bạn sẽ quên <strong>70% sau 1 tuần</strong>. Hôm nay là ngày để <strong>integrate</strong> tất cả, <strong>apply vào thực tế</strong>, và <strong>identify gaps</strong> cho tuần 2.</p>
+            </div>
+            
+            <div class="problem-box">
+                <h4>❌ Tại sao nhiều người học xong 1 tuần rồi quên hết?</h4>
+                <div class="comparison">
+                    Tuần 1: Học 30+ patterns → Cảm giác "mình đã hiểu"<br>
+                    Tuần 2: Bắt đầu quên 50% patterns<br>
+                    Tuần 3: Chỉ nhớ 20% patterns<br>
+                    Tuần 4: Quay lại level ban đầu
+                </div>
+                <p><strong>Lý do:</strong></p>
+                <ul>
+                    <li><strong>Không review</strong> - Học xong rồi bỏ, không ôn tập</li>
+                    <li><strong>Không apply</strong> - Học patterns nhưng không dùng trong thực tế</li>
+                    <li><strong>Không integrate</strong> - Học patterns riêng lẻ, không kết hợp</li>
+                    <li><strong>Không self-assess</strong> - Không biết mình tiến bộ hay không</li>
+                </ul>
+            </div>
+            
+            <div class="solution-box">
+                <h4>✅ C1 learners làm gì khác?</h4>
+                <p>Họ có <strong>REVIEW DAY</strong> cuối mỗi tuần:</p>
+                <ul>
+                    <li>Recap tất cả patterns trong mind map</li>
+                    <li>Apply trong REAL conversation (Reality Task)</li>
+                    <li>Self-assess trước/sau để thấy tiến bộ</li>
+                    <li>Identify gaps để focus tuần tiếp</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗺️</div>
+                    <div class="plan-block-title">Recap</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Mind map 30+ patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🔄</div>
+                    <div class="plan-block-title">Integration</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">5-min conversation challenge</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎯</div>
+                    <div class="plan-block-title">Reality Task</div>
+                    <div class="plan-block-time">20 min</div>
+                    <div class="plan-block-desc">Real-world application</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🏆</div>
+                    <div class="plan-block-title">Milestone</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Celebrate Week 1!</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Week 1 Mind Map -->
+        <section class="section section-gold">
+            <h2 class="section-title"><span class="section-icon">🗺️</span> Week 1 Recap - Mind Map</h2>
+            <p class="section-desc">Tổng hợp TẤT CẢ patterns từ 6 ngày. Đây là "vũ khí" của bạn - hãy ôn lại để không quên.</p>
+            
+            <div class="mindmap">
+                <div class="mindmap-center">🏆 WEEK 1: FIRST IMPRESSIONS & IDENTITY</div>
+                
+                <div class="mindmap-days">
+                    <div class="mindmap-day day-1">
+                        <div class="mindmap-day-header">
+                            <div class="mindmap-day-num">1</div>
+                            <div class="mindmap-day-title">Natural Introductions</div>
+                        </div>
+                        <ul class="mindmap-patterns">
+                            <li>"I'm based in X, but originally from Y"</li>
+                            <li>"I've been [verb+ing] for a while now"</li>
+                            <li>"I'm into X — mostly [detail]"</li>
+                            <li>"It's been on my list to [verb]"</li>
+                            <li>"Great to finally meet you in person"</li>
+                            <li>"We should definitely [verb] sometime"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mindmap-day day-2">
+                        <div class="mindmap-day-header">
+                            <div class="mindmap-day-num">2</div>
+                            <div class="mindmap-day-title">Register Shifting</div>
+                        </div>
+                        <ul class="mindmap-patterns">
+                            <li>Work: "I work in" → "I'm in" → "I work as"</li>
+                            <li>Hobbies: "I'm into" → "big fan of" → "strong interest"</li>
+                            <li>Time: "for a while" → "for X years" → "I bring X years"</li>
+                            <li>Interest: "awesome!" → "fascinating" → "compelling"</li>
+                            <li>Follow-up: "grab coffee" → "connect again" → "welcome opportunity"</li>
+                            <li>Exit: "I'll let you go" → "great connecting" → "thank you"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mindmap-day day-3">
+                        <div class="mindmap-day-header">
+                            <div class="mindmap-day-num">3</div>
+                            <div class="mindmap-day-title">Conversation Extension</div>
+                        </div>
+                        <ul class="mindmap-patterns">
+                            <li>"Actually, [elaboration with surprise]"</li>
+                            <li>"Mostly X, but sometimes Y"</li>
+                            <li>"That reminds me of..."</li>
+                            <li>"What about you? How's [specific] going?"</li>
+                            <li>"Speaking of [topic], ..."</li>
+                            <li>"Oh, before I forget, ..."</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mindmap-day day-4">
+                        <div class="mindmap-day-header">
+                            <div class="mindmap-day-num">4</div>
+                            <div class="mindmap-day-title">Listening Deep Dive</div>
+                        </div>
+                        <ul class="mindmap-patterns">
+                            <li>Linking (C-V): "based in" → "basedin"</li>
+                            <li>Intrusion: "go out" → "go-W-out"</li>
+                            <li>Elision: "next day" → "nex day"</li>
+                            <li>Assimilation: "did you" → "did-ju"</li>
+                            <li>Reduction: "to" → "tə", "and" → "n"</li>
+                            <li>Contractions: "gonna", "wanna", "gotta"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mindmap-day day-5">
+                        <div class="mindmap-day-header">
+                            <div class="mindmap-day-num">5</div>
+                            <div class="mindmap-day-title">Speaking Intensive</div>
+                        </div>
+                        <ul class="mindmap-patterns">
+                            <li>Content (20%) - structure, hooks</li>
+                            <li>Pronunciation (20%) - /θ/, /ð/, stress</li>
+                            <li>Intonation (15%) - rising/falling</li>
+                            <li>Pace & Pauses (15%) - 130-150 WPM</li>
+                            <li>Fluency (15%) - &lt;5 fillers/min</li>
+                            <li>Naturalness (15%) - connected speech</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mindmap-day day-6">
+                        <div class="mindmap-day-header">
+                            <div class="mindmap-day-num">6</div>
+                            <div class="mindmap-day-title">LinkedIn Profile</div>
+                        </div>
+                        <ul class="mindmap-patterns">
+                            <li>Hook Opener (story/question/bold)</li>
+                            <li>"Mostly X, but sometimes Y"</li>
+                            <li>Specific Details (numbers, names)</li>
+                            <li>Value Proposition</li>
+                            <li>Call to Action</li>
+                            <li>Personality Touch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 24px 0 12px; color: var(--text-primary);">🔑 10 Key Takeaways</h3>
+            
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <div class="takeaway-num">1</div>
+                    <div class="takeaway-text">
+                        <strong>C1 ≠ Fancy vocabulary</strong>
+                        C1 = Natural + Precise + Context-aware
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">2</div>
+                    <div class="takeaway-text">
+                        <strong>Register shifting</strong>
+                        Biết dùng ĐÚNG từ, ĐÚNG lúc, với ĐÚNG người
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">3</div>
+                    <div class="takeaway-text">
+                        <strong>Hooks tạo curiosity gap</strong>
+                        Khiến reader/listener muốn tiếp tục
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">4</div>
+                    <div class="takeaway-text">
+                        <strong>Specific details = credibility</strong>
+                        Numbers, names, places > vague statements
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">5</div>
+                    <div class="takeaway-text">
+                        <strong>Connected speech</strong>
+                        Native nói thành dòng chảy, không từng từ
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">6</div>
+                    <div class="takeaway-text">
+                        <strong>Record → Listen → Improve</strong>
+                        Không hear lại giọng mình = không tiến bộ
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">7</div>
+                    <div class="takeaway-text">
+                        <strong>3 iterations framework</strong>
+                        Content → Delivery → Naturalness
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">8</div>
+                    <div class="takeaway-text">
+                        <strong>Writing = Speaking on paper</strong>
+                        Tất cả patterns đều apply được
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">9</div>
+                    <div class="takeaway-text">
+                        <strong>5-paragraph structure</strong>
+                        Hook → What → Why → Value → CTA
+                    </div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-num">10</div>
+                    <div class="takeaway-text">
+                        <strong>Review day = permanent learning</strong>
+                        Không review = quên 70% sau 1 tuần
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Integration Challenge -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🔄</span> Integration Challenge: 5-Minute Conversation</h2>
+            <p class="section-desc">Dùng ít nhất <strong>15 patterns</strong> từ Week 1 trong 1 conversation hoàn chỉnh. Đây là "final exam" của tuần 1.</p>
+            
+            <div style="background: var(--primary-soft); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--primary); margin-bottom: 16px;">
+                <strong style="color: var(--primary-dark);">🎯 Context:</strong>
+                <span style="color: var(--text-secondary);"> Bạn đang ở networking event. Gặp Lisa (professional khác) ở coffee station. Conversation kéo dài 5 phút.</span>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">💬 Sample Conversation Script</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">Đọc script này để thấy cách TẤT CẢ patterns được integrate. Highlighted phrases = patterns from Week 1.</p>
+            
+            <div class="conversation-script">
+                <div class="conversation-line">
+                    <span class="conversation-speaker you">YOU:</span> Hi, I don't believe we've met. I'm Minh Nguyen.
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker lisa">LISA:</span> Hi Minh! I'm Lisa Tran from Saigon Capital. <span class="conversation-highlight">Great to finally meet you in person</span> — I've been following Horizon Partners' work.
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker you">YOU:</span> Oh really? That's fascinating! <span class="conversation-highlight">I'm based in Saigon, but originally from Hanoi</span>. <span class="conversation-highlight">I've been in real estate PE for about 8 years now</span>, <span class="conversation-highlight">mostly logistics, but sometimes</span> industrial properties when numbers make sense.
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker lisa">LISA:</span> That's interesting! We're actually looking at logistics space too.
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker you">YOU:</span> <span class="conversation-highlight">Actually</span>, we just closed a series A with Vietnam's fastest-growing last-mile delivery startup. <span class="conversation-highlight">That reminds me of</span> a similar company we looked at last year — they got acquired by Shopee.
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker lisa">LISA:</span> No way! What was your thesis there?
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker you">YOU:</span> <span class="conversation-highlight">Mostly</span> e-commerce growth, <span class="conversation-highlight">but sometimes</span> we bet on infrastructure plays. <span class="conversation-highlight">Speaking of which</span>, <span class="conversation-highlight">what about your firm? How's the fundraising going for Fund III?</span>
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker lisa">LISA:</span> Pretty well, thanks. We're about 60% subscribed.
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker you">YOU:</span> That's great! <span class="conversation-highlight">Oh, before I forget</span>, I have a friend who runs a family office in Singapore — they've been looking at Vietnam-focused funds. Would you be open to an intro?
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker lisa">LISA:</span> Absolutely! That would be amazing.
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker you">YOU:</span> Perfect. <span class="conversation-highlight">Let's definitely connect again soon</span> — maybe grab coffee next week to discuss further?
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker lisa">LISA:</span> Sounds great! Here's my card.
+                </div>
+                <div class="conversation-line">
+                    <span class="conversation-speaker you">YOU:</span> <span class="conversation-highlight">It was great connecting with you</span>, Lisa. Have a great rest of the conference!
+                </div>
+            </div>
+            
+            <div class="pattern-checklist">
+                <h5>✅ Pattern Count Checklist</h5>
+                <div class="pattern-checklist-grid">
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 1: "based in... originally from"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 1: "for a while now"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 1: "Great to meet you in person"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 1: "Let's connect sometime"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 2: "I'm in [field]"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 2: "That's fascinating"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 2: "Let's connect again soon"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 2: "Great connecting with you"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 3: "Actually, ..."</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 3: "Mostly X, but sometimes Y"</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 3: "That reminds me of..."</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 3: "What about you? How's..."</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 3: "Speaking of..."</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 3: "Before I forget..."</span>
+                    </label>
+                    <label class="pattern-check-item">
+                        <input type="checkbox" onchange="toggleCheck(this)">
+                        <span>Day 4: Connected speech</span>
+                    </label>
+                </div>
+                <div style="margin-top: 12px; padding: 10px; background: var(--life-bg); border-radius: var(--radius-sm); font-size: 13px; color: var(--life-dark);">
+                    <strong>Target:</strong> Check ít nhất 15/15 patterns. <span id="checkCount">0</span>/15 checked.
+                </div>
+            </div>
+            
+            <div style="background: var(--warm-soft); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--warning); margin-top: 16px;">
+                <strong style="color: #744210;">🎯 Your Task:</strong>
+                <p style="font-size: 13px; color: #744210; margin-top: 6px; line-height: 1.5;">
+                    Record yourself doing this 5-minute conversation (solo - you play both parts). Listen back. Count how many patterns you used naturally. Target: ≥15 patterns.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Reality Task -->
+        <section class="section section-sky">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Reality Task - Choose Your Level</h2>
+            <p class="section-desc">Bài tập THỰC TẾ - apply tất cả patterns vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+            
+            <div class="task-levels">
+                <!-- Easy -->
+                <div class="task-level easy">
+                    <div class="task-level-badge">EASY</div>
+                    <h4>📝 LinkedIn About Section</h4>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p>Viết hoặc rewrite LinkedIn About section hoàn chỉnh (1200-1500 characters).</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Apply TẤT CẢ 6 writing patterns từ Day 6</li>
+                            <li>Structure 5 paragraphs</li>
+                            <li>Có ít nhất 3 specific details</li>
+                            <li>Balance professional + personality</li>
+                            <li>Length: 1200-1500 characters</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--life-bg); border-radius: 6px; font-size: 12px; color: var(--life-dark);">
+                        <strong>Deliverable:</strong> Screenshot LinkedIn About section đã publish
+                    </div>
+                </div>
+                
+                <!-- Standard -->
+                <div class="task-level standard">
+                    <div class="task-level-badge">STANDARD</div>
+                    <h4>🤝 Real-Life Introduction</h4>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p>Đi đến 1 nơi công cộng (café, co-working, event) và introduce yourself với 1 người lạ bằng tiếng Anh.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng ít nhất 10 patterns từ Week 1</li>
+                            <li>Conversation kéo dài 3-5 phút</li>
+                            <li>Record conversation (audio hoặc notes)</li>
+                            <li>Self-assess sau conversation</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--biz-bg); border-radius: 6px; font-size: 12px; color: var(--biz-dark);">
+                        <strong>Deliverable:</strong> Audio recording HOẶC written notes
+                    </div>
+                </div>
+                
+                <!-- Challenge -->
+                <div class="task-level challenge">
+                    <div class="task-level-badge">CHALLENGE</div>
+                    <h4>🎥 Video Pitch</h4>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p>Record 60-second video pitch giới thiệu bản thân và work. Upload lên LinkedIn hoặc gửi cho bạn để get feedback.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Video 60 giây (không dài hơn)</li>
+                            <li>Apply TẤT CẢ patterns từ Week 1</li>
+                            <li>Professional nhưng vẫn có personality</li>
+                            <li>Có hook, specifics, value prop, CTA</li>
+                            <li>Record 3 iterations</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--warm-soft); border-radius: 6px; font-size: 12px; color: #744210;">
+                        <strong>Deliverable:</strong> Video file HOẶC LinkedIn post với video
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Before/After Comparison -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">📊</span> Before/After Comparison</h2>
+            <p class="section-desc">So sánh giọng nói/viết của bạn trước và sau tuần 1. Điền scores để thấy tiến bộ rõ rệt.</p>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 0 0 12px; color: var(--text-primary);">🎤 Speaking Comparison</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Before (Day 0)</th>
+                        <th>After (Day 7)</th>
+                        <th>Improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Content</strong></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-before="content"></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-after="content"></td>
+                        <td class="improvement-cell" data-improvement="content">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pronunciation</strong></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-before="pronunciation"></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-after="pronunciation"></td>
+                        <td class="improvement-cell" data-improvement="pronunciation">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intonation</strong></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-before="intonation"></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-after="intonation"></td>
+                        <td class="improvement-cell" data-improvement="intonation">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pace & Pauses</strong></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-before="pace"></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-after="pace"></td>
+                        <td class="improvement-cell" data-improvement="pace">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fluency</strong></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-before="fluency"></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-after="fluency"></td>
+                        <td class="improvement-cell" data-improvement="fluency">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Naturalness</strong></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-before="naturalness"></td>
+                        <td><input type="number" class="score-input" min="0" max="5" step="0.5" data-after="naturalness"></td>
+                        <td class="improvement-cell" data-improvement="naturalness">-</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong>AVERAGE</strong></td>
+                        <td id="beforeAverage">-</td>
+                        <td id="afterAverage">-</td>
+                        <td id="totalImprovement">-</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="background: var(--life-bg); padding: 14px; border-radius: var(--radius-md); border-left: 4px solid var(--life); margin-top: 16px;">
+                <strong style="color: var(--life-dark);">🎯 Target improvement:</strong>
+                <span style="color: var(--life-dark);"> +1.0 points average. Nếu chưa đạt, đừng lo - tuần 2 sẽ focus vào gaps.</span>
+            </div>
+        </section>
+        
+        <!-- Gap Analysis -->
+        <section class="section section-peach">
+            <h2 class="section-title"><span class="section-icon">🔍</span> Gap Analysis - Week 2 Focus</h2>
+            <p class="section-desc">Identify 3 areas cần cải thiện nhất. Focus vào 3 areas này trong tuần 2 để tiến bộ nhanh nhất.</p>
+            
+            <div class="gap-form">
+                <div class="gap-item">
+                    <h5>🎯 Gap #1</h5>
+                    <label>What's the gap?</label>
+                    <input type="text" placeholder="e.g., Too many fillers (um, uh)">
+                    <label>Evidence</label>
+                    <input type="text" placeholder="e.g., 12 fillers per minute in recording">
+                    <label>Target for Week 2</label>
+                    <input type="text" placeholder="e.g., <5 fillers per minute">
+                    <label>Action Plan</label>
+                    <textarea placeholder="e.g., Practice silence instead of 'um'. Use discourse markers like 'well...', 'actually...'"></textarea>
+                </div>
+                
+                <div class="gap-item">
+                    <h5>🎯 Gap #2</h5>
+                    <label>What's the gap?</label>
+                    <input type="text" placeholder="e.g., Pronunciation of /θ/, /ð/">
+                    <label>Evidence</label>
+                    <input type="text" placeholder="e.g., 'think' sounds like 'tink'">
+                    <label>Target for Week 2</label>
+                    <input type="text" placeholder="e.g., Clear /θ/ in all words">
+                    <label>Action Plan</label>
+                    <textarea placeholder="e.g., 10 minutes daily practice with mirror. Record and compare with dictionary audio."></textarea>
+                </div>
+                
+                <div class="gap-item">
+                    <h5>🎯 Gap #3</h5>
+                    <label>What's the gap?</label>
+                    <input type="text" placeholder="e.g., Intonation too monotone">
+                    <label>Evidence</label>
+                    <input type="text" placeholder="e.g., Flat tone throughout recording">
+                    <label>Target for Week 2</label>
+                    <input type="text" placeholder="e.g., Rising intonation at questions, falling at statements">
+                    <label>Action Plan</label>
+                    <textarea placeholder="e.g., Record + listen. Exaggerate intonation. Practice with emotional sentences."></textarea>
+                </div>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 24px 0 12px; color: var(--text-primary);">💡 Common Gaps & Solutions</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Gap</th>
+                        <th>Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Quá nhiều fillers ("um", "uh")</td>
+                        <td>Practice silence, dùng discourse markers</td>
+                    </tr>
+                    <tr>
+                        <td>Pronunciation /θ/, /ð/ không rõ</td>
+                        <td>10 phút/ngày practice với mirror</td>
+                    </tr>
+                    <tr>
+                        <td>Intonation monotone</td>
+                        <td>Record + listen, exaggerate intonation</td>
+                    </tr>
+                    <tr>
+                        <td>Pace quá nhanh</td>
+                        <td>Practice 130-150 WPM với timer</td>
+                    </tr>
+                    <tr>
+                        <td>Không có hooks</td>
+                        <td>Prepare 3 hooks trước mỗi conversation</td>
+                    </tr>
+                    <tr>
+                        <td>Writing quá generic</td>
+                        <td>Thêm specific details (numbers, names)</td>
+                    </tr>
+                    <tr>
+                        <td>Register không phù hợp</td>
+                        <td>Read aloud, adjust tone</td>
+                    </tr>
+                    <tr>
+                        <td>Không có structure</td>
+                        <td>Follow 5-paragraph template</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Milestone Celebration -->
+        <section class="section section-milestone">
+            <div class="milestone-card">
+                <div class="milestone-trophy">🏆</div>
+                <div class="milestone-title">Milestone 1: Reactivation Complete!</div>
+                <div class="milestone-subtitle">You've completed Week 1 of the Professional Fluency Roadmap!</div>
+                
+                <div class="milestone-achievements">
+                    <div class="achievement-item">
+                        <div class="achievement-icon">📚</div>
+                        <span><strong>30+ patterns</strong><br>learned</span>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">⏱️</div>
+                        <span><strong>7 hours</strong><br>of practice</span>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🎤</div>
+                        <span><strong>6 criteria</strong><br>rubric mastered</span>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">✍️</div>
+                        <span><strong>LinkedIn profile</strong><br>rewritten</span>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🎯</div>
+                        <span><strong>Reality Task</strong><br>completed</span>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🔄</div>
+                        <span><strong>3 iterations</strong><br>framework</span>
+                    </div>
+                </div>
+                
+                <div class="milestone-message">
+                    <strong>🎉 Congratulations!</strong><br><br>
+                    In just 7 days, you've learned to introduce yourself naturally, shift registers appropriately, extend conversations smoothly, decode connected speech, record and iterate on your speaking, and write compelling LinkedIn content.<br><br>
+                    <strong>Remember:</strong> Review is where learning becomes permanent. Keep practicing those patterns every day, and you'll see continuous improvement.<br><br>
+                    You're now ready for <strong>Week 2: Daily Rhythm & Productivity</strong>. See you there! 🦊
+                </div>
+            </div>
+        </section>
+        
+        <!-- Week 2 Preview -->
+        <section class="section section-sky">
+            <h2 class="section-title"><span class="section-icon">📅</span> Week 2 Preview: Daily Rhythm & Productivity</h2>
+            <p class="section-desc">Teaser cho tuần 2 - chuẩn bị tinh thần cho những patterns mới!</p>
+            
+            <div style="background: var(--accent-soft); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--accent); margin-bottom: 16px;">
+                <strong style="color: var(--biz-dark);">🎯 Mục tiêu tuần 2:</strong>
+                <span style="color: var(--text-secondary);"> Nói về daily routine tự nhiên, discuss productivity strategies, share work-life balance approaches, talk về habits và systems.</span>
+            </div>
+            
+            <div class="preview-grid">
+                <div class="preview-day">
+                    <div class="preview-day-num">Day 8</div>
+                    <h5>Morning Routines</h5>
+                    <p>Describe daily habits naturally</p>
+                </div>
+                <div class="preview-day">
+                    <div class="preview-day-num">Day 9</div>
+                    <h5>Productivity Systems</h5>
+                    <p>Explain workflows & methods</p>
+                </div>
+                <div class="preview-day">
+                    <div class="preview-day-num">Day 10</div>
+                    <h5>Time Management</h5>
+                    <p>Discuss prioritization strategies</p>
+                </div>
+                <div class="preview-day">
+                    <div class="preview-day-num">Day 11</div>
+                    <h5>Work-Life Balance</h5>
+                    <p>Share approaches & boundaries</p>
+                </div>
+                <div class="preview-day">
+                    <div class="preview-day-num">Day 12</div>
+                    <h5>Tools & Apps</h5>
+                    <p>Review productivity tools</p>
+                </div>
+                <div class="preview-day">
+                    <div class="preview-day-num">Day 13</div>
+                    <h5>Habits & Systems</h5>
+                    <p>Discuss long-term systems</p>
+                </div>
+                <div class="preview-day">
+                    <div class="preview-day-num">Day 14</div>
+                    <h5>Review + Reality</h5>
+                    <p>Integrate + apply (Milestone 2)</p>
+                </div>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 24px 0 12px; color: var(--text-primary);">🔮 Patterns bạn sẽ học</h3>
+            
+            <div style="background: white; padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+                <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 8px;">
+                    <li style="padding: 6px 10px; background: var(--bg); border-radius: 6px; font-size: 13px; color: var(--text-secondary);">
+                        <span style="color: var(--accent);">•</span> "I usually [verb] in the morning"
+                    </li>
+                    <li style="padding: 6px 10px; background: var(--bg); border-radius: 6px; font-size: 13px; color: var(--text-secondary);">
+                        <span style="color: var(--accent);">•</span> "I've been using [tool] for [time]"
+                    </li>
+                    <li style="padding: 6px 10px; background: var(--bg); border-radius: 6px; font-size: 13px; color: var(--text-secondary);">
+                        <span style="color: var(--accent);">•</span> "What works for me is [approach]"
+                    </li>
+                    <li style="padding: 6px 10px; background: var(--bg); border-radius: 6px; font-size: 13px; color: var(--text-secondary);">
+                        <span style="color: var(--accent);">•</span> "I struggle with [challenge], so I [solution]"
+                    </li>
+                    <li style="padding: 6px 10px; background: var(--bg); border-radius: 6px; font-size: 13px; color: var(--text-secondary);">
+                        <span style="color: var(--accent);">•</span> "My morning routine includes [list]"
+                    </li>
+                    <li style="padding: 6px 10px; background: var(--bg); border-radius: 6px; font-size: 13px; color: var(--text-secondary);">
+                        <span style="color: var(--accent);">•</span> "I've found that [insight]"
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="background: var(--warm-soft); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--warning); margin-top: 16px;">
+                <strong style="color: #744210;">🎯 Reality Task tuần 2:</strong>
+                <ul style="margin-top: 8px; padding-left: 20px; font-size: 13px; color: #744210; line-height: 1.6;">
+                    <li><strong>Easy:</strong> Write blog post về productivity system</li>
+                    <li><strong>Standard:</strong> Share productivity tip ở team meeting</li>
+                    <li><strong>Challenge:</strong> Record 5-minute video về daily routine</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-gold">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Week 1 Final Quiz</h2>
+            <p class="section-desc">7 câu hỏi tổng hợp từ toàn bộ tuần 1. Đây là "final exam" - xem bạn nhớ được bao nhiêu!</p>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">1. "Mostly X, but sometimes Y" là pattern từ ngày nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. Day 1 - Natural Introductions</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. Day 2 - Register Shifting</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. Day 3 - Conversation Extension</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. Day 6 - LinkedIn Profile</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. "Did you" khi nói nhanh sẽ nghe như:</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. "Did-you" (2 từ riêng)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. "Did-ju" /dɪdʒuː/ (assimilation)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. "Did-chu" /dɪtʃuː/</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. "Di-ju"</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">3. Trong 3 iterations framework, Iteration 2 focus vào gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Content (structure, hooks)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. Naturalness (connected speech)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. Delivery (pronunciation, intonation, pace)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. Grammar & spelling</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. Length lý tưởng cho LinkedIn About section là bao nhiêu characters?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. 200-400 characters</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. 1200-1500 characters</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. 2000-2500 characters</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. 3000+ characters</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">5. Register nào NÊN dùng khi gặp CEO đối tác lần đầu?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. Casual: "Hey, what's up?"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Semi-formal: "Hi, I'm in tech"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Formal: "I work as [role] at [company]"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. Ultra-formal: "It's a pleasure to make your acquaintance"</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">6. "Oh, before I forget..." dùng khi nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. Ở đầu conversation</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. Ở CUỐI conversation, trước khi exit</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. Ở giữa conversation, khi nhớ ra điều gì</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. Khi bắt đầu email</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Theo nghiên cứu, nếu không review, bạn sẽ quên bao nhiêu % sau 1 tuần?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. 30%</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. 50%</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. 70%</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. 90%</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Final Flashcards: Week 1 Review</h2>
+            <p class="section-desc">6 flashcards tổng hợp những điều quan trọng nhất từ tuần 1. Ôn lại trước khi sang tuần 2.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-question" id="fc-question">C1 khác B2 như thế nào?</div>
+                            <div class="card-hint">Tap to reveal answer →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-answer" id="fc-answer">
+                                <strong>Answer:</strong>
+                                C1 không phải biết NHIỀU từ hơn. C1 = Natural + Precise + Context-aware. Biết dùng ĐÚNG từ, ĐÚNG lúc, với ĐÚNG người.
+                            </div>
+                            <div class="card-tip" id="fc-tip">
+                                💡 Ví dụ: B2 nói "I work in finance". C1 nói "I'm in real estate PE — mostly logistics, but sometimes industrial when numbers make sense."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-01-day-6.html" class="nav-btn">
+                <div class="nav-label">← Previous Day</div>
+                <div class="nav-title">Day 6: LinkedIn Profile</div>
+            </a>
+            <a href="week-02.html" class="nav-btn">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 2: Daily Rhythm</div>
+            </a>
+        </div>
+        
+        <!-- Complete Week Button -->
+        <button class="complete-btn" onclick="completeWeek()">🏆 Complete Week 1 & Start Week 2</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#D69E2E"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#D69E2E"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#D69E2E" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#D69E2E" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 85 108 Q 100 120 115 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#D69E2E"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Trophy -->
+            <g transform="translate(55, 145)">
+                <path d="M 5 0 L 25 0 L 22 12 L 8 12 Z" fill="#ECC94B"/>
+                <rect x="12" y="12" width="6" height="6" fill="#B7791F"/>
+                <rect x="8" y="18" width="14" height="3" fill="#B7791F"/>
+                <path d="M 2 2 Q 0 6 3 8" stroke="#ECC94B" stroke-width="2" fill="none"/>
+                <path d="M 28 2 Q 30 6 27 8" stroke="#ECC94B" stroke-width="2" fill="none"/>
+            </g>
+        </svg>
+        <div class="mascot-speech">Week 1 complete! 🏆</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 1 Complete · Milestone 1 Achieved · See you in Week 2!</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== COMPARISON TABLE ==========
+        function updateComparison() {
+            const criteria = ['content', 'pronunciation', 'intonation', 'pace', 'fluency', 'naturalness'];
+            let beforeTotal = 0, afterTotal = 0, count = 0;
+            
+            criteria.forEach(c => {
+                const before = parseFloat(document.querySelector(`[data-before="${c}"]`).value);
+                const after = parseFloat(document.querySelector(`[data-after="${c}"]`).value);
+                const improvementCell = document.querySelector(`[data-improvement="${c}"]`);
+                
+                if (!isNaN(before) && !isNaN(after)) {
+                    const improvement = (after - before).toFixed(1);
+                    improvementCell.textContent = (improvement >= 0 ? '+' : '') + improvement;
+                    improvementCell.style.color = improvement >= 0 ? 'var(--life-dark)' : 'var(--error)';
+                    beforeTotal += before;
+                    afterTotal += after;
+                    count++;
+                } else {
+                    improvementCell.textContent = '-';
+                    improvementCell.style.color = 'var(--text-muted)';
+                }
+            });
+            
+            if (count > 0) {
+                document.getElementById('beforeAverage').textContent = (beforeTotal / count).toFixed(1);
+                document.getElementById('afterAverage').textContent = (afterTotal / count).toFixed(1);
+                const totalImprove = ((afterTotal - beforeTotal) / count).toFixed(1);
+                const totalCell = document.getElementById('totalImprovement');
+                totalCell.textContent = (totalImprove >= 0 ? '+' : '') + totalImprove;
+                totalCell.style.color = totalImprove >= 0 ? 'var(--life-dark)' : 'var(--error)';
+            }
+        }
+        
+        document.querySelectorAll('.score-input').forEach(input => {
+            input.addEventListener('input', updateComparison);
+        });
+        
+        // ========== PATTERN CHECKLIST ==========
+        function toggleCheck(checkbox) {
+            const item = checkbox.closest('.pattern-check-item');
+            if (checkbox.checked) {
+                item.classList.add('checked');
+            } else {
+                item.classList.remove('checked');
+            }
+            
+            const count = document.querySelectorAll('.pattern-check-item input:checked').length;
+            document.getElementById('checkCount').textContent = count;
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                question: "C1 khác B2 như thế nào?",
+                answer: "C1 không phải biết NHIỀU từ hơn. C1 = Natural + Precise + Context-aware. Biết dùng ĐÚNG từ, ĐÚNG lúc, với ĐÚNG người.",
+                tip: "💡 Ví dụ: B2 nói 'I work in finance'. C1 nói 'I'm in real estate PE — mostly logistics, but sometimes industrial when numbers make sense.'"
+            },
+            { 
+                question: "3 loại Hook Opener là gì?",
+                answer: "1. Story Hook: 'Five years ago, I made a bet...'\n2. Question Hook: 'What if I told you...'\n3. Bold Statement Hook: 'Most X are Y. We're not.'",
+                tip: "💡 KHÔNG dùng 'I am a...' - boring, generic, nghe như 10,000 profiles khác."
+            },
+            { 
+                question: "6 connected speech patterns là gì?",
+                answer: "1. Linking (C-V): 'based in' → 'basedin'\n2. Intrusion: 'go out' → 'go-W-out'\n3. Elision: 'next day' → 'nex day'\n4. Assimilation: 'did you' → 'did-ju'\n5. Reduction: 'to' → 'tə'\n6. Contractions: 'gonna', 'wanna'",
+                tip: "💡 Native nói thành DÒNG CHẢY, không phải từng từ riêng. Đó là lý do B2 nghe không hiểu."
+            },
+            { 
+                question: "3 iterations framework là gì?",
+                answer: "1. Content Focus: Structure, hooks, elaboration\n2. Delivery Focus: Pronunciation, intonation, pace\n3. Naturalness Focus: Connected speech, discourse markers",
+                tip: "💡 Mỗi iteration focus vào 1 aspect. Sau 3 iterations, bạn cải thiện rõ rệt."
+            },
+            { 
+                question: "5-paragraph structure cho About section?",
+                answer: "1. Hook Opener (story/question/bold)\n2. What you do + specific details\n3. Why you do it (philosophy)\n4. Value Proposition\n5. CTA + Personality Touch",
+                tip: "💡 Length lý tưởng: 1200-1500 characters. Mỗi paragraph có 1 purpose rõ ràng."
+            },
+            { 
+                question: "Tại sao Review Day quan trọng?",
+                answer: "Nếu không review, bạn sẽ quên 70% sau 1 tuần. Review Day giúp:\n- Recap tất cả patterns\n- Apply vào thực tế\n- Identify gaps\n- Make learning permanent",
+                tip: "💡 'Review is where learning becomes permanent.' - Không review = uổng phí 6 ngày học."
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-question').textContent = card.question;
+            document.getElementById('fc-answer').innerHTML = '<strong>Answer:</strong><br>' + card.answer.replace(/\n/g, '<br>');
+            document.getElementById('fc-tip').innerHTML = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'c', q2: 'b', q3: 'c', q4: 'b', q5: 'c', q6: 'b', q7: 'c' };
+        const explanations = {
+            q1: '"Mostly X, but sometimes Y" là pattern từ Day 3 - Conversation Extension. Pattern này giúp elaborate với nuance, tạo 2 hooks để listener bám vào. Nó cũng được apply vào Day 6 - LinkedIn Profile.',
+            q2: '/d/ + /j/ = /dʒ/ (j sound). Assimilation rule: d + you = d-ju. Đây là lý do B2 nghe không hiểu - họ nghe "did you" riêng, trong khi native nói "did-ju" liền.',
+            q3: 'Iteration 2 focus vào DELIVERY: pronunciation, intonation, pace. Iteration 1 là Content, Iteration 3 là Naturalness. Mỗi iteration focus vào 1 aspect để cải thiện rõ rệt.',
+            q4: '1200-1500 characters là ideal. Quá ngắn (200-400) = không đủ depth. Quá dài (2000+) = reader mất interest. 1200-1500 là sweet spot cho LinkedIn About.',
+            q5: 'Khi gặp CEO đối tác lần đầu, dùng Formal register: "I work as [role] at [company]". Casual quá informal, semi-formal OK nhưng không đủ impressive, ultra-formal nghe robotic.',
+            q6: '"Oh, before I forget..." dùng ở CUỐI conversation, trước khi exit. Đây là pattern để add value lúc kết thúc. Nếu dùng ở đầu hoặc giữa, nghe scattered.',
+            q7: 'Theo Ebbinghaus forgetting curve, nếu không review, bạn sẽ quên 70% sau 1 tuần. Đó là lý do Review Day quan trọng - để make learning permanent.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 PERFECT! You\'ve mastered Week 1! Ready for Week 2!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! You remember most of Week 1. Review the missed ones!';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Review the mind map and flashcards again.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Re-read the mind map and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE WEEK ==========
+        function completeWeek() {
+            const completed = JSON.parse(localStorage.getItem('week1Days') || '[]');
+            
+            // Mark Day 7 as complete
+            if (!completed.includes(7)) {
+                completed.push(7);
+                localStorage.setItem('week1Days', JSON.stringify(completed));
+            }
+            
+            // Mark Week 1 as complete
+            const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+            if (!completedWeeks.includes(1)) {
+                completedWeeks.push(1);
+                localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                localStorage.setItem('completedWeeks', completedWeeks.length);
+            }
+            
+            // Celebration alert
+            alert(`🎉🏆 CONGRATULATIONS! 🏆🎉
+
+You've completed WEEK 1 of the Professional Fluency Roadmap!
+
+In 7 days, you've:
+✅ Learned 30+ C1 patterns
+✅ Mastered register shifting
+✅ Decoded connected speech
+✅ Practiced 3-iteration framework
+✅ Written compelling LinkedIn profile
+✅ Completed Reality Task
+✅ Achieved Milestone 1
+
+You're now ready for Week 2: Daily Rhythm & Productivity.
+
+Remember: Review is where learning becomes permanent.
+Keep practicing those patterns every day!
+
+See you in Week 2! 🦊`);
+            
+            // Navigate to Week 2
+            location.href = 'week-02.html';
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+        });
+    </script>
+</body>
+</html>
