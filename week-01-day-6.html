@@ -1,0 +1,3444 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 6: LinkedIn Profile | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #805AD5;
+            --primary-dark: #6B46C1;
+            --primary-light: #B794D6;
+            --primary-soft: #F5F0FF;
+            --secondary: #F9D4B8;
+            --secondary-soft: #FFF5EB;
+            --accent: #7BC8E8;
+            --accent-soft: #E0F2FA;
+            --warm: #F9D4B8;
+            --warm-soft: #FFF5EB;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #E9D8FD 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(128,90,213,0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(183,148,214,0.15) 0%, transparent 40%);
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #E9D8FD; }
+        .section-peach { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #FDE8D4; }
+        .section-sky { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #BEE3F8; }
+        .section-mint { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-lavender { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E9D8FD; }
+        .section-accent { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #E9D8FD; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), #E9D8FD);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison .bad {
+            color: #9B2C2C;
+            font-style: italic;
+        }
+        
+        .problem-box .comparison .good {
+            color: var(--life-dark);
+            font-style: italic;
+        }
+        
+        .problem-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .problem-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .problem-box li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--life-dark);
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARD ========== */
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pattern-number {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--primary-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--primary-dark);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong { color: var(--primary-dark); }
+        
+        .subtypes-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .subtype-box {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary-light);
+        }
+        
+        .subtype-box strong {
+            color: var(--primary-dark);
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .subtype-box em {
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+            color: var(--primary-dark);
+        }
+        
+        .context-note {
+            background: var(--warm-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--warning);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+        }
+        
+        .context-note strong { color: #744210; }
+        
+        .mistake-box {
+            background: #FED7D7;
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--error);
+            margin-top: 12px;
+            font-size: 12px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        /* ========== LINKEDIN SECTIONS ========== */
+        .linkedin-section-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .linkedin-section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .linkedin-section-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .linkedin-section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .linkedin-section-subtitle {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        
+        .linkedin-section-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 12px;
+        }
+        
+        .structure-box {
+            background: var(--primary-soft);
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+        }
+        
+        .structure-box h5 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .structure-box code {
+            display: block;
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-top: 6px;
+        }
+        
+        .comparison-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+        
+        .comparison-item {
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+        
+        .comparison-item.bad {
+            background: #FED7D7;
+            border-left: 3px solid var(--error);
+            color: #9B2C2C;
+        }
+        
+        .comparison-item.good {
+            background: var(--life-bg);
+            border-left: 3px solid var(--life);
+            color: var(--life-dark);
+        }
+        
+        .comparison-item strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .comparison-item.bad strong { color: #9B2C2C; }
+        .comparison-item.good strong { color: var(--life-dark); }
+        
+        /* ========== SAMPLE ABOUT SECTION ========== */
+        .sample-about {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--primary);
+            margin: 16px 0;
+            position: relative;
+        }
+        
+        .sample-about::before {
+            content: '✨ PERFECT EXAMPLE';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .sample-about-content {
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-primary);
+            white-space: pre-wrap;
+        }
+        
+        .sample-about-meta {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== ITERATIONS ========== */
+        .iteration-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid;
+            margin-bottom: 14px;
+        }
+        
+        .iteration-card.iter-1 { border-left-color: var(--primary); }
+        .iteration-card.iter-2 { border-left-color: var(--accent); }
+        .iteration-card.iter-3 { border-left-color: var(--life); }
+        
+        .iteration-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .iteration-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 16px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .iteration-card.iter-1 .iteration-num { background: var(--primary); }
+        .iteration-card.iter-2 .iteration-num { background: var(--accent); }
+        .iteration-card.iter-3 .iteration-num { background: var(--life); }
+        
+        .iteration-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .iteration-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        
+        .iteration-goal {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .iteration-goal strong { color: var(--text-primary); }
+        
+        .focus-areas {
+            margin-bottom: 12px;
+        }
+        
+        .focus-areas h5 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .focus-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .focus-tag {
+            background: var(--bg);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        .process-steps {
+            margin-top: 12px;
+        }
+        
+        .process-steps h5 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 6px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .step-icon {
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.basic {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .scenario-card.rewrite {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+        }
+        
+        .scenario-card.experience {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.challenge {
+            background: linear-gradient(135deg, var(--warm-soft), var(--secondary-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.basic .scenario-badge { background: var(--primary); }
+        .scenario-card.rewrite .scenario-badge { background: var(--accent); }
+        .scenario-card.experience .scenario-badge { background: var(--life); }
+        .scenario-card.challenge .scenario-badge { background: var(--warning); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.basic h4 { color: var(--primary-dark); }
+        .scenario-card.rewrite h4 { color: #2C5282; }
+        .scenario-card.experience h4 { color: var(--life-dark); }
+        .scenario-card.challenge h4 { color: #744210; }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.basic p { color: var(--primary-dark); }
+        .scenario-card.rewrite p { color: #2C5282; }
+        .scenario-card.experience p { color: var(--life-dark); }
+        .scenario-card.challenge p { color: #744210; }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.basic .scenario-requirements { color: var(--primary-dark); }
+        .scenario-card.rewrite .scenario-requirements { color: #2C5282; }
+        .scenario-card.experience .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.challenge .scenario-requirements { color: #744210; }
+        
+        .action-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.basic .action-btn { border-color: var(--primary); color: var(--primary-dark); }
+        .scenario-card.rewrite .action-btn { border-color: var(--accent); color: #2C5282; }
+        .scenario-card.experience .action-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.challenge .action-btn { border-color: var(--warning); color: #744210; }
+        
+        .action-btn:hover { transform: translateY(-2px); }
+        .scenario-card.basic .action-btn:hover { background: var(--primary); color: white; }
+        .scenario-card.rewrite .action-btn:hover { background: var(--accent); color: white; }
+        .scenario-card.experience .action-btn:hover { background: var(--life); color: white; }
+        .scenario-card.challenge .action-btn:hover { background: var(--warning); color: white; }
+        
+        /* ========== RUBRIC TABS ========== */
+        .rubric-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .rubric-tab {
+            padding: 8px 14px;
+            background: white;
+            border: 1.5px solid var(--border);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .rubric-tab:hover { border-color: var(--primary); }
+        
+        .rubric-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .rubric-tab .weight {
+            background: rgba(255,255,255,0.25);
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 10px;
+        }
+        
+        .rubric-tab.active .weight {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .rubric-content {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+        
+        .rubric-content.active { display: block; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* ========== RUBRIC CARD ========== */
+        .rubric-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .rubric-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        
+        .rubric-icon { font-size: 1.8rem; }
+        
+        .rubric-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .rubric-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            font-size: 13px;
+        }
+        
+        .rubric-table th {
+            background: var(--primary);
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .rubric-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+            vertical-align: top;
+        }
+        
+        .rubric-table tr:last-child td { border-bottom: none; }
+        
+        .score-badge {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 12px;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .checklist-box {
+            background: var(--life-bg);
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--life);
+            margin-top: 12px;
+        }
+        
+        .checklist-box h5 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--life-dark);
+            margin-bottom: 8px;
+        }
+        
+        .checklist-box ul { list-style: none; }
+        
+        .checklist-box li {
+            padding: 4px 0;
+            padding-left: 22px;
+            position: relative;
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .checklist-box li::before {
+            content: '☐';
+            position: absolute;
+            left: 0;
+            font-size: 13px;
+        }
+        
+        /* ========== TIPS ACCORDION ========== */
+        .tips-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .tip-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .tip-header {
+            padding: 14px 18px;
+            background: var(--bg);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-primary);
+            transition: background 0.2s;
+        }
+        
+        .tip-header:hover { background: var(--primary-soft); }
+        
+        .tip-header .toggle {
+            color: var(--primary);
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+        
+        .tip-item.open .tip-header .toggle {
+            transform: rotate(45deg);
+        }
+        
+        .tip-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+        
+        .tip-item.open .tip-body {
+            max-height: 1000px;
+        }
+        
+        .tip-content {
+            padding: 16px 18px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .tip-content strong { color: var(--text-primary); }
+        
+        .tip-content h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 10px 0 6px;
+        }
+        
+        .tip-content h5:first-child { margin-top: 0; }
+        
+        .tip-content ul {
+            padding-left: 20px;
+            margin: 6px 0;
+        }
+        
+        .tip-content li { padding: 3px 0; }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 10px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-tip strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--life) 0%, #38A169 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(128,90,213,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .comparison-pair { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-01.html" class="nav-back">← Week 1 Hub</a>
+            <div class="nav-progress">
+                <span>Day 6 / 7</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 84%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-01.html" class="day-tab">Overview</a>
+                <a href="week-01-day-1.html" class="day-tab">Day 1</a>
+                <a href="week-01-day-2.html" class="day-tab">Day 2</a>
+                <a href="week-01-day-3.html" class="day-tab">Day 3</a>
+                <a href="week-01-day-4.html" class="day-tab">Day 4</a>
+                <a href="week-01-day-5.html" class="day-tab">Day 5</a>
+                <a href="week-01-day-6.html" class="day-tab active">Day 6</a>
+                <a href="week-01-day-7.html" class="day-tab">Day 7</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-01.html">Week 1</a>
+                <span>›</span>
+                <span>Day 6</span>
+            </div>
+            <h1 class="day-title">✍️ LinkedIn Profile: Writing with Impact</h1>
+            <p class="day-subtitle">Writing là <strong>speaking trên giấy</strong>. Hôm nay bạn sẽ apply TẤT CẢ patterns từ Day 1-5 vào LinkedIn About section - sản phẩm thực tế có thể publish ngay.</p>
+            <div class="day-meta">
+                <span class="meta-tag">✍️ Writing Intensive</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 6 writing patterns</span>
+                <span class="meta-tag">🎯 Real product: LinkedIn profile</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>✍️ Writing = Speaking on paper</h4>
+                <p>Tất cả patterns từ Day 1-5 đều apply được vào writing. Hook opener (Day 3), "mostly X, but sometimes Y" (Day 3), specific details (Day 4), register balance (Day 2) - tất cả đều dùng được. Hôm nay bạn sẽ viết <strong>LinkedIn About section hoàn chỉnh</strong>.</p>
+            </div>
+            
+            <!-- Problem -->
+            <div class="problem-box">
+                <h4>❌ Tại sao LinkedIn profile của bạn không ai đọc?</h4>
+                <p style="font-size: 13px; margin-bottom: 10px;">Trung bình recruiter dành <strong>6 giây</strong> để scan LinkedIn profile. Nếu không có hook trong 2 giây đầu → họ scroll qua.</p>
+                <div class="comparison">
+                    <div class="bad"><strong>❌ B2 Version:</strong> "I am an Investment Director with 8 years of experience in real estate private equity. I have a proven track record of successful investments."</div>
+                </div>
+                <p><strong>5 lỗi phổ biến của người Việt:</strong></p>
+                <ul>
+                    <li><strong>Generic opener:</strong> "I am a hardworking professional..." - nghe như 10,000 profiles khác</li>
+                    <li><strong>List skills thay vì tell story:</strong> "Skills: Excel, PowerPoint, Teamwork..." - boring, không có impact</li>
+                    <li><strong>Quá formal hoặc quá casual:</strong> "seasoned professional" (robotic) vs "Hey there!" (unprofessional)</li>
+                    <li><strong>Không có hooks:</strong> No story, no specific numbers, no personality</li>
+                    <li><strong>Không có Call to Action:</strong> Reader không biết nên làm gì tiếp</li>
+                </ul>
+            </div>
+            
+            <!-- Solution -->
+            <div class="solution-box">
+                <h4>✅ C1 writers làm gì khác?</h4>
+                <p style="font-size: 13px; margin-bottom: 10px;">Họ viết như đang NÓI CHUYỆN với reader:</p>
+                <div class="comparison">
+                    <div class="good"><strong>✅ C1 Version:</strong> "Five years ago, I made a bet that Southeast Asia's logistics sector would transform. That bet led me to close 3 series A deals, including one with Vietnam's fastest-growing last-mile delivery startup. Today, I'm still placing those bets — mostly in logistics, but sometimes in industrial properties when the numbers make sense."</div>
+                </div>
+                <p><strong>Sự khác biệt:</strong></p>
+                <ul>
+                    <li><strong>Story opener:</strong> "Five years ago, I made a bet..."</li>
+                    <li><strong>Specific details:</strong> 3 deals, Vietnam's fastest-growing</li>
+                    <li><strong>"Mostly X, but sometimes Y"</strong> pattern (từ Day 3!)</li>
+                    <li><strong>Personality:</strong> "when the numbers make sense"</li>
+                    <li><strong>Conversational tone</strong> - viết như đang nói</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">6 Patterns</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Writing patterns cho LinkedIn</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🔄</div>
+                    <div class="plan-block-title">3 Iterations</div>
+                    <div class="plan-block-time">30 min</div>
+                    <div class="plan-block-desc">Draft → Tone → Polish</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">✍️</div>
+                    <div class="plan-block-title">4 Scenarios</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">About, Experience, Full profile</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎴</div>
+                    <div class="plan-block-title">Review</div>
+                    <div class="plan-block-time">5 min</div>
+                    <div class="plan-block-desc">Rubric + Quiz</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6 Writing Patterns -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">📚</span> 6 Writing Patterns for LinkedIn</h2>
+            <p class="section-desc">6 patterns để biến LinkedIn profile từ boring → compelling. Áp dụng tất cả patterns từ Day 1-5 vào writing.</p>
+            
+            <!-- Pattern 1: Hook Opener -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">1</div>
+                    <div>The Hook Opener</div>
+                </div>
+                <p class="pattern-meaning">Câu đầu tiên khiến reader phải đọc câu thứ 2. Quyết định reader có tiếp tục đọc hay scroll qua.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> B2 writers bắt đầu với "I am..." (boring). C1 writers bắt đầu với STORY, QUESTION, hoặc BOLD STATEMENT. Hook tạo curiosity gap → reader phải đọc tiếp.
+                </div>
+                
+                <div class="subtypes-label">3 loại Hook</div>
+                
+                <div class="subtype-box">
+                    <strong>A. Story Hook</strong>
+                    "Five years ago, I made a bet that..."<br>
+                    "It started with a 2 AM phone call from..."<br>
+                    "When I first entered the industry, everyone told me..."
+                    <br><em>→ Tạo narrative, reader muốn biết kết quả</em>
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>B. Question Hook</strong>
+                    "What if I told you that 80% of logistics startups fail in year 1?"<br>
+                    "Have you ever wondered why Southeast Asia's e-commerce is growing 25% annually?"<br>
+                    "What does a $50M fund have in common with a street food stall?"
+                    <br><em>→ Tạo curiosity, reader muốn biết câu trả lời</em>
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>C. Bold Statement Hook</strong>
+                    "Most real estate funds are playing it safe. We're not."<br>
+                    "I've turned down more deals than I've closed. And I sleep well at night."<br>
+                    "The future of logistics in Southeast Asia isn't what you think."
+                    <br><em>→ Tạo contrast, reader muốn biết tại sao</em>
+                </div>
+                
+                <div class="mistake-box">
+                    <strong>⚠️ Common mistake:</strong> ❌ Bắt đầu với "I am a..." → ✅ Bắt đầu với story/question/statement
+                </div>
+            </div>
+            
+            <!-- Pattern 2: Mostly X, but sometimes Y -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">2</div>
+                    <div>"Mostly X, but sometimes Y" (Elaboration)</div>
+                </div>
+                <p class="pattern-meaning">Elaborate về work với nuance - không chỉ 1 chiều. Apply pattern từ Day 3 vào writing.</p>
+                <div class="pattern-why">
+                    <strong>Why quan trọng trong writing?</strong> Thể hiện depth và complexity. Tạo 2 hooks để reader bám vào. Nghe authentic, không robotic.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item">
+                    <span class="example-context">🏢 Work focus</span>
+                    "I'm mostly focused on logistics investments, but sometimes we look at industrial properties when the numbers make sense."
+                </div>
+                <div class="example-item">
+                    <span class="example-context">🎯 Geographic focus</span>
+                    "We invest mostly in Vietnam and Thailand, but sometimes we explore opportunities in Indonesia if they're compelling enough."
+                </div>
+                <div class="example-item">
+                    <span class="example-context">💡 Stage focus</span>
+                    "I work mostly with series A startups, but sometimes we co-invest in seed rounds when the team is exceptional."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Tip:</strong> Dùng pattern này sau khi đã có hook. Đừng dùng ngay câu đầu tiên.
+                </div>
+            </div>
+            
+            <!-- Pattern 3: Specific Details -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">3</div>
+                    <div>The Specific Detail</div>
+                </div>
+                <p class="pattern-meaning">Numbers, names, places - khiến writing trở nên concrete. Specific details = credibility.</p>
+                <div class="pattern-why">
+                    <strong>Why quan trọng?</strong> "I've closed many deals" → vague. "I've closed 12 deals worth $200M+" → specific, memorable. Mỗi paragraph nên có ít nhất 1 specific detail.
+                </div>
+                
+                <div class="subtypes-label">4 Types of Specific Details</div>
+                
+                <div class="subtype-box">
+                    <strong>A. Numbers</strong>
+                    "I've closed 12 deals worth $200M+"<br>
+                    "Our fund is up 18% YTD"<br>
+                    "We grew the portfolio 3x in 2 years"
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>B. Names</strong>
+                    "Including our series A with [startup name]"<br>
+                    "Working with teams from Shopee, Grab, and TikTok"
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>C. Places</strong>
+                    "Across Vietnam, Thailand, and Indonesia"<br>
+                    "From Ho Chi Minh City to Singapore"
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>D. Time</strong>
+                    "Over the past 8 years"<br>
+                    "In the last 18 months"<br>
+                    "Since 2018"
+                </div>
+                
+                <div class="comparison-pair">
+                    <div class="comparison-item bad">
+                        <strong>❌ Vague</strong>
+                        "I have extensive experience in real estate."
+                    </div>
+                    <div class="comparison-item good">
+                        <strong>✅ Specific</strong>
+                        "Over the past 8 years, I've closed 12 real estate deals worth $200M+ across Vietnam and Thailand."
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pattern 4: Value Proposition -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">4</div>
+                    <div>The Value Proposition</div>
+                </div>
+                <p class="pattern-meaning">Bạn mang lại giá trị gì cho connections? Trả lời câu hỏi: "Why should I connect with this person?"</p>
+                <div class="pattern-why">
+                    <strong>Why quan trọng?</strong> Reader tự hỏi: "Why should I connect with this person?" Value proposition trả lời câu hỏi đó. Khiến connection request có mục đích.
+                </div>
+                
+                <div class="structure-box">
+                    <h5>Structure</h5>
+                    <code>"I help [target audience] achieve [specific outcome] through [your unique approach]."</code>
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item">
+                    <span class="example-context">🏢 Investment focus</span>
+                    "I help founders in Southeast Asia's logistics sector raise their series A by connecting them with the right investors at the right time."
+                </div>
+                <div class="example-item">
+                    <span class="example-context">🎯 Advisory focus</span>
+                    "I help real estate funds navigate the Vietnamese market by providing on-the-ground insights that you can't get from a report."
+                </div>
+                <div class="example-item">
+                    <span class="example-context">💡 Mentorship focus</span>
+                    "I help young professionals in finance build their careers by sharing the lessons I've learned over 8 years in the industry."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Tip:</strong> Value proposition nên cụ thể, không generic. "I help people succeed" = quá vague.
+                </div>
+            </div>
+            
+            <!-- Pattern 5: Call to Action -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">5</div>
+                    <div>The Call to Action (CTA)</div>
+                </div>
+                <p class="pattern-meaning">Reader nên làm gì sau khi đọc profile? Biến passive reader thành active connection.</p>
+                <div class="pattern-why">
+                    <strong>Why quan trọng?</strong> Không có CTA = reader đọc xong rồi đi, không action. CTA biến passive reader thành active connection. Khiến profile có mục đích.
+                </div>
+                
+                <div class="subtypes-label">3 Types of CTA</div>
+                
+                <div class="subtype-box">
+                    <strong>A. Connection CTA</strong>
+                    "Let's connect if you're in the logistics space in Southeast Asia."<br>
+                    "Reach out if you're a founder raising a series A in Vietnam."<br>
+                    "Happy to connect with fellow real estate investors."
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>B. Conversation CTA</strong>
+                    "Always happy to chat about logistics trends over coffee."<br>
+                    "DM me if you want to discuss the future of e-commerce in Southeast Asia."<br>
+                    "Let's grab coffee if you're in Ho Chi Minh City."
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>C. Resource CTA</strong>
+                    "I write a weekly newsletter on Southeast Asia logistics - link below."<br>
+                    "Check out my latest article on the future of last-mile delivery."<br>
+                    "Download my free guide on raising series A in Vietnam."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Tip:</strong> CTA nên specific và actionable. "Let's connect" quá generic. "Let's connect if you're [specific criteria]" tốt hơn.
+                </div>
+            </div>
+            
+            <!-- Pattern 6: Personality Touch -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">6</div>
+                    <div>The Personality Touch</div>
+                </div>
+                <p class="pattern-meaning">Thêm personality để profile không nghe robotic. Balance: professional + memorable.</p>
+                <div class="pattern-why">
+                    <strong>Why quan trọng?</strong> 100% professional = robotic, không memorable. 100% personal = unprofessional. Balance = memorable + professional.
+                </div>
+                
+                <div class="subtypes-label">3 Types of Personality Touch</div>
+                
+                <div class="subtype-box">
+                    <strong>A. Hobby mention</strong>
+                    "When I'm not analyzing deals, you'll find me trail running in Da Lat."<br>
+                    "Outside of work, I'm mostly into street photography, but sometimes I do portraits for friends."<br>
+                    "I'm a coffee enthusiast - always looking for the next great café in Saigon."
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>B. Value statement</strong>
+                    "I believe the best investments are made when you understand the founders' vision, not just the numbers."<br>
+                    "My philosophy: Play the long game. Short-term wins don't matter if you lose trust."<br>
+                    "I'm passionate about democratizing access to capital for Southeast Asian founders."
+                </div>
+                
+                <div class="subtype-box">
+                    <strong>C. Quirky detail</strong>
+                    "Fun fact: I've run 5 marathons, including one in the Sahara Desert."<br>
+                    "I can quote most of The Big Lebowski. Don't ask why."<br>
+                    "My morning routine includes 30 minutes of reading and exactly 2 cups of coffee."
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Tip:</strong> Personality touch nên ở CUỐI About section, sau value proposition. Không nên ở đầu.
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4 Sections of LinkedIn -->
+        <section class="section section-peach">
+            <h2 class="section-title"><span class="section-icon">📋</span> 4 Sections of LinkedIn Profile</h2>
+            <p class="section-desc">LinkedIn profile có 4 sections chính. Mỗi section có mục đích và structure riêng.</p>
+            
+            <!-- Section 1: Headline -->
+            <div class="linkedin-section-card">
+                <div class="linkedin-section-header">
+                    <div class="linkedin-section-icon">🎯</div>
+                    <div>
+                        <div class="linkedin-section-title">Section 1: Headline</div>
+                        <div class="linkedin-section-subtitle">120 characters max · First thing people see</div>
+                    </div>
+                </div>
+                <p class="linkedin-section-desc">Headline nên hook reader. Structure: "[Role] | [Specialty] | [Unique value]"</p>
+                
+                <div class="comparison-pair">
+                    <div class="comparison-item bad">
+                        <strong>❌ Generic</strong>
+                        "Investment Director at XYZ Capital"
+                    </div>
+                    <div class="comparison-item good">
+                        <strong>✅ Specific + Hook</strong>
+                        "Investment Director | Real Estate PE | Helping SE Asia logistics founders raise series A"
+                    </div>
+                </div>
+                
+                <div class="comparison-pair">
+                    <div class="comparison-item bad">
+                        <strong>❌ Boring</strong>
+                        "Finance professional with 8 years experience"
+                    </div>
+                    <div class="comparison-item good">
+                        <strong>✅ Story</strong>
+                        "Investment Director | Closed 12 deals worth $200M+ | Betting on SE Asia's logistics future"
+                    </div>
+                </div>
+                
+                <div class="context-note">
+                    <strong>🎯 Target:</strong> 80-120 characters, specific, hook-y. Reader nên biết bạn là ai và bạn offer gì trong 3 giây.
+                </div>
+            </div>
+            
+            <!-- Section 2: About -->
+            <div class="linkedin-section-card">
+                <div class="linkedin-section-header">
+                    <div class="linkedin-section-icon">📝</div>
+                    <div>
+                        <div class="linkedin-section-title">Section 2: About Section</div>
+                        <div class="linkedin-section-subtitle">1200-1500 characters ideal · Tell your story</div>
+                    </div>
+                </div>
+                <p class="linkedin-section-desc">About section là nơi bạn tell story, show personality, create hooks. Structure: 5 paragraphs.</p>
+                
+                <div class="structure-box">
+                    <h5>5-Paragraph Structure</h5>
+                    <code>Paragraph 1: Hook Opener (Pattern 1) - Story, question, or bold statement
+Paragraph 2: What you do (Pattern 2 + 3) - "Mostly X, but sometimes Y" + specific details
+Paragraph 3: Why you do it - Your philosophy, what drives you
+Paragraph 4: Value Proposition (Pattern 4) - What you offer to connections
+Paragraph 5: CTA + Personality (Pattern 5 + 6) - Call to action + personality touch</code>
+                </div>
+            </div>
+            
+            <!-- Section 3: Experience -->
+            <div class="linkedin-section-card">
+                <div class="linkedin-section-header">
+                    <div class="linkedin-section-icon">💼</div>
+                    <div>
+                        <div class="linkedin-section-title">Section 3: Experience Descriptions</div>
+                        <div class="linkedin-section-subtitle">Show impact, not just responsibilities</div>
+                    </div>
+                </div>
+                <p class="linkedin-section-desc">Structure: Role + Company + Duration → 1-sentence overview → 3-5 bullet points với NUMBERS → 1 sentence về pride.</p>
+                
+                <div class="structure-box">
+                    <h5>Structure</h5>
+                    <code>Investment Director | Horizon Partners | 2018 - Present
+
+Leading real estate private equity investments across Southeast Asia, 
+with a focus on logistics and industrial properties.
+
+• Closed 12 deals worth $200M+ across Vietnam, Thailand, Indonesia
+• Grew portfolio 3x in 2 years, from $50M to $150M AUM
+• Led series A investment in [startup name], now valued at 5x
+• Built team of 5 analysts covering 3 countries
+• Fund performance: 18% YTD, outperforming benchmark by 4%
+
+Most proud of: Building relationships with founders that go beyond 
+just capital - many come to us for strategic advice, not just money.</code>
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Tip:</strong> Mỗi bullet point nên có NUMBER. "Managed team" = vague. "Built team of 5 analysts" = specific.
+                </div>
+            </div>
+            
+            <!-- Section 4: Skills -->
+            <div class="linkedin-section-card">
+                <div class="linkedin-section-header">
+                    <div class="linkedin-section-icon">🎯</div>
+                    <div>
+                        <div class="linkedin-section-title">Section 4: Skills & Endorsements</div>
+                        <div class="linkedin-section-subtitle">SEO + credibility · Add 10-15 skills</div>
+                    </div>
+                </div>
+                <p class="linkedin-section-desc">Top 3 skills (most visible) nên match với About section. Skills nên specific, không generic.</p>
+                
+                <div class="structure-box">
+                    <h5>Top 3 Skills (Most Visible)</h5>
+                    <code>1. Real Estate Private Equity
+2. Investment Analysis
+3. Southeast Asia Markets</code>
+                </div>
+                
+                <div class="structure-box">
+                    <h5>Other Skills (Add 10-15 total)</h5>
+                    <code>• Financial Modeling    • Due Diligence         • Deal Sourcing
+• Portfolio Management  • Team Leadership       • Logistics
+• Venture Capital       • Startup Advisory      • Cross-border Investments
+• Strategic Planning</code>
+                </div>
+                
+                <div class="context-note">
+                    <strong>💡 C1 Tip:</strong> Skills nên match với About section. Nếu About nói về logistics, skills nên có "Logistics", "Supply Chain", etc.
+                </div>
+            </div>
+            
+            <!-- Perfect Example: Full About Section -->
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 24px 0 12px; color: var(--text-primary);">✨ Perfect Example: Full About Section</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">Đây là ví dụ hoàn chỉnh áp dụng TẤT CẢ 6 patterns. Note cách mỗi paragraph có mục đích riêng.</p>
+            
+            <div class="sample-about">
+                <div class="sample-about-content">Five years ago, I made a bet that Southeast Asia's logistics sector would transform. That bet led me to close 3 series A deals, including one with Vietnam's fastest-growing last-mile delivery startup. Today, I'm still placing those bets — mostly in logistics, but sometimes in industrial properties when the numbers make sense.
+
+I'm an Investment Director at Horizon Partners, where I've spent the past 8 years building our real estate private equity platform. We've closed 12 deals worth $200M+ across Vietnam, Thailand, and Indonesia. Our fund is up 18% YTD, mostly driven by our logistics portfolio.
+
+I believe the best investments are made when you understand the founders' vision, not just the numbers. That's why I spend as much time with founders as I do with spreadsheets.
+
+I help logistics founders in Southeast Asia raise their series A by connecting them with the right investors at the right time. If you're building the future of last-mile delivery, warehouse automation, or cross-border logistics, let's talk.
+
+When I'm not analyzing deals, you'll find me trail running in Da Lat or experimenting with pour-over coffee. Always happy to chat about logistics trends over a cup — DM me!</div>
+                <div class="sample-about-meta">
+                    <span>📊 ~1,450 characters (perfect length)</span>
+                    <span>✅ All 6 patterns applied</span>
+                </div>
+            </div>
+            
+            <div class="structure-box">
+                <h5>Pattern Breakdown</h5>
+                <code>Paragraph 1: Hook (Story) + "mostly X, but sometimes Y"
+Paragraph 2: Specific details (12 deals, $200M+, 8 years, 3 countries, 18% YTD)
+Paragraph 3: Philosophy/Why ("I believe...")
+Paragraph 4: Value Proposition ("I help logistics founders...")
+Paragraph 5: Personality (trail running, coffee) + CTA ("DM me!")</code>
+            </div>
+        </section>
+        
+        <!-- 3 Iterations Framework -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">🔄</span> 3 Iterations Framework for Writing</h2>
+            <p class="section-desc">Mỗi iteration focus vào 1 aspect khác nhau. Sau 3 iterations, bạn sẽ có LinkedIn profile hoàn chỉnh.</p>
+            
+            <!-- Iteration 1 -->
+            <div class="iteration-card iter-1">
+                <div class="iteration-header">
+                    <div class="iteration-num">1</div>
+                    <div>
+                        <div class="iteration-title">Content Focus</div>
+                        <div class="iteration-time">15 minutes</div>
+                    </div>
+                </div>
+                <div class="iteration-goal">
+                    <strong>Goal:</strong> Structure rõ ràng, có hooks, specific details, value proposition, CTA.
+                </div>
+                <div class="focus-areas">
+                    <h5>Focus areas</h5>
+                    <div class="focus-tags">
+                        <span class="focus-tag">Hook opener</span>
+                        <span class="focus-tag">Specific details</span>
+                        <span class="focus-tag">Value proposition</span>
+                        <span class="focus-tag">Call to action</span>
+                    </div>
+                </div>
+                <div class="process-steps">
+                    <h5>Process</h5>
+                    <div class="process-step">
+                        <span class="step-icon">1️⃣</span>
+                        <span><strong>Draft 5 paragraphs:</strong> Theo 5-paragraph structure (10 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">2️⃣</span>
+                        <span><strong>Self-assess:</strong> Có đủ hooks không? Có specific details không? (5 phút)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Iteration 2 -->
+            <div class="iteration-card iter-2">
+                <div class="iteration-header">
+                    <div class="iteration-num">2</div>
+                    <div>
+                        <div class="iteration-title">Tone & Register Focus</div>
+                        <div class="iteration-time">10 minutes</div>
+                    </div>
+                </div>
+                <div class="iteration-goal">
+                    <strong>Goal:</strong> Balance professional + personality. Conversational tone. Viết như đang nói.
+                </div>
+                <div class="focus-areas">
+                    <h5>Focus areas</h5>
+                    <div class="focus-tags">
+                        <span class="focus-tag">Register balance</span>
+                        <span class="focus-tag">Conversational tone</span>
+                        <span class="focus-tag">Personality touch</span>
+                    </div>
+                </div>
+                <div class="process-steps">
+                    <h5>Process</h5>
+                    <div class="process-step">
+                        <span class="step-icon">1️⃣</span>
+                        <span><strong>Read aloud:</strong> Nghe có natural không? (3 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">2️⃣</span>
+                        <span><strong>Adjust tone:</strong> Thêm personality, giảm robotic phrases (7 phút)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Iteration 3 -->
+            <div class="iteration-card iter-3">
+                <div class="iteration-header">
+                    <div class="iteration-num">3</div>
+                    <div>
+                        <div class="iteration-title">Polish Focus</div>
+                        <div class="iteration-time">10 minutes</div>
+                    </div>
+                </div>
+                <div class="iteration-goal">
+                    <strong>Goal:</strong> Grammar, flow, length, formatting. Final read để đảm bảo perfect.
+                </div>
+                <div class="focus-areas">
+                    <h5>Focus areas</h5>
+                    <div class="focus-tags">
+                        <span class="focus-tag">Grammar & spelling</span>
+                        <span class="focus-tag">Flow</span>
+                        <span class="focus-tag">Length (1200-1500 chars)</span>
+                        <span class="focus-tag">Formatting</span>
+                    </div>
+                </div>
+                <div class="process-steps">
+                    <h5>Process</h5>
+                    <div class="process-step">
+                        <span class="step-icon">1️⃣</span>
+                        <span><strong>Check grammar, spelling</strong> (3 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">2️⃣</span>
+                        <span><strong>Check flow:</strong> Transitions OK không? (3 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">3️⃣</span>
+                        <span><strong>Check length:</strong> Trong target range không? (2 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">4️⃣</span>
+                        <span><strong>Final read:</strong> Would YOU connect với người này? (2 phút)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4 Scenarios -->
+        <section class="section section-sky">
+            <h2 class="section-title"><span class="section-icon">✍️</span> 4 Writing Scenarios</h2>
+            <p class="section-desc">Progression từ write from scratch → rewrite existing → experience description → full profile overhaul.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1 -->
+                <div class="scenario-card basic">
+                    <span class="scenario-badge">📝 From Scratch - 35 min</span>
+                    <h4>Scenario 1: Write About Section</h4>
+                    <p>Bạn chưa có LinkedIn profile hoặc muốn viết lại từ đầu. Apply 6 patterns để viết About section hoàn chỉnh.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng TẤT CẢ 6 patterns</li>
+                            <li>Structure 5 paragraphs</li>
+                            <li>Length: 1200-1500 characters</li>
+                            <li>Có ít nhất 3 specific details</li>
+                            <li>Balance professional + personality</li>
+                        </ul>
+                    </div>
+                    <button class="action-btn" onclick="showScenarioDetails('scratch')">✍️ Start Writing</button>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="scenario-card rewrite">
+                    <span class="scenario-badge">🔄 Rewrite - 35 min</span>
+                    <h4>Scenario 2: Rewrite Existing About</h4>
+                    <p>Bạn đã có About section nhưng nó generic, boring. Identify weaknesses và apply 6 patterns để cải thiện.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Identify weaknesses trong current version</li>
+                            <li>Apply 6 patterns để cải thiện</li>
+                            <li>Keep core message, improve delivery</li>
+                            <li>Target: Improve score ≥1.5 points</li>
+                        </ul>
+                    </div>
+                    <button class="action-btn" onclick="showScenarioDetails('rewrite')">🔄 Start Rewriting</button>
+                </div>
+                
+                <!-- Scenario 3 -->
+                <div class="scenario-card experience">
+                    <span class="scenario-badge">💼 Experience - 20 min</span>
+                    <h4>Scenario 3: Write Experience Description</h4>
+                    <p>Viết description cho 1 role trong Experience section. Focus vào impact, không phải responsibilities.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>1-sentence overview</li>
+                            <li>3-5 bullet points với NUMBERS</li>
+                            <li>1 sentence về pride/achievement</li>
+                            <li>Specific, impact-focused</li>
+                        </ul>
+                    </div>
+                    <button class="action-btn" onclick="showScenarioDetails('experience')">💼 Start Writing</button>
+                </div>
+                
+                <!-- Scenario 4 -->
+                <div class="scenario-card challenge">
+                    <span class="scenario-badge">🔥 Challenge - 50 min</span>
+                    <h4>Scenario 4: Complete LinkedIn Overhaul</h4>
+                    <p>Viết lại TOÀN BỘ LinkedIn profile: Headline + About + 2 Experience descriptions. Consistent tone across all sections.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Headline: 80-120 characters, hook-y</li>
+                            <li>About: 1200-1500 characters, 5 paragraphs</li>
+                            <li>2 Experience descriptions: specific, impact-focused</li>
+                            <li>Consistent tone across all sections</li>
+                        </ul>
+                    </div>
+                    <button class="action-btn" onclick="showScenarioDetails('overhaul')">🔥 Start Challenge</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6-Criteria Writing Rubric -->
+        <section class="section section-lavender">
+            <h2 class="section-title"><span class="section-icon">📊</span> 6-Criteria Writing Rubric</h2>
+            <p class="section-desc">6 tiêu chí để self-assess LinkedIn writing. Click vào từng tab để xem chi tiết. Sau mỗi iteration, score từng criteria (1-5).</p>
+            
+            <!-- Rubric Tabs -->
+            <div class="rubric-tabs">
+                <button class="rubric-tab active" onclick="switchRubric('hook', this)">
+                    <span>🎣 Hook</span>
+                    <span class="weight">20%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('specificity', this)">
+                    <span>🎯 Specificity</span>
+                    <span class="weight">20%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('register', this)">
+                    <span>⚖️ Register</span>
+                    <span class="weight">15%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('structure', this)">
+                    <span>📐 Structure</span>
+                    <span class="weight">15%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('value', this)">
+                    <span>💎 Value Prop</span>
+                    <span class="weight">15%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('cta', this)">
+                    <span>📣 CTA</span>
+                    <span class="weight">15%</span>
+                </button>
+            </div>
+            
+            <!-- Hook Rubric -->
+            <div class="rubric-content active" id="rubric-hook">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">🎣</div>
+                        <div>
+                            <div class="rubric-title">Hook Strength (20%)</div>
+                            <div class="rubric-subtitle">Câu đầu tiên có khiến reader đọc tiếp không?</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Hook mạnh (story/question/bold statement). Reader phải đọc câu thứ 2. Memorable.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Hook tốt nhưng hơi generic. Reader vẫn đọc tiếp.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Hook OK nhưng không memorable. Reader có thể skip.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Hook yếu. Bắt đầu với "I am a..." hoặc generic statement.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Không có hook. Boring opener.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Câu đầu có phải story, question, hoặc bold statement không?</li>
+                            <li>Reader có curiosity gap không?</li>
+                            <li>Hook có memorable không?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Specificity Rubric -->
+            <div class="rubric-content" id="rubric-specificity">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">🎯</div>
+                        <div>
+                            <div class="rubric-title">Specificity (20%)</div>
+                            <div class="rubric-subtitle">Có đủ numbers, names, places không?</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Nhiều specific details (5+). Numbers, names, places. Concrete, memorable.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Có specific details (3-4). Khá concrete.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Một số specific details (1-2). Hơi vague.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Ít specific details. Mostly vague statements.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Không có specific details. Hoàn toàn generic.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Có ít nhất 3 specific details không?</li>
+                            <li>Có numbers (deals closed, $ amounts, years)?</li>
+                            <li>Có names (companies, people)?</li>
+                            <li>Có places (countries, cities)?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Register Rubric -->
+            <div class="rubric-content" id="rubric-register">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">⚖️</div>
+                        <div>
+                            <div class="rubric-title">Register Balance (15%)</div>
+                            <div class="rubric-subtitle">Balance giữa professional và personality?</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Perfect balance. Professional nhưng vẫn có personality. Conversational.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Balance tốt nhưng hơi nghiêng về 1 side.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Balance OK nhưng hơi robotic hoặc hơi casual.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Quá formal (robotic) hoặc quá casual (unprofessional).</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Hoàn toàn robotic hoặc hoàn toàn casual.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Đọc aloud nghe natural không?</li>
+                            <li>Có personality touch không?</li>
+                            <li>Có quá formal ("I am a seasoned professional") không?</li>
+                            <li>Có quá casual ("Hey there!") không?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Structure Rubric -->
+            <div class="rubric-content" id="rubric-structure">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">📐</div>
+                        <div>
+                            <div class="rubric-title">Structure (15%)</div>
+                            <div class="rubric-subtitle">Structure có clear, logical không?</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Structure rõ ràng (5 paragraphs). Flow smooth. Transitions natural.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Structure tốt nhưng 1-2 transitions hơi abrupt.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Structure OK nhưng flow không smooth.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Structure không rõ. Paragraphs không liên kết.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Không có structure. Random sentences.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Có 5 paragraphs không?</li>
+                            <li>Paragraph 1: Hook?</li>
+                            <li>Paragraph 2: What you do?</li>
+                            <li>Paragraph 3: Why you do it?</li>
+                            <li>Paragraph 4: Value proposition?</li>
+                            <li>Paragraph 5: CTA + Personality?</li>
+                            <li>Transitions smooth không?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value Prop Rubric -->
+            <div class="rubric-content" id="rubric-value">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">💎</div>
+                        <div>
+                            <div class="rubric-title">Value Proposition (15%)</div>
+                            <div class="rubric-subtitle">Reader có biết bạn offer gì không?</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Value proposition clear, specific, compelling. Reader biết nên connect vì sao.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Value proposition clear nhưng hơi generic.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Value proposition OK nhưng không compelling.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Value proposition vague hoặc missing.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Không có value proposition.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Reader có biết bạn offer gì không?</li>
+                            <li>Value proposition có specific không?</li>
+                            <li>Reader có reason để connect không?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Rubric -->
+            <div class="rubric-content" id="rubric-cta">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">📣</div>
+                        <div>
+                            <div class="rubric-title">Call to Action (15%)</div>
+                            <div class="rubric-subtitle">Reader có biết nên làm gì tiếp không?</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>CTA clear, specific, actionable. Reader biết nên làm gì.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>CTA clear nhưng hơi generic.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>CTA OK nhưng không compelling.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>CTA vague hoặc missing.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Không có CTA.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Có CTA không?</li>
+                            <li>CTA có specific không? (không chỉ "Let's connect")</li>
+                            <li>CTA có actionable không?</li>
+                            <li>Reader có biết nên làm gì tiếp không?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Improvement Tips -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">💡</span> Improvement Tips by Criteria</h2>
+            <p class="section-desc">Click vào từng criteria để xem specific tips cho improvement. Nếu score &lt; 3/5 ở criteria nào, xem tips tương ứng.</p>
+            
+            <div class="tips-accordion">
+                <!-- Hook Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>🎣 Hook Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Câu đầu boring, generic, không khiến reader đọc tiếp.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Thay "I am..." bằng story opener: "Five years ago, I..."</li>
+                                <li>Hoặc question hook: "What if I told you..."</li>
+                                <li>Hoặc bold statement: "Most X are Y. We're not."</li>
+                                <li>Test: Nếu câu đầu không khiến bạn đọc câu 2, rewrite</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Viết 3 câu đầu khác nhau</li>
+                                <li>Đọc aloud, chọn câu nào engaging nhất</li>
+                                <li>Target: Câu đầu phải có curiosity gap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Specificity Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>🎯 Specificity Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Writing quá vague, không có numbers, names, places.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Thêm numbers: "12 deals worth $200M+" thay vì "many deals"</li>
+                                <li>Thêm names: "Shopee, Grab, TikTok" thay vì "top companies"</li>
+                                <li>Thêm places: "Vietnam, Thailand, Indonesia" thay vì "Southeast Asia"</li>
+                                <li>Thêm time: "Over the past 8 years" thay vì "For many years"</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Highlight tất cả vague statements trong writing</li>
+                                <li>Replace mỗi vague statement với specific detail</li>
+                                <li>Target: ≥3 specific details trong About section</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Register Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>⚖️ Register Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Quá formal (robotic) hoặc quá casual (unprofessional).</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Đọc aloud - nếu nghe như robot → thêm personality</li>
+                                <li>Nếu nghe quá casual → replace slang với professional phrases</li>
+                                <li>Thêm personality touch ở cuối: hobby, value statement, quirky detail</li>
+                                <li>Test: Would YOU connect với người này?</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Record giọng đọc writing của mình</li>
+                                <li>Listen back: Nghe natural không?</li>
+                                <li>Adjust tone cho đến khi nghe như đang nói chuyện</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Structure Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>📐 Structure Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Không có 5 paragraphs, flow không smooth, transitions abrupt.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Follow 5-paragraph structure nghiêm túc</li>
+                                <li>Thêm transition phrases: "Today, ...", "I believe...", "If you're..."</li>
+                                <li>Đảm bảo mỗi paragraph có 1 purpose rõ ràng</li>
+                                <li>Read aloud - nếu vấp ở đâu, đó là transition cần fix</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Highlight purpose của mỗi paragraph</li>
+                                <li>Check: Có đúng 5 paragraphs với 5 purposes không?</li>
+                                <li>Read aloud, note vấp ở đâu → fix transition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Value Prop Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>💎 Value Prop Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Reader không biết bạn offer gì, hoặc value proposition quá vague.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Follow structure: "I help [target] achieve [outcome] through [approach]"</li>
+                                <li>Be specific: "logistics founders in SE Asia" thay vì "people"</li>
+                                <li>Be specific: "raise their series A" thay vì "succeed"</li>
+                                <li>Test: Reader có reason để connect không?</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Viết value proposition theo structure</li>
+                                <li>Ask friend: "Nếu đọc câu này, bạn có muốn connect không?"</li>
+                                <li>Adjust cho đến khi câu trả lời là "Yes"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>📣 CTA Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>CTA quá generic ("Let's connect") hoặc không có CTA.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Be specific: "Let's connect if you're [specific criteria]"</li>
+                                <li>Be actionable: "DM me", "Grab coffee", "Check out my newsletter"</li>
+                                <li>Combine với personality: "Always happy to chat about X over coffee — DM me!"</li>
+                                <li>Test: Reader có biết nên làm gì tiếp không?</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Viết 3 CTA khác nhau</li>
+                                <li>Chọn CTA nào specific + actionable nhất</li>
+                                <li>Target: Reader biết nên connect vì sao và như thế nào</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Writing with Impact</h2>
+            <p class="section-desc">7 câu hỏi về writing patterns và LinkedIn best practices. Chọn đáp án TỐT NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">1. Câu opener nào MẠNH NHẤT cho LinkedIn About section?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "I am an Investment Director with 8 years of experience."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "I am a hardworking professional with a proven track record."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "Five years ago, I made a bet that Southeast Asia's logistics sector would transform."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "I have extensive experience in real estate private equity."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. Câu nào có SPECIFIC DETAILS tốt nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. "I have closed many deals over the years."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. "Over the past 8 years, I've closed 12 deals worth $200M+ across Vietnam and Thailand."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. "I have extensive experience in the region."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. "I work with many companies in Southeast Asia."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">3. Value proposition nào TỐT NHẤT?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. "I help people succeed in their careers."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. "I help logistics founders in Southeast Asia raise their series A by connecting them with the right investors at the right time."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. "I am passionate about helping others."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. "I provide consulting services to companies."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">4. CTA nào SPECIFIC và ACTIONABLE nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. "Let's connect."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. "Feel free to reach out."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. "If you're building the future of last-mile delivery, let's talk. DM me!"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. "Contact me for more information."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. Personality touch nên ở đâu trong About section?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. Ở câu đầu tiên (hook)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Ở CUỐI About section, sau value proposition</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Ở giữa paragraph 2 và 3</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. Không nên có personality touch trong LinkedIn</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">6. Length lý tưởng cho LinkedIn About section là bao nhiêu characters?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. 200-400 characters</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. 600-800 characters</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. 1200-1500 characters</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. 2000-2500 characters</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">7. Structure nào ĐÚNG cho About section?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. 1 paragraph dài với tất cả thông tin</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. 5 paragraphs: Hook → What you do → Why → Value prop → CTA + Personality</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. List các skills và kinh nghiệm</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. 10 paragraphs chi tiết về từng role</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-accent">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard: Writing Patterns</h2>
+            <p class="section-desc">6 writing patterns với examples. Mặt trước: pattern name. Mặt sau: example + tip.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-pattern" id="fc-pattern">Hook Opener</div>
+                            <div class="card-hint">Tap to reveal example →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-example" id="fc-example">"Five years ago, I made a bet that Southeast Asia's logistics sector would transform. That bet led me to close 3 series A deals..."</div>
+                            <div class="card-tip" id="fc-tip">
+                                <strong>💡 Tip:</strong>
+                                Câu đầu quyết định reader có đọc tiếp không. Dùng story, question, hoặc bold statement. KHÔNG dùng "I am a..."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-01.html" class="nav-btn">
+                <div class="nav-label">← Back to</div>
+                <div class="nav-title">Week 1 Hub</div>
+            </a>
+            <a href="week-01-day-7.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 7: Review & Reality Task</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 6 Complete & Continue to Day 7</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#805AD5"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#805AD5"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#805AD5" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#805AD5" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#805AD5"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Glasses for writing day (thoughtful) -->
+            <circle cx="82" cy="82" r="12" stroke="#2D3748" stroke-width="2" fill="none"/>
+            <circle cx="118" cy="82" r="12" stroke="#2D3748" stroke-width="2" fill="none"/>
+            <line x1="94" y1="82" x2="106" y2="82" stroke="#2D3748" stroke-width="2"/>
+            <!-- Pen/quill -->
+            <path d="M 60 155 L 75 140 L 78 143 L 63 158 Z" fill="#2D3748"/>
+            <path d="M 60 155 L 58 160 L 63 158 Z" fill="#805AD5"/>
+            <rect x="65" y="150" width="28" height="20" fill="#B8C5E8" rx="3"/>
+            <line x1="79" y1="150" x2="79" y2="170" stroke="#2D3748" stroke-width="1.5"/>
+        </svg>
+        <div class="mascot-speech">Write with impact! ✍️</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 1 · Day 6 · LinkedIn Profile Writing</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== RUBRIC TABS ==========
+        function switchRubric(id, btn) {
+            document.querySelectorAll('.rubric-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.rubric-content').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('rubric-' + id).classList.add('active');
+        }
+        
+        // ========== TIPS ACCORDION ==========
+        function toggleTip(header) {
+            const item = header.parentElement;
+            item.classList.toggle('open');
+        }
+        
+        // ========== SCENARIO DETAILS ==========
+        function showScenarioDetails(scenario) {
+            const details = {
+                scratch: `📝 WRITE ABOUT SECTION FROM SCRATCH (35 phút):
+
+Iteration 1 - Content (15 phút):
+• Draft 5 paragraphs theo structure:
+  Para 1: Hook (story/question/bold statement)
+  Para 2: What you do + specific details
+  Para 3: Why you do it (philosophy)
+  Para 4: Value proposition
+  Para 5: CTA + Personality
+• Self-assess: Có đủ hooks + specifics không?
+
+Iteration 2 - Tone (10 phút):
+• Read aloud - nghe natural không?
+• Thêm personality touch ở cuối
+• Reduce robotic phrases
+
+Iteration 3 - Polish (10 phút):
+• Check grammar, spelling
+• Check length (1200-1500 chars)
+• Final read: Would YOU connect?
+
+💡 Target: Score ≥4/5 ở tất cả 6 criteria.`,
+
+                rewrite: `🔄 REWRITE EXISTING ABOUT SECTION (35 phút):
+
+Step 1 - Analyze (5 phút):
+• Read current About section
+• Score từng criteria (1-5)
+• Identify weaknesses
+
+Step 2 - Iteration 1 (15 phút):
+• Rewrite với hooks + specifics
+• Apply 6 patterns
+• Keep core message
+
+Step 3 - Iteration 2 (10 phút):
+• Adjust tone
+• Add personality
+• Reduce robotic phrases
+
+Step 4 - Iteration 3 (5 phút):
+• Polish grammar, flow
+• Check length
+• Final read
+
+💡 Target: Improve score ≥1.5 points (e.g., 2.5 → 4.0).`,
+
+                experience: `💼 WRITE EXPERIENCE DESCRIPTION (20 phút):
+
+Structure:
+• Role + Company + Duration
+• 1-sentence overview
+• 3-5 bullet points với NUMBERS
+• 1 sentence về pride/achievement
+
+Iteration 1 - Content (10 phút):
+• Draft bullets với specific numbers
+• Focus vào IMPACT, không responsibilities
+• Include: deals closed, $ amounts, team size, growth %
+
+Iteration 2 - Tone (5 phút):
+• Read aloud
+• Adjust tone
+• Add 1 sentence về pride
+
+Iteration 3 - Polish (5 phút):
+• Check grammar
+• Ensure all bullets có numbers
+• Final read
+
+💡 Target: Score ≥4/5, tất cả bullets có numbers.`,
+
+                overhaul: `🔥 COMPLETE LINKEDIN OVERHAUL (50 phút):
+
+Components:
+• Headline (80-120 chars, hook-y)
+• About section (1200-1500 chars, 5 paragraphs)
+• 2 Experience descriptions (impact-focused)
+
+Iteration 1 - Draft all (25 phút):
+• Headline: 5 phút
+• About: 15 phút
+• 2 Experience: 5 phút mỗi cái
+
+Iteration 2 - Adjust tone (15 phút):
+• Read all sections aloud
+• Ensure consistent tone
+• Add personality touches
+
+Iteration 3 - Polish (10 phút):
+• Check grammar across all
+• Check length targets
+• Consistency check
+• Final read
+
+💡 Target:
+• Score ≥4.5/5 average
+• Consistent tone across all sections
+• All specific details in place
+• Ready to publish!`
+            };
+            
+            alert(details[scenario]);
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                pattern: "Hook Opener",
+                example: '"Five years ago, I made a bet that Southeast Asia\'s logistics sector would transform. That bet led me to close 3 series A deals..."',
+                tip: '💡 Tip: Câu đầu quyết định reader có đọc tiếp không. Dùng story, question, hoặc bold statement. KHÔNG dùng "I am a..."'
+            },
+            { 
+                pattern: '"Mostly X, but sometimes Y"',
+                example: '"I\'m mostly focused on logistics investments, but sometimes we look at industrial properties when the numbers make sense."',
+                tip: '💡 Tip: Elaborate với nuance. Thể hiện depth và complexity. Tạo 2 hooks để reader bám vào.'
+            },
+            { 
+                pattern: "Specific Details",
+                example: '"Over the past 8 years, I\'ve closed 12 deals worth $200M+ across Vietnam, Thailand, and Indonesia."',
+                tip: '💡 Tip: Mỗi paragraph nên có ít nhất 1 specific detail. Numbers, names, places = credibility.'
+            },
+            { 
+                pattern: "Value Proposition",
+                example: '"I help logistics founders in Southeast Asia raise their series A by connecting them with the right investors at the right time."',
+                tip: '💡 Tip: Structure: "I help [target] achieve [outcome] through [approach]". Be specific, không generic.'
+            },
+            { 
+                pattern: "Call to Action",
+                example: '"If you\'re building the future of last-mile delivery, warehouse automation, or cross-border logistics, let\'s talk. DM me!"',
+                tip: '💡 Tip: CTA nên specific và actionable. "Let\'s connect if you\'re [specific criteria]" tốt hơn "Let\'s connect".'
+            },
+            { 
+                pattern: "Personality Touch",
+                example: '"When I\'m not analyzing deals, you\'ll find me trail running in Da Lat or experimenting with pour-over coffee."',
+                tip: '💡 Tip: Personality touch nên ở CUỐI About section, sau value proposition. Balance: professional + memorable.'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-pattern').textContent = card.pattern;
+            document.getElementById('fc-example').textContent = card.example;
+            document.getElementById('fc-tip').innerHTML = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'c', q2: 'b', q3: 'b', q4: 'c', q5: 'b', q6: 'c', q7: 'b' };
+        const explanations = {
+            q1: 'C là story hook - tạo curiosity gap, khiến reader muốn biết kết quả. A, B, D đều bắt đầu với "I am..." - boring, generic, nghe như 10,000 profiles khác.',
+            q2: 'B có nhiều specific details: 8 years, 12 deals, $200M+, Vietnam, Thailand. A, C, D đều vague ("many deals", "extensive experience", "many companies").',
+            q3: 'B specific: target (logistics founders in SE Asia), outcome (raise series A), approach (connecting with right investors). A, C, D đều quá generic.',
+            q4: 'C specific (last-mile delivery) + actionable (DM me). A, B, D đều quá generic, không cho reader biết nên connect vì sao.',
+            q5: 'Personality touch nên ở CUỐI About section, sau value proposition. Nếu ở đầu, sẽ làm mất impact của hook. Nếu ở giữa, sẽ làm mất flow.',
+            q6: '1200-1500 characters là ideal. Quá ngắn (200-800) = không đủ depth. Quá dài (2000+) = reader mất interest.',
+            q7: '5 paragraphs với 5 purposes rõ ràng: Hook → What you do → Why → Value prop → CTA + Personality. A quá ngắn. C là list skills (boring). D quá dài.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'re ready to write a compelling LinkedIn profile!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the patterns you missed and start writing!';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the 6 patterns carefully.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the day content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week1Days') || '[]');
+            
+            if (!completed.includes(6)) {
+                completed.push(6);
+                localStorage.setItem('week1Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(1)) {
+                        completedWeeks.push(1);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 1 completed! You now have a compelling LinkedIn profile! 🦊');
+                } else {
+                    alert(`✅ Day 6 completed! ${7 - completed.length} days left in Week 1. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-01-day-7.html';
+            } else {
+                if (confirm('✅ Day 6 already completed! Go to Day 7?')) {
+                    location.href = 'week-01-day-7.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+        });
+    </script>
+</body>
+</html>

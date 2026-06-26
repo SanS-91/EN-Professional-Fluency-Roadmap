@@ -1,0 +1,2937 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 5: Speaking Intensive | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #F9D4B8;
+            --primary-dark: #F5B88F;
+            --primary-light: #FBE5D0;
+            --primary-soft: #FFF5EB;
+            --secondary: #7BC8E8;
+            --secondary-soft: #E0F2FA;
+            --accent: #88D8B0;
+            --accent-soft: #E8F8F0;
+            --warm: #F9D4B8;
+            --warm-soft: #FFF5EB;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary-dark); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-dark), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary-dark); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary-dark);
+        }
+        
+        .day-tab.active {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--warm-soft) 0%, var(--primary-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(249,212,184,0.25) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(123,200,232,0.15) 0%, transparent 40%);
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary-dark); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-warm { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        .section-orange { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #FDE8D4; }
+        .section-sky { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #BEE3F8; }
+        .section-mint { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #C6F6D5; }
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, #F5F0FF 100%); border-color: #E8DDF5; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-accent { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FDE8D4; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), var(--accent-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary-dark);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison .think {
+            color: #9B2C2C;
+        }
+        
+        .problem-box .comparison .reality {
+            color: var(--life-dark);
+        }
+        
+        .problem-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .problem-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .problem-box li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--life-dark);
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== RUBRIC TABS ========== */
+        .rubric-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .rubric-tab {
+            padding: 8px 14px;
+            background: white;
+            border: 1.5px solid var(--border);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .rubric-tab:hover {
+            border-color: var(--primary-dark);
+        }
+        
+        .rubric-tab.active {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: white;
+        }
+        
+        .rubric-tab .weight {
+            background: rgba(255,255,255,0.25);
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 10px;
+        }
+        
+        .rubric-tab.active .weight {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .rubric-content {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+        
+        .rubric-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* ========== RUBRIC CARD ========== */
+        .rubric-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary-dark);
+        }
+        
+        .rubric-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        
+        .rubric-icon {
+            font-size: 1.8rem;
+        }
+        
+        .rubric-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .rubric-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            font-size: 13px;
+        }
+        
+        .rubric-table th {
+            background: var(--primary-dark);
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .rubric-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+            vertical-align: top;
+        }
+        
+        .rubric-table tr:last-child td { border-bottom: none; }
+        
+        .score-badge {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 12px;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .checklist-box {
+            background: var(--accent-soft);
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--accent);
+            margin-top: 12px;
+        }
+        
+        .checklist-box h5 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--life-dark);
+            margin-bottom: 8px;
+        }
+        
+        .checklist-box ul {
+            list-style: none;
+        }
+        
+        .checklist-box li {
+            padding: 4px 0;
+            padding-left: 22px;
+            position: relative;
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .checklist-box li::before {
+            content: '☐';
+            position: absolute;
+            left: 0;
+            font-size: 13px;
+        }
+        
+        .common-issues {
+            background: #FED7D7;
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--error);
+            margin-top: 12px;
+        }
+        
+        .common-issues h5 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #9B2C2C;
+            margin-bottom: 8px;
+        }
+        
+        .common-issues ul {
+            list-style: none;
+        }
+        
+        .common-issues li {
+            padding: 4px 0;
+            padding-left: 22px;
+            position: relative;
+            font-size: 12px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .common-issues li::before {
+            content: '⚠️';
+            position: absolute;
+            left: 0;
+            font-size: 11px;
+        }
+        
+        /* ========== ITERATIONS ========== */
+        .iteration-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid;
+            margin-bottom: 14px;
+        }
+        
+        .iteration-card.iter-1 { border-left-color: var(--primary-dark); }
+        .iteration-card.iter-2 { border-left-color: var(--secondary); }
+        .iteration-card.iter-3 { border-left-color: var(--accent); }
+        
+        .iteration-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .iteration-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 16px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .iteration-card.iter-1 .iteration-num { background: var(--primary-dark); }
+        .iteration-card.iter-2 .iteration-num { background: var(--secondary); }
+        .iteration-card.iter-3 .iteration-num { background: var(--accent); }
+        
+        .iteration-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .iteration-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        
+        .iteration-goal {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .iteration-goal strong {
+            color: var(--text-primary);
+        }
+        
+        .focus-areas {
+            margin-bottom: 12px;
+        }
+        
+        .focus-areas h5 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .focus-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .focus-tag {
+            background: var(--bg);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        .process-steps {
+            margin-top: 12px;
+        }
+        
+        .process-steps h5 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 6px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .step-icon {
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--warm-soft), var(--accent-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-card.challenge {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            border-color: var(--primary-dark);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--warning); }
+        .scenario-card.challenge .scenario-badge { background: var(--primary-dark); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: #744210; }
+        .scenario-card.challenge h4 { color: var(--primary-dark); }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: #744210; }
+        .scenario-card.challenge p { color: var(--primary-dark); }
+        
+        .scenario-iterations {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-iterations { color: var(--life-dark); }
+        .scenario-card.biz .scenario-iterations { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-iterations { color: #744210; }
+        .scenario-card.challenge .scenario-iterations { color: var(--primary-dark); }
+        
+        .iteration-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            padding: 3px 0;
+        }
+        
+        .iteration-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .iteration-dot.i1 { background: var(--primary-dark); }
+        .iteration-dot.i2 { background: var(--secondary); }
+        .iteration-dot.i3 { background: var(--accent); }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--warning); color: #744210; }
+        .scenario-card.challenge .record-btn { border-color: var(--primary-dark); color: var(--primary-dark); }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--warning); color: white; }
+        .scenario-card.challenge .record-btn:hover { background: var(--primary-dark); color: white; }
+        
+        /* ========== COMPARISON TEMPLATE ========== */
+        .comparison-template {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            white-space: pre-wrap;
+        }
+        
+        .comparison-template .header {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+        
+        .comparison-template .up {
+            color: var(--life-dark);
+        }
+        
+        /* ========== TIPS ACCORDION ========== */
+        .tips-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .tip-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .tip-header {
+            padding: 14px 18px;
+            background: var(--bg);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-primary);
+            transition: background 0.2s;
+        }
+        
+        .tip-header:hover {
+            background: var(--primary-soft);
+        }
+        
+        .tip-header .toggle {
+            color: var(--primary-dark);
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+        
+        .tip-item.open .tip-header .toggle {
+            transform: rotate(45deg);
+        }
+        
+        .tip-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+        
+        .tip-item.open .tip-body {
+            max-height: 1000px;
+        }
+        
+        .tip-content {
+            padding: 16px 18px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .tip-content strong {
+            color: var(--text-primary);
+        }
+        
+        .tip-content h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 10px 0 6px;
+        }
+        
+        .tip-content h5:first-child {
+            margin-top: 0;
+        }
+        
+        .tip-content ul {
+            padding-left: 20px;
+            margin: 6px 0;
+        }
+        
+        .tip-content li {
+            padding: 3px 0;
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-issue {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary-dark);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-solution-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .flashcard-back .card-solution {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        
+        .flashcard-back .card-practice {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-practice strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary-dark);
+            color: white;
+            border-color: var(--primary-dark);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary-dark);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary-dark);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-dark), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--life) 0%, #38A169 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(245,184,143,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-01.html" class="nav-back">← Week 1 Hub</a>
+            <div class="nav-progress">
+                <span>Day 5 / 7</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 70%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-01.html" class="day-tab">Overview</a>
+                <a href="week-01-day-1.html" class="day-tab">Day 1</a>
+                <a href="week-01-day-2.html" class="day-tab">Day 2</a>
+                <a href="week-01-day-3.html" class="day-tab">Day 3</a>
+                <a href="week-01-day-4.html" class="day-tab">Day 4</a>
+                <a href="week-01-day-5.html" class="day-tab active">Day 5</a>
+                <a href="week-01-day-6.html" class="day-tab">Day 6</a>
+                <a href="week-01-day-7.html" class="day-tab">Day 7</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-01.html">Week 1</a>
+                <span>›</span>
+                <span>Day 5</span>
+            </div>
+            <h1 class="day-title">🎤 Speaking Intensive</h1>
+            <p class="day-subtitle">You can't improve what you don't measure. Hôm nay bạn sẽ <strong>RECORD</strong> giọng mình 3 lần, <strong>SELF-ASSESS</strong> với 6-criteria rubric, và <strong>ITERATE</strong> để cải thiện rõ rệt.</p>
+            <div class="day-meta">
+                <span class="meta-tag">🎤 Speaking Intensive</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📊 6-criteria rubric</span>
+                <span class="meta-tag">🔄 3 iterations</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-warm">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>🎤 You can't improve what you don't measure</h4>
+                <p>Bạn nói tiếng Anh hàng ngày. Nhưng sau 1 năm, vẫn không khá hơn. Tại sao? Vì bạn <strong>KHÔNG HEAR lại giọng mình</strong>. Hôm nay bạn sẽ học cách record → listen → identify → improve → repeat.</p>
+            </div>
+            
+            <!-- Problem -->
+            <div class="problem-box">
+                <h4>❌ Tại sao bạn nói mà không tiến bộ?</h4>
+                <div class="comparison">
+                    <div class="think"><strong>Bạn nghĩ:</strong> "Mình nói OK mà"</div>
+                    <div class="reality"><strong>Thực tế:</strong> "Mình nói nhanh quá, nuốt âm, intonation đều đều, 
+dùng 'um' 20 lần/phút, không có pause..."</div>
+                </div>
+                <p><strong>Vấn đề phổ biến:</strong></p>
+                <ul>
+                    <li><strong>Pace quá nhanh</strong> - cố nói nhanh để "nghe native" → nuốt âm</li>
+                    <li><strong>Intonation đều đều</strong> - monotone, không lên xuống → robotic</li>
+                    <li><strong>Filler words quá nhiều</strong> - "um", "uh", "like" mỗi 5 giây</li>
+                    <li><strong>Không có pause</strong> - nói 1 hơi dài → listener mệt</li>
+                    <li><strong>Pronunciation issues</strong> - /θ/, /ð/, word stress sai</li>
+                    <li><strong>Không có connected speech</strong> - nói từng từ riêng</li>
+                </ul>
+            </div>
+            
+            <!-- Solution -->
+            <div class="solution-box">
+                <h4>✅ C1 speakers làm gì khác?</h4>
+                <div class="comparison">
+                    Họ <strong>RECORD</strong> → <strong>LISTEN</strong> → <strong>IDENTIFY</strong> → <strong>IMPROVE</strong> → <strong>REPEAT</strong>
+                </div>
+                <ul>
+                    <li><strong>Iteration 1</strong> - Focus CONTENT: "Mình thiếu elaboration, không có hooks"</li>
+                    <li><strong>Iteration 2</strong> - Focus DELIVERY: "Mình nói nhanh quá, intonation đều đều"</li>
+                    <li><strong>Iteration 3</strong> - Focus NATURALNESS: "Mình dùng 'um' 15 lần, không có pause"</li>
+                    <li><strong>Result:</strong> Sau 3 iterations, cải thiện rõ rệt</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📊</div>
+                    <div class="plan-block-title">Rubric</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">6 criteria để self-assess</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🔄</div>
+                    <div class="plan-block-title">3 Iterations</div>
+                    <div class="plan-block-time">30 min</div>
+                    <div class="plan-block-desc">Record → Listen → Improve</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎤</div>
+                    <div class="plan-block-title">4 Scenarios</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Life, Business, Mixed, Challenge</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎴</div>
+                    <div class="plan-block-title">Review</div>
+                    <div class="plan-block-time">5 min</div>
+                    <div class="plan-block-desc">Flashcards + Quiz</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6-Criteria Rubric -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">📊</span> 6-Criteria Self-Assessment Rubric</h2>
+            <p class="section-desc">6 tiêu chí để self-assess mỗi lần record. Click vào từng tab để xem chi tiết. Sau mỗi iteration, score từng criteria (1-5).</p>
+            
+            <!-- Rubric Tabs -->
+            <div class="rubric-tabs">
+                <button class="rubric-tab active" onclick="switchRubric('content', this)">
+                    <span>📝 Content</span>
+                    <span class="weight">20%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('pronunciation', this)">
+                    <span>🎯 Pronunciation</span>
+                    <span class="weight">20%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('intonation', this)">
+                    <span>🎵 Intonation</span>
+                    <span class="weight">15%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('pace', this)">
+                    <span>⏱️ Pace & Pauses</span>
+                    <span class="weight">15%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('fluency', this)">
+                    <span>💨 Fluency</span>
+                    <span class="weight">15%</span>
+                </button>
+                <button class="rubric-tab" onclick="switchRubric('naturalness', this)">
+                    <span>🌟 Naturalness</span>
+                    <span class="weight">15%</span>
+                </button>
+            </div>
+            
+            <!-- Content Rubric -->
+            <div class="rubric-content active" id="rubric-content">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">📝</div>
+                        <div>
+                            <div class="rubric-title">Content (20%)</div>
+                            <div class="rubric-subtitle">Bạn nói gì? Có structure, elaboration, hooks không?</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Có clear structure (opening → body → closing). Elaborate với "mostly X, but sometimes Y". Tạo hooks. Bounce back với specific questions.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Có structure nhưng elaboration hơi thiếu. Có 1-2 hooks.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Structure OK nhưng quá ngắn, không elaborate. Không có hooks.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Trả lời câu hỏi nhưng không mở rộng. 1-2 sentences rồi im.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Không trả lời đúng câu hỏi. Off-topic.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Có opening rõ ràng (không bắt đầu abrupt)</li>
+                            <li>Elaborate với "mostly X, but sometimes Y" hoặc "actually, ..."</li>
+                            <li>Tạo ít nhất 2 hooks để đối phương bám vào</li>
+                            <li>Có closing tự nhiên (không abrupt)</li>
+                            <li>Bounce back với specific question (không "And you?")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pronunciation Rubric -->
+            <div class="rubric-content" id="rubric-pronunciation">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">🎯</div>
+                        <div>
+                            <div class="rubric-title">Pronunciation (20%)</div>
+                            <div class="rubric-subtitle">Phát âm từng âm, word stress, sentence stress</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Phát âm rõ ràng. Word stress đúng. Sentence stress tự nhiên. Không có accent issues nghiêm trọng.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Phần lớn rõ ràng. 1-2 word stress sai. Accent nhẹ nhưng không ảnh hưởng comprehension.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Một số âm không rõ (thường /θ/, /ð/, /r/). Word stress sai 3-4 từ. Listener phải concentrate.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Nhiều âm không rõ. Word stress sai nhiều. Listener khó hiểu.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Phát âm rất không rõ. Listener không hiểu được.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="common-issues">
+                        <h5>⚠️ Common Vietnamese Speaker Issues</h5>
+                        <ul>
+                            <li>/θ/ (think) → thường phát âm thành /t/ hoặc /s/</li>
+                            <li>/ð/ (this) → thường phát âm thành /d/ hoặc /z/</li>
+                            <li>/ʃ/ (she) → thường phát âm thành /s/</li>
+                            <li>Final consonants (/t/, /d/, /k/) → thường không phát âm</li>
+                            <li>Word stress: "DE-vel-op" (đúng) vs "de-vel-OP" (sai)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Intonation Rubric -->
+            <div class="rubric-content" id="rubric-intonation">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">🎵</div>
+                        <div>
+                            <div class="rubric-title">Intonation (15%)</div>
+                            <div class="rubric-subtitle">Lên xuống, emphasis, emotion</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Intonation tự nhiên, thể hiện emotion. Nhấn đúng từ quan trọng. Rising ở câu hỏi, falling ở statements.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Intonation tốt nhưng hơi monotone ở 1-2 chỗ. Vẫn nghe engaging.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Intonation tương đối đều. Có lên xuống nhưng không rõ ràng. Nghe hơi flat.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Intonation rất đều (monotone). Không có emphasis. Listener mất interest.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Hoàn toàn monotone. Không có intonation variation.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Rising intonation ở cuối câu hỏi Yes/No</li>
+                            <li>Falling intonation ở cuối statements</li>
+                            <li>Nhấn từ quan trọng (content words)</li>
+                            <li>Thể hiện emotion (excitement, surprise, concern)</li>
+                            <li>Không monotone (đều đều từ đầu đến cuối)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pace & Pauses Rubric -->
+            <div class="rubric-content" id="rubric-pace">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">⏱️</div>
+                        <div>
+                            <div class="rubric-title">Pace & Pauses (15%)</div>
+                            <div class="rubric-subtitle">Tốc độ, chỗ ngừng, rhythm</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Pace thoải mái (130-150 WPM). Pauses đúng chỗ (giữa ideas, trước important points). Rhythm tự nhiên.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Pace tốt nhưng 1-2 chỗ quá nhanh hoặc quá chậm. Pauses OK.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Pace hơi nhanh (160+ WPM) hoặc hơi chậm (&lt;110 WPM). Pauses không tự nhiên.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Pace quá nhanh (nuốt âm) hoặc quá chậm (nghe effortful). Pauses sai chỗ.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Pace không kiểm soát được. Listener không theo kịp.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>🎯 Target Pace</h5>
+                        <ul>
+                            <li>Casual conversation: 140-160 WPM</li>
+                            <li>Semi-formal (networking): 130-150 WPM</li>
+                            <li>Formal (presentation): 120-140 WPM</li>
+                            <li>Pause sau mỗi idea (không nói 1 hơi dài)</li>
+                            <li>Pause TRƯỚC important point (tạo emphasis)</li>
+                            <li>Dùng silence thay vì "um", "uh" để fill pauses</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fluency Rubric -->
+            <div class="rubric-content" id="rubric-fluency">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">💨</div>
+                        <div>
+                            <div class="rubric-title">Fluency (15%)</div>
+                            <div class="rubric-subtitle">Flow, hesitation, fillers</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Flow tự nhiên. Hesitation markers ít và đúng chỗ (1-2 lần/phút). Không có "dead air" (silence quá dài).</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Flow tốt. 3-4 fillers/phút nhưng không ảnh hưởng nhiều.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Flow OK nhưng 5-7 fillers/phút. Có 1-2 "dead air" >3 giây.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Flow không tốt. 8-10 fillers/phút. Nhiều "dead air". Listener mất patience.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Flow rất không tốt. 10+ fillers/phút. Nhiều "dead air" >5 giây.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="common-issues">
+                        <h5>📊 Filler Words Count</h5>
+                        <ul>
+                            <li>0-2 lần/phút: Excellent</li>
+                            <li>3-4 lần/phút: Good</li>
+                            <li>5-7 lần/phút: Average</li>
+                            <li>8-10 lần/phút: Needs improvement</li>
+                            <li>10+ lần/phút: Serious issue</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Naturalness Rubric -->
+            <div class="rubric-content" id="rubric-naturalness">
+                <div class="rubric-card">
+                    <div class="rubric-card-header">
+                        <div class="rubric-icon">🌟</div>
+                        <div>
+                            <div class="rubric-title">Naturalness (15%)</div>
+                            <div class="rubric-subtitle">Connected speech, discourse markers, authentic</div>
+                        </div>
+                    </div>
+                    
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">Score</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="score-badge">5/5</span></td>
+                                <td>Dùng connected speech tự nhiên. Discourse markers đa dạng. Nghe như native speaker. Authentic.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">4/5</span></td>
+                                <td>Connected speech tốt. Discourse markers OK. Nghe natural nhưng vẫn có accent.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">3/5</span></td>
+                                <td>Một số connected speech. Discourse markers basic. Nghe hơi "textbook".</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">2/5</span></td>
+                                <td>Ít connected speech. Nói từng từ riêng. Nghe rất "textbook".</td>
+                            </tr>
+                            <tr>
+                                <td><span class="score-badge">1/5</span></td>
+                                <td>Không có connected speech. Nghe như đọc script.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="checklist-box">
+                        <h5>✅ Checklist</h5>
+                        <ul>
+                            <li>Dùng linking (C-V): "based in" → "basedin"</li>
+                            <li>Dùng reduction: "to" → "tə", "and" → "n"</li>
+                            <li>Dùng discourse markers: "Actually", "Speaking of", "That reminds me"</li>
+                            <li>Dùng contractions: "I'm", "I've", "don't" (không nói "I am", "I have", "do not")</li>
+                            <li>Không nghe như đọc script (có variation)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3 Iterations Framework -->
+        <section class="section section-mint">
+            <h2 class="section-title"><span class="section-icon">🔄</span> 3 Iterations Framework</h2>
+            <p class="section-desc">Mỗi iteration focus vào 1 aspect khác nhau. Sau 3 iterations, bạn sẽ cải thiện rõ rệt. Total: 30 phút cho 1 scenario.</p>
+            
+            <!-- Iteration 1 -->
+            <div class="iteration-card iter-1">
+                <div class="iteration-header">
+                    <div class="iteration-num">1</div>
+                    <div>
+                        <div class="iteration-title">Content Focus</div>
+                        <div class="iteration-time">10 minutes</div>
+                    </div>
+                </div>
+                <div class="iteration-goal">
+                    <strong>Goal:</strong> Nói ĐÚNG và ĐỦ ý. Structure rõ ràng, elaborate, tạo hooks, bounce back.
+                </div>
+                <div class="focus-areas">
+                    <h5>Focus areas</h5>
+                    <div class="focus-tags">
+                        <span class="focus-tag">Structure</span>
+                        <span class="focus-tag">Elaboration</span>
+                        <span class="focus-tag">Hooks</span>
+                        <span class="focus-tag">Bounce back</span>
+                    </div>
+                </div>
+                <div class="process-steps">
+                    <h5>Process</h5>
+                    <div class="process-step">
+                        <span class="step-icon">1️⃣</span>
+                        <span><strong>Prepare:</strong> Nghĩ về content (2 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">2️⃣</span>
+                        <span><strong>Record:</strong> Nói 2-3 phút (5 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">3️⃣</span>
+                        <span><strong>Listen back:</strong> Focus vào content, note issues (3 phút)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Iteration 2 -->
+            <div class="iteration-card iter-2">
+                <div class="iteration-header">
+                    <div class="iteration-num">2</div>
+                    <div>
+                        <div class="iteration-title">Delivery Focus</div>
+                        <div class="iteration-time">10 minutes</div>
+                    </div>
+                </div>
+                <div class="iteration-goal">
+                    <strong>Goal:</strong> Nói RÕ và HAY. Pronunciation đúng, intonation tự nhiên, pace thoải mái.
+                </div>
+                <div class="focus-areas">
+                    <h5>Focus areas</h5>
+                    <div class="focus-tags">
+                        <span class="focus-tag">Pronunciation</span>
+                        <span class="focus-tag">Intonation</span>
+                        <span class="focus-tag">Pace</span>
+                        <span class="focus-tag">Pauses</span>
+                    </div>
+                </div>
+                <div class="process-steps">
+                    <h5>Process</h5>
+                    <div class="process-step">
+                        <span class="step-icon">1️⃣</span>
+                        <span><strong>Listen lại Iteration 1:</strong> Note delivery issues (2 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">2️⃣</span>
+                        <span><strong>Practice:</strong> Problematic parts (3 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">3️⃣</span>
+                        <span><strong>Re-record:</strong> Cùng content, focus delivery (5 phút)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Iteration 3 -->
+            <div class="iteration-card iter-3">
+                <div class="iteration-header">
+                    <div class="iteration-num">3</div>
+                    <div>
+                        <div class="iteration-title">Naturalness Focus</div>
+                        <div class="iteration-time">10 minutes</div>
+                    </div>
+                </div>
+                <div class="iteration-goal">
+                    <strong>Goal:</strong> Nói TỰ NHIÊN như native. Connected speech, discourse markers, authentic flow.
+                </div>
+                <div class="focus-areas">
+                    <h5>Focus areas</h5>
+                    <div class="focus-tags">
+                        <span class="focus-tag">Connected speech</span>
+                        <span class="focus-tag">Discourse markers</span>
+                        <span class="focus-tag">Fillers</span>
+                        <span class="focus-tag">Authentic flow</span>
+                    </div>
+                </div>
+                <div class="process-steps">
+                    <h5>Process</h5>
+                    <div class="process-step">
+                        <span class="step-icon">1️⃣</span>
+                        <span><strong>Listen lại Iteration 2:</strong> Note naturalness issues (2 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">2️⃣</span>
+                        <span><strong>Practice:</strong> Connected speech patterns (3 phút)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-icon">3️⃣</span>
+                        <span><strong>Re-record:</strong> Cùng content, focus naturalness (5 phút)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4 Scenarios -->
+        <section class="section section-sky">
+            <h2 class="section-title"><span class="section-icon">🎤</span> 4 Speaking Scenarios</h2>
+            <p class="section-desc">Progression từ Life → Business → Mixed → Challenge. Mỗi scenario áp dụng 3 iterations framework. Chọn 1 scenario để practice hôm nay.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1 -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - 2-3 min</span>
+                    <h4>Scenario 1: Party Introduction</h4>
+                    <p>Bạn đến party của bạn chung. Có 1 người lạ đứng cạnh. Introduce yourself và keep conversation going 2-3 phút.</p>
+                    <div class="scenario-iterations">
+                        <div class="iteration-line">
+                            <span class="iteration-dot i1">1</span>
+                            <span><strong>Content:</strong> Opening, elaborate, hooks, bounce back, closing</span>
+                        </div>
+                        <div class="iteration-line">
+                            <span class="iteration-dot i2">2</span>
+                            <span><strong>Delivery:</strong> /θ/ trong "think", intonation, pace 140-160 WPM</span>
+                        </div>
+                        <div class="iteration-line">
+                            <span class="iteration-dot i3">3</span>
+                            <span><strong>Naturalness:</strong> Connected speech, discourse markers, fillers &lt;5/phút</span>
+                        </div>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('party')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business - 2-3 min</span>
+                    <h4>Scenario 2: Networking at Conference</h4>
+                    <p>Bạn đang ở industry conference. Gặp 1 professional khác ở coffee station. 2-3 phút để introduce và explore collaboration.</p>
+                    <div class="scenario-iterations">
+                        <div class="iteration-line">
+                            <span class="iteration-dot i1">1</span>
+                            <span><strong>Content:</strong> Semi-formal intro, elaborate work, hook achievement, specific question</span>
+                        </div>
+                        <div class="iteration-line">
+                            <span class="iteration-dot i2">2</span>
+                            <span><strong>Delivery:</strong> Word stress, warm intonation, pace 130-150 WPM</span>
+                        </div>
+                        <div class="iteration-line">
+                            <span class="iteration-dot i3">3</span>
+                            <span><strong>Naturalness:</strong> Connected speech, discourse markers, fillers &lt;3/phút</span>
+                        </div>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('networking')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 3 -->
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">☕ Mixed - 5 min</span>
+                    <h4>Scenario 3: Follow-up Coffee</h4>
+                    <p>Gặp lại ai đó từ conference để follow-up. Deepen relationship, explore collaboration. Conversation 5 phút.</p>
+                    <div class="scenario-iterations">
+                        <div class="iteration-line">
+                            <span class="iteration-dot i1">1</span>
+                            <span><strong>Content:</strong> Reference previous talk, elaborate, transitions, value-add</span>
+                        </div>
+                        <div class="iteration-line">
+                            <span class="iteration-dot i2">2</span>
+                            <span><strong>Delivery:</strong> Connected speech trong "How've you been", warm intonation</span>
+                        </div>
+                        <div class="iteration-line">
+                            <span class="iteration-dot i3">3</span>
+                            <span><strong>Naturalness:</strong> Natural transitions, discourse markers, fillers &lt;3/phút</span>
+                        </div>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('followup')">🎙️ Start Practice</button>
+                </div>
+                
+                <!-- Scenario 4 -->
+                <div class="scenario-card challenge">
+                    <span class="scenario-badge">🔥 Challenge - 10 min</span>
+                    <h4>Scenario 4: Conversation Marathon</h4>
+                    <p>Stuck ở elevator với 1 người lạ trong 10 phút (giả lập). Keep conversation going mà không awkward.</p>
+                    <div class="scenario-iterations">
+                        <div class="iteration-line">
+                            <span class="iteration-dot i1">1</span>
+                            <span><strong>Content:</strong> 4 topics, tất cả 6 patterns từ Day 3</span>
+                        </div>
+                        <div class="iteration-line">
+                            <span class="iteration-dot i2">2</span>
+                            <span><strong>Delivery:</strong> All connected speech, consistent pace, strategic pauses</span>
+                        </div>
+                        <div class="iteration-line">
+                            <span class="iteration-dot i3">3</span>
+                            <span><strong>Naturalness:</strong> No silence &gt;5s, diverse markers, sustained &lt;3 fillers/min</span>
+                        </div>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('marathon')">🎙️ Start Practice</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Before/After Comparison -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">📊</span> Before/After Comparison Template</h2>
+            <p class="section-desc">Dùng template này để track progress qua 3 iterations. Copy vào notes hoặc screenshot. So sánh scores để thấy improvement.</p>
+            
+            <div class="comparison-template"><span class="header">ITERATION 1 (Content Focus):</span>
+- Content: [score]/5
+- Pronunciation: [score]/5
+- Intonation: [score]/5
+- Pace & Pauses: [score]/5
+- Fluency: [score]/5
+- Naturalness: [score]/5
+- Average: [score]/5
+
+Key issues:
+- [Issue 1]
+- [Issue 2]
+- [Issue 3]
+
+---
+
+<span class="header">ITERATION 2 (Delivery Focus):</span>
+- Content: [score]/5
+- Pronunciation: [score]/5 <span class="up">⬆️</span>
+- Intonation: [score]/5 <span class="up">⬆️</span>
+- Pace & Pauses: [score]/5 <span class="up">⬆️</span>
+- Fluency: [score]/5
+- Naturalness: [score]/5
+- Average: [score]/5 <span class="up">⬆️</span>
+
+Improvements:
+- [Improvement 1]
+- [Improvement 2]
+
+---
+
+<span class="header">ITERATION 3 (Naturalness Focus):</span>
+- Content: [score]/5
+- Pronunciation: [score]/5
+- Intonation: [score]/5
+- Pace & Pauses: [score]/5
+- Fluency: [score]/5 <span class="up">⬆️</span>
+- Naturalness: [score]/5 <span class="up">⬆️</span>
+- Average: [score]/5 <span class="up">⬆️</span>
+
+Final assessment:
+- Biggest improvement: [area]
+- Still need work: [area]
+- Next week focus: [area]</div>
+        </section>
+        
+        <!-- Improvement Tips -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">💡</span> Improvement Tips by Criteria</h2>
+            <p class="section-desc">Click vào từng criteria để xem specific tips cho improvement. Nếu score &lt; 3/5 ở criteria nào, xem tips tương ứng.</p>
+            
+            <div class="tips-accordion">
+                <!-- Content Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>📝 Content Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Nói quá ngắn, không elaborate, không có hooks.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Dùng "mostly X, but sometimes Y" để elaborate</li>
+                                <li>Thêm "Actually, ..." để share surprising info</li>
+                                <li>Tạo hooks: specific details (numbers, names, places)</li>
+                                <li>Bounce back với specific questions: "How's [specific] going?"</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Record 1 phút về work</li>
+                                <li>Listen: Có bao nhiêu hooks?</li>
+                                <li>Target: ≥3 hooks/phút</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pronunciation Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>🎯 Pronunciation Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>/θ/, /ð/ không rõ, word stress sai, final consonants không phát âm.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li><strong>/θ/ (think):</strong> Lưỡi giữa 2 răng, thổi gió nhẹ</li>
+                                <li><strong>/ð/ (this):</strong> Lưỡi giữa 2 răng, rung thanh quản</li>
+                                <li><strong>Word stress:</strong> Tra dictionary, note stress pattern</li>
+                                <li><strong>Final consonants:</strong> Phát âm rõ /t/, /d/, /k/ (không nuốt)</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Chọn 10 từ có /θ/, /ð/</li>
+                                <li>Record từng từ</li>
+                                <li>Listen + compare với dictionary audio</li>
+                                <li>Repeat 5 lần mỗi từ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Intonation Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>🎵 Intonation Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Monotone, không có emphasis, không thể hiện emotion.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li><strong>Rising intonation</strong> ở cuối câu hỏi Yes/No</li>
+                                <li><strong>Falling intonation</strong> ở cuối statements</li>
+                                <li>Nhấn từ quan trọng (content words)</li>
+                                <li>Thể hiện emotion: excitement, surprise, concern</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Record 1 câu: "That's really interesting!"</li>
+                                <li>Lần 1: Monotone (flat)</li>
+                                <li>Lần 2: Thêm emphasis: "That's REALLY interesting!"</li>
+                                <li>Lần 3: Thêm emotion: "That's REALLY interesting! ↗↘"</li>
+                                <li>Compare 3 versions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pace Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>⏱️ Pace & Pauses Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Nói quá nhanh (nuốt âm) hoặc quá chậm (nghe effortful), không pause.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li><strong>Target pace:</strong> 130-150 WPM (semi-formal)</li>
+                                <li>Pause sau mỗi idea (không nói 1 hơi dài)</li>
+                                <li>Pause TRƯỚC important point (tạo emphasis)</li>
+                                <li>Dùng silence thay vì "um", "uh"</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Record 1 phút nói về work</li>
+                                <li>Đếm số words → calculate WPM</li>
+                                <li>Nếu &gt;160 WPM: Slow down</li>
+                                <li>Nếu &lt;110 WPM: Speed up</li>
+                                <li>Target: 130-150 WPM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fluency Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>💨 Fluency Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Quá nhiều "um", "uh", "like" (8+ lần/phút), nhiều "dead air".</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Đếm fillers: Record 1 phút, đếm "um", "uh", "like"</li>
+                                <li>Replace "um" với silence (pause 1-2 giây OK)</li>
+                                <li>Replace "um" với discourse markers: "Well...", "Actually...", "You know..."</li>
+                                <li>Prepare transition phrases: "Speaking of which...", "That reminds me..."</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Record 1 phút nói về hobbies</li>
+                                <li>Đếm fillers</li>
+                                <li>Target: &lt;5 lần/phút</li>
+                                <li>Nếu &gt;10 lần/phút: Practice dùng silence thay thế</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Naturalness Tips -->
+                <div class="tip-item">
+                    <div class="tip-header" onclick="toggleTip(this)">
+                        <span>🌟 Naturalness Score &lt; 3/5</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="tip-body">
+                        <div class="tip-content">
+                            <h5>🎯 Vấn đề</h5>
+                            <p>Nói từng từ riêng, không dùng connected speech, nghe như đọc script.</p>
+                            
+                            <h5>💡 Giải pháp</h5>
+                            <ul>
+                                <li>Dùng linking: "based in" → "basedin"</li>
+                                <li>Dùng reduction: "to" → "tə", "and" → "n"</li>
+                                <li>Dùng discourse markers: "Actually", "Speaking of", "That reminds me"</li>
+                                <li>Dùng contractions: "I'm", "I've", "don't" (không "I am", "I have", "do not")</li>
+                            </ul>
+                            
+                            <h5>🎯 Practice</h5>
+                            <ul>
+                                <li>Record 1 câu: "I have been meaning to call you"</li>
+                                <li>Lần 1: Nói từng từ riêng</li>
+                                <li>Lần 2: Dùng connected speech: "I'vebin meanin tə call ya"</li>
+                                <li>Compare 2 versions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Self-Assessment</h2>
+            <p class="section-desc">7 câu hỏi về self-assessment và improvement. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Tại sao bạn nói tiếng Anh hàng ngày mà không tiến bộ?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. Vì bạn không học đủ từ vựng</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. Vì bạn không HEAR lại giọng mình (không record)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. Vì bạn không practice đủ giờ</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. Vì bạn không có native speaker để practice</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. 3 iterations framework là gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. Record 3 lần cùng 1 focus</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. Record 3 lần với 3 focus khác nhau (Content → Delivery → Naturalness)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. Record 3 scenarios khác nhau</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. Record 3 ngày liên tiếp</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">3. Iteration 1 focus vào gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Pronunciation</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. Intonation</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. Content (structure, elaboration, hooks)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. Naturalness</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. Pace target cho semi-formal (networking) là bao nhiêu WPM?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. 100-120 WPM</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. 130-150 WPM</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. 160-180 WPM</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. 180-200 WPM</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. Target cho filler words ("um", "uh", "like") là bao nhiêu lần/phút?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. 0 lần/phút (không dùng bao giờ)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. &lt;5 lần/phút</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. 10-15 lần/phút</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. 20+ lần/phút</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">6. Nếu bạn cần time để think, nên dùng gì thay vì "um"?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. "uh", "ah"</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. Nói nhanh hơn để không có pause</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. Silence (pause 1-2 giây) hoặc discourse markers ("Well...", "Actually...")</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. "like", "you know"</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Tiêu chí nào chiếm weight CAO NHẤT trong rubric (20%)?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. Intonation</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. Pace & Pauses</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. Content và Pronunciation (cả hai đều 20%)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. Naturalness</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-accent">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard: Common Speaking Issues</h2>
+            <p class="section-desc">6 common speaking issues với solutions. Mặt trước: issue. Mặt sau: solution + practice.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-issue" id="fc-issue">Trả lời quá ngắn</div>
+                            <div class="card-hint">Tap to reveal solution →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-solution-title" id="fc-solution-title">💡 Solution</div>
+                            <div class="card-solution" id="fc-solution">Dùng "mostly X, but sometimes Y" để elaborate. Thêm "Actually, ..." để share surprising info. Tạo hooks với specific details. Bounce back với specific questions.</div>
+                            <div class="card-practice" id="fc-practice">
+                                <strong>🎯 Practice:</strong>
+                                Record 1 phút về work. Listen: có bao nhiêu hooks? Target: ≥3 hooks/phút.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-01.html" class="nav-btn">
+                <div class="nav-label">← Back to</div>
+                <div class="nav-title">Week 1 Hub</div>
+            </a>
+            <a href="week-01-day-6.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 6: LinkedIn Profile</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 5 Complete & Continue to Day 6</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#F9D4B8"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#F9D4B8"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#F9D4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#F9D4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#F9D4B8"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Microphone for speaking day -->
+            <ellipse cx="100" cy="115" rx="6" ry="10" fill="#2D3748"/>
+            <rect x="97" y="125" width="6" height="8" fill="#2D3748"/>
+            <ellipse cx="100" cy="110" rx="4" ry="6" fill="#4A5568"/>
+            <rect x="65" y="150" width="28" height="20" fill="#B8C5E8" rx="3"/>
+            <line x1="79" y1="150" x2="79" y2="170" stroke="#2D3748" stroke-width="1.5"/>
+        </svg>
+        <div class="mascot-speech">Record & improve! 🎤</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 1 · Day 5 · Speaking Intensive</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== RUBRIC TABS ==========
+        function switchRubric(id, btn) {
+            document.querySelectorAll('.rubric-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.rubric-content').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('rubric-' + id).classList.add('active');
+        }
+        
+        // ========== TIPS ACCORDION ==========
+        function toggleTip(header) {
+            const item = header.parentElement;
+            item.classList.toggle('open');
+        }
+        
+        // ========== SCENARIO DETAILS ==========
+        function showScenarioDetails(scenario) {
+            const details = {
+                party: `🎉 PARTY SCENARIO (2-3 phút):
+
+Context: Bạn đến party của bạn chung. Có 1 người lạ đứng cạnh.
+
+Iteration 1 - Content:
+• Opening: "Hi, I don't think we've met. I'm [name]."
+• Elaborate: "I'm in [field] — mostly [X], but sometimes [Y]."
+• Hook: "Actually, I just [interesting news]."
+• Bounce back: "What about you? How's [specific] going?"
+• Closing: "Anyway, I'll let you go. Nice meeting you!"
+
+Iteration 2 - Delivery:
+• /θ/ trong "think", "that"
+• Rising intonation ở "What about you?"
+• Pace: 140-160 WPM (casual)
+• Pauses sau mỗi idea
+
+Iteration 3 - Naturalness:
+• Connected speech: "I'm basedin Saigon", "Nice t'meet you"
+• Discourse markers: "Actually", "Anyway"
+• Fillers: <5 lần/phút
+• Contractions: "I'm", "I've", "don't"
+
+💡 Target: Score ≥4/5 ở tất cả criteria sau 3 iterations.`,
+
+                networking: `💼 NETWORKING SCENARIO (2-3 phút):
+
+Context: Industry conference, coffee station. Gặp 1 professional khác.
+
+Iteration 1 - Content:
+• Opening: "Hi, I don't believe we've met. I'm [name] from [company]."
+• Elaborate: "I've been in [field] for about X years now, mostly [X], but sometimes [Y]."
+• Hook: "Actually, we just [achievement/news]."
+• Bounce back: "What about your firm? How's [specific] going?"
+• Closing: "Let's definitely connect again soon. Here's my card."
+
+Iteration 2 - Delivery:
+• Word stress trong "investment", "opportunity"
+• Warm intonation (professional nhưng friendly)
+• Pace: 130-150 WPM (semi-formal)
+• Pauses trước important points
+
+Iteration 3 - Naturalness:
+• Connected speech: "I've been in real estate for about 8 years now"
+• Discourse markers: "Actually", "Speaking of"
+• Fillers: <3 lần/phút (professional)
+• Register: Semi-formal
+
+💡 Target: Score ≥4/5, đặc biệt cao ở Content và Delivery.`,
+
+                followup: `☕ FOLLOW-UP COFFEE (5 phút):
+
+Context: Gặp lại ai đó từ conference để follow-up. Deepen relationship.
+
+Iteration 1 - Content:
+• Opening: "Great to see you again! How've you been since the conference?"
+• Reference: "Last time we talked about [topic]..."
+• Elaborate: Share update + elaborate
+• Transition: "Speaking of [topic], ..."
+• Value-add: "Before I forget, I have [resource/intro]..."
+• Closing: "This was great catching up. Let's do this again."
+
+Iteration 2 - Delivery:
+• Connected speech: "How've you been" → /haʊv juː bɪn/
+• Warm, enthusiastic intonation
+• Pace: 130-150 WPM
+• Pauses sau transitions
+
+Iteration 3 - Naturalness:
+• Natural flow giữa topics
+• Discourse markers đa dạng
+• Fillers: <3 lần/phút
+• Authentic conversation feel
+
+💡 Target: Score ≥4.5/5 trung bình.`,
+
+                marathon: `🔥 10-MINUTE MARATHON (Challenge):
+
+Context: Stuck ở elevator với người lạ. Keep conversation 10 phút.
+
+Iteration 1 - Content (4 topics):
+• Min 0-2: Small talk + intro
+• Min 2-4: Elaborate về work/hobbies với "mostly X, but sometimes Y"
+• Min 4-6: "That reminds me of..." → personal story
+• Min 6-8: "Speaking of X..." → transition
+• Min 8-10: "Before I forget..." → wrap up
+
+Iteration 2 - Delivery:
+• Tất cả connected speech từ Day 4
+• Variation trong intonation (không monotone)
+• Consistent pace: 130-150 WPM
+• Strategic pauses
+
+Iteration 3 - Naturalness:
+• Consistent connected speech 10 phút
+• Diverse discourse markers
+• Sustained <3 fillers/phút
+• Natural, không rehearsed
+
+💡 Target:
+• NO silence >5 seconds
+• Use ALL 6 patterns from Day 3
+• Score ≥4/5 average
+• Listener không cảm thấy awkward`
+            };
+            
+            alert(details[scenario]);
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                issue: "Trả lời quá ngắn",
+                solutionTitle: "💡 Solution",
+                solution: "Dùng 'mostly X, but sometimes Y' để elaborate. Thêm 'Actually, ...' để share surprising info. Tạo hooks với specific details. Bounce back với specific questions.",
+                practice: "Record 1 phút về work. Listen: có bao nhiêu hooks? Target: ≥3 hooks/phút."
+            },
+            { 
+                issue: "/θ/, /ð/ không rõ",
+                solutionTitle: "💡 Solution",
+                solution: "/θ/ (think): Lưỡi giữa 2 răng, thổi gió nhẹ. /ð/ (this): Lưỡi giữa 2 răng, rung thanh quản. Final consonants: Phát âm rõ /t/, /d/, /k/ (không nuốt).",
+                practice: "Chọn 10 từ có /θ/, /ð/. Record từng từ. Listen + compare với dictionary audio. Repeat 5 lần mỗi từ."
+            },
+            { 
+                issue: "Intonation monotone",
+                solutionTitle: "💡 Solution",
+                solution: "Rising intonation ở cuối câu hỏi Yes/No. Falling intonation ở cuối statements. Nhấn từ quan trọng (content words). Thể hiện emotion.",
+                practice: "Record 'That's really interesting!' 3 cách: monotone → thêm emphasis → thêm emotion. Compare 3 versions."
+            },
+            { 
+                issue: "Pace quá nhanh",
+                solutionTitle: "💡 Solution",
+                solution: "Target pace: 130-150 WPM (semi-formal). Pause sau mỗi idea. Pause TRƯỚC important point (tạo emphasis). Dùng silence thay vì 'um', 'uh'.",
+                practice: "Record 1 phút nói về work. Đếm words → calculate WPM. Nếu >160 WPM: Slow down. Target: 130-150 WPM."
+            },
+            { 
+                issue: "Quá nhiều 'um', 'uh'",
+                solutionTitle: "💡 Solution",
+                solution: "Đếm fillers: Record 1 phút, đếm 'um', 'uh', 'like'. Replace 'um' với silence (pause 1-2 giây OK). Replace với discourse markers: 'Well...', 'Actually...', 'You know...'",
+                practice: "Record 1 phút nói về hobbies. Đếm fillers. Target: <5 lần/phút. Nếu >10 lần/phút: Practice dùng silence thay thế."
+            },
+            { 
+                issue: "Nói từng từ riêng (no connected speech)",
+                solutionTitle: "💡 Solution",
+                solution: "Dùng linking: 'based in' → 'basedin'. Dùng reduction: 'to' → 'tə', 'and' → 'n'. Dùng discourse markers. Dùng contractions: 'I'm', 'I've', 'don't'.",
+                practice: "Record 'I have been meaning to call you' 2 cách: từng từ riêng vs connected speech 'I'vebin meanin tə call ya'. Compare."
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-issue').textContent = card.issue;
+            document.getElementById('fc-solution-title').textContent = card.solutionTitle;
+            document.getElementById('fc-solution').textContent = card.solution;
+            document.getElementById('fc-practice').innerHTML = '<strong>🎯 Practice:</strong> ' + card.practice;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'b', q3: 'c', q4: 'b', q5: 'b', q6: 'c', q7: 'c' };
+        const explanations = {
+            q1: 'Lý do chính là bạn không HEAR lại giọng mình. Bạn nghĩ mình nói OK nhưng thực tế có nhiều issues mà chỉ khi record + listen back mới nhận ra. Đây là lý do iteration framework quan trọng.',
+            q2: '3 iterations framework = Record 3 lần với 3 focus khác nhau: Iteration 1 (Content) → Iteration 2 (Delivery) → Iteration 3 (Naturalness). Mỗi iteration cải thiện 1 aspect, sau 3 iterations bạn sẽ cải thiện rõ rệt.',
+            q3: 'Iteration 1 focus vào CONTENT: nói đúng và đủ ý, structure rõ ràng, elaborate, tạo hooks, bounce back. Delivery và Naturalness sẽ focus ở Iteration 2 và 3.',
+            q4: 'Target pace cho semi-formal (networking) là 130-150 WPM. Casual conversation: 140-160 WPM. Formal (presentation): 120-140 WPM. Pace quá nhanh (>160) sẽ nuốt âm, quá chậm (<110) nghe effortful.',
+            q5: 'Target cho filler words là <5 lần/phút. 0-2 lần: Excellent. 3-4 lần: Good. 5-7 lần: Average. 8-10 lần: Needs improvement. 10+ lần: Serious issue.',
+            q6: 'Nếu cần time để think, nên dùng silence (pause 1-2 giây) hoặc discourse markers ("Well...", "Actually...", "You know..."). Tránh dùng "um", "uh" vì nghe unprofessional. Silence nghe thoughtful hơn.',
+            q7: 'Content và Pronunciation đều chiếm 20% (cao nhất). Intonation, Pace & Pauses, Fluency, Naturalness đều 15%. Đây là vì Content và Pronunciation là foundation của speaking.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You understand self-assessment and iteration framework!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the rubric and framework carefully.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the 6 criteria and 3 iterations.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the day content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week1Days') || '[]');
+            
+            if (!completed.includes(5)) {
+                completed.push(5);
+                localStorage.setItem('week1Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(1)) {
+                        completedWeeks.push(1);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 1 completed! You now have the habit of recording and iterating! 🦊');
+                } else {
+                    alert(`✅ Day 5 completed! ${7 - completed.length} days left in Week 1. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-01-day-6.html';
+            } else {
+                if (confirm('✅ Day 5 already completed! Go to Day 6?')) {
+                    location.href = 'week-01-day-6.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+        });
+    </script>
+</body>
+</html>
