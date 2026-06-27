@@ -9,42 +9,21 @@
     
     <style>
         :root {
-            /* Week 3 Theme - Cool Creative Palette (Storytelling) */
             --cyan: #06B6D4;
             --cyan-bright: #0891B2;
             --cyan-soft: #CFFAFE;
             --cyan-deep: #0E7490;
-            
             --blue: #3B82F6;
             --blue-bright: #2563EB;
             --blue-soft: #DBEAFE;
-            --blue-deep: #1D4ED8;
-            
             --indigo: #6366F1;
             --indigo-bright: #4F46E5;
-            --indigo-soft: #E0E7FF;
-            --indigo-deep: #3730A3;
-            
-            --teal: #14B8A6;
-            --teal-bright: #0D9488;
-            --teal-soft: #CCFBF1;
-            --teal-deep: #0F766E;
-            
-            /* Text colors - Đậm và dễ đọc */
             --text-primary: #1E293B;
             --text-secondary: #334155;
             --text-muted: #64748B;
-            
-            --glass-bg: rgba(255, 255, 255, 0.7);
-            --glass-border: rgba(255, 255, 255, 0.8);
-            
-            --shadow-soft: 0 4px 24px rgba(6, 182, 212, 0.15);
-            --shadow-medium: 0 12px 40px rgba(6, 182, 212, 0.25);
-            
             --radius-sm: 12px;
             --radius-md: 18px;
             --radius-lg: 24px;
-            --radius-xl: 32px;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -93,14 +72,12 @@
         
         .top-nav {
             background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(30px) saturate(180%);
-            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            backdrop-filter: blur(30px);
             padding: 12px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.6);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         }
         
         .top-nav .container {
@@ -131,7 +108,6 @@
         .week-header {
             padding: 48px 0 32px;
             text-align: center;
-            position: relative;
         }
         
         .breadcrumb {
@@ -145,16 +121,8 @@
             text-decoration: none;
         }
         
-        .week-icon-large {
-            font-size: 3.5rem;
-            margin-bottom: 16px;
-            display: inline-block;
-        }
-        
-        .week-icon-large i {
-            --ph-color: var(--cyan-bright);
-            filter: drop-shadow(0 4px 12px rgba(6, 182, 212, 0.3));
-        }
+        .week-icon-large { font-size: 3.5rem; margin-bottom: 16px; }
+        .week-icon-large i { --ph-color: var(--cyan-bright); }
         
         .week-title {
             font-family: 'Fraunces', serif;
@@ -177,7 +145,6 @@
         
         .week-quote {
             background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
             padding: 16px 24px;
             border-radius: var(--radius-md);
             border-left: 4px solid var(--cyan-bright);
@@ -185,7 +152,6 @@
             color: var(--text-secondary);
             margin: 24px auto;
             max-width: 650px;
-            box-shadow: var(--shadow-soft);
         }
         
         .week-tags {
@@ -198,34 +164,20 @@
         
         .week-tag {
             background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 500;
             color: var(--text-secondary);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.8);
             display: flex;
             align-items: center;
             gap: 6px;
         }
         
-        .week-tag i {
-            --ph-color: var(--cyan-bright);
-            font-size: 1rem;
-        }
+        .week-tag i { --ph-color: var(--cyan-bright); }
         
-        .section {
-            margin: 48px 0;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .section-header {
-            margin-bottom: 32px;
-            text-align: center;
-        }
+        .section { margin: 48px 0; }
+        .section-header { margin-bottom: 32px; text-align: center; }
         
         .section-title {
             font-family: 'Fraunces', serif;
@@ -239,31 +191,24 @@
             gap: 12px;
         }
         
-        .section-title i {
-            --ph-color: var(--cyan-bright);
-            font-size: 1.8rem;
-        }
+        .section-title i { --ph-color: var(--cyan-bright); }
         
         .section-desc {
             font-size: 15px;
             color: var(--text-secondary);
-            line-height: 1.6;
             max-width: 600px;
             margin: 0 auto;
         }
         
         .philosophy-section {
             background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(30px);
             border-radius: var(--radius-lg);
             padding: 40px;
             margin: 40px 0;
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: var(--shadow-soft);
         }
         
         .philosophy-box {
-            background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15));
             border-radius: var(--radius-md);
             padding: 24px;
             border-left: 4px solid var(--cyan-bright);
@@ -279,20 +224,12 @@
             gap: 8px;
         }
         
-        .philosophy-title i {
-            --ph-color: var(--cyan-bright);
-        }
-        
-        .philosophy-text {
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
+        .philosophy-title i { --ph-color: var(--cyan-bright); }
         
         .comparison-section {
             background: rgba(255, 255, 255, 0.9);
             border-radius: var(--radius-md);
             padding: 28px;
-            margin-top: 24px;
         }
         
         .comparison-title {
@@ -300,7 +237,6 @@
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 20px;
-            color: var(--text-primary);
         }
         
         .comparison-item {
@@ -310,15 +246,8 @@
             border-left: 4px solid;
         }
         
-        .comparison-item.negative {
-            background: rgba(245, 101, 101, 0.1);
-            border-left-color: #F56565;
-        }
-        
-        .comparison-item.positive {
-            background: rgba(72, 187, 120, 0.1);
-            border-left-color: #48BB78;
-        }
+        .comparison-item.negative { background: rgba(245, 101, 101, 0.1); border-left-color: #F56565; }
+        .comparison-item.positive { background: rgba(72, 187, 120, 0.1); border-left-color: #48BB78; }
         
         .comparison-label {
             font-size: 13px;
@@ -329,9 +258,6 @@
             gap: 8px;
         }
         
-        .comparison-item.negative .comparison-label { color: #E53E3E; }
-        .comparison-item.positive .comparison-label { color: #38A169; }
-        
         .comparison-text {
             font-size: 14px;
             color: var(--text-secondary);
@@ -339,26 +265,29 @@
             font-style: italic;
         }
         
+        /* 7 DAYS GRID - COMPACT STRUCTURE */
         .days-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
             margin: 32px 0;
         }
         
         .day-card {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(30px);
             border-radius: var(--radius-md);
-            padding: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--cyan-bright);
+            text-decoration: none;
+            color: inherit;
+            display: block;
             transition: all 0.4s ease;
         }
         
         .day-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(6, 182, 212, 0.2);
         }
         
         .day-label {
@@ -369,79 +298,58 @@
             font-size: 12px;
             font-weight: 600;
             display: inline-block;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
         
-        .day-icon {
-            margin-bottom: 12px;
-            display: inline-block;
-        }
-        
-        .day-icon i {
-            font-size: 2.2rem;
-            filter: drop-shadow(0 4px 10px rgba(6, 182, 212, 0.3));
-        }
+        .day-icon { margin-bottom: 16px; }
+        .day-icon i { font-size: 2rem; --ph-color: var(--cyan-bright); }
         
         .day-title {
             font-family: 'Fraunces', serif;
             font-size: 1.4rem;
             font-weight: 600;
-            color: var(--text-primary);
             margin-bottom: 8px;
+            color: var(--text-primary);
         }
         
         .day-subtitle {
             font-size: 13px;
             color: var(--text-secondary);
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             line-height: 1.5;
         }
         
-        .day-tags {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            margin-bottom: 12px;
-        }
-        
-        .day-tag {
-            font-size: 11px;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-weight: 500;
-            background: rgba(207, 250, 254, 0.7);
-            color: var(--cyan-deep);
-            border: 1px solid rgba(6, 182, 212, 0.3);
-        }
-        
-        .key-patterns {
+        .day-focus {
             margin-top: 16px;
             padding-top: 16px;
             border-top: 1px solid rgba(207, 250, 254, 0.5);
         }
         
-        .key-patterns-title {
-            font-size: 12px;
-            font-weight: 600;
+        .focus-title {
+            font-size: 11px;
+            font-weight: 700;
             color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
         }
         
-        .pattern-list {
+        .focus-list {
             list-style: none;
         }
         
-        .pattern-list li {
-            padding: 5px 0;
+        .focus-list li {
+            padding: 6px 0;
             padding-left: 20px;
             position: relative;
             font-size: 13px;
             color: var(--text-secondary);
+            border-bottom: 1px dashed rgba(207, 250, 254, 0.5);
         }
         
-        .pattern-list li::before {
+        .focus-list li:last-child { border-bottom: none; }
+        
+        .focus-list li::before {
             content: '→';
             position: absolute;
             left: 0;
@@ -449,117 +357,85 @@
             font-weight: 600;
         }
         
-        .pattern-list a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            border-bottom: 1px dotted var(--cyan-bright);
+        .day-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15));
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--cyan-deep);
+            font-weight: 600;
+            border: 1px solid rgba(6, 182, 212, 0.2);
         }
         
-        .pattern-list a:hover {
-            color: var(--cyan-bright);
-            border-bottom-style: solid;
-        }
+        .day-time i { --ph-color: var(--cyan-bright); }
         
-        .action-section {
-            background: rgba(255, 255, 255, 0.85);
+        /* MILESTONE */
+        .milestone-card {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15));
             border-radius: var(--radius-lg);
             padding: 40px;
             margin: 40px 0;
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: var(--shadow-soft);
+            border: 2px solid var(--cyan-bright);
+            text-align: center;
         }
         
-        .example-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: var(--radius-md);
-            padding: 24px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--cyan-bright);
-        }
+        .milestone-icon { font-size: 3.5rem; margin-bottom: 16px; }
+        .milestone-icon i { --ph-color: var(--cyan-bright); }
         
-        .example-card h3 {
+        .milestone-title {
             font-family: 'Fraunces', serif;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
+            font-size: 2rem;
+            font-weight: 600;
             color: var(--text-primary);
+            margin-bottom: 12px;
         }
         
-        .example-text {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 16px;
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .milestone-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        
+        .milestone-skill {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 16px 18px;
             border-radius: var(--radius-sm);
             font-size: 14px;
             color: var(--text-secondary);
-            line-height: 1.7;
-            font-style: italic;
-            border-left: 3px solid var(--blue-bright);
-        }
-        
-        .example-text strong {
-            color: var(--cyan-bright);
-            font-style: normal;
-        }
-        
-        .master-section {
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            margin: 40px 0;
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: var(--shadow-soft);
-        }
-        
-        .skills-category {
-            margin-bottom: 24px;
-        }
-        
-        .skills-category h3 {
-            font-family: 'Fraunces', serif;
-            font-size: 1.3rem;
-            margin-bottom: 16px;
-            color: var(--text-primary);
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--cyan-soft);
-        }
-        
-        .skills-list {
-            list-style: none;
-        }
-        
-        .skills-list li {
-            padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: var(--radius-sm);
-            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
         }
         
-        .skills-list input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--cyan-bright);
-            border-radius: 6px;
-            cursor: pointer;
-            accent-color: var(--cyan-bright);
+        .milestone-skill i {
+            --ph-color: var(--cyan-bright);
+            font-size: 1.3rem;
+            flex-shrink: 0;
         }
         
-        .skills-list label {
-            font-size: 14px;
-            color: var(--text-secondary);
-            cursor: pointer;
-            flex: 1;
-        }
-        
+        /* QUIZ */
         .quiz-section {
             background: rgba(255, 255, 255, 0.85);
             border-radius: var(--radius-lg);
             padding: 40px;
             margin: 40px 0;
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: var(--shadow-soft);
         }
         
         .quiz-question {
@@ -577,11 +453,7 @@
             color: var(--text-primary);
         }
         
-        .quiz-options {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+        .quiz-options { display: flex; flex-direction: column; gap: 8px; }
         
         .quiz-option {
             padding: 12px;
@@ -594,10 +466,7 @@
             color: var(--text-secondary);
         }
         
-        .quiz-option:hover {
-            border-color: var(--cyan-bright);
-            background: rgba(207, 250, 254, 0.2);
-        }
+        .quiz-option:hover { border-color: var(--cyan-bright); background: rgba(207, 250, 254, 0.2); }
         
         .check-btn {
             background: linear-gradient(135deg, var(--cyan-bright), var(--blue-bright));
@@ -611,6 +480,7 @@
             box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
         }
         
+        /* NAVIGATION BLEND GRADIENT */
         .week-navigation {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -619,20 +489,29 @@
         }
         
         .nav-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(207, 250, 254, 0.5));
             border-radius: var(--radius-md);
             padding: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.95);
             text-decoration: none;
             color: inherit;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cyan-bright), var(--blue-bright), var(--indigo-bright));
         }
         
         .nav-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.25);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(207, 250, 254, 0.7));
         }
         
         .nav-label {
@@ -645,22 +524,18 @@
         
         .nav-title {
             font-family: 'Fraunces', serif;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 600;
             color: var(--text-primary);
         }
         
-        .cta-container {
-            text-align: center;
-            margin: 48px 0;
-        }
+        .cta-container { text-align: center; margin: 48px 0; }
         
         .cta-button {
             display: inline-flex;
             align-items: center;
             gap: 12px;
             background: linear-gradient(135deg, var(--cyan-bright), var(--blue-bright), var(--indigo-bright));
-            background-size: 200% 200%;
             color: white;
             padding: 18px 36px;
             border-radius: 36px;
@@ -669,12 +544,6 @@
             text-decoration: none;
             transition: all 0.4s ease;
             box-shadow: 0 8px 28px rgba(6, 182, 212, 0.4);
-            animation: gradientFlow 4s ease infinite;
-        }
-        
-        @keyframes gradientFlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
         
         .cta-button:hover {
@@ -682,46 +551,28 @@
             box-shadow: 0 12px 36px rgba(6, 182, 212, 0.5);
         }
         
-        .cta-button i { font-size: 1.2rem; }
-        
         .footer {
             background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(30px);
-            color: var(--text-primary);
             padding: 40px 0 28px;
             text-align: center;
             margin-top: 56px;
             border-top: 1px solid rgba(255, 255, 255, 0.8);
         }
         
-        .footer-fox {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-        }
-        
-        .footer-title {
-            font-family: 'Fraunces', serif;
-            font-size: 1.2rem;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-        
-        .footer-tagline {
-            color: var(--text-muted);
-            font-size: 13px;
-        }
+        .footer-fox { font-size: 2.5rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
         
         @media (max-width: 768px) {
             .week-title { font-size: 2.5rem; }
             .days-grid { grid-template-columns: 1fr; }
+            .milestone-skills { grid-template-columns: 1fr; }
             .week-navigation { grid-template-columns: 1fr; }
-            .philosophy-section, .action-section, .master-section, .quiz-section { padding: 28px; }
         }
     </style>
 </head>
 <body>
     
-    <!-- Top Nav -->
     <nav class="top-nav">
         <div class="container">
             <a href="index.html" class="nav-back">
@@ -732,11 +583,10 @@
         </div>
     </nav>
     
-    <!-- Header -->
     <header class="week-header">
         <div class="container">
             <div class="breadcrumb">
-                <a href="index.html">Home</a> › Week 3
+                <a href="index.html">Home</a> › Phase 1: Reactivation › Week 3
             </div>
             <div class="week-icon-large">
                 <i class="ph-duotone ph-airplane-tilt"></i>
@@ -747,10 +597,11 @@
                 Travel isn't about describing places. It's about telling stories that people enjoy listening to.
             </div>
             <div class="week-tags">
-                <div class="week-tag"><i class="ph-duotone ph-airplane-tilt"></i> Storytelling Focus</div>
-                <div class="week-tag"><i class="ph-duotone ph-clock"></i> 7 days</div>
+                <div class="week-tag"><i class="ph-duotone ph-plant"></i> Phase 1</div>
+                <div class="week-tag"><i class="ph-duotone ph-clock"></i> 7 days × 60 min</div>
+                <div class="week-tag"><i class="ph-duotone ph-house"></i> 50% Life</div>
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> 50% Business</div>
                 <div class="week-tag"><i class="ph-duotone ph-books"></i> 30 storytelling patterns</div>
-                <div class="week-tag"><i class="ph-duotone ph-target"></i> Narrative skills</div>
             </div>
         </div>
     </header>
@@ -758,270 +609,192 @@
     <div class="container">
         
         <!-- Philosophy Section -->
-        <section class="philosophy-section">
-            <h2 class="section-title">
-                <i class="ph-duotone ph-lightbulb"></i>
-                Week 3 Philosophy
-            </h2>
-            
-            <div class="philosophy-box">
-                <div class="philosophy-title">
-                    <i class="ph-duotone ph-airplane-tilt"></i>
-                    From Description to Storytelling
-                </div>
-                <p class="philosophy-text">
-                    Week 1-2 đã dạy bạn <strong>describe</strong> (I am..., I have..., I like...). Week 3 sẽ dạy bạn <strong>tell stories</strong> (You'll never believe..., So there I was..., Looking back...). Đây là sự khác biệt giữa <strong>biết tiếng Anh</strong> và <strong>khiến người khác thích nghe bạn nói</strong>.
-                </p>
-            </div>
-            
-            <div class="comparison-section">
-                <div class="comparison-title">Storytelling vs Description</div>
-                <div class="comparison-item negative">
-                    <div class="comparison-label">
-                        <i class="ph-duotone ph-x-circle"></i>
-                        Description (IELTS style)
-                    </div>
-                    <div class="comparison-text">
-                        "The most memorable experience was hiking Mount Fuji because the view was breathtaking."
-                    </div>
-                </div>
-                <div class="comparison-item positive">
-                    <div class="comparison-label">
-                        <i class="ph-duotone ph-check-circle"></i>
-                        Storytelling (C1 style)
-                    </div>
-                    <div class="comparison-text">
-                        "<strong>You'll never believe</strong> what happened when we hiked Mount Fuji. <strong>So there I was</strong>, exhausted at 3 AM, wondering why I signed up for this. But then the sun came up, and it was the most breathtaking thing I've ever seen. <strong>The funny thing was</strong> that the person I was complaining about being slow ended up being the one who helped me when I struggled."
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 7 Days Preview -->
         <section class="section">
             <div class="section-header">
                 <h2 class="section-title">
-                    <i class="ph-duotone ph-calendar-days"></i>
-                    7 Days of Storytelling
+                    <i class="ph-duotone ph-lightbulb"></i>
+                    Week 3 Philosophy
                 </h2>
+            </div>
+            <div class="philosophy-section">
+                <div class="philosophy-box">
+                    <div class="philosophy-title">
+                        <i class="ph-duotone ph-airplane-tilt"></i>
+                        From Description to Storytelling
+                    </div>
+                    <p class="philosophy-text">
+                        Week 1-2 đã dạy bạn <strong>describe</strong> (I am..., I have..., I like...). Week 3 sẽ dạy bạn <strong>tell stories</strong> (You'll never believe..., So there I was..., Looking back...). Đây là sự khác biệt giữa <strong>biết tiếng Anh</strong> và <strong>khiến người khác thích nghe bạn nói</strong>.
+                    </p>
+                </div>
+                <div class="comparison-section">
+                    <div class="comparison-title">Storytelling vs Description</div>
+                    <div class="comparison-item negative">
+                        <div class="comparison-label"><i class="ph-duotone ph-x-circle"></i> Description (IELTS style)</div>
+                        <div class="comparison-text">"The most memorable experience was hiking Mount Fuji because the view was breathtaking."</div>
+                    </div>
+                    <div class="comparison-item positive">
+                        <div class="comparison-label"><i class="ph-duotone ph-check-circle"></i> Storytelling (C1 style)</div>
+                        <div class="comparison-text">"<strong>You'll never believe</strong> what happened when we hiked Mount Fuji. <strong>So there I was</strong>, exhausted at 3 AM, wondering why I signed up for this. But then the sun came up, and it was the most breathtaking thing I've ever seen. <strong>The funny thing was</strong> that the person I was complaining about being slow ended up being the one who helped me when I struggled."</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7 Days Grid - COMPACT STRUCTURE -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title"><i class="ph-duotone ph-calendar-days"></i> 7 Days of Storytelling</h2>
                 <p class="section-desc">Mỗi ngày tập trung vào 1 khía cạnh của storytelling. Không phải mô tả - mà là kể chuyện.</p>
             </div>
-            
             <div class="days-grid">
-                
-                <!-- Day 15 -->
-                <div class="day-card">
+                <a href="week-03-day-15.html" class="day-card">
                     <div class="day-label">DAY 15</div>
-                    <div class="day-icon">
-                        <i class="ph-duotone ph-map-trifold"></i>
-                    </div>
+                    <div class="day-icon"><i class="ph-duotone ph-map-trifold"></i></div>
                     <h3 class="day-title">Travel Stories</h3>
                     <p class="day-subtitle">Mở đầu câu chuyện, tạo hook, kéo người nghe vào</p>
-                    <div class="key-patterns">
-                        <div class="key-patterns-title">Key patterns:</div>
-                        <ul class="pattern-list">
-                            <li><a href="#">"You'll never believe what happened when..."</a></li>
-                            <li><a href="#">"So there I was, [situation]..."</a></li>
-                            <li><a href="#">"Funny story..."</a></li>
-                            <li><a href="#">"Long story short..."</a></li>
-                            <li><a href="#">"The whole time, I was thinking..."</a></li>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"You'll never believe what happened when..."</li>
+                            <li>"So there I was, [situation]..."</li>
+                            <li>"Funny story..."</li>
+                            <li>"Long story short..."</li>
+                            <li>"The whole time, I was thinking..."</li>
                         </ul>
                     </div>
-                </div>
-                
-                <!-- Day 16 -->
-                <div class="day-card">
+                    <div class="day-time"><i class="ph-duotone ph-clock"></i> 60 min</div>
+                </a>
+                <a href="week-03-day-16.html" class="day-card">
                     <div class="day-label">DAY 16</div>
-                    <div class="day-icon">
-                        <i class="ph-duotone ph-masks-theater"></i>
-                    </div>
+                    <div class="day-icon"><i class="ph-duotone ph-masks-theater"></i></div>
                     <h3 class="day-title">Unexpected Moments</h3>
                     <p class="day-subtitle">Plot twists, surprises, turning points</p>
-                    <div class="key-patterns">
-                        <div class="key-patterns-title">Key patterns:</div>
-                        <ul class="pattern-list">
-                            <li><a href="#">"At first, I thought... but it turned out..."</a></li>
-                            <li><a href="#">"It turned out that..."</a></li>
-                            <li><a href="#">"Looking back, I realize..."</a></li>
-                            <li><a href="#">"The funny thing was..."</a></li>
-                            <li><a href="#">"I wasn't expecting... but..."</a></li>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"At first, I thought... but it turned out..."</li>
+                            <li>"It turned out that..."</li>
+                            <li>"Looking back, I realize..."</li>
+                            <li>"The funny thing was..."</li>
+                            <li>"I wasn't expecting... but..."</li>
                         </ul>
                     </div>
-                </div>
-                
-                <!-- Day 17 -->
-                <div class="day-card">
+                    <div class="day-time"><i class="ph-duotone ph-clock"></i> 60 min</div>
+                </a>
+                <a href="week-03-day-17.html" class="day-card">
                     <div class="day-label">DAY 17</div>
-                    <div class="day-icon">
-                        <i class="ph-duotone ph-users-three"></i>
-                    </div>
+                    <div class="day-icon"><i class="ph-duotone ph-users-three"></i></div>
                     <h3 class="day-title">People I Met</h3>
                     <p class="day-subtitle">Character-driven stories, memorable encounters</p>
-                    <div class="key-patterns">
-                        <div class="key-patterns-title">Key patterns:</div>
-                        <ul class="pattern-list">
-                            <li><a href="#">"I met this [person] who..."</a></li>
-                            <li><a href="#">"What struck me about them was..."</a></li>
-                            <li><a href="#">"They told me... and it made me realize..."</a></li>
-                            <li><a href="#">"We ended up [action] together"</a></li>
-                            <li><a href="#">"I'll never forget [person] because..."</a></li>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"I met this [person] who..."</li>
+                            <li>"What struck me about them was..."</li>
+                            <li>"They told me... and it made me realize..."</li>
+                            <li>"We ended up [action] together"</li>
+                            <li>"I'll never forget [person] because..."</li>
                         </ul>
                     </div>
-                </div>
-                
-                <!-- Day 18 -->
-                <div class="day-card">
+                    <div class="day-time"><i class="ph-duotone ph-clock"></i> 60 min</div>
+                </a>
+                <a href="week-03-day-18.html" class="day-card">
                     <div class="day-label">DAY 18</div>
-                    <div class="day-icon">
-                        <i class="ph-duotone ph-bowl-food"></i>
-                    </div>
+                    <div class="day-icon"><i class="ph-duotone ph-bowl-food"></i></div>
                     <h3 class="day-title">Food & Culture Stories</h3>
                     <p class="day-subtitle">Sensory stories, cultural immersion</p>
-                    <div class="key-patterns">
-                        <div class="key-patterns-title">Key patterns:</div>
-                        <ul class="pattern-list">
-                            <li><a href="#">"I'll never forget the first time I tried..."</a></li>
-                            <li><a href="#">"The thing about [food/culture] is that..."</a></li>
-                            <li><a href="#">"What I didn't realize was..."</a></li>
-                            <li><a href="#">"It reminded me of..."</a></li>
-                            <li><a href="#">"By the end, I couldn't imagine..."</a></li>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"I'll never forget the first time I tried..."</li>
+                            <li>"The thing about [food/culture] is that..."</li>
+                            <li>"What I didn't realize was..."</li>
+                            <li>"It reminded me of..."</li>
+                            <li>"By the end, I couldn't imagine..."</li>
                         </ul>
                     </div>
-                </div>
-                
-                <!-- Day 19 -->
-                <div class="day-card">
+                    <div class="day-time"><i class="ph-duotone ph-clock"></i> 60 min</div>
+                </a>
+                <a href="week-03-day-19.html" class="day-card">
                     <div class="day-label">DAY 19</div>
-                    <div class="day-icon">
-                        <i class="ph-duotone ph-lightbulb"></i>
-                    </div>
+                    <div class="day-icon"><i class="ph-duotone ph-lightbulb"></i></div>
                     <h3 class="day-title">Lessons Learned</h3>
                     <p class="day-subtitle">Reflective storytelling, personal growth</p>
-                    <div class="key-patterns">
-                        <div class="key-patterns-title">Key patterns:</div>
-                        <ul class="pattern-list">
-                            <li><a href="#">"Looking back, I realize..."</a></li>
-                            <li><a href="#">"What I learned from that was..."</a></li>
-                            <li><a href="#">"If I could do it again, I would..."</a></li>
-                            <li><a href="#">"The biggest takeaway was..."</a></li>
-                            <li><a href="#">"It made me realize that..."</a></li>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"Looking back, I realize..."</li>
+                            <li>"What I learned from that was..."</li>
+                            <li>"If I could do it again, I would..."</li>
+                            <li>"The biggest takeaway was..."</li>
+                            <li>"It made me realize that..."</li>
                         </ul>
                     </div>
-                </div>
-                
-                <!-- Day 20 -->
-                <div class="day-card">
+                    <div class="day-time"><i class="ph-duotone ph-clock"></i> 60 min</div>
+                </a>
+                <a href="week-03-day-20.html" class="day-card">
                     <div class="day-label">DAY 20</div>
-                    <div class="day-icon">
-                        <i class="ph-duotone ph-sparkle"></i>
-                    </div>
+                    <div class="day-icon"><i class="ph-duotone ph-sparkle"></i></div>
                     <h3 class="day-title">Stories Worth Telling</h3>
                     <p class="day-subtitle">Polished storytelling, stories worth sharing</p>
-                    <div class="key-patterns">
-                        <div class="key-patterns-title">Key patterns:</div>
-                        <ul class="pattern-list">
-                            <li><a href="#">"Let me tell you about..."</a></li>
-                            <li><a href="#">"The reason I bring this up is..."</a></li>
-                            <li><a href="#">"What I love about... is that..."</a></li>
-                            <li><a href="#">"The thing is..."</a></li>
-                            <li><a href="#">"If there's one thing I want you to take away..."</a></li>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"Let me tell you about..."</li>
+                            <li>"The reason I bring this up is..."</li>
+                            <li>"What I love about... is that..."</li>
+                            <li>"The thing is..."</li>
+                            <li>"If there's one thing I want you to take away..."</li>
                         </ul>
                     </div>
-                </div>
-                
-                <!-- Day 21 -->
-                <div class="day-card">
+                    <div class="day-time"><i class="ph-duotone ph-clock"></i> 60 min</div>
+                </a>
+                <a href="week-03-day-21.html" class="day-card">
                     <div class="day-label">DAY 21</div>
-                    <div class="day-icon">
-                        <i class="ph-duotone ph-trophy"></i>
-                    </div>
+                    <div class="day-icon"><i class="ph-duotone ph-trophy"></i></div>
                     <h3 class="day-title">Week 3 Review</h3>
                     <p class="day-subtitle">Review 30 patterns, integrated practice, celebration</p>
-                    <div class="key-patterns">
-                        <div class="key-patterns-title">Focus:</div>
-                        <ul class="pattern-list">
-                            <li><a href="#">Review all 30 storytelling patterns</a></li>
-                            <li><a href="#">Integrated storytelling practice</a></li>
-                            <li><a href="#">Self-assessment & reflection</a></li>
-                            <li><a href="#">Celebrate Week 3 milestone</a></li>
+                    <div class="day-focus">
+                        <div class="focus-title">Focus:</div>
+                        <ul class="focus-list">
+                            <li>Review all 30 storytelling patterns</li>
+                            <li>Integrated storytelling practice</li>
+                            <li>Self-assessment & reflection</li>
+                            <li>Celebrate Week 3 milestone</li>
                         </ul>
                     </div>
-                </div>
-                
+                    <div class="day-time"><i class="ph-duotone ph-clock"></i> 60 min</div>
+                </a>
             </div>
         </section>
         
-        <!-- Storytelling in Action -->
-        <section class="action-section">
-            <h2 class="section-title">
-                <i class="ph-duotone ph-masks-theater"></i>
-                Storytelling in Action
-            </h2>
-            <p class="section-desc">Xem cách storytelling patterns được dùng trong conversation thực tế. Không phải presentation - mà là conversation.</p>
-            
-            <div class="example-card">
-                <h3>Day 15: Travel Stories</h3>
-                <div class="example-text">
-                    "<strong>You'll never believe</strong> what happened when we went to Japan. <strong>So there I was</strong>, lost in a small town with no phone signal. <strong>Funny story</strong> — we ended up having dinner with a local family who didn't speak any English, but we communicated through gestures and had the best time. <strong>Long story short</strong>, we missed our train but ended up having the most memorable experience of the trip. <strong>The whole time</strong>, I was thinking this was a disaster, but it turned out to be the highlight."
-                </div>
+        <!-- Milestone 3 -->
+        <div class="milestone-card">
+            <div class="milestone-icon"><i class="ph-duotone ph-trophy"></i></div>
+            <h3 class="milestone-title">Milestone 3: Storytelling Mastery</h3>
+            <p class="milestone-subtitle">Sau tuần 3, bạn sẽ có thể kể chuyện tự nhiên, engaging, và khiến người khác thích nghe bạn nói.</p>
+            <div class="milestone-skills">
+                <div class="milestone-skill"><i class="ph-duotone ph-microphone"></i><span>Mở đầu câu chuyện với hook hấp dẫn</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-chats"></i><span>Tạo suspense và kéo người nghe vào câu chuyện</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-lightning"></i><span>Kể về plot twists và unexpected moments</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-users"></i><span>Kể về people I met với character details</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-bowl-food"></i><span>Kể về food & culture với sensory details</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-lightbulb"></i><span>Share lessons learned với reflective insights</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-star"></i><span>Kết thúc câu chuyện với memorable takeaway</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-arrows-merge"></i><span>Transition giữa các parts tự nhiên</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-chats-circle"></i><span>Dùng patterns trong real conversations</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-house-line"></i><span>Kể chuyện trong Life và Business contexts</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-users-three"></i><span>Customize stories cho different audiences</span></div>
+                <div class="milestone-skill"><i class="ph-duotone ph-check-circle"></i><span>Khiến người khác thích nghe tôi nói</span></div>
             </div>
-            
-            <div class="example-card">
-                <h3>Day 16: Unexpected Moments</h3>
-                <div class="example-text">
-                    "<strong>At first, I thought</strong> the hiking trip was going to be exhausting, but <strong>it turned out</strong> to be the most refreshing experience. <strong>Looking back, I realize</strong> that pushing myself out of my comfort zone was exactly what I needed. <strong>The funny thing was</strong> that the person I was complaining about being slow ended up being the one who helped me when I struggled. <strong>I wasn't expecting</strong> to learn so much about myself, but that trip changed my perspective on challenges."
-                </div>
-            </div>
-            
-            <div class="example-card">
-                <h3>Day 17: People I Met</h3>
-                <div class="example-text">
-                    "<strong>I met this</strong> elderly woman at the hostel <strong>who</strong> had been traveling solo for 20 years. <strong>What struck me about her was</strong> how she could connect with anyone, regardless of language barriers. <strong>She told me</strong> about her journey through South America, and <strong>it made me realize</strong> that fear is the only real barrier to travel. <strong>We ended up</strong> having dinner together and talking for hours about our adventures. <strong>I'll never forget her because</strong> she showed me that it's never too late to start exploring the world."
-                </div>
-            </div>
-        </section>
+        </div>
         
-        <!-- What You'll Master -->
-        <section class="master-section">
-            <h2 class="section-title">
-                <i class="ph-duotone ph-chart-bar"></i>
-                What You'll Master
-            </h2>
-            <p class="section-desc">Cuối tuần 3, bạn sẽ có thể kể chuyện tự nhiên, engaging, và khiến người khác thích nghe bạn nói.</p>
-            
-            <div class="skills-category">
-                <h3>Storytelling Skills</h3>
-                <ul class="skills-list">
-                    <li><input type="checkbox" id="s1"><label for="s1">Tôi có thể mở đầu câu chuyện với hook hấp dẫn</label></li>
-                    <li><input type="checkbox" id="s2"><label for="s2">Tôi có thể tạo suspense và kéo người nghe vào câu chuyện</label></li>
-                    <li><input type="checkbox" id="s3"><label for="s3">Tôi có thể kể về plot twists và unexpected moments</label></li>
-                    <li><input type="checkbox" id="s4"><label for="s4">Tôi có thể kể về people I met với character details</label></li>
-                    <li><input type="checkbox" id="s5"><label for="s5">Tôi có thể kể về food & culture với sensory details</label></li>
-                    <li><input type="checkbox" id="s6"><label for="s6">Tôi có thể share lessons learned với reflective insights</label></li>
-                    <li><input type="checkbox" id="s7"><label for="s7">Tôi có thể kết thúc câu chuyện với memorable takeaway</label></li>
-                </ul>
-            </div>
-            
-            <div class="skills-category">
-                <h3>Conversation Skills</h3>
-                <ul class="skills-list">
-                    <li><input type="checkbox" id="c1"><label for="c1">Tôi có thể transition giữa các parts của câu chuyện tự nhiên</label></li>
-                    <li><input type="checkbox" id="c2"><label for="c2">Tôi có thể dùng storytelling patterns trong real conversations</label></li>
-                    <li><input type="checkbox" id="c3"><label for="c3">Tôi có thể kể chuyện trong cả Life và Business contexts</label></li>
-                    <li><input type="checkbox" id="c4"><label for="c4">Tôi có thể customize stories cho different audiences</label></li>
-                    <li><input type="checkbox" id="c5"><label for="c5">Tôi có thể khiến người khác thích nghe tôi nói</label></li>
-                </ul>
-            </div>
-        </section>
-        
-        <!-- Quiz Section -->
+        <!-- Quiz -->
         <section class="quiz-section">
-            <h2 class="section-title">
-                <i class="ph-duotone ph-pencil-simple"></i>
-                Week 3 Preview Quiz
-            </h2>
-            <p class="section-desc">Kiểm tra hiểu biết về storytelling vs description. Chọn đáp án ĐÚNG NHẤT.</p>
-            
+            <div class="section-header">
+                <h2 class="section-title"><i class="ph-duotone ph-pencil-simple"></i> Week 3 Preview Quiz</h2>
+                <p class="section-desc">Kiểm tra hiểu biết về storytelling vs description. Chọn đáp án ĐÚNG NHẤT.</p>
+            </div>
             <div class="quiz-question">
                 <h4>1. Storytelling khác description ở điểm nào?</h4>
                 <div class="quiz-options">
@@ -1031,7 +804,6 @@
                     <div class="quiz-option">D. Không có sự khác biệt</div>
                 </div>
             </div>
-            
             <div class="quiz-question">
                 <h4>2. Pattern nào là storytelling pattern?</h4>
                 <div class="quiz-options">
@@ -1041,7 +813,6 @@
                     <div class="quiz-option">D. "The best thing about... was..."</div>
                 </div>
             </div>
-            
             <div class="quiz-question">
                 <h4>3. Triết lý của Week 3 là gì?</h4>
                 <div class="quiz-options">
@@ -1051,7 +822,6 @@
                     <div class="quiz-option">D. Travel is about sharing facts</div>
                 </div>
             </div>
-            
             <div class="quiz-question">
                 <h4>4. Câu nào là storytelling C1 style?</h4>
                 <div class="quiz-options">
@@ -1061,7 +831,6 @@
                     <div class="quiz-option">D. "The best thing about Tokyo is that you can get lost and meet people."</div>
                 </div>
             </div>
-            
             <div class="quiz-question">
                 <h4>5. Week 3 tập trung vào kỹ năng gì?</h4>
                 <div class="quiz-options">
@@ -1071,11 +840,7 @@
                     <div class="quiz-option">D. Presentation skills</div>
                 </div>
             </div>
-            
-            <button class="check-btn">
-                <i class="ph-duotone ph-check"></i>
-                Check Answers
-            </button>
+            <button class="check-btn"><i class="ph-duotone ph-check"></i> Check Answers</button>
         </section>
         
         <!-- Navigation -->
@@ -1086,7 +851,7 @@
             </a>
             <a href="week-04.html" class="nav-card">
                 <div class="nav-label">Next Week →</div>
-                <div class="nav-title">Week 4: Coming Soon</div>
+                <div class="nav-title">Week 4: Relationship Builder</div>
             </a>
         </div>
         
@@ -1097,7 +862,6 @@
                 Start Week 3: Day 15 - Travel Stories
             </a>
         </div>
-        
     </div>
     
     <!-- Footer -->
@@ -1108,6 +872,5 @@
             <div class="footer-tagline">Week 3 · Storytelling & Experiences</div>
         </div>
     </footer>
-    
 </body>
 </html>
