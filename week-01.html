@@ -9,7 +9,10 @@
     
     <style>
         :root {
-            /* Week 1 Theme - Cool Fresh Palette */
+            /* ============================================
+               PHASE 1 THEME - Cool Fresh Palette
+               Week 1-4: Cyan/Blue/Indigo/Teal (Lạnh)
+               ============================================ */
             --cyan: #06B6D4;
             --cyan-bright: #0891B2;
             --cyan-soft: #CFFAFE;
@@ -30,7 +33,7 @@
             --teal-soft: #CCFBF1;
             --teal-deep: #0F766E;
             
-            /* Text colors */
+            /* Text colors - Đậm và dễ đọc */
             --text-primary: #1E293B;
             --text-secondary: #334155;
             --text-muted: #64748B;
@@ -303,7 +306,7 @@
         }
         
         /* ========================================= */
-        /* ENHANCED DAY CARDS DESIGN                 */
+        /* ENHANCED DAY CARDS DESIGN (LINKABLE)      */
         /* ========================================= */
         .days-grid {
             display: grid;
@@ -312,6 +315,7 @@
             margin: 32px 0;
         }
         
+        /* Day Card - giờ là thẻ <a> nên cần text-decoration: none */
         .day-card {
             position: relative;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
@@ -322,6 +326,9 @@
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             overflow: hidden;
+            text-decoration: none; /* QUAN TRỌNG: bỏ gạch chân */
+            color: inherit;         /* QUAN TRỌNG: giữ màu text */
+            display: block;         /* QUAN TRỌNG: chiếm full width */
         }
         
         /* Top gradient border */
@@ -748,8 +755,8 @@
             
             <div class="days-grid">
                 
-                <!-- Day 1 -->
-                <div class="day-card">
+                <!-- Day 1 - ĐÃ SỬA THÀNH <a> -->
+                <a href="week-01-day-1.html" class="day-card">
                     <div class="day-label">DAY 01</div>
                     <div class="day-icon">
                         <i class="ph-duotone ph-house"></i>
@@ -769,10 +776,10 @@
                         <i class="ph-duotone ph-clock"></i>
                         60 min
                     </div>
-                </div>
+                </a>
                 
-                <!-- Day 2 -->
-                <div class="day-card">
+                <!-- Day 2 - ĐÃ SỬA THÀNH <a> -->
+                <a href="week-01-day-2.html" class="day-card">
                     <div class="day-label">DAY 02</div>
                     <div class="day-icon">
                         <i class="ph-duotone ph-briefcase"></i>
@@ -792,10 +799,10 @@
                         <i class="ph-duotone ph-clock"></i>
                         60 min
                     </div>
-                </div>
+                </a>
                 
-                <!-- Day 3 -->
-                <div class="day-card">
+                <!-- Day 3 - ĐÃ SỬA THÀNH <a> -->
+                <a href="week-01-day-3.html" class="day-card">
                     <div class="day-label">DAY 03</div>
                     <div class="day-icon">
                         <i class="ph-duotone ph-target"></i>
@@ -815,10 +822,10 @@
                         <i class="ph-duotone ph-clock"></i>
                         60 min
                     </div>
-                </div>
+                </a>
                 
-                <!-- Day 4 -->
-                <div class="day-card">
+                <!-- Day 4 - ĐÃ SỬA THÀNH <a> -->
+                <a href="week-01-day-4.html" class="day-card">
                     <div class="day-label">DAY 04</div>
                     <div class="day-icon">
                         <i class="ph-duotone ph-headphones"></i>
@@ -838,10 +845,10 @@
                         <i class="ph-duotone ph-clock"></i>
                         60 min
                     </div>
-                </div>
+                </a>
                 
-                <!-- Day 5 -->
-                <div class="day-card">
+                <!-- Day 5 - ĐÃ SỬA THÀNH <a> -->
+                <a href="week-01-day-5.html" class="day-card">
                     <div class="day-label">DAY 05</div>
                     <div class="day-icon">
                         <i class="ph-duotone ph-microphone"></i>
@@ -861,10 +868,10 @@
                         <i class="ph-duotone ph-clock"></i>
                         60 min
                     </div>
-                </div>
+                </a>
                 
-                <!-- Day 6 -->
-                <div class="day-card">
+                <!-- Day 6 - ĐÃ SỬA THÀNH <a> -->
+                <a href="week-01-day-6.html" class="day-card">
                     <div class="day-label">DAY 06</div>
                     <div class="day-icon">
                         <i class="ph-duotone ph-pencil-simple"></i>
@@ -884,10 +891,10 @@
                         <i class="ph-duotone ph-clock"></i>
                         60 min
                     </div>
-                </div>
+                </a>
                 
-                <!-- Day 7 -->
-                <div class="day-card">
+                <!-- Day 7 - ĐÃ SỬA THÀNH <a> -->
+                <a href="week-01-day-7.html" class="day-card">
                     <div class="day-label">DAY 07</div>
                     <div class="day-icon">
                         <i class="ph-duotone ph-trophy"></i>
@@ -907,7 +914,7 @@
                         <i class="ph-duotone ph-clock"></i>
                         60 min
                     </div>
-                </div>
+                </a>
                 
             </div>
         </section>
