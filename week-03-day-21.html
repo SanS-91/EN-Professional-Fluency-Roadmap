@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Day 21: Week 3 Review & Celebration | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            --gold: #F59E0B;
+            --gold-bright: #D97706;
+            --gold-soft: #FEF3C7;
+            --gold-deep: #92400E;
+            --amber: #FCD34D;
+            --amber-light: #FDE68A;
+            
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F8FAFC; /* Background xám nhạt cho toàn trang */
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Top Nav */
+        .top-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--gold-bright); }
+        
+        .day-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        /* Day Tabs */
+        .day-tabs-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 57px;
+            z-index: 99;
+            padding: 12px 0;
+        }
+        
+        .day-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 0 4px;
+            scrollbar-width: none;
+        }
+        
+        .day-tabs::-webkit-scrollbar { display: none; }
+        
+        .day-tab {
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .day-tab:hover {
+            background: rgba(255, 255, 255, 1);
+            color: var(--gold-bright);
+        }
+        
+        .day-tab.active {
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+            color: white;
+            border: none;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        
+        /* Header - CHỈ GRADIENT Ở ĐÂY */
+        .day-header {
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .breadcrumb {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-icon-large {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .day-icon-large i {
+            --ph-color: var(--gold-bright);
+        }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem; /* GIẢM TỪ 3.5rem XUỐNG 2rem */
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .meta-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .meta-tag i { --ph-color: var(--gold-bright); }
+        
+        /* Content Area - BACKGROUND TRẮNG/XÁM NHẠT */
+        .content-area {
+            background: #F8FAFC;
+            padding: 40px 0;
+        }
+        
+        /* Sections */
+        .section { margin: 40px 0; }
+        
+        .section-header {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i { --ph-color: var(--gold-bright); }
+        
+        .section-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.7;
+        }
+        
+        /* Card base */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        /* Philosophy */
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 32px 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(252, 211, 77, 0.08));
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 3px solid var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--gold-bright); }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .comparison-box {
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .comparison-box.negative {
+            background: rgba(245, 101, 101, 0.08);
+            border-left: 3px solid #F56565;
+        }
+        
+        .comparison-box.positive {
+            background: rgba(72, 187, 120, 0.08);
+            border-left: 3px solid #48BB78;
+        }
+        
+        .comparison-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .comparison-box.negative .comparison-title { color: #C53030; }
+        .comparison-box.positive .comparison-title { color: #276749; }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .comparison-list {
+            list-style: none;
+        }
+        
+        .comparison-list li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .comparison-box.negative .comparison-list li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: 600;
+        }
+        
+        .comparison-box.positive .comparison-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #38A169;
+            font-weight: 600;
+        }
+        
+        /* Today's Plan */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .plan-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .plan-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .plan-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-time {
+            font-size: 12px;
+            color: var(--gold-bright);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .plan-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        /* Pattern Cards */
+        .pattern-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--gold);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .pattern-header {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Fraunces', serif;
+            font-size: 18px;
+            box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
+        }
+        
+        .pattern-content { flex: 1; }
+        
+        .pattern-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .pattern-ipa {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: monospace;
+            margin-bottom: 8px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .pattern-rating {
+            font-size: 12px;
+            color: var(--gold-bright);
+            font-weight: 600;
+        }
+        
+        .pattern-context {
+            font-size: 12px;
+            color: var(--text-muted);
+            background: rgba(254, 243, 199, 0.5);
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        
+        .pattern-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-why {
+            background: rgba(254, 243, 199, 0.4);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .pattern-why strong {
+            color: var(--gold-deep);
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        
+        .pattern-why p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .pattern-examples {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-examples h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .example {
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .example-tag {
+            flex-shrink: 0;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            background: rgba(254, 243, 199, 0.8);
+            color: var(--gold-deep);
+        }
+        
+        .example-tag.business {
+            background: rgba(219, 234, 254, 0.8);
+            color: #1E40AF;
+        }
+        
+        .pattern-usage {
+            background: rgba(254, 243, 199, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .pattern-usage strong {
+            color: var(--gold-deep);
+        }
+        
+        /* Story Cards */
+        .story-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--gold);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .story-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .story-text {
+            background: rgba(254, 243, 199, 0.2);
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .story-analysis h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .story-analysis ul {
+            list-style: none;
+        }
+        
+        .story-analysis li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .story-analysis li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold-bright);
+            font-weight: 600;
+        }
+        
+        /* Pronunciation Tables */
+        .pronunciation-table {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .pronunciation-table h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .pronunciation-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .pronunciation-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .intonation-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .intonation-item .phrase {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        /* Scenario Cards */
+        .scenario-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 16px;
+            border-top: 3px solid var(--gold);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .scenario-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .scenario-type {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold-deep);
+            background: rgba(254, 243, 199, 0.7);
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+        
+        .scenario-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        .scenario-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .scenario-context {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        
+        .scenario-requirements {
+            background: rgba(254, 243, 199, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .scenario-requirements h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold-deep);
+            margin-bottom: 8px;
+        }
+        
+        .scenario-requirements ul {
+            list-style: none;
+        }
+        
+        .scenario-requirements li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .scenario-requirements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold-bright);
+            font-weight: 600;
+        }
+        
+        .sample-flow-btn {
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sample-flow-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        
+        /* Task Cards */
+        .task-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 16px;
+            position: relative;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .task-card.easy { border-left: 3px solid #10B981; }
+        .task-card.standard { border-left: 3px solid var(--gold); }
+        .task-card.challenge { border-left: 3px solid #EF4444; }
+        
+        .task-level {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+        .task-card.standard .task-level { background: var(--gold-soft); color: var(--gold-deep); }
+        .task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+        
+        .task-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .task-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .task-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        
+        .task-requirements {
+            background: rgba(254, 243, 199, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .task-requirements h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold-deep);
+            margin-bottom: 8px;
+        }
+        
+        .task-requirements ul {
+            list-style: none;
+        }
+        
+        .task-requirements li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .task-requirements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold-bright);
+            font-weight: 600;
+        }
+        
+        .task-deliverable {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            background: rgba(254, 243, 199, 0.3);
+            border-radius: var(--radius-sm);
+        }
+        
+        /* Flashcard */
+        .flashcard-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .flashcard {
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 230, 138, 0.5));
+            border-radius: var(--radius-md);
+            padding: 32px;
+            margin-bottom: 16px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .flashcard:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+        }
+        
+        .flashcard-front p {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+        
+        .flashcard-front button {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .flashcard-back {
+            display: none;
+        }
+        
+        .flashcard-back.active {
+            display: block;
+        }
+        
+        .flashcard-back p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        
+        .flashcard-tip {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .flashcard-tip strong {
+            color: var(--gold-deep);
+        }
+        
+        .flashcard-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .flashcard-nav button {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .flashcard-nav button:hover {
+            background: var(--gold);
+            color: white;
+            border-color: var(--gold);
+        }
+        
+        .flashcard-nav span {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        /* Quiz */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 32px 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .quiz-question {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(254, 243, 199, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--gold);
+            background: rgba(254, 243, 199, 0.2);
+        }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+        
+        /* Navigation */
+        .day-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 40px 0;
+        }
+        
+        .nav-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        /* Complete Button */
+        .complete-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(245, 158, 11, 0.4);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(245, 158, 11, 0.5);
+        }
+        
+        .complete-btn i { font-size: 1.2rem; }
+        
+        .complete-message {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 32px 0 24px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .day-title { font-size: 1.8rem; }
+            .day-tabs-container { top: 52px; }
+            .day-navigation { grid-template-columns: 1fr; }
+            .pattern-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-03.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Week 3 Hub</span>
+            </a>
+            <div class="day-indicator">Day 21 / 21</div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <div class="day-tabs-container">
+        <div class="container">
+            <div class="day-tabs">
+                <a href="week-03.html" class="day-tab">Overview</a>
+                <a href="week-03-day-15.html" class="day-tab">Day 15</a>
+                <a href="week-03-day-16.html" class="day-tab">Day 16</a>
+                <a href="week-03-day-17.html" class="day-tab">Day 17</a>
+                <a href="week-03-day-18.html" class="day-tab">Day 18</a>
+                <a href="week-03-day-19.html" class="day-tab">Day 19</a>
+                <a href="week-03-day-20.html" class="day-tab">Day 20</a>
+                <a href="week-03-day-21.html" class="day-tab active">Day 21</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header - CHỈ GRADIENT Ở ĐÂY -->
+    <header class="day-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="week-03.html">Week 3</a> › Day 21
+            </div>
+            <div class="day-icon-large">
+                <i class="ph-duotone ph-trophy"></i>
+            </div>
+            <h1 class="day-title">Week 3 Review & Celebration</h1>
+            <p class="day-subtitle">You've learned 30+ storytelling patterns. Today isn't about new patterns — it's about understanding <strong>why they work</strong>, and making them truly yours. You'll learn the anatomy of great stories, the principles behind memorable storytelling, and how to evaluate your own stories like a listener.</p>
+            <div class="day-meta">
+                <div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Week 3 Review</div>
+                <div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+                <div class="meta-tag"><i class="ph-duotone ph-books"></i> 30 patterns review</div>
+                <div class="meta-tag"><i class="ph-duotone ph-confetti"></i> Milestone 3</div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Content Area - BACKGROUND TRẮNG/XÁM NHẠT -->
+    <div class="content-area">
+        <div class="container">
+            
+            <!-- Today's Philosophy -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        Today's Philosophy
+                    </h2>
+                </div>
+                
+                <div class="philosophy-section">
+                    <div class="philosophy-box">
+                        <div class="philosophy-title">
+                            <i class="ph-duotone ph-trophy"></i>
+                            From Patterns to Mastery
+                        </div>
+                        <p>
+                            Most people finish a week of learning and move on. But C1 learners <strong>pause, reflect, and integrate</strong>. Today isn't about new patterns — it's about understanding <strong>why the 30 patterns you learned actually work</strong>. The difference? <strong>Memorization vs. Mastery. Information vs. Wisdom.</strong>
+                        </p>
+                    </div>
+                    
+                    <div class="comparison-box negative">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            Why most reviews are boring
+                        </div>
+                        <div class="comparison-text">
+                            "Let me list all 30 patterns I learned this week..."
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Chỉ liệt kê patterns (không có insight)</li>
+                            <li>Không hiểu tại sao patterns hoạt động</li>
+                            <li>Không có framework để integrate</li>
+                            <li>Không có self-assessment thực sự</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-box positive">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            What C1 learners do differently
+                        </div>
+                        <div class="comparison-text">
+                            "After a week of storytelling, I now understand that great stories aren't about what happened — they're about what changed. The hook creates curiosity, the turning point creates drama, the character creates connection, the details create emotion, the reflection creates meaning, and the ending creates impact."
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Understand the <strong>anatomy</strong> of a great story</li>
+                            <li>Know the <strong>principles</strong> behind the patterns</li>
+                            <li>Can <strong>choose</strong> the right pattern for each goal</li>
+                            <li>Can <strong>self-assess</strong> using a storytelling checklist</li>
+                            <li>Can <strong>record and evaluate</strong> like a listener</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Today's Plan -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-calendar-check"></i>
+                        Today's Plan (60 min)
+                    </h2>
+                </div>
+                
+                <div class="plan-grid">
+                    <div class="plan-card">
+                        <div class="plan-icon"></div>
+                        <div class="plan-title">Anatomy & Principles</div>
+                        <div class="plan-time">20 min</div>
+                        <div class="plan-desc">Understand why stories work</div>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-icon">🎯</div>
+                        <div class="plan-title">Pattern Choice</div>
+                        <div class="plan-time">10 min</div>
+                        <div class="plan-desc">Learn to choose patterns</div>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-icon">️</div>
+                        <div class="plan-title">Recording Challenge</div>
+                        <div class="plan-time">20 min</div>
+                        <div class="plan-desc">Record & self-evaluate</div>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-icon">🏆</div>
+                        <div class="plan-title">Milestone</div>
+                        <div class="plan-time">10 min</div>
+                        <div class="plan-desc">Celebrate Week 3 complete</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 5 Master Principles -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        5 Master Principles of Storytelling
+                    </h2>
+                    <p class="section-desc">5 nguyên tắc cốt lõi đằng sau 30 patterns bạn đã học. Đây là tư duy - 5 năm sau bạn vẫn sẽ dùng chúng. Click 🔊 để nghe phát âm.</p>
+                </div>
+                
+                <!-- Principle 1 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">1</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">Start with curiosity, not chronology</div>
+                            <div class="pattern-ipa">/stɑːrt wɪð ˌkjʊəriˈɒsɪti, nɒt krɒˈnlədʒi/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Universal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Đừng bắt đầu bằng "Last summer I went to..." — hãy bắt đầu bằng điều khiến người nghe phải hỏi "Rồi sao nữa?". Chronology là enemy của engagement.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>Curiosity = dopamine. Khi người nghe tò mò, não họ release dopamine, tạo cảm giác muốn nghe tiếp. "You'll never believe..." (Day 15), "So there I was..." (Day 15), "At first, I thought..." (Day 16) — tất cả đều là curiosity openers, không phải chronological ones.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span><strong>"You'll never believe"</strong> what happened when we got lost in Tokyo.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span><strong>"So there I was"</strong>, standing in the middle of a rice field with no idea where I was.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span><strong>"At first, I thought"</strong> the client was going to reject our proposal, <strong>but it turned out</strong> they loved it.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span><strong>"Let me tell you about"</strong> the time we almost lost our biggest client — and what saved us.</span>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong> Usage Notes:</strong> Áp dụng từ Day 15 (Travel), Day 16 (Unexpected), Day 20 (Stories Worth Telling). Tránh "I went to... It was... I liked..."
+                    </div>
+                </div>
+                
+                <!-- Principle 2 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">2</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">Show moments, don't summarize</div>
+                            <div class="pattern-ipa">/ʃoʊ ˈmoʊmənts, doʊnt sʌməraɪz/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Universal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        "We had dinner" ≠ câu chuyện. "We sat on plastic stools, sharing one plate of phở, communicating through gestures" = câu chuyện. Moments tạo hình ảnh, summaries tạo buồn ngủ.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>Specific details = sensory experience. Khi bạn nói "the broth steams, the sound of noodles being pulled", người nghe có thể <em>thấy</em>, <em>ngửi</em>, <em>nghe</em> câu chuyện của bạn. Đây là sự khác biệt giữa Day 15 (Travel details), Day 17 (Character details), Day 18 (Sensory details).</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag"> Life</span>
+                            <span>We sat on <strong>plastic stools</strong>, sharing <strong>one plate of phở</strong>, communicating through <strong>gestures</strong>.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>The sun came up at <strong>3 AM</strong> and I <strong>couldn't breathe</strong>.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>My slides <strong>froze</strong>, the projector <strong>died</strong>, and I could see the client <strong>checking his phone</strong>.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>She had <strong>read every single case study</strong> on our website — <strong>all 47 of them</strong>.</span>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Áp dụng từ Day 15, 17, 18. Tránh "It was beautiful", "We had a good time" — quá generic.
+                    </div>
+                </div>
+                
+                <!-- Principle 3 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">3</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">People matter more than places</div>
+                            <div class="pattern-ipa">/ˈpiːpəl mætə mɔːr ən ˈpleɪsɪz/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Universal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Người nghe sẽ quên bạn đi đâu, nhưng nhớ bạn gặp ai. Nhân vật là trái tim của câu chuyện. Một character đáng nhớ làm story sống động mãi.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>Đây là bài học lớn nhất của Day 17 (People I Met). "I met this elderly woman who had been traveling solo for 20 years" — character detail này đáng nhớ hơn bất kỳ địa điểm nào. Patterns "I met this [person] who...", "What struck me about them was...", "I'll never forget [person] because..." — tất cả đều tập trung vào character depth.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span><strong>I met this elderly woman</strong> who had been traveling solo for 20 years.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span><strong>What struck me about her was</strong> how she could connect with anyone, regardless of language barriers.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span><strong>I met this client</strong> who had turned down 3 bigger offers to work with us.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span><strong>I'll never forget him because</strong> he taught me that the best clients are the ones who challenge you to be better.</span>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Áp dụng từ Day 17. Character phải có memorable detail, insight, và lasting impact.
+                    </div>
+                </div>
+                
+                <!-- Principle 4 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">4</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">Reflection gives stories meaning</div>
+                            <div class="pattern-ipa">/rɪˈflɛkʃən ɡɪvz stɔːriz ˈmiːnɪŋ/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Universal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Câu chuyện không có reflection chỉ là thông tin. "What I learned..." biến sự kiện thành bài học. Reflection là sự khác biệt giữa kể chuyện và storytelling.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>Đây là trái tim của Day 19 (Lessons Learned). Patterns "Looking back, the biggest lesson...", "Before... I thought... but now I realize...", "It taught me that..." — tất cả đều tạo reflective depth. Reflection cho người nghe lý do để care về câu chuyện của bạn.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span><strong>Looking back, the biggest lesson I learned was</strong> that the best experiences come from adaptability, not perfection.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag"> Life</span>
+                            <span><strong>Before that trip, I thought</strong> I needed to plan every detail, <strong>but now I realize</strong> that the best experiences come from spontaneity.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span><strong>It taught me that</strong> success isn't about being right — it's about being willing to be wrong.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span><strong>If I could go back, I would</strong> focus less on being right and more on building trust.</span>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Áp dụng từ Day 19. Reflection phải specific, không generic. Lesson phải actionable.
+                    </div>
+                </div>
+                
+                <!-- Principle 5 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">5</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">End with something worth remembering</div>
+                            <div class="pattern-ipa">/ɛnd wɪð ˈsʌmθɪŋ wɜːrθ rɪˈmɛmbərɪŋ/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Universal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Đừng kết thúc bằng facts. Kết thúc bằng insight, cảm xúc, hoặc điều bạn muốn người nghe mang theo. Ending là thứ người nghe nhớ cuối cùng.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>Đây là bài học của Day 20 (Stories Worth Telling). Patterns "If there's one thing I want you to take away...", "The reason I bring this up is...", "What I love about... is that..." — tất cả đều tạo memorable ending. Một câu chuyện hay có thể bị quên, nhưng một kết thúc đáng nhớ sẽ ở lại mãi.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span><strong>If there's one thing I want you to take away</strong> from this story, it's that the best travel moments happen when you stop trying to control everything.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>That 'wrong turn' was <strong>actually the right turn all along</strong>.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span><strong>The reason I bring this up is</strong> because sometimes the 'disasters' are actually our breakthroughs.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>That 'simple' bowl of phở took 12 hours to make. It taught me that <strong>the best food isn't just about ingredients — it's about the story behind it</strong>.</span>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Áp dụng từ Day 20. Ending phải memorable, universal, và có emotional impact.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Anatomy of a Great Story -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-tree-structure"></i>
+                        The Anatomy of a Great Story
+                    </h2>
+                    <p class="section-desc">Mỗi ngày trong tuần 3 là một mảnh ghép. Khi ghép lại, chúng tạo thành cấu trúc của một câu chuyện đáng nhớ.</p>
+                </div>
+                
+                <div class="story-card">
+                    <h3>🧬 The 6-Part Structure</h3>
+                    <div class="story-analysis">
+                        <ul>
+                            <li><strong>Day 15 · The Hook:</strong> Mở đầu bằng sự tò mò, không phải chronology. Kéo người nghe vào ngay từ câu đầu tiên.</li>
+                            <li><strong>Day 16 · The Turning Point:</strong> Mọi câu chuyện hay đều có khoảnh khắc "nhưng rồi..." — nơi mọi thứ thay đổi.</li>
+                            <li><strong>Day 17 · The Character:</strong> Con người quan trọng hơn địa điểm. Một nhân vật đáng nhớ làm câu chuyện sống động.</li>
+                            <li><strong>Day 18 · The Sensory Detail:</strong> Chi tiết cụ thể tạo cảm xúc. Người nghe phải <em>thấy</em>, <em>ngửi</em>, <em>cảm nhận</em> được câu chuyện.</li>
+                            <li><strong>Day 19 · The Reflection:</strong> Câu chuyện không chỉ kể chuyện gì xảy ra — mà còn tại sao nó quan trọng với bạn.</li>
+                            <li><strong>Day 20 · The Integration:</strong> Ghép tất cả lại thành một câu chuyện hoàn chỉnh, tự nhiên, đáng để kể lại.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Integrated Story Examples -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-book-open-text"></i>
+                        Integrated Story Examples
+                    </h2>
+                    <p class="section-desc">Xem cách 5 master principles được kết hợp trong 2 stories hoàn chỉnh. Click 🔊 để nghe từng story.</p>
+                </div>
+                
+                <div class="story-card">
+                    <h3>🗺️ Story 1: The Stranded Trip (Life)</h3>
+                    <div class="story-text">
+                        "<strong>You'll never believe</strong> what happened when our flight got canceled in Bangkok. <strong>So there I was</strong>, stranded at the airport at 11 PM with no hotel booking and zero Thai baht. <strong>At first, I thought</strong> we were completely screwed — but <strong>it turned out</strong> that the 'disaster' led us to this amazing neighborhood we would have never seen otherwise.
+                        <br><br>
+                        <strong>I met this</strong> elderly couple who ran a tiny guesthouse, and <strong>what struck me about them was</strong> how they treated every guest like family. <strong>We ended up</strong> having dinner with them that night — sitting on plastic stools, sharing one plate of pad thai, communicating through gestures. <strong>The funny thing was</strong> that they didn't speak a word of English, but we laughed more than I had in months.
+                        <br><br>
+                        <strong>Looking back, the biggest lesson I learned was</strong> that the best experiences come from adaptability, not perfection. <strong>Before that trip, I thought</strong> I needed to plan every detail — <strong>but now I realize</strong> that all my planning was useless when the flight got canceled. <strong>It taught me that</strong> sometimes the 'detours' are actually the destination.
+                        <br><br>
+                        <strong>If there's one thing I want you to take away</strong> from this story, it's that the best travel moments happen when you stop trying to control everything."
+                    </div>
+                    <div class="story-analysis">
+                        <h4>Analysis:</h4>
+                        <ul>
+                            <li><strong>Principle 1 (Curiosity):</strong> "You'll never believe..." + "So there I was..." - Hook tạo curiosity</li>
+                            <li><strong>Principle 2 (Show moments):</strong> "plastic stools, sharing one plate of pad thai, communicating through gestures" - Sensory details</li>
+                            <li><strong>Principle 3 (People):</strong> "elderly couple who ran a tiny guesthouse" + "what struck me about them" - Character depth</li>
+                            <li><strong>Turning point:</strong> "disaster" → "amazing neighborhood" - Plot twist</li>
+                            <li><strong>Principle 4 (Reflection):</strong> "Looking back, the biggest lesson..." + "Before... but now..." - Growth mindset</li>
+                            <li><strong>Principle 5 (Memorable ending):</strong> "If there's one thing I want you to take away..." - Impactful closing</li>
+                            <li><strong>Emotional arc:</strong> Panic → Surprise → Gratitude → Wisdom</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <h3>💼 Story 2: The Failed Presentation (Business)</h3>
+                    <div class="story-text">
+                        "<strong>Let me tell you about</strong> the time my presentation was a total disaster — and how it became our biggest breakthrough. <strong>So there I was</strong>, in front of our biggest client, when my slides froze, the projector died, and I could see the client checking his phone. <strong>I was mortified</strong>, thinking we'd just lost the deal of the year.
+                        <br><br>
+                        <strong>But it turned out that</strong> the 'technical difficulties' actually forced us to have a real conversation instead of just reading slides. <strong>The funny thing was</strong> that the client later told us it was the most engaging presentation he'd seen all year. <strong>I wasn't expecting</strong> the 'worst' presentation to lead to our best client relationship.
+                        <br><br>
+                        <strong>I met this</strong> client who had turned down 3 bigger offers to work with us, and <strong>what struck me about him was</strong> his attention to detail — he had read every single case study on our website. <strong>He told me</strong> about his previous experiences with other agencies, and <strong>it made me realize</strong> that clients don't want vendors, they want partners.
+                        <br><br>
+                        <strong>Looking back, the biggest lesson I learned was</strong> that success isn't about being right — it's about being willing to be wrong. <strong>Before that project, I thought</strong> I had to have all the answers — <strong>but now I realize</strong> that asking the right questions is more important. <strong>It taught me that</strong> the best ideas come from creating an environment where people feel safe to be wrong.
+                        <br><br>
+                        <strong>If there's one thing I want you to take away</strong>, it's that sometimes the things that go wrong end up being the things that make you stand out. That 'disaster' was actually our breakthrough."
+                    </div>
+                    <div class="story-analysis">
+                        <h4>Analysis:</h4>
+                        <ul>
+                            <li><strong>Principle 1 (Curiosity):</strong> "Let me tell about the time..." + "So there I was..." - Hook tạo curiosity</li>
+                            <li><strong>Principle 2 (Show moments):</strong> "slides froze, projector died, client checking his phone" - Vivid details</li>
+                            <li><strong>Principle 3 (People):</strong> Client character với memorable detail "read every single case study"</li>
+                            <li><strong>Turning point:</strong> "disaster" → "breakthrough" - Plot twist</li>
+                            <li><strong>Principle 4 (Reflection):</strong> "Before... but now..." - Clear before/after contrast</li>
+                            <li><strong>Principle 5 (Memorable ending):</strong> "That 'disaster' was actually our breakthrough" - Impactful closing</li>
+                            <li><strong>Emotional arc:</strong> Mortification → Surprise → Success → Wisdom</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Choosing the Right Pattern -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-selection"></i>
+                        Choosing the Right Pattern
+                    </h2>
+                    <p class="section-desc">Từ ghi nhớ patterns → đến <strong>lựa chọn</strong> patterns phù hợp với mục tiêu. Đây là bước C1.</p>
+                </div>
+                
+                <div class="pronunciation-table">
+                    <h3>🎯 Pattern Selection Guide</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nếu bạn muốn...</th>
+                                <th>✨ Dùng pattern này</th>
+                                <th>📅 Từ Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Thu hút ngay từ câu đầu</strong></td>
+                                <td>"You'll never believe what happened when..."</td>
+                                <td>Day 15</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kể tự nhiên, như đang chat</strong></td>
+                                <td>"So there I was, [situation]..."</td>
+                                <td>Day 15</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tạo bất ngờ, plot twist</strong></td>
+                                <td>"At first I thought... but it turned out..."</td>
+                                <td>Day 16</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nói về một người đáng nhớ</strong></td>
+                                <td>"I met this [person] who..."</td>
+                                <td>Day 17</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Chia sẻ bài học cá nhân</strong></td>
+                                <td>"Looking back, I realize..."</td>
+                                <td>Day 19</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kết thúc có impact</strong></td>
+                                <td>"If there's one thing I want you to take away..."</td>
+                                <td>Day 20</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tạo sự đồng cảm</strong></td>
+                                <td>"The funny thing was..."</td>
+                                <td>Day 16</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nhấn mạnh điều bất ngờ</strong></td>
+                                <td>"I wasn't expecting... but..."</td>
+                                <td>Day 16</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Show before/after growth</strong></td>
+                                <td>"Before... I thought... but now I realize..."</td>
+                                <td>Day 19</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Share practical application</strong></td>
+                                <td>"What I'd do differently is..."</td>
+                                <td>Day 19</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Good vs Memorable Story -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-star"></i>
+                        Good Story vs Memorable Story
+                    </h2>
+                    <p class="section-desc">Sự khác biệt tinh tế nhưng quan trọng giữa một câu chuyện "tốt" và một câu chuyện "đáng nhớ".</p>
+                </div>
+                
+                <div class="pronunciation-table">
+                    <h3>⭐ The Key Differences</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Good Story</th>
+                                <th>Memorable Story</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tells what happened</td>
+                                <td><strong>Shows what changed</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Gives information</td>
+                                <td><strong>Creates emotion</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Uses adjectives</td>
+                                <td><strong>Uses specific details</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Ends with facts</td>
+                                <td><strong>Ends with meaning</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Follows chronology</td>
+                                <td><strong>Starts with curiosity</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Talks about places</td>
+                                <td><strong>Talks about people</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Summarizes events</td>
+                                <td><strong>Shows moments</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Is informative</td>
+                                <td><strong>Is transformative</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Pronunciation Focus -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-microphone-stage"></i>
+                        Pronunciation Focus
+                    </h2>
+                    <p class="section-desc">Review các storytelling phrases quan trọng nhất từ tuần 3 và connected speech patterns.</p>
+                </div>
+                
+                <div class="pronunciation-table">
+                    <h3>🔤 Key Storytelling Phrases</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>IPA</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>You'll never believe</td>
+                                <td>/juːl ˈnɛvər bɪˈliːv/</td>
+                                <td>Linking: "You'll" = /jul/</td>
+                            </tr>
+                            <tr>
+                                <td>So there I was</td>
+                                <td>/soʊ ðɛr aɪ wʌz/</td>
+                                <td>"there" = /ðɛr/ (not /ðɛə/)</td>
+                            </tr>
+                            <tr>
+                                <td>At first, I thought</td>
+                                <td>/æt fɜːst aɪ θɔːt/</td>
+                                <td>"thought" = /θɔːt/ (not /tːt/)</td>
+                            </tr>
+                            <tr>
+                                <td>Looking back</td>
+                                <td>/lʊkɪŋ bæk/</td>
+                                <td>Stress on "look"</td>
+                            </tr>
+                            <tr>
+                                <td>The funny thing was</td>
+                                <td>/ðə ˈfʌni θɪ wʌz/</td>
+                                <td>"thing" = /θɪ/ (not /tɪŋ/)</td>
+                            </tr>
+                            <tr>
+                                <td>It turned out</td>
+                                <td>/ɪt tːnd aʊt/</td>
+                                <td>Linking: "turned out"</td>
+                            </tr>
+                            <tr>
+                                <td>I met this [person] who</td>
+                                <td>/aɪ mɛt ðɪs [pɜːrsən] huː/</td>
+                                <td>"met" = /mɛt/ (not /mt/)</td>
+                            </tr>
+                            <tr>
+                                <td>What struck me about</td>
+                                <td>/wʌt strʌk miː əˈbaʊt/</td>
+                                <td>"struck" = /strk/</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="section-header" style="margin-top: 24px;">
+                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+                </div>
+                
+                <div class="intonation-item">
+                    <span class="phrase">"You'll never believe what happened..."</span>
+                    ↗ - Rising (create suspense)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"So there I was..."</span>
+                    ↘ - Falling (set scene)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"At first, I thought... but it turned out..."</span>
+                    ↗↘↗↘ - Contrast pattern
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"Looking back, the biggest lesson..."</span>
+                    ↗↘ - Rise-fall (reflective, wise)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"If there's one thing I want you to take away..."</span>
+                    ↘ - Falling (memorable, impactful)
+                </div>
+            </section>
+            
+            <!-- Speaking: 4 Scenarios -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-microphone"></i>
+                        Speaking: 4 Scenarios
+                    </h2>
+                    <p class="section-desc">4 scenarios để practice storytelling tổng hợp. Mỗi scenario có sample flow để bạn tham khảo. Click vào nút để xem chi tiết.</p>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <span class="scenario-type">🏠 Life - 3-4 min</span>
+                        <span class="scenario-time">Scenario 1</span>
+                    </div>
+                    <h3>Your Best Travel Story</h3>
+                    <p class="scenario-context">Bạn đang nói chuyện với bạn về chuyến đi đáng nhớ nhất. Hãy kể một câu chuyện tổng hợp tất cả những gì bạn đã học trong tuần 3.</p>
+                    <div class="scenario-requirements">
+                        <h4>Yêu cầu C1:</h4>
+                        <ul>
+                            <li>Dùng ít nhất 5 storytelling patterns từ tuần 3</li>
+                            <li>Áp dụng 5 master principles</li>
+                            <li>Có clear story arc (hook → turning point → reflection → ending)</li>
+                            <li>Có sensory details và character depth</li>
+                            <li>Có memorable takeaway</li>
+                        </ul>
+                    </div>
+                    <button class="sample-flow-btn">️ Xem Sample Flow</button>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <span class="scenario-type">💼 Business - 3-4 min</span>
+                        <span class="scenario-time">Scenario 2</span>
+                    </div>
+                    <h3>A Business Lesson Story</h3>
+                    <p class="scenario-context">Bạn đang nói chuyện với colleague về một business lesson từ experience. Story phải professional nhưng vẫn engaging.</p>
+                    <div class="scenario-requirements">
+                        <h4>Yêu cầu C1:</h4>
+                        <ul>
+                            <li>Dùng ít nhất 5 storytelling patterns</li>
+                            <li>Professional tone nhưng vẫn personal</li>
+                            <li>Có clear before/after contrast</li>
+                            <li>Có business insight và practical application</li>
+                            <li>Có memorable ending</li>
+                        </ul>
+                    </div>
+                    <button class="sample-flow-btn">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <span class="scenario-type">🔄 Mixed - 3-4 min</span>
+                        <span class="scenario-time">Scenario 3</span>
+                    </div>
+                    <h3>A Memorable Person Story</h3>
+                    <p class="scenario-context">Bạn đang ở networking event, ai đó hỏi về một memorable person bạn đã gặp. Story phải balance professional và personal.</p>
+                    <div class="scenario-requirements">
+                        <h4>Yêu cầu C1:</h4>
+                        <ul>
+                            <li>Dùng ít nhất 5 people I met patterns (Day 17)</li>
+                            <li>Có character depth và memorable details</li>
+                            <li>Có insight learned from person</li>
+                            <li>Có lasting impact</li>
+                            <li>Connect person với broader insight</li>
+                        </ul>
+                    </div>
+                    <button class="sample-flow-btn">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <span class="scenario-type">🔥 Challenge - 5 min</span>
+                        <span class="scenario-time">Scenario 4</span>
+                    </div>
+                    <h3>Podcast Interview: Your Storytelling Journey</h3>
+                    <p class="scenario-context">Bạn đang trong podcast/video, được hỏi về hành trình storytelling của bạn trong tuần 3. Hãy chia sẻ câu chuyện về chính quá trình học.</p>
+                    <div class="scenario-requirements">
+                        <h4>Yêu cầu C1:</h4>
+                        <ul>
+                            <li>Dùng TẤT CẢ 5 master principles</li>
+                            <li>Story phải có clear arc và emotional depth</li>
+                            <li>Có reflective insight về quá trình học</li>
+                            <li>Có memorable takeaway cho listener</li>
+                            <li>Keep listener engaged for 5 minutes</li>
+                        </ul>
+                    </div>
+                    <button class="sample-flow-btn">🎙️ Xem Sample Flow</button>
+                </div>
+            </section>
+            
+            <!-- Reality Task -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-target"></i>
+                        Reality Task - Choose Your Level
+                    </h2>
+                    <p class="section-desc">Bài tập THỰC TẾ - apply tất cả storytelling skills vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+                </div>
+                
+                <div class="task-card easy">
+                    <div class="task-level">EASY</div>
+                    <h3>📝 Write Your Best Story</h3>
+                    <div class="task-time">⏱️ 20 minutes</div>
+                    <p class="task-desc">Viết 200-word story về một experience đáng nhớ, áp dụng 5 master principles.</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Mở đầu bằng curiosity hook (Principle 1)</li>
+                            <li>Có ít nhất 2 specific moments (Principle 2)</li>
+                            <li>Có character với memorable detail (Principle 3)</li>
+                            <li>Có reflection và lesson learned (Principle 4)</li>
+                            <li>Kết thúc bằng memorable takeaway (Principle 5)</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Text post (LinkedIn hoặc gửi cho bạn)
+                    </div>
+                </div>
+                
+                <div class="task-card standard">
+                    <div class="task-level">STANDARD</div>
+                    <h3>🎙️ Record & Evaluate Your Story</h3>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p class="task-desc">Record 3-minute story dùng 5 master principles, sau đó tự đánh giá như một listener.</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Dùng TẤT CẢ 5 master principles</li>
+                            <li>Có clear story arc</li>
+                            <li>Natural delivery (không đọc script)</li>
+                            <li>Sau khi record, nghe lại và tự hỏi 5 câu hỏi trong Storytelling Checklist</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Audio recording + self-evaluation notes
+                    </div>
+                </div>
+                
+                <div class="task-card challenge">
+                    <div class="task-level">CHALLENGE</div>
+                    <h3>🎥 5-Minute Masterpiece</h3>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p class="task-desc">Record 5-minute story dùng TẤT CẢ 5 master principles, với 3 iterations (Content → Delivery → Polish).</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Dùng TẤT CẢ 5 master principles</li>
+                            <li>Story có clear arc và emotional depth</li>
+                            <li>Engaging delivery</li>
+                            <li>Record 3 iterations (Content → Delivery → Polish)</li>
+                            <li>Self-evaluate như một listener</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Video file HOẶC LinkedIn post + self-evaluation
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Storytelling Checklist -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-check-square"></i>
+                        The Storytelling Checklist
+                    </h2>
+                    <p class="section-desc">Sau khi kể xong một câu chuyện, hãy tự hỏi 5 câu này. Đây là checklist bạn sẽ dùng nhiều lần.</p>
+                </div>
+                
+                <div class="story-card">
+                    <h3>💡 Listen as a LISTENER, not as the speaker</h3>
+                    <div class="story-analysis">
+                        <p style="margin-bottom: 14px; font-size: 13px; color: var(--text-secondary);">Sau khi record hoặc kể xong, nghe lại và tự hỏi:</p>
+                        <ul>
+                            <li><strong>Was I interested after the first 30 seconds?</strong> (Principle 1: Curiosity)</li>
+                            <li><strong>Did I picture the scene in my mind?</strong> (Principle 2: Show moments)</li>
+                            <li><strong>Did I care about the people in the story?</strong> (Principle 3: People matter)</li>
+                            <li><strong>Did I understand why this story mattered?</strong> (Principle 4: Reflection)</li>
+                            <li><strong>Would I tell this story to someone else?</strong> (Principle 5: Memorable ending)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Flashcard Review -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-cards"></i>
+                        Flashcard Review
+                    </h2>
+                    <p class="section-desc">6 flashcards với 5 master principles và tips. Mặt trước: principle. Mặt sau: example + tip.</p>
+                </div>
+                
+                <div class="flashcard-container">
+                    <div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+                        <div class="flashcard-front">
+                            <p>Start with curiosity, not chronology</p>
+                            <button>Tap to reveal example →</button>
+                        </div>
+                        <div class="flashcard-back">
+                            <p>"You'll never believe what happened when we got lost in Tokyo."</p>
+                            <div class="flashcard-tip">
+                                <strong>💡 Tip:</strong> Curiosity = dopamine. Khi người nghe tò mò, não họ release dopamine. Tránh "I went to... It was..."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard-nav">
+                        <button>← Prev</button>
+                        <span>1 / 6</span>
+                        <button>Next →</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Quiz -->
+            <section class="quiz-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-pencil-simple"></i>
+                        Quiz: Week 3 Review
+                    </h2>
+                    <p class="section-desc">7 câu hỏi để kiểm tra bạn đã thực sự hiểu storytelling chưa. Chọn đáp án ĐÚNG NHẤT.</p>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>1. Đâu là cấu trúc đúng của một câu chuyện đáng nhớ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Hook → Chronology → Facts → Ending</div>
+                        <div class="quiz-option">B. Hook → Turning Point → Character → Details → Reflection → Meaningful Ending</div>
+                        <div class="quiz-option">C. Introduction → Body → Conclusion</div>
+                        <div class="quiz-option">D. Problem → Solution → Result</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>2. Nguyên tắc nào KHÔNG phải là nguyên tắc của memorable storytelling?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Start with curiosity, not chronology</div>
+                        <div class="quiz-option">B. Show moments, don't summarize</div>
+                        <div class="quiz-option">C. Use as many adjectives as possible</div>
+                        <div class="quiz-option">D. End with something worth remembering</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>3. Sự khác biệt giữa Good Story và Memorable Story là gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Good story dài hơn</div>
+                        <div class="quiz-option">B. Good story dùng nhiều facts hơn</div>
+                        <div class="quiz-option">C. Memorable story shows what changed, creates emotion, ends with meaning</div>
+                        <div class="quiz-option">D. Memorable story dùng nhiều patterns hơn</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>4. Khi nghe lại recording của mình, bạn nên đánh giá như thế nào?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Như một speaker - tập trung vào pronunciation</div>
+                        <div class="quiz-option">B. Như một listener - tự hỏi "Was I interested? Did I care?"</div>
+                        <div class="quiz-option">C. Như một teacher - tìm lỗi ngữ pháp</div>
+                        <div class="quiz-option">D. Như a judge - cho điểm từ 1-10</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>5. Pattern nào phù hợp nhất khi bạn muốn kết thúc câu chuyện với impact?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "So there I was..."</div>
+                        <div class="quiz-option">B. "The funny thing was..."</div>
+                        <div class="quiz-option">C. "If there's one thing I want you to take away..."</div>
+                        <div class="quiz-option">D. "At first, I thought..."</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>6. Principle "People matter more than places" được dạy chủ yếu ở Day nào?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Day 15 - Travel Stories</div>
+                        <div class="quiz-option">B. Day 16 - Unexpected Moments</div>
+                        <div class="quiz-option">C. Day 17 - People I Met</div>
+                        <div class="quiz-option">D. Day 18 - Food & Culture</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>7. Câu nào là storytelling C1 style?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "I went to Japan. It was beautiful. The food was good."</div>
+                        <div class="quiz-option">B. "You'll never believe what happened. So there I was, lost in Tokyo. Funny story — we ended up having dinner with locals. Long story short, it was the best experience ever. Looking back, I realize the best moments happen when you stop controlling everything."</div>
+                        <div class="quiz-option">C. "Japan is a great country to visit. I'd recommend it."</div>
+                        <div class="quiz-option">D. "The most memorable experience was getting lost in Tokyo."</div>
+                    </div>
+                </div>
+                
+                <button class="check-btn">
+                    <i class="ph-duotone ph-check"></i>
+                    Check Answers
+                </button>
+            </section>
+            
+            <!-- Milestone 3 Celebration -->
+            <section class="section">
+                <div class="story-card" style="text-align: center; background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(252, 211, 77, 0.08)); border: 2px solid var(--gold);">
+                    <div style="font-size: 3rem; margin-bottom: 12px;">🏆</div>
+                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">Milestone 3: Storytelling Mastery</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 20px; line-height: 1.6;">
+                        Bạn đã hoàn thành Week 3. Từ "I am..." (Week 1) đến "You'll never believe..." (Week 3), bạn đã chuyển từ <strong>describing</strong> sang <strong>storytelling</strong>.
+                    </p>
+                    <div style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: white; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 14px; box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);">
+                        <i class="ph-duotone ph-check-circle" style="font-size: 1.1rem;"></i>
+                        <span>30+ patterns mastered · 5 principles internalized</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Navigation -->
+            <div class="day-navigation">
+                <a href="week-03-day-20.html" class="nav-card">
+                    <div class="nav-label">← Previous Day</div>
+                    <div class="nav-title">Day 20: Stories Worth Telling</div>
+                </a>
+                <a href="week-04.html" class="nav-card">
+                    <div class="nav-label">Next Week →</div>
+                    <div class="nav-title">Week 4: Relationship Builder</div>
+                </a>
+            </div>
+            
+            <!-- Complete Button -->
+            <div class="complete-container">
+                <button class="complete-btn" onclick="markComplete()">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Mark Day 21 Complete · Celebrate Week 3!</span>
+                </button>
+                <div class="complete-message">Let's tell stories that matter! 🏆</div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 3 · Day 21 · Storytelling Mastery · Phase 1 Complete</div>
+        </div>
+    </footer>
+    
+    <script>
+        function markComplete() {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (!completed.includes('day-21')) {
+                completed.push('day-21');
+                localStorage.setItem('completedDays', JSON.stringify(completed));
+            }
+            
+            const btn = document.querySelector('.complete-btn');
+            btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Week 3 Complete! Well done!</span>';
+            btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+            
+            const msg = document.querySelector('.complete-message');
+            msg.textContent = 'From "I am..." to "You\'ll never believe..." — you\'ve transformed! ';
+        }
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (completed.includes('day-21')) {
+                const btn = document.querySelector('.complete-btn');
+                btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 21 Completed</span>';
+                btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            }
+        });
+    </script>
+</body>
+</html>
