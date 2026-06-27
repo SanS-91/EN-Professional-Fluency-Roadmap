@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Day 20: Stories Worth Telling | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #9F7AEA;
+            --primary-dark: #6B46C1;
+            --primary-light: #B794D6;
+            --primary-soft: #F5F0FF;
+            --secondary: #F6AD55;
+            --secondary-dark: #DD6B20;
+            --secondary-soft: #FFFAF0;
+            --accent: #48BB78;
+            --accent-soft: #F0FFF4;
+            --warm: #F6AD55;
+            --warm-soft: #FFFAF0;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 50%, var(--accent-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(159,122,234,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(246,173,85,0.15) 0%, transparent 40%);
+        }
+        
+        .day-header::after {
+            content: '✨';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-subtitle strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #E9D8FD; }
+        .section-gold { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #FEEBC8; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #C6F6D5; }
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--biz-bg) 100%); border-color: #BEE3F8; }
+        .section-pink { background: linear-gradient(135deg, #FFFFFF 0%, #FFF5F7 100%); border-color: #FED7E3; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARD ========== */
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pattern-number {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pattern-phonetic {
+            color: var(--text-muted);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .freq-badge, .register-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .freq-badge {
+            background: var(--warm-soft);
+            color: #744210;
+        }
+        
+        .register-badge {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--primary-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--primary-dark);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong { color: var(--primary-dark); }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary);
+            position: relative;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        
+        .audio-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-left: 8px;
+        }
+        
+        .audio-btn:hover {
+            background: var(--primary-light);
+            transform: scale(1.1);
+        }
+        
+        .audio-btn.playing {
+            background: var(--secondary);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .usage-note {
+            background: var(--warm-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+            margin-top: 12px;
+            border-left: 3px solid var(--warm);
+        }
+        
+        .usage-note strong { color: #744210; }
+        
+        /* ========== STORY STRUCTURE ========== */
+        .story-structure {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .story-structure h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .story-part {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            border-left: 4px solid;
+        }
+        
+        .story-part.opening { border-left-color: var(--primary); }
+        .story-part.development { border-left-color: var(--secondary); }
+        .story-part.climax { border-left-color: var(--error); }
+        .story-part.resolution { border-left-color: var(--life); }
+        
+        .story-part-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .story-part-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .story-part-length {
+            font-size: 11px;
+            color: var(--text-muted);
+            background: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        
+        .story-part-purpose {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .story-part-patterns {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .story-part-patterns strong {
+            color: var(--primary-dark);
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            border-color: var(--primary);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--primary); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: var(--primary-dark); }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: var(--primary-dark); }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-requirements { color: var(--primary-dark); }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--primary); color: var(--primary-dark); }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--primary); color: white; }
+        
+        /* ========== EXERCISES ========== */
+        .exercise-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        
+        .exercise-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .exercise-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .exercise-time {
+            font-size: 11px;
+            color: var(--text-muted);
+            background: var(--bg);
+            padding: 4px 10px;
+            border-radius: 10px;
+        }
+        
+        .exercise-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .exercise-requirements {
+            background: var(--bg);
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .exercise-requirements strong {
+            color: var(--text-primary);
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 10px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-tip strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== DAILY TASK ========== */
+        .task-card {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .task-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        
+        .task-list {
+            list-style: none;
+        }
+        
+        .task-list li {
+            background: white;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .task-list li::before {
+            content: '☐';
+            font-size: 16px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+        
+        /* ========== SUCCESS CRITERIA ========== */
+        .success-criteria {
+            background: var(--life-bg);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+        }
+        
+        .success-criteria h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--life-dark);
+            margin-bottom: 12px;
+        }
+        
+        .success-list {
+            list-style: none;
+        }
+        
+        .success-list li {
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .success-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PRO TIPS ========== */
+        .pro-tips {
+            background: var(--warm-soft);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--warm);
+        }
+        
+        .pro-tips h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: #744210;
+            margin-bottom: 12px;
+        }
+        
+        .pro-tips-list {
+            list-style: none;
+        }
+        
+        .pro-tips-list li {
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #744210;
+            line-height: 1.5;
+        }
+        
+        .pro-tips-list li::before {
+            content: '💡';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(159,122,234,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            .day-header::after { font-size: 2.5rem; top: 20px; right: 20px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-03.html" class="nav-back">← Week 3 Hub</a>
+            <div class="nav-progress">
+                <span>Day 20 / 21</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 95%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-03.html" class="day-tab">Overview</a>
+                <a href="week-03-day-15.html" class="day-tab">Day 15</a>
+                <a href="week-03-day-16.html" class="day-tab">Day 16</a>
+                <a href="week-03-day-17.html" class="day-tab">Day 17</a>
+                <a href="week-03-day-18.html" class="day-tab">Day 18</a>
+                <a href="week-03-day-19.html" class="day-tab">Day 19</a>
+                <a href="week-03-day-20.html" class="day-tab active">Day 20</a>
+                <a href="week-03-day-21.html" class="day-tab">Day 21</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-03.html">Week 3</a>
+                <span>›</span>
+                <span>Day 20</span>
+            </div>
+            <h1 class="day-title">✨ Stories Worth Telling</h1>
+            <p class="day-subtitle">Today you'll combine <strong>all patterns from Day 15-19</strong> into complete, engaging stories with narrative arc, emotional depth, and memorable insights. This is where everything comes together.</p>
+            <div class="day-meta">
+                <span class="meta-tag">✨ Complete Storytelling</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 All patterns combined</span>
+                <span class="meta-tag">🎭 Narrative arc mastery</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>✨ From Patterns to Stories</h4>
+                <p>Days 15-19 taught you individual patterns. Today, you'll learn to <strong>weave them together</strong> into complete stories with opening, development, climax, and resolution. This is the difference between using patterns and <strong>telling stories worth telling</strong>.</p>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">5 Patterns</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Story completion patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎬</div>
+                    <div class="plan-block-title">Story Arc</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Complete structure</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎭</div>
+                    <div class="plan-block-title">Scenarios</div>
+                    <div class="plan-block-time">20 min</div>
+                    <div class="plan-block-desc">3 practice scenarios</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎯</div>
+                    <div class="plan-block-title">Exercises</div>
+                    <div class="plan-block-time">20 min</div>
+                    <div class="plan-block-desc">4 mastery exercises</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5 Story Completion Patterns -->
+        <section class="section section-gold">
+            <h2 class="section-title"><span class="section-icon">📚</span> 5 Story Completion Patterns</h2>
+            <p class="section-desc">These patterns help you complete stories with impact. Click 🔊 to hear examples.</p>
+            
+            <!-- Pattern 1 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">1</div>
+                    <div>"The thing is..." (Reveal)</div>
+                </div>
+                <div class="pattern-phonetic">/ðə θɪŋ ɪz/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Reveal a surprising truth or insight. Creates dramatic moment in story.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "The thing is" signals you're about to reveal something important. Creates anticipation and dramatic moment. Natural way to add depth to story.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The thing is, I was terrified the whole time.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The thing is</strong>, I was terrified the whole time."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The thing is, that failure changed everything.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The thing is</strong>, that failure changed everything."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The thing is, I did not realize how much it meant to me until it was gone.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>The thing is</strong>, I didn't realize how much it meant to me until it was gone."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Use when you want to reveal a surprising truth or insight. Creates dramatic moment in story.
+                </div>
+            </div>
+            
+            <!-- Pattern 2 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">2</div>
+                    <div>"Looking back now..." (Reflection)</div>
+                </div>
+                <div class="pattern-phonetic">/ˈlʊkɪŋ bæk naʊ/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Share reflection from time distance. Shows growth and wisdom.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Looking back now" signals you're reflecting from distance. Shows growth and wisdom gained. Natural way to conclude story with insight.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Looking back now, I realize it was the best decision I ever made.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Looking back now</strong>, I realize it was the best decision I ever made."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Looking back now, I can see how much I have grown.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Looking back now</strong>, I can see how much I've grown."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Looking back now, I understand why it had to happen that way.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Looking back now</strong>, I understand why it had to happen that way."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Use when you want to share reflection from time distance. Shows growth and wisdom.
+                </div>
+            </div>
+            
+            <!-- Pattern 3 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">3</div>
+                    <div>"The funny thing is..." (Irony/Humor)</div>
+                </div>
+                <div class="pattern-phonetic">/ðə ˈfʌni θɪŋ ɪz/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Casual</span>
+                </div>
+                <p class="pattern-meaning">Add irony or humor to story. Creates memorable moment.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "The funny thing is" signals irony or unexpected twist. Adds humor and makes story memorable. Natural way to add personality.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The funny thing is, I ended up loving the thing I was most afraid of.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The funny thing is</strong>, I ended up loving the thing I was most afraid of."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'The funny thing is, the person I thought would help me the most was the one who challenged me the most.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>The funny thing is</strong>, the person I thought would help me the most was the one who challenged me the most."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'The funny thing is, I learned more from failing than from succeeding.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>The funny thing is</strong>, I learned more from failing than from succeeding."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Use when you want to add humor or irony. Creates memorable moment in story.
+                </div>
+            </div>
+            
+            <!-- Pattern 4 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">4</div>
+                    <div>"What I didn't expect was..." (Surprise)</div>
+                </div>
+                <div class="pattern-phonetic">/wʌt aɪ ˈdɪdnt ɪkspɛkt wʌz/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Emphasize unexpected outcome or feeling. Creates surprise moment.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "What I didn't expect was" emphasizes surprise. Creates dramatic moment. Natural way to show unexpected impact.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What I did not expect was how much I would miss it.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>What I didn't expect was</strong> how much I'd miss it."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What I did not expect was how much it would change me.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>What I didn't expect was</strong> how much it would change me."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'What I did not expect was how connected I would feel to complete strangers.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>What I didn't expect was</strong> how connected I'd feel to complete strangers."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Use when you want to emphasize unexpected outcome or feeling. Creates surprise moment.
+                </div>
+            </div>
+            
+            <!-- Pattern 5 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">5</div>
+                    <div>"In the end..." (Resolution/Wisdom)</div>
+                </div>
+                <div class="pattern-phonetic">/ɪn ðə ɛnd/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Conclude story with final insight or wisdom. Creates satisfying ending.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "In the end" signals conclusion. Provides final insight or wisdom. Natural way to end story with impact.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'In the end, it was not about the destination, it was about the journey.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>In the end</strong>, it wasn't about the destination, it was about the journey."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'In the end, I learned that vulnerability is strength.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>In the end</strong>, I learned that vulnerability is strength."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'In the end, the connections we make matter more than the places we see.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>In the end</strong>, the connections we make matter more than the places we see."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Use when you want to conclude story with wisdom or final insight. Creates satisfying ending.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Story Structure -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">🎬</span> The Complete Story Arc</h2>
+            <p class="section-desc">Every great story has 4 parts. Master this structure and you can tell any story effectively.</p>
+            
+            <div class="story-structure">
+                <h4>🎬 Story Structure: The Complete Arc</h4>
+                
+                <div class="story-part opening">
+                    <div class="story-part-header">
+                        <div class="story-part-title">1. Opening (Hook)</div>
+                        <div class="story-part-length">1-2 sentences</div>
+                    </div>
+                    <div class="story-part-purpose">Purpose: Grab attention, set context</div>
+                    <div class="story-part-patterns">
+                        <strong>Patterns:</strong> "Let me tell you about...", "So there I was...", "You won't believe what happened when..."
+                    </div>
+                </div>
+                
+                <div class="story-part development">
+                    <div class="story-part-header">
+                        <div class="story-part-title">2. Development (Build-up)</div>
+                        <div class="story-part-length">3-5 sentences</div>
+                    </div>
+                    <div class="story-part-purpose">Purpose: Build context, create tension</div>
+                    <div class="story-part-patterns">
+                        <strong>Patterns:</strong> "At first, I thought...", "Before...", "What I didn't expect was...", "The challenge was..."
+                    </div>
+                </div>
+                
+                <div class="story-part climax">
+                    <div class="story-part-header">
+                        <div class="story-part-title">3. Climax (Turning point)</div>
+                        <div class="story-part-length">2-3 sentences</div>
+                    </div>
+                    <div class="story-part-purpose">Purpose: The moment of change/realization</div>
+                    <div class="story-part-patterns">
+                        <strong>Patterns:</strong> "The thing is...", "But then...", "The moment of truth came when...", "That's when I realized..."
+                    </div>
+                </div>
+                
+                <div class="story-part resolution">
+                    <div class="story-part-header">
+                        <div class="story-part-title">4. Resolution (Insight)</div>
+                        <div class="story-part-length">2-3 sentences</div>
+                    </div>
+                    <div class="story-part-purpose">Purpose: Share what you learned</div>
+                    <div class="story-part-patterns">
+                        <strong>Patterns:</strong> "Looking back now...", "In the end...", "It taught me...", "What I learned was..."
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Scenarios -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">🎭</span> Practice Scenarios</h2>
+            <p class="section-desc">Practice telling complete stories in different contexts. Click button to see sample structure.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1 -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Casual - 3-4 min</span>
+                    <h4>Scenario 1: Party Storytelling</h4>
+                    <p>You're at a party, someone asks "Tell me about an interesting experience"</p>
+                    <div class="scenario-requirements">
+                        <strong>Requirements:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Use at least 3 patterns from Day 15-20</li>
+                            <li>Create complete narrative arc</li>
+                            <li>Add personal touch and emotion</li>
+                            <li>Keep it engaging and conversational</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('party')">🎭 See Sample Structure</button>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Professional - 3-4 min</span>
+                    <h4>Scenario 2: Meeting Storytelling</h4>
+                    <p>In a meeting, your boss asks "Share a learning experience from your career"</p>
+                    <div class="scenario-requirements">
+                        <strong>Requirements:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Use more formal patterns</li>
+                            <li>Focus on professional growth</li>
+                            <li>Include specific business insights</li>
+                            <li>End with actionable takeaway</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('meeting')">🎭 See Sample Structure</button>
+                </div>
+                
+                <!-- Scenario 3 -->
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">🔄 Mixed - 4-5 min</span>
+                    <h4>Scenario 3: Networking Storytelling</h4>
+                    <p>At a networking event, you need to tell a story that's both personal and professional</p>
+                    <div class="scenario-requirements">
+                        <strong>Requirements:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Balance personal and professional elements</li>
+                            <li>Show vulnerability but maintain professionalism</li>
+                            <li>Create emotional connection</li>
+                            <li>Leave memorable impression</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('networking')">🎭 See Sample Structure</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Exercises -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Mastery Exercises</h2>
+            <p class="section-desc">Complete these 4 exercises to master complete storytelling.</p>
+            
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="exercise-header">
+                    <div class="exercise-title">Exercise 1: Pattern Combination</div>
+                    <div class="exercise-time">⏱️ 10 minutes</div>
+                </div>
+                <div class="exercise-desc">
+                    Choose 3 patterns from Day 15-20 and write a mini-story (150 words) using all 3.
+                </div>
+                <div class="exercise-requirements">
+                    <strong>Suggested patterns:</strong>
+                    <ul style="margin-top: 6px; padding-left: 16px;">
+                        <li>Day 15: "The first time I tried...", "What made it special was..."</li>
+                        <li>Day 16: "At first, I thought... but it turned out..."</li>
+                        <li>Day 17: "I met this person who...", "What struck me about them was..."</li>
+                        <li>Day 18: "The funny thing about [culture] was..."</li>
+                        <li>Day 19: "Looking back, the biggest lesson was...", "It taught me that..."</li>
+                        <li>Day 20: "The thing is...", "Looking back now...", "In the end..."</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="exercise-header">
+                    <div class="exercise-title">Exercise 2: Story Arc Practice</div>
+                    <div class="exercise-time">⏱️ 15 minutes</div>
+                </div>
+                <div class="exercise-desc">
+                    Write a complete story (250-300 words) with all 4 parts: Opening, Development, Climax, Resolution.
+                </div>
+                <div class="exercise-requirements">
+                    <strong>Suggested topics:</strong>
+                    <ul style="margin-top: 6px; padding-left: 16px;">
+                        <li>A travel experience that changed your perspective</li>
+                        <li>A professional challenge that taught you something valuable</li>
+                        <li>A moment when you stepped out of your comfort zone</li>
+                        <li>A conversation that had unexpected impact</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="exercise-header">
+                    <div class="exercise-title">Exercise 3: Audience Adaptation</div>
+                    <div class="exercise-time">⏱️ 15 minutes</div>
+                </div>
+                <div class="exercise-desc">
+                    Take the same story and adapt it for 3 different audiences:
+                </div>
+                <div class="exercise-requirements">
+                    <strong>Adapt for:</strong>
+                    <ul style="margin-top: 6px; padding-left: 16px;">
+                        <li><strong>Casual audience</strong> (friends at a bar): Use casual patterns, more humor and personal details, conversational tone</li>
+                        <li><strong>Professional audience</strong> (colleagues in meeting): Use professional patterns, focus on business insights, more structured delivery</li>
+                        <li><strong>Mixed audience</strong> (networking event): Balance personal and professional, show vulnerability but professional, memorable and relatable</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Exercise 4 -->
+            <div class="exercise-card">
+                <div class="exercise-header">
+                    <div class="exercise-title">Exercise 4: Active Storytelling Challenge</div>
+                    <div class="exercise-time">⏱️ 20 minutes</div>
+                </div>
+                <div class="exercise-desc">
+                    Record yourself telling a 3-minute story using at least 4 patterns from Week 3.
+                </div>
+                <div class="exercise-requirements">
+                    <strong>Checklist:</strong>
+                    <ul style="margin-top: 6px; padding-left: 16px;">
+                        <li>☐ Clear opening hook</li>
+                        <li>☐ At least 4 patterns from Week 3</li>
+                        <li>☐ Complete narrative arc</li>
+                        <li>☐ Emotional depth</li>
+                        <li>☐ Clear takeaway/insight</li>
+                        <li>☐ Natural delivery (not reading)</li>
+                    </ul>
+                    <br>
+                    <strong>Self-assessment questions:</strong>
+                    <ul style="margin-top: 6px; padding-left: 16px;">
+                        <li>Did I grab attention in the first 10 seconds?</li>
+                        <li>Did I create tension/curiosity?</li>
+                        <li>Was there a clear turning point?</li>
+                        <li>Did I share a meaningful insight?</li>
+                        <li>Would someone want to hear more stories from me?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Comprehensive Flashcards</h2>
+            <p class="section-desc">5 flashcards covering all aspects of complete storytelling.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-pattern" id="fc-pattern">Opening a story</div>
+                            <div class="card-hint">Tap to reveal patterns →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-example" id="fc-example">
+                                • "Let me tell you about..."<br>
+                                • "So there I was..."<br>
+                                • "You won't believe what happened when..."<br>
+                                • "This reminds me of the time..."
+                            </div>
+                            <div class="card-tip" id="fc-tip">
+                                <strong>💡 Tip:</strong>
+                                Opening should grab attention and set context. Keep it short (1-2 sentences) but engaging.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 5</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Daily Task -->
+        <section class="section section-gold">
+            <h2 class="section-title"><span class="section-icon">📝</span> Today's Task</h2>
+            
+            <div class="task-card">
+                <div class="task-title">🎯 Complete Storytelling Mastery</div>
+                <ul class="task-list">
+                    <li>Write a complete story (300 words) about an important experience in your life using at least 5 patterns from Week 3 with full 4-part structure</li>
+                    <li>Record yourself telling the story (3-4 minutes) - practice natural delivery, focus on engagement not perfection</li>
+                    <li>Adapt the story for 2 different audiences: Version 1 for casual (friends), Version 2 for professional (colleagues)</li>
+                    <li>Share with accountability partner and get feedback</li>
+                </ul>
+            </div>
+            
+            <div class="success-criteria">
+                <h4>✅ Success Criteria</h4>
+                <ul class="success-list">
+                    <li>Can tell a complete story with natural flow</li>
+                    <li>Can use multiple patterns naturally</li>
+                    <li>Can adapt story for different audiences</li>
+                    <li>Can create emotional connection with listener</li>
+                    <li>Can leave listener with memorable insight</li>
+                </ul>
+            </div>
+            
+            <div class="pro-tips">
+                <h4>💡 Pro Tips</h4>
+                <ul class="pro-tips-list">
+                    <li><strong>Start with the ending:</strong> Know what insight you want to share, then build story backwards</li>
+                    <li><strong>Show, don't tell:</strong> Use specific details and sensory language</li>
+                    <li><strong>Be vulnerable:</strong> Share real emotions, not just facts</li>
+                    <li><strong>Practice out loud:</strong> Writing ≠ speaking, practice delivery</li>
+                    <li><strong>Get feedback:</strong> Ask others what resonated with them</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-03-day-19.html" class="nav-btn">
+                <div class="nav-label">← Previous Day</div>
+                <div class="nav-title">Day 19: Lessons Learned</div>
+            </a>
+            <a href="week-03-day-21.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 21: Week 3 Review</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 20 Complete & Continue to Day 21</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#9F7AEA"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#9F7AEA"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#9F7AEA" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#9F7AEA" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#9F7AEA"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Book -->
+            <rect x="60" y="145" width="25" height="20" fill="#F6AD55" rx="2"/>
+            <line x1="72" y1="145" x2="72" y2="165" stroke="#2D3748" stroke-width="1.5"/>
+            <rect x="63" y="148" width="8" height="14" fill="#FFF" opacity="0.6" rx="1"/>
+        </svg>
+        <div class="mascot-speech">Tell your story! ✨</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 3 · Day 20 · Stories Worth Telling</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 0.9;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = audioSpeed;
+                utterance.pitch = 1.05;
+                
+                const voices = speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US' && (v.name.includes('Google') || v.name.includes('Natural'))) 
+                             || voices.find(v => v.lang === 'en-US')
+                             || voices[0];
+                if (usVoice) utterance.voice = usVoice;
+                
+                if (btn) {
+                    btn.classList.add('playing');
+                    utterance.onend = () => btn.classList.remove('playing');
+                    utterance.onerror = () => btn.classList.remove('playing');
+                }
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
+        
+        // ========== SCENARIO DETAILS ==========
+        function showScenarioDetails(scenario) {
+            const details = {
+                party: `🏠 PARTY SCENARIO (3-4 phút):
+
+Context: Bạn đang ở party, ai đó hỏi "Tell me about an interesting experience"
+
+Sample structure:
+Opening: "Let me tell you about this trip I took to Japan..."
+Development: "At first, I was nervous because I didn't speak Japanese and I was traveling alone..."
+Climax: "But the thing is, I ended up meeting these amazing locals who showed me the real Japan..."
+Resolution: "Looking back now, I realize it taught me that the best experiences come from stepping out of your comfort zone."
+
+Yêu cầu:
+✅ Use at least 3 patterns from Day 15-20
+✅ Create complete narrative arc
+✅ Add personal touch and emotion
+✅ Keep it engaging and conversational
+
+💡 Mẹo: Focus on emotion and personal details, not just facts.`,
+
+                meeting: `💼 MEETING SCENARIO (3-4 phút):
+
+Context: Trong meeting, sếp hỏi "Share a learning experience from your career"
+
+Sample structure:
+Opening: "I'd like to share an experience from when I led my first major project..."
+Development: "Initially, the challenge was that the team was skeptical and the timeline was tight..."
+Climax: "The turning point came when I decided to be vulnerable and admit I didn't have all the answers..."
+Resolution: "The key takeaway for our team is that vulnerability is strength, and the best leaders are those who create space for others to contribute."
+
+Yêu cầu:
+✅ Use more formal patterns
+✅ Focus on professional growth
+✅ Include specific business insights
+✅ End with actionable takeaway
+
+💡 Mẹo: Focus on business impact and lessons learned.`,
+
+                networking: `🔄 NETWORKING SCENARIO (4-5 phút):
+
+Context: Networking event, bạn cần tell story vừa personal vừa professional
+
+Sample structure:
+Opening: "You know, that reminds me of a trip I took that completely changed my perspective..."
+Development: "What I didn't expect was how much I'd learn from complete strangers..."
+Climax: "The funny thing is, the person I thought would help me the most was the one who challenged me the most..."
+Resolution: "In the end, the connections we make matter more than the places we see."
+
+Yêu cầu:
+✅ Balance personal and professional elements
+✅ Show vulnerability but maintain professionalism
+✅ Create emotional connection
+✅ Leave memorable impression
+
+💡 Mẹo: Balance vulnerability with professionalism. Show you're human but professional.`
+            };
+            
+            alert(details[scenario]);
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                pattern: "Opening a story",
+                example: '• "Let me tell you about..."\n• "So there I was..."\n• "You won\'t believe what happened when..."\n• "This reminds me of the time..."',
+                tip: '💡 Tip: Opening should grab attention and set context. Keep it short (1-2 sentences) but engaging.'
+            },
+            { 
+                pattern: "Building the story",
+                example: '• "At first, I thought..."\n• "Before this happened, I believed..."\n• "What I didn\'t expect was..."\n• "The challenge was..."',
+                tip: '💡 Tip: Development should build context and create tension. Use 3-5 sentences.'
+            },
+            { 
+                pattern: "The turning point",
+                example: '• "The thing is..."\n• "But then everything changed when..."\n• "The moment of truth came when..."\n• "That\'s when I realized..."',
+                tip: '💡 Tip: Climax is the moment of change or realization. Keep it short (2-3 sentences) but impactful.'
+            },
+            { 
+                pattern: "Closing with insight",
+                example: '• "Looking back now, I realize..."\n• "In the end, it taught me..."\n• "It taught me that..."\n• "What I learned was..."',
+                tip: '💡 Tip: Resolution should share wisdom or final insight. Leave listener with something memorable.'
+            },
+            { 
+                pattern: "Complete story structure",
+                example: '1. Opening: Hook + context (1-2 sentences)\n2. Development: Build tension (3-5 sentences)\n3. Climax: Turning point (2-3 sentences)\n4. Resolution: Insight/wisdom (2-3 sentences)',
+                tip: '💡 Tip: Master this structure and you can tell any story effectively. Practice with different topics.'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-pattern').textContent = card.pattern;
+            document.getElementById('fc-example').innerHTML = card.example;
+            document.getElementById('fc-tip').innerHTML = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week3Days') || '[]');
+            
+            if (!completed.includes(20)) {
+                completed.push(20);
+                localStorage.setItem('week3Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(3)) {
+                        completedWeeks.push(3);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 3 completed! You can now tell complete, engaging stories! 🦊');
+                } else {
+                    alert(`✅ Day 20 completed! ${7 - completed.length} days left in Week 3. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-03-day-21.html';
+            } else {
+                if (confirm('✅ Day 20 already completed! Go to Day 21?')) {
+                    location.href = 'week-03-day-21.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
