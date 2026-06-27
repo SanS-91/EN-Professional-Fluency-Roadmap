@@ -1,0 +1,2584 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Day 19: Lessons Learned | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #805AD5;
+            --primary-dark: #6B46C1;
+            --primary-light: #9F7AEA;
+            --primary-soft: #F5F0FF;
+            --secondary: #D53F8C;
+            --secondary-dark: #B83280;
+            --secondary-soft: #FFF5F7;
+            --accent: #38B2AC;
+            --accent-soft: #E6FFFA;
+            --warm: #F6AD55;
+            --warm-soft: #FFFAF0;
+            
+            --bg: #FAFBFC;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --text-muted: #718096;
+            --border: #E2E8F0;
+            --border-light: #EDF2F7;
+            
+            --life: #48BB78;
+            --life-bg: #F0FFF4;
+            --life-dark: #2F855A;
+            --biz: #4299E1;
+            --biz-bg: #EBF8FF;
+            --biz-dark: #2B6CB0;
+            --success: #48BB78;
+            --error: #F56565;
+            --warning: #ED8936;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP NAV ========== */
+        .top-nav {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-back:hover { color: var(--primary); }
+        
+        .nav-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mini-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+        
+        /* ========== DAY TABS ========== */
+        .day-tabs {
+            background: white;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 55px;
+            z-index: 99;
+        }
+        
+        .day-tabs-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+        
+        .day-tabs-scroll::-webkit-scrollbar { height: 3px; }
+        .day-tabs-scroll::-webkit-scrollbar-track { background: var(--border-light); }
+        .day-tabs-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        
+        .day-tab {
+            padding: 9px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .day-tab:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+        
+        .day-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* ========== HEADER ========== */
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 50%, var(--warm-soft) 100%);
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(128,90,213,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(213,63,140,0.15) 0%, transparent 40%);
+        }
+        
+        .day-header::after {
+            content: '📚';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        
+        .day-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            position: relative;
+        }
+        
+        .day-breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-breadcrumb a:hover { color: var(--primary); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            position: relative;
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .day-subtitle strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .meta-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        /* ========== SECTIONS ========== */
+        .section {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .section-purple { background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-soft) 100%); border-color: #E9D8FD; }
+        .section-pink { background: linear-gradient(135deg, #FFFFFF 0%, var(--secondary-soft) 100%); border-color: #FED7E3; }
+        .section-teal { background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-soft) 100%); border-color: #B2F5EA; }
+        .section-green { background: linear-gradient(135deg, #FFFFFF 0%, var(--life-bg) 100%); border-color: #C6F6D5; }
+        .section-blue { background: linear-gradient(135deg, #FFFFFF 0%, var(--biz-bg) 100%); border-color: #BEE3F8; }
+        .section-orange { background: linear-gradient(135deg, #FFFFFF 0%, var(--warm-soft) 100%); border-color: #FEEBC8; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon { font-size: 1.5rem; }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== PHILOSOPHY BOX ========== */
+        .philosophy-box {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .philosophy-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        
+        .philosophy-box strong { color: var(--primary-dark); }
+        
+        /* ========== PROBLEM BOX ========== */
+        .problem-box {
+            background: #FED7D7;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--error);
+            margin-bottom: 16px;
+        }
+        
+        .problem-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: #9B2C2C;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #9B2C2C;
+            font-style: italic;
+        }
+        
+        .problem-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .problem-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #9B2C2C;
+            line-height: 1.5;
+        }
+        
+        .problem-box li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== SOLUTION BOX ========== */
+        .solution-box {
+            background: var(--life-bg);
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--life);
+            margin-bottom: 16px;
+        }
+        
+        .solution-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            color: var(--life-dark);
+            margin-bottom: 10px;
+        }
+        
+        .solution-box .comparison {
+            background: white;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--life-dark);
+            font-style: italic;
+        }
+        
+        .solution-box ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .solution-box li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.5;
+        }
+        
+        .solution-box li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PLAN GRID ========== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .plan-block {
+            background: white;
+            padding: 18px 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .plan-block-icon { font-size: 1.6rem; margin-bottom: 6px; }
+        
+        .plan-block-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-block-time {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .plan-block-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        /* ========== PATTERN CARD ========== */
+        .pattern-card {
+            background: white;
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        
+        .pattern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pattern-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pattern-number {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pattern-phonetic {
+            color: var(--text-muted);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .freq-badge, .register-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .freq-badge {
+            background: var(--warm-soft);
+            color: #744210;
+        }
+        
+        .register-badge {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+        }
+        
+        .pattern-meaning {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why {
+            background: var(--primary-soft);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--primary-dark);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .pattern-why strong { color: var(--primary-dark); }
+        
+        .examples-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 8px;
+        }
+        
+        .example-item {
+            background: var(--bg);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--primary);
+            position: relative;
+        }
+        
+        .example-item.life { border-left-color: var(--life); }
+        .example-item.biz { border-left-color: var(--biz); }
+        
+        .example-context {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .example-item.life .example-context { color: var(--life-dark); }
+        .example-item.biz .example-context { color: var(--biz-dark); }
+        
+        .audio-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-left: 8px;
+        }
+        
+        .audio-btn:hover {
+            background: var(--primary-light);
+            transform: scale(1.1);
+        }
+        
+        .audio-btn.playing {
+            background: var(--secondary);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .usage-note {
+            background: var(--warm-soft);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: #744210;
+            line-height: 1.5;
+            margin-top: 12px;
+            border-left: 3px solid var(--warm);
+        }
+        
+        .usage-note strong { color: #744210; }
+        
+        /* ========== STORYTELLING EXAMPLE ========== */
+        .storytelling-example {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        
+        .storytelling-example h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .storytelling-text {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .storytelling-text strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .storytelling-analysis {
+            background: var(--life-bg);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--life-dark);
+            line-height: 1.6;
+        }
+        
+        .storytelling-analysis h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        .storytelling-analysis ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .storytelling-analysis li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .storytelling-analysis li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        /* ========== PRONUNCIATION TABLE ========== */
+        .pronunciation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            font-size: 13px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .pronunciation-table tr:last-child td { border-bottom: none; }
+        
+        .pronunciation-table code {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--primary-dark);
+        }
+        
+        /* ========== SCENARIOS ========== */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .scenario-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid;
+        }
+        
+        .scenario-card.life {
+            background: var(--life-bg);
+            border-color: var(--life);
+        }
+        
+        .scenario-card.biz {
+            background: var(--biz-bg);
+            border-color: var(--biz);
+        }
+        
+        .scenario-card.mixed {
+            background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+            border-color: var(--primary);
+        }
+        
+        .scenario-card.challenge {
+            background: linear-gradient(135deg, var(--warm-soft), var(--accent-soft));
+            border-color: var(--warning);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .scenario-card.life .scenario-badge { background: var(--life); }
+        .scenario-card.biz .scenario-badge { background: var(--biz); }
+        .scenario-card.mixed .scenario-badge { background: var(--primary); }
+        .scenario-card.challenge .scenario-badge { background: var(--warning); }
+        
+        .scenario-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card.life h4 { color: var(--life-dark); }
+        .scenario-card.biz h4 { color: var(--biz-dark); }
+        .scenario-card.mixed h4 { color: var(--primary-dark); }
+        .scenario-card.challenge h4 { color: #744210; }
+        
+        .scenario-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .scenario-card.life p { color: var(--life-dark); }
+        .scenario-card.biz p { color: var(--biz-dark); }
+        .scenario-card.mixed p { color: var(--primary-dark); }
+        .scenario-card.challenge p { color: #744210; }
+        
+        .scenario-requirements {
+            background: white;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .scenario-card.life .scenario-requirements { color: var(--life-dark); }
+        .scenario-card.biz .scenario-requirements { color: var(--biz-dark); }
+        .scenario-card.mixed .scenario-requirements { color: var(--primary-dark); }
+        .scenario-card.challenge .scenario-requirements { color: #744210; }
+        
+        .record-btn {
+            background: white;
+            border: 1.5px solid;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .scenario-card.life .record-btn { border-color: var(--life); color: var(--life-dark); }
+        .scenario-card.biz .record-btn { border-color: var(--biz); color: var(--biz-dark); }
+        .scenario-card.mixed .record-btn { border-color: var(--primary); color: var(--primary-dark); }
+        .scenario-card.challenge .record-btn { border-color: var(--warning); color: #744210; }
+        
+        .record-btn:hover { transform: translateY(-2px); }
+        .scenario-card.life .record-btn:hover { background: var(--life); color: white; }
+        .scenario-card.biz .record-btn:hover { background: var(--biz); color: white; }
+        .scenario-card.mixed .record-btn:hover { background: var(--primary); color: white; }
+        .scenario-card.challenge .record-btn:hover { background: var(--warning); color: white; }
+        
+        /* ========== REALITY TASK ========== */
+        .task-levels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+        
+        .task-level {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 2px solid;
+            position: relative;
+        }
+        
+        .task-level.easy { border-color: var(--life); }
+        .task-level.standard { border-color: var(--biz); }
+        .task-level.challenge { border-color: var(--warning); }
+        
+        .task-level-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+        
+        .task-level.easy .task-level-badge { background: var(--life); }
+        .task-level.standard .task-level-badge { background: var(--biz); }
+        .task-level.challenge .task-level-badge { background: var(--warning); }
+        
+        .task-level h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 8px 0 6px;
+        }
+        
+        .task-level.easy h4 { color: var(--life-dark); }
+        .task-level.standard h4 { color: var(--biz-dark); }
+        .task-level.challenge h4 { color: #744210; }
+        
+        .task-time {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--bg);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .task-level p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .task-requirements {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .task-requirements ul {
+            padding-left: 16px;
+            margin-top: 4px;
+        }
+        
+        .task-requirements li {
+            padding: 2px 0;
+        }
+        
+        /* ========== FLASHCARD ========== */
+        .flashcard-wrap {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 320px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .flashcard-front .card-pattern {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .flashcard-front .card-hint {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+        
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+            text-align: left;
+        }
+        
+        .flashcard-back .card-example {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 10px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .flashcard-back .card-tip {
+            font-size: 12px;
+            color: var(--life-dark);
+            line-height: 1.5;
+            padding: 10px;
+            background: var(--life-bg);
+            border-radius: var(--radius-sm);
+        }
+        
+        .flashcard-back .card-tip strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fc-btn {
+            background: white;
+            border: 1.5px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+        
+        .fc-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .fc-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .card-counter {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* ========== QUIZ ========== */
+        .quiz-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        
+        .quiz-question {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: var(--life-bg);
+            color: var(--life-dark);
+        }
+        
+        .quiz-option.wrong {
+            border-color: var(--error);
+            background: #FED7D7;
+            color: #9B2C2C;
+        }
+        
+        .quiz-option input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .quiz-feedback.show { display: block; }
+        
+        .quiz-feedback.correct {
+            background: var(--life-bg);
+            color: var(--life-dark);
+            border-left: 3px solid var(--life);
+        }
+        
+        .quiz-feedback.wrong {
+            background: #FED7D7;
+            color: #9B2C2C;
+            border-left: 3px solid var(--error);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            display: none;
+        }
+        
+        .score-box.show { display: block; }
+        
+        .score-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .score-msg {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 0.8s;
+        }
+        
+        /* ========== NAV ========== */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        
+        .nav-btn {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .complete-btn {
+            display: block;
+            margin: 28px auto 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========== MASCOT ========== */
+        .mascot {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .mascot-fox {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 8px 16px rgba(128,90,213,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 14px 14px 4px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s;
+            pointer-events: none;
+            margin-bottom: 6px;
+        }
+        
+        .mascot:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 8px; }
+        
+        .footer-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            opacity: 0.7;
+            font-size: 13px;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            
+            .day-title { font-size: 1.6rem; }
+            .day-header { padding: 36px 0 32px; }
+            .day-header::after { font-size: 2.5rem; top: 20px; right: 20px; }
+            
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .task-levels { grid-template-columns: 1fr; }
+            .nav-buttons { grid-template-columns: 1fr; }
+            
+            .section { padding: 24px 18px; }
+            
+            .mascot { bottom: 16px; right: 16px; }
+            .mascot-fox { width: 56px; height: 56px; }
+            .mascot-speech { display: none; }
+        }
+        
+        @media (max-width: 480px) {
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-03.html" class="nav-back">← Week 3 Hub</a>
+            <div class="nav-progress">
+                <span>Day 19 / 21</span>
+                <div class="mini-progress">
+                    <div class="mini-progress-bar" style="width: 90%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <nav class="day-tabs">
+        <div class="container">
+            <div class="day-tabs-scroll">
+                <a href="week-03.html" class="day-tab">Overview</a>
+                <a href="week-03-day-15.html" class="day-tab">Day 15</a>
+                <a href="week-03-day-16.html" class="day-tab">Day 16</a>
+                <a href="week-03-day-17.html" class="day-tab">Day 17</a>
+                <a href="week-03-day-18.html" class="day-tab">Day 18</a>
+                <a href="week-03-day-19.html" class="day-tab active">Day 19</a>
+                <a href="week-03-day-20.html" class="day-tab">Day 20</a>
+                <a href="week-03-day-21.html" class="day-tab">Day 21</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="day-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="week-03.html">Week 3</a>
+                <span>›</span>
+                <span>Day 19</span>
+            </div>
+            <h1 class="day-title">📚 Lessons Learned</h1>
+            <p class="day-subtitle">The best stories aren't just about what happened. They're about <strong>what you learned from it — and how it changed you</strong>. Today you'll learn to share wisdom, show growth, and make your lessons actionable.</p>
+            <div class="day-meta">
+                <span class="meta-tag">📚 Lessons Learned</span>
+                <span class="meta-tag">⏱️ 60 minutes</span>
+                <span class="meta-tag">📚 5 reflection patterns</span>
+                <span class="meta-tag">💡 Wisdom & growth</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 28px 20px;">
+        
+        <!-- Philosophy + Problem -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">💡</span> Today's Philosophy</h2>
+            
+            <div class="philosophy-box">
+                <h4>📚 From Textbook to Wisdom</h4>
+                <p>Most people share lessons flatly: "I learned a lot. It was a good experience." But C1 storytellers create <strong>deep reflections</strong>: "Looking back, the biggest lesson I learned was that success isn't about being right — it's about being willing to be wrong." The difference? <strong>Specific lesson. Before/after contrast. Practical application.</strong></p>
+            </div>
+            
+            <div class="problem-box">
+                <h4>❌ Why most lessons stories are boring</h4>
+                <div class="comparison">
+                    "I learned a lot. It was a good experience. I think it was important."
+                </div>
+                <p>Nghe như textbook. Không có specific lesson. Không có personal reflection. Không có practical application.</p>
+                <ul style="margin-top: 8px;">
+                    <li>Không có specific lesson (chỉ nói chung chung)</li>
+                    <li>Không có personal reflection (tại sao lesson đó quan trọng)</li>
+                    <li>Không có practical application (sẽ áp dụng như thế nào)</li>
+                    <li>Không có growth mindset (đã thay đổi như thế nào)</li>
+                </ul>
+            </div>
+            
+            <div class="solution-box">
+                <h4>✅ What C1 storytellers do differently</h4>
+                <div class="comparison">
+                    "Looking back, the biggest lesson I learned was that preparation isn't about controlling everything — it's about being ready for what you can't control. Before that trip, I thought I needed to plan every detail. But when our flight got canceled, I realized that the best experiences come from adaptability. What I'd do differently now is leave more room for spontaneity. It taught me that sometimes the 'detours' are actually the destination."
+                </div>
+                <ul>
+                    <li><strong>"Looking back, the biggest lesson..."</strong> - Specific lesson, không generic</li>
+                    <li><strong>"Before... I thought... but now I realize..."</strong> - Before/after contrast</li>
+                    <li><strong>"What I'd do differently..."</strong> - Practical application</li>
+                    <li><strong>"It taught me that..."</strong> - Memorable insight</li>
+                    <li><strong>Growth mindset</strong>: Show change in perspective</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">📋 Today's Plan (60 min)</h3>
+            
+            <div class="plan-grid">
+                <div class="plan-block">
+                    <div class="plan-block-icon">📚</div>
+                    <div class="plan-block-title">5 Patterns</div>
+                    <div class="plan-block-time">15 min</div>
+                    <div class="plan-block-desc">Lessons learned patterns</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎭</div>
+                    <div class="plan-block-title">Examples</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Integrated stories</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🗣️</div>
+                    <div class="plan-block-title">Speaking</div>
+                    <div class="plan-block-time">25 min</div>
+                    <div class="plan-block-desc">4 scenarios + record</div>
+                </div>
+                <div class="plan-block">
+                    <div class="plan-block-icon">🎴</div>
+                    <div class="plan-block-title">Review</div>
+                    <div class="plan-block-time">10 min</div>
+                    <div class="plan-block-desc">Flashcards + quiz</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5 Lessons Learned Patterns -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">📚</span> 5 Lessons Learned Patterns</h2>
+            <p class="section-desc">5 patterns để share specific lessons, show growth, và tạo practical impact. Click 🔊 để nghe phát âm.</p>
+            
+            <!-- Pattern 1 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">1</div>
+                    <div>"Looking back, the biggest lesson I learned was [lesson]"</div>
+                </div>
+                <div class="pattern-phonetic">/ˈlʊkɪŋ bæk, ðə ˈbɪɡɪst ˈlɛsən aɪ lɜːrnd wʌz [ˈlɛsən]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Share specific lesson từ experience, không generic. Tạo depth và wisdom cho story.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Looking back" = reflective frame, show wisdom. "the biggest lesson" = specific, không generic. Tạo depth và insight cho story. Natural way để share wisdom.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Looking back, the biggest lesson I learned was that the best memories come from unexpected moments, not planned ones.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Looking back, the biggest lesson I learned was</strong> that the best memories come from unexpected moments, not planned ones."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Looking back, the biggest lesson I learned was that it is okay to not have everything figured out.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Looking back, the biggest lesson I learned was</strong> that it's okay to not have everything figured out."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Looking back, the biggest lesson I learned was that failure is not the opposite of success — it is part of the process.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Looking back, the biggest lesson I learned was</strong> that failure isn't the opposite of success — it's part of the process."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Looking back, the biggest lesson I learned was that the best ideas come from diverse perspectives.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Looking back, the biggest lesson I learned was</strong> that the best ideas come from diverse perspectives."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để share specific lesson, không generic. Lesson phải meaningful và actionable. Tạo depth và wisdom cho story.
+                </div>
+            </div>
+            
+            <!-- Pattern 2 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">2</div>
+                    <div>"Before [experience], I thought [belief], but now I realize [new understanding]"</div>
+                </div>
+                <div class="pattern-phonetic">/bɪˈfɔːr [ɪkspɪəriəns], aɪ θɔːt [bɪˈliːf], bʌt naʊ aɪ ˈrɪəlaɪz [njuː ˌʌndərˈstændɪŋ]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Show contrast between before/after understanding. Tạo narrative arc và show growth.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "Before... I thought... but now I realize" = clear before/after contrast. Show growth và change in perspective. Tạo narrative arc trong story. Natural way để show personal growth.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Before that trip, I thought I needed to plan every detail, but now I realize that the best experiences come from spontaneity.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Before</strong> that trip, <strong>I thought</strong> I needed to plan every detail, <strong>but now I realize</strong> that the best experiences come from spontaneity."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'Before moving abroad, I thought I would feel lonely, but now I realize that discomfort is where growth happens.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>Before</strong> moving abroad, <strong>I thought</strong> I'd feel lonely, <strong>but now I realize</strong> that discomfort is where growth happens."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Before that project, I thought success meant having all the answers, but now I realize that asking the right questions is more important.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Before</strong> that project, <strong>I thought</strong> success meant having all the answers, <strong>but now I realize</strong> that asking the right questions is more important."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'Before that failure, I thought mistakes were bad, but now I realize that they are the fastest way to learn.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>Before</strong> that failure, <strong>I thought</strong> mistakes were bad, <strong>but now I realize</strong> that they're the fastest way to learn."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để show contrast between before/after understanding. Before belief và new understanding phải clear contrast. Tạo narrative arc và show growth.
+                </div>
+            </div>
+            
+            <!-- Pattern 3 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">3</div>
+                    <div>"What I'd do differently is [action]"</div>
+                </div>
+                <div class="pattern-phonetic">/wʌt aɪd duː ˈdɪfərəntli ɪz [ˈækʃən]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Share practical application của lesson. Tạo practical value cho listener.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "What I'd do differently" = practical application. Show that lesson is actionable, not just theoretical. Tạo practical value cho listener. Natural way để share wisdom.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What I would do differently is leave more room for spontaneity instead of trying to control every detail.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>What I'd do differently</strong> is leave more room for spontaneity instead of trying to control every detail."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'What I would do differently is ask more questions instead of assuming I know the answer.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>What I'd do differently</strong> is ask more questions instead of assuming I know the answer."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'What I would do differently is involve the team earlier in the decision-making process.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>What I'd do differently</strong> is involve the team earlier in the decision-making process."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'What I would do differently is focus on relationships first, transactions second.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>What I'd do differently</strong> is focus on relationships first, transactions second."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để share practical application của lesson. Action phải specific và actionable. Tạo practical value cho listener.
+                </div>
+            </div>
+            
+            <!-- Pattern 4 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">4</div>
+                    <div>"It taught me that [insight]"</div>
+                </div>
+                <div class="pattern-phonetic">/ɪt tɔːt miː ðæt [ˈɪnsaɪt]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐⭐ Very High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Share wisdom hoặc insight từ experience. Tạo depth và meaning cho story.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "It taught me that" = show wisdom gained. Insight phải memorable và universal. Tạo depth và meaning cho story. Natural way để share wisdom.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'It taught me that sometimes the detours are actually the destination.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>It taught me that</strong> sometimes the 'detours' are actually the destination."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'It taught me that discomfort is where the most growth happens.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>It taught me that</strong> discomfort is where the most growth happens."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'It taught me that the best teams are not the ones with the most talent — they are the ones with the most trust.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>It taught me that</strong> the best teams aren't the ones with the most talent — they're the ones with the most trust."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'It taught me that success is not about being right — it is about being willing to be wrong.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>It taught me that</strong> success isn't about being right — it's about being willing to be wrong."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để share wisdom hoặc insight từ experience. Insight phải memorable và universal. Tạo depth và meaning cho story.
+                </div>
+            </div>
+            
+            <!-- Pattern 5 -->
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <div class="pattern-number">5</div>
+                    <div>"If I could go back, I would [action] because [reason]"</div>
+                </div>
+                <div class="pattern-phonetic">/ɪf aɪ kʊd ɡoʊ bæk, aɪ wʊd [ˈækʃən] bɪˈkɒz [ˈriːzən]/</div>
+                <div class="pattern-meta">
+                    <span class="freq-badge">⭐⭐⭐⭐ High</span>
+                    <span class="register-badge">Casual → Semi-formal</span>
+                </div>
+                <p class="pattern-meaning">Share hypothetical reflection về past experience. Tạo engagement qua hypothetical scenario.</p>
+                <div class="pattern-why">
+                    <strong>Why C1?</strong> "If I could go back" = hypothetical reflection. Show deeper level of reflection. Tạo engagement qua hypothetical scenario. Natural way để share deeper wisdom.
+                </div>
+                
+                <div class="examples-label">Examples</div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'If I could go back, I would spend less time planning and more time just being present.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>If I could go back, I would</strong> spend less time planning and more time just being present."
+                </div>
+                <div class="example-item life">
+                    <button class="audio-btn" onclick="playAudio(this, 'If I could go back, I would talk to more strangers instead of staying in my comfort zone.')">🔊</button>
+                    <span class="example-context">🏠 Life</span>
+                    "<strong>If I could go back, I would</strong> talk to more strangers instead of staying in my comfort zone."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'If I could go back, I would listen more and talk less in those early meetings.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>If I could go back, I would</strong> listen more and talk less in those early meetings."
+                </div>
+                <div class="example-item biz">
+                    <button class="audio-btn" onclick="playAudio(this, 'If I could go back, I would invest in relationships before I needed them.')">🔊</button>
+                    <span class="example-context">💼 Business</span>
+                    "<strong>If I could go back, I would</strong> invest in relationships before I needed them."
+                </div>
+                
+                <div class="usage-note">
+                    <strong>💡 Usage Notes:</strong> Dùng để share deeper level of reflection. Action và reason phải specific và meaningful. Tạo engagement qua hypothetical scenario.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Integrated Story Examples -->
+        <section class="section section-teal">
+            <h2 class="section-title"><span class="section-icon">🎭</span> Integrated Story Examples</h2>
+            <p class="section-desc">Xem cách 5 lessons learned patterns được kết hợp trong 2 stories hoàn chỉnh. Click 🔊 để nghe từng story.</p>
+            
+            <!-- Story 1 -->
+            <div class="storytelling-example">
+                <h4>✈️ Story 1: The Stranded Trip</h4>
+                <button class="audio-btn" onclick="playAudio(this, 'Looking back, the biggest lesson I learned from that trip was that the best experiences come from adaptability, not perfection. Before that trip, I thought I needed to plan every detail — flights, hotels, restaurants, everything. But when our flight got canceled and we ended up stranded in Bangkok for 2 days, I realized that all my planning was useless. What I would do differently now is leave more room for spontaneity. Instead of panicking about the canceled flight, we ended up exploring this amazing neighborhood we would have never seen otherwise. We met these incredible locals who showed us hidden temples and street food spots that were not in any guidebook. It taught me that sometimes the detours are actually the destination. If I could go back, I would spend less time trying to control everything and more time just being present and open to whatever happens.')" style="float: right; margin-top: -30px;">🔊</button>
+                <div class="storytelling-text">
+                    "<strong>Looking back, the biggest lesson I learned</strong> from that trip was that the best experiences come from adaptability, not perfection.
+                    <br><br>
+                    <strong>Before</strong> that trip, <strong>I thought</strong> I needed to plan every detail — flights, hotels, restaurants, everything. <strong>But when</strong> our flight got canceled and we ended up stranded in Bangkok for 2 days, <strong>I realized that</strong> all my planning was useless.
+                    <br><br>
+                    <strong>What I'd do differently now</strong> is leave more room for spontaneity. Instead of panicking about the canceled flight, we ended up exploring this amazing neighborhood we would have never seen otherwise. We met these incredible locals who showed us hidden temples and street food spots that weren't in any guidebook.
+                    <br><br>
+                    <strong>It taught me that</strong> sometimes the 'detours' are actually the destination.
+                    <br><br>
+                    <strong>If I could go back, I would</strong> spend less time trying to control everything and more time just being present and open to whatever happens."
+                </div>
+                <div class="storytelling-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li><strong>"Looking back, the biggest lesson..."</strong> - Specific lesson (adaptability > perfection)</li>
+                        <li><strong>"Before... I thought... but now I realize"</strong> - Before/after contrast</li>
+                        <li><strong>Concrete example</strong>: Flight canceled, stranded in Bangkok</li>
+                        <li><strong>"What I'd do differently"</strong> - Practical application (leave room for spontaneity)</li>
+                        <li><strong>"It taught me that"</strong> - Memorable insight (detours are the destination)</li>
+                        <li><strong>"If I could go back"</strong> - Deeper reflection (be present, not controlling)</li>
+                        <li><strong>Growth mindset</strong>: Show change in perspective</li>
+                        <li><strong>Universal wisdom</strong>: Lesson applies beyond just this trip</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Story 2 -->
+            <div class="storytelling-example" style="margin-top: 20px;">
+                <h4>💼 Story 2: The Failed Project</h4>
+                <button class="audio-btn" onclick="playAudio(this, 'Looking back, the biggest lesson I learned from that failed project was that success is not about being right — it is about being willing to be wrong. Before that project, I thought I had to have all the answers and never make mistakes. I was so afraid of being wrong that I never asked for help or feedback. What I would do differently now is involve the team earlier and ask more questions. Instead of trying to figure everything out myself, I would create space for everyone to share their perspectives and challenge my assumptions. It taught me that the best ideas do not come from having all the answers — they come from creating an environment where people feel safe to be wrong and learn together. If I could go back, I would focus less on being right and more on building trust and psychological safety.')" style="float: right; margin-top: -30px;">🔊</button>
+                <div class="storytelling-text">
+                    "<strong>Looking back, the biggest lesson I learned</strong> from that failed project was that success isn't about being right — it's about being willing to be wrong.
+                    <br><br>
+                    <strong>Before</strong> that project, <strong>I thought</strong> I had to have all the answers and never make mistakes. I was so afraid of being wrong that I never asked for help or feedback.
+                    <br><br>
+                    <strong>What I'd do differently now</strong> is involve the team earlier and ask more questions. Instead of trying to figure everything out myself, I'd create space for everyone to share their perspectives and challenge my assumptions.
+                    <br><br>
+                    <strong>It taught me that</strong> the best ideas don't come from having all the answers — they come from creating an environment where people feel safe to be wrong and learn together.
+                    <br><br>
+                    <strong>If I could go back, I would</strong> focus less on being right and more on building trust and psychological safety."
+                </div>
+                <div class="storytelling-analysis">
+                    <h5>Analysis:</h5>
+                    <ul>
+                        <li><strong>"Looking back, the biggest lesson..."</strong> - Specific lesson (willing to be wrong > being right)</li>
+                        <li><strong>"Before... I thought... but now I realize"</strong> - Before/after contrast (afraid of being wrong → embrace being wrong)</li>
+                        <li><strong>Concrete example</strong>: Failed project, didn't ask for help</li>
+                        <li><strong>"What I'd do differently"</strong> - Practical application (involve team earlier, ask more questions)</li>
+                        <li><strong>"It taught me that"</strong> - Memorable insight (best ideas come from safe environment)</li>
+                        <li><strong>"If I could go back"</strong> - Deeper reflection (focus on trust, not being right)</li>
+                        <li><strong>Growth mindset</strong>: Show change in leadership approach</li>
+                        <li><strong>Universal wisdom</strong>: Lesson applies to any team situation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pronunciation -->
+        <section class="section section-blue">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Pronunciation Focus</h2>
+            <p class="section-desc">Lessons learned phrases pronunciation và reflection vocabulary.</p>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 0 0 12px; color: var(--text-primary);">🔤 Lessons Learned Phrases</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Phrase</th>
+                        <th>IPA</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Looking back</strong></td>
+                        <td><code>/ˈlʊkɪŋ bæk/</code></td>
+                        <td>Stress on "look"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>the biggest lesson</strong></td>
+                        <td><code>/ðə ˈbɪɡɪst ˈlɛsən/</code></td>
+                        <td>Stress on "big" and "les"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Before... I thought</strong></td>
+                        <td><code>/bɪˈfɔːr... aɪ θɔːt/</code></td>
+                        <td>"thought" = /θɔːt/ (not /tɔːt/)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>What I'd do differently</strong></td>
+                        <td><code>/wʌt aɪd duː ˈdɪfərəntli/</code></td>
+                        <td>Linking: "What I'd"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>It taught me</strong></td>
+                        <td><code>/ɪt tɔːt miː/</code></td>
+                        <td>"taught" = /tɔːt/</td>
+                    </tr>
+                    <tr>
+                        <td><strong>If I could go back</strong></td>
+                        <td><code>/ɪf aɪ kʊd ɡoʊ bæk/</code></td>
+                        <td>"could" = /kʊd/ (not /koʊld/)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🧠 Reflection Vocabulary</h3>
+            
+            <table class="pronunciation-table">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>IPA</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>realize</strong></td>
+                        <td><code>/ˈrɪəlaɪz/</code></td>
+                        <td>Stress on "re"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>perspective</strong></td>
+                        <td><code>/pərˈspɛktɪv/</code></td>
+                        <td>Stress on "spec"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>adaptability</strong></td>
+                        <td><code>/əˌdæptəˈbɪlɪti/</code></td>
+                        <td>Stress on "bil"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>spontaneity</strong></td>
+                        <td><code>/ˌspɒntəˈneɪɪti/</code></td>
+                        <td>Stress on "ne"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>psychological</strong></td>
+                        <td><code>/ˌsaɪkəˈlɒdʒɪkəl/</code></td>
+                        <td>Stress on "log"</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; margin: 20px 0 12px; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+            
+            <div style="background: var(--bg); padding: 16px; border-radius: var(--radius-md); border-left: 4px solid var(--life); font-size: 13px; line-height: 1.8;">
+                <div><code>"Looking back, the biggest lesson..."</code> ↗↘ - Rise-fall (reflective, wise)</div>
+                <div><code>"Before... I thought... but now I realize..."</code> ↗↘↗↘ - Contrast pattern</div>
+                <div><code>"What I'd do differently is..."</code> ↘ - Falling (practical, actionable)</div>
+                <div><code>"It taught me that..."</code> ↘ - Falling (wisdom, insight)</div>
+                <div><code>"If I could go back..."</code> ↗ - Rising (hypothetical, reflective)</div>
+            </div>
+        </section>
+        
+        <!-- Speaking Scenarios -->
+        <section class="section section-purple">
+            <h2 class="section-title"><span class="section-icon">🗣️</span> Speaking: 4 Scenarios</h2>
+            <p class="section-desc">4 scenarios để practice lessons learned storytelling. Mỗi scenario có sample flow để bạn tham khảo. Click vào nút để xem chi tiết.</p>
+            
+            <div class="scenario-grid">
+                <!-- Scenario 1 -->
+                <div class="scenario-card life">
+                    <span class="scenario-badge">🏠 Life - 3-4 min</span>
+                    <h4>Scenario 1: Lesson from Travel</h4>
+                    <p>Bạn đang nói chuyện với bạn về bài học từ một chuyến đi.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 lessons learned patterns</li>
+                            <li>Có specific lesson, không generic</li>
+                            <li>Có before/after contrast</li>
+                            <li>Có practical application</li>
+                            <li>Có memorable insight</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('travel')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="scenario-card biz">
+                    <span class="scenario-badge">💼 Business - 3-4 min</span>
+                    <h4>Scenario 2: Lesson from Failure</h4>
+                    <p>Bạn đang nói chuyện với colleague về bài học từ một project thất bại.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 lessons learned patterns</li>
+                            <li>Professional tone nhưng vẫn personal</li>
+                            <li>Có specific lesson về leadership/teamwork</li>
+                            <li>Có practical application</li>
+                            <li>Có memorable insight</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('failure')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 3 -->
+                <div class="scenario-card mixed">
+                    <span class="scenario-badge">🔄 Mixed - 3-4 min</span>
+                    <h4>Scenario 3: Lesson from Experience</h4>
+                    <p>Bạn đang ở networking event, ai đó hỏi về bài học từ experience.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng ít nhất 3 lessons learned patterns</li>
+                            <li>Balance professional và personal</li>
+                            <li>Lesson phải be universal và applicable</li>
+                            <li>Có before/after contrast</li>
+                            <li>Có memorable insight</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('networking')">🎙️ Xem Sample Flow</button>
+                </div>
+                
+                <!-- Scenario 4 -->
+                <div class="scenario-card challenge">
+                    <span class="scenario-badge">🔥 Challenge - 5 min</span>
+                    <h4>Scenario 4: Podcast Interview</h4>
+                    <p>Bạn đang trong podcast/video, được hỏi về bài học từ experience.</p>
+                    <div class="scenario-requirements">
+                        <strong>Yêu cầu C1:</strong>
+                        <ul style="margin-top: 6px; padding-left: 16px;">
+                            <li>Dùng TẤT CẢ 5 lessons learned patterns</li>
+                            <li>Story phải có clear before/after contrast</li>
+                            <li>Có specific lesson và practical application</li>
+                            <li>Có memorable insight</li>
+                            <li>Keep listener engaged for 5 minutes</li>
+                        </ul>
+                    </div>
+                    <button class="record-btn" onclick="showScenarioDetails('podcast')">🎙️ Xem Sample Flow</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reality Task -->
+        <section class="section section-orange">
+            <h2 class="section-title"><span class="section-icon">🎯</span> Reality Task - Choose Your Level</h2>
+            <p class="section-desc">Bài tập THỰC TẾ - apply lessons learned patterns vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+            
+            <div class="task-levels">
+                <div class="task-level easy">
+                    <div class="task-level-badge">EASY</div>
+                    <h4>📝 Write a Lessons Learned Story</h4>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p>Viết 150-word story về bài học từ experience dùng ít nhất 3 patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng "Looking back, the biggest lesson..." hoặc "Before... I thought... but now I realize..."</li>
+                            <li>Dùng "What I'd do differently..." hoặc "It taught me that..."</li>
+                            <li>Dùng "If I could go back..."</li>
+                            <li>Có specific lesson, không generic</li>
+                            <li>Có practical application</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--life-bg); border-radius: 6px; font-size: 12px; color: var(--life-dark);">
+                        <strong>Deliverable:</strong> Text post (LinkedIn hoặc gửi cho bạn)
+                    </div>
+                </div>
+                
+                <div class="task-level standard">
+                    <div class="task-level-badge">STANDARD</div>
+                    <h4>🎙️ Tell a Lessons Learned Story</h4>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p>Record 3-minute story về bài học từ experience dùng ít nhất 4 patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng ít nhất 4 lessons learned patterns</li>
+                            <li>Có clear before/after contrast</li>
+                            <li>Có concrete example</li>
+                            <li>Natural delivery (không đọc script)</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--biz-bg); border-radius: 6px; font-size: 12px; color: var(--biz-dark);">
+                        <strong>Deliverable:</strong> Audio recording
+                    </div>
+                </div>
+                
+                <div class="task-level challenge">
+                    <div class="task-level-badge">CHALLENGE</div>
+                    <h4>🎥 5-Minute Lessons Learned Storytelling</h4>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p>Record 5-minute story về bài học từ experience dùng TẤT CẢ 5 patterns.</p>
+                    <div class="task-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Dùng TẤT CẢ 5 lessons learned patterns</li>
+                            <li>Story có clear before/after contrast</li>
+                            <li>Có specific lesson và practical application</li>
+                            <li>Có memorable insight và growth mindset</li>
+                            <li>Record 3 iterations (Content → Delivery → Polish)</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; padding: 8px; background: var(--warm-soft); border-radius: 6px; font-size: 12px; color: #744210;">
+                        <strong>Deliverable:</strong> Video file HOẶC LinkedIn post
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Flashcards -->
+        <section class="section section-green">
+            <h2 class="section-title"><span class="section-icon">🎴</span> Flashcard Review</h2>
+            <p class="section-desc">6 flashcards với lessons learned patterns và tips. Mặt trước: pattern. Mặt sau: example + tip.</p>
+            
+            <div class="flashcard-wrap">
+                <div class="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <div class="card-pattern" id="fc-pattern">Looking back, the biggest lesson I learned was [lesson]</div>
+                            <div class="card-hint">Tap to reveal example →</div>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <div class="card-example" id="fc-example">"Looking back, the biggest lesson I learned was that the best experiences come from adaptability, not perfection."</div>
+                            <div class="card-tip" id="fc-tip">
+                                <strong>💡 Tip:</strong>
+                                Share specific lesson, không generic. Lesson phải meaningful và actionable. Tạo depth và wisdom.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="fc-btn" id="prevBtn" onclick="prevCard()" disabled>← Prev</button>
+                    <span class="card-counter" id="fc-counter">1 / 6</span>
+                    <button class="fc-btn" id="nextBtn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz -->
+        <section class="section section-pink">
+            <h2 class="section-title"><span class="section-icon">✍️</span> Quiz: Lessons Learned</h2>
+            <p class="section-desc">7 câu hỏi về lessons learned patterns. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">1. Pattern nào share specific lesson tốt nhất?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        <span>A. "I learned a lot."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        <span>B. "Looking back, the biggest lesson I learned was that the best experiences come from adaptability, not perfection."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        <span>C. "It was a good experience."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="d">
+                        <span>D. "I think it was important."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q1"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">2. "Before... I thought... but now I realize..." dùng để làm gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        <span>A. Describe experience</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        <span>B. Show before/after contrast và growth</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        <span>C. Share opinion</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="d">
+                        <span>D. Create hook</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q2"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">3. "What I'd do differently is..." thêm gì vào story?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        <span>A. Description</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        <span>B. Opinion</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        <span>C. Practical application</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="d">
+                        <span>D. Humor</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q3"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">4. "It taught me that..." dùng khi nào?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        <span>A. Khi muốn describe experience</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        <span>B. Khi muốn share memorable insight hoặc wisdom</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        <span>C. Khi muốn summarize</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="d">
+                        <span>D. Khi muốn create hook</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q4"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">5. "If I could go back, I would..." thể hiện điều gì?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        <span>A. Regret</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        <span>B. Deeper level of reflection</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        <span>C. Complaint</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="d">
+                        <span>D. Indifference</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q5"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="b">
+                <div class="quiz-question">6. Story nào là lessons learned storytelling C1 style?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="a">
+                        <span>A. "I learned a lot. It was a good experience."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="b">
+                        <span>B. "Looking back, the biggest lesson I learned was that success isn't about being right — it's about being willing to be wrong. Before that project, I thought I had to have all the answers. What I'd do differently now is involve the team earlier. It taught me that the best ideas come from diverse perspectives."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="c">
+                        <span>C. "It was important. I think it was a good lesson."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q6" value="d">
+                        <span>D. "I learned some things. It was interesting."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q6"></div>
+            </div>
+            
+            <div class="quiz-item" data-correct="c">
+                <div class="quiz-question">7. Pattern nào KHÔNG phải lessons learned pattern?</div>
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="a">
+                        <span>A. "Looking back, the biggest lesson..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="b">
+                        <span>B. "Before... I thought... but now I realize..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="c">
+                        <span>C. "The first time I tried..."</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q7" value="d">
+                        <span>D. "It taught me that..."</span>
+                    </label>
+                </div>
+                <div class="quiz-feedback" id="fb-q7"></div>
+            </div>
+            
+            <button class="submit-btn" onclick="checkQuiz()">✅ Check Answers</button>
+            
+            <div class="score-box" id="scoreBox">
+                <div class="score-value" id="scoreValue">0/7</div>
+                <div class="score-msg" id="scoreMsg">Keep practicing!</div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="week-03-day-18.html" class="nav-btn">
+                <div class="nav-label">← Previous Day</div>
+                <div class="nav-title">Day 18: Food & Culture Stories</div>
+            </a>
+            <a href="week-03-day-20.html" class="nav-btn">
+                <div class="nav-label">Next Day →</div>
+                <div class="nav-title">Day 20: Stories Worth Telling</div>
+            </a>
+        </div>
+        
+        <button class="complete-btn" onclick="completeDay()">✅ Mark Day 19 Complete & Continue to Day 20</button>
+        
+    </div>
+    
+    <!-- Mascot -->
+    <div class="mascot">
+        <svg class="mascot-fox" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="140" rx="65" ry="55" fill="#805AD5"/>
+            <ellipse cx="100" cy="145" rx="45" ry="40" fill="#FFD4B8"/>
+            <circle cx="100" cy="85" r="50" fill="#805AD5"/>
+            <ellipse cx="70" cy="50" rx="18" ry="28" fill="#805AD5" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="18" ry="28" fill="#805AD5" transform="rotate(20 130 50)"/>
+            <ellipse cx="70" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(-20 70 50)"/>
+            <ellipse cx="130" cy="50" rx="10" ry="16" fill="#FFD4B8" transform="rotate(20 130 50)"/>
+            <ellipse cx="100" cy="95" rx="35" ry="30" fill="#FFF5E6"/>
+            <circle cx="82" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="118" cy="82" r="8" fill="#2D3748"/>
+            <circle cx="84" cy="80" r="3" fill="#FFF"/>
+            <circle cx="120" cy="80" r="3" fill="#FFF"/>
+            <ellipse cx="68" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="132" cy="95" rx="10" ry="6" fill="#FFB5A7" opacity="0.6"/>
+            <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2D3748"/>
+            <path d="M 88 108 Q 100 116 112 108" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 155 130 Q 185 120 180 100 Q 175 85 160 90 Q 150 93 152 105" fill="#805AD5"/>
+            <ellipse cx="155" cy="115" rx="14" ry="12" fill="#FFD4B8"/>
+            <!-- Lightbulb -->
+            <path d="M 95 140 L 95 165 M 105 140 L 105 165" stroke="#F6AD55" stroke-width="2"/>
+            <ellipse cx="100" cy="135" rx="10" ry="12" fill="#F6AD55"/>
+            <path d="M 92 140 L 108 140" stroke="#2D3748" stroke-width="1.5"/>
+        </svg>
+        <div class="mascot-speech">Reflect & grow! 💡</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 3 · Day 19 · Lessons Learned</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== AUDIO TTS ==========
+        let audioSpeed = 0.9;
+        
+        function playAudio(btn, text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = audioSpeed;
+                utterance.pitch = 1.05;
+                
+                const voices = speechSynthesis.getVoices();
+                const usVoice = voices.find(v => v.lang === 'en-US' && (v.name.includes('Google') || v.name.includes('Natural'))) 
+                             || voices.find(v => v.lang === 'en-US')
+                             || voices[0];
+                if (usVoice) utterance.voice = usVoice;
+                
+                if (btn) {
+                    btn.classList.add('playing');
+                    utterance.onend = () => btn.classList.remove('playing');
+                    utterance.onerror = () => btn.classList.remove('playing');
+                }
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
+        
+        // ========== SCENARIO DETAILS ==========
+        function showScenarioDetails(scenario) {
+            const details = {
+                travel: `🏠 TRAVEL SCENARIO (3-4 phút):
+
+Context: Bạn đang nói chuyện với bạn về bài học từ một chuyến đi.
+
+Sample flow:
+Friend: "What did you learn from that trip?"
+
+You: "Looking back, the biggest lesson I learned was 
+that the best experiences come from adaptability, not 
+perfection. Before that trip, I thought I needed to 
+plan every detail. But when our flight got canceled, 
+I realized that all my planning was useless.
+
+What I'd do differently now is leave more room for 
+spontaneity. Instead of panicking, we ended up 
+exploring this amazing neighborhood we would have 
+never seen otherwise.
+
+It taught me that sometimes the 'detours' are actually 
+the destination. If I could go back, I would spend 
+less time trying to control everything and more time 
+just being present."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 lessons learned patterns
+✅ Có specific lesson, không generic
+✅ Có before/after contrast
+✅ Có practical application
+✅ Có memorable insight
+
+💡 Mẹo: Focus vào growth mindset, không chỉ facts.`,
+
+                failure: `💼 FAILURE SCENARIO (3-4 phút):
+
+Context: Bạn đang nói chuyện với colleague về bài học từ một project thất bại.
+
+Sample flow:
+Colleague: "What did you learn from that failed project?"
+
+You: "Looking back, the biggest lesson I learned was 
+that success isn't about being right — it's about 
+being willing to be wrong. Before that project, I 
+thought I had to have all the answers and never 
+make mistakes.
+
+What I'd do differently now is involve the team 
+earlier and ask more questions. Instead of trying 
+to figure everything out myself, I'd create space 
+for everyone to share their perspectives.
+
+It taught me that the best ideas don't come from 
+having all the answers — they come from creating 
+an environment where people feel safe to be wrong 
+and learn together."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 lessons learned patterns
+✅ Professional tone nhưng vẫn personal
+✅ Có specific lesson về leadership/teamwork
+✅ Có practical application
+✅ Có memorable insight
+
+💡 Mẹo: Balance professional và personal.`,
+
+                networking: `🔄 NETWORKING SCENARIO (3-4 phút):
+
+Context: Bạn đang ở networking event, ai đó hỏi về bài học từ experience.
+
+Sample flow:
+Person: "What's the biggest lesson you've learned in your career?"
+
+You: "Looking back, the biggest lesson I learned was 
+that relationships matter more than transactions. 
+Before I started my business, I thought success was 
+about closing deals and hitting targets.
+
+But after losing a major client because I focused 
+too much on the transaction and not enough on the 
+relationship, I realized that trust is the foundation 
+of everything.
+
+What I'd do differently now is invest in relationships 
+before I need them. It taught me that the best business 
+opportunities come from genuine connections, not cold pitches."
+
+Yêu cầu:
+✅ Dùng ít nhất 3 lessons learned patterns
+✅ Balance professional + personal
+✅ Lesson phải be universal và applicable
+✅ Có before/after contrast
+✅ Có memorable insight
+
+💡 Mẹo: Đây là scenario khó nhất - phải balance 2 contexts.`,
+
+                podcast: `🎙️ PODCAST SCENARIO (5 phút):
+
+Context: Bạn đang trong podcast/video, được hỏi về bài học từ experience.
+
+Structure:
+1. Looking back (30s): "Looking back, the biggest lesson..."
+2. Before/after (1 min): "Before... I thought... but now I realize..."
+3. Concrete example (1 min): Specific experience that taught lesson
+4. Practical application (1 min): "What I'd do differently..."
+5. Memorable insight (1 min): "It taught me that..."
+6. Deeper reflection (30s): "If I could go back..."
+7. Universal wisdom (30s): Lesson that applies beyond this experience
+
+Yêu cầu:
+✅ Dùng TẤT CẢ 5 lessons learned patterns
+✅ Story phải có clear before/after contrast
+✅ Có specific lesson và practical application
+✅ Có memorable insight và growth mindset
+✅ Keep listener engaged for 5 minutes
+
+💡 Mẹo: Practice 3 lần trước khi record chính thức. So sánh lần 1 vs lần 3.`
+            };
+            
+            alert(details[scenario]);
+        }
+        
+        // ========== FLASHCARDS ==========
+        const flashcards = [
+            { 
+                pattern: "Looking back, the biggest lesson I learned was [lesson]",
+                example: '"Looking back, the biggest lesson I learned was that the best experiences come from adaptability, not perfection."',
+                tip: '💡 Tip: Share specific lesson, không generic. Lesson phải meaningful và actionable.'
+            },
+            { 
+                pattern: "Before [experience], I thought [belief], but now I realize [new understanding]",
+                example: '"Before that trip, I thought I needed to plan every detail, but now I realize that the best experiences come from spontaneity."',
+                tip: '💡 Tip: Show before/after contrast. Before belief và new understanding phải clear contrast.'
+            },
+            { 
+                pattern: "What I'd do differently is [action]",
+                example: '"What I\'d do differently is leave more room for spontaneity instead of trying to control every detail."',
+                tip: '💡 Tip: Share practical application. Action phải specific và actionable.'
+            },
+            { 
+                pattern: "It taught me that [insight]",
+                example: '"It taught me that sometimes the \'detours\' are actually the destination."',
+                tip: '💡 Tip: Share memorable insight. Insight phải be universal và applicable.'
+            },
+            { 
+                pattern: "If I could go back, I would [action] because [reason]",
+                example: '"If I could go back, I would spend less time planning and more time just being present."',
+                tip: '💡 Tip: Share deeper reflection. Action và reason phải be specific và meaningful.'
+            },
+            { 
+                pattern: "Integrated lessons learned storytelling",
+                example: '"Looking back, the biggest lesson... Before... I thought... but now I realize... What I\'d do differently... It taught me that... If I could go back..."',
+                tip: '💡 Tip: Kết hợp tất cả patterns để tạo story với before/after contrast, practical application, và memorable insight.'
+            }
+        ];
+        
+        let currentCard = 0;
+        
+        function renderCard() {
+            const card = flashcards[currentCard];
+            document.getElementById('fc-pattern').textContent = card.pattern;
+            document.getElementById('fc-example').textContent = card.example;
+            document.getElementById('fc-tip').innerHTML = card.tip;
+            document.getElementById('fc-counter').textContent = `${currentCard + 1} / ${flashcards.length}`;
+            document.querySelector('.flashcard').classList.remove('flipped');
+            
+            document.getElementById('prevBtn').disabled = currentCard === 0;
+            document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
+        }
+        
+        function flipCard() {
+            document.querySelector('.flashcard').classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+        
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+        
+        // ========== QUIZ ==========
+        const answers = { q1: 'b', q2: 'b', q3: 'c', q4: 'b', q5: 'b', q6: 'b', q7: 'c' };
+        const explanations = {
+            q1: 'B share specific lesson ("adaptability > perfection"). A, C, D quá generic, không có specific lesson hoặc insight.',
+            q2: '"Before... I thought... but now I realize..." = show before/after contrast và growth. Tạo narrative arc và show personal development.',
+            q3: '"What I\'d do differently is..." = practical application của lesson. Không phải description, opinion, hay humor.',
+            q4: '"It taught me that..." = share memorable insight hoặc wisdom. Dùng khi muốn highlight lesson learned từ experience.',
+            q5: '"If I could go back, I would..." = deeper level of reflection, hypothetical. Không phải regret, complaint, hay indifference.',
+            q6: 'B là lessons learned storytelling C1 style với các patterns: "Looking back, the biggest lesson", "Before... I thought", "What I\'d do differently", "It taught me that". A, C, D quá generic.',
+            q7: 'C "The first time I tried..." là Day 18 pattern (Food & Culture), không phải Day 19 pattern. A, B, D là lessons learned patterns.'
+        };
+        
+        function checkQuiz() {
+            let score = 0;
+            const total = Object.keys(answers).length;
+            let allAnswered = true;
+            
+            for (let [q, correct] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const fb = document.getElementById(`fb-${q}`);
+                const item = document.querySelector(`input[name="${q}"]`).closest('.quiz-item');
+                const options = item.querySelectorAll('.quiz-option');
+                
+                if (!selected) {
+                    allAnswered = false;
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.textContent = '⚠️ Please select an answer first.';
+                    continue;
+                }
+                
+                options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+                
+                if (selected.value === correct) {
+                    score++;
+                    selected.closest('.quiz-option').classList.add('correct');
+                    fb.className = 'quiz-feedback correct show';
+                    fb.innerHTML = '✅ <strong>Correct!</strong> ' + explanations[q];
+                } else {
+                    selected.closest('.quiz-option').classList.add('wrong');
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input.value === correct) opt.classList.add('correct');
+                    });
+                    fb.className = 'quiz-feedback wrong show';
+                    fb.innerHTML = '❌ <strong>Not quite.</strong> ' + explanations[q];
+                }
+            }
+            
+            if (!allAnswered) return;
+            
+            const scoreBox = document.getElementById('scoreBox');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreMsg = document.getElementById('scoreMsg');
+            const scoreFill = document.getElementById('scoreFill');
+            
+            scoreBox.classList.add('show');
+            scoreValue.textContent = `${score}/${total}`;
+            scoreFill.style.width = (score / total * 100) + '%';
+            
+            if (score === total) {
+                scoreMsg.textContent = '🎉 Perfect! You\'ve mastered lessons learned storytelling!';
+            } else if (score >= total * 0.8) {
+                scoreMsg.textContent = '👍 Great job! Review the storytelling examples.';
+            } else if (score >= total * 0.6) {
+                scoreMsg.textContent = '📚 Good effort! Re-read the patterns section.';
+            } else {
+                scoreMsg.textContent = '💪 Keep going! Review the day content and retry.';
+            }
+            
+            scoreBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // ========== COMPLETE DAY ==========
+        function completeDay() {
+            const completed = JSON.parse(localStorage.getItem('week3Days') || '[]');
+            
+            if (!completed.includes(19)) {
+                completed.push(19);
+                localStorage.setItem('week3Days', JSON.stringify(completed));
+                
+                if (completed.length === 7) {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeekList') || '[]');
+                    if (!completedWeeks.includes(3)) {
+                        completedWeeks.push(3);
+                        localStorage.setItem('completedWeekList', JSON.stringify(completedWeeks));
+                        localStorage.setItem('completedWeeks', completedWeeks.length);
+                    }
+                    alert('🎉 AMAZING! Week 3 completed! You can now share wisdom and growth stories! 🦊');
+                } else {
+                    alert(`✅ Day 19 completed! ${7 - completed.length} days left in Week 3. Keep going! 🦊`);
+                }
+                
+                location.href = 'week-03-day-20.html';
+            } else {
+                if (confirm('✅ Day 19 already completed! Go to Day 20?')) {
+                    location.href = 'week-03-day-20.html';
+                }
+            }
+        }
+        
+        // ========== INIT ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCard();
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices();
+            }
+        });
+    </script>
+</body>
+</html>
