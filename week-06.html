@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6: Negotiation Thinking | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Phase 2: Green + Gold Theme */
+            --emerald: #059669;
+            --emerald-bright: #047857;
+            --emerald-soft: #D1FAE5;
+            --emerald-deep: #065F46;
+            --gold: #F59E0B;
+            --gold-bright: #D97706;
+            --gold-soft: #FEF3C7;
+            --gold-deep: #92400E;
+            --lime: #84CC16;
+            --lime-soft: #ECFCCB;
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 25%, #FEF3C7 50%, #ECFCCB 75%, #ECFDF5 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Aurora Background Animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(5, 150, 105, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 85% 20%, rgba(245, 158, 11, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(132, 204, 22, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 30% 60%, rgba(4, 120, 87, 0.3) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+            animation: aurora 20s ease-in-out infinite;
+        }
+        
+        @keyframes aurora {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            33% { transform: scale(1.15) rotate(120deg); opacity: 1; }
+            66% { transform: scale(0.95) rotate(240deg); opacity: 0.85; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .top-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--emerald-bright); }
+        
+        .week-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .week-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-icon-large { font-size: 3.5rem; margin-bottom: 16px; }
+        .week-icon-large i { --ph-color: var(--emerald-bright); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--emerald-bright), var(--gold-bright), var(--emerald));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .week-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+        
+        .week-quote {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--emerald-bright);
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 24px auto;
+            max-width: 650px;
+        }
+        
+        .week-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        
+        .week-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .week-tag i { --ph-color: var(--emerald-bright); }
+        
+        .section { margin: 48px 0; }
+        .section-header { margin-bottom: 32px; text-align: center; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .section-title i { --ph-color: var(--emerald-bright); }
+        
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(245, 158, 11, 0.15));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border-left: 4px solid var(--emerald-bright);
+            margin-bottom: 24px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--emerald-bright); }
+        
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .principle-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 4px solid var(--gold-bright);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .principle-number {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--gold-deep);
+            background: var(--gold-soft);
+            padding: 4px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .principle-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .principle-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .comparison-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-top: 24px;
+        }
+        
+        .comparison-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-item {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            border-left: 4px solid;
+        }
+        
+        .comparison-item.negative { background: rgba(245, 101, 101, 0.1); border-left-color: #F56565; }
+        .comparison-item.positive { background: rgba(72, 187, 120, 0.1); border-left-color: #48BB78; }
+        
+        .comparison-label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        /* 7 DAYS GRID */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .day-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--emerald-bright);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.4s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(5, 150, 105, 0.2);
+        }
+        
+        .day-label {
+            background: linear-gradient(135deg, var(--emerald-soft), var(--gold-soft));
+            color: var(--emerald-deep);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .day-icon { margin-bottom: 16px; }
+        .day-icon i { font-size: 2rem; --ph-color: var(--emerald-bright); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .day-focus {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(209, 250, 229, 0.5);
+        }
+        
+        .focus-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+        
+        .focus-list { list-style: none; }
+        
+        .focus-list li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed rgba(209, 250, 229, 0.5);
+        }
+        
+        .focus-list li:last-child { border-bottom: none; }
+        
+        .focus-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--emerald-bright);
+            font-weight: 600;
+        }
+        
+        .day-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(245, 158, 11, 0.15));
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--emerald-deep);
+            font-weight: 600;
+            border: 1px solid rgba(5, 150, 105, 0.2);
+        }
+        
+        .day-time i { --ph-color: var(--emerald-bright); }
+        
+        /* MILESTONE */
+        .milestone-card {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(245, 158, 11, 0.15));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid var(--emerald-bright);
+            text-align: center;
+        }
+        
+        .milestone-icon { font-size: 3.5rem; margin-bottom: 16px; }
+        .milestone-icon i { --ph-color: var(--emerald-bright); }
+        
+        .milestone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .milestone-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        
+        .milestone-skill {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.5;
+        }
+        
+        .milestone-skill i {
+            --ph-color: var(--emerald-bright);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        /* QUIZ */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .quiz-question {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--emerald-bright);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        
+        .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+        
+        .quiz-option {
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(209, 250, 229, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .quiz-option:hover { border-color: var(--emerald-bright); background: rgba(209, 250, 229, 0.2); }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--emerald-bright), var(--gold-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        /* NAVIGATION */
+        .week-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 48px 0;
+        }
+        
+        .nav-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(209, 250, 229, 0.5));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--emerald-bright), var(--gold-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .cta-container { text-align: center; margin: 48px 0; }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--emerald-bright), var(--gold-bright));
+            color: white;
+            padding: 18px 36px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(5, 150, 105, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(5, 150, 105, 0.5);
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-fox { font-size: 2.5rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .week-title { font-size: 2.5rem; }
+            .days-grid { grid-template-columns: 1fr; }
+            .milestone-skills { grid-template-columns: 1fr; }
+            .week-navigation { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Roadmap</span>
+            </a>
+            <div class="week-indicator">Week 6/24</div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="phase-02.html">Phase 2: Professional Communication</a> › Week 6
+            </div>
+            <div class="week-icon-large">
+                <i class="ph-duotone ph-handshake"></i>
+            </div>
+            <h1 class="week-title">Negotiation Thinking</h1>
+            <p class="week-description">Week 6 không dạy persuasion. Week 6 dạy negotiation mindset - cách tư duy để tạo giá trị thay vì chia giá trị. Đây là sự khác biệt giữa B2 (muốn thắng) và C1 (muốn cả hai cùng thắng).</p>
+            <div class="week-quote">"B2 speakers negotiate positions. C1 speakers negotiate interests."</div>
+            <div class="week-tags">
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> Phase 2</div>
+                <div class="week-tag"><i class="ph-duotone ph-clock"></i> 7 days × 60 min</div>
+                <div class="week-tag"><i class="ph-duotone ph-house"></i> 50% Life</div>
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> 50% Business</div>
+                <div class="week-tag"><i class="ph-duotone ph-brain"></i> Negotiation Framework</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <!-- Philosophy Section -->
+        <section class="section">
+            <div class="philosophy-section">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-lightbulb"></i>
+                    Week 6 Philosophy
+                </h2>
+                
+                <div class="philosophy-box">
+                    <div class="philosophy-title">
+                        <i class="ph-duotone ph-brain"></i>
+                        4 Negotiation Principles
+                    </div>
+                    <p>
+                        Week 5 dạy bạn <strong>professional communication</strong>. Week 6 dạy bạn <strong>negotiation thinking</strong> - framework tư duy để tạo giá trị trong mọi thương lượng. Bốn nguyên tắc này sẽ xuyên suốt 7 ngày và thay đổi cách bạn tiếp cận mọi cuộc đàm phán.
+                    </p>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 1</div>
+                        <div class="principle-title">Understand before persuading</div>
+                        <div class="principle-desc">Hiểu đối phương trước khi thuyết phục họ. Lắng nghe để biết họ thực sự cần gì, không phải họ nói họ cần gì.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 2</div>
+                        <div class="principle-title">Interests before positions</div>
+                        <div class="principle-desc">Tập trung vào lợi ích thực sự, không phải lập trường bề ngoài. "Tôi muốn tăng lương" vs "Tôi cần được công nhận giá trị".</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 3</div>
+                        <div class="principle-title">Value before compromise</div>
+                        <div class="principle-desc">Tạo giá trị trước khi thương lượng. Đừng chia chiếc bánh - hãy làm chiếc bánh lớn hơn.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 4</div>
+                        <div class="principle-title">Commitment before agreement</div>
+                        <div class="principle-desc">Cam kết cụ thể trước khi đồng ý chung chung. "Ai làm gì, khi nào, và làm sao biết đã xong?"</div>
+                    </div>
+                </div>
+                
+                <div class="comparison-section">
+                    <div class="comparison-title">Persuasion vs Negotiation Thinking</div>
+                    
+                    <div class="comparison-item negative">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            Persuasion (B2 mindset)
+                        </div>
+                        <div class="comparison-text">
+                            "I want more budget because we need it. This is important for our team. You should approve this."
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item positive">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            Negotiation Thinking (C1 mindset)
+                        </div>
+                        <div class="comparison-text">
+                            "Help me understand what's driving your concern about budget. What if we structured this so it delivers ROI in Q3 while addressing your risk concerns? Let's map out who does what by when."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7 Days Grid -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-calendar"></i>
+                    7 Days of Negotiation Thinking
+                </h2>
+                <p class="section-desc">Mỗi ngày xây dựng một khía cạnh của negotiation mindset. Từ hiểu interests đến tạo commitment cụ thể.</p>
+            </div>
+            
+            <div class="days-grid">
+                <a href="week-06-day-36.html" class="day-card">
+                    <div class="day-label">DAY 36</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-brain"></i>
+                    </div>
+                    <div class="day-title">Negotiation Mindset & Interests</div>
+                    <div class="day-subtitle">Understand interests vs positions. Listen to understand, not to respond.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"Help me understand what's driving that concern..."</li>
+                            <li>"What's most important to you about this?"</li>
+                            <li>"If we could solve X, would that address your concern?"</li>
+                            <li>"What would success look like for you?"</li>
+                            <li>"What's the real challenge here?"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-06-day-37.html" class="day-card">
+                    <div class="day-label">DAY 37</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-chart-bar"></i>
+                    </div>
+                    <div class="day-title">Building the Business Case</div>
+                    <div class="day-subtitle">Structure your proposal with cost, benefit, risk, and recommendation.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"The investment would be... with ROI of..."</li>
+                            <li>"The risk of inaction is..."</li>
+                            <li>"Here are the alternatives we considered..."</li>
+                            <li>"My recommendation is... because..."</li>
+                            <li>"The trade-off is..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-06-day-38.html" class="day-card">
+                    <div class="day-label">DAY 38</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-shield-check"></i>
+                    </div>
+                    <div class="day-title">Handling Objections</div>
+                    <div class="day-subtitle">Turn objections into opportunities. Address concerns without being defensive.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"I understand your concern about..."</li>
+                            <li>"That's a valid point. Let me address that..."</li>
+                            <li>"What if we approached it this way..."</li>
+                            <li>"The data actually shows..."</li>
+                            <li>"Here's how we'd mitigate that risk..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-06-day-39.html" class="day-card">
+                    <div class="day-label">DAY 39</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-users"></i>
+                    </div>
+                    <div class="day-title">Stakeholder Mapping & Win-Win</div>
+                    <div class="day-subtitle">Map stakeholder interests. Create solutions where everyone wins.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"What if we structured this so everyone wins?"</li>
+                            <li>"Here's how this benefits both of us..."</li>
+                            <li>"The key is finding where our interests align..."</li>
+                            <li>"What would make this work for you?"</li>
+                            <li>"Let's explore options that..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-06-day-40.html" class="day-card">
+                    <div class="day-label">DAY 40</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-network"></i>
+                    </div>
+                    <div class="day-title">Coalition Building</div>
+                    <div class="day-subtitle">Build alliances across departments. Influence networks, not just individuals.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"I'd love your perspective on this..."</li>
+                            <li>"Your expertise would be invaluable because..."</li>
+                            <li>"This aligns with what you've been working on..."</li>
+                            <li>"Would you be open to exploring..."</li>
+                            <li>"I'm counting on your support because..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-06-day-41.html" class="day-card">
+                    <div class="day-label">DAY 41</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-handshake"></i>
+                    </div>
+                    <div class="day-title">Commitment & Follow-through</div>
+                    <div class="day-subtitle">Get specific commitments. Who does what, by when, and how we'll know it's done.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"Based on what we've discussed, the next step would be..."</li>
+                            <li>"Are we aligned on moving forward with..."</li>
+                            <li>"What would it take to get this approved by..."</li>
+                            <li>"Let's commit to [action] by [date]..."</li>
+                            <li>"How will we know this is successful?"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-06-day-42.html" class="day-card">
+                    <div class="day-label">DAY 42</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-trophy"></i>
+                    </div>
+                    <div class="day-title">Negotiation Simulation</div>
+                    <div class="day-subtitle">Full negotiation simulation. Apply all 6 days in one complete negotiation.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Focus:</div>
+                        <ul class="focus-list">
+                            <li>Complete negotiation from start to finish</li>
+                            <li>Apply 4 principles in real-time</li>
+                            <li>Self-assessment & reflection</li>
+                            <li>Celebrate Milestone 6</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Milestone Card -->
+        <div class="milestone-card">
+            <div class="milestone-icon">
+                <i class="ph-duotone ph-trophy"></i>
+            </div>
+            <div class="milestone-title">Milestone 6: Negotiation Thinking</div>
+            <p class="milestone-subtitle">Sau tuần 6, bạn sẽ tư duy như một negotiator C1 - tạo giá trị thay vì chia giá trị, hiểu interests thay vì đấu tranh positions.</p>
+            <div class="milestone-skills">
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Understand interests before positions</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Build compelling business cases</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Handle objections gracefully</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Map stakeholder interests</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Create win-win solutions</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Build coalitions across departments</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Get specific commitments</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Follow through on agreements</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Navigate complex negotiations</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Create value for all parties</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Think strategically about trade-offs</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Lead negotiations with confidence</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2 class="section-title">
+                <i class="ph-duotone ph-pencil-simple"></i>
+                Week 6 Preview Quiz
+            </h2>
+            <p class="section-desc" style="margin-bottom: 24px;">Kiểm tra hiểu biết về negotiation thinking vs persuasion. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-question">
+                <h4>1. Triết lý của Week 6 là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Persuasion là về thuyết phục người khác đồng ý với bạn</div>
+                    <div class="quiz-option">B. Negotiation là về thắng-thua, một bên được một bên mất</div>
+                    <div class="quiz-option">C. Negotiation thinking là về tạo giá trị cho cả hai bên</div>
+                    <div class="quiz-option">D. Negotiation là về compromise và chia giá trị</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>2. Sự khác biệt giữa interests và positions là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Interests là lập trường bề ngoài, positions là lợi ích thực sự</div>
+                    <div class="quiz-option">B. Interests là lợi ích thực sự, positions là lập trường bề ngoài</div>
+                    <div class="quiz-option">C. Interests và positions là một</div>
+                    <div class="quiz-option">D. Interests quan trọng hơn positions</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>3. Principle nào nói về việc hiểu đối phương trước khi thuyết phục?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Understand before persuading</div>
+                    <div class="quiz-option">B. Interests before positions</div>
+                    <div class="quiz-option">C. Value before compromise</div>
+                    <div class="quiz-option">D. Commitment before agreement</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>4. Câu nào thể hiện negotiation thinking C1 style?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "I want more budget because we need it."</div>
+                    <div class="quiz-option">B. "Help me understand what's driving your concern about budget. What if we structured this so it delivers ROI in Q3?"</div>
+                    <div class="quiz-option">C. "This is important for our team. You should approve this."</div>
+                    <div class="quiz-option">D. "We need this budget or the project will fail."</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>5. Week 6 tập trung vào kỹ năng gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Persuasion techniques</div>
+                    <div class="quiz-option">B. Negotiation thinking framework</div>
+                    <div class="quiz-option">C. Presentation skills</div>
+                    <div class="quiz-option">D. Conflict resolution</div>
+                </div>
+            </div>
+            
+            <button class="check-btn">
+                <i class="ph-duotone ph-check"></i>
+                Check Answers
+            </button>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="week-navigation">
+            <a href="week-05.html" class="nav-card">
+                <div class="nav-label">← Previous Week</div>
+                <div class="nav-title">Week 5: Strategic Workplace Communication</div>
+            </a>
+            <a href="week-07.html" class="nav-card">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 7: Leadership Communication</div>
+            </a>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="cta-container">
+            <a href="week-06-day-36.html" class="cta-button">
+                <i class="ph-duotone ph-rocket-launch"></i>
+                <span>Start Week 6: Day 36 - Negotiation Mindset</span>
+            </a>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Phase 2 · Week 6 · Negotiation Thinking</div>
+        </div>
+    </footer>
+    
+</body>
+</html>
