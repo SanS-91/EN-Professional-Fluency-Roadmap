@@ -1,0 +1,3232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Day 27: Memory & Bond Creation | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Peach/Orange Theme - Memory & Bond Creation */
+            --primary: #FB923C;
+            --primary-bright: #EA580C;
+            --primary-soft: #FFEDD5;
+            --primary-deep: #9A3412;
+            --primary-light: #FDBA74;
+            
+            /* Flexible Highlight Colors */
+            --highlight-gold: #D97706;
+            --highlight-green: #059669;
+            --highlight-blue: #2563EB;
+            --highlight-purple: #7C3AED;
+            --highlight-orange: #DC2626;
+            
+            --green: #10B981;
+            --green-soft: #D1FAE5;
+            --green-deep: #065F46;
+            
+            --blue: #3B82F6;
+            --blue-soft: #DBEAFE;
+            --blue-deep: #1E40AF;
+            
+            --purple: #8B5CF6;
+            --purple-soft: #F3E8FF;
+            --purple-deep: #6B21A8;
+            
+            --orange: #F97316;
+            --orange-soft: #FFEDD5;
+            --orange-deep: #9A3412;
+            
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FAFAFA;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Top Nav */
+        .top-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--primary-bright); }
+        
+        .day-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .progress-bar {
+            width: 80px;
+            height: 6px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-bright));
+            border-radius: 3px;
+            width: 21%;
+        }
+        
+        /* Day Tabs */
+        .day-tabs-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 57px;
+            z-index: 99;
+            padding: 12px 0;
+        }
+        
+        .day-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 0 4px;
+            scrollbar-width: none;
+        }
+        
+        .day-tabs::-webkit-scrollbar { display: none; }
+        
+        .day-tab {
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .day-tab:hover {
+            background: rgba(255, 255, 255, 1);
+            color: var(--primary-bright);
+        }
+        
+        .day-tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+        }
+        
+        /* Header */
+        .day-header {
+            background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 50%, #FDBA74 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::after {
+            content: '🧠';
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+        
+        .breadcrumb {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .day-icon-inline {
+            font-size: 2rem;
+        }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .day-subtitle strong {
+            color: var(--primary-deep);
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .meta-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .meta-tag i { --ph-color: var(--primary-bright); }
+        
+        /* Content area */
+        .content-area {
+            background: #FAFAFA;
+            padding: 40px 0;
+        }
+        
+        /* Section base */
+        .section { margin: 40px 0; }
+        
+        .section-header {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i { --ph-color: var(--primary-bright); }
+        
+        .section-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.5;
+        }
+        
+        /* C1 Insight Banner */
+        .c1-insight {
+            background: linear-gradient(135deg, var(--primary-soft), rgba(253, 186, 116, 0.3));
+            border-radius: var(--radius-md);
+            padding: 24px 28px;
+            margin-bottom: 28px;
+            border-left: 4px solid var(--primary);
+            text-align: center;
+        }
+        
+        .c1-insight .label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary-deep);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .c1-insight .insight {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        /* Philosophy section */
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(251, 146, 60, 0.2);
+        }
+        
+        .philosophy-box {
+            background: #FFFBEB;
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 4px solid var(--highlight-gold);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--highlight-gold); }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .philosophy-box strong {
+            color: var(--primary-deep);
+        }
+        
+        .comparison-box {
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .comparison-box.negative {
+            background: rgba(245, 101, 101, 0.08);
+            border-left: 4px solid #F56565;
+        }
+        
+        .comparison-box.positive {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid #10B981;
+        }
+        
+        .comparison-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .comparison-box.negative .comparison-title { color: #C53030; }
+        .comparison-box.positive .comparison-title { color: #065F46; }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .comparison-list {
+            list-style: none;
+        }
+        
+        .comparison-list li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .comparison-box.negative .comparison-list li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: 600;
+        }
+        
+        .comparison-box.positive .comparison-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        /* Memory Formula box */
+        .memory-formula {
+            background: linear-gradient(135deg, rgba(255, 237, 213, 0.5), rgba(253, 186, 116, 0.3));
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-top: 28px;
+            border: 2px solid var(--primary);
+            text-align: center;
+        }
+        
+        .memory-formula h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 20px;
+        }
+        
+        .formula-content {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .formula-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .formula-step {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 12px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .formula-plus {
+            font-size: 20px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .formula-arrow {
+            font-size: 20px;
+            color: var(--primary);
+        }
+        
+        .formula-result {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            padding: 12px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .formula-explanation {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-style: italic;
+        }
+        
+        /* Emotion Curve */
+        .emotion-curve {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-top: 28px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(251, 146, 60, 0.2);
+        }
+        
+        .emotion-curve h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .curve-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .curve-step {
+            text-align: center;
+        }
+        
+        .curve-step .phase {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            margin-bottom: 4px;
+        }
+        
+        .curve-step .meaning {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        
+        .curve-arrow {
+            font-size: 20px;
+            color: var(--primary);
+        }
+        
+        .curve-insight {
+            margin-top: 20px;
+            padding: 14px 18px;
+            background: rgba(255, 237, 213, 0.5);
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .curve-insight strong {
+            color: var(--primary-deep);
+        }
+        
+        /* Principles grid - Alternating tints */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .principle-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+        
+        .principle-card:nth-child(1) { border-left: 4px solid var(--highlight-gold); }
+        .principle-card:nth-child(2) { border-left: 4px solid var(--highlight-green); }
+        .principle-card:nth-child(3) { border-left: 4px solid var(--highlight-blue); }
+        .principle-card:nth-child(4) { border-left: 4px solid var(--highlight-purple); }
+        .principle-card:nth-child(5) { border-left: 4px solid var(--highlight-orange); }
+        
+        .principle-number {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Fraunces', serif;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+        }
+        
+        .principle-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 8px;
+            margin-top: 8px;
+        }
+        
+        .principle-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        /* Reading Signals box */
+        .reading-signals {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-top: 28px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(251, 146, 60, 0.2);
+        }
+        
+        .reading-signals h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .rs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        
+        .rs-col {
+            padding: 20px;
+            border-radius: var(--radius-md);
+        }
+        
+        .rs-col.ready {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid #10B981;
+        }
+        
+        .rs-col.space {
+            background: rgba(59, 130, 246, 0.08);
+            border-left: 4px solid #3B82F6;
+        }
+        
+        .rs-col h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        
+        .rs-col.ready h4 { color: #065F46; }
+        .rs-col.space h4 { color: #1E40AF; }
+        
+        .rs-col ul {
+            list-style: none;
+        }
+        
+        .rs-col li {
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .rs-col.ready li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        .rs-col.space li::before {
+            content: '⚠';
+            position: absolute;
+            left: 0;
+            color: #3B82F6;
+            font-weight: 600;
+        }
+        
+        .rs-action {
+            margin-top: 20px;
+            padding: 14px 18px;
+            background: rgba(255, 237, 213, 0.5);
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .rs-action strong {
+            color: var(--primary-deep);
+        }
+        
+        /* Plan grid */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .plan-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .plan-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .plan-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-time {
+            font-size: 12px;
+            color: var(--primary-bright);
+            font-weight: 600;
+            margin-bottom: 4px;
+            background: rgba(255, 237, 213, 0.5);
+            padding: 2px 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .plan-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        /* Pattern card */
+        .pattern-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .pattern-header {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Fraunces', serif;
+            font-size: 18px;
+            box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+        }
+        
+        .pattern-content { flex: 1; }
+        
+        .pattern-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .pattern-ipa {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: monospace;
+            margin-bottom: 8px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .pattern-rating {
+            font-size: 12px;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .pattern-context {
+            font-size: 12px;
+            color: var(--text-muted);
+            background: rgba(255, 237, 213, 0.5);
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        
+        .pattern-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-why {
+            background: rgba(255, 237, 213, 0.4);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .pattern-why strong {
+            color: var(--primary-deep);
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        
+        .pattern-why p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        .pattern-examples {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-examples h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .example {
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .example-tag {
+            flex-shrink: 0;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            background: rgba(255, 237, 213, 0.8);
+            color: var(--primary-deep);
+        }
+        
+        .example-tag.business {
+            background: rgba(219, 234, 254, 0.8);
+            color: #1E40AF;
+        }
+        
+        .audio-btn {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .audio-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+        }
+        
+        .audio-btn i { --ph-color: white; font-size: 12px; }
+        
+        .connection-bridge {
+            background: rgba(243, 232, 255, 0.5);
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--highlight-purple);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .bridge-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .bridge-content {
+            flex: 1;
+        }
+        
+        .bridge-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--highlight-purple);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .bridge-examples {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        .bridge-examples strong {
+            color: var(--highlight-purple);
+            font-style: normal;
+        }
+        
+        .pattern-usage {
+            background: rgba(255, 237, 213, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        .pattern-usage strong {
+            color: var(--primary-deep);
+        }
+        
+        /* Common Mistakes box - Soft red background */
+        .common-mistakes {
+            background: #FEF2F2;
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-top: 28px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        .common-mistakes h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--highlight-orange);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .cm-item {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.8);
+            border-left: 3px solid #F56565;
+        }
+        
+        .cm-item .mistake {
+            font-size: 13px;
+            color: #C53030;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .cm-item .better {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-style: italic;
+            padding-left: 20px;
+        }
+        
+        .cm-item .better::before {
+            content: '→ ';
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        /* Memory Creation Flow */
+        .memory-flow {
+            background: linear-gradient(135deg, rgba(255, 237, 213, 0.5), rgba(253, 186, 116, 0.3));
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-top: 28px;
+            border: 2px solid var(--primary);
+            text-align: center;
+        }
+        
+        .memory-flow h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 20px;
+        }
+        
+        .flow-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .flow-step {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 12px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .flow-arrow {
+            font-size: 20px;
+            color: var(--primary);
+        }
+        
+        /* Story card */
+        .story-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .story-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .story-text {
+            background: rgba(255, 237, 213, 0.2);
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .story-text strong {
+            color: var(--primary-deep);
+            font-style: normal;
+        }
+        
+        .story-analysis h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .story-analysis ul {
+            list-style: none;
+        }
+        
+        .story-analysis li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .story-analysis li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        /* Audio controls for stories */
+        .story-audio-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        
+        .story-audio-btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .story-play-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+        }
+        
+        .story-play-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+        }
+        
+        .story-stop-btn {
+            background: rgba(245, 101, 101, 0.1);
+            color: #DC2626;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        .story-stop-btn:hover {
+            background: rgba(245, 101, 101, 0.2);
+        }
+        
+        /* Pronunciation table */
+        .pronunciation-table {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .pronunciation-table h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .pronunciation-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .pronunciation-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .intonation-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .intonation-item .phrase {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        /* Scenario cards */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .scenario-card {
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border: 2px solid;
+        }
+        
+        .scenario-card.casual {
+            background: rgba(209, 250, 229, 0.3);
+            border-color: var(--green);
+        }
+        
+        .scenario-card.professional {
+            background: rgba(219, 234, 254, 0.3);
+            border-color: var(--blue);
+        }
+        
+        .scenario-card.mixed {
+            background: rgba(243, 232, 255, 0.3);
+            border-color: var(--purple);
+        }
+        
+        .scenario-card.challenge {
+            background: rgba(255, 237, 213, 0.3);
+            border-color: var(--orange);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: white;
+        }
+        
+        .scenario-card.casual .scenario-badge { background: var(--green); }
+        .scenario-card.professional .scenario-badge { background: var(--blue); }
+        .scenario-card.mixed .scenario-badge { background: var(--purple); }
+        .scenario-card.challenge .scenario-badge { background: var(--orange); }
+        
+        .scenario-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .scenario-context {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            line-height: 1.4;
+        }
+        
+        .scenario-requirements {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .scenario-requirements h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .scenario-requirements ul {
+            list-style: none;
+        }
+        
+        .scenario-requirements li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .scenario-requirements li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .sample-flow-btn {
+            background: white;
+            border: 2px solid;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .scenario-card.casual .sample-flow-btn { border-color: var(--green); color: var(--green-deep); }
+        .scenario-card.professional .sample-flow-btn { border-color: var(--blue); color: var(--blue-deep); }
+        .scenario-card.mixed .sample-flow-btn { border-color: var(--purple); color: var(--purple-deep); }
+        .scenario-card.challenge .sample-flow-btn { border-color: var(--orange); color: var(--orange-deep); }
+        
+        .sample-flow-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Task cards */
+        .task-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 16px;
+            position: relative;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid;
+        }
+        
+        .task-card.easy { border-left-color: #10B981; }
+        .task-card.standard { border-left-color: var(--primary); }
+        .task-card.challenge { border-left-color: #EF4444; }
+        
+        .task-level {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+        .task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+        .task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+        
+        .task-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .task-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .task-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 14px;
+        }
+        
+        .task-requirements {
+            background: rgba(255, 237, 213, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .task-requirements h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 8px;
+        }
+        
+        .task-requirements ul {
+            list-style: none;
+        }
+        
+        .task-requirements li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .task-requirements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .task-choice {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .task-choice h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 8px;
+        }
+        
+        .task-choice label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+        
+        .task-choice input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+        
+        .task-deliverable {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            background: rgba(255, 237, 213, 0.3);
+            border-radius: var(--radius-sm);
+        }
+        
+        /* Mastery card */
+        .mastery-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .mastery-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mastery-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px;
+            background: rgba(255, 237, 213, 0.2);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+        }
+        
+        .mastery-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            cursor: pointer;
+            accent-color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .mastery-item label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            line-height: 1.4;
+        }
+        
+        /* Success criteria */
+        .success-card {
+            background: rgba(209, 250, 229, 0.5);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--green);
+            margin-top: 20px;
+        }
+        
+        .success-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--green-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .success-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--green-deep);
+        }
+        
+        .success-item i { --ph-color: var(--green); font-size: 18px; }
+        
+        /* Pro tips - Soft orange */
+        .tips-card {
+            background: #FFF7ED;
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--orange);
+            margin-top: 20px;
+        }
+        
+        .tips-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--orange-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tip-item {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--orange-deep);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+        
+        .tip-item strong {
+            color: var(--orange-deep);
+        }
+        
+        /* Flashcard */
+        .flashcard-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .flashcard {
+            background: linear-gradient(135deg, rgba(255, 237, 213, 0.5), rgba(253, 186, 116, 0.3));
+            border-radius: var(--radius-md);
+            padding: 32px;
+            margin-bottom: 16px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .flashcard:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(251, 146, 60, 0.15);
+        }
+        
+        .flashcard-front p {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+        
+        .flashcard-front button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .flashcard-back {
+            display: none;
+        }
+        
+        .flashcard-back.active {
+            display: block;
+        }
+        
+        .flashcard-back p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 14px;
+            line-height: 1.4;
+        }
+        
+        .flashcard-tip {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        .flashcard-tip strong {
+            color: var(--primary-deep);
+        }
+        
+        .flashcard-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .flashcard-nav button {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(251, 146, 60, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .flashcard-nav button:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .flashcard-nav span {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        /* Quiz */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 32px 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .quiz-question {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(255, 237, 213, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: rgba(255, 237, 213, 0.2);
+        }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(251, 146, 60, 0.3);
+        }
+        
+        /* Navigation */
+        .day-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 40px 0;
+        }
+        
+        .nav-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(251, 146, 60, 0.15);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        /* Complete button */
+        .complete-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(251, 146, 60, 0.4);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(251, 146, 60, 0.5);
+        }
+        
+        .complete-btn i { font-size: 1.2rem; }
+        
+        .complete-message {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 32px 0 24px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .day-title { font-size: 1.8rem; }
+            .day-tabs-container { top: 52px; }
+            .day-navigation { grid-template-columns: 1fr; }
+            .pattern-header { flex-direction: column; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .rs-grid { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+            .cm-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); }
+            .formula-steps { flex-direction: column; }
+            .formula-plus, .formula-arrow { transform: rotate(90deg); }
+            .curve-steps { flex-direction: column; }
+            .curve-arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-04.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Week 4 Hub</span>
+            </a>
+            <div class="day-indicator">
+                Day 27 / 28
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <div class="day-tabs-container">
+        <div class="container">
+            <div class="day-tabs">
+                <a href="week-04.html" class="day-tab">Overview</a>
+                <a href="week-04-day-22.html" class="day-tab">Day 22</a>
+                <a href="week-04-day-23.html" class="day-tab">Day 23</a>
+                <a href="week-04-day-24.html" class="day-tab">Day 24</a>
+                <a href="week-04-day-25.html" class="day-tab">Day 25</a>
+                <a href="week-04-day-26.html" class="day-tab">Day 26</a>
+                <a href="week-04-day-27.html" class="day-tab active">Day 27</a>
+                <a href="week-04-day-28.html" class="day-tab">Day 28</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="week-04.html">Week 4</a> › Day 27
+            </div>
+            <div class="day-title-row">
+                <span class="day-icon-inline">🧠</span>
+                <h1 class="day-title">Memory & Bond Creation</h1>
+            </div>
+            <p class="day-subtitle">Connection isn't a one-time event. It's a garden. Today you'll learn to maintain relationships through <strong>consistent, low-pressure care</strong> — so connections grow instead of fading after the first meeting.</p>
+            <div class="day-meta">
+                <div class="meta-tag"><i class="ph-duotone ph-brain"></i> Memory & Bond Creation</div>
+                <div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+                <div class="meta-tag"><i class="ph-duotone ph-books"></i> 6 memory patterns</div>
+                <div class="meta-tag"><i class="ph-duotone ph-heart"></i> Shared memories</div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Content area -->
+    <div class="content-area">
+        <div class="container">
+            
+            <!-- C1 Insight -->
+            <div class="c1-insight">
+                <div class="label">💡 C1 Insight</div>
+                <div class="insight">
+                    <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+                        <div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
+                            <div style="font-size: 14px;">"Let's hang out sometime" → (Vague, never happens)</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
+                            <div style="font-size: 14px;">"Remember when we got lost and had the best adventure?" → (Specific, memorable, bond-reinforcing)</div>
+                        </div>
+                    </div>
+                    "B2 speakers invite people to activities. C1 speakers create memories that become the foundation of relationships."
+                </div>
+            </div>
+            
+            <!-- Today's Philosophy -->
+            <section class="section">
+                <div class="philosophy-section">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        Today's Philosophy
+                    </h2>
+                    
+                    <div class="philosophy-box">
+                        <div class="philosophy-title">
+                            <i class="ph-duotone ph-brain"></i>
+                            From Activities to Memories
+                        </div>
+                        <p>
+                            Most people think connection happens through activities: "Let's grab coffee." "We should hang out." But C1 connectors understand that <span style="color: var(--highlight-gold); font-weight: 600;">activities are just the vehicle</span>. What matters is what happens during them — the moments that become memories, the memories that become stories, the stories that become the foundation of relationships.
+                            <br><br>
+                            <span style="color: var(--highlight-gold); font-weight: 600;">Experiences beat conversations. Memories outlast words.</span>
+                            <br><br>
+                            <span style="color: var(--highlight-green); font-weight: 600;">People don't remember what you did together. They remember how it made them feel — and the stories they can retell for years.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="comparison-box negative">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            Why most shared activities don't create bonds
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Focus on the activity, not the experience</li>
+                            <li>No novelty or surprise</li>
+                            <li>No emotional peaks</li>
+                            <li>No shared challenges or surprises</li>
+                            <li>No stories to retell later</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-box positive">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            What C1 connectors do differently
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Create moments worth remembering: "Remember when we got lost and ended up at that amazing café?"</li>
+                            <li>Embrace the unexpected: "This won't be the same without you"</li>
+                            <li>Build emotional peaks: "One day we'll laugh about this"</li>
+                            <li>Create stories to retell: "This made me think of you"</li>
+                            <li>Transform activities into memories: "I'll always remember when we..."</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Memory Formula -->
+                    <div class="memory-formula">
+                        <h3>🧠 The Memory Formula</h3>
+                        <div class="formula-content">
+                            <div class="formula-steps">
+                                <div class="formula-step">Novelty</div>
+                                <div class="formula-plus">+</div>
+                                <div class="formula-step">Emotion</div>
+                                <div class="formula-plus">+</div>
+                                <div class="formula-step">Shared Moment</div>
+                                <div class="formula-arrow">↓</div>
+                                <div class="formula-result">Long-term Memory</div>
+                            </div>
+                            <div class="formula-explanation">
+                                This is why mundane activities don't create bonds, but unexpected adventures do. The brain remembers what's novel, emotional, and shared.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Emotion Curve -->
+                    <div class="emotion-curve">
+                        <h3>📈 The Lifecycle of a Shared Experience</h3>
+                        <div class="curve-steps">
+                            <div class="curve-step">
+                                <div class="phase">Planning</div>
+                                <div class="meaning">Anticipation</div>
+                            </div>
+                            <div class="curve-arrow">→</div>
+                            <div class="curve-step">
+                                <div class="phase">Doing</div>
+                                <div class="meaning">Action</div>
+                            </div>
+                            <div class="curve-arrow">→</div>
+                            <div class="curve-step">
+                                <div class="phase">Laughing</div>
+                                <div class="meaning">Joy</div>
+                            </div>
+                            <div class="curve-arrow">→</div>
+                            <div class="curve-step">
+                                <div class="phase">Remembering</div>
+                                <div class="meaning">Memory</div>
+                            </div>
+                            <div class="curve-arrow">→</div>
+                            <div class="curve-step">
+                                <div class="phase">Retelling</div>
+                                <div class="meaning">Story</div>
+                            </div>
+                        </div>
+                        <div class="curve-insight">
+                            <strong>💡 Key Insight:</strong> The real bonding happens in the <strong>Remembering</strong> and <strong>Retelling</strong> phases. That's when an activity becomes a memory, and a memory becomes a relationship story.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 5 Principles of Memory Creation -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-star"></i>
+                        5 Principles of Memory Creation
+                    </h2>
+                    <p class="section-desc">Framework để tạo ra những ký ức chung bền vững. Không chỉ là kỹ thuật — đây là mindset.</p>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-number">1</div>
+                        <div class="principle-title">Experiences beat conversations</div>
+                        <div class="principle-desc"><span style="color: var(--highlight-gold); font-weight: 600;">Shared moments create stronger bonds than just talking.</span></div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">2</div>
+                        <div class="principle-title">Memories outlast words</div>
+                        <div class="principle-desc"><span style="color: var(--highlight-green); font-weight: 600;">What you do together matters more than what you say.</span></div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">3</div>
+                        <div class="principle-title">Embrace the unexpected</div>
+                        <div class="principle-desc"><span style="color: var(--highlight-blue); font-weight: 600;">Perfect plans don't create stories. Surprises do.</span></div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">4</div>
+                        <div class="principle-title">Be fully present</div>
+                        <div class="principle-desc"><span style="color: var(--highlight-purple); font-weight: 600;">Distraction kills memory creation.</span></div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">5</div>
+                        <div class="principle-title">Create stories worth retelling</div>
+                        <div class="principle-desc"><span style="color: var(--highlight-orange); font-weight: 600;">The best experiences are the ones you can talk about for years.</span></div>
+                    </div>
+                </div>
+                
+                <!-- Reading Signals -->
+                <div class="reading-signals">
+                    <h3><i class="ph-duotone ph-eye"></i> Reading the Room: When Experiences Create Bonds</h3>
+                    
+                    <div class="rs-grid">
+                        <div class="rs-col ready">
+                            <h4>✅ Signs an experience is creating a bond:</h4>
+                            <ul>
+                                <li>Laughter, inside jokes forming</li>
+                                <li>Shared challenges or surprises</li>
+                                <li>"Remember when..." moments emerging</li>
+                                <li>Photos/screenshots being taken (not just for Instagram)</li>
+                                <li>"We should do this again" with genuine enthusiasm</li>
+                            </ul>
+                        </div>
+                        <div class="rs-col space">
+                            <h4>⚠️ Signs it's just an activity, not a bond:</h4>
+                            <ul>
+                                <li>Polite but distant</li>
+                                <li>No shared moments of surprise or joy</li>
+                                <li>No "remember when" potential</li>
+                                <li>Feels like checking a box</li>
+                                <li>"Instagram Experience" (doing it only for photos)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rs-action">
+                        <strong>💡 What to do:</strong>
+                        <ul style="margin-top: 8px; padding-left: 20px; list-style: none;">
+                            <li style="padding: 4px 0;">• Creating bond → Lean into the moment, embrace surprises, be present</li>
+                            <li style="padding: 4px 0;">• Just activity → Add novelty, create shared challenge, be fully present</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Today's Plan -->
+            <section class="section">
+                <div class="philosophy-section">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-calendar-check"></i>
+                        Today's Plan (60 min)
+                    </h2>
+                    
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <div class="plan-icon">💡</div>
+                            <div class="plan-title">6 Patterns + Bridges</div>
+                            <div class="plan-time">15 min</div>
+                            <div class="plan-desc">Memory creation patterns</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🎭</div>
+                            <div class="plan-title">Examples</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">Integrated stories</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🗣️</div>
+                            <div class="plan-title">Speaking</div>
+                            <div class="plan-time">25 min</div>
+                            <div class="plan-desc">4 scenarios + record</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🎴</div>
+                            <div class="plan-title">Review</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">Flashcards + quiz</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 6 Memory & Bond Creation Patterns -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-brain"></i>
+                        6 Memory & Bond Creation Patterns
+                    </h2>
+                    <p class="section-desc">6 patterns để tạo ra những ký ức chung bền vững. Mỗi pattern đều có <strong>Connection Bridge</strong> để biến experience thành memory. Click 🔊 để nghe phát âm.</p>
+                </div>
+                
+                <!-- Pattern 1 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">1</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"Remember when we..."</div>
+                            <div class="pattern-ipa">/rɪˈmɛmbər wɛn wiː/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Invoke shared memory. Reinforce bond through shared history.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p><span style="color: var(--highlight-blue); font-weight: 600;">"Remember when" = invoke shared memory.</span> Reinforces bond through shared history. Creates sense of ongoing relationship. Natural way to reference past experiences.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"Remember when we got lost in that city and ended up having the best adventure?"</span>
+                            <button class="audio-btn" onclick="playAudio('Remember when we got lost in that city and ended up having the best adventure?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"Remember when we tried that recipe and it turned out amazing?"</span>
+                            <button class="audio-btn" onclick="playAudio('Remember when we tried that recipe and it turned out amazing?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"Remember when we worked on that project together and pulled it off?"</span>
+                            <button class="audio-btn" onclick="playAudio('Remember when we worked on that project together and pulled it off?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"Remember when we had that brainstorming session and came up with the idea?"</span>
+                            <button class="audio-btn" onclick="playAudio('Remember when we had that brainstorming session and came up with the idea?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"We should do that again sometime."</strong> · <strong>"Those were such good times."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Must reference positive shared experience. Creates nostalgia and reinforces bond.
+                    </div>
+                </div>
+                
+                <!-- Pattern 2 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">2</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"This made me think of you"</div>
+                            <div class="pattern-ipa">/ðɪs meɪd miː θɪŋk əv juː/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Show you're thinking of them. Create connection through shared association.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p><span style="color: var(--highlight-green); font-weight: 600;">"This made me think of you" = show association.</span> Creates sense of connection even when apart. Shows they're on your mind. Natural way to maintain bond.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"This café made me think of you — you'd love it."</span>
+                            <button class="audio-btn" onclick="playAudio('This café made me think of you. You\'d love it.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"This song made me think of that trip we took."</span>
+                            <button class="audio-btn" onclick="playAudio('This song made me think of that trip we took.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"This article made me think of you — it's exactly what we talked about."</span>
+                            <button class="audio-btn" onclick="playAudio('This article made me think of you. It\'s exactly what we talked about.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"This project made me think of your approach — you'd handle it perfectly."</span>
+                            <button class="audio-btn" onclick="playAudio('This project made me think of your approach. You\'d handle it perfectly.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"We should check it out together."</strong> · <strong>"I'd love to hear your thoughts."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Must be genuine association. Shows you're thinking of them even when apart.
+                    </div>
+                </div>
+                
+                <!-- Pattern 3 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">3</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"This won't be the same without you"</div>
+                            <div class="pattern-ipa">/ðɪs woʊnt biː ðə sem wɪˈðaʊt juː/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Express their importance. Show they're irreplaceable.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p><span style="color: var(--highlight-gold); font-weight: 600;">"Won't be the same without you" = express importance.</span> Shows they're irreplaceable. Creates sense of value and belonging. Natural way to express appreciation.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"This trip won't be the same without you — you always make everything more fun."</span>
+                            <button class="audio-btn" onclick="playAudio('This trip won\'t be the same without you. You always make everything more fun.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"The team won't be the same without you — you bring such great energy."</span>
+                            <button class="audio-btn" onclick="playAudio('The team won\'t be the same without you. You bring such great energy.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"This project won't be the same without your perspective."</span>
+                            <button class="audio-btn" onclick="playAudio('This project won\'t be the same without your perspective.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"The event won't be the same without you there."</span>
+                            <button class="audio-btn" onclick="playAudio('The event won\'t be the same without you there.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"I hope you can make it."</strong> · <strong>"It just wouldn't be the same."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Express genuine importance. Shows they're valued and irreplaceable.
+                    </div>
+                </div>
+                
+                <!-- Pattern 4 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">4</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"This feels like something we'd both enjoy"</div>
+                            <div class="pattern-ipa">/ðɪs fiːlz laɪk ˈsʌmθŋ wiːd boʊθ ɪnˈdʒɔɪ/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐ High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Express shared interest. Show you understand them.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p><span style="color: var(--highlight-blue); font-weight: 600;">"Feels like something we'd both enjoy" = express shared interest.</span> Shows you understand them and see compatibility. Creates sense of connection through shared interests.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"This feels like something we'd both enjoy — you love hiking and I've been wanting to try this trail."</span>
+                            <button class="audio-btn" onclick="playAudio('This feels like something we\'d both enjoy. You love hiking and I\'ve been wanting to try this trail.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"This feels like something we'd both enjoy — it's exactly your style."</span>
+                            <button class="audio-btn" onclick="playAudio('This feels like something we\'d both enjoy. It\'s exactly your style.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"This feels like something we'd both enjoy — it combines our interests perfectly."</span>
+                            <button class="audio-btn" onclick="playAudio('This feels like something we\'d both enjoy. It combines our interests perfectly.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"This feels like something we'd both enjoy — we should check it out together."</span>
+                            <button class="audio-btn" onclick="playAudio('This feels like something we\'d both enjoy. We should check it out together.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"What do you think?"</strong> · <strong>"We should try it sometime."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Shows you understand their interests and see compatibility. Creates sense of connection.
+                    </div>
+                </div>
+                
+                <!-- Pattern 5 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">5</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"One day we'll laugh about this"</div>
+                            <div class="pattern-ipa">/wʌn deɪ wiːl læf əˈbaʊt ɪs/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Create future memory. Turn challenge into story.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p><span style="color: var(--highlight-green); font-weight: 600;">"One day we'll laugh about this" = create future memory.</span> Turns current challenge into future story. Creates sense of shared journey. Natural way to reframe difficulty.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"This is a disaster right now, but one day we'll laugh about this."</span>
+                            <button class="audio-btn" onclick="playAudio('This is a disaster right now, but one day we\'ll laugh about this.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"We're completely lost, but one day we'll laugh about this adventure."</span>
+                            <button class="audio-btn" onclick="playAudio('We\'re completely lost, but one day we\'ll laugh about this adventure.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"This project is crazy right now, but one day we'll laugh about how we pulled it off."</span>
+                            <button class="audio-btn" onclick="playAudio('This project is crazy right now, but one day we\'ll laugh about how we pulled it off.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"We're so stressed, but one day we'll laugh about this."</span>
+                            <button class="audio-btn" onclick="playAudio('We\'re so stressed, but one day we\'ll laugh about this.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"It'll be a great story."</strong> · <strong>"At least we'll have something to talk about."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Use during shared challenge. Reframes difficulty as future story. Creates bond through shared struggle.
+                    </div>
+                </div>
+                
+                <!-- Pattern 6 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">6</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"I'll always remember..."</div>
+                            <div class="pattern-ipa">/aɪl ˈɔːlweɪz rɪˈmɛmbər/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Express lasting impact. Show experience was memorable.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p><span style="color: var(--highlight-gold); font-weight: 600;">"I'll always remember" = express lasting impact.</span> Shows experience was truly memorable. Creates sense of significance. Natural way to express appreciation for shared moment.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"I'll always remember this trip — it was exactly what we needed."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ll always remember this trip. It was exactly what we needed.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"I'll always remember when we stayed up all night talking."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ll always remember when we stayed up all night talking.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I'll always remember this project — we really pulled together."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ll always remember this project. We really pulled together.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I'll always remember this experience — it changed how I think about teamwork."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ll always remember this experience. It changed how I think about teamwork.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"Thank you for sharing this with me."</strong> · <strong>"It meant a lot."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Express genuine lasting impact. Shows experience was truly meaningful.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Common Memory Creation Mistakes -->
+            <section class="section">
+                <div class="common-mistakes">
+                    <h3><i class="ph-duotone ph-warning"></i> ⚠️ Common Memory Creation Mistakes</h3>
+                    
+                    <div class="cm-grid">
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Activity-Focused (Doing things just to do them)</div>
+                            <div class="better">Focus on creating moments, not checking boxes</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Instagram Experience (Doing activities only for photos)</div>
+                            <div class="better">Be present, not performative</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Perfect Planner (No room for surprises)</div>
+                            <div class="better">Embrace unexpected moments</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Distracted Participant (Physically present, mentally absent)</div>
+                            <div class="better">Be fully present</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The One-Timer (Never references shared experiences)</div>
+                            <div class="better">"Remember when..." regularly</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Surface-Level (No emotional depth)</div>
+                            <div class="better">Create moments with emotional peaks</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Forgetful (Doesn't create stories worth retelling)</div>
+                            <div class="better">"One day we'll laugh about this"</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Memory Creation Flow -->
+            <section class="section">
+                <div class="memory-flow">
+                    <h3>🔄 The Memory Creation Flow</h3>
+                    <div class="flow-steps">
+                        <div class="flow-step">Shared Activity</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Novelty/Surprise</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Emotional Peak</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Shared Moment</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Memory Formation</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Story Retelling</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Bond Strengthening</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Integrated Memory Stories -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-chats-circle"></i>
+                        Integrated Memory Stories
+                    </h2>
+                    <p class="section-desc">Xem cách 6 memory patterns được kết hợp trong 2 stories hoàn chỉnh. Một nhẹ nhàng, một professional. Click 🔊 để nghe.</p>
+                </div>
+                
+                <!-- Story 1: Light -->
+                <div class="story-card">
+                    <h3>🏠 Story 1: The Rainy Day Adventure (Light)</h3>
+                    <div class="story-text" id="dialogue1">
+                        "<strong>Remember when</strong> we planned that hiking trip and it rained so heavily we couldn't go? <span style="color: var(--highlight-gold); font-weight: 600;">We were so disappointed</span>, but then we decided to just drive around and explore this small town we'd never been to. <span style="color: var(--highlight-green); font-weight: 600;">We ended up finding this amazing little café</span> that wasn't on any map, and we spent the whole afternoon there just talking and laughing. <span style="color: var(--highlight-blue); font-weight: 600;">One day we'll laugh about how we thought the rain ruined our plans</span>, but it actually turned out to be one of the best days we've had together. <span style="color: var(--highlight-gold); font-weight: 600;">I'll always remember that day</span> — not because of the hiking we didn't do, but because of the unexpected adventure we had instead. <span style="color: var(--highlight-green); font-weight: 600;">This made me think of you</span> the other day when I passed by a similar café."
+                    </div>
+                    <div class="story-audio-controls">
+                        <button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue1').textContent)">
+                            <i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+                        </button>
+                        <button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+                            <i class="ph-duotone ph-stop"></i> Dừng
+                        </button>
+                    </div>
+                    <div class="story-analysis">
+                        <h4>Analysis:</h4>
+                        <ul>
+                            <li><strong>"Remember when"</strong> → Invoke shared memory</li>
+                            <li><strong>"We were so disappointed"</strong> → Shared emotion</li>
+                            <li><strong>"Ended up finding"</strong> → Embrace unexpected</li>
+                            <li><strong>"One day we'll laugh about"</strong> → Create future memory</li>
+                            <li><strong>"I'll always remember"</strong> → Express lasting impact</li>
+                            <li><strong>"This made me think of you"</strong> → Show ongoing connection</li>
+                            <li>Emotional arc: Disappointment → Surprise → Joy → Nostalgia → Connection</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Story 2: Professional -->
+                <div class="story-card">
+                    <h3>💼 Story 2: The Project Crisis (Professional)</h3>
+                    <div class="story-text" id="dialogue2">
+                        "<strong>Remember when</strong> we had that project crisis and the client changed everything at the last minute? <span style="color: var(--highlight-gold); font-weight: 600;">We were all so stressed</span>, but we pulled together and worked through the night. <span style="color: var(--highlight-green); font-weight: 600;">This won't be the same without you</span> — you kept everyone calm and focused. <span style="color: var(--highlight-blue); font-weight: 600;">One day we'll laugh about how crazy it was</span>, but right now it felt like we were in the trenches together. <span style="color: var(--highlight-gold); font-weight: 600;">I'll always remember this project</span> — not because it was easy, but because we faced it together and came out stronger. <span style="color: var(--highlight-green); font-weight: 600;">This feels like something we'd both enjoy</span> — working on something challenging with a team that has each other's backs."
+                    </div>
+                    <div class="story-audio-controls">
+                        <button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue2').textContent)">
+                            <i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+                        </button>
+                        <button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+                            <i class="ph-duotone ph-stop"></i> Dừng
+                        </button>
+                    </div>
+                    <div class="story-analysis">
+                        <h4>Analysis:</h4>
+                        <ul>
+                            <li><strong>"Remember when"</strong> → Invoke shared memory</li>
+                            <li><strong>"We were all so stressed"</strong> → Shared emotion</li>
+                            <li><strong>"This won't be the same without you"</strong> → Express importance</li>
+                            <li><strong>"One day we'll laugh about"</strong> → Create future memory</li>
+                            <li><strong>"I'll always remember"</strong> → Express lasting impact</li>
+                            <li><strong>"This feels like something we'd both enjoy"</strong> → Express shared interest</li>
+                            <li>Business arc: Crisis → Teamwork → Bond → Reflection → Appreciation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Pronunciation Focus -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-microphone-stage"></i>
+                        Pronunciation Focus
+                    </h2>
+                    <p class="section-desc">Memory creation phrases pronunciation và connected speech patterns.</p>
+                </div>
+                
+                <div class="pronunciation-table">
+                    <h3>🔤 Memory Creation Phrases</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>IPA</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Remember when we</td>
+                                <td>/rɪˈmɛmbər wɛn wiː/</td>
+                                <td>Linking</td>
+                            </tr>
+                            <tr>
+                                <td>This made me think of you</td>
+                                <td>/ðɪs meɪd miː θɪŋk əv juː/</td>
+                                <td>Smooth</td>
+                            </tr>
+                            <tr>
+                                <td>This won't be the same without you</td>
+                                <td>/ðɪs woʊnt biː ðə seɪm wɪˈðaʊt juː/</td>
+                                <td>Stress on "same"</td>
+                            </tr>
+                            <tr>
+                                <td>This feels like something we'd both enjoy</td>
+                                <td>/ðɪs fiːlz laɪk ˈsʌmθŋ wiːd boʊθ ɪnˈdʒɔɪ/</td>
+                                <td>Smooth</td>
+                            </tr>
+                            <tr>
+                                <td>One day we'll laugh about this</td>
+                                <td>/wʌn de wiːl læf əˈbaʊt ɪs/</td>
+                                <td>Linking</td>
+                            </tr>
+                            <tr>
+                                <td>I'll always remember</td>
+                                <td>/aɪl ɔːlwez rɪˈmɛmbər/</td>
+                                <td>Stress on "rem"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="section-header" style="margin-top: 24px;">
+                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+                </div>
+                
+                <div class="intonation-item">
+                    <span class="phrase">"Remember when we..."</span>
+                    ↗↘ - Rise-fall (nostalgic, warm)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"This made me think of you..."</span>
+                    ↘ - Falling (sincere, warm)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"This won't be the same without you..."</span>
+                    ↘ - Falling (genuine, appreciative)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"This feels like something we'd both enjoy..."</span>
+                    ↗ - Rising (enthusiastic, inviting)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"One day we'll laugh about this..."</span>
+                    ↗↘ - Rise-fall (hopeful, bonding)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"I'll always remember..."</span>
+                    ↘ - Falling (sincere, lasting)
+                </div>
+            </section>
+            
+            <!-- Practice Scenarios -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-chats"></i>
+                        Practice Scenarios
+                    </h2>
+                    <p class="section-desc">Practice memory creation in different contexts. Remember: always be fully present!</p>
+                </div>
+                
+                <div class="scenario-grid">
+                    <div class="scenario-card casual">
+                        <span class="scenario-badge">🟢 Casual - 3-4 min</span>
+                        <h3>Scenario 1: Recalling a Shared Memory</h3>
+                        <p class="scenario-context">You're talking with a friend about a memorable experience you shared.</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use 3+ patterns</li>
+                                <li>Invoke shared memory</li>
+                                <li>Express lasting impact</li>
+                                <li>Create nostalgia</li>
+                                <li>Reinforce bond</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card professional">
+                        <span class="scenario-badge">🔵 Professional - 3-4 min</span>
+                        <h3>Scenario 2: Team Reflection</h3>
+                        <p class="scenario-context">You're reflecting with a colleague on a challenging project you worked on together.</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use 3+ patterns</li>
+                                <li>Reference shared challenge</li>
+                                <li>Express appreciation</li>
+                                <li>Show lasting impact</li>
+                                <li>Reinforce team bond</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card mixed">
+                        <span class="scenario-badge">🟣 Mixed - 4-5 min</span>
+                        <h3>Scenario 3: Creating a New Memory</h3>
+                        <p class="scenario-context">You're in the middle of a shared experience (could be challenging or fun) and want to create a memorable moment.</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use 4+ patterns</li>
+                                <li>Embrace the moment</li>
+                                <li>Create future memory</li>
+                                <li>Express appreciation</li>
+                                <li>Be fully present</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card challenge">
+                        <span class="scenario-badge">🟠 Challenge - 5 min</span>
+                        <h3>Scenario 4: The Memory Maker</h3>
+                        <p class="scenario-context">You want to create a memorable experience with someone important to you and reflect on it.</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use ALL 6 patterns</li>
+                                <li>Create shared experience</li>
+                                <li>Embrace unexpected</li>
+                                <li>Express lasting impact</li>
+                                <li>Create story worth retelling</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Reality Task -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-target"></i>
+                        Reality Task - Choose Your Level
+                    </h2>
+                    <p class="section-desc">Bài tập THỰC TẾ - apply memory creation skills vào đời thật. Chọn 1 trong 3 levels.</p>
+                </div>
+                
+                <div class="task-card easy">
+                    <div class="task-level">EASY</div>
+                    <h3>📝 Recall a Shared Memory</h3>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p class="task-desc">Write about a memorable experience you shared with someone.</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Use 3+ patterns</li>
+                            <li>Invoke shared memory</li>
+                            <li>Express lasting impact</li>
+                            <li>Show how it strengthened your bond</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Text message or email
+                    </div>
+                </div>
+                
+                <div class="task-card standard">
+                    <div class="task-level">STANDARD</div>
+                    <h3>🎙️ Create a Shared Experience</h3>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p class="task-desc">Actually do one shared experience (even 20-30 minutes) with someone. Walk, coffee, cook, museum, workout.</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Use 4+ patterns during/after</li>
+                            <li>Be fully present</li>
+                            <li>Embrace unexpected moments</li>
+                            <li>Create memory worth retelling</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Reflection on the experience
+                    </div>
+                </div>
+                
+                <div class="task-card challenge">
+                    <div class="task-level">CHALLENGE</div>
+                    <h3>🎥 The Memory Creation Challenge</h3>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p class="task-desc">Create a memorable shared experience with someone important to you and reflect on what made it memorable.</p>
+                    <div class="task-choice">
+                        <h4>Choose ONE conversation partner:</h4>
+                        <label><input type="checkbox"> Friend</label>
+                        <label><input type="checkbox"> Colleague</label>
+                        <label><input type="checkbox"> Family member</label>
+                        <label><input type="checkbox"> Mentor</label>
+                        <label><input type="checkbox"> Online community member</label>
+                        <label><input type="checkbox"> AI (if no human available)</label>
+                    </div>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Use ALL 6 patterns</li>
+                            <li>Create shared experience (novelty + emotion + shared moment)</li>
+                            <li>Reflect on what made it memorable</li>
+                            <li>Identify the emotional peaks</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Reflection essay OR share insights
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Mastery + Success + Tips -->
+            <section class="section">
+                <div class="mastery-card">
+                    <h2>🎯 Memory & Bond Creation Mastery</h2>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery1">
+                        <label for="mastery1">Can invoke shared memories to reinforce bonds</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery2">
+                        <label for="mastery2">Can show you're thinking of them with "This made me think of you"</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery3">
+                        <label for="mastery3">Can express their importance with "This won't be the same without you"</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery4">
+                        <label for="mastery4">Can express shared interest with "This feels like something we'd both enjoy"</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery5">
+                        <label for="mastery5">Can create future memories with "One day we'll laugh about this"</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery6">
+                        <label for="mastery6">Can express lasting impact with "I'll always remember..."</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery7">
+                        <label for="mastery7">Can create experiences that become relationship stories</label>
+                    </div>
+                </div>
+                
+                <!-- Success Criteria -->
+                <div class="success-card">
+                    <h2><i class="ph-duotone ph-check-circle"></i> Success Criteria</h2>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can create shared experiences that become memories</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can reference shared memories to reinforce bonds</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can embrace unexpected moments and turn them into stories</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can be fully present during shared experiences</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can create stories worth retelling for years</span>
+                    </div>
+                </div>
+                
+                <!-- Pro Tips -->
+                <div class="tips-card">
+                    <h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Experiences beat conversations:</strong> Shared moments create stronger bonds than just talking.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Memories outlast words:</strong> What you do together matters more than what you say.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Embrace the unexpected:</strong> Perfect plans don't create stories. Surprises do.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Be fully present:</strong> Distraction kills memory creation. Put the phone away.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Create stories worth retelling:</strong> The best experiences are the ones you can talk about for years.</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Flashcard Review -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-cards"></i>
+                        Flashcard Review
+                    </h2>
+                    <p class="section-desc">6 flashcards với memory creation patterns và tips. Mặt trước: pattern. Mặt sau: example + tip + bridge.</p>
+                </div>
+                
+                <div class="flashcard-container">
+                    <div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+                        <div class="flashcard-front">
+                            <p>Remember when we...</p>
+                            <button>Tap to reveal example →</button>
+                        </div>
+                        <div class="flashcard-back">
+                            <p>"Remember when we got lost and had the best adventure?"</p>
+                            <div class="flashcard-tip">
+                                <strong>💡 Tip:</strong> Invoke shared memory. Reinforce bond through shared history.
+                                <br><strong>🌉 Bridge:</strong> "We should do that again."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard-nav">
+                        <button>← Prev</button>
+                        <span>1 / 6</span>
+                        <button>Next →</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Quiz -->
+            <section class="quiz-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-pencil-simple"></i>
+                        Quiz: Memory & Bond Creation
+                    </h2>
+                    <p class="section-desc">8 câu hỏi để kiểm tra bạn đã thực sự hiểu memory creation chưa. Chọn đáp án ĐÚNG NHẤT.</p>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>1. Pattern nào invoke shared memory tốt nhất?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "Let's hang out sometime."</div>
+                        <div class="quiz-option">B. "Remember when we got lost and had the best adventure?"</div>
+                        <div class="quiz-option">C. "We should do something fun."</div>
+                        <div class="quiz-option">D. "Want to hang out?"</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>2. "This made me think of you" dùng để làm gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Ask for favor</div>
+                        <div class="quiz-option">B. Show you're thinking of them and create connection</div>
+                        <div class="quiz-option">C. Change subject</div>
+                        <div class="quiz-option">D. Summarize conversation</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>3. "This won't be the same without you" thể hiện điều gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Weakness</div>
+                        <div class="quiz-option">B. Their importance and irreplaceability</div>
+                        <div class="quiz-option">C. Indifference</div>
+                        <div class="quiz-option">D. Regret</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>4. Khi nào dùng "One day we'll laugh about this"?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Khi muốn end conversation</div>
+                        <div class="quiz-option">B. Khi muốn create future memory và turn challenge into story</div>
+                        <div class="quiz-option">C. Khi muốn change subject</div>
+                        <div class="quiz-option">D. Khi muốn give advice</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>5. "I'll always remember..." thêm gì vào relationship?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Awkwardness</div>
+                        <div class="quiz-option">B. Express lasting impact và show experience was memorable</div>
+                        <div class="quiz-option">C. Confusion</div>
+                        <div class="quiz-option">D. Indifference</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>6. "This feels like something we'd both enjoy" là loại gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Abrupt request</div>
+                        <div class="quiz-option">B. Express shared interest và show understanding</div>
+                        <div class="quiz-option">C. Fake promise</div>
+                        <div class="quiz-option">D. Lingering</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>7. Memory creation nào là C1 style?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "Let's hang out sometime."</div>
+                        <div class="quiz-option">B. "Remember when we got lost? One day we'll laugh about it. This made me think of you the other day. I'll always remember that adventure."</div>
+                        <div class="quiz-option">C. "We should do something fun."</div>
+                        <div class="quiz-option">D. "Want to hang out?"</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>8. TÌNH HUỐNG: You're in the middle of a challenging shared experience. What's the BEST response?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "This is terrible. I wish we hadn't done this."</div>
+                        <div class="quiz-option">B. "This is crazy right now, but one day we'll laugh about this. I'll always remember this. This won't be the same without you."</div>
+                        <div class="quiz-option">C. "We should stop and do something else."</div>
+                        <div class="quiz-option">D. "This isn't fun."</div>
+                    </div>
+                </div>
+                
+                <button class="check-btn">
+                    <i class="ph-duotone ph-check"></i>
+                    Check Answers
+                </button>
+            </section>
+            
+            <!-- Navigation -->
+            <div class="day-navigation">
+                <a href="week-04-day-26.html" class="nav-card">
+                    <div class="nav-label">← Previous Day</div>
+                    <div class="nav-title">Day 26: Nurturing Relationships</div>
+                </a>
+                <a href="week-04-day-28.html" class="nav-card">
+                    <div class="nav-label">Next Day →</div>
+                    <div class="nav-title">Day 28: Week 4 Review & Celebration</div>
+                </a>
+            </div>
+            
+            <!-- Complete Button -->
+            <div class="complete-container">
+                <button class="complete-btn" onclick="markComplete()">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Mark Day 27 Complete & Continue to Day 28</span>
+                </button>
+                <div class="complete-message">Create memories. Build bonds. 🧠</div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 4 · Day 27 · Memory & Bond Creation</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ============================================
+        // AUDIO ENGINE - CẢI THIỆN (giống Day 22-26)
+        // ============================================
+        let voices = [];
+        let selectedVoice = null;
+        
+        // Preload voices khi trang load
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
+            
+            // Ưu tiên chọn voice tốt nhất
+            // Thứ tự ưu tiên: Google US > Microsoft Zira > Microsoft David > en-US > en
+            selectedVoice = 
+                voices.find(v => v.name.includes('Google US English')) ||
+                voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+                voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+                voices.find(v => v.lang === 'en-US') ||
+                voices.find(v => v.lang.includes('en'));
+            
+            console.log('Selected voice:', selectedVoice?.name);
+        }
+        
+        // Load voices ngay lập tức
+        loadVoices();
+        
+        // Chrome cần event này vì voices load chậm
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        
+        // Retry sau 500ms và 1000ms nếu chưa có voice (Chrome fix)
+        setTimeout(loadVoices, 500);
+        setTimeout(loadVoices, 1000);
+        
+        function playAudio(text) {
+            if (!('speechSynthesis' in window)) {
+                alert('Trình duyệt không hỗ trợ phát âm thanh');
+                return;
+            }
+            
+            // Cancel bất kỳ audio nào đang phát
+            speechSynthesis.cancel();
+            
+            // Đợi một chút để đảm bảo cancel hoàn tất (Chrome fix)
+            setTimeout(() => {
+                const utterance = new SpeechSynthesisUtterance(text);
+                
+                // Cấu hình tối ưu cho giọng trong, tự nhiên
+                utterance.lang = 'en-US';
+                utterance.rate = 0.95;      // Nhanh hơn một chút để tự nhiên
+                utterance.pitch = 1.05;     // Cao hơn một chút để trong
+                utterance.volume = 1.0;     // Max volume
+                
+                // Dùng voice đã chọn
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                }
+                
+                speechSynthesis.speak(utterance);
+            }, 100);
+        }
+        
+        // Stop audio
+        function stopSpeaking() {
+            if ('speechSynthesis' in window) {
+                speechSynthesis.cancel();
+            }
+        }
+        
+        // Complete button
+        function markComplete() {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (!completed.includes('day-27')) {
+                completed.push('day-27');
+                localStorage.setItem('completedDays', JSON.stringify(completed));
+            }
+            
+            const btn = document.querySelector('.complete-btn');
+            btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 27 Complete! Well done!</span>';
+            btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+            
+            const msg = document.querySelector('.complete-message');
+            msg.textContent = 'Create memories. Build bonds. 🧠';
+        }
+        
+        // Load completion state
+        window.addEventListener('DOMContentLoaded', () => {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (completed.includes('day-27')) {
+                const btn = document.querySelector('.complete-btn');
+                btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 27 Completed</span>';
+                btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            }
+        });
+    </script>
+</body>
+</html>
