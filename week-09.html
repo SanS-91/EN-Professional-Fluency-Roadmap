@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9: Organizational Intelligence | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Phase 2: Green + Gold Theme */
+            --emerald: #059669;
+            --emerald-bright: #047857;
+            --emerald-soft: #D1FAE5;
+            --emerald-deep: #065F46;
+            --gold: #F59E0B;
+            --gold-bright: #D97706;
+            --gold-soft: #FEF3C7;
+            --gold-deep: #92400E;
+            --lime: #84CC16;
+            --lime-soft: #ECFCCB;
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 25%, #FEF3C7 50%, #ECFCCB 75%, #ECFDF5 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Aurora Background Animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(5, 150, 105, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 85% 20%, rgba(245, 158, 11, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(132, 204, 22, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 30% 60%, rgba(4, 120, 87, 0.3) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+            animation: aurora 20s ease-in-out infinite;
+        }
+        
+        @keyframes aurora {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            33% { transform: scale(1.15) rotate(120deg); opacity: 1; }
+            66% { transform: scale(0.95) rotate(240deg); opacity: 0.85; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .top-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--emerald-bright); }
+        
+        .week-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .week-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-icon-large { font-size: 3.5rem; margin-bottom: 16px; }
+        .week-icon-large i { --ph-color: var(--emerald-bright); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--emerald-bright), var(--gold-bright), var(--emerald));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .week-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+        
+        .week-quote {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--emerald-bright);
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 24px auto;
+            max-width: 650px;
+        }
+        
+        .week-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        
+        .week-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .week-tag i { --ph-color: var(--emerald-bright); }
+        
+        .section { margin: 48px 0; }
+        .section-header { margin-bottom: 32px; text-align: center; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .section-title i { --ph-color: var(--emerald-bright); }
+        
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(245, 158, 11, 0.15));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border-left: 4px solid var(--emerald-bright);
+            margin-bottom: 24px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--emerald-bright); }
+        
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .principle-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 4px solid var(--gold-bright);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .principle-number {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--gold-deep);
+            background: var(--gold-soft);
+            padding: 4px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .principle-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .principle-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .comparison-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-top: 24px;
+        }
+        
+        .comparison-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-item {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            border-left: 4px solid;
+        }
+        
+        .comparison-item.negative { background: rgba(245, 101, 101, 0.1); border-left-color: #F56565; }
+        .comparison-item.positive { background: rgba(72, 187, 120, 0.1); border-left-color: #48BB78; }
+        
+        .comparison-label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        /* 7 DAYS GRID */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .day-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--emerald-bright);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.4s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(5, 150, 105, 0.2);
+        }
+        
+        .day-label {
+            background: linear-gradient(135deg, var(--emerald-soft), var(--gold-soft));
+            color: var(--emerald-deep);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .day-icon { margin-bottom: 16px; }
+        .day-icon i { font-size: 2rem; --ph-color: var(--emerald-bright); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .day-focus {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(209, 250, 229, 0.5);
+        }
+        
+        .focus-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+        
+        .focus-list { list-style: none; }
+        
+        .focus-list li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed rgba(209, 250, 229, 0.5);
+        }
+        
+        .focus-list li:last-child { border-bottom: none; }
+        
+        .focus-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--emerald-bright);
+            font-weight: 600;
+        }
+        
+        .day-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(245, 158, 11, 0.15));
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--emerald-deep);
+            font-weight: 600;
+            border: 1px solid rgba(5, 150, 105, 0.2);
+        }
+        
+        .day-time i { --ph-color: var(--emerald-bright); }
+        
+        /* MILESTONE */
+        .milestone-card {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(245, 158, 11, 0.15));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid var(--emerald-bright);
+            text-align: center;
+        }
+        
+        .milestone-icon { font-size: 3.5rem; margin-bottom: 16px; }
+        .milestone-icon i { --ph-color: var(--emerald-bright); }
+        
+        .milestone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .milestone-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        
+        .milestone-skill {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.5;
+        }
+        
+        .milestone-skill i {
+            --ph-color: var(--emerald-bright);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        /* QUIZ */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .quiz-question {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--emerald-bright);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        
+        .quiz-options { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 6px; 
+        }
+        
+        .quiz-option {
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(209, 250, 229, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.3;
+        }
+        
+        .quiz-option:hover { 
+            border-color: var(--emerald-bright); 
+            background: rgba(209, 250, 229, 0.2); 
+        }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--emerald-bright), var(--gold-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        /* NAVIGATION */
+        .week-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 48px 0;
+        }
+        
+        .nav-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(209, 250, 229, 0.5));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--emerald-bright), var(--gold-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .cta-container { text-align: center; margin: 48px 0; }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--emerald-bright), var(--gold-bright));
+            color: white;
+            padding: 18px 36px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(5, 150, 105, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(5, 150, 105, 0.5);
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-fox { font-size: 2.5rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .week-title { font-size: 2.5rem; }
+            .days-grid { grid-template-columns: 1fr; }
+            .milestone-skills { grid-template-columns: 1fr; }
+            .week-navigation { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Roadmap</span>
+            </a>
+            <div class="week-indicator">Week 9/24</div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="phase-02.html">Phase 2: Professional Communication & Influence</a> › Week 9
+            </div>
+            <div class="week-icon-large">
+                <i class="ph-duotone ph-brain"></i>
+            </div>
+            <h1 class="week-title">Organizational Intelligence</h1>
+            <p class="week-description">Week 9 không dạy bạn cách nói. Week 9 dạy bạn cách **đọc tổ chức** - hiểu ai có quyền lực, ai có ảnh hưởng, ai có thể block, và tại sao people resist change. Đây là kỹ năng phân biệt Upper Intermediate và Advanced.</p>
+            <div class="week-quote">"B2 speakers react to organizational dynamics. C1 speakers read and navigate them strategically."</div>
+            <div class="week-tags">
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> Phase 2</div>
+                <div class="week-tag"><i class="ph-duotone ph-clock"></i> 7 days × 60 min</div>
+                <div class="week-tag"><i class="ph-duotone ph-house"></i> 50% Life</div>
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> 50% Business</div>
+                <div class="week-tag"><i class="ph-duotone ph-brain"></i> Organizational Intelligence</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <!-- Philosophy Section -->
+        <section class="section">
+            <div class="philosophy-section">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-lightbulb"></i>
+                    Week 9 Philosophy
+                </h2>
+                
+                <div class="philosophy-box">
+                    <div class="philosophy-title">
+                        <i class="ph-duotone ph-brain"></i>
+                        4 Organizational Intelligence Principles
+                    </div>
+                    <p>
+                        Week 5-8 đã dạy bạn **communicate professionally**. Week 9 dạy bạn **understand organizations** - framework tư duy để navigate complex organizational dynamics. Bốn nguyên tắc này sẽ xuyên suốt 7 ngày và thay đổi cách bạn đọc bối cảnh tổ chức.
+                    </p>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 1</div>
+                        <div class="principle-title">Map before moving</div>
+                        <div class="principle-desc">Hiểu landscape trước khi hành động. Know who has power, who has influence, who has stakes, và tại sao.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 2</div>
+                        <div class="principle-title">Coalition before confrontation</div>
+                        <div class="principle-desc">Xây dựng liên minh trước khi đối đầu. Never go alone into difficult organizational dynamics.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 3</div>
+                        <div class="principle-title">Momentum before perfection</div>
+                        <div class="principle-desc">Tạo đà tiến trước khi cầu toàn. Small wins build credibility for big organizational changes.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 4</div>
+                        <div class="principle-title">Context before content</div>
+                        <div class="principle-desc">Hiểu bối cảnh trước khi truyền đạt nội dung. The same message delivered in different contexts has completely different impact.</div>
+                    </div>
+                </div>
+                
+                <div class="comparison-section">
+                    <div class="comparison-title">Reactive vs Strategic Organizational Navigation</div>
+                    
+                    <div class="comparison-item negative">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            Reactive (B2 approach)
+                        </div>
+                        <div class="comparison-text">
+                            "I'll deal with issues as they come up. I need the CEO to approve this. People are resisting - we need to push harder."
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item positive">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            Strategic (C1 approach)
+                        </div>
+                        <div class="comparison-text">
+                            "Let me map the stakeholders first. The CEO approves, but the CFO can veto. Resistance tells me what people are afraid of - let me understand the underlying concerns."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7 Days Grid -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-calendar"></i>
+                    7 Days of Organizational Intelligence
+                </h2>
+                <p class="section-desc">Mỗi ngày xây dựng một khía cạnh của organizational intelligence. Từ stakeholder mapping đến reading the room.</p>
+            </div>
+            
+            <div class="days-grid">
+                <a href="week-09-day-57.html" class="day-card">
+                    <div class="day-label">DAY 57</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-users"></i>
+                    </div>
+                    <div class="day-title">Stakeholder Mapping & Power Dynamics</div>
+                    <div class="day-subtitle">Map stakeholders cho organizational transformation. Understand formal vs informal power structures.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"Who needs to be involved in this decision?"</li>
+                            <li>"What matters most to [Name] in this situation?"</li>
+                            <li>"I'd like to get your perspective before we move forward..."</li>
+                            <li>"Based on what you've shared, I think we should..."</li>
+                            <li>"Let's bring [Name] into this conversation because..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-09-day-58.html" class="day-card">
+                    <div class="day-label">DAY 58</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-scales"></i>
+                    </div>
+                    <div class="day-title">Decision Landscape</div>
+                    <div class="day-subtitle">Understand ai thực sự quyết định. Map decision makers, influencers, veto powers, và approval processes.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"Who has the authority to approve this?"</li>
+                            <li>"Who can influence this decision?"</li>
+                            <li>"Who has veto power over this?"</li>
+                            <li>"What's the approval process for this type of decision?"</li>
+                            <li>"Who needs to be informed after the decision?"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-09-day-59.html" class="day-card">
+                    <div class="day-label">DAY 59</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-shield-warning"></i>
+                    </div>
+                    <div class="day-title">Organizational Resistance</div>
+                    <div class="day-subtitle">Understand tại sao people resist change. Resistance is data - listen to understand underlying concerns.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"Help me understand what's concerning you about..."</li>
+                            <li>"What would need to be true for this to work for you?"</li>
+                            <li>"I hear that you're worried about [X]. Here's how we'd address that..."</li>
+                            <li>"What would success look like from your perspective?"</li>
+                            <li>"Let's find a way to make this work for everyone..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-09-day-60.html" class="day-card">
+                    <div class="day-label">DAY 60</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-network"></i>
+                    </div>
+                    <div class="day-title">Building Informal Influence</div>
+                    <div class="day-subtitle">Build influence mà không có formal authority. Create credibility, reciprocity, và network of allies.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"I've been working with [Name] on this, and they shared..."</li>
+                            <li>"Based on my experience with [similar situation]..."</li>
+                            <li>"I'd love to get your perspective on this because..."</li>
+                            <li>"What if we approached it this way..."</li>
+                            <li>"Let me connect you with [Name] who has expertise in..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-09-day-61.html" class="day-card">
+                    <div class="day-label">DAY 61</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-target"></i>
+                    </div>
+                    <div class="day-title">Strategic Alignment</div>
+                    <div class="day-subtitle">Align priorities, interests, và expectations across organization. Create shared ownership.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"Here's how your team's work connects to the bigger picture..."</li>
+                            <li>"What do you need from other teams to succeed?"</li>
+                            <li>"Let's make sure we're all working toward the same outcome..."</li>
+                            <li>"Your expertise in [area] is critical to this..."</li>
+                            <li>"How can we support each other to make this happen?"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-09-day-62.html" class="day-card">
+                    <div class="day-label">DAY 62</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-eye"></i>
+                    </div>
+                    <div class="day-title">Reading the Room</div>
+                    <div class="day-subtitle">Learn khi nào push, stop, ask, hoặc stay silent. Read verbal và non-verbal signals trong organizational dynamics.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Frameworks:</div>
+                        <ul class="focus-list">
+                            <li>"I'm sensing some hesitation. Let me pause and understand..."</li>
+                            <li>"I notice the energy has shifted. What's coming up for people?"</li>
+                            <li>"Before we move forward, let me check in..."</li>
+                            <li>"I think we need to spend more time on this..."</li>
+                            <li>"Let me step back and listen for a moment..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-09-day-63.html" class="day-card">
+                    <div class="day-label">DAY 63</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-trophy"></i>
+                    </div>
+                    <div class="day-title">Week 9 Review</div>
+                    <div class="day-subtitle">Mô phỏng toàn bộ organizational intelligence journey. Apply all 6 days trong one complete simulation.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Focus:</div>
+                        <ul class="focus-list">
+                            <li>Complete organizational intelligence simulation</li>
+                            <li>Apply 4 principles in real-time</li>
+                            <li>Self-assessment & reflection</li>
+                            <li>Celebrate Milestone 9</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Milestone Card -->
+        <div class="milestone-card">
+            <div class="milestone-icon">
+                <i class="ph-duotone ph-trophy"></i>
+            </div>
+            <div class="milestone-title">Milestone 9: Organizational Intelligence</div>
+            <p class="milestone-subtitle">Sau tuần 9, bạn sẽ đọc và navigate organizational dynamics một cách chiến lược - không chỉ react, mà understand và influence.</p>
+            <div class="milestone-skills">
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Map stakeholders và power dynamics</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Understand decision landscapes</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Analyze organizational resistance</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Build informal influence</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Create strategic alignment</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Read organizational dynamics</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Navigate complex organizational politics</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Build coalitions strategically</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Influence without formal authority</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Understand psychology of change</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Adapt communication to organizational context</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Drive transformation through intelligence</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2 class="section-title">
+                <i class="ph-duotone ph-pencil-simple"></i>
+                Week 9 Preview Quiz
+            </h2>
+            <p class="section-desc" style="margin-bottom: 24px;">Kiểm tra hiểu biết về organizational intelligence vs reactive approach. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-question">
+                <h4>1. Triết lý của Week 9 là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Học cách nói chuyện với sếp và đồng nghiệp</div>
+                    <div class="quiz-option">B. Hiểu và navigate organizational dynamics một cách chiến lược</div>
+                    <div class="quiz-option">C. Học cách pitch ideas cho executives</div>
+                    <div class="quiz-option">D. Học cách handle objections từ stakeholders</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>2. Nguyên tắc "Map before moving" nghĩa là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Lên kế hoạch chi tiết trước khi hành động</div>
+                    <div class="quiz-option">B. Hiểu landscape (power, influence, stakes) trước khi hành động</div>
+                    <div class="quiz-option">C. Vẽ sơ đồ tổ chức trước khi bắt đầu project</div>
+                    <div class="quiz-option">D. Consult tất cả stakeholders trước khi quyết định</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>3. Khi gặp resistance từ team, C1 approach là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Push harder và explain benefits rõ hơn</div>
+                    <div class="quiz-option">B. Ignore resistance và continue với plan</div>
+                    <div class="quiz-option">C. Understand underlying concerns - resistance is data</div>
+                    <div class="quiz-option">D. Escalate to management để get support</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>4. Câu nào thể hiện organizational intelligence C1 style?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "I need the CEO to approve this project."</div>
+                    <div class="quiz-option">B. "Let me map the stakeholders first. The CEO approves, but the CFO can veto. Let me understand their concerns."</div>
+                    <div class="quiz-option">C. "People are resisting the change. We need to communicate better."</div>
+                    <div class="quiz-option">D. "I'll deal with issues as they come up."</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>5. Week 9 tập trung vào kỹ năng gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Presentation skills</div>
+                    <div class="quiz-option">B. Organizational intelligence</div>
+                    <div class="quiz-option">C. Negotiation skills</div>
+                    <div class="quiz-option">D. Leadership communication</div>
+                </div>
+            </div>
+            
+            <button class="check-btn">
+                <i class="ph-duotone ph-check"></i>
+                Check Answers
+            </button>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="week-navigation">
+            <a href="week-08.html" class="nav-card">
+                <div class="nav-label">← Previous Week</div>
+                <div class="nav-title">Week 8: Professional Communication Mastery</div>
+            </a>
+            <a href="week-10.html" class="nav-card">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 10: Workplace Communication Channels</div>
+            </a>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="cta-container">
+            <a href="week-09-day-57.html" class="cta-button">
+                <i class="ph-duotone ph-rocket-launch"></i>
+                <span>Start Week 9: Day 57 - Stakeholder Mapping</span>
+            </a>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Phase 2 · Week 9 · Organizational Intelligence</div>
+        </div>
+    </footer>
+    
+</body>
+</html>
