@@ -13,8 +13,23 @@
             --gold-bright: #D97706;
             --gold-soft: #FEF3C7;
             --gold-deep: #92400E;
-            --amber: #FCD34D;
-            --amber-light: #FDE68A;
+            --gold-light: #FDE68A;
+            
+            --purple: #8B5CF6;
+            --purple-soft: #F3E8FF;
+            --purple-deep: #6B21A8;
+            
+            --green: #10B981;
+            --green-soft: #D1FAE5;
+            --green-deep: #065F46;
+            
+            --blue: #3B82F6;
+            --blue-soft: #DBEAFE;
+            --blue-deep: #1E40AF;
+            
+            --orange: #F97316;
+            --orange-soft: #FFEDD5;
+            --orange-deep: #9A3412;
             
             --text-primary: #1E293B;
             --text-secondary: #334155;
@@ -30,7 +45,7 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            background: #F8FAFC; /* Background xám nhạt cho toàn trang */
+            background: #FAFAFA;
             color: var(--text-primary);
             font-size: 15px;
             line-height: 1.6;
@@ -48,7 +63,7 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(30px);
             padding: 12px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -77,12 +92,30 @@
             font-size: 13px;
             color: var(--text-muted);
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .progress-bar {
+            width: 80px;
+            height: 6px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+            border-radius: 3px;
+            width: 100%;
         }
         
         /* Day Tabs */
         .day-tabs-container {
             background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
             position: sticky;
             top: 57px;
             z-index: 99;
@@ -124,11 +157,20 @@
             box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
         }
         
-        /* Header - CHỈ GRADIENT Ở ĐÂY */
+        /* Header - ONLY gradient here */
         .day-header {
             background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
             padding: 48px 0 40px;
             position: relative;
+        }
+        
+        .day-header::after {
+            content: '🏆';
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.3;
         }
         
         .breadcrumb {
@@ -142,20 +184,21 @@
             text-decoration: none;
         }
         
-        .day-icon-large {
-            font-size: 2.5rem;
+        .day-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             margin-bottom: 12px;
         }
         
-        .day-icon-large i {
-            --ph-color: var(--gold-bright);
+        .day-icon-inline {
+            font-size: 2rem;
         }
         
         .day-title {
             font-family: 'Fraunces', serif;
-            font-size: 2rem; /* GIẢM TỪ 3.5rem XUỐNG 2rem */
+            font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 12px;
             color: var(--text-primary);
         }
         
@@ -165,6 +208,10 @@
             max-width: 700px;
             margin-bottom: 20px;
             line-height: 1.7;
+        }
+        
+        .day-subtitle strong {
+            color: var(--gold-bright);
         }
         
         .day-meta {
@@ -189,13 +236,13 @@
         
         .meta-tag i { --ph-color: var(--gold-bright); }
         
-        /* Content Area - BACKGROUND TRẮNG/XÁM NHẠT */
+        /* Content area - white background */
         .content-area {
-            background: #F8FAFC;
+            background: #FAFAFA;
             padding: 40px 0;
         }
         
-        /* Sections */
+        /* Section base */
         .section { margin: 40px 0; }
         
         .section-header {
@@ -222,30 +269,20 @@
             line-height: 1.7;
         }
         
-        /* Card base */
-        .card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-        }
-        
-        /* Philosophy */
+        /* Philosophy section - white card with gold border */
         .philosophy-section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius-lg);
             padding: 32px;
-            margin: 32px 0;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(245, 158, 11, 0.2);
         }
         
         .philosophy-box {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(252, 211, 77, 0.08));
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 230, 138, 0.3));
             border-radius: var(--radius-md);
             padding: 20px;
-            border-left: 3px solid var(--gold);
+            border-left: 4px solid var(--gold);
             margin-bottom: 20px;
         }
         
@@ -267,6 +304,10 @@
             line-height: 1.7;
         }
         
+        .philosophy-box strong {
+            color: var(--gold-deep);
+        }
+        
         .comparison-box {
             border-radius: var(--radius-md);
             padding: 20px;
@@ -275,12 +316,12 @@
         
         .comparison-box.negative {
             background: rgba(245, 101, 101, 0.08);
-            border-left: 3px solid #F56565;
+            border-left: 4px solid #F56565;
         }
         
         .comparison-box.positive {
-            background: rgba(72, 187, 120, 0.08);
-            border-left: 3px solid #48BB78;
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid #10B981;
         }
         
         .comparison-title {
@@ -293,7 +334,7 @@
         }
         
         .comparison-box.negative .comparison-title { color: #C53030; }
-        .comparison-box.positive .comparison-title { color: #276749; }
+        .comparison-box.positive .comparison-title { color: #065F46; }
         
         .comparison-text {
             font-size: 14px;
@@ -327,11 +368,11 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #38A169;
+            color: #10B981;
             font-weight: 600;
         }
         
-        /* Today's Plan */
+        /* Plan grid */
         .plan-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -366,6 +407,10 @@
             color: var(--gold-bright);
             font-weight: 600;
             margin-bottom: 4px;
+            background: rgba(254, 243, 199, 0.5);
+            padding: 2px 10px;
+            border-radius: 10px;
+            display: inline-block;
         }
         
         .plan-desc {
@@ -373,13 +418,13 @@
             color: var(--text-muted);
         }
         
-        /* Pattern Cards */
+        /* Pattern card */
         .pattern-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius-md);
             padding: 28px;
             margin-bottom: 20px;
-            border-left: 3px solid var(--gold);
+            border-left: 4px solid var(--gold);
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
         }
         
@@ -518,6 +563,28 @@
             color: #1E40AF;
         }
         
+        .audio-btn {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .audio-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        
+        .audio-btn i { --ph-color: white; font-size: 14px; }
+        
         .pattern-usage {
             background: rgba(254, 243, 199, 0.3);
             border-radius: var(--radius-sm);
@@ -531,13 +598,13 @@
             color: var(--gold-deep);
         }
         
-        /* Story Cards */
+        /* Story card */
         .story-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius-md);
             padding: 24px;
             margin-bottom: 20px;
-            border-left: 3px solid var(--gold);
+            border-left: 4px solid var(--gold);
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
         }
         
@@ -561,6 +628,11 @@
             font-style: italic;
             margin-bottom: 14px;
             border-left: 3px solid var(--gold);
+        }
+        
+        .story-text strong {
+            color: var(--gold-deep);
+            font-style: normal;
         }
         
         .story-analysis h4 {
@@ -590,7 +662,7 @@
             font-weight: 600;
         }
         
-        /* Pronunciation Tables */
+        /* Pronunciation table */
         .pronunciation-table {
             background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius-md);
@@ -653,37 +725,55 @@
             margin-bottom: 4px;
         }
         
-        /* Scenario Cards */
+        /* Scenario cards - COLORED */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
         .scenario-card {
-            background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius-md);
             padding: 24px;
-            margin-bottom: 16px;
-            border-top: 3px solid var(--gold);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 2px solid;
         }
         
-        .scenario-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
+        .scenario-card.casual {
+            background: rgba(209, 250, 229, 0.3);
+            border-color: var(--green);
         }
         
-        .scenario-type {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--gold-deep);
-            background: rgba(254, 243, 199, 0.7);
+        .scenario-card.professional {
+            background: rgba(219, 234, 254, 0.3);
+            border-color: var(--blue);
+        }
+        
+        .scenario-card.mixed {
+            background: rgba(243, 232, 255, 0.3);
+            border-color: var(--purple);
+        }
+        
+        .scenario-card.challenge {
+            background: rgba(255, 237, 213, 0.3);
+            border-color: var(--orange);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
             padding: 4px 12px;
             border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: white;
         }
         
-        .scenario-time {
-            font-size: 12px;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
+        .scenario-card.casual .scenario-badge { background: var(--green); }
+        .scenario-card.professional .scenario-badge { background: var(--blue); }
+        .scenario-card.mixed .scenario-badge { background: var(--purple); }
+        .scenario-card.challenge .scenario-badge { background: var(--orange); }
         
         .scenario-card h3 {
             font-family: 'Fraunces', serif;
@@ -700,7 +790,7 @@
         }
         
         .scenario-requirements {
-            background: rgba(254, 243, 199, 0.3);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: var(--radius-sm);
             padding: 14px;
             margin-bottom: 14px;
@@ -709,7 +799,7 @@
         .scenario-requirements h4 {
             font-size: 12px;
             font-weight: 600;
-            color: var(--gold-deep);
+            color: var(--text-primary);
             margin-bottom: 8px;
         }
         
@@ -726,7 +816,7 @@
         }
         
         .scenario-requirements li::before {
-            content: '✓';
+            content: '•';
             position: absolute;
             left: 0;
             color: var(--gold-bright);
@@ -734,23 +824,30 @@
         }
         
         .sample-flow-btn {
-            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-            color: white;
-            border: none;
+            background: white;
+            border: 2px solid;
             padding: 10px 18px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
+        
+        .scenario-card.casual .sample-flow-btn { border-color: var(--green); color: var(--green-deep); }
+        .scenario-card.professional .sample-flow-btn { border-color: var(--blue); color: var(--blue-deep); }
+        .scenario-card.mixed .sample-flow-btn { border-color: var(--purple); color: var(--purple-deep); }
+        .scenario-card.challenge .sample-flow-btn { border-color: var(--orange); color: var(--orange-deep); }
         
         .sample-flow-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         
-        /* Task Cards */
+        /* Task cards */
         .task-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius-md);
@@ -758,11 +855,12 @@
             margin-bottom: 16px;
             position: relative;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid;
         }
         
-        .task-card.easy { border-left: 3px solid #10B981; }
-        .task-card.standard { border-left: 3px solid var(--gold); }
-        .task-card.challenge { border-left: 3px solid #EF4444; }
+        .task-card.easy { border-left-color: #10B981; }
+        .task-card.standard { border-left-color: var(--gold); }
+        .task-card.challenge { border-left-color: #EF4444; }
         
         .task-level {
             position: absolute;
@@ -840,6 +938,120 @@
             padding: 10px 12px;
             background: rgba(254, 243, 199, 0.3);
             border-radius: var(--radius-sm);
+        }
+        
+        /* Mastery card - gold border */
+        .mastery-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--gold);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .mastery-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mastery-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px;
+            background: rgba(254, 243, 199, 0.2);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+        }
+        
+        .mastery-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--gold);
+            border-radius: 4px;
+            cursor: pointer;
+            accent-color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .mastery-item label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        
+        /* Success criteria - green */
+        .success-card {
+            background: rgba(209, 250, 229, 0.5);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--green);
+            margin-top: 20px;
+        }
+        
+        .success-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--green-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .success-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--green-deep);
+        }
+        
+        .success-item i { --ph-color: var(--green); font-size: 18px; }
+        
+        /* Pro tips - orange */
+        .tips-card {
+            background: rgba(255, 237, 213, 0.5);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--orange);
+            margin-top: 20px;
+        }
+        
+        .tips-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--orange-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tip-item {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--orange-deep);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+        
+        .tip-item strong {
+            color: var(--orange-deep);
         }
         
         /* Flashcard */
@@ -1056,7 +1268,7 @@
             color: var(--text-primary);
         }
         
-        /* Complete Button */
+        /* Complete button */
         .complete-container {
             text-align: center;
             margin: 40px 0;
@@ -1109,6 +1321,7 @@
             .day-tabs-container { top: 52px; }
             .day-navigation { grid-template-columns: 1fr; }
             .pattern-header { flex-direction: column; }
+            .scenario-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1121,7 +1334,10 @@
                 <i class="ph-duotone ph-arrow-left"></i>
                 <span>Week 3 Hub</span>
             </a>
-            <div class="day-indicator">Day 21 / 21</div>
+            <div class="day-indicator">
+                Day 21 / 21
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+            </div>
         </div>
     </nav>
     
@@ -1141,17 +1357,17 @@
         </div>
     </div>
     
-    <!-- Header - CHỈ GRADIENT Ở ĐÂY -->
+    <!-- Header - ONLY gradient here -->
     <header class="day-header">
         <div class="container">
             <div class="breadcrumb">
                 <a href="index.html">Home</a> › <a href="week-03.html">Week 3</a> › Day 21
             </div>
-            <div class="day-icon-large">
-                <i class="ph-duotone ph-trophy"></i>
+            <div class="day-title-row">
+                <span class="day-icon-inline">🏆</span>
+                <h1 class="day-title">Week 3 Review & Celebration</h1>
             </div>
-            <h1 class="day-title">Week 3 Review & Celebration</h1>
-            <p class="day-subtitle">You've learned 30+ storytelling patterns. Today isn't about new patterns — it's about understanding <strong>why they work</strong>, and making them truly yours. You'll learn the anatomy of great stories, the principles behind memorable storytelling, and how to evaluate your own stories like a listener.</p>
+            <p class="day-subtitle">You've learned <strong>30+ storytelling patterns</strong> across 6 days. Today isn't about new patterns — it's about understanding <strong>why they work</strong>, integrating them into your natural speaking, and celebrating how far you've come. This is where patterns become mastery.</p>
             <div class="day-meta">
                 <div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Week 3 Review</div>
                 <div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
@@ -1161,27 +1377,25 @@
         </div>
     </header>
     
-    <!-- Content Area - BACKGROUND TRẮNG/XÁM NHẠT -->
+    <!-- Content area - white background -->
     <div class="content-area">
         <div class="container">
             
             <!-- Today's Philosophy -->
             <section class="section">
-                <div class="section-header">
+                <div class="philosophy-section">
                     <h2 class="section-title">
                         <i class="ph-duotone ph-lightbulb"></i>
                         Today's Philosophy
                     </h2>
-                </div>
-                
-                <div class="philosophy-section">
+                    
                     <div class="philosophy-box">
                         <div class="philosophy-title">
                             <i class="ph-duotone ph-trophy"></i>
                             From Patterns to Mastery
                         </div>
                         <p>
-                            Most people finish a week of learning and move on. But C1 learners <strong>pause, reflect, and integrate</strong>. Today isn't about new patterns — it's about understanding <strong>why the 30 patterns you learned actually work</strong>. The difference? <strong>Memorization vs. Mastery. Information vs. Wisdom.</strong>
+                            Most people finish a week of learning and move on. But C1 storytellers <strong>pause, reflect, and integrate</strong>. Today isn't about new patterns — it's about understanding <strong>why the 30 patterns you learned actually work</strong>. The difference? <strong>Memorization vs. Mastery. Information vs. Wisdom.</strong>
                         </p>
                     </div>
                     
@@ -1204,7 +1418,7 @@
                     <div class="comparison-box positive">
                         <div class="comparison-title">
                             <i class="ph-duotone ph-check-circle"></i>
-                            What C1 learners do differently
+                            What C1 storytellers do differently
                         </div>
                         <div class="comparison-text">
                             "After a week of storytelling, I now understand that great stories aren't about what happened — they're about what changed. The hook creates curiosity, the turning point creates drama, the character creates connection, the details create emotion, the reflection creates meaning, and the ending creates impact."
@@ -1222,37 +1436,37 @@
             
             <!-- Today's Plan -->
             <section class="section">
-                <div class="section-header">
+                <div class="philosophy-section">
                     <h2 class="section-title">
                         <i class="ph-duotone ph-calendar-check"></i>
                         Today's Plan (60 min)
                     </h2>
-                </div>
-                
-                <div class="plan-grid">
-                    <div class="plan-card">
-                        <div class="plan-icon"></div>
-                        <div class="plan-title">Anatomy & Principles</div>
-                        <div class="plan-time">20 min</div>
-                        <div class="plan-desc">Understand why stories work</div>
-                    </div>
-                    <div class="plan-card">
-                        <div class="plan-icon">🎯</div>
-                        <div class="plan-title">Pattern Choice</div>
-                        <div class="plan-time">10 min</div>
-                        <div class="plan-desc">Learn to choose patterns</div>
-                    </div>
-                    <div class="plan-card">
-                        <div class="plan-icon">️</div>
-                        <div class="plan-title">Recording Challenge</div>
-                        <div class="plan-time">20 min</div>
-                        <div class="plan-desc">Record & self-evaluate</div>
-                    </div>
-                    <div class="plan-card">
-                        <div class="plan-icon">🏆</div>
-                        <div class="plan-title">Milestone</div>
-                        <div class="plan-time">10 min</div>
-                        <div class="plan-desc">Celebrate Week 3 complete</div>
+                    
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <div class="plan-icon">🧬</div>
+                            <div class="plan-title">Anatomy & Principles</div>
+                            <div class="plan-time">20 min</div>
+                            <div class="plan-desc">Understand why stories work</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🎭</div>
+                            <div class="plan-title">Integrated Stories</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">See principles in action</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🎙️</div>
+                            <div class="plan-title">Recording Challenge</div>
+                            <div class="plan-time">20 min</div>
+                            <div class="plan-desc">Record & self-evaluate</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🏆</div>
+                            <div class="plan-title">Milestone</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">Celebrate Week 3 complete</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1273,7 +1487,7 @@
                         <div class="pattern-number">1</div>
                         <div class="pattern-content">
                             <div class="pattern-text">Start with curiosity, not chronology</div>
-                            <div class="pattern-ipa">/stɑːrt wɪð ˌkjʊəriˈɒsɪti, nɒt krɒˈnlədʒi/</div>
+                            <div class="pattern-ipa">/stɑːrt wɪð ˌkjʊəriˈɒsɪti, nɒt krɒˈnɒlədʒi/</div>
                             <div class="pattern-meta">
                                 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
                                 <div class="pattern-context">Universal</div>
@@ -1292,18 +1506,22 @@
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
                             <span><strong>"You'll never believe"</strong> what happened when we got lost in Tokyo.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
                             <span><strong>"So there I was"</strong>, standing in the middle of a rice field with no idea where I was.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span><strong>"At first, I thought"</strong> the client was going to reject our proposal, <strong>but it turned out</strong> they loved it.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag business">💼 Business</span>
+                            <span class="example-tag business"> Business</span>
                             <span><strong>"Let me tell you about"</strong> the time we almost lost our biggest client — and what saved us.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
@@ -1334,20 +1552,24 @@
                     <div class="pattern-examples">
                         <h4>Examples 🔊</h4>
                         <div class="example">
-                            <span class="example-tag"> Life</span>
+                            <span class="example-tag">🏠 Life</span>
                             <span>We sat on <strong>plastic stools</strong>, sharing <strong>one plate of phở</strong>, communicating through <strong>gestures</strong>.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag">🏠 Life</span>
+                            <span class="example-tag"> Life</span>
                             <span>The sun came up at <strong>3 AM</strong> and I <strong>couldn't breathe</strong>.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span>My slides <strong>froze</strong>, the projector <strong>died</strong>, and I could see the client <strong>checking his phone</strong>.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span>She had <strong>read every single case study</strong> on our website — <strong>all 47 of them</strong>.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
@@ -1361,7 +1583,7 @@
                         <div class="pattern-number">3</div>
                         <div class="pattern-content">
                             <div class="pattern-text">People matter more than places</div>
-                            <div class="pattern-ipa">/ˈpiːpəl mætə mɔːr ən ˈpleɪsɪz/</div>
+                            <div class="pattern-ipa">/ˈpiːpəl ˈmætər mɔr ðən ˈpleɪsz/</div>
                             <div class="pattern-meta">
                                 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
                                 <div class="pattern-context">Universal</div>
@@ -1380,22 +1602,26 @@
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
                             <span><strong>I met this elderly woman</strong> who had been traveling solo for 20 years.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag">🏠 Life</span>
+                            <span class="example-tag"> Life</span>
                             <span><strong>What struck me about her was</strong> how she could connect with anyone, regardless of language barriers.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span><strong>I met this client</strong> who had turned down 3 bigger offers to work with us.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span><strong>I'll never forget him because</strong> he taught me that the best clients are the ones who challenge you to be better.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
-                        <strong>💡 Usage Notes:</strong> Áp dụng từ Day 17. Character phải có memorable detail, insight, và lasting impact.
+                        <strong> Usage Notes:</strong> Áp dụng từ Day 17. Character phải có memorable detail, insight, và lasting impact.
                     </div>
                 </div>
                 
@@ -1405,7 +1631,7 @@
                         <div class="pattern-number">4</div>
                         <div class="pattern-content">
                             <div class="pattern-text">Reflection gives stories meaning</div>
-                            <div class="pattern-ipa">/rɪˈflɛkʃən ɡɪvz stɔːriz ˈmiːnɪŋ/</div>
+                            <div class="pattern-ipa">/rɪˈflɛkʃən ɡɪvz ˈstɔːriz ˈmiːnɪ/</div>
                             <div class="pattern-meta">
                                 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
                                 <div class="pattern-context">Universal</div>
@@ -1424,18 +1650,22 @@
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
                             <span><strong>Looking back, the biggest lesson I learned was</strong> that the best experiences come from adaptability, not perfection.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag"> Life</span>
+                            <span class="example-tag">🏠 Life</span>
                             <span><strong>Before that trip, I thought</strong> I needed to plan every detail, <strong>but now I realize</strong> that the best experiences come from spontaneity.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span><strong>It taught me that</strong> success isn't about being right — it's about being willing to be wrong.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span><strong>If I could go back, I would</strong> focus less on being right and more on building trust.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
@@ -1449,7 +1679,7 @@
                         <div class="pattern-number">5</div>
                         <div class="pattern-content">
                             <div class="pattern-text">End with something worth remembering</div>
-                            <div class="pattern-ipa">/ɛnd wɪð ˈsʌmθɪŋ wɜːrθ rɪˈmɛmbərɪŋ/</div>
+                            <div class="pattern-ipa">/ɛnd wɪð ˈsʌmθɪŋ wɜrθ rɪˈmɛmbərɪŋ/</div>
                             <div class="pattern-meta">
                                 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
                                 <div class="pattern-context">Universal</div>
@@ -1468,18 +1698,22 @@
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
                             <span><strong>If there's one thing I want you to take away</strong> from this story, it's that the best travel moments happen when you stop trying to control everything.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag">🏠 Life</span>
+                            <span class="example-tag"> Life</span>
                             <span>That 'wrong turn' was <strong>actually the right turn all along</strong>.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span><strong>The reason I bring this up is</strong> because sometimes the 'disasters' are actually our breakthroughs.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
                             <span>That 'simple' bowl of phở took 12 hours to make. It taught me that <strong>the best food isn't just about ingredients — it's about the story behind it</strong>.</span>
+                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
@@ -1593,7 +1827,7 @@
                             <tr>
                                 <th>Nếu bạn muốn...</th>
                                 <th>✨ Dùng pattern này</th>
-                                <th>📅 Từ Day</th>
+                                <th> Từ Day</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1732,8 +1966,8 @@
                         <tbody>
                             <tr>
                                 <td>You'll never believe</td>
-                                <td>/juːl ˈnɛvər bɪˈliːv/</td>
-                                <td>Linking: "You'll" = /jul/</td>
+                                <td>/juːl ˈnɛvər bɪliːv/</td>
+                                <td>Linking: "You'll" = /juːl/</td>
                             </tr>
                             <tr>
                                 <td>So there I was</td>
@@ -1742,33 +1976,33 @@
                             </tr>
                             <tr>
                                 <td>At first, I thought</td>
-                                <td>/æt fɜːst aɪ θɔːt/</td>
+                                <td>/æt fɜrst aɪ θɔːt/</td>
                                 <td>"thought" = /θɔːt/ (not /tːt/)</td>
                             </tr>
                             <tr>
                                 <td>Looking back</td>
-                                <td>/lʊkɪŋ bæk/</td>
+                                <td>/ˈlʊkɪŋ bæk/</td>
                                 <td>Stress on "look"</td>
                             </tr>
                             <tr>
                                 <td>The funny thing was</td>
-                                <td>/ðə ˈfʌni θɪ wʌz/</td>
-                                <td>"thing" = /θɪ/ (not /tɪŋ/)</td>
+                                <td>/ðə ˈfʌni θɪŋ wʌz/</td>
+                                <td>"thing" = /θɪŋ/ (not /tɪ/)</td>
                             </tr>
                             <tr>
                                 <td>It turned out</td>
-                                <td>/ɪt tːnd aʊt/</td>
+                                <td>/t tɜːrnd at/</td>
                                 <td>Linking: "turned out"</td>
                             </tr>
                             <tr>
                                 <td>I met this [person] who</td>
-                                <td>/aɪ mɛt ðɪs [pɜːrsən] huː/</td>
-                                <td>"met" = /mɛt/ (not /mt/)</td>
+                                <td>/aɪ mɛt ðɪs [ˈpɜːrsən] huː/</td>
+                                <td>"met" = /mɛt/ (not /mɪt/)</td>
                             </tr>
                             <tr>
                                 <td>What struck me about</td>
-                                <td>/wʌt strʌk miː əˈbaʊt/</td>
-                                <td>"struck" = /strk/</td>
+                                <td>/wʌt strʌk miː əbaʊt/</td>
+                                <td>"struck" = /strʌk/</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1800,94 +2034,81 @@
                 </div>
             </section>
             
-            <!-- Speaking: 4 Scenarios -->
+            <!-- Practice Scenarios - COLORED CARDS -->
             <section class="section">
                 <div class="section-header">
                     <h2 class="section-title">
                         <i class="ph-duotone ph-microphone"></i>
-                        Speaking: 4 Scenarios
+                        Practice Scenarios
                     </h2>
-                    <p class="section-desc">4 scenarios để practice storytelling tổng hợp. Mỗi scenario có sample flow để bạn tham khảo. Click vào nút để xem chi tiết.</p>
+                    <p class="section-desc">Practice telling complete stories in different contexts. Click button to see sample structure.</p>
                 </div>
                 
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <span class="scenario-type">🏠 Life - 3-4 min</span>
-                        <span class="scenario-time">Scenario 1</span>
+                <div class="scenario-grid">
+                    <div class="scenario-card casual">
+                        <span class="scenario-badge"> Casual - 3-4 min</span>
+                        <h3>Scenario 1: Party Storytelling</h3>
+                        <p class="scenario-context">You're at a party, someone asks "Tell me about an interesting experience"</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use at least 3 patterns from Day 15-20</li>
+                                <li>Create complete narrative arc</li>
+                                <li>Add personal touch and emotion</li>
+                                <li>Keep it engaging and conversational</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
                     </div>
-                    <h3>Your Best Travel Story</h3>
-                    <p class="scenario-context">Bạn đang nói chuyện với bạn về chuyến đi đáng nhớ nhất. Hãy kể một câu chuyện tổng hợp tất cả những gì bạn đã học trong tuần 3.</p>
-                    <div class="scenario-requirements">
-                        <h4>Yêu cầu C1:</h4>
-                        <ul>
-                            <li>Dùng ít nhất 5 storytelling patterns từ tuần 3</li>
-                            <li>Áp dụng 5 master principles</li>
-                            <li>Có clear story arc (hook → turning point → reflection → ending)</li>
-                            <li>Có sensory details và character depth</li>
-                            <li>Có memorable takeaway</li>
-                        </ul>
+                    
+                    <div class="scenario-card professional">
+                        <span class="scenario-badge">💼 Professional - 3-4 min</span>
+                        <h3>Scenario 2: Meeting Storytelling</h3>
+                        <p class="scenario-context">In a meeting, your boss asks "Share a learning experience from your career"</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use more formal patterns</li>
+                                <li>Focus on professional growth</li>
+                                <li>Include specific business insights</li>
+                                <li>End with actionable takeaway</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
                     </div>
-                    <button class="sample-flow-btn">️ Xem Sample Flow</button>
-                </div>
-                
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <span class="scenario-type">💼 Business - 3-4 min</span>
-                        <span class="scenario-time">Scenario 2</span>
+                    
+                    <div class="scenario-card mixed">
+                        <span class="scenario-badge">🔄 Mixed - 4-5 min</span>
+                        <h3>Scenario 3: Networking Storytelling</h3>
+                        <p class="scenario-context">At a networking event, you need to tell a story that's both personal and professional</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Balance personal and professional elements</li>
+                                <li>Show vulnerability but maintain professionalism</li>
+                                <li>Create emotional connection</li>
+                                <li>Leave memorable impression</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn"> See Sample Structure</button>
                     </div>
-                    <h3>A Business Lesson Story</h3>
-                    <p class="scenario-context">Bạn đang nói chuyện với colleague về một business lesson từ experience. Story phải professional nhưng vẫn engaging.</p>
-                    <div class="scenario-requirements">
-                        <h4>Yêu cầu C1:</h4>
-                        <ul>
-                            <li>Dùng ít nhất 5 storytelling patterns</li>
-                            <li>Professional tone nhưng vẫn personal</li>
-                            <li>Có clear before/after contrast</li>
-                            <li>Có business insight và practical application</li>
-                            <li>Có memorable ending</li>
-                        </ul>
+                    
+                    <div class="scenario-card challenge">
+                        <span class="scenario-badge"> Challenge - 5 min</span>
+                        <h3>Scenario 4: Podcast Interview</h3>
+                        <p class="scenario-context">You're in a podcast/video, asked about your storytelling journey in Week 3</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use ALL 5 master principles</li>
+                                <li>Story must have clear arc and emotional depth</li>
+                                <li>Include reflective insight about learning</li>
+                                <li>Have memorable takeaway for listener</li>
+                                <li>Keep listener engaged for 5 minutes</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
                     </div>
-                    <button class="sample-flow-btn">🎙️ Xem Sample Flow</button>
-                </div>
-                
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <span class="scenario-type">🔄 Mixed - 3-4 min</span>
-                        <span class="scenario-time">Scenario 3</span>
-                    </div>
-                    <h3>A Memorable Person Story</h3>
-                    <p class="scenario-context">Bạn đang ở networking event, ai đó hỏi về một memorable person bạn đã gặp. Story phải balance professional và personal.</p>
-                    <div class="scenario-requirements">
-                        <h4>Yêu cầu C1:</h4>
-                        <ul>
-                            <li>Dùng ít nhất 5 people I met patterns (Day 17)</li>
-                            <li>Có character depth và memorable details</li>
-                            <li>Có insight learned from person</li>
-                            <li>Có lasting impact</li>
-                            <li>Connect person với broader insight</li>
-                        </ul>
-                    </div>
-                    <button class="sample-flow-btn">🎙️ Xem Sample Flow</button>
-                </div>
-                
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <span class="scenario-type">🔥 Challenge - 5 min</span>
-                        <span class="scenario-time">Scenario 4</span>
-                    </div>
-                    <h3>Podcast Interview: Your Storytelling Journey</h3>
-                    <p class="scenario-context">Bạn đang trong podcast/video, được hỏi về hành trình storytelling của bạn trong tuần 3. Hãy chia sẻ câu chuyện về chính quá trình học.</p>
-                    <div class="scenario-requirements">
-                        <h4>Yêu cầu C1:</h4>
-                        <ul>
-                            <li>Dùng TẤT CẢ 5 master principles</li>
-                            <li>Story phải có clear arc và emotional depth</li>
-                            <li>Có reflective insight về quá trình học</li>
-                            <li>Có memorable takeaway cho listener</li>
-                            <li>Keep listener engaged for 5 minutes</li>
-                        </ul>
-                    </div>
-                    <button class="sample-flow-btn">🎙️ Xem Sample Flow</button>
                 </div>
             </section>
             
@@ -1923,7 +2144,7 @@
                 
                 <div class="task-card standard">
                     <div class="task-level">STANDARD</div>
-                    <h3>🎙️ Record & Evaluate Your Story</h3>
+                    <h3>️ Record & Evaluate Your Story</h3>
                     <div class="task-time">⏱️ 30 minutes</div>
                     <p class="task-desc">Record 3-minute story dùng 5 master principles, sau đó tự đánh giá như một listener.</p>
                     <div class="task-requirements">
@@ -1957,6 +2178,79 @@
                     </div>
                     <div class="task-deliverable">
                         <strong>Deliverable:</strong> Video file HOẶC LinkedIn post + self-evaluation
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Complete Storytelling Mastery -->
+            <section class="section">
+                <div class="mastery-card">
+                    <h2>🎯 Complete Storytelling Mastery</h2>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery1">
+                        <label for="mastery1">Write a complete story (300 words) about an important experience in your life using at least 5 patterns from Week 3 with full 4-part structure</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery2">
+                        <label for="mastery2">Record yourself telling the story (3-4 minutes) - practice natural delivery, focus on engagement not perfection</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery3">
+                        <label for="mastery3">Adapt the story for 2 different audiences: Version 1 for casual (friends), Version 2 for professional (colleagues)</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery4">
+                        <label for="mastery4">Share with accountability partner and get feedback</label>
+                    </div>
+                </div>
+                
+                <!-- Success Criteria - GREEN -->
+                <div class="success-card">
+                    <h2><i class="ph-duotone ph-check-circle"></i> Success Criteria</h2>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can tell a complete story with natural flow</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can use multiple patterns naturally</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can adapt story for different audiences</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can create emotional connection with listener</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can leave listener with memorable insight</span>
+                    </div>
+                </div>
+                
+                <!-- Pro Tips - ORANGE -->
+                <div class="tips-card">
+                    <h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Start with the ending:</strong> Know what insight you want to share, then build story backwards</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Show, don't tell:</strong> Use specific details and sensory language</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Be vulnerable:</strong> Share real emotions, not just facts</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Practice out loud:</strong> Writing ≠ speaking, practice delivery</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Get feedback:</strong> Ask others what resonated with them</span>
                     </div>
                 </div>
             </section>
@@ -2005,7 +2299,7 @@
                         <div class="flashcard-back">
                             <p>"You'll never believe what happened when we got lost in Tokyo."</p>
                             <div class="flashcard-tip">
-                                <strong>💡 Tip:</strong> Curiosity = dopamine. Khi người nghe tò mò, não họ release dopamine. Tránh "I went to... It was..."
+                                <strong> Tip:</strong> Curiosity = dopamine. Khi người nghe tò mò, não họ release dopamine. Tránh "I went to... It was..."
                             </div>
                         </div>
                     </div>
@@ -2105,9 +2399,9 @@
             
             <!-- Milestone 3 Celebration -->
             <section class="section">
-                <div class="story-card" style="text-align: center; background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(252, 211, 77, 0.08)); border: 2px solid var(--gold);">
+                <div class="mastery-card" style="text-align: center; background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 230, 138, 0.3));">
                     <div style="font-size: 3rem; margin-bottom: 12px;">🏆</div>
-                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">Milestone 3: Storytelling Mastery</h3>
+                    <h2 style="justify-content: center;">Milestone 3: Storytelling Mastery</h2>
                     <p style="font-size: 14px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 20px; line-height: 1.6;">
                         Bạn đã hoàn thành Week 3. Từ "I am..." (Week 1) đến "You'll never believe..." (Week 3), bạn đã chuyển từ <strong>describing</strong> sang <strong>storytelling</strong>.
                     </p>
@@ -2145,13 +2439,34 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-fox">🦊</div>
+            <div class="footer-fox"></div>
             <div class="footer-title">Professional Fluency Roadmap</div>
             <div class="footer-tagline">Week 3 · Day 21 · Storytelling Mastery · Phase 1 Complete</div>
         </div>
     </footer>
     
     <script>
+        // Audio function using Web Speech API
+        function speak(btn) {
+            const example = btn.parentElement;
+            const text = example.querySelector('span:last-child').textContent;
+            
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.9;
+                utterance.pitch = 1;
+                window.speechSynthesis.speak(utterance);
+                
+                // Visual feedback
+                btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+                setTimeout(() => {
+                    btn.style.background = '';
+                }, 1000);
+            }
+        }
+        
         function markComplete() {
             const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
             if (!completed.includes('day-21')) {
@@ -2165,7 +2480,7 @@
             btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
             
             const msg = document.querySelector('.complete-message');
-            msg.textContent = 'From "I am..." to "You\'ll never believe..." — you\'ve transformed! ';
+            msg.textContent = 'From "I am..." to "You\'ll never believe..." — you\'ve transformed! 🏆';
         }
         
         window.addEventListener('DOMContentLoaded', () => {
