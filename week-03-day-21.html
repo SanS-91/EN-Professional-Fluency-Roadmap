@@ -15,10 +15,6 @@
             --gold-deep: #92400E;
             --gold-light: #FDE68A;
             
-            --purple: #8B5CF6;
-            --purple-soft: #F3E8FF;
-            --purple-deep: #6B21A8;
-            
             --green: #10B981;
             --green-soft: #D1FAE5;
             --green-deep: #065F46;
@@ -26,6 +22,10 @@
             --blue: #3B82F6;
             --blue-soft: #DBEAFE;
             --blue-deep: #1E40AF;
+            
+            --purple: #8B5CF6;
+            --purple-soft: #F3E8FF;
+            --purple-deep: #6B21A8;
             
             --orange: #F97316;
             --orange-soft: #FFEDD5;
@@ -157,7 +157,7 @@
             box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
         }
         
-        /* Header - ONLY gradient here */
+        /* Header */
         .day-header {
             background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
             padding: 48px 0 40px;
@@ -211,7 +211,7 @@
         }
         
         .day-subtitle strong {
-            color: var(--gold-bright);
+            color: var(--gold-deep);
         }
         
         .day-meta {
@@ -236,7 +236,7 @@
         
         .meta-tag i { --ph-color: var(--gold-bright); }
         
-        /* Content area - white background */
+        /* Content area */
         .content-area {
             background: #FAFAFA;
             padding: 40px 0;
@@ -269,7 +269,7 @@
             line-height: 1.7;
         }
         
-        /* Philosophy section - white card with gold border */
+        /* Philosophy section */
         .philosophy-section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius-lg);
@@ -725,7 +725,7 @@
             margin-bottom: 4px;
         }
         
-        /* Scenario cards - COLORED */
+        /* Scenario cards */
         .scenario-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -940,7 +940,7 @@
             border-radius: var(--radius-sm);
         }
         
-        /* Mastery card - gold border */
+        /* Mastery card */
         .mastery-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: var(--radius-lg);
@@ -988,7 +988,7 @@
             line-height: 1.5;
         }
         
-        /* Success criteria - green */
+        /* Success criteria */
         .success-card {
             background: rgba(209, 250, 229, 0.5);
             border-radius: var(--radius-lg);
@@ -1019,7 +1019,7 @@
         
         .success-item i { --ph-color: var(--green); font-size: 18px; }
         
-        /* Pro tips - orange */
+        /* Pro tips */
         .tips-card {
             background: rgba(255, 237, 213, 0.5);
             border-radius: var(--radius-lg);
@@ -1064,7 +1064,7 @@
         }
         
         .flashcard {
-            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 230, 138, 0.5));
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 230, 138, 0.3));
             border-radius: var(--radius-md);
             padding: 32px;
             margin-bottom: 16px;
@@ -1357,7 +1357,7 @@
         </div>
     </div>
     
-    <!-- Header - ONLY gradient here -->
+    <!-- Header -->
     <header class="day-header">
         <div class="container">
             <div class="breadcrumb">
@@ -1377,7 +1377,7 @@
         </div>
     </header>
     
-    <!-- Content area - white background -->
+    <!-- Content area -->
     <div class="content-area">
         <div class="container">
             
@@ -1505,27 +1505,27 @@
                         <h4>Examples 🔊</h4>
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
-                            <span><strong>"You'll never believe"</strong> what happened when we got lost in Tokyo.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"You'll never believe what happened when we got lost in Tokyo."</span>
+                            <button class="audio-btn" onclick="playAudio('You\'ll never believe what happened when we got lost in Tokyo.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
-                            <span><strong>"So there I was"</strong>, standing in the middle of a rice field with no idea where I was.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"So there I was, standing in the middle of a rice field with no idea where I was."</span>
+                            <button class="audio-btn" onclick="playAudio('So there I was, standing in the middle of a rice field with no idea where I was.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
-                            <span><strong>"At first, I thought"</strong> the client was going to reject our proposal, <strong>but it turned out</strong> they loved it.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"At first, I thought the client was going to reject our proposal, but it turned out they loved it."</span>
+                            <button class="audio-btn" onclick="playAudio('At first, I thought the client was going to reject our proposal, but it turned out they loved it.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag business"> Business</span>
-                            <span><strong>"Let me tell you about"</strong> the time we almost lost our biggest client — and what saved us.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"Let me tell you about the time we almost lost our biggest client — and what saved us."</span>
+                            <button class="audio-btn" onclick="playAudio('Let me tell you about the time we almost lost our biggest client, and what saved us.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
-                        <strong> Usage Notes:</strong> Áp dụng từ Day 15 (Travel), Day 16 (Unexpected), Day 20 (Stories Worth Telling). Tránh "I went to... It was... I liked..."
+                        <strong>💡 Usage Notes:</strong> Dùng khi muốn hiểu motivation/passion. Tránh "What do you do?" (too transactional). Follow up với "Was there a moment..." để invite story.
                     </div>
                 </div>
                 
@@ -1535,7 +1535,7 @@
                         <div class="pattern-number">2</div>
                         <div class="pattern-content">
                             <div class="pattern-text">Show moments, don't summarize</div>
-                            <div class="pattern-ipa">/ʃoʊ ˈmoʊmənts, doʊnt sʌməraɪz/</div>
+                            <div class="pattern-ipa">/ʃoʊ ˈmomənts, doʊnt sʌməraɪz/</div>
                             <div class="pattern-meta">
                                 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
                                 <div class="pattern-context">Universal</div>
@@ -1553,27 +1553,27 @@
                         <h4>Examples 🔊</h4>
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
-                            <span>We sat on <strong>plastic stools</strong>, sharing <strong>one plate of phở</strong>, communicating through <strong>gestures</strong>.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"We sat on plastic stools, sharing one plate of phở, communicating through gestures."</span>
+                            <button class="audio-btn" onclick="playAudio('We sat on plastic stools, sharing one plate of pho, communicating through gestures.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag"> Life</span>
-                            <span>The sun came up at <strong>3 AM</strong> and I <strong>couldn't breathe</strong>.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
-                        </div>
-                        <div class="example">
-                            <span class="example-tag business">💼 Business</span>
-                            <span>My slides <strong>froze</strong>, the projector <strong>died</strong>, and I could see the client <strong>checking his phone</strong>.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"The sun came up at 3 AM and I couldn't breathe."</span>
+                            <button class="audio-btn" onclick="playAudio('The sun came up at 3 AM and I couldn\'t breathe.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
-                            <span>She had <strong>read every single case study</strong> on our website — <strong>all 47 of them</strong>.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"My slides froze, the projector died, and I could see the client checking his phone."</span>
+                            <button class="audio-btn" onclick="playAudio('My slides froze, the projector died, and I could see the client checking his phone.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"She had read every single case study on our website — all 47 of them."</span>
+                            <button class="audio-btn" onclick="playAudio('She had read every single case study on our website, all 47 of them.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
-                        <strong>💡 Usage Notes:</strong> Áp dụng từ Day 15, 17, 18. Tránh "It was beautiful", "We had a good time" — quá generic.
+                        <strong>💡 Usage Notes:</strong> Dùng sau khi biết context. Invite reflection, not reporting. Creates emotional depth. Natural follow-up to "What got you interested..."
                     </div>
                 </div>
                 
@@ -1583,7 +1583,7 @@
                         <div class="pattern-number">3</div>
                         <div class="pattern-content">
                             <div class="pattern-text">People matter more than places</div>
-                            <div class="pattern-ipa">/ˈpiːpəl ˈmætər mɔr ðən ˈpleɪsz/</div>
+                            <div class="pattern-ipa">/ˈpiːpəl ˈmætər mɔr ðən pleɪsɪz/</div>
                             <div class="pattern-meta">
                                 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
                                 <div class="pattern-context">Universal</div>
@@ -1601,27 +1601,27 @@
                         <h4>Examples 🔊</h4>
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
-                            <span><strong>I met this elderly woman</strong> who had been traveling solo for 20 years.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"I met this elderly woman who had been traveling solo for 20 years."</span>
+                            <button class="audio-btn" onclick="playAudio('I met this elderly woman who had been traveling solo for 20 years.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag"> Life</span>
-                            <span><strong>What struck me about her was</strong> how she could connect with anyone, regardless of language barriers.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
-                        </div>
-                        <div class="example">
-                            <span class="example-tag business">💼 Business</span>
-                            <span><strong>I met this client</strong> who had turned down 3 bigger offers to work with us.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"What struck me about her was how she could connect with anyone, regardless of language barriers."</span>
+                            <button class="audio-btn" onclick="playAudio('What struck me about her was how she could connect with anyone, regardless of language barriers.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
-                            <span><strong>I'll never forget him because</strong> he taught me that the best clients are the ones who challenge you to be better.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"I met this client who had turned down 3 bigger offers to work with us."</span>
+                            <button class="audio-btn" onclick="playAudio('I met this client who had turned down 3 bigger offers to work with us.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I'll never forget him because he taught me that the best clients are the ones who challenge you to be better."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ll never forget him because he taught me that the best clients are the ones who challenge you to be better.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
-                        <strong> Usage Notes:</strong> Áp dụng từ Day 17. Character phải có memorable detail, insight, và lasting impact.
+                        <strong>💡 Usage Notes:</strong> Dùng khi người kia có expertise. Tạo cơ hội để họ share wisdom. Build rapport qua respect. Powerful question for networking.
                     </div>
                 </div>
                 
@@ -1631,7 +1631,7 @@
                         <div class="pattern-number">4</div>
                         <div class="pattern-content">
                             <div class="pattern-text">Reflection gives stories meaning</div>
-                            <div class="pattern-ipa">/rɪˈflɛkʃən ɡɪvz ˈstɔːriz ˈmiːnɪ/</div>
+                            <div class="pattern-ipa">/rɪˈflɛkʃən ɡɪvz ˈstɔːriz miːnɪŋ/</div>
                             <div class="pattern-meta">
                                 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
                                 <div class="pattern-context">Universal</div>
@@ -1649,27 +1649,27 @@
                         <h4>Examples 🔊</h4>
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
-                            <span><strong>Looking back, the biggest lesson I learned was</strong> that the best experiences come from adaptability, not perfection.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"Looking back, the biggest lesson I learned was that the best experiences come from adaptability, not perfection."</span>
+                            <button class="audio-btn" onclick="playAudio('Looking back, the biggest lesson I learned was that the best experiences come from adaptability, not perfection.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
-                            <span><strong>Before that trip, I thought</strong> I needed to plan every detail, <strong>but now I realize</strong> that the best experiences come from spontaneity.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"Before that trip, I thought I needed to plan every detail, but now I realize that the best experiences come from spontaneity."</span>
+                            <button class="audio-btn" onclick="playAudio('Before that trip, I thought I needed to plan every detail, but now I realize that the best experiences come from spontaneity.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
-                            <span><strong>It taught me that</strong> success isn't about being right — it's about being willing to be wrong.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"It taught me that success isn't about being right — it's about being willing to be wrong."</span>
+                            <button class="audio-btn" onclick="playAudio('It taught me that success isn\'t about being right, it\'s about being willing to be wrong.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
-                            <span><strong>If I could go back, I would</strong> focus less on being right and more on building trust.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"If I could go back, I would focus less on being right and more on building trust."</span>
+                            <button class="audio-btn" onclick="playAudio('If I could go back, I would focus less on being right and more on building trust.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
-                        <strong>💡 Usage Notes:</strong> Áp dụng từ Day 19. Reflection phải specific, không generic. Lesson phải actionable.
+                        <strong>💡 Usage Notes:</strong> Dùng khi conversation đã có depth. Hypothetical = safe space. Invite wisdom sharing. Powerful for mentors and experienced people.
                     </div>
                 </div>
                 
@@ -1697,27 +1697,27 @@
                         <h4>Examples 🔊</h4>
                         <div class="example">
                             <span class="example-tag">🏠 Life</span>
-                            <span><strong>If there's one thing I want you to take away</strong> from this story, it's that the best travel moments happen when you stop trying to control everything.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"If there's one thing I want you to take away from this story, it's that the best travel moments happen when you stop trying to control everything."</span>
+                            <button class="audio-btn" onclick="playAudio('If there\'s one thing I want you to take away from this story, it\'s that the best travel moments happen when you stop trying to control everything.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
-                            <span class="example-tag"> Life</span>
-                            <span>That 'wrong turn' was <strong>actually the right turn all along</strong>.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
-                        </div>
-                        <div class="example">
-                            <span class="example-tag business">💼 Business</span>
-                            <span><strong>The reason I bring this up is</strong> because sometimes the 'disasters' are actually our breakthroughs.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"That 'wrong turn' was actually the right turn all along."</span>
+                            <button class="audio-btn" onclick="playAudio('That wrong turn was actually the right turn all along.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                         <div class="example">
                             <span class="example-tag business">💼 Business</span>
-                            <span>That 'simple' bowl of phở took 12 hours to make. It taught me that <strong>the best food isn't just about ingredients — it's about the story behind it</strong>.</span>
-                            <button class="audio-btn" onclick="speak(this)"><i class="ph-duotone ph-speaker-high"></i></button>
+                            <span>"The reason I bring this up is because sometimes the 'disasters' are actually our breakthroughs."</span>
+                            <button class="audio-btn" onclick="playAudio('The reason I bring this up is because sometimes the disasters are actually our breakthroughs.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"That 'simple' bowl of phở took 12 hours to make. It taught me that the best food isn't just about ingredients — it's about the story behind it."</span>
+                            <button class="audio-btn" onclick="playAudio('That simple bowl of pho took 12 hours to make. It taught me that the best food isn\'t just about ingredients, it\'s about the story behind it.')"><i class="ph-duotone ph-speaker-high"></i></button>
                         </div>
                     </div>
                     <div class="pattern-usage">
-                        <strong>💡 Usage Notes:</strong> Áp dụng từ Day 20. Ending phải memorable, universal, và có emotional impact.
+                        <strong>💡 Usage Notes:</strong> Dùng khi muốn deep dive. Meta-question creates vulnerability. Powerful way to access what someone truly cares about. Best used after rapport is established.
                     </div>
                 </div>
             </section>
@@ -1760,14 +1760,15 @@
                 <div class="story-card">
                     <h3>🗺️ Story 1: The Stranded Trip (Life)</h3>
                     <div class="story-text">
-                        "<strong>You'll never believe</strong> what happened when our flight got canceled in Bangkok. <strong>So there I was</strong>, stranded at the airport at 11 PM with no hotel booking and zero Thai baht. <strong>At first, I thought</strong> we were completely screwed — but <strong>it turned out</strong> that the 'disaster' led us to this amazing neighborhood we would have never seen otherwise.
+                        "You'll never believe what happened when our flight got canceled in Bangkok. So there I was, stranded at the airport at 11 PM with no hotel booking and zero Thai baht. At first, I thought we were completely screwed — but it turned out that the 'disaster' led us to this amazing neighborhood we would have never seen otherwise.
                         <br><br>
-                        <strong>I met this</strong> elderly couple who ran a tiny guesthouse, and <strong>what struck me about them was</strong> how they treated every guest like family. <strong>We ended up</strong> having dinner with them that night — sitting on plastic stools, sharing one plate of pad thai, communicating through gestures. <strong>The funny thing was</strong> that they didn't speak a word of English, but we laughed more than I had in months.
+                        I met this elderly couple who ran a tiny guesthouse, and what struck me about them was how they treated every guest like family. We ended up having dinner with them that night — sitting on plastic stools, sharing one plate of pad thai, communicating through gestures. The funny thing was that they didn't speak a word of English, but we laughed more than I had in months.
                         <br><br>
-                        <strong>Looking back, the biggest lesson I learned was</strong> that the best experiences come from adaptability, not perfection. <strong>Before that trip, I thought</strong> I needed to plan every detail — <strong>but now I realize</strong> that all my planning was useless when the flight got canceled. <strong>It taught me that</strong> sometimes the 'detours' are actually the destination.
+                        Looking back, the biggest lesson I learned was that the best experiences come from adaptability, not perfection. Before that trip, I thought I needed to plan every detail — but now I realize that all my planning was useless when the flight got canceled. It taught me that sometimes the 'detours' are actually the destination.
                         <br><br>
-                        <strong>If there's one thing I want you to take away</strong> from this story, it's that the best travel moments happen when you stop trying to control everything."
+                        If there's one thing I want you to take away from this story, it's that the best travel moments happen when you stop trying to control everything."
                     </div>
+                    <button class="audio-btn" onclick="playAudio('You\'ll never believe what happened when our flight got canceled in Bangkok. So there I was, stranded at the airport at 11 PM with no hotel booking and zero Thai baht. At first, I thought we were completely screwed, but it turned out that the disaster led us to this amazing neighborhood we would have never seen otherwise. I met this elderly couple who ran a tiny guesthouse, and what struck me about them was how they treated every guest like family. We ended up having dinner with them that night, sitting on plastic stools, sharing one plate of pad thai, communicating through gestures. The funny thing was that they didn\'t speak a word of English, but we laughed more than I had in months. Looking back, the biggest lesson I learned was that the best experiences come from adaptability, not perfection. Before that trip, I thought I needed to plan every detail, but now I realize that all my planning was useless when the flight got canceled. It taught me that sometimes the detours are actually the destination. If there\'s one thing I want you to take away from this story, it\'s that the best travel moments happen when you stop trying to control everything.')" style="margin-bottom: 14px; width: auto; padding: 10px 20px; border-radius: 20px;"><i class="ph-duotone ph-speaker-high"></i> Nghe toàn bộ story</button>
                     <div class="story-analysis">
                         <h4>Analysis:</h4>
                         <ul>
@@ -1785,16 +1786,17 @@
                 <div class="story-card">
                     <h3>💼 Story 2: The Failed Presentation (Business)</h3>
                     <div class="story-text">
-                        "<strong>Let me tell you about</strong> the time my presentation was a total disaster — and how it became our biggest breakthrough. <strong>So there I was</strong>, in front of our biggest client, when my slides froze, the projector died, and I could see the client checking his phone. <strong>I was mortified</strong>, thinking we'd just lost the deal of the year.
+                        "Let me tell you about the time my presentation was a total disaster — and how it became our biggest breakthrough. So there I was, in front of our biggest client, when my slides froze, the projector died, and I could see the client checking his phone. I was mortified, thinking we'd just lost the deal of the year.
                         <br><br>
-                        <strong>But it turned out that</strong> the 'technical difficulties' actually forced us to have a real conversation instead of just reading slides. <strong>The funny thing was</strong> that the client later told us it was the most engaging presentation he'd seen all year. <strong>I wasn't expecting</strong> the 'worst' presentation to lead to our best client relationship.
+                        But it turned out that the 'technical difficulties' actually forced us to have a real conversation instead of just reading slides. The funny thing was that the client later told us it was the most engaging presentation he'd seen all year. I wasn't expecting the 'worst' presentation to lead to our best client relationship.
                         <br><br>
-                        <strong>I met this</strong> client who had turned down 3 bigger offers to work with us, and <strong>what struck me about him was</strong> his attention to detail — he had read every single case study on our website. <strong>He told me</strong> about his previous experiences with other agencies, and <strong>it made me realize</strong> that clients don't want vendors, they want partners.
+                        I met this client who had turned down 3 bigger offers to work with us, and what struck me about him was his attention to detail — he had read every single case study on our website. He told me about his previous experiences with other agencies, and it made me realize that clients don't want vendors, they want partners.
                         <br><br>
-                        <strong>Looking back, the biggest lesson I learned was</strong> that success isn't about being right — it's about being willing to be wrong. <strong>Before that project, I thought</strong> I had to have all the answers — <strong>but now I realize</strong> that asking the right questions is more important. <strong>It taught me that</strong> the best ideas come from creating an environment where people feel safe to be wrong.
+                        Looking back, the biggest lesson I learned was that success isn't about being right — it's about being willing to be wrong. Before that project, I thought I had to have all the answers — but now I realize that asking the right questions is more important. It taught me that the best ideas come from creating an environment where people feel safe to be wrong.
                         <br><br>
-                        <strong>If there's one thing I want you to take away</strong>, it's that sometimes the things that go wrong end up being the things that make you stand out. That 'disaster' was actually our breakthrough."
+                        If there's one thing I want you to take away, it's that sometimes the things that go wrong end up being the things that make you stand out. That 'disaster' was actually our breakthrough."
                     </div>
+                    <button class="audio-btn" onclick="playAudio('Let me tell you about the time my presentation was a total disaster, and how it became our biggest breakthrough. So there I was, in front of our biggest client, when my slides froze, the projector died, and I could see the client checking his phone. I was mortified, thinking we\'d just lost the deal of the year. But it turned out that the technical difficulties actually forced us to have a real conversation instead of just reading slides. The funny thing was that the client later told us it was the most engaging presentation he\'d seen all year. I wasn\'t expecting the worst presentation to lead to our best client relationship. I met this client who had turned down 3 bigger offers to work with us, and what struck me about him was his attention to detail, he had read every single case study on our website. He told me about his previous experiences with other agencies, and it made me realize that clients don\'t want vendors, they want partners. Looking back, the biggest lesson I learned was that success isn\'t about being right, it\'s about being willing to be wrong. Before that project, I thought I had to have all the answers, but now I realize that asking the right questions is more important. It taught me that the best ideas come from creating an environment where people feel safe to be wrong. If there\'s one thing I want you to take away, it\'s that sometimes the things that go wrong end up being the things that make you stand out. That disaster was actually our breakthrough.')" style="margin-bottom: 14px; width: auto; padding: 10px 20px; border-radius: 20px;"><i class="ph-duotone ph-speaker-high"></i> Nghe toàn bộ story</button>
                     <div class="story-analysis">
                         <h4>Analysis:</h4>
                         <ul>
@@ -1827,7 +1829,7 @@
                             <tr>
                                 <th>Nếu bạn muốn...</th>
                                 <th>✨ Dùng pattern này</th>
-                                <th> Từ Day</th>
+                                <th>📅 Từ Day</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1966,7 +1968,7 @@
                         <tbody>
                             <tr>
                                 <td>You'll never believe</td>
-                                <td>/juːl ˈnɛvər bɪliːv/</td>
+                                <td>/juːl nɛvər bɪˈliːv/</td>
                                 <td>Linking: "You'll" = /juːl/</td>
                             </tr>
                             <tr>
@@ -1976,7 +1978,7 @@
                             </tr>
                             <tr>
                                 <td>At first, I thought</td>
-                                <td>/æt fɜrst aɪ θɔːt/</td>
+                                <td>/æt fɜːrst aɪ θɔːt/</td>
                                 <td>"thought" = /θɔːt/ (not /tːt/)</td>
                             </tr>
                             <tr>
@@ -1987,11 +1989,11 @@
                             <tr>
                                 <td>The funny thing was</td>
                                 <td>/ðə ˈfʌni θɪŋ wʌz/</td>
-                                <td>"thing" = /θɪŋ/ (not /tɪ/)</td>
+                                <td>"thing" = /θɪŋ/ (not /tɪŋ/)</td>
                             </tr>
                             <tr>
                                 <td>It turned out</td>
-                                <td>/t tɜːrnd at/</td>
+                                <td>/ɪt tɜːrnd aʊt/</td>
                                 <td>Linking: "turned out"</td>
                             </tr>
                             <tr>
@@ -2001,7 +2003,7 @@
                             </tr>
                             <tr>
                                 <td>What struck me about</td>
-                                <td>/wʌt strʌk miː əbaʊt/</td>
+                                <td>/wʌt strʌk miː əˈbaʊt/</td>
                                 <td>"struck" = /strʌk/</td>
                             </tr>
                         </tbody>
@@ -2034,11 +2036,11 @@
                 </div>
             </section>
             
-            <!-- Practice Scenarios - COLORED CARDS -->
+            <!-- Practice Scenarios -->
             <section class="section">
                 <div class="section-header">
                     <h2 class="section-title">
-                        <i class="ph-duotone ph-microphone"></i>
+                        <i class="ph-duotone ph-chats"></i>
                         Practice Scenarios
                     </h2>
                     <p class="section-desc">Practice telling complete stories in different contexts. Click button to see sample structure.</p>
@@ -2046,7 +2048,7 @@
                 
                 <div class="scenario-grid">
                     <div class="scenario-card casual">
-                        <span class="scenario-badge"> Casual - 3-4 min</span>
+                        <span class="scenario-badge">🟢 Casual - 3-4 min</span>
                         <h3>Scenario 1: Party Storytelling</h3>
                         <p class="scenario-context">You're at a party, someone asks "Tell me about an interesting experience"</p>
                         <div class="scenario-requirements">
@@ -2062,7 +2064,7 @@
                     </div>
                     
                     <div class="scenario-card professional">
-                        <span class="scenario-badge">💼 Professional - 3-4 min</span>
+                        <span class="scenario-badge">🔵 Professional - 3-4 min</span>
                         <h3>Scenario 2: Meeting Storytelling</h3>
                         <p class="scenario-context">In a meeting, your boss asks "Share a learning experience from your career"</p>
                         <div class="scenario-requirements">
@@ -2078,7 +2080,7 @@
                     </div>
                     
                     <div class="scenario-card mixed">
-                        <span class="scenario-badge">🔄 Mixed - 4-5 min</span>
+                        <span class="scenario-badge">🟣 Mixed - 4-5 min</span>
                         <h3>Scenario 3: Networking Storytelling</h3>
                         <p class="scenario-context">At a networking event, you need to tell a story that's both personal and professional</p>
                         <div class="scenario-requirements">
@@ -2090,11 +2092,11 @@
                                 <li>Leave memorable impression</li>
                             </ul>
                         </div>
-                        <button class="sample-flow-btn"> See Sample Structure</button>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
                     </div>
                     
                     <div class="scenario-card challenge">
-                        <span class="scenario-badge"> Challenge - 5 min</span>
+                        <span class="scenario-badge">🟠 Challenge - 5 min</span>
                         <h3>Scenario 4: Podcast Interview</h3>
                         <p class="scenario-context">You're in a podcast/video, asked about your storytelling journey in Week 3</p>
                         <div class="scenario-requirements">
@@ -2119,7 +2121,7 @@
                         <i class="ph-duotone ph-target"></i>
                         Reality Task - Choose Your Level
                     </h2>
-                    <p class="section-desc">Bài tập THỰC TẾ - apply tất cả storytelling skills vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+                    <p class="section-desc">Bài tập THỰC TẾ - apply storytelling skills vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
                 </div>
                 
                 <div class="task-card easy">
@@ -2144,7 +2146,7 @@
                 
                 <div class="task-card standard">
                     <div class="task-level">STANDARD</div>
-                    <h3>️ Record & Evaluate Your Story</h3>
+                    <h3>🎙️ Record & Evaluate Your Story</h3>
                     <div class="task-time">⏱️ 30 minutes</div>
                     <p class="task-desc">Record 3-minute story dùng 5 master principles, sau đó tự đánh giá như một listener.</p>
                     <div class="task-requirements">
@@ -2188,23 +2190,27 @@
                     <h2>🎯 Complete Storytelling Mastery</h2>
                     <div class="mastery-item">
                         <input type="checkbox" id="mastery1">
-                        <label for="mastery1">Write a complete story (300 words) about an important experience in your life using at least 5 patterns from Week 3 with full 4-part structure</label>
+                        <label for="mastery1">Can tell a complete story with natural flow</label>
                     </div>
                     <div class="mastery-item">
                         <input type="checkbox" id="mastery2">
-                        <label for="mastery2">Record yourself telling the story (3-4 minutes) - practice natural delivery, focus on engagement not perfection</label>
+                        <label for="mastery2">Can use multiple patterns naturally</label>
                     </div>
                     <div class="mastery-item">
                         <input type="checkbox" id="mastery3">
-                        <label for="mastery3">Adapt the story for 2 different audiences: Version 1 for casual (friends), Version 2 for professional (colleagues)</label>
+                        <label for="mastery3">Can adapt story for different audiences</label>
                     </div>
                     <div class="mastery-item">
                         <input type="checkbox" id="mastery4">
-                        <label for="mastery4">Share with accountability partner and get feedback</label>
+                        <label for="mastery4">Can create emotional connection with listener</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery5">
+                        <label for="mastery5">Can leave listener with memorable insight</label>
                     </div>
                 </div>
                 
-                <!-- Success Criteria - GREEN -->
+                <!-- Success Criteria -->
                 <div class="success-card">
                     <h2><i class="ph-duotone ph-check-circle"></i> Success Criteria</h2>
                     <div class="success-item">
@@ -2229,53 +2235,28 @@
                     </div>
                 </div>
                 
-                <!-- Pro Tips - ORANGE -->
+                <!-- Pro Tips -->
                 <div class="tips-card">
                     <h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
                     <div class="tip-item">
                         <i class="ph-duotone ph-lightbulb"></i>
-                        <span><strong>Start with the ending:</strong> Know what insight you want to share, then build story backwards</span>
+                        <span><strong>Listen more than you ask:</strong> Curiosity without listening is interrogation. Let them finish before asking follow-up.</span>
                     </div>
                     <div class="tip-item">
                         <i class="ph-duotone ph-lightbulb"></i>
-                        <span><strong>Show, don't tell:</strong> Use specific details and sensory language</span>
+                        <span><strong>Follow the energy:</strong> If they light up about a topic, go deeper there. Don't force your agenda.</span>
                     </div>
                     <div class="tip-item">
                         <i class="ph-duotone ph-lightbulb"></i>
-                        <span><strong>Be vulnerable:</strong> Share real emotions, not just facts</span>
+                        <span><strong>Be genuinely curious:</strong> If you wouldn't remember the answer, it's not a real question. Ask because you care.</span>
                     </div>
                     <div class="tip-item">
                         <i class="ph-duotone ph-lightbulb"></i>
-                        <span><strong>Practice out loud:</strong> Writing ≠ speaking, practice delivery</span>
+                        <span><strong>Share something first:</strong> Vulnerability invites vulnerability. Share a bit about yourself before asking deep questions.</span>
                     </div>
                     <div class="tip-item">
                         <i class="ph-duotone ph-lightbulb"></i>
-                        <span><strong>Get feedback:</strong> Ask others what resonated with them</span>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Storytelling Checklist -->
-            <section class="section">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <i class="ph-duotone ph-check-square"></i>
-                        The Storytelling Checklist
-                    </h2>
-                    <p class="section-desc">Sau khi kể xong một câu chuyện, hãy tự hỏi 5 câu này. Đây là checklist bạn sẽ dùng nhiều lần.</p>
-                </div>
-                
-                <div class="story-card">
-                    <h3>💡 Listen as a LISTENER, not as the speaker</h3>
-                    <div class="story-analysis">
-                        <p style="margin-bottom: 14px; font-size: 13px; color: var(--text-secondary);">Sau khi record hoặc kể xong, nghe lại và tự hỏi:</p>
-                        <ul>
-                            <li><strong>Was I interested after the first 30 seconds?</strong> (Principle 1: Curiosity)</li>
-                            <li><strong>Did I picture the scene in my mind?</strong> (Principle 2: Show moments)</li>
-                            <li><strong>Did I care about the people in the story?</strong> (Principle 3: People matter)</li>
-                            <li><strong>Did I understand why this story mattered?</strong> (Principle 4: Reflection)</li>
-                            <li><strong>Would I tell this story to someone else?</strong> (Principle 5: Memorable ending)</li>
-                        </ul>
+                        <span><strong>Thank them for sharing:</strong> Acknowledge when someone opens up. "Thank you for sharing that" creates safety for next time.</span>
                     </div>
                 </div>
             </section>
@@ -2287,7 +2268,7 @@
                         <i class="ph-duotone ph-cards"></i>
                         Flashcard Review
                     </h2>
-                    <p class="section-desc">6 flashcards với 5 master principles và tips. Mặt trước: principle. Mặt sau: example + tip.</p>
+                    <p class="section-desc">6 flashcards với storytelling principles và tips. Mặt trước: principle. Mặt sau: example + tip.</p>
                 </div>
                 
                 <div class="flashcard-container">
@@ -2299,7 +2280,7 @@
                         <div class="flashcard-back">
                             <p>"You'll never believe what happened when we got lost in Tokyo."</p>
                             <div class="flashcard-tip">
-                                <strong> Tip:</strong> Curiosity = dopamine. Khi người nghe tò mò, não họ release dopamine. Tránh "I went to... It was..."
+                                <strong>💡 Tip:</strong> Curiosity = dopamine. Khi người nghe tò mò, não họ release dopamine. Tránh "I went to... It was..."
                             </div>
                         </div>
                     </div>
@@ -2397,30 +2378,15 @@
                 </button>
             </section>
             
-            <!-- Milestone 3 Celebration -->
-            <section class="section">
-                <div class="mastery-card" style="text-align: center; background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 230, 138, 0.3));">
-                    <div style="font-size: 3rem; margin-bottom: 12px;">🏆</div>
-                    <h2 style="justify-content: center;">Milestone 3: Storytelling Mastery</h2>
-                    <p style="font-size: 14px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 20px; line-height: 1.6;">
-                        Bạn đã hoàn thành Week 3. Từ "I am..." (Week 1) đến "You'll never believe..." (Week 3), bạn đã chuyển từ <strong>describing</strong> sang <strong>storytelling</strong>.
-                    </p>
-                    <div style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: white; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 14px; box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);">
-                        <i class="ph-duotone ph-check-circle" style="font-size: 1.1rem;"></i>
-                        <span>30+ patterns mastered · 5 principles internalized</span>
-                    </div>
-                </div>
-            </section>
-            
             <!-- Navigation -->
             <div class="day-navigation">
                 <a href="week-03-day-20.html" class="nav-card">
                     <div class="nav-label">← Previous Day</div>
                     <div class="nav-title">Day 20: Stories Worth Telling</div>
                 </a>
-                <a href="week-04.html" class="nav-card">
-                    <div class="nav-label">Next Week →</div>
-                    <div class="nav-title">Week 4: Relationship Builder</div>
+                <a href="week-04-day-22.html" class="nav-card">
+                    <div class="nav-label">Next Day →</div>
+                    <div class="nav-title">Day 22: Curiosity & Warmth</div>
                 </a>
             </div>
             
@@ -2428,7 +2394,7 @@
             <div class="complete-container">
                 <button class="complete-btn" onclick="markComplete()">
                     <i class="ph-duotone ph-check-circle"></i>
-                    <span>Mark Day 21 Complete · Celebrate Week 3!</span>
+                    <span>Mark Day 21 Complete & Continue to Day 22</span>
                 </button>
                 <div class="complete-message">Let's tell stories that matter! 🏆</div>
             </div>
@@ -2439,32 +2405,73 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-fox"></div>
+            <div class="footer-fox">🦊</div>
             <div class="footer-title">Professional Fluency Roadmap</div>
-            <div class="footer-tagline">Week 3 · Day 21 · Storytelling Mastery · Phase 1 Complete</div>
+            <div class="footer-tagline">Week 3 · Day 21 · Storytelling Mastery</div>
         </div>
     </footer>
     
     <script>
-        // Audio function using Web Speech API
-        function speak(btn) {
-            const example = btn.parentElement;
-            const text = example.querySelector('span:last-child').textContent;
+        // ============================================
+        // AUDIO ENGINE - CẢI THIỆN (giống Day 20)
+        // ============================================
+        let voices = [];
+        let selectedVoice = null;
+        
+        // Preload voices khi trang load
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
             
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'en-US';
-                utterance.rate = 0.9;
-                utterance.pitch = 1;
-                window.speechSynthesis.speak(utterance);
-                
-                // Visual feedback
-                btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
-                setTimeout(() => {
-                    btn.style.background = '';
-                }, 1000);
+            // Ưu tiên chọn voice tốt nhất
+            // Thứ tự ưu tiên: Google US > Microsoft Zira > Microsoft David > en-US > en
+            selectedVoice = 
+                voices.find(v => v.name.includes('Google US English')) ||
+                voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+                voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+                voices.find(v => v.lang === 'en-US') ||
+                voices.find(v => v.lang.includes('en'));
+            
+            console.log('Selected voice:', selectedVoice?.name);
+        }
+        
+        // Load voices ngay lập tức
+        loadVoices();
+        
+        // Chrome cần event này vì voices load chậm
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        
+        // Retry sau 500ms và 1000ms nếu chưa có voice (Chrome fix)
+        setTimeout(loadVoices, 500);
+        setTimeout(loadVoices, 1000);
+        
+        function playAudio(text) {
+            if (!('speechSynthesis' in window)) {
+                alert('Trình duyệt không hỗ trợ phát âm thanh');
+                return;
             }
+            
+            // Cancel bất kỳ audio nào đang phát
+            speechSynthesis.cancel();
+            
+            // Đợi một chút để đảm bảo cancel hoàn tất (Chrome fix)
+            setTimeout(() => {
+                const utterance = new SpeechSynthesisUtterance(text);
+                
+                // Cấu hình tối ưu cho giọng trong, tự nhiên
+                utterance.lang = 'en-US';
+                utterance.rate = 0.95;      // Nhanh hơn một chút để tự nhiên
+                utterance.pitch = 1.05;     // Cao hơn một chút để trong
+                utterance.volume = 1.0;     // Max volume
+                
+                // Dùng voice đã chọn
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                }
+                
+                speechSynthesis.speak(utterance);
+            }, 100);
         }
         
         function markComplete() {
@@ -2475,7 +2482,7 @@
             }
             
             const btn = document.querySelector('.complete-btn');
-            btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Week 3 Complete! Well done!</span>';
+            btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 21 Complete! Well done!</span>';
             btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
             btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
             
