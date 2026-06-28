@@ -1,0 +1,3143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Day 25: Graceful Exits | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Amber Theme - Graceful Exits */
+            --primary: #F59E0B;
+            --primary-bright: #D97706;
+            --primary-soft: #FEF3C7;
+            --primary-deep: #92400E;
+            --primary-light: #FCD34D;
+            
+            --green: #10B981;
+            --green-soft: #D1FAE5;
+            --green-deep: #065F46;
+            
+            --blue: #3B82F6;
+            --blue-soft: #DBEAFE;
+            --blue-deep: #1E40AF;
+            
+            --purple: #8B5CF6;
+            --purple-soft: #F3E8FF;
+            --purple-deep: #6B21A8;
+            
+            --orange: #F97316;
+            --orange-soft: #FFEDD5;
+            --orange-deep: #9A3412;
+            
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FAFAFA;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Top Nav */
+        .top-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--primary-bright); }
+        
+        .day-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .progress-bar {
+            width: 80px;
+            height: 6px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-bright));
+            border-radius: 3px;
+            width: 14%;
+        }
+        
+        /* Day Tabs */
+        .day-tabs-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 57px;
+            z-index: 99;
+            padding: 12px 0;
+        }
+        
+        .day-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 0 4px;
+            scrollbar-width: none;
+        }
+        
+        .day-tabs::-webkit-scrollbar { display: none; }
+        
+        .day-tab {
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .day-tab:hover {
+            background: rgba(255, 255, 255, 1);
+            color: var(--primary-bright);
+        }
+        
+        .day-tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        
+        /* Header */
+        .day-header {
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FCD34D 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::after {
+            content: '🚪';
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+        
+        .breadcrumb {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .day-icon-inline {
+            font-size: 2rem;
+        }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .day-subtitle strong {
+            color: var(--primary-deep);
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .meta-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .meta-tag i { --ph-color: var(--primary-bright); }
+        
+        /* Content area */
+        .content-area {
+            background: #FAFAFA;
+            padding: 40px 0;
+        }
+        
+        /* Section base */
+        .section { margin: 40px 0; }
+        
+        .section-header {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i { --ph-color: var(--primary-bright); }
+        
+        .section-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.5;
+        }
+        
+        /* C1 Insight Banner */
+        .c1-insight {
+            background: linear-gradient(135deg, var(--primary-soft), rgba(252, 211, 77, 0.3));
+            border-radius: var(--radius-md);
+            padding: 24px 28px;
+            margin-bottom: 28px;
+            border-left: 4px solid var(--primary);
+            text-align: center;
+        }
+        
+        .c1-insight .label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary-deep);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .c1-insight .insight {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        /* Philosophy section */
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(252, 211, 77, 0.3));
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--primary-bright); }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .philosophy-box strong {
+            color: var(--primary-deep);
+        }
+        
+        .comparison-box {
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .comparison-box.negative {
+            background: rgba(245, 101, 101, 0.08);
+            border-left: 4px solid #F56565;
+        }
+        
+        .comparison-box.positive {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid #10B981;
+        }
+        
+        .comparison-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .comparison-box.negative .comparison-title { color: #C53030; }
+        .comparison-box.positive .comparison-title { color: #065F46; }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .comparison-list {
+            list-style: none;
+        }
+        
+        .comparison-list li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .comparison-box.negative .comparison-list li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: 600;
+        }
+        
+        .comparison-box.positive .comparison-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        /* Principles grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .principle-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+        
+        .principle-number {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Fraunces', serif;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
+        }
+        
+        .principle-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 8px;
+            margin-top: 8px;
+        }
+        
+        .principle-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        /* Reading Exit Cues box */
+        .reading-exit {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-top: 28px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        
+        .reading-exit h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .re-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        
+        .re-col {
+            padding: 20px;
+            border-radius: var(--radius-md);
+        }
+        
+        .re-col.ready {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid #10B981;
+        }
+        
+        .re-col.continue {
+            background: rgba(59, 130, 246, 0.08);
+            border-left: 4px solid #3B82F6;
+        }
+        
+        .re-col h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        
+        .re-col.ready h4 { color: #065F46; }
+        .re-col.continue h4 { color: #1E40AF; }
+        
+        .re-col ul {
+            list-style: none;
+        }
+        
+        .re-col li {
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .re-col.ready li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        .re-col.continue li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3B82F6;
+            font-weight: 600;
+        }
+        
+        /* Exit Timing Signals */
+        .exit-signals {
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(252, 211, 77, 0.3));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 20px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .exit-signals h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--primary-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .es-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        
+        .es-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .es-item .signal {
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 4px;
+        }
+        
+        .es-item .meaning {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        /* Plan grid */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .plan-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .plan-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .plan-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-time {
+            font-size: 12px;
+            color: var(--primary-bright);
+            font-weight: 600;
+            margin-bottom: 4px;
+            background: rgba(254, 243, 199, 0.5);
+            padding: 2px 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .plan-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        /* Pattern card */
+        .pattern-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .pattern-header {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Fraunces', serif;
+            font-size: 18px;
+            box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
+        }
+        
+        .pattern-content { flex: 1; }
+        
+        .pattern-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .pattern-ipa {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: monospace;
+            margin-bottom: 8px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .pattern-rating {
+            font-size: 12px;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .pattern-context {
+            font-size: 12px;
+            color: var(--text-muted);
+            background: rgba(254, 243, 199, 0.5);
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        
+        .pattern-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-why {
+            background: rgba(254, 243, 199, 0.4);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .pattern-why strong {
+            color: var(--primary-deep);
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        
+        .pattern-why p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        .pattern-examples {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-examples h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .example {
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .example-tag {
+            flex-shrink: 0;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            background: rgba(254, 243, 199, 0.8);
+            color: var(--primary-deep);
+        }
+        
+        .example-tag.business {
+            background: rgba(219, 234, 254, 0.8);
+            color: #1E40AF;
+        }
+        
+        .audio-btn {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .audio-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        
+        .audio-btn i { --ph-color: white; font-size: 12px; }
+        
+        .connection-bridge {
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(252, 211, 77, 0.3));
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .bridge-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .bridge-content {
+            flex: 1;
+        }
+        
+        .bridge-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary-deep);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .bridge-examples {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        .bridge-examples strong {
+            color: var(--primary-deep);
+            font-style: normal;
+        }
+        
+        .pattern-usage {
+            background: rgba(254, 243, 199, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        .pattern-usage strong {
+            color: var(--primary-deep);
+        }
+        
+        /* Common Mistakes box */
+        .common-mistakes {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-top: 28px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        
+        .common-mistakes h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .cm-item {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            background: rgba(245, 101, 101, 0.05);
+            border-left: 3px solid #F56565;
+        }
+        
+        .cm-item .mistake {
+            font-size: 13px;
+            color: #C53030;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .cm-item .better {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-style: italic;
+            padding-left: 20px;
+        }
+        
+        .cm-item .better::before {
+            content: '→ ';
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        /* Graceful Exit Flow */
+        .exit-flow {
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(252, 211, 77, 0.3));
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-top: 28px;
+            border: 2px solid var(--primary);
+            text-align: center;
+        }
+        
+        .exit-flow h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 20px;
+        }
+        
+        .flow-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .flow-step {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 12px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .flow-arrow {
+            font-size: 20px;
+            color: var(--primary);
+        }
+        
+        /* Story card */
+        .story-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .story-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .story-text {
+            background: rgba(254, 243, 199, 0.2);
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .story-text strong {
+            color: var(--primary-deep);
+            font-style: normal;
+        }
+        
+        .story-analysis h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .story-analysis ul {
+            list-style: none;
+        }
+        
+        .story-analysis li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .story-analysis li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        /* Audio controls for stories */
+        .story-audio-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        
+        .story-audio-btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .story-play-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+        }
+        
+        .story-play-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        
+        .story-stop-btn {
+            background: rgba(245, 101, 101, 0.1);
+            color: #DC2626;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        .story-stop-btn:hover {
+            background: rgba(245, 101, 101, 0.2);
+        }
+        
+        /* Pronunciation table */
+        .pronunciation-table {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .pronunciation-table h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .pronunciation-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .pronunciation-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .intonation-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .intonation-item .phrase {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        /* Scenario cards */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .scenario-card {
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border: 2px solid;
+        }
+        
+        .scenario-card.casual {
+            background: rgba(209, 250, 229, 0.3);
+            border-color: var(--green);
+        }
+        
+        .scenario-card.professional {
+            background: rgba(219, 234, 254, 0.3);
+            border-color: var(--blue);
+        }
+        
+        .scenario-card.mixed {
+            background: rgba(243, 232, 255, 0.3);
+            border-color: var(--purple);
+        }
+        
+        .scenario-card.challenge {
+            background: rgba(255, 237, 213, 0.3);
+            border-color: var(--orange);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: white;
+        }
+        
+        .scenario-card.casual .scenario-badge { background: var(--green); }
+        .scenario-card.professional .scenario-badge { background: var(--blue); }
+        .scenario-card.mixed .scenario-badge { background: var(--purple); }
+        .scenario-card.challenge .scenario-badge { background: var(--orange); }
+        
+        .scenario-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .scenario-context {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            line-height: 1.4;
+        }
+        
+        .scenario-requirements {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .scenario-requirements h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .scenario-requirements ul {
+            list-style: none;
+        }
+        
+        .scenario-requirements li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .scenario-requirements li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .sample-flow-btn {
+            background: white;
+            border: 2px solid;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .scenario-card.casual .sample-flow-btn { border-color: var(--green); color: var(--green-deep); }
+        .scenario-card.professional .sample-flow-btn { border-color: var(--blue); color: var(--blue-deep); }
+        .scenario-card.mixed .sample-flow-btn { border-color: var(--purple); color: var(--purple-deep); }
+        .scenario-card.challenge .sample-flow-btn { border-color: var(--orange); color: var(--orange-deep); }
+        
+        .sample-flow-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Task cards */
+        .task-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 16px;
+            position: relative;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid;
+        }
+        
+        .task-card.easy { border-left-color: #10B981; }
+        .task-card.standard { border-left-color: var(--primary); }
+        .task-card.challenge { border-left-color: #EF4444; }
+        
+        .task-level {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+        .task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+        .task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+        
+        .task-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .task-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .task-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 14px;
+        }
+        
+        .task-requirements {
+            background: rgba(254, 243, 199, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .task-requirements h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 8px;
+        }
+        
+        .task-requirements ul {
+            list-style: none;
+        }
+        
+        .task-requirements li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .task-requirements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .task-choice {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .task-choice h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 8px;
+        }
+        
+        .task-choice label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+        
+        .task-choice input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+        
+        .task-deliverable {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            background: rgba(254, 243, 199, 0.3);
+            border-radius: var(--radius-sm);
+        }
+        
+        /* Mastery card */
+        .mastery-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .mastery-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mastery-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px;
+            background: rgba(254, 243, 199, 0.2);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+        }
+        
+        .mastery-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            cursor: pointer;
+            accent-color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .mastery-item label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            line-height: 1.4;
+        }
+        
+        /* Success criteria */
+        .success-card {
+            background: rgba(209, 250, 229, 0.5);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--green);
+            margin-top: 20px;
+        }
+        
+        .success-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--green-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .success-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--green-deep);
+        }
+        
+        .success-item i { --ph-color: var(--green); font-size: 18px; }
+        
+        /* Pro tips */
+        .tips-card {
+            background: rgba(255, 237, 213, 0.5);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--orange);
+            margin-top: 20px;
+        }
+        
+        .tips-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--orange-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tip-item {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--orange-deep);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+        
+        .tip-item strong {
+            color: var(--orange-deep);
+        }
+        
+        /* Flashcard */
+        .flashcard-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .flashcard {
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(252, 211, 77, 0.3));
+            border-radius: var(--radius-md);
+            padding: 32px;
+            margin-bottom: 16px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .flashcard:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+        }
+        
+        .flashcard-front p {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+        
+        .flashcard-front button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .flashcard-back {
+            display: none;
+        }
+        
+        .flashcard-back.active {
+            display: block;
+        }
+        
+        .flashcard-back p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 14px;
+            line-height: 1.4;
+        }
+        
+        .flashcard-tip {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        .flashcard-tip strong {
+            color: var(--primary-deep);
+        }
+        
+        .flashcard-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .flashcard-nav button {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .flashcard-nav button:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .flashcard-nav span {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        /* Quiz */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 32px 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .quiz-question {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(254, 243, 199, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: rgba(254, 243, 199, 0.2);
+        }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+        
+        /* Navigation */
+        .day-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 40px 0;
+        }
+        
+        .nav-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        /* Complete button */
+        .complete-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(245, 158, 11, 0.4);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(245, 158, 11, 0.5);
+        }
+        
+        .complete-btn i { font-size: 1.2rem; }
+        
+        .complete-message {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 32px 0 24px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .day-title { font-size: 1.8rem; }
+            .day-tabs-container { top: 52px; }
+            .day-navigation { grid-template-columns: 1fr; }
+            .pattern-header { flex-direction: column; }
+            .scenario-grid { grid-template-columns: 1fr; }
+            .re-grid { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+            .es-grid { grid-template-columns: 1fr; }
+            .cm-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-04.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Week 4 Hub</span>
+            </a>
+            <div class="day-indicator">
+                Day 25 / 28
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <div class="day-tabs-container">
+        <div class="container">
+            <div class="day-tabs">
+                <a href="week-04.html" class="day-tab">Overview</a>
+                <a href="week-04-day-22.html" class="day-tab">Day 22</a>
+                <a href="week-04-day-23.html" class="day-tab">Day 23</a>
+                <a href="week-04-day-24.html" class="day-tab">Day 24</a>
+                <a href="week-04-day-25.html" class="day-tab active">Day 25</a>
+                <a href="week-04-day-26.html" class="day-tab">Day 26</a>
+                <a href="week-04-day-27.html" class="day-tab">Day 27</a>
+                <a href="week-04-day-28.html" class="day-tab">Day 28</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="week-04.html">Week 4</a> › Day 25
+            </div>
+            <div class="day-title-row">
+                <span class="day-icon-inline">🚪</span>
+                <h1 class="day-title">Graceful Exits</h1>
+            </div>
+            <p class="day-subtitle">The best conversations don't end with "Well... I should go." They end with the other person thinking <strong>"I'd love to talk to them again."</strong> Today you'll learn to exit conversations gracefully — leaving warmth, not relief.</p>
+            <div class="day-meta">
+                <div class="meta-tag"><i class="ph-duotone ph-door"></i> Graceful Exits</div>
+                <div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+                <div class="meta-tag"><i class="ph-duotone ph-books"></i> 6 exit patterns</div>
+                <div class="meta-tag"><i class="ph-duotone ph-handshake"></i> Warm endings</div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Content area -->
+    <div class="content-area">
+        <div class="container">
+            
+            <!-- C1 Insight -->
+            <div class="c1-insight">
+                <div class="label">💡 C1 Insight</div>
+                <div class="insight">
+                    <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+                        <div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
+                            <div style="font-size: 14px;">End → Awkward</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
+                            <div style="font-size: 14px;">End → Warm → Want to meet again</div>
+                        </div>
+                    </div>
+                    "B2 speakers end conversations awkwardly. C1 speakers end conversations so people want to meet them again."
+                </div>
+            </div>
+            
+            <!-- Today's Philosophy -->
+            <section class="section">
+                <div class="philosophy-section">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        Today's Philosophy
+                    </h2>
+                    
+                    <div class="philosophy-box">
+                        <div class="philosophy-title">
+                            <i class="ph-duotone ph-door"></i>
+                            From Awkward Goodbye to Graceful Exit
+                        </div>
+                        <p>
+                            Most people end conversations awkwardly: "Well... I should go." "Yeah... see you." <em>*awkward silence*</em> "Okay, bye!" But C1 connectors end with warmth and intention: "I've really enjoyed this conversation..." "Before I let you go..." The difference? <strong>Awkward vs. Graceful. Leaving vs. Lingering. Relief vs. Anticipation.</strong>
+                            <br><br>
+                            <strong>People don't remember how you arrived. They remember how you left.</strong> A graceful exit leaves them wanting more, not feeling relieved you're gone.
+                        </p>
+                    </div>
+                    
+                    <div class="comparison-box negative">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            Why most exits feel awkward
+                        </div>
+                        <div class="comparison-text">
+                            "Well... I should probably go. Yeah... okay. See you. Bye!"
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Không có signal rõ ràng → đối phương bối rối</li>
+                            <li>Không summarize value của conversation</li>
+                            <li>Không plant seed cho lần gặp sau</li>
+                            <li>Để lại cảm giác "finally!" thay vì "see you soon!"</li>
+                            <li>Khiến cả hai bên feel awkward</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-box positive">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            What C1 connectors do differently
+                        </div>
+                        <div class="comparison-text">
+                            "I've really enjoyed this conversation — you've given me a lot to think about. Before I let you go, I'd love to continue this over coffee sometime. Let me not keep you any longer, but here's my card."
+                        </div>
+                        <ul class="comparison-list">
+                            <li>"I've really enjoyed..." - Summarize value</li>
+                            <li>"You've given me a lot to think about" - Make them feel valued</li>
+                            <li>"Before I let you go..." - Signal ending gracefully</li>
+                            <li>"I'd love to continue this over coffee" - Plant seed for next time</li>
+                            <li>"Let me not keep you any longer" - Show consideration</li>
+                            <li>Creates anticipation for next meeting, not relief</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 5 Principles of Graceful Exits -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-star"></i>
+                        5 Rules of Graceful Exits
+                    </h2>
+                    <p class="section-desc">Framework để kết thúc conversations một cách graceful. Không chỉ là kỹ thuật — đây là mindset.</p>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-number">1</div>
+                        <div class="principle-title">Signal the ending, don't just disappear</div>
+                        <div class="principle-desc">Give a clear but warm signal that you're about to leave. Don't ghost mid-conversation.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">2</div>
+                        <div class="principle-title">Summarize the value, don't just say bye</div>
+                        <div class="principle-desc">Tell them what you got from the conversation. Make them feel their time was worth it.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">3</div>
+                        <div class="principle-title">Plant a seed for next time</div>
+                        <div class="principle-desc">Leave a specific hook for future connection. "Let's continue this over coffee" > "See you around."</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">4</div>
+                        <div class="principle-title">Leave them feeling good, not relieved</div>
+                        <div class="principle-desc">Your exit should make them think "I'd love to talk to them again," not "Finally, they're gone."</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">5</div>
+                        <div class="principle-title">Match the exit to the relationship level</div>
+                        <div class="principle-desc">Casual friend: warm and brief. Professional contact: specific follow-up. Deep connection: heartfelt and intentional.</div>
+                    </div>
+                </div>
+                
+                <!-- Reading Exit Cues -->
+                <div class="reading-exit">
+                    <h3><i class="ph-duotone ph-eye"></i> Reading Exit Cues: When to Leave</h3>
+                    
+                    <div class="re-grid">
+                        <div class="re-col ready">
+                            <h4>✅ Signs they're ready to wrap up:</h4>
+                            <ul>
+                                <li>Checking watch or phone</li>
+                                <li>Short responses, less eye contact</li>
+                                <li>Body turning toward exit</li>
+                                <li>"Well..." or "So..." (hesitation starters)</li>
+                                <li>Looking around the room</li>
+                            </ul>
+                        </div>
+                        <div class="re-col continue">
+                            <h4>💬 Signs they want to continue:</h4>
+                            <ul>
+                                <li>Leaning in, asking follow-up questions</li>
+                                <li>"Oh, one more thing..."</li>
+                                <li>Bringing up new topics</li>
+                                <li>Full eye contact, engaged body language</li>
+                                <li>"We should really continue this..."</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Exit Timing Signals -->
+                    <div class="exit-signals">
+                        <h4><i class="ph-duotone ph-magnifying-glass"></i> 🔍 Exit Timing Signals</h4>
+                        <div class="es-grid">
+                            <div class="es-item">
+                                <div class="signal">"Well..." + pause</div>
+                                <div class="meaning">↓ They're signaling to wrap up</div>
+                            </div>
+                            <div class="es-item">
+                                <div class="signal">Checking watch/phone</div>
+                                <div class="meaning">↓ Time pressure (real or polite)</div>
+                            </div>
+                            <div class="es-item">
+                                <div class="signal">Body turning away</div>
+                                <div class="meaning">↓ Ready to leave</div>
+                            </div>
+                            <div class="es-item">
+                                <div class="signal">"Oh, one more thing..."</div>
+                                <div class="meaning">↓ They want to continue</div>
+                            </div>
+                            <div class="es-item">
+                                <div class="signal">Bringing up future plans</div>
+                                <div class="meaning">↓ Open to next meeting</div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 16px; padding: 12px 16px; background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary);">
+                            <strong style="color: var(--primary-deep);">💡 What to do:</strong>
+                            <ul style="margin-top: 8px; padding-left: 20px; list-style: none;">
+                                <li style="padding: 4px 0;">• If they're ready to wrap → Signal your exit gracefully, summarize value</li>
+                                <li style="padding: 4px 0;">• If they want to continue → Stay a bit longer, but set your own boundary</li>
+                                <li style="padding: 4px 0;">• If unsure → "I don't want to keep you, but I'm happy to continue if you are"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Today's Plan -->
+            <section class="section">
+                <div class="philosophy-section">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-calendar-check"></i>
+                        Today's Plan (60 min)
+                    </h2>
+                    
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <div class="plan-icon">💡</div>
+                            <div class="plan-title">6 Patterns + Bridges</div>
+                            <div class="plan-time">15 min</div>
+                            <div class="plan-desc">Graceful exit patterns</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🎭</div>
+                            <div class="plan-title">Examples</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">Integrated conversations</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🗣️</div>
+                            <div class="plan-title">Speaking</div>
+                            <div class="plan-time">25 min</div>
+                            <div class="plan-desc">4 scenarios + record</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🎴</div>
+                            <div class="plan-title">Review</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">Flashcards + quiz</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 6 Graceful Exit Patterns -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-door"></i>
+                        6 Graceful Exit Patterns
+                    </h2>
+                    <p class="section-desc">6 patterns để exit conversations gracefully, leave warmth, và plant seeds cho future connection. Mỗi pattern đều có <strong>Connection Bridge</strong> để biến exit thành invitation. Click 🔊 để nghe phát âm.</p>
+                </div>
+                
+                <!-- Pattern 1 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">1</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"I've really enjoyed this conversation..."</div>
+                            <div class="pattern-ipa">/aɪv ˈrɪəli ɪnˈdʒɔɪd ðɪs kɒnvərˈseɪʃən/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Summarize value of conversation. Make them feel their time was worth it.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"I've really enjoyed" = explicit appreciation. Shows you valued the conversation. Makes them feel good about the interaction. Natural way to signal ending with warmth.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"I've really enjoyed this conversation. You've given me a lot to think about."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ve really enjoyed this conversation. You\'ve given me a lot to think about.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"I've really enjoyed talking with you. It's not often I meet someone who..."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ve really enjoyed talking with you. It\'s not often I meet someone who...')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I've really enjoyed this conversation. Your perspective on [topic] was really valuable."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ve really enjoyed this conversation. Your perspective on that topic was really valuable.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I've really enjoyed learning about your work. It's given me some great ideas."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'ve really enjoyed learning about your work. It\'s given me some great ideas.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"I'd love to continue this sometime."</strong> · <strong>"We should definitely talk again."</strong> · <strong>"Let's not let this be the last time."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng để summarize value. Phải specific (nêu rõ điều gì enjoyable). Tạo warm ending.
+                    </div>
+                </div>
+                
+                <!-- Pattern 2 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">2</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"Before I let you go..."</div>
+                            <div class="pattern-ipa">/bɪˈfɔr aɪ lɛt juː ɡoʊ/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Signal ending gracefully while adding one more meaningful moment.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"Before I let you go" = graceful exit signal. Shows consideration for their time. Creates space for one final meaningful exchange. Natural transition to closing.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"Before I let you go, I wanted to ask — what's the best book you've read this year?"</span>
+                            <button class="audio-btn" onclick="playAudio('Before I let you go, I wanted to ask, what\'s the best book you\'ve read this year?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"Before I let you go, I have to ask — how did you get into [their passion]?"</span>
+                            <button class="audio-btn" onclick="playAudio('Before I let you go, I have to ask, how did you get into that?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"Before I let you go, I'd love to get your card. I'd like to continue this conversation."</span>
+                            <button class="audio-btn" onclick="playAudio('Before I let you go, I\'d love to get your card. I\'d like to continue this conversation.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"Before I let you go, is there anything I can help you with?"</span>
+                            <button class="audio-btn" onclick="playAudio('Before I let you go, is there anything I can help you with?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"Here's my card."</strong> · <strong>"Let me give you my number."</strong> · <strong>"Can I connect with you on LinkedIn?"</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng để signal ending + add one more meaningful moment. Không dùng để kéo dài conversation.
+                    </div>
+                </div>
+                
+                <!-- Pattern 3 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">3</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"I don't want to monopolize your time..."</div>
+                            <div class="pattern-ipa">/aɪ dont wɒnt tuː məˈnɒpəlaɪz jɔːr tam/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐ High</div>
+                                <div class="pattern-context">Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Show consideration for their time. Exit with respect.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"I don't want to monopolize" = show consideration. Demonstrates social awareness. Exit with respect, not abruptness. Natural way to leave without seeming rude.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"I don't want to monopolize your time, but I've really enjoyed this."</span>
+                            <button class="audio-btn" onclick="playAudio('I don\'t want to monopolize your time, but I\'ve really enjoyed this.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"I don't want to keep you, but I'm so glad we got to talk."</span>
+                            <button class="audio-btn" onclick="playAudio('I don\'t want to keep you, but I\'m so glad we got to talk.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I don't want to monopolize your time, but I'd love to continue this over coffee."</span>
+                            <button class="audio-btn" onclick="playAudio('I don\'t want to monopolize your time, but I\'d love to continue this over coffee.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I don't want to keep you from the rest of the event, but..."</span>
+                            <button class="audio-btn" onclick="playAudio('I don\'t want to keep you from the rest of the event, but...')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"But I'd love to continue this..."</strong> · <strong>"But I'm so glad we connected."</strong> · <strong>"But here's my information."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong> Usage Notes:</strong> Dùng trong semi-formal contexts. Show respect cho thời gian của họ. Không dùng quá nhiều (mất impact).
+                    </div>
+                </div>
+                
+                <!-- Pattern 4 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">4</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"This has given me a lot to think about..."</div>
+                            <div class="pattern-ipa">/ðɪs hæz ˈɡɪvən miː ə lɒt tuː θɪk əˈbaʊt/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Show the conversation had impact. Make them feel valued and influential.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"Given me a lot to think about" = show impact. Makes them feel their words mattered. Creates sense of meaningful exchange. Natural way to exit with depth.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag"> Life</span>
+                            <span>"This has given me a lot to think about. Thank you for sharing your perspective."</span>
+                            <button class="audio-btn" onclick="playAudio('This has given me a lot to think about. Thank you for sharing your perspective.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"This has given me a lot to think about. I'm going to reconsider how I approach..."</span>
+                            <button class="audio-btn" onclick="playAudio('This has given me a lot to think about. I\'m going to reconsider how I approach that.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"This has given me a lot to think about. Your insight on [topic] was really valuable."</span>
+                            <button class="audio-btn" onclick="playAudio('This has given me a lot to think about. Your insight on that topic was really valuable.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business"> Business</span>
+                            <span>"This has given me a lot to think about. I'd love to pick your brain again sometime."</span>
+                            <button class="audio-btn" onclick="playAudio('This has given me a lot to think about. I\'d love to pick your brain again sometime.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"Thank you for sharing..."</strong> · <strong>"I'd love to pick your brain again..."</strong> · <strong>"Can I reach out if I have more questions?"</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng để show conversation had impact. Must be genuine. Creates sense of meaningful exchange.
+                    </div>
+                </div>
+                
+                <!-- Pattern 5 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">5</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"I'd love to continue this over [coffee/lunch]..."</div>
+                            <div class="pattern-ipa">/aɪd lv tuː kənˈtɪnjuː ðɪs ˈoʊvər [ˈkɒfi/lʌntʃ]/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Plant specific seed for next meeting. Move from chance encounter to intentional connection.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"I'd love to continue this" = express genuine interest. "over coffee/lunch" = specific next step. Moves from chance to intentional. Natural way to build ongoing connection.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"I'd love to continue this over coffee sometime. Are you free next week?"</span>
+                            <button class="audio-btn" onclick="playAudio('I\'d love to continue this over coffee sometime. Are you free next week?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag"> Life</span>
+                            <span>"I'd love to continue this over lunch. I know a great place near here."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'d love to continue this over lunch. I know a great place near here.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I'd love to continue this over coffee. I'd really value your perspective on..."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'d love to continue this over coffee. I\'d really value your perspective on that.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"I'd love to continue this over lunch. Let me know what works for your schedule."</span>
+                            <button class="audio-btn" onclick="playAudio('I\'d love to continue this over lunch. Let me know what works for your schedule.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"Are you free next week?"</strong> · <strong>"Let me know what works for you."</strong> · <strong>"I'll reach out to schedule something."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng để plant seed cho next meeting. Must be specific (coffee/lunch, not "sometime"). Follow up với concrete plan.
+                    </div>
+                </div>
+                
+                <!-- Pattern 6 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">6</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"Let me not keep you any longer..."</div>
+                            <div class="pattern-ipa">/lɛt miː nɒt kiːp juː ˈɛni ˈlɒŋɡər/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐ High</div>
+                                <div class="pattern-context">Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Graceful final exit. Show consideration while closing warmly.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"Let me not keep you" = show consideration for their time. "any longer" = acknowledge you've already taken their time. Graceful final close. Natural way to exit without abruptness.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"Let me not keep you any longer, but I'm so glad we got to talk."</span>
+                            <button class="audio-btn" onclick="playAudio('Let me not keep you any longer, but I\'m so glad we got to talk.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"Let me not keep you any longer. It was really great meeting you."</span>
+                            <button class="audio-btn" onclick="playAudio('Let me not keep you any longer. It was really great meeting you.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business"> Business</span>
+                            <span>"Let me not keep you any longer. I'll follow up with that information we discussed."</span>
+                            <button class="audio-btn" onclick="playAudio('Let me not keep you any longer. I\'ll follow up with that information we discussed.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"Let me not keep you any longer. Thank you for your time and insight."</span>
+                            <button class="audio-btn" onclick="playAudio('Let me not keep you any longer. Thank you for your time and insight.')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="connection-bridge">
+                        <div class="bridge-icon">🌉</div>
+                        <div class="bridge-content">
+                            <div class="bridge-label">Connection Bridge</div>
+                            <div class="bridge-examples">
+                                <strong>"It was really great meeting you."</strong> · <strong>"I'll follow up with..."</strong> · <strong>"Thank you for your time."</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng cho final exit. Show consideration. Always follow with warm closing. Không dùng nếu conversation vẫn đang flow tốt.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Common Exit Mistakes -->
+            <section class="section">
+                <div class="common-mistakes">
+                    <h3><i class="ph-duotone ph-warning"></i>  Common Exit Mistakes</h3>
+                    
+                    <div class="cm-grid">
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Ghost (just disappear)</div>
+                            <div class="better">"I've really enjoyed this. I should let you get back to your day."</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Abrupt ("Well, bye!")</div>
+                            <div class="better">"Before I let you go, I wanted to say..."</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Overstay (stay too long)</div>
+                            <div class="better">"I don't want to monopolize your time, but..."</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Fake Promise ("Let's hang out sometime!")</div>
+                            <div class="better">"I'd love to continue this over coffee. Are you free next week?"</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Apology ("Sorry to bother you...")</div>
+                            <div class="better">"Thank you for your time. This was really valuable."</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Abrupt Topic Change (suddenly check phone)</div>
+                            <div class="better">"I should let you go, but I've really enjoyed this."</div>
+                        </div>
+                        <div class="cm-item">
+                            <div class="mistake">❌ The Lingering (keep talking after signaling exit)</div>
+                            <div class="better">Signal once, then actually leave.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Graceful Exit Flow -->
+            <section class="section">
+                <div class="exit-flow">
+                    <h3>🔄 The Graceful Exit Flow</h3>
+                    <div class="flow-steps">
+                        <div class="flow-step">Read exit cues</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Signal ending warmly</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Summarize value</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Plant seed for next time</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Warm close</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Actually leave</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Integrated Conversation Examples -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-chats-circle"></i>
+                        Integrated Conversation Examples
+                    </h2>
+                    <p class="section-desc">Xem cách 6 exit patterns được kết hợp trong 2 conversations. Một nhẹ nhàng, một professional. Click 🔊 để nghe.</p>
+                </div>
+                
+                <!-- Conversation 1: Light -->
+                <div class="story-card">
+                    <h3>☕ Conversation 1: Coffee Shop Exit (Light)</h3>
+                    <div class="story-text" id="dialogue1">
+                        "I've really enjoyed this conversation — you've given me a lot to think about with that book recommendation.
+                        <br><br>
+                        Before I let you go, I have to ask — what's the best book you've read this year? I'm always looking for new recommendations.
+                        <br><br>
+                        [They share a book title]
+                        <br><br>
+                        That sounds amazing. I'm definitely going to check it out. I'd love to continue this over coffee sometime — are you free next week?
+                        <br><br>
+                        Let me not keep you any longer, but here's my card. It was really great meeting you."
+                    </div>
+                    <div class="story-audio-controls">
+                        <button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue1').textContent)">
+                            <i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+                        </button>
+                        <button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+                            <i class="ph-duotone ph-stop"></i> Dừng
+                        </button>
+                    </div>
+                    <div class="story-analysis">
+                        <h4>Analysis:</h4>
+                        <ul>
+                            <li><strong>"I've really enjoyed..."</strong> - Summarize value</li>
+                            <li><strong>"Before I let you go..."</strong> - Signal ending + add one more moment</li>
+                            <li><strong>"I'd love to continue this over coffee"</strong> - Plant specific seed</li>
+                            <li><strong>"Let me not keep you any longer"</strong> - Graceful final exit</li>
+                            <li><strong>"Here's my card"</strong> - Concrete next step</li>
+                            <li>Emotional arc: Enjoyment → Curiosity → Anticipation → Warm close</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Conversation 2: Professional -->
+                <div class="story-card">
+                    <h3>💼 Conversation 2: Networking Event Exit (Professional)</h3>
+                    <div class="story-text" id="dialogue2">
+                        "I've really enjoyed learning about your work — your perspective on sustainable design was really valuable. This has given me a lot to think about.
+                        <br><br>
+                        Before I let you go, I'd love to get your card. I'd like to continue this conversation — I have some ideas that might be relevant to your current project.
+                        <br><br>
+                        I don't want to monopolize your time, but would you be open to a coffee meeting next week? I'd really value your perspective.
+                        <br><br>
+                        Let me not keep you from the rest of the event. Thank you for your time and insight — I'll follow up with that article we discussed."
+                    </div>
+                    <div class="story-audio-controls">
+                        <button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue2').textContent)">
+                            <i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+                        </button>
+                        <button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+                            <i class="ph-duotone ph-stop"></i> Dừng
+                        </button>
+                    </div>
+                    <div class="story-analysis">
+                        <h4>Analysis:</h4>
+                        <ul>
+                            <li><strong>"I've really enjoyed..."</strong> - Summarize value (specific: sustainable design)</li>
+                            <li><strong>"This has given me a lot to think about"</strong> - Show impact</li>
+                            <li><strong>"Before I let you go..."</strong> - Signal ending + ask for card</li>
+                            <li><strong>"I'd love to continue this over coffee"</strong> - Plant specific seed</li>
+                            <li><strong>"I don't want to monopolize your time"</strong> - Show consideration</li>
+                            <li><strong>"Let me not keep you..."</strong> - Graceful final exit</li>
+                            <li><strong>"I'll follow up with..."</strong> - Concrete next step</li>
+                            <li>Professional arc: Value → Interest → Specific plan → Warm close</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Pronunciation Focus -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-microphone-stage"></i>
+                        Pronunciation Focus
+                    </h2>
+                    <p class="section-desc">Graceful exit phrases pronunciation và connected speech patterns.</p>
+                </div>
+                
+                <div class="pronunciation-table">
+                    <h3> Graceful Exit Phrases</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>IPA</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>I've really enjoyed</td>
+                                <td>/aɪv rɪəli ɪndʒɔɪd/</td>
+                                <td>Stress on "en"</td>
+                            </tr>
+                            <tr>
+                                <td>Before I let you go</td>
+                                <td>/bɪˈfɔːr aɪ lɛt juː ɡoʊ/</td>
+                                <td>Smooth</td>
+                            </tr>
+                            <tr>
+                                <td>I don't want to monopolize</td>
+                                <td>/aɪ doʊnt wɒnt tuː mənɒpəlaɪz/</td>
+                                <td>Stress on "nop"</td>
+                            </tr>
+                            <tr>
+                                <td>This has given me</td>
+                                <td>/ðɪs hæz ˈɡɪvən miː/</td>
+                                <td>Linking: "given me"</td>
+                            </tr>
+                            <tr>
+                                <td>I'd love to continue</td>
+                                <td>/aɪd lʌv tuː kənˈtɪnjuː/</td>
+                                <td>Smooth</td>
+                            </tr>
+                            <tr>
+                                <td>Let me not keep you</td>
+                                <td>/lɛt mi nɒt kiːp juː/</td>
+                                <td>Smooth</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="pronunciation-table">
+                    <h3>🔗 Connected Speech</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Natural Pronunciation</th>
+                                <th>Feature</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"I've really"</td>
+                                <td>/aɪv ˈrɪəli/</td>
+                                <td>Smooth</td>
+                            </tr>
+                            <tr>
+                                <td>"let you go"</td>
+                                <td>/lɛt juː ɡo/</td>
+                                <td>Linking</td>
+                            </tr>
+                            <tr>
+                                <td>"given me"</td>
+                                <td>/ˈɡɪvən miː/</td>
+                                <td>Linking</td>
+                            </tr>
+                            <tr>
+                                <td>"continue this"</td>
+                                <td>/kənˈtɪnjuː ðɪs/</td>
+                                <td>Smooth</td>
+                            </tr>
+                            <tr>
+                                <td>"keep you"</td>
+                                <td>/kiːp juː/</td>
+                                <td>Linking</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="section-header" style="margin-top: 24px;">
+                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+                </div>
+                
+                <div class="intonation-item">
+                    <span class="phrase">"I've really enjoyed this conversation..."</span>
+                    ↘ - Falling (warm, sincere)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"Before I let you go..."</span>
+                    ↗ - Rising (signal, inviting)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"I don't want to monopolize your time..."</span>
+                    ↘ - Falling (considerate, respectful)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"This has given me a lot to think about..."</span>
+                    ↘ - Falling (reflective, appreciative)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"I'd love to continue this over coffee..."</span>
+                    ↗ - Rising (inviting, enthusiastic)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"Let me not keep you any longer..."</span>
+                    ↘ - Falling (graceful, final)
+                </div>
+            </section>
+            
+            <!-- Practice Scenarios -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-chats"></i>
+                        Practice Scenarios
+                    </h2>
+                    <p class="section-desc">Practice graceful exits in different contexts. Remember: always plant specific seeds!</p>
+                </div>
+                
+                <div class="scenario-grid">
+                    <div class="scenario-card casual">
+                        <span class="scenario-badge">🟢 Casual - 3-4 min</span>
+                        <h3>Scenario 1: Ending a Coffee Date</h3>
+                        <p class="scenario-context">Bạn vừa có một conversation tuyệt vời với một người bạn mới ở coffee shop.</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Dùng ít nhất 3 exit patterns</li>
+                                <li>Summarize value của conversation</li>
+                                <li>Plant seed cho next meeting (specific)</li>
+                                <li>Leave them feeling good</li>
+                                <li>Actually leave (don't linger)</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card professional">
+                        <span class="scenario-badge">🔵 Professional - 3-4 min</span>
+                        <h3>Scenario 2: Leaving a Networking Event</h3>
+                        <p class="scenario-context">Bạn đang ở networking event, vừa có một conversation valuable với một potential client.</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Dùng ít nhất 3 exit patterns</li>
+                                <li>Professional tone nhưng vẫn warm</li>
+                                <li>Get their contact information</li>
+                                <li>Set up specific follow-up</li>
+                                <li>Leave memorable impression</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card mixed">
+                        <span class="scenario-badge"> Mixed - 4-5 min</span>
+                        <h3>Scenario 3: Exiting a Group Conversation</h3>
+                        <p class="scenario-context">Bạn đang trong một group conversation, cần exit gracefully mà không làm awkward.</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Dùng ít nhất 4 exit patterns</li>
+                                <li>Acknowledge the group</li>
+                                <li>Exit without making others feel abandoned</li>
+                                <li>Plant seed for individual follow-up</li>
+                                <li>Leave warmly</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card challenge">
+                        <span class="scenario-badge"> Challenge - 5 min</span>
+                        <h3>Scenario 4: The "Trapped" Conversation</h3>
+                        <p class="scenario-context">Bạn đang trong một conversation với someone who won't stop talking. Need to exit gracefully without being rude.</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Dùng TẤT CẢ 6 exit patterns</li>
+                                <li>Set boundary respectfully</li>
+                                <li>Don't make them feel rejected</li>
+                                <li>Exit gracefully</li>
+                                <li>Leave door open for future</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn"> See Sample Structure</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Reality Task -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-target"></i>
+                        Reality Task - Choose Your Level
+                    </h2>
+                    <p class="section-desc">Bài tập THỰC TẾ - apply graceful exit skills vào đời thật. Chọn 1 trong 3 levels.</p>
+                </div>
+                
+                <div class="task-card easy">
+                    <div class="task-level">EASY</div>
+                    <h3>📝 Write a Graceful Exit Message</h3>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p class="task-desc">Viết exit message cho một người bạn/colleague sau một conversation.</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Dùng ít nhất 3 exit patterns</li>
+                            <li>Summarize value</li>
+                            <li>Plant seed for next time</li>
+                            <li>Warm closing</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Text message hoặc email
+                    </div>
+                </div>
+                
+                <div class="task-card standard">
+                    <div class="task-level">STANDARD</div>
+                    <h3>🎙️ Record a Graceful Exit</h3>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p class="task-desc">Record 3-minute conversation ending (với friend hoặc colleague) practice graceful exit.</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Dùng ít nhất 4 exit patterns</li>
+                            <li>Read exit cues</li>
+                            <li>Summarize value</li>
+                            <li>Plant specific seed</li>
+                            <li>Actually leave (don't linger)</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Audio recording + self-reflection notes
+                    </div>
+                </div>
+                
+                <div class="task-card challenge">
+                    <div class="task-level">CHALLENGE</div>
+                    <h3>🎥 The Graceful Exit Challenge</h3>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p class="task-desc">Have a real conversation (10-15 min) và practice graceful exit.</p>
+                    <div class="task-choice">
+                        <h4>Choose ONE conversation partner:</h4>
+                        <label><input type="checkbox"> Friend</label>
+                        <label><input type="checkbox"> Colleague</label>
+                        <label><input type="checkbox"> Networking contact</label>
+                        <label><input type="checkbox"> Someone you just met</label>
+                        <label><input type="checkbox"> Someone online / Community member</label>
+                        <label><input type="checkbox"> AI (if no human available)</label>
+                    </div>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Dùng TẤT CẢ 6 exit patterns</li>
+                            <li>Read exit cues</li>
+                            <li>Summarize value</li>
+                            <li>Plant specific seed</li>
+                            <li>Leave them feeling good</li>
+                            <li>Reflect: How did they respond?</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Reflection essay HOẶC share insights với accountability partner
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Mastery + Success + Tips -->
+            <section class="section">
+                <div class="mastery-card">
+                    <h2>🎯 Graceful Exit Mastery</h2>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery1">
+                        <label for="mastery1">Can summarize conversation value warmly</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery2">
+                        <label for="mastery2">Can signal ending gracefully with "Before I let you go..."</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery3">
+                        <label for="mastery3">Can show consideration with "I don't want to monopolize..."</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery4">
+                        <label for="mastery4">Can show impact with "This has given me a lot to think about..."</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery5">
+                        <label for="mastery5">Can plant specific seed for next meeting</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery6">
+                        <label for="mastery6">Can exit gracefully with "Let me not keep you..."</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery7">
+                        <label for="mastery7">Can read exit cues and adjust timing</label>
+                    </div>
+                </div>
+                
+                <!-- Success Criteria -->
+                <div class="success-card">
+                    <h2><i class="ph-duotone ph-check-circle"></i> Success Criteria</h2>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can end conversations without awkwardness</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can leave people feeling valued and heard</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can plant specific seeds for future connection</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can read exit cues and time departure well</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can leave them thinking "I'd love to talk to them again"</span>
+                    </div>
+                </div>
+                
+                <!-- Pro Tips -->
+                <div class="tips-card">
+                    <h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Signal once, then leave:</strong> Don't keep signaling exit without actually leaving. It creates confusion.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Be specific about next steps:</strong> "Coffee next week" > "Sometime". Specificity shows genuine interest.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Read the room:</strong> Pay attention to their body language. If they're checking their watch, it's time to go.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Summarize value:</strong> Tell them what you got from the conversation. It makes them feel valued.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Actually leave:</strong> After your graceful exit, don't linger. The exit is the exit.</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Flashcard Review -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-cards"></i>
+                        Flashcard Review
+                    </h2>
+                    <p class="section-desc">6 flashcards với graceful exit patterns và tips. Mặt trước: pattern. Mặt sau: example + tip + bridge.</p>
+                </div>
+                
+                <div class="flashcard-container">
+                    <div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+                        <div class="flashcard-front">
+                            <p>I've really enjoyed this conversation...</p>
+                            <button>Tap to reveal example →</button>
+                        </div>
+                        <div class="flashcard-back">
+                            <p>"I've really enjoyed this conversation. You've given me a lot to think about."</p>
+                            <div class="flashcard-tip">
+                                <strong>💡 Tip:</strong> Summarize value. Make them feel their time was worth it.
+                                <br><strong>🌉 Bridge:</strong> "I'd love to continue this sometime."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard-nav">
+                        <button>← Prev</button>
+                        <span>1 / 6</span>
+                        <button>Next →</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Quiz -->
+            <section class="quiz-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-pencil-simple"></i>
+                        Quiz: Graceful Exits
+                    </h2>
+                    <p class="section-desc">8 câu hỏi để kiểm tra bạn đã thực sự hiểu graceful exits chưa. Chọn đáp án ĐÚNG NHẤT.</p>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>1. Pattern nào summarize value của conversation tốt nhất?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "Well, I should go."</div>
+                        <div class="quiz-option">B. "I've really enjoyed this conversation. You've given me a lot to think about."</div>
+                        <div class="quiz-option">C. "Okay, bye!"</div>
+                        <div class="quiz-option">D. "See you around."</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>2. "Before I let you go..." dùng để làm gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. End conversation abruptly</div>
+                        <div class="quiz-option">B. Signal ending gracefully + add one more meaningful moment</div>
+                        <div class="quiz-option">C. Change subject</div>
+                        <div class="quiz-option">D. Ask for favor</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>3. "I don't want to monopolize your time..." thể hiện điều gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Weakness</div>
+                        <div class="quiz-option">B. Consideration for their time</div>
+                        <div class="quiz-option">C. Indifference</div>
+                        <div class="quiz-option">D. Regret</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>4. Khi nào dùng "I'd love to continue this over coffee..."?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Khi muốn end conversation</div>
+                        <div class="quiz-option">B. Khi muốn plant specific seed cho next meeting</div>
+                        <div class="quiz-option">C. Khi muốn change subject</div>
+                        <div class="quiz-option">D. Khi muốn give advice</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>5. "This has given me a lot to think about..." thêm gì vào exit?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Awkwardness</div>
+                        <div class="quiz-option">B. Show conversation had impact</div>
+                        <div class="quiz-option">C. Confusion</div>
+                        <div class="quiz-option">D. Indifference</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>6. "Let me not keep you any longer..." là loại gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Abrupt exit</div>
+                        <div class="quiz-option">B. Graceful final exit</div>
+                        <div class="quiz-option">C. Fake promise</div>
+                        <div class="quiz-option">D. Lingering</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>7. Exit nào là C1 graceful exit style?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "Well... I should go. Yeah... okay. Bye!"</div>
+                        <div class="quiz-option">B. "I've really enjoyed this conversation. Before I let you go, I'd love to continue this over coffee. Let me not keep you any longer — it was really great meeting you."</div>
+                        <div class="quiz-option">C. "Okay, see you around!"</div>
+                        <div class="quiz-option">D. *just disappears*</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>8. TÌNH HUỐNG: You're at a networking event and need to leave. What's the BEST exit?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "Well, I should probably go. Bye!"</div>
+                        <div class="quiz-option">B. "I've really enjoyed learning about your work. Before I let you go, I'd love to get your card. I don't want to keep you from the rest of the event, but let's continue this over coffee next week."</div>
+                        <div class="quiz-option">C. "Nice meeting you!" *walks away*</div>
+                        <div class="quiz-option">D. "I have to go now. Sorry!"</div>
+                    </div>
+                </div>
+                
+                <button class="check-btn">
+                    <i class="ph-duotone ph-check"></i>
+                    Check Answers
+                </button>
+            </section>
+            
+            <!-- Navigation -->
+            <div class="day-navigation">
+                <a href="week-04-day-24.html" class="nav-card">
+                    <div class="nav-label">← Previous Day</div>
+                    <div class="nav-title">Day 24: Empathy & Reading the Room</div>
+                </a>
+                <a href="week-04-day-26.html" class="nav-card">
+                    <div class="nav-label">Next Day →</div>
+                    <div class="nav-title">Day 26: Nurturing Relationships</div>
+                </a>
+            </div>
+            
+            <!-- Complete Button -->
+            <div class="complete-container">
+                <button class="complete-btn" onclick="markComplete()">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Mark Day 25 Complete & Continue to Day 26</span>
+                </button>
+                <div class="complete-message">End well. Leave warmth. 🚪</div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 4 · Day 25 · Graceful Exits</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ============================================
+        // AUDIO ENGINE - CẢI THIỆN (giống Day 22/23/24)
+        // ============================================
+        let voices = [];
+        let selectedVoice = null;
+        
+        // Preload voices khi trang load
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
+            
+            // Ưu tiên chọn voice tốt nhất
+            // Thứ tự ưu tiên: Google US > Microsoft Zira > Microsoft David > en-US > en
+            selectedVoice = 
+                voices.find(v => v.name.includes('Google US English')) ||
+                voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+                voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+                voices.find(v => v.lang === 'en-US') ||
+                voices.find(v => v.lang.includes('en'));
+            
+            console.log('Selected voice:', selectedVoice?.name);
+        }
+        
+        // Load voices ngay lập tức
+        loadVoices();
+        
+        // Chrome cần event này vì voices load chậm
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        
+        // Retry sau 500ms và 1000ms nếu chưa có voice (Chrome fix)
+        setTimeout(loadVoices, 500);
+        setTimeout(loadVoices, 1000);
+        
+        function playAudio(text) {
+            if (!('speechSynthesis' in window)) {
+                alert('Trình duyệt không hỗ trợ phát âm thanh');
+                return;
+            }
+            
+            // Cancel bất kỳ audio nào đang phát
+            speechSynthesis.cancel();
+            
+            // Đợi một chút để đảm bảo cancel hoàn tất (Chrome fix)
+            setTimeout(() => {
+                const utterance = new SpeechSynthesisUtterance(text);
+                
+                // Cấu hình tối ưu cho giọng trong, tự nhiên
+                utterance.lang = 'en-US';
+                utterance.rate = 0.95;      // Nhanh hơn một chút để tự nhiên
+                utterance.pitch = 1.05;     // Cao hơn một chút để trong
+                utterance.volume = 1.0;     // Max volume
+                
+                // Dùng voice đã chọn
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                }
+                
+                speechSynthesis.speak(utterance);
+            }, 100);
+        }
+        
+        // Stop audio
+        function stopSpeaking() {
+            if ('speechSynthesis' in window) {
+                speechSynthesis.cancel();
+            }
+        }
+        
+        // Complete button
+        function markComplete() {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (!completed.includes('day-25')) {
+                completed.push('day-25');
+                localStorage.setItem('completedDays', JSON.stringify(completed));
+            }
+            
+            const btn = document.querySelector('.complete-btn');
+            btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 25 Complete! Well done!</span>';
+            btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+            
+            const msg = document.querySelector('.complete-message');
+            msg.textContent = 'End well. Leave warmth. 🚪';
+        }
+        
+        // Load completion state
+        window.addEventListener('DOMContentLoaded', () => {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (completed.includes('day-25')) {
+                const btn = document.querySelector('.complete-btn');
+                btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 25 Completed</span>';
+                btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            }
+        });
+    </script>
+</body>
+</html>
