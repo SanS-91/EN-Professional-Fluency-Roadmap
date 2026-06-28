@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5: Strategic Workplace Communication | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Phase 2: Blue/Sky/Indigo Theme */
+            --blue: #3B82F6;
+            --blue-bright: #2563EB;
+            --blue-soft: #DBEAFE;
+            --blue-deep: #1E40AF;
+            --sky: #0EA5E9;
+            --sky-bright: #0284C7;
+            --sky-soft: #E0F2FE;
+            --sky-deep: #0369A1;
+            --indigo: #6366F1;
+            --indigo-bright: #4F46E5;
+            --indigo-soft: #E0E7FF;
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 25%, #E0E7FF 50%, #F0F9FF 75%, #EFF6FF 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Aurora Background Animation - Phase 2 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(59, 130, 246, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 85% 20%, rgba(14, 165, 233, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(99, 102, 241, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 30% 60%, rgba(37, 99, 235, 0.3) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+            animation: aurora 20s ease-in-out infinite;
+        }
+        
+        @keyframes aurora {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            33% { transform: scale(1.15) rotate(120deg); opacity: 1; }
+            66% { transform: scale(0.95) rotate(240deg); opacity: 0.85; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .top-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--blue-bright); }
+        
+        .week-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .week-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-icon-large { font-size: 3.5rem; margin-bottom: 16px; }
+        .week-icon-large i { --ph-color: var(--blue-bright); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--blue-bright), var(--sky-bright), var(--indigo-bright));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .week-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+        
+        .week-quote {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--blue-bright);
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 24px auto;
+            max-width: 650px;
+        }
+        
+        .week-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        
+        .week-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .week-tag i { --ph-color: var(--blue-bright); }
+        
+        .section { margin: 48px 0; }
+        .section-header { margin-bottom: 32px; text-align: center; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .section-title i { --ph-color: var(--blue-bright); }
+        
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(14, 165, 233, 0.15));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border-left: 4px solid var(--blue-bright);
+            margin-bottom: 24px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--blue-bright); }
+        
+        .comparison-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 28px;
+        }
+        
+        .comparison-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-item {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            border-left: 4px solid;
+        }
+        
+        .comparison-item.negative { background: rgba(245, 101, 101, 0.1); border-left-color: #F56565; }
+        .comparison-item.positive { background: rgba(72, 187, 120, 0.1); border-left-color: #48BB78; }
+        
+        .comparison-label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        /* 7 DAYS GRID - COMPACT STRUCTURE */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .day-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--blue-bright);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.4s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(37, 99, 235, 0.2);
+        }
+        
+        .day-label {
+            background: linear-gradient(135deg, var(--blue-soft), var(--sky-soft));
+            color: var(--blue-deep);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .day-icon { margin-bottom: 16px; }
+        .day-icon i { font-size: 2rem; --ph-color: var(--blue-bright); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .day-focus {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(219, 234, 254, 0.5);
+        }
+        
+        .focus-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+        
+        .focus-list { list-style: none; }
+        
+        .focus-list li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed rgba(219, 234, 254, 0.5);
+        }
+        
+        .focus-list li:last-child { border-bottom: none; }
+        
+        .focus-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--blue-bright);
+            font-weight: 600;
+        }
+        
+        .day-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(14, 165, 233, 0.15));
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--blue-deep);
+            font-weight: 600;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .day-time i { --ph-color: var(--blue-bright); }
+        
+        /* MILESTONE */
+        .milestone-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(14, 165, 233, 0.15));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid var(--blue-bright);
+            text-align: center;
+        }
+        
+        .milestone-icon { font-size: 3.5rem; margin-bottom: 16px; }
+        .milestone-icon i { --ph-color: var(--blue-bright); }
+        
+        .milestone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .milestone-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        
+        .milestone-skill {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.5;
+        }
+        
+        .milestone-skill i {
+            --ph-color: var(--blue-bright);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        /* QUIZ */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .quiz-question {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--blue-bright);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        
+        .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+        
+        .quiz-option {
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(219, 234, 254, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .quiz-option:hover { border-color: var(--blue-bright); background: rgba(219, 234, 254, 0.2); }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--blue-bright), var(--sky-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        /* NAVIGATION BLEND GRADIENT */
+        .week-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 48px 0;
+        }
+        
+        .nav-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(219, 234, 254, 0.5));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue-bright), var(--sky-bright), var(--indigo-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(219, 234, 254, 0.7));
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .cta-container { text-align: center; margin: 48px 0; }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--blue-bright), var(--sky-bright), var(--indigo-bright));
+            color: white;
+            padding: 18px 36px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(37, 99, 235, 0.5);
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-fox { font-size: 2.5rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .week-title { font-size: 2.5rem; }
+            .days-grid { grid-template-columns: 1fr; }
+            .milestone-skills { grid-template-columns: 1fr; }
+            .week-navigation { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Roadmap</span>
+            </a>
+            <div class="week-indicator">Week 5/24</div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="phase-02.html">Phase 2: Professional Communication</a> › Week 5
+            </div>
+            <div class="week-icon-large">
+                <i class="ph-duotone ph-briefcase"></i>
+            </div>
+            <h1 class="week-title">Strategic Workplace Communication</h1>
+            <p class="week-description">Week 5 không phải về meeting English. Week 5 là về professional presence - khiến bạn được lắng nghe, được tôn trọng, và có sức ảnh hưởng. Meeting chỉ là bối cảnh - strategic communication mới là điều quan trọng.</p>
+            <div class="week-quote">"B2 speakers use meeting English. C1 speakers demonstrate professional presence."</div>
+            <div class="week-tags">
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> Phase 2</div>
+                <div class="week-tag"><i class="ph-duotone ph-clock"></i> 7 days × 60 min</div>
+                <div class="week-tag"><i class="ph-duotone ph-house"></i> 50% Life</div>
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> 50% Business</div>
+                <div class="week-tag"><i class="ph-duotone ph-books"></i> 30+ professional patterns</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <!-- Philosophy Section -->
+        <section class="section">
+            <div class="philosophy-section">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-lightbulb"></i>
+                    Week 5 Philosophy
+                </h2>
+                
+                <div class="philosophy-box">
+                    <div class="philosophy-title">
+                        <i class="ph-duotone ph-briefcase"></i>
+                        From Meeting English to Professional Presence
+                    </div>
+                    <p>
+                        Phase 1 đã dạy bạn introduce, describe, và build relationships. Phase 2 sẽ dạy bạn <strong>lead, influence, và navigate complex professional situations</strong>. Week 5 tập trung vào strategic communication - biết khi nào nên lên tiếng, cách frame ý tưởng, và xử lý bất đồng một cách ngoại giao. Đây là sự khác biệt giữa <strong>participation và presence</strong>.
+                    </p>
+                </div>
+                
+                <div class="comparison-section">
+                    <div class="comparison-title">Small Talk vs Professional Presence</div>
+                    
+                    <div class="comparison-item negative">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            Small Talk (Surface level)
+                        </div>
+                        <div class="comparison-text">
+                            "I did X, Y, Z this week. I think we should do this. I disagree with that. I need help."
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item positive">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            Professional Presence (C1 style)
+                        </div>
+                        <div class="comparison-text">
+                            "We've made significant progress on X, which unblocks Y. Building on what Sarah said, there's an opportunity here to... I see the merit in that, however my concern is... To ensure we hit the Q3 target, I'd like to realign our resources..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7 Days Grid -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-calendar"></i>
+                    7 Days of Strategic Communication
+                </h2>
+                <p class="section-desc">Mỗi ngày tập trung vào 1 khía cạnh của professional presence. Không phải meeting English - mà là strategic communication.</p>
+            </div>
+            
+            <div class="days-grid">
+                <a href="week-05-day-29.html" class="day-card">
+                    <div class="day-label">DAY 29</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-chart-line-up"></i>
+                    </div>
+                    <div class="day-title">Executive Updates</div>
+                    <div class="day-subtitle">Communicate impact, not just activity. Master executive updates.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"We've made significant progress on..."</li>
+                            <li>"The key impact has been..."</li>
+                            <li>"One risk to flag is..."</li>
+                            <li>"Here's what I'd recommend..."</li>
+                            <li>"Next steps are..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-05-day-30.html" class="day-card">
+                    <div class="day-label">DAY 30</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-microphone-stage"></i>
+                    </div>
+                    <div class="day-title">Speaking Up & Interjecting</div>
+                    <div class="day-subtitle">Claim space in meetings gracefully without being rude.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"Building on what [Name] just said..."</li>
+                            <li>"Can I jump in here?"</li>
+                            <li>"I'd like to add something..."</li>
+                            <li>"If I could just weigh in..."</li>
+                            <li>"To play devil's advocate..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-05-day-31.html" class="day-card">
+                    <div class="day-label">DAY 31</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                    </div>
+                    <div class="day-title">Framing Ideas</div>
+                    <div class="day-subtitle">Frame ideas so others want to listen before you dive into details.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"There's an opportunity here to..."</li>
+                            <li>"What if we approached this from..."</li>
+                            <li>"The way I see it..."</li>
+                            <li>"Here's the bigger picture..."</li>
+                            <li>"Imagine if we could..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-05-day-32.html" class="day-card">
+                    <div class="day-label">DAY 32</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-shield-check"></i>
+                    </div>
+                    <div class="day-title">Diplomatic Pushback</div>
+                    <div class="day-subtitle">Handle disagreement with grace. Push back while protecting relationships.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"I see the merit in that, however..."</li>
+                            <li>"My concern with that approach is..."</li>
+                            <li>"I understand where you're coming from, but..."</li>
+                            <li>"That's a valid point. At the same time..."</li>
+                            <li>"Let me offer a different perspective..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-05-day-33.html" class="day-card">
+                    <div class="day-label">DAY 33</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-trend-up"></i>
+                    </div>
+                    <div class="day-title">Managing Up & Expectations</div>
+                    <div class="day-subtitle">Report to senior management and request support strategically.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"To ensure we hit [target], I'd like to..."</li>
+                            <li>"The timeline may need adjusting because..."</li>
+                            <li>"We're likely to miss [deadline] unless..."</li>
+                            <li>"Here's what I'd recommend..."</li>
+                            <li>"I'd like to propose a realignment of..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-05-day-34.html" class="day-card">
+                    <div class="day-label">DAY 34</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-chat-circle-text"></i>
+                    </div>
+                    <div class="day-title">Constructive Feedback</div>
+                    <div class="day-subtitle">Give feedback that develops potential, not just points out mistakes.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"I noticed a gap in..."</li>
+                            <li>"One area for growth might be..."</li>
+                            <li>"Let's figure out how to streamline..."</li>
+                            <li>"What would help you succeed here is..."</li>
+                            <li>"I'd love to see more of..."</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-05-day-35.html" class="day-card">
+                    <div class="day-label">DAY 35</div>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-trophy"></i>
+                    </div>
+                    <div class="day-title">Week 5 Review</div>
+                    <div class="day-subtitle">Integrate all 6 days into one complete professional communication playbook.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Focus:</div>
+                        <ul class="focus-list">
+                            <li>Review all 30+ professional patterns</li>
+                            <li>Integrated practice scenarios</li>
+                            <li>Self-assessment & reflection</li>
+                            <li>Celebrate Milestone 5</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Milestone Card -->
+        <div class="milestone-card">
+            <div class="milestone-icon">
+                <i class="ph-duotone ph-trophy"></i>
+            </div>
+            <div class="milestone-title">Milestone 5: Professional Presence</div>
+            <p class="milestone-subtitle">Sau tuần 5, bạn sẽ giao tiếp với strategic presence trong mọi tình huống công việc - từ executive updates đến diplomatic pushback.</p>
+            <div class="milestone-skills">
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Communicate impact, not just activity</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Claim space gracefully in meetings</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Frame ideas to invite buy-in</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Protect relationships while pushing back</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Align resources strategically</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Give feedback that develops potential</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Demonstrate professional presence</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Handle complex workplace situations</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Lead with influence, not authority</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Navigate disagreement diplomatically</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Manage up effectively</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Build strategic professional relationships</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2 class="section-title">
+                <i class="ph-duotone ph-pencil-simple"></i>
+                Week 5 Preview Quiz
+            </h2>
+            <p class="section-desc" style="margin-bottom: 24px;">Kiểm tra hiểu biết về strategic workplace communication vs meeting English.</p>
+            
+            <div class="quiz-question">
+                <h4>1. Triết lý của Week 5 là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Meeting English là về vocabulary và grammar</div>
+                    <div class="quiz-option">B. Meeting English là về collect business cards</div>
+                    <div class="quiz-option">C. Professional presence là về khiến bạn được lắng nghe, được tôn trọng, và có sức ảnh hưởng</div>
+                    <div class="quiz-option">D. Professional presence là về impress người khác với thành tích</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>2. Sự khác biệt giữa B2 và C1 executive updates là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. B2 uses more formal vocabulary</div>
+                    <div class="quiz-option">B. B2 reports activity; C1 communicates impact</div>
+                    <div class="quiz-option">C. B2 speaks longer; C1 speaks shorter</div>
+                    <div class="quiz-option">D. B2 uses more data; C1 uses more stories</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>3. Pattern nào thể hiện speaking up gracefully?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "Sorry to interrupt..."</div>
+                    <div class="quiz-option">B. "Building on what Sarah just said..."</div>
+                    <div class="quiz-option">C. "I have something to say..."</div>
+                    <div class="quiz-option">D. "Can I talk now?"</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>4. Conversation nào là professional presence C1 style?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "I did X, Y, Z this week. I think we should do this."</div>
+                    <div class="quiz-option">B. "We've made significant progress on X, which unblocks Y. Building on what Sarah said, there's an opportunity here to..."</div>
+                    <div class="quiz-option">C. "I disagree with that. We should do it my way."</div>
+                    <div class="quiz-option">D. "I need help. I'm too busy."</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>5. Week 5 tập trung vào kỹ năng gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Meeting vocabulary</div>
+                    <div class="quiz-option">B. Presentation skills</div>
+                    <div class="quiz-option">C. Strategic workplace communication</div>
+                    <div class="quiz-option">D. Email writing</div>
+                </div>
+            </div>
+            
+            <button class="check-btn">
+                <i class="ph-duotone ph-check"></i>
+                Check Answers
+            </button>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="week-navigation">
+            <a href="week-04.html" class="nav-card">
+                <div class="nav-label">← Previous Week</div>
+                <div class="nav-title">Week 4: Relationship Builder</div>
+            </a>
+            <a href="week-06.html" class="nav-card">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 6: Negotiation & Influence</div>
+            </a>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="cta-container">
+            <a href="week-05-day-29.html" class="cta-button">
+                <i class="ph-duotone ph-rocket-launch"></i>
+                <span>Start Week 5: Day 29 - Executive Updates</span>
+            </a>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Phase 2 · Week 5 · Strategic Workplace Communication</div>
+        </div>
+    </footer>
+    
+</body>
+</html>
