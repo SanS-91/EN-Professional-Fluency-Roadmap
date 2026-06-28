@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Day 28: Relationship Mastery | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Theme colors - vivid */
+            --color-blue: #2563EB;
+            --color-blue-bg: #DBEAFE;
+            --color-blue-light: rgba(37, 99, 235, 0.08);
+            
+            --color-green: #059669;
+            --color-green-bg: #D1FAE5;
+            --color-green-light: rgba(5, 150, 105, 0.08);
+            
+            --color-purple: #7C3AED;
+            --color-purple-bg: #F3E8FF;
+            --color-purple-light: rgba(124, 58, 237, 0.08);
+            
+            --color-amber: #D97706;
+            --color-amber-bg: #FEF3C7;
+            --color-amber-light: rgba(217, 119, 6, 0.08);
+            
+            --color-teal: #0D9488;
+            --color-teal-bg: #CCFBF1;
+            --color-teal-light: rgba(13, 148, 136, 0.08);
+            
+            --color-pink: #DB2777;
+            --color-pink-bg: #FCE7F3;
+            --color-pink-light: rgba(219, 39, 119, 0.08);
+            
+            --color-orange: #F97316;
+            --color-orange-bg: #FFEDD5;
+            
+            /* Text colors */
+            --text-primary: #0F172A;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            
+            /* Backgrounds */
+            --bg-white: #FFFFFF;
+            --bg-light: #F8FAFC;
+            --bg-gray: #F1F5F9;
+            
+            --border-light: #E2E8F0;
+            --border-medium: #CBD5E1;
+            
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Top Nav */
+        .top-nav {
+            background: var(--bg-white);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--color-amber); }
+        
+        .day-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .progress-bar {
+            width: 80px;
+            height: 6px;
+            background: var(--bg-gray);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--color-amber), #FBBF24);
+            border-radius: 3px;
+            width: 100%;
+        }
+        
+        /* Day Tabs */
+        .day-tabs-container {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 57px;
+            z-index: 99;
+            padding: 12px 0;
+        }
+        
+        .day-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 0 4px;
+            scrollbar-width: none;
+        }
+        
+        .day-tabs::-webkit-scrollbar { display: none; }
+        
+        .day-tab {
+            padding: 8px 18px;
+            background: var(--bg-light);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .day-tab:hover {
+            background: var(--bg-white);
+            color: var(--color-amber);
+        }
+        
+        .day-tab.active {
+            background: linear-gradient(135deg, var(--color-amber), #FBBF24);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        
+        /* Header */
+        .day-header {
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::after {
+            content: '🏆';
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+        
+        .breadcrumb {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .day-icon-inline {
+            font-size: 2rem;
+        }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .day-subtitle strong {
+            color: var(--color-amber);
+            font-weight: 600;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .meta-tag {
+            background: var(--bg-white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .meta-tag i { --ph-color: var(--color-amber); }
+        
+        /* Content area */
+        .content-area {
+            padding: 40px 0;
+        }
+        
+        /* Alternating section backgrounds */
+        .section { margin: 40px 0; }
+        .section-alt {
+            background: var(--bg-white);
+            padding: 40px 0;
+            margin: 40px -24px;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .section-header {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-amber);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i { --ph-color: var(--color-amber); }
+        
+        .section-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.6;
+        }
+        
+        /* C1 Insight - Neutral style */
+        .c1-insight {
+            background: var(--color-teal-light);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin-bottom: 28px;
+            border: 2px solid rgba(13, 148, 136, 0.3);
+        }
+        
+        .c1-insight .label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--color-teal);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .c1-insight .insight {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .c1-insight .insight .b2-label,
+        .c1-insight .insight .c1-label {
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .c1-insight .insight .b2-label { color: var(--text-muted); }
+        .c1-insight .insight .c1-label { color: var(--color-teal); }
+        
+        .c1-insight .insight .quote {
+            font-style: italic;
+            color: var(--color-teal);
+            margin-top: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        /* Philosophy section */
+        .philosophy-section {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-light);
+        }
+        
+        .philosophy-box {
+            background: var(--color-amber-light);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border: 2px solid rgba(217, 119, 6, 0.25);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--color-amber);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--color-amber); }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .philosophy-box strong {
+            color: var(--color-amber);
+            font-weight: 600;
+        }
+        
+        .comparison-box {
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            border: 2px solid;
+        }
+        
+        .comparison-box.negative {
+            background: rgba(245, 101, 101, 0.06);
+            border-color: rgba(245, 101, 101, 0.3);
+        }
+        
+        .comparison-box.positive {
+            background: rgba(16, 185, 129, 0.06);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .comparison-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .comparison-box.negative .comparison-title { color: #C53030; }
+        .comparison-box.positive .comparison-title { color: #065F46; }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .comparison-list {
+            list-style: none;
+        }
+        
+        .comparison-list li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .comparison-box.negative .comparison-list li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: 600;
+        }
+        
+        .comparison-box.positive .comparison-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        /* Real Story Mapping */
+        .story-mapping {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 2px solid rgba(217, 119, 6, 0.25);
+        }
+        
+        .story-mapping h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            color: var(--color-amber);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .story-mapping .story-text {
+            background: var(--color-amber-light);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            border: 2px solid rgba(217, 119, 6, 0.2);
+        }
+        
+        .story-mapping .story-text strong {
+            color: var(--color-amber);
+            font-weight: 600;
+        }
+        
+        .phase-markers {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .phase-marker {
+            display: flex;
+            gap: 12px;
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-white);
+            border: 2px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .phase-marker:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .phase-marker:nth-child(1) { border-color: rgba(37, 99, 235, 0.4); background: var(--color-blue-light); }
+        .phase-marker:nth-child(2) { border-color: rgba(5, 150, 105, 0.4); background: var(--color-green-light); }
+        .phase-marker:nth-child(3) { border-color: rgba(124, 58, 237, 0.4); background: var(--color-purple-light); }
+        .phase-marker:nth-child(4) { border-color: rgba(217, 119, 6, 0.4); background: var(--color-amber-light); }
+        .phase-marker:nth-child(5) { border-color: rgba(13, 148, 136, 0.4); background: var(--color-teal-light); }
+        .phase-marker:nth-child(6) { border-color: rgba(219, 39, 119, 0.4); background: var(--color-pink-light); }
+        
+        .phase-marker .phase-tag {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 8px;
+            min-width: 80px;
+            text-align: center;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .phase-marker:nth-child(1) .phase-tag { background: var(--color-blue); }
+        .phase-marker:nth-child(2) .phase-tag { background: var(--color-green); }
+        .phase-marker:nth-child(3) .phase-tag { background: var(--color-purple); }
+        .phase-marker:nth-child(4) .phase-tag { background: var(--color-amber); }
+        .phase-marker:nth-child(5) .phase-tag { background: var(--color-teal); }
+        .phase-marker:nth-child(6) .phase-tag { background: var(--color-pink); }
+        
+        .phase-marker .phase-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .phase-marker .phase-text strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        /* Plan grid */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .plan-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: center;
+            border: 2px solid var(--border-light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--color-amber);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15);
+        }
+        
+        .plan-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .plan-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-time {
+            font-size: 12px;
+            color: var(--color-amber);
+            font-weight: 600;
+            margin-bottom: 4px;
+            background: var(--color-amber-bg);
+            padding: 2px 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .plan-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        /* Integration Cards - Multi-color with full borders */
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .integration-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 2px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .integration-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .integration-card:nth-child(1) { border-color: rgba(37, 99, 235, 0.4); background: var(--color-blue-light); }
+        .integration-card:nth-child(2) { border-color: rgba(5, 150, 105, 0.4); background: var(--color-green-light); }
+        .integration-card:nth-child(3) { border-color: rgba(124, 58, 237, 0.4); background: var(--color-purple-light); }
+        .integration-card:nth-child(4) { border-color: rgba(217, 119, 6, 0.4); background: var(--color-amber-light); }
+        .integration-card:nth-child(5) { border-color: rgba(13, 148, 136, 0.4); background: var(--color-teal-light); }
+        .integration-card:nth-child(6) { border-color: rgba(219, 39, 119, 0.4); background: var(--color-pink-light); }
+        
+        .integration-card .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .integration-card .phase-num {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .integration-card .phase-name {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        
+        .integration-card:nth-child(1) .phase-name { color: var(--color-blue); }
+        .integration-card:nth-child(2) .phase-name { color: var(--color-green); }
+        .integration-card:nth-child(3) .phase-name { color: var(--color-purple); }
+        .integration-card:nth-child(4) .phase-name { color: var(--color-amber); }
+        .integration-card:nth-child(5) .phase-name { color: var(--color-teal); }
+        .integration-card:nth-child(6) .phase-name { color: var(--color-pink); }
+        
+        .integration-card .pattern-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+        
+        .integration-card .pattern-example {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            line-height: 1.5;
+            padding: 8px 10px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+        }
+        
+        .integration-card .result {
+            font-size: 11px;
+            color: var(--text-secondary);
+            padding: 6px 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        .integration-card .result strong {
+            color: var(--text-primary);
+        }
+        
+        /* Conversation Flow */
+        .conversation-flow {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 2px solid var(--border-light);
+            margin-top: 20px;
+        }
+        
+        .conversation-flow h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            color: var(--color-blue);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .flow-dialogue {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .flow-message {
+            display: flex;
+            gap: 12px;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            border: 2px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .flow-message:hover {
+            transform: translateX(4px);
+        }
+        
+        .flow-message.you {
+            background: var(--color-blue-light);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+        
+        .flow-message.them {
+            background: var(--bg-light);
+            border-color: var(--border-light);
+        }
+        
+        .flow-message .speaker {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .flow-message .message-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .flow-message .message-text em {
+            color: var(--color-blue);
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        .flow-message .phase-indicator {
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: white;
+            margin-left: auto;
+            align-self: flex-start;
+            flex-shrink: 0;
+        }
+        
+        .flow-message:nth-child(1) .phase-indicator,
+        .flow-message:nth-child(2) .phase-indicator { background: var(--color-blue); }
+        .flow-message:nth-child(3) .phase-indicator,
+        .flow-message:nth-child(4) .phase-indicator { background: var(--color-green); }
+        .flow-message:nth-child(5) .phase-indicator,
+        .flow-message:nth-child(6) .phase-indicator { background: var(--color-purple); }
+        .flow-message:nth-child(7) .phase-indicator,
+        .flow-message:nth-child(8) .phase-indicator { background: var(--color-amber); }
+        
+        /* Transition Tips */
+        .transition-tips {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 2px solid var(--border-light);
+            margin-top: 20px;
+        }
+        
+        .transition-tips h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            color: var(--color-purple);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .transition-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .transition-item {
+            display: flex;
+            gap: 12px;
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            background: var(--color-purple-light);
+            border: 2px solid rgba(124, 58, 237, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .transition-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.1);
+        }
+        
+        .transition-item .transition-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+            color: var(--color-purple);
+        }
+        
+        .transition-item .transition-content {
+            flex: 1;
+        }
+        
+        .transition-item .transition-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-purple);
+            margin-bottom: 4px;
+            font-family: 'Fraunces', serif;
+        }
+        
+        .transition-item .transition-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        /* Common Mistakes */
+        .mistakes-box {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 2px solid rgba(245, 101, 101, 0.25);
+            margin-top: 20px;
+        }
+        
+        .mistakes-box h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            color: #C53030;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mistakes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+        }
+        
+        .mistake-item {
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            background: rgba(245, 101, 101, 0.06);
+            border: 2px solid rgba(245, 101, 101, 0.25);
+        }
+        
+        .mistake-item .mistake-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #C53030;
+            margin-bottom: 6px;
+            font-family: 'Fraunces', serif;
+        }
+        
+        .mistake-item .mistake-better {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .mistake-item .mistake-better::before {
+            content: '→ ';
+            color: #10B981;
+            font-weight: 700;
+        }
+        
+        /* Story card */
+        .story-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(217, 119, 6, 0.25);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .story-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+            color: var(--color-amber);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .story-text {
+            background: var(--color-amber-light);
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 14px;
+            border: 2px solid rgba(217, 119, 6, 0.2);
+        }
+        
+        .story-text strong {
+            color: var(--color-amber);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        /* Analysis Table - Orange theme */
+        .analysis-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 2px solid rgba(249, 115, 22, 0.3);
+        }
+        
+        .analysis-table th {
+            background: var(--color-orange);
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .analysis-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(249, 115, 22, 0.15);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .analysis-table tbody tr:nth-child(even) {
+            background: var(--color-orange-bg);
+        }
+        
+        .analysis-table tbody tr:nth-child(odd) {
+            background: var(--bg-white);
+        }
+        
+        .analysis-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .analysis-table td strong {
+            color: var(--color-orange);
+            font-weight: 600;
+        }
+        
+        /* Reflection */
+        .reflection-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 2px solid var(--border-light);
+        }
+        
+        .reflection-item {
+            margin-bottom: 20px;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            background: var(--color-amber-light);
+            border: 2px solid rgba(217, 119, 6, 0.2);
+        }
+        
+        .reflection-item h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--color-amber);
+            margin-bottom: 10px;
+        }
+        
+        .reflection-questions {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .reflection-questions li {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .reflection-questions li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-amber);
+            font-weight: 700;
+        }
+        
+        /* Self Assessment */
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .assessment-col {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 2px solid;
+        }
+        
+        .assessment-col.before {
+            border-color: rgba(245, 101, 101, 0.3);
+            background: rgba(245, 101, 101, 0.04);
+        }
+        
+        .assessment-col.after {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.04);
+        }
+        
+        .assessment-col h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+        
+        .assessment-col.before h3 { color: #C53030; }
+        .assessment-col.after h3 { color: #065F46; }
+        
+        .assessment-list {
+            list-style: none;
+        }
+        
+        .assessment-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .assessment-col.before li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: 600;
+        }
+        
+        .assessment-col.after li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        /* Task card */
+        .task-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-bottom: 16px;
+            border: 2px solid rgba(217, 119, 6, 0.3);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .task-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--color-amber);
+        }
+        
+        .task-steps {
+            list-style: none;
+            counter-reset: step;
+        }
+        
+        .task-steps li {
+            margin-bottom: 12px;
+            padding-left: 40px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-secondary);
+            counter-increment: step;
+        }
+        
+        .task-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--color-amber);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: 'Fraunces', serif;
+        }
+        
+        .task-steps li strong {
+            color: var(--color-amber);
+        }
+        
+        .task-deliverable {
+            margin-top: 16px;
+            padding: 12px;
+            background: var(--color-amber-bg);
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            border: 2px solid rgba(217, 119, 6, 0.2);
+        }
+        
+        .task-deliverable strong {
+            color: var(--color-amber);
+        }
+        
+        /* Celebration - Simple */
+        .celebration-card {
+            background: linear-gradient(135deg, var(--color-amber-light), rgba(251, 191, 36, 0.15));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            text-align: center;
+            border: 2px solid rgba(217, 119, 6, 0.4);
+            margin-top: 40px;
+            box-shadow: 0 4px 16px rgba(217, 119, 6, 0.15);
+        }
+        
+        .celebration-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--color-amber);
+            margin-bottom: 20px;
+        }
+        
+        .celebration-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+        }
+        
+        .celebration-text strong {
+            color: var(--color-amber);
+            font-weight: 600;
+        }
+        
+        .milestone-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--color-amber), #FBBF24);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 8px 24px rgba(217, 119, 6, 0.4);
+            margin-top: 16px;
+        }
+        
+        /* Navigation */
+        .day-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 40px 0;
+        }
+        
+        .nav-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-amber), #FBBF24);
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--color-amber);
+            box-shadow: 0 8px 24px rgba(217, 119, 6, 0.15);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        /* Complete button */
+        .complete-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--color-amber), #FBBF24);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(217, 119, 6, 0.4);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(217, 119, 6, 0.5);
+        }
+        
+        .complete-btn i { font-size: 1.2rem; }
+        
+        .complete-message {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--bg-white);
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .footer-fox { font-size: 2.5rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 6px; font-weight: 600; color: var(--text-primary); }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .day-title { font-size: 1.8rem; }
+            .day-tabs-container { top: 52px; }
+            .day-navigation { grid-template-columns: 1fr; }
+            .assessment-grid { grid-template-columns: 1fr; }
+            .integration-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-04.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Week 4 Hub</span>
+            </a>
+            <div class="day-indicator">
+                Day 28 / 28
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <div class="day-tabs-container">
+        <div class="container">
+            <div class="day-tabs">
+                <a href="week-04.html" class="day-tab">Overview</a>
+                <a href="week-04-day-22.html" class="day-tab">Day 22</a>
+                <a href="week-04-day-23.html" class="day-tab">Day 23</a>
+                <a href="week-04-day-24.html" class="day-tab">Day 24</a>
+                <a href="week-04-day-25.html" class="day-tab">Day 25</a>
+                <a href="week-04-day-26.html" class="day-tab">Day 26</a>
+                <a href="week-04-day-27.html" class="day-tab">Day 27</a>
+                <a href="week-04-day-28.html" class="day-tab active">Day 28</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="week-04.html">Week 4</a> › Day 28
+            </div>
+            <div class="day-title-row">
+                <span class="day-icon-inline">🏆</span>
+                <h1 class="day-title">Relationship Mastery</h1>
+            </div>
+            <p class="day-subtitle">You've learned 6 separate skills this week. Today, we integrate them into <strong>one complete system</strong> — because relationships don't grow by accident. They follow invisible stages, and missing one often stops the growth.</p>
+            <div class="day-meta">
+                <div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Week 4 Review</div>
+                <div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+                <div class="meta-tag"><i class="ph-duotone ph-books"></i> Full Integration</div>
+                <div class="meta-tag"><i class="ph-duotone ph-confetti"></i> Phase 1 Complete</div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Content area -->
+    <div class="content-area">
+        <div class="container">
+            
+            <!-- C1 Insight - Neutral style -->
+            <div class="c1-insight">
+                <div class="label">💡 C1 Insight</div>
+                <div class="insight">
+                    <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 8px; flex-wrap: wrap;">
+                        <div>
+                            <div class="b2-label">B2</div>
+                            <div>"I met many people."</div>
+                        </div>
+                        <div>
+                            <div class="c1-label">C1</div>
+                            <div>"I built a few meaningful relationships."</div>
+                        </div>
+                    </div>
+                    <div class="quote">"B2 speakers collect contacts. C1 speakers build relationships that last."</div>
+                </div>
+            </div>
+            
+            <!-- Today's Philosophy -->
+            <section class="section">
+                <div class="philosophy-section">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        Today's Philosophy
+                    </h2>
+                    
+                    <div class="philosophy-box">
+                        <div class="philosophy-title">
+                            <i class="ph-duotone ph-brain"></i>
+                            The Invisible Stages of Connection
+                        </div>
+                        <p>
+                            Most people think good relationships happen naturally. You meet someone, you click, you become friends. But C1 communicators know something different.
+                            <br><br>
+                            <strong>Every meaningful relationship follows invisible stages.</strong> Miss one stage, and the relationship often stops growing. Skip from "meeting" to "memory" without building trust, and the connection feels forced.
+                            <br><br>
+                            Week 4 wasn't about learning six separate skills. It was about learning <strong>one complete relationship system</strong> — a framework that works whether you're meeting someone at a conference, reconnecting with an old friend, or building a professional partnership.
+                        </p>
+                    </div>
+                    
+                    <div class="comparison-box negative">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            Why most relationships fade
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Start with generic questions ("What do you do?") → No curiosity</li>
+                            <li>Perform instead of being authentic → No trust</li>
+                            <li>Give advice before validating → No safety</li>
+                            <li>Exit awkwardly → No warm impression</li>
+                            <li>Never follow up → No consistency</li>
+                            <li>Do activities without creating memories → No bond</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-box positive">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            What C1 connectors do differently
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Understand the invisible stages</li>
+                            <li>Master each phase intentionally</li>
+                            <li>Know which phase they're in with each person</li>
+                            <li>Move relationships forward naturally</li>
+                            <li>Build connections that last years, not days</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Real Story Mapping -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-map-trifold"></i>
+                        Real Story Mapping
+                    </h2>
+                    <p class="section-desc">Watch how one natural conversation moves through all 6 phases.</p>
+                </div>
+                
+                <div class="story-mapping">
+                    <h3>📖 From Conference to Collaboration</h3>
+                    
+                    <div class="story-text">
+                        "At the conference, I noticed Sarah was asking really thoughtful questions during the panel. During the coffee break, I walked up and asked <strong>what got her interested in sustainable design</strong>. She shared how a trip to Scandinavia had changed her perspective, and I was fascinated.
+                        <br><br>
+                        We grabbed coffee after the conference, and I shared that <strong>I'd been struggling with how to balance profit and purpose</strong> in my own work. She listened without judgment, just nodded, and said she'd been there too.
+                        <br><br>
+                        When I talked about the challenges of convincing clients to invest in sustainable materials, she said <strong>that sounds really challenging</strong>, and I felt truly heard for the first time. She didn't try to fix it, just understood.
+                        <br><br>
+                        At the end of our coffee, she said <strong>she'd really enjoyed this conversation</strong>, and I left feeling energized. I knew we'd work together someday.
+                        <br><br>
+                        Three weeks later, I sent her an article about innovative sustainable materials, saying <strong>this reminded me of you</strong>. She replied immediately, and we started exchanging ideas regularly.
+                        <br><br>
+                        Last month, when we finally collaborated on a project, she said, '<strong>Remember when we first met at the conference?</strong>' And I realized — we'd built something real. Not because we exchanged cards, but because we went through all the stages: curiosity, trust, safety, warmth, consistency, and memory."
+                    </div>
+                    
+                    <div class="phase-markers">
+                        <div class="phase-marker">
+                            <span class="phase-tag">OPEN</span>
+                            <div class="phase-text"><strong>Day 22:</strong> Asked "what got you interested in sustainable design?" → Curiosity established</div>
+                        </div>
+                        <div class="phase-marker">
+                            <span class="phase-tag">CONNECT</span>
+                            <div class="phase-text"><strong>Day 23:</strong> Shared "I've been struggling with balancing profit and purpose" → Trust began</div>
+                        </div>
+                        <div class="phase-marker">
+                            <span class="phase-tag">DEEPEN</span>
+                            <div class="phase-text"><strong>Day 24:</strong> She said "that sounds really challenging" → Safety created</div>
+                        </div>
+                        <div class="phase-marker">
+                            <span class="phase-tag">EXIT</span>
+                            <div class="phase-text"><strong>Day 25:</strong> She said "I've really enjoyed this conversation" → Warm impression</div>
+                        </div>
+                        <div class="phase-marker">
+                            <span class="phase-tag">NURTURE</span>
+                            <div class="phase-text"><strong>Day 26:</strong> I sent article saying "this reminded me of you" → Consistency built</div>
+                        </div>
+                        <div class="phase-marker">
+                            <span class="phase-tag">MEMORY</span>
+                            <div class="phase-text"><strong>Day 27:</strong> She said "remember when we first met" → Bond cemented</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Today's Plan -->
+            <section class="section">
+                <div class="philosophy-section">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-calendar-check"></i>
+                        Today's Plan (60 min)
+                    </h2>
+                    
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <div class="plan-icon">📖</div>
+                            <div class="plan-title">Real Story Mapping</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">See phases in action</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🔗</div>
+                            <div class="plan-title">Pattern Integration</div>
+                            <div class="plan-time">15 min</div>
+                            <div class="plan-desc">Combine patterns effectively</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">💬</div>
+                            <div class="plan-title">Conversation Flow</div>
+                            <div class="plan-time">15 min</div>
+                            <div class="plan-desc">Practice transitions</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🪞</div>
+                            <div class="plan-title">Reflection</div>
+                            <div class="plan-time">20 min</div>
+                            <div class="plan-desc">Apply to your relationships</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Master Pattern Integration - Multi-color Cards -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-link"></i>
+                        Master Pattern Integration
+                    </h2>
+                    <p class="section-desc">How patterns work together in a real conversation to move through the phases.</p>
+                </div>
+                
+                <div class="integration-grid">
+                    <div class="integration-card">
+                        <div class="phase-header">
+                            <span class="phase-num">Phase 1</span>
+                            <span class="phase-name">OPEN</span>
+                        </div>
+                        <div class="pattern-name">"What got you interested in...?"</div>
+                        <div class="pattern-example">"What got you interested in sustainable design?"</div>
+                        <div class="result"><strong>Result:</strong> Curiosity established</div>
+                    </div>
+                    
+                    <div class="integration-card">
+                        <div class="phase-header">
+                            <span class="phase-num">Phase 2</span>
+                            <span class="phase-name">CONNECT</span>
+                        </div>
+                        <div class="pattern-name">"Actually, I've been struggling with..."</div>
+                        <div class="pattern-example">"Actually, I've been struggling with balancing profit and purpose too."</div>
+                        <div class="result"><strong>Result:</strong> Trust begins</div>
+                    </div>
+                    
+                    <div class="integration-card">
+                        <div class="phase-header">
+                            <span class="phase-num">Phase 3</span>
+                            <span class="phase-name">DEEPEN</span>
+                        </div>
+                        <div class="pattern-name">"That sounds really [emotion]"</div>
+                        <div class="pattern-example">"That sounds really challenging."</div>
+                        <div class="result"><strong>Result:</strong> Safety created</div>
+                    </div>
+                    
+                    <div class="integration-card">
+                        <div class="phase-header">
+                            <span class="phase-num">Phase 4</span>
+                            <span class="phase-name">EXIT</span>
+                        </div>
+                        <div class="pattern-name">"I've really enjoyed this conversation"</div>
+                        <div class="pattern-example">"I've really enjoyed this conversation. I'd love to continue this sometime."</div>
+                        <div class="result"><strong>Result:</strong> Warm impression</div>
+                    </div>
+                    
+                    <div class="integration-card">
+                        <div class="phase-header">
+                            <span class="phase-num">Phase 5</span>
+                            <span class="phase-name">NURTURE</span>
+                        </div>
+                        <div class="pattern-name">"This reminded me of you"</div>
+                        <div class="pattern-example">"This article reminded me of you. We should check it out together."</div>
+                        <div class="result"><strong>Result:</strong> Consistency built</div>
+                    </div>
+                    
+                    <div class="integration-card">
+                        <div class="phase-header">
+                            <span class="phase-num">Phase 6</span>
+                            <span class="phase-name">MEMORY</span>
+                        </div>
+                        <div class="pattern-name">"Remember when we..."</div>
+                        <div class="pattern-example">"Remember when we first met at the conference? We should do that again sometime."</div>
+                        <div class="result"><strong>Result:</strong> Bond cemented</div>
+                    </div>
+                </div>
+                
+                <!-- Conversation Flow -->
+                <div class="conversation-flow">
+                    <h3>💬 Complete Conversation Flow</h3>
+                    <div class="flow-dialogue">
+                        <div class="flow-message you">
+                            <div>
+                                <div class="speaker">YOU</div>
+                                <div class="message-text"><em>"What got you interested in sustainable design?"</em></div>
+                            </div>
+                            <span class="phase-indicator">OPEN</span>
+                        </div>
+                        <div class="flow-message them">
+                            <div>
+                                <div class="speaker">THEM</div>
+                                <div class="message-text">"A trip to Scandinavia changed my perspective on architecture..."</div>
+                            </div>
+                            <span class="phase-indicator">OPEN</span>
+                        </div>
+                        <div class="flow-message you">
+                            <div>
+                                <div class="speaker">YOU</div>
+                                <div class="message-text"><em>"Actually, I've been struggling with balancing profit and purpose too."</em></div>
+                            </div>
+                            <span class="phase-indicator">CONNECT</span>
+                        </div>
+                        <div class="flow-message them">
+                            <div>
+                                <div class="speaker">THEM</div>
+                                <div class="message-text">"Yeah, I've been there. It's really challenging."</div>
+                            </div>
+                            <span class="phase-indicator">CONNECT</span>
+                        </div>
+                        <div class="flow-message you">
+                            <div>
+                                <div class="speaker">YOU</div>
+                                <div class="message-text"><em>"That sounds really challenging. What's been the hardest part?"</em></div>
+                            </div>
+                            <span class="phase-indicator">DEEPEN</span>
+                        </div>
+                        <div class="flow-message them">
+                            <div>
+                                <div class="speaker">THEM</div>
+                                <div class="message-text">"Convincing clients to invest in sustainable materials..."</div>
+                            </div>
+                            <span class="phase-indicator">DEEPEN</span>
+                        </div>
+                        <div class="flow-message you">
+                            <div>
+                                <div class="speaker">YOU</div>
+                                <div class="message-text"><em>"I've really enjoyed this conversation. I'd love to continue this sometime."</em></div>
+                            </div>
+                            <span class="phase-indicator">EXIT</span>
+                        </div>
+                        <div class="flow-message them">
+                            <div>
+                                <div class="speaker">THEM</div>
+                                <div class="message-text">"Me too! Let's definitely grab coffee soon."</div>
+                            </div>
+                            <span class="phase-indicator">EXIT</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transition Tips -->
+                <div class="transition-tips">
+                    <h3>🔄 Phase Transition Tips</h3>
+                    <div class="transition-list">
+                        <div class="transition-item">
+                            <div class="transition-icon">→</div>
+                            <div class="transition-content">
+                                <div class="transition-title">OPEN → CONNECT</div>
+                                <div class="transition-desc">Share something authentic about yourself after they share. <em>"That's interesting. Actually, I've been..."</em></div>
+                            </div>
+                        </div>
+                        <div class="transition-item">
+                            <div class="transition-icon">→</div>
+                            <div class="transition-content">
+                                <div class="transition-title">CONNECT → DEEPEN</div>
+                                <div class="transition-desc">Validate their emotion before moving deeper. <em>"That sounds really [emotion]. What's been the hardest part?"</em></div>
+                            </div>
+                        </div>
+                        <div class="transition-item">
+                            <div class="transition-icon">→</div>
+                            <div class="transition-content">
+                                <div class="transition-title">DEEPEN → EXIT</div>
+                                <div class="transition-desc">Express appreciation before leaving. <em>"I've really enjoyed this conversation. I'd love to continue sometime."</em></div>
+                            </div>
+                        </div>
+                        <div class="transition-item">
+                            <div class="transition-icon">→</div>
+                            <div class="transition-content">
+                                <div class="transition-title">EXIT → NURTURE</div>
+                                <div class="transition-desc">Follow up within 1-2 weeks with something relevant. <em>"This reminded me of you..."</em></div>
+                            </div>
+                        </div>
+                        <div class="transition-item">
+                            <div class="transition-icon">→</div>
+                            <div class="transition-content">
+                                <div class="transition-title">NURTURE → MEMORY</div>
+                                <div class="transition-desc">Reference your shared history. <em>"Remember when we first met..."</em> Creates nostalgia and reinforces bond.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Common Mistakes -->
+                <div class="mistakes-box">
+                    <h3>⚠️ Common Integration Mistakes</h3>
+                    <div class="mistakes-grid">
+                        <div class="mistake-item">
+                            <div class="mistake-title">Skipping phases</div>
+                            <div class="mistake-better">Move through phases naturally. Don't jump from OPEN to MEMORY without building trust first.</div>
+                        </div>
+                        <div class="mistake-item">
+                            <div class="mistake-title">Using patterns mechanically</div>
+                            <div class="mistake-better">Patterns should feel natural. Don't force them. Use when they fit the moment.</div>
+                        </div>
+                        <div class="mistake-item">
+                            <div class="mistake-title">Not listening</div>
+                            <div class="mistake-better">Relationships are built on mutual exchange. Listen as much as you speak.</div>
+                        </div>
+                        <div class="mistake-item">
+                            <div class="mistake-title">Rushing to the next phase</div>
+                            <div class="mistake-better">Stay in each phase long enough. Don't rush to DEEPEN before CONNECT is established.</div>
+                        </div>
+                        <div class="mistake-item">
+                            <div class="mistake-title">Forgetting to follow up</div>
+                            <div class="mistake-better">After EXIT, nurture within 1-2 weeks. Don't let the connection fade.</div>
+                        </div>
+                        <div class="mistake-item">
+                            <div class="mistake-title">Being too transactional</div>
+                            <div class="mistake-better">Focus on building relationship, not getting something. Add value before asking.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Reflection -->
+            <section class="section">
+                <div class="reflection-card">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-mirror"></i>
+                        Reflection: Map Your Relationships
+                    </h2>
+                    
+                    <div class="reflection-item">
+                        <h4>1. A friend you're close with</h4>
+                        <ul class="reflection-questions">
+                            <li>Which phase are you currently in?</li>
+                            <li>What patterns have you used naturally?</li>
+                            <li>What phase do you want to move to next?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="reflection-item">
+                        <h4>2. A colleague you work with</h4>
+                        <ul class="reflection-questions">
+                            <li>Which phase are you currently in?</li>
+                            <li>What patterns have you used (or missed)?</li>
+                            <li>What's one pattern you could use this week?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="reflection-item">
+                        <h4>3. Someone you recently met</h4>
+                        <ul class="reflection-questions">
+                            <li>Which phase are you in?</li>
+                            <li>What's the next phase you need to move to?</li>
+                            <li>What pattern will help you get there?</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 14px; background: var(--color-amber-light); border-radius: var(--radius-sm); font-size: 14px; color: var(--text-secondary); border: 2px solid rgba(217, 119, 6, 0.2);">
+                        <strong style="color: var(--color-amber);">💡 Key Questions:</strong><br>
+                        Which phase do you naturally excel at?<br>
+                        Which phase do you tend to skip or rush through?
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Self Assessment -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-chart-bar"></i>
+                        Self-Assessment: Before & After Week 4
+                    </h2>
+                </div>
+                
+                <div class="assessment-grid">
+                    <div class="assessment-col before">
+                        <h3>Before Week 4, I usually...</h3>
+                        <ul class="assessment-list">
+                            <li>Asked generic questions ("What do you do?")</li>
+                            <li>Talked too much about myself</li>
+                            <li>Disappeared after meeting someone</li>
+                            <li>Forgot to follow up</li>
+                            <li>Ended conversations awkwardly</li>
+                            <li>Did activities without creating memories</li>
+                            <li>Wondered why relationships didn't last</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="assessment-col after">
+                        <h3>Now I can...</h3>
+                        <ul class="assessment-list">
+                            <li>Create curiosity with meaningful questions</li>
+                            <li>Build trust through authentic sharing</li>
+                            <li>Validate emotions and create safety</li>
+                            <li>Leave warm, memorable impressions</li>
+                            <li>Maintain relationships consistently</li>
+                            <li>Create memories that cement bonds</li>
+                            <li>Understand which phase I'm in with each person</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; text-align: center; font-size: 16px; color: var(--text-secondary);">
+                    <strong style="color: var(--color-amber);">Score:</strong> ___ / 14 skills mastered
+                </div>
+            </section>
+            
+            <!-- Reality Task -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-target"></i>
+                        Reality Task: Map One Relationship
+                    </h2>
+                    <p class="section-desc">Choose ONE relationship to intentionally develop this week.</p>
+                </div>
+                
+                <div class="task-card">
+                    <h3>📝 Step-by-Step Guide</h3>
+                    <ol class="task-steps">
+                        <li>
+                            <strong>Identify the current phase</strong><br>
+                            Are you at Open, Connect, Deepen, Exit, Maintain, or Memory?
+                        </li>
+                        <li>
+                            <strong>Decide the next phase</strong><br>
+                            What phase do you want to move to? What's missing in the current phase?
+                        </li>
+                        <li>
+                            <strong>Choose the pattern</strong><br>
+                            Which pattern from Day 22-27 will help you move to the next phase? When will you use it?
+                        </li>
+                        <li>
+                            <strong>Execute</strong><br>
+                            Actually use the pattern in a conversation this week. Observe the response. Reflect on what worked.
+                        </li>
+                    </ol>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Write a short reflection (100-150 words) about which relationship you chose, what phase you're in, what pattern you used, what happened, and what you learned.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Celebration - Simple -->
+            <section class="section">
+                <div class="celebration-card">
+                    <h2>🎉 Phase 1 Complete</h2>
+                    
+                    <div class="celebration-text">
+                        <strong>You're not just learning English anymore. You're learning how to connect.</strong>
+                        <br><br>
+                        Professional fluency isn't measured by how many words you know. It's measured by <strong>how people feel after talking with you.</strong>
+                        <br><br>
+                        It's not about perfect grammar. It's about perfect timing — knowing when to ask, when to share, when to listen, when to leave, when to follow up, and when to create a memory.
+                    </div>
+                    
+                    <div class="milestone-badge">
+                        <i class="ph-duotone ph-trophy"></i>
+                        Phase 1: Foundation Complete
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Navigation -->
+            <div class="day-navigation">
+                <a href="week-04-day-27.html" class="nav-card">
+                    <div class="nav-label">← Previous Day</div>
+                    <div class="nav-title">Day 27: Memory & Bond Creation</div>
+                </a>
+                <a href="week-04.html" class="nav-card" style="text-align: center;">
+                    <div class="nav-label">🏆 Back to Hub</div>
+                    <div class="nav-title">Week 4 Hub</div>
+                </a>
+            </div>
+            
+            <!-- Complete Button -->
+            <div class="complete-container">
+                <button class="complete-btn" onclick="markComplete()">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Mark Day 28 Complete · Celebrate Week 4 & Phase 1!</span>
+                </button>
+                <div class="complete-message">🎉 Phase 1 Complete! You're not just learning English. You're learning how to connect. 🏆</div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 4 · Day 28 · Relationship Mastery · Phase 1 Complete</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ============================================
+        // AUDIO ENGINE
+        // ============================================
+        let voices = [];
+        let selectedVoice = null;
+        
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
+            
+            selectedVoice = 
+                voices.find(v => v.name.includes('Google US English')) ||
+                voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+                voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+                voices.find(v => v.lang === 'en-US') ||
+                voices.find(v => v.lang.includes('en'));
+            
+            console.log('Selected voice:', selectedVoice?.name);
+        }
+        
+        loadVoices();
+        
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        
+        setTimeout(loadVoices, 500);
+        setTimeout(loadVoices, 1000);
+        
+        function playAudio(text) {
+            if (!('speechSynthesis' in window)) {
+                alert('Trình duyệt không hỗ trợ phát âm thanh');
+                return;
+            }
+            
+            speechSynthesis.cancel();
+            
+            setTimeout(() => {
+                const utterance = new SpeechSynthesisUtterance(text);
+                
+                utterance.lang = 'en-US';
+                utterance.rate = 0.95;
+                utterance.pitch = 1.05;
+                utterance.volume = 1.0;
+                
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                }
+                
+                speechSynthesis.speak(utterance);
+            }, 100);
+        }
+        
+        function stopSpeaking() {
+            if ('speechSynthesis' in window) {
+                speechSynthesis.cancel();
+            }
+        }
+        
+        function markComplete() {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (!completed.includes('day-28')) {
+                completed.push('day-28');
+                localStorage.setItem('completedDays', JSON.stringify(completed));
+            }
+            
+            const btn = document.querySelector('.complete-btn');
+            btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Phase 1 Complete! Well done!</span>';
+            btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+            
+            const msg = document.querySelector('.complete-message');
+            msg.textContent = '🎉 Phase 1 Complete! You\'re not just learning English. You\'re learning how to connect. 🏆';
+        }
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (completed.includes('day-28')) {
+                const btn = document.querySelector('.complete-btn');
+                btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 28 Completed</span>';
+                btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            }
+        });
+    </script>
+</body>
+</html>
