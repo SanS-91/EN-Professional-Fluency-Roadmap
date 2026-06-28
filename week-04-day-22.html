@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Day 22: Curiosity & Warmth | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Pink/Rose Theme - Curiosity & Warmth */
+            --primary: #FB7185;
+            --primary-bright: #E11D48;
+            --primary-soft: #FFE4E6;
+            --primary-deep: #9F1239;
+            --primary-light: #FDA4AF;
+            
+            --green: #10B981;
+            --green-soft: #D1FAE5;
+            --green-deep: #065F46;
+            
+            --blue: #3B82F6;
+            --blue-soft: #DBEAFE;
+            --blue-deep: #1E40AF;
+            
+            --purple: #8B5CF6;
+            --purple-soft: #F3E8FF;
+            --purple-deep: #6B21A8;
+            
+            --orange: #F97316;
+            --orange-soft: #FFEDD5;
+            --orange-deep: #9A3412;
+            
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FAFAFA;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Top Nav */
+        .top-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--primary-bright); }
+        
+        .day-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .progress-bar {
+            width: 80px;
+            height: 6px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-bright));
+            border-radius: 3px;
+            width: 4%;
+        }
+        
+        /* Day Tabs */
+        .day-tabs-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 57px;
+            z-index: 99;
+            padding: 12px 0;
+        }
+        
+        .day-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 0 4px;
+            scrollbar-width: none;
+        }
+        
+        .day-tabs::-webkit-scrollbar { display: none; }
+        
+        .day-tab {
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .day-tab:hover {
+            background: rgba(255, 255, 255, 1);
+            color: var(--primary-bright);
+        }
+        
+        .day-tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+        }
+        
+        /* Header */
+        .day-header {
+            background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 50%, #FDA4AF 100%);
+            padding: 48px 0 40px;
+            position: relative;
+        }
+        
+        .day-header::after {
+            content: '✨';
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+        
+        .breadcrumb {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .day-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .day-icon-inline {
+            font-size: 2rem;
+        }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .day-subtitle strong {
+            color: var(--primary-deep);
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .meta-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .meta-tag i { --ph-color: var(--primary-bright); }
+        
+        /* Content area */
+        .content-area {
+            background: #FAFAFA;
+            padding: 40px 0;
+        }
+        
+        /* Section base */
+        .section { margin: 40px 0; }
+        
+        .section-header {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i { --ph-color: var(--primary-bright); }
+        
+        .section-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.7;
+        }
+        
+        /* Philosophy section */
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(251, 113, 133, 0.2);
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(255, 228, 230, 0.5), rgba(253, 164, 175, 0.3));
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--primary-bright); }
+        
+        .philosophy-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .philosophy-box strong {
+            color: var(--primary-deep);
+        }
+        
+        .comparison-box {
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .comparison-box.negative {
+            background: rgba(245, 101, 101, 0.08);
+            border-left: 4px solid #F56565;
+        }
+        
+        .comparison-box.positive {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid #10B981;
+        }
+        
+        .comparison-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .comparison-box.negative .comparison-title { color: #C53030; }
+        .comparison-box.positive .comparison-title { color: #065F46; }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .comparison-list {
+            list-style: none;
+        }
+        
+        .comparison-list li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .comparison-box.negative .comparison-list li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: 600;
+        }
+        
+        .comparison-box.positive .comparison-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        /* Plan grid */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .plan-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .plan-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .plan-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .plan-time {
+            font-size: 12px;
+            color: var(--primary-bright);
+            font-weight: 600;
+            margin-bottom: 4px;
+            background: rgba(255, 228, 230, 0.5);
+            padding: 2px 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .plan-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        /* Pattern card */
+        .pattern-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .pattern-header {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Fraunces', serif;
+            font-size: 18px;
+            box-shadow: 0 2px 8px rgba(225, 29, 72, 0.3);
+        }
+        
+        .pattern-content { flex: 1; }
+        
+        .pattern-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .pattern-ipa {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: monospace;
+            margin-bottom: 8px;
+        }
+        
+        .pattern-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .pattern-rating {
+            font-size: 12px;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .pattern-context {
+            font-size: 12px;
+            color: var(--text-muted);
+            background: rgba(255, 228, 230, 0.5);
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        
+        .pattern-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-why {
+            background: rgba(255, 228, 230, 0.4);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .pattern-why strong {
+            color: var(--primary-deep);
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        
+        .pattern-why p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .pattern-examples {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+        
+        .pattern-examples h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .example {
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .example-tag {
+            flex-shrink: 0;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            background: rgba(255, 228, 230, 0.8);
+            color: var(--primary-deep);
+        }
+        
+        .example-tag.business {
+            background: rgba(219, 234, 254, 0.8);
+            color: #1E40AF;
+        }
+        
+        .audio-btn {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .audio-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+        }
+        
+        .audio-btn i { --ph-color: white; font-size: 14px; }
+        
+        .pattern-usage {
+            background: rgba(255, 228, 230, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .pattern-usage strong {
+            color: var(--primary-deep);
+        }
+        
+        /* Story card */
+        .story-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .story-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .story-text {
+            background: rgba(255, 228, 230, 0.2);
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .story-text strong {
+            color: var(--primary-deep);
+            font-style: normal;
+        }
+        
+        .story-analysis h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .story-analysis ul {
+            list-style: none;
+        }
+        
+        .story-analysis li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .story-analysis li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        /* Audio controls for stories */
+        .story-audio-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        
+        .story-audio-btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .story-play-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+        }
+        
+        .story-play-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+        }
+        
+        .story-stop-btn {
+            background: rgba(245, 101, 101, 0.1);
+            color: #DC2626;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        .story-stop-btn:hover {
+            background: rgba(245, 101, 101, 0.2);
+        }
+        
+        /* Pronunciation table */
+        .pronunciation-table {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .pronunciation-table h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .pronunciation-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pronunciation-table th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .pronunciation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .pronunciation-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .intonation-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .intonation-item .phrase {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        /* Scenario cards */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .scenario-card {
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border: 2px solid;
+        }
+        
+        .scenario-card.casual {
+            background: rgba(209, 250, 229, 0.3);
+            border-color: var(--green);
+        }
+        
+        .scenario-card.professional {
+            background: rgba(219, 234, 254, 0.3);
+            border-color: var(--blue);
+        }
+        
+        .scenario-card.mixed {
+            background: rgba(243, 232, 255, 0.3);
+            border-color: var(--purple);
+        }
+        
+        .scenario-card.challenge {
+            background: rgba(255, 237, 213, 0.3);
+            border-color: var(--orange);
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: white;
+        }
+        
+        .scenario-card.casual .scenario-badge { background: var(--green); }
+        .scenario-card.professional .scenario-badge { background: var(--blue); }
+        .scenario-card.mixed .scenario-badge { background: var(--purple); }
+        .scenario-card.challenge .scenario-badge { background: var(--orange); }
+        
+        .scenario-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .scenario-context {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        
+        .scenario-requirements {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .scenario-requirements h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .scenario-requirements ul {
+            list-style: none;
+        }
+        
+        .scenario-requirements li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .scenario-requirements li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .sample-flow-btn {
+            background: white;
+            border: 2px solid;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .scenario-card.casual .sample-flow-btn { border-color: var(--green); color: var(--green-deep); }
+        .scenario-card.professional .sample-flow-btn { border-color: var(--blue); color: var(--blue-deep); }
+        .scenario-card.mixed .sample-flow-btn { border-color: var(--purple); color: var(--purple-deep); }
+        .scenario-card.challenge .sample-flow-btn { border-color: var(--orange); color: var(--orange-deep); }
+        
+        .sample-flow-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Task cards */
+        .task-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 16px;
+            position: relative;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid;
+        }
+        
+        .task-card.easy { border-left-color: #10B981; }
+        .task-card.standard { border-left-color: var(--primary); }
+        .task-card.challenge { border-left-color: #EF4444; }
+        
+        .task-level {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+        .task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+        .task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+        
+        .task-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .task-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .task-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        
+        .task-requirements {
+            background: rgba(255, 228, 230, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .task-requirements h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            margin-bottom: 8px;
+        }
+        
+        .task-requirements ul {
+            list-style: none;
+        }
+        
+        .task-requirements li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .task-requirements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-bright);
+            font-weight: 600;
+        }
+        
+        .task-deliverable {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            background: rgba(255, 228, 230, 0.3);
+            border-radius: var(--radius-sm);
+        }
+        
+        /* Mastery card */
+        .mastery-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .mastery-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mastery-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px;
+            background: rgba(255, 228, 230, 0.2);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+        }
+        
+        .mastery-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            cursor: pointer;
+            accent-color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .mastery-item label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        
+        /* Success criteria */
+        .success-card {
+            background: rgba(209, 250, 229, 0.5);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--green);
+            margin-top: 20px;
+        }
+        
+        .success-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--green-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .success-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--green-deep);
+        }
+        
+        .success-item i { --ph-color: var(--green); font-size: 18px; }
+        
+        /* Pro tips */
+        .tips-card {
+            background: rgba(255, 237, 213, 0.5);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid var(--orange);
+            margin-top: 20px;
+        }
+        
+        .tips-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--orange-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tip-item {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--orange-deep);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+        
+        .tip-item strong {
+            color: var(--orange-deep);
+        }
+        
+        /* Flashcard */
+        .flashcard-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .flashcard {
+            background: linear-gradient(135deg, rgba(255, 228, 230, 0.5), rgba(253, 164, 175, 0.3));
+            border-radius: var(--radius-md);
+            padding: 32px;
+            margin-bottom: 16px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .flashcard:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(251, 113, 133, 0.15);
+        }
+        
+        .flashcard-front p {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+        
+        .flashcard-front button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .flashcard-back {
+            display: none;
+        }
+        
+        .flashcard-back.active {
+            display: block;
+        }
+        
+        .flashcard-back p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        
+        .flashcard-tip {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .flashcard-tip strong {
+            color: var(--primary-deep);
+        }
+        
+        .flashcard-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .flashcard-nav button {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(251, 113, 133, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .flashcard-nav button:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .flashcard-nav span {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        /* Quiz */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 32px 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .quiz-question {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quiz-option {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(255, 228, 230, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: rgba(255, 228, 230, 0.2);
+        }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(251, 113, 133, 0.3);
+        }
+        
+        /* Navigation */
+        .day-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 40px 0;
+        }
+        
+        .nav-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(251, 113, 133, 0.15);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        /* Complete button */
+        .complete-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(251, 113, 133, 0.4);
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(251, 113, 133, 0.5);
+        }
+        
+        .complete-btn i { font-size: 1.2rem; }
+        
+        .complete-message {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 32px 0 24px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .footer-fox { font-size: 2rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .day-title { font-size: 1.8rem; }
+            .day-tabs-container { top: 52px; }
+            .day-navigation { grid-template-columns: 1fr; }
+            .pattern-header { flex-direction: column; }
+            .scenario-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="week-04.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Week 4 Hub</span>
+            </a>
+            <div class="day-indicator">
+                Day 22 / 28
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Day Tabs -->
+    <div class="day-tabs-container">
+        <div class="container">
+            <div class="day-tabs">
+                <a href="week-04.html" class="day-tab">Overview</a>
+                <a href="week-04-day-22.html" class="day-tab active">Day 22</a>
+                <a href="week-04-day-23.html" class="day-tab">Day 23</a>
+                <a href="week-04-day-24.html" class="day-tab">Day 24</a>
+                <a href="week-04-day-25.html" class="day-tab">Day 25</a>
+                <a href="week-04-day-26.html" class="day-tab">Day 26</a>
+                <a href="week-04-day-27.html" class="day-tab">Day 27</a>
+                <a href="week-04-day-28.html" class="day-tab">Day 28</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="day-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="week-04.html">Week 4</a> › Day 22
+            </div>
+            <div class="day-title-row">
+                <span class="day-icon-inline">✨</span>
+                <h1 class="day-title">Curiosity & Warmth</h1>
+            </div>
+            <p class="day-subtitle">The best conversations don't start with "What do you do?" They start with <strong>genuine curiosity</strong> about who someone is — and the <strong>warmth</strong> to make them feel safe sharing. Today you'll learn to open conversations that create real connection.</p>
+            <div class="day-meta">
+                <div class="meta-tag"><i class="ph-duotone ph-sparkle"></i> Curiosity & Warmth</div>
+                <div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+                <div class="meta-tag"><i class="ph-duotone ph-books"></i> 5 conversation patterns</div>
+                <div class="meta-tag"><i class="ph-duotone ph-handshake"></i> Connection openers</div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Content area -->
+    <div class="content-area">
+        <div class="container">
+            
+            <!-- Today's Philosophy -->
+            <section class="section">
+                <div class="philosophy-section">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        Today's Philosophy
+                    </h2>
+                    
+                    <div class="philosophy-box">
+                        <div class="philosophy-title">
+                            <i class="ph-duotone ph-sparkle"></i>
+                            From Transaction to Connection
+                        </div>
+                        <p>
+                            Most people start conversations transactionally: "What do you do? Where are you from? Nice weather." But C1 connectors start with <strong>genuine curiosity</strong>: "What got you interested in that field? What's been the most rewarding part?" The difference? <strong>Surface-level vs. soul-level. Small talk vs. real talk.</strong>
+                        </p>
+                    </div>
+                    
+                    <div class="comparison-box negative">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            Why most conversations stay shallow
+                        </div>
+                        <div class="comparison-text">
+                            "Hi, I'm [name]. What do you do? Oh, interesting. How long have you been doing that? Nice. Well, here's my card."
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Nghe như interview, không phải conversation</li>
+                            <li>Câu hỏi đóng (yes/no, one-word answers)</li>
+                            <li>Không có emotional depth</li>
+                            <li>Không có personal insight</li>
+                            <li>Không tạo không gian để đối phương share</li>
+                            <li>Kết thúc bằng transaction (business card) thay vì connection</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-box positive">
+                        <div class="comparison-title">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            What C1 connectors do differently
+                        </div>
+                        <div class="comparison-text">
+                            "I've been curious about something — what got you interested in sustainable design in the first place? Was there a moment that sparked it for you? What's been the most rewarding part of that journey? You know, most people don't ask me that — they just ask what I do. Thank you for asking something real."
+                        </div>
+                        <ul class="comparison-list">
+                            <li>"I've been curious about..." - Show genuine interest, not politeness</li>
+                            <li>"What got you interested..." - Open-ended, invites story</li>
+                            <li>"Was there a moment..." - Specific, invites memory</li>
+                            <li>"Most rewarding part" - Focus on meaning, not facts</li>
+                            <li>"Most people don't ask me that" - Meta-acknowledgment of depth</li>
+                            <li>Creates space for vulnerability and real sharing</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Today's Plan -->
+            <section class="section">
+                <div class="philosophy-section">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-calendar-check"></i>
+                        Today's Plan (60 min)
+                    </h2>
+                    
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <div class="plan-icon">💡</div>
+                            <div class="plan-title">5 Patterns</div>
+                            <div class="plan-time">15 min</div>
+                            <div class="plan-desc">Curiosity & warmth openers</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🎭</div>
+                            <div class="plan-title">Examples</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">Integrated conversations</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🗣️</div>
+                            <div class="plan-title">Speaking</div>
+                            <div class="plan-time">25 min</div>
+                            <div class="plan-desc">4 scenarios + record</div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-icon">🎴</div>
+                            <div class="plan-title">Review</div>
+                            <div class="plan-time">10 min</div>
+                            <div class="plan-desc">Flashcards + quiz</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 5 Curiosity & Warmth Patterns -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-sparkle"></i>
+                        5 Curiosity & Warmth Patterns
+                    </h2>
+                    <p class="section-desc">5 patterns để bắt đầu conversations với sự tò mò chân thành và warmth. Click 🔊 để nghe phát âm.</p>
+                </div>
+                
+                <!-- Pattern 1 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">1</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"What got you interested in [field]?"</div>
+                            <div class="pattern-ipa">/wʌt ɡɒt juː ˈɪntrəstɪd ɪn [fiːld]/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Hỏi về origin story thay vì current status. Invite storytelling, not facts. Khiến người ta nói về passion thay vì position.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"What got you interested" = invite origin story. Focus on passion, not position. When people talk about what they love, they light up. Natural way to bypass small talk and access what matters to them.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"What got you interested in photography? Was there a moment that sparked it?"</span>
+                            <button class="audio-btn" onclick="playAudio('What got you interested in photography? Was there a moment that sparked it?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"What got you interested in cooking Vietnamese food? Did someone teach you?"</span>
+                            <button class="audio-btn" onclick="playAudio('What got you interested in cooking Vietnamese food? Did someone teach you?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"What got you interested in sustainable design in the first place?"</span>
+                            <button class="audio-btn" onclick="playAudio('What got you interested in sustainable design in the first place?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"What got you interested in fintech? Was there a specific moment?"</span>
+                            <button class="audio-btn" onclick="playAudio('What got you interested in fintech? Was there a specific moment?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng khi muốn hiểu motivation/passion. Tránh "What do you do?" (too transactional). Follow up với "Was there a moment..." để invite story.
+                    </div>
+                </div>
+                
+                <!-- Pattern 2 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">2</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"What's been the most rewarding part?"</div>
+                            <div class="pattern-ipa">/wʌts biːn ðə moʊst rɪˈwɔːrdŋ pɑːrt/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Focus on meaning, not achievement. Invite reflection on what matters. Khiến người ta share về giá trị thay vì thành tích.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"Most rewarding" = focus on meaning, not metrics. "Has been" = invite reflection over time. When people reflect on what matters, conversations deepen naturally. Shows you care about their inner world.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"What's been the most rewarding part of learning guitar?"</span>
+                            <button class="audio-btn" onclick="playAudio('What\'s been the most rewarding part of learning guitar?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"What's been the most rewarding part of traveling solo?"</span>
+                            <button class="audio-btn" onclick="playAudio('What\'s been the most rewarding part of traveling solo?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business"> Business</span>
+                            <span>"What's been the most rewarding part of building your team?"</span>
+                            <button class="audio-btn" onclick="playAudio('What\'s been the most rewarding part of building your team?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"What's been the most rewarding part of this project?"</span>
+                            <button class="audio-btn" onclick="playAudio('What\'s been the most rewarding part of this project?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng sau khi biết context. Invite reflection, not reporting. Creates emotional depth. Natural follow-up to "What got you interested..."
+                    </div>
+                </div>
+                
+                <!-- Pattern 3 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">3</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"What's something people misunderstand about [topic]?"</div>
+                            <div class="pattern-ipa">/wʌts ˈsʌmθɪŋ ˌpiːpəl ˌmɪsʌndərˈstænd əˈbaʊt [ˈtpɪk]/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Invite insider insight. Make person feel seen as expert. Khiến người ta share wisdom thay vì facts.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"People misunderstand" = acknowledge their expertise. Invite them to share insider knowledge. Creates safe space for vulnerability and teaching. People love being seen as experts — it builds instant rapport.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"What's something people misunderstand about being a parent?"</span>
+                            <button class="audio-btn" onclick="playAudio('What\'s something people misunderstand about being a parent?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag"> Life</span>
+                            <span>"What's something people misunderstand about living abroad?"</span>
+                            <button class="audio-btn" onclick="playAudio('What\'s something people misunderstand about living abroad?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"What's something people misunderstand about working in consulting?"</span>
+                            <button class="audio-btn" onclick="playAudio('What\'s something people misunderstand about working in consulting?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business"> Business</span>
+                            <span>"What's something people misunderstand about startups?"</span>
+                            <button class="audio-btn" onclick="playAudio('What\'s something people misunderstand about startups?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng khi người kia có expertise. Tạo cơ hội để họ share wisdom. Build rapport qua respect. Powerful question for networking.
+                    </div>
+                </div>
+                
+                <!-- Pattern 4 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">4</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"If you had to start over, would you...?"</div>
+                            <div class="pattern-ipa">/ɪf juː hæd tuː stɑːrt ˈoʊvər, wʊd juː/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐ High</div>
+                                <div class="pattern-context">Casual → Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Hypothetical reflection. Invite deeper wisdom without pressure. Khiến người ta share lessons learned một cách thoải mái.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"If you had to start over" = hypothetical, low-pressure. Invite reflection on lessons learned. Create space for vulnerability and honesty. Natural way to access wisdom without making it feel like an interview.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"If you had to start over with traveling, would you do anything differently?"</span>
+                            <button class="audio-btn" onclick="playAudio('If you had to start over with traveling, would you do anything differently?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"If you had to start over learning English, what would you focus on?"</span>
+                            <button class="audio-btn" onclick="playAudio('If you had to start over learning English, what would you focus on?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"If you had to start over your career, would you take the same path?"</span>
+                            <button class="audio-btn" onclick="playAudio('If you had to start over your career, would you take the same path?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"If you had to start over this project, what would you change?"</span>
+                            <button class="audio-btn" onclick="playAudio('If you had to start over this project, what would you change?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng khi conversation đã có depth. Hypothetical = safe space. Invite wisdom sharing. Powerful for mentors and experienced people.
+                    </div>
+                </div>
+                
+                <!-- Pattern 5 -->
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-number">5</div>
+                        <div class="pattern-content">
+                            <div class="pattern-text">"What question do you wish more people asked?"</div>
+                            <div class="pattern-ipa">/wʌt ˈkwɛstʃən duː juː wɪʃ mɔːr ˈpiːpəl æskt/</div>
+                            <div class="pattern-meta">
+                                <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+                                <div class="pattern-context">Semi-formal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pattern-desc">
+                        Meta-question. Invite person to share what they care about most. Khiến người ta share điều thực sự quan trọng với họ.
+                    </div>
+                    <div class="pattern-why">
+                        <strong>Why C1?</strong>
+                        <p>"Wish more people asked" = meta-awareness. Invite them to share what's important to them. Create space for authenticity. Shows you care about their inner world, not just outer facts. Most powerful curiosity question.</p>
+                    </div>
+                    <div class="pattern-examples">
+                        <h4>Examples 🔊</h4>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"What question do you wish more people asked about traveling solo?"</span>
+                            <button class="audio-btn" onclick="playAudio('What question do you wish more people asked about traveling solo?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag">🏠 Life</span>
+                            <span>"What question do you wish more people asked about being an artist?"</span>
+                            <button class="audio-btn" onclick="playAudio('What question do you wish more people asked about being an artist?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"What question do you wish more people asked about your work?"</span>
+                            <button class="audio-btn" onclick="playAudio('What question do you wish more people asked about your work?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                        <div class="example">
+                            <span class="example-tag business">💼 Business</span>
+                            <span>"What question do you wish more people asked about leadership?"</span>
+                            <button class="audio-btn" onclick="playAudio('What question do you wish more people asked about leadership?')"><i class="ph-duotone ph-speaker-high"></i></button>
+                        </div>
+                    </div>
+                    <div class="pattern-usage">
+                        <strong>💡 Usage Notes:</strong> Dùng khi muốn deep dive. Meta-question creates vulnerability. Powerful way to access what someone truly cares about. Best used after rapport is established.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Integrated Conversation Examples -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-chats-circle"></i>
+                        Integrated Conversation Examples
+                    </h2>
+                    <p class="section-desc">Xem cách 5 curiosity patterns được kết hợp trong 2 conversations hoàn chỉnh. Click 🔊 để nghe toàn bộ conversation.</p>
+                </div>
+                
+                <!-- Conversation 1 -->
+                <div class="story-card">
+                    <h3>🏠 Conversation 1: The Dinner Party Connection</h3>
+                    <div class="story-text" id="dialogue1">
+                        "You know, I've been curious about something. <strong>What got you interested in</strong> architecture? Was there a moment that sparked it for you?
+                        <br><br>
+                        [They share their origin story — a childhood memory of their grandfather's house.]
+                        <br><br>
+                        That's beautiful. <strong>What's been the most rewarding part</strong> of that journey? Like, when you look back at all the buildings you've designed, what stands out?
+                        <br><br>
+                        [They reflect on a community center that changed a neighborhood.]
+                        <br><br>
+                        Wow. <strong>What's something people misunderstand about</strong> architecture that you wish they knew?
+                        <br><br>
+                        [They share that it's not about buildings — it's about people and how spaces shape lives.]
+                        <br><br>
+                        That really resonates with me. <strong>If you had to start over</strong>, would you do anything differently?
+                        <br><br>
+                        [They pause, then share honestly about work-life balance struggles.]
+                        <br><br>
+                        Thank you for sharing that. You know, <strong>what question do you wish more people asked</strong> about your work? Because I feel like I've just scratched the surface.
+                        <br><br>
+                        [They smile and share something deeply personal about why they do what they do.]
+                        <br><br>
+                        That conversation lasted 45 minutes. We exchanged numbers. Six months later, they invited me to their firm's opening. All because I asked real questions instead of 'What do you do?'"
+                    </div>
+                    <div class="story-audio-controls">
+                        <button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue1').textContent)">
+                            <i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+                        </button>
+                        <button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+                            <i class="ph-duotone ph-stop"></i> Dừng
+                        </button>
+                    </div>
+                    <div class="story-analysis">
+                        <h4>Analysis:</h4>
+                        <ul>
+                            <li><strong>"What got you interested..."</strong> - Opens origin story</li>
+                            <li><strong>"Most rewarding part"</strong> - Invites reflection</li>
+                            <li><strong>"People misunderstand"</strong> - Acknowledges expertise</li>
+                            <li><strong>"If you had to start over"</strong> - Creates vulnerability</li>
+                            <li><strong>"What question do you wish..."</strong> - Meta-question, deepest level</li>
+                            <li>Emotional arc: Surface curiosity → Story → Reflection → Vulnerability → Connection</li>
+                            <li>Result: From stranger to real connection in 45 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Conversation 2 -->
+                <div class="story-card">
+                    <h3>💼 Conversation 2: The Client Coffee Meeting</h3>
+                    <div class="story-text" id="dialogue2">
+                        "So before we talk about the project, I'm curious — <strong>what got you interested in</strong> sustainable fashion in the first place? Was there a moment that sparked it?
+                        <br><br>
+                        [They share about seeing a documentary in college that changed everything.]
+                        <br><br>
+                        That's powerful. <strong>What's been the most rewarding part</strong> of building this brand over the past 5 years?
+                        <br><br>
+                        [They talk about watching their first employee grow from intern to design director.]
+                        <br><br>
+                        I love that. <strong>What's something people misunderstand about</strong> sustainable fashion that frustrates you?
+                        <br><br>
+                        [They share passionately about greenwashing and how hard real sustainability is.]
+                        <br><br>
+                        That's really insightful. <strong>If you had to start over</strong>, would you take the same path, or would you do anything differently?
+                        <br><br>
+                        [They pause, then share honest doubts about scaling vs. staying true to values.]
+                        <br><br>
+                        Thank you for being real with me. <strong>What question do you wish more people asked</strong> about your work? Because I want to understand what matters most to you.
+                        <br><br>
+                        [They share about wanting to change the industry, not just build a brand.]
+                        <br><br>
+                        They signed the contract that day. Not because of my pitch — but because I made them feel seen. Six months later, they referred me to three other clients."
+                    </div>
+                    <div class="story-audio-controls">
+                        <button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue2').textContent)">
+                            <i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+                        </button>
+                        <button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+                            <i class="ph-duotone ph-stop"></i> Dừng
+                        </button>
+                    </div>
+                    <div class="story-analysis">
+                        <h4>Analysis:</h4>
+                        <ul>
+                            <li><strong>Same 5 patterns, different context</strong></li>
+                            <li>Professional but still deeply personal</li>
+                            <li>Result: Client signed + became referral source</li>
+                            <li>Key insight: Curiosity > pitch. Connection > transaction.</li>
+                            <li>Emotional arc: Polite → Curious → Passionate → Vulnerable → Trusted</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Pronunciation Focus -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-microphone-stage"></i>
+                        Pronunciation Focus
+                    </h2>
+                    <p class="section-desc">Curiosity & warmth phrases pronunciation và connected speech patterns.</p>
+                </div>
+                
+                <div class="pronunciation-table">
+                    <h3>🔤 Curiosity & Warmth Phrases</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>IPA</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>What got you interested in</td>
+                                <td>/wt ɡɒt juː ɪntrəstɪd n/</td>
+                                <td>Linking: "got you"</td>
+                            </tr>
+                            <tr>
+                                <td>What's been the most rewarding</td>
+                                <td>/wʌts biːn ðə moʊst rɪˈwɔːrdɪŋ/</td>
+                                <td>Stress on "re"</td>
+                            </tr>
+                            <tr>
+                                <td>People misunderstand</td>
+                                <td>/ˈpiːpəl ˌmɪsʌndərˈstænd/</td>
+                                <td>Stress on "stand"</td>
+                            </tr>
+                            <tr>
+                                <td>If you had to start over</td>
+                                <td>/ɪf juː hæd tuː stɑːrt ˈoʊvər/</td>
+                                <td>Linking: "start over"</td>
+                            </tr>
+                            <tr>
+                                <td>Wish more people asked</td>
+                                <td>/wɪʃ mɔːr ˈpiːpəl æskt/</td>
+                                <td>"asked" = /æskt/ (not /æst/)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="pronunciation-table">
+                    <h3>🔗 Connected Speech</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Natural Pronunciation</th>
+                                <th>Feature</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"What got you"</td>
+                                <td>/wʌt ɡɒtʃuː/</td>
+                                <td>Linking, softening</td>
+                            </tr>
+                            <tr>
+                                <td>"What's been"</td>
+                                <td>/wʌts biːn/</td>
+                                <td>Linking</td>
+                            </tr>
+                            <tr>
+                                <td>"Had to"</td>
+                                <td>/hætə/</td>
+                                <td>Reduction</td>
+                            </tr>
+                            <tr>
+                                <td>"Start over"</td>
+                                <td>/stɑːrˈtoʊvər/</td>
+                                <td>Linking</td>
+                            </tr>
+                            <tr>
+                                <td>"More people"</td>
+                                <td>/mɔːr ˈpiːpəl/</td>
+                                <td>Smooth</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="section-header" style="margin-top: 24px;">
+                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns</h3>
+                </div>
+                
+                <div class="intonation-item">
+                    <span class="phrase">"What got you interested in..."</span>
+                     - Rising (genuine curiosity)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"What's been the most rewarding part?"</span>
+                    ↗ - Rise-fall (thoughtful)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"What's something people misunderstand..."</span>
+                    ↗ - Rising (inviting insight)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"If you had to start over..."</span>
+                    ↗ - Rising (hypothetical)
+                </div>
+                <div class="intonation-item">
+                    <span class="phrase">"What question do you wish more people asked?"</span>
+                    ↘ - Falling (deep, sincere)
+                </div>
+            </section>
+            
+            <!-- Practice Scenarios - COLORED CARDS -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-chats"></i>
+                        Practice Scenarios
+                    </h2>
+                    <p class="section-desc">Practice telling complete stories in different contexts. Click button to see sample structure.</p>
+                </div>
+                
+                <div class="scenario-grid">
+                    <div class="scenario-card casual">
+                        <span class="scenario-badge">🟢 Casual - 3-4 min</span>
+                        <h3>Scenario 1: Party Storytelling</h3>
+                        <p class="scenario-context">You're at a party, someone asks "Tell me about an interesting experience"</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use at least 3 curiosity patterns from Day 22</li>
+                                <li>Create complete narrative arc</li>
+                                <li>Add personal touch and emotion</li>
+                                <li>Keep it engaging and conversational</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card professional">
+                        <span class="scenario-badge"> Professional - 3-4 min</span>
+                        <h3>Scenario 2: Meeting Storytelling</h3>
+                        <p class="scenario-context">In a meeting, your boss asks "Share a learning experience from your career"</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use more formal patterns</li>
+                                <li>Focus on professional growth</li>
+                                <li>Include specific business insights</li>
+                                <li>End with actionable takeaway</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card mixed">
+                        <span class="scenario-badge">🟣 Mixed - 4-5 min</span>
+                        <h3>Scenario 3: Networking Storytelling</h3>
+                        <p class="scenario-context">At a networking event, you need to tell a story that's both personal and professional</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Balance personal and professional elements</li>
+                                <li>Show vulnerability but maintain professionalism</li>
+                                <li>Create emotional connection</li>
+                                <li>Leave memorable impression</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                    
+                    <div class="scenario-card challenge">
+                        <span class="scenario-badge">🟠 Challenge - 5 min</span>
+                        <h3>Scenario 4: Podcast Interview</h3>
+                        <p class="scenario-context">You're in a podcast/video, asked about your storytelling journey in Week 3</p>
+                        <div class="scenario-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Use ALL 5 curiosity patterns</li>
+                                <li>Story must have clear arc and emotional depth</li>
+                                <li>Include reflective insight about learning</li>
+                                <li>Have memorable takeaway for listener</li>
+                                <li>Keep listener engaged for 5 minutes</li>
+                            </ul>
+                        </div>
+                        <button class="sample-flow-btn">🎭 See Sample Structure</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Reality Task -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-target"></i>
+                        Reality Task - Choose Your Level
+                    </h2>
+                    <p class="section-desc">Bài tập THỰC TẾ - apply curiosity & warmth skills vào đời thật. Chọn 1 trong 3 levels tùy thời gian và comfort level.</p>
+                </div>
+                
+                <div class="task-card easy">
+                    <div class="task-level">EASY</div>
+                    <h3>📝 Write 3 Curiosity Questions</h3>
+                    <div class="task-time">⏱️ 15 minutes</div>
+                    <p class="task-desc">Viết 3 curiosity questions cho 3 people trong cuộc sống của bạn (1 friend, 1 colleague, 1 stranger).</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Mỗi người dùng ít nhất 2 curiosity patterns</li>
+                            <li>Customize cho relationship và context</li>
+                            <li>Explain tại sao chọn question đó</li>
+                            <li>Plan khi sẽ ask</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Text notes hoặc gửi cho accountability partner
+                    </div>
+                </div>
+                
+                <div class="task-card standard">
+                    <div class="task-level">STANDARD</div>
+                    <h3>🎙️ Record a Curiosity Conversation</h3>
+                    <div class="task-time">⏱️ 30 minutes</div>
+                    <p class="task-desc">Record 3-minute conversation (với friend hoặc colleague) dùng ít nhất 4 curiosity patterns.</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Dùng ít nhất 4 curiosity patterns</li>
+                            <li>Có natural follow-up questions</li>
+                            <li>Show active listening</li>
+                            <li>Create space cho vulnerability</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Audio recording + self-reflection notes
+                    </div>
+                </div>
+                
+                <div class="task-card challenge">
+                    <div class="task-level">CHALLENGE</div>
+                    <h3>🎥 The Deep Conversation Challenge</h3>
+                    <div class="task-time">⏱️ 60 minutes</div>
+                    <p class="task-desc">Have a real deep conversation (10-15 min) với someone you want to connect with more deeply.</p>
+                    <div class="task-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Dùng TẤT CẢ 5 curiosity patterns</li>
+                            <li>Conversation phải có emotional depth</li>
+                            <li>Create space cho vulnerability</li>
+                            <li>Learn something surprising về them</li>
+                            <li>Reflect: What changed in the relationship?</li>
+                        </ul>
+                    </div>
+                    <div class="task-deliverable">
+                        <strong>Deliverable:</strong> Reflection essay HOẶC share insights với accountability partner
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Complete Storytelling Mastery -->
+            <section class="section">
+                <div class="mastery-card">
+                    <h2> Curiosity & Warmth Mastery</h2>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery1">
+                        <label for="mastery1">Can start conversations with genuine curiosity instead of small talk</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery2">
+                        <label for="mastery2">Can use "What got you interested..." to invite origin stories</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery3">
+                        <label for="mastery3">Can ask "What's been the most rewarding part?" to invite reflection</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery4">
+                        <label for="mastery4">Can use "What do people misunderstand..." to acknowledge expertise</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery5">
+                        <label for="mastery5">Can create safe space for vulnerability with hypothetical questions</label>
+                    </div>
+                    <div class="mastery-item">
+                        <input type="checkbox" id="mastery6">
+                        <label for="mastery6">Can use meta-questions to access what someone truly cares about</label>
+                    </div>
+                </div>
+                
+                <!-- Success Criteria - GREEN -->
+                <div class="success-card">
+                    <h2><i class="ph-duotone ph-check-circle"></i> Success Criteria</h2>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can make someone feel seen and heard in conversation</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can bypass small talk and access what matters</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can create emotional connection through curiosity</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can leave people feeling valued and understood</span>
+                    </div>
+                    <div class="success-item">
+                        <i class="ph-duotone ph-check"></i>
+                        <span>Can turn strangers into real connections</span>
+                    </div>
+                </div>
+                
+                <!-- Pro Tips - ORANGE -->
+                <div class="tips-card">
+                    <h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Listen more than you ask:</strong> Curiosity without listening is interrogation. Let them finish before asking follow-up.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Follow the energy:</strong> If they light up about a topic, go deeper there. Don't force your agenda.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Be genuinely curious:</strong> If you wouldn't remember the answer, it's not a real question. Ask because you care.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Share something first:</strong> Vulnerability invites vulnerability. Share a bit about yourself before asking deep questions.</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                        <span><strong>Thank them for sharing:</strong> Acknowledge when someone opens up. "Thank you for sharing that" creates safety for next time.</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Flashcard Review -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-cards"></i>
+                        Flashcard Review
+                    </h2>
+                    <p class="section-desc">6 flashcards với curiosity & warmth patterns và tips. Mặt trước: pattern. Mặt sau: example + tip.</p>
+                </div>
+                
+                <div class="flashcard-container">
+                    <div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+                        <div class="flashcard-front">
+                            <p>What got you interested in [field]?</p>
+                            <button>Tap to reveal example →</button>
+                        </div>
+                        <div class="flashcard-back">
+                            <p>"What got you interested in photography? Was there a moment that sparked it?"</p>
+                            <div class="flashcard-tip">
+                                <strong>💡 Tip:</strong> Invite origin story. Focus on passion, not position. When people talk about what they love, they light up.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard-nav">
+                        <button>← Prev</button>
+                        <span>1 / 6</span>
+                        <button>Next →</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Quiz -->
+            <section class="quiz-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="ph-duotone ph-pencil-simple"></i>
+                        Quiz: Curiosity & Warmth
+                    </h2>
+                    <p class="section-desc">7 câu hỏi để kiểm tra bạn đã thực sự hiểu curiosity & warmth chưa. Chọn đáp án ĐÚNG NHẤT.</p>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>1. Pattern nào tốt nhất để bắt đầu conversation về passion?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "What do you do?"</div>
+                        <div class="quiz-option">B. "What got you interested in [field]?"</div>
+                        <div class="quiz-option">C. "How long have you been doing that?"</div>
+                        <div class="quiz-option">D. "Do you like your job?"</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>2. "What's been the most rewarding part..." tập trung vào gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Achievement và metrics</div>
+                        <div class="quiz-option">B. Meaning và reflection</div>
+                        <div class="quiz-option">C. Facts và timelines</div>
+                        <div class="quiz-option">D. Opinions và judgments</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>3. "What's something people misunderstand..." tạo gì cho người nghe?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Pressure to perform</div>
+                        <div class="quiz-option">B. Safe space để share expertise</div>
+                        <div class="quiz-option">C. Confusion</div>
+                        <div class="quiz-option">D. Defensiveness</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>4. Khi nào dùng "If you had to start over..."?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Khi mới gặp ai đó</div>
+                        <div class="quiz-option">B. Khi conversation đã có depth</div>
+                        <div class="quiz-option">C. Khi muốn end conversation</div>
+                        <div class="quiz-option">D. Khi không biết hỏi gì</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>5. "What question do you wish more people asked..." là loại gì?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. Closed question</div>
+                        <div class="quiz-option">B. Leading question</div>
+                        <div class="quiz-option">C. Meta-question</div>
+                        <div class="quiz-option">D. Rhetorical question</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>6. Conversation nào là C1 curiosity style?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "Hi, what do you do? Oh, nice. Here's my card."</div>
+                        <div class="quiz-option">B. "What got you interested in sustainable design? What's been the most rewarding part? What's something people misunderstand about it? Thank you for sharing that — I feel like I just learned something real."</div>
+                        <div class="quiz-option">C. "I work in marketing. Nice to meet you."</div>
+                        <div class="quiz-option">D. "So, what's new?"</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <h4>7. Pattern nào KHÔNG phải curiosity pattern?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A. "What got you interested in..."</div>
+                        <div class="quiz-option">B. "What's been the most rewarding..."</div>
+                        <div class="quiz-option">C. "What do you do for a living?"</div>
+                        <div class="quiz-option">D. "What question do you wish more people asked..."</div>
+                    </div>
+                </div>
+                
+                <button class="check-btn">
+                    <i class="ph-duotone ph-check"></i>
+                    Check Answers
+                </button>
+            </section>
+            
+            <!-- Navigation -->
+            <div class="day-navigation">
+                <a href="week-03-day-21.html" class="nav-card">
+                    <div class="nav-label">← Previous Day</div>
+                    <div class="nav-title">Day 21: Week 3 Review</div>
+                </a>
+                <a href="week-04-day-23.html" class="nav-card">
+                    <div class="nav-label">Next Day →</div>
+                    <div class="nav-title">Day 23: Genuine Connection</div>
+                </a>
+            </div>
+            
+            <!-- Complete Button -->
+            <div class="complete-container">
+                <button class="complete-btn" onclick="markComplete()">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Mark Day 22 Complete & Continue to Day 23</span>
+                </button>
+                <div class="complete-message">Let's connect! ✨</div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Week 4 · Day 22 · Curiosity & Warmth</div>
+        </div>
+    </footer>
+    
+    <script>
+        // ============================================
+        // AUDIO ENGINE - CẢI THIỆN (giống Day 20)
+        // ============================================
+        let voices = [];
+        let selectedVoice = null;
+        
+        // Preload voices khi trang load
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
+            
+            // Ưu tiên chọn voice tốt nhất
+            // Thứ tự ưu tiên: Google US > Microsoft Zira > Microsoft David > en-US > en
+            selectedVoice = 
+                voices.find(v => v.name.includes('Google US English')) ||
+                voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+                voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+                voices.find(v => v.lang === 'en-US') ||
+                voices.find(v => v.lang.includes('en'));
+            
+            console.log('Selected voice:', selectedVoice?.name);
+        }
+        
+        // Load voices ngay lập tức
+        loadVoices();
+        
+        // Chrome cần event này vì voices load chậm
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        
+        // Retry sau 500ms và 1000ms nếu chưa có voice (Chrome fix)
+        setTimeout(loadVoices, 500);
+        setTimeout(loadVoices, 1000);
+        
+        // Play audio với cấu hình tối ưu
+        function playAudio(text) {
+            if (!('speechSynthesis' in window)) {
+                alert('Trình duyệt không hỗ trợ phát âm thanh');
+                return;
+            }
+            
+            // Cancel bất kỳ audio nào đang phát
+            speechSynthesis.cancel();
+            
+            // Đợi một chút để đảm bảo cancel hoàn tất (Chrome fix)
+            setTimeout(() => {
+                const utterance = new SpeechSynthesisUtterance(text);
+                
+                // Cấu hình tối ưu cho giọng trong, tự nhiên
+                utterance.lang = 'en-US';
+                utterance.rate = 0.95;      // Nhanh hơn một chút để tự nhiên
+                utterance.pitch = 1.05;     // Cao hơn một chút để trong
+                utterance.volume = 1.0;     // Max volume
+                
+                // Dùng voice đã chọn
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                }
+                
+                speechSynthesis.speak(utterance);
+            }, 100);
+        }
+        
+        // Stop audio
+        function stopSpeaking() {
+            if ('speechSynthesis' in window) {
+                speechSynthesis.cancel();
+            }
+        }
+        
+        // Complete button
+        function markComplete() {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (!completed.includes('day-22')) {
+                completed.push('day-22');
+                localStorage.setItem('completedDays', JSON.stringify(completed));
+            }
+            
+            const btn = document.querySelector('.complete-btn');
+            btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 22 Complete! Well done!</span>';
+            btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+            
+            const msg = document.querySelector('.complete-message');
+            msg.textContent = 'Curiosity creates connection. Keep asking real questions! ✨';
+        }
+        
+        // Load completion state
+        window.addEventListener('DOMContentLoaded', () => {
+            const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (completed.includes('day-22')) {
+                const btn = document.querySelector('.complete-btn');
+                btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 22 Completed</span>';
+                btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            }
+        });
+    </script>
+</body>
+</html>
