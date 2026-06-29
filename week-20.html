@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 20: Building Shared Futures | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Phase 3: Pink + Blue Theme */
+            --pink: #EC4899;
+            --pink-bright: #DB2777;
+            --pink-soft: #FCE7F3;
+            --pink-deep: #9D174D;
+            --blue: #3B82F6;
+            --blue-bright: #2563EB;
+            --blue-soft: #DBEAFE;
+            --blue-deep: #1E40AF;
+            --rose: #F43F5E;
+            --sky: #0EA5E9;
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #FCE7F3 0%, #DBEAFE 25%, #FCE7F3 50%, #DBEAFE 75%, #FCE7F3 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Aurora Background Animation - Phase 3 Pink + Blue */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(236, 72, 153, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(244, 63, 94, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 30% 60%, rgba(14, 165, 233, 0.3) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+            animation: aurora 20s ease-in-out infinite;
+        }
+        
+        @keyframes aurora {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            33% { transform: scale(1.15) rotate(120deg); opacity: 1; }
+            66% { transform: scale(0.95) rotate(240deg); opacity: 0.85; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .top-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--pink-bright); }
+        
+        .week-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .week-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-icon-large { font-size: 3.5rem; margin-bottom: 16px; }
+        .week-icon-large i { --ph-color: var(--pink-bright); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--pink-bright), var(--blue-bright));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .week-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+        
+        .week-quote {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--pink-bright);
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 24px auto;
+            max-width: 650px;
+        }
+        
+        .week-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        
+        .week-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .week-tag i { --ph-color: var(--pink-bright); }
+        
+        .section { margin: 48px 0; }
+        .section-header { margin-bottom: 32px; text-align: center; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .section-title i { --ph-color: var(--pink-bright); }
+        
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(59, 130, 246, 0.12));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border-left: 4px solid var(--pink-bright);
+            margin-bottom: 24px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--pink-bright); }
+        
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .principle-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 4px solid var(--blue-bright);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .principle-number {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--blue-deep);
+            background: var(--blue-soft);
+            padding: 4px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .principle-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .principle-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        /* Distinction box - Week 17 vs Week 20 */
+        .distinction-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 24px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .distinction-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .distinction-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        .distinction-card {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border-left: 4px solid;
+        }
+        
+        .distinction-card.week17 {
+            border-left-color: var(--pink-bright);
+            background: rgba(252, 231, 243, 0.3);
+        }
+        
+        .distinction-card.week20 {
+            border-left-color: var(--blue-bright);
+            background: rgba(219, 234, 254, 0.3);
+        }
+        
+        .distinction-card-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .distinction-card-question {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+        
+        .distinction-card-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .comparison-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-top: 24px;
+        }
+        
+        .comparison-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-item {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            border-left: 4px solid;
+        }
+        
+        .comparison-item.negative { background: rgba(245, 101, 101, 0.1); border-left-color: #F56565; }
+        .comparison-item.positive { background: rgba(72, 187, 120, 0.1); border-left-color: #48BB78; }
+        
+        .comparison-label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        /* 7 DAYS GRID */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .day-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--pink-bright);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.4s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(236, 72, 153, 0.2);
+        }
+        
+        .day-label {
+            background: linear-gradient(135deg, var(--pink-soft), var(--blue-soft));
+            color: var(--pink-deep);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .day-stage {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--blue-bright);
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .day-icon { margin-bottom: 16px; }
+        .day-icon i { font-size: 2rem; --ph-color: var(--pink-bright); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .day-focus {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(252, 231, 243, 0.5);
+        }
+        
+        .focus-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+        
+        .focus-list { list-style: none; }
+        
+        .focus-list li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed rgba(252, 231, 243, 0.5);
+        }
+        
+        .focus-list li:last-child { border-bottom: none; }
+        
+        .focus-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--pink-bright);
+            font-weight: 600;
+        }
+        
+        .day-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(59, 130, 246, 0.12));
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--pink-deep);
+            font-weight: 600;
+            border: 1px solid rgba(236, 72, 153, 0.2);
+        }
+        
+        .day-time i { --ph-color: var(--pink-bright); }
+        
+        /* MILESTONE */
+        .milestone-card {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(59, 130, 246, 0.12));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid var(--pink-bright);
+            text-align: center;
+        }
+        
+        .milestone-icon { font-size: 3.5rem; margin-bottom: 16px; }
+        .milestone-icon i { --ph-color: var(--pink-bright); }
+        
+        .milestone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .milestone-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        
+        .milestone-skill {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.5;
+        }
+        
+        .milestone-skill i {
+            --ph-color: var(--pink-bright);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        /* QUIZ */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .quiz-question {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--pink-bright);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        
+        .quiz-options { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 6px; 
+        }
+        
+        .quiz-option {
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(252, 231, 243, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.3;
+        }
+        
+        .quiz-option:hover { 
+            border-color: var(--pink-bright); 
+            background: rgba(252, 231, 243, 0.2); 
+        }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--pink-bright), var(--blue-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+        
+        /* CAPSTONE SECTION */
+        .capstone-section {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.08), rgba(59, 130, 246, 0.08));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid var(--blue-bright);
+            text-align: center;
+        }
+        
+        .capstone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        
+        .capstone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .capstone-reflection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        
+        .reflection-item {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-left: 4px solid var(--pink-bright);
+            line-height: 1.5;
+        }
+        
+        .reflection-item strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* LOOKING BACK SECTION - NEW */
+        .looking-back-section {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.06), rgba(59, 130, 246, 0.06));
+            border-radius: var(--radius-lg);
+            padding: 48px 40px;
+            margin: 48px 0;
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .looking-back-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--pink-bright), var(--blue-bright));
+        }
+        
+        .looking-back-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .looking-back-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+        }
+        
+        .looking-back-journey {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .looking-back-journey strong {
+            color: var(--pink-bright);
+            font-style: normal;
+        }
+        
+        .looking-back-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 32px auto;
+            max-width: 700px;
+            text-align: left;
+        }
+        
+        .looking-back-item {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 14px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 3px solid var(--blue-bright);
+        }
+        
+        .looking-back-item i {
+            --ph-color: var(--blue-bright);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .looking-back-closing {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            margin-top: 32px;
+            line-height: 1.6;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: var(--radius-md);
+        }
+        
+        .looking-back-closing strong {
+            color: var(--pink-bright);
+            font-style: normal;
+        }
+        
+        /* NAVIGATION */
+        .week-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 48px 0;
+        }
+        
+        .nav-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 231, 243, 0.5));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--pink-bright), var(--blue-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.25);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .cta-container { text-align: center; margin: 48px 0; }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--pink-bright), var(--blue-bright));
+            color: white;
+            padding: 18px 36px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(236, 72, 153, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(236, 72, 153, 0.5);
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-fox { font-size: 2.5rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .week-title { font-size: 2.5rem; }
+            .days-grid { grid-template-columns: 1fr; }
+            .milestone-skills { grid-template-columns: 1fr; }
+            .week-navigation { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+            .distinction-grid { grid-template-columns: 1fr; }
+            .capstone-reflection { grid-template-columns: 1fr; }
+            .looking-back-list { grid-template-columns: 1fr; }
+            .looking-back-section { padding: 32px 20px; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Roadmap</span>
+            </a>
+            <div class="week-indicator">Week 20/24</div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="phase-03.html">Phase 3: Domain Communication</a> › Week 20
+            </div>
+            <div class="week-icon-large">
+                <i class="ph-duotone ph-telescope"></i>
+            </div>
+            <h1 class="week-title">Building Shared Futures</h1>
+            <p class="week-description">Sau khi học cách giao tiếp về sự thật và thông tin một cách rõ ràng (Week 19), tuần này bạn sẽ học cách dùng sự rõ ràng đó để <strong>giúp mọi người cùng hình dung, cam kết và xây dựng một tương lai chung</strong>. Week 20 không dạy Vision hay Futurism. Week 20 dạy bạn cách biến khát vọng trừu tượng thành la bàn chung mà ai cũng muốn đi theo.</p>
+            <div class="week-quote">"A vision only becomes real when other people can see themselves inside it."</div>
+            <div class="week-tags">
+                <div class="week-tag"><i class="ph-duotone ph-sparkle"></i> Phase 3 Final</div>
+                <div class="week-tag"><i class="ph-duotone ph-clock"></i> 7 days × 60 min</div>
+                <div class="week-tag"><i class="ph-duotone ph-house"></i> 50% Life</div>
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> 50% Business</div>
+                <div class="week-tag"><i class="ph-duotone ph-telescope"></i> Shared Futures</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <!-- Philosophy Section -->
+        <section class="section">
+            <div class="philosophy-section">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-lightbulb"></i>
+                    Week 20 Philosophy
+                </h2>
+                
+                <div class="philosophy-box">
+                    <div class="philosophy-title">
+                        <i class="ph-duotone ph-telescope"></i>
+                        Domain is Context, Communication is Competency
+                    </div>
+                    <p>
+                        Phase 3 đưa bạn vào các chủ đề phức tạp. Week 20 - tuần cuối của Phase 3 - tập trung vào <strong>tương lai và khát vọng chung</strong>. Bạn sẽ không học Strategic Planning hay Futurism. Bạn sẽ học cách giao tiếp như một người kiến tạo tương lai chung - biết cách vẽ bức tranh đủ sống động để người khác dám mơ, dám cam kết, và dám cùng bạn xây dựng. Đây là sự khác biệt cốt lõi so với Week 17.
+                    </p>
+                </div>
+                
+                <!-- Distinction: Week 17 vs Week 20 -->
+                <div class="distinction-box">
+                    <div class="distinction-title">
+                        <i class="ph-duotone ph-info"></i>
+                        Week 17 vs Week 20: Two Different Competencies
+                    </div>
+                    <div class="distinction-grid">
+                        <div class="distinction-card week17">
+                            <div class="distinction-card-title">Week 17: Guiding Through Change</div>
+                            <div class="distinction-card-question">Time Horizon:</div>
+                            <div class="distinction-card-desc">Near-term to Mid-term (The transition period)</div>
+                            <div class="distinction-card-question" style="margin-top: 8px;">Core Emotion:</div>
+                            <div class="distinction-card-desc">Anxiety, uncertainty, loss</div>
+                            <div class="distinction-card-question" style="margin-top: 8px;">Focus:</div>
+                            <div class="distinction-card-desc">Navigating the messy middle. "Here's what we know...", "Let's honor the past..."</div>
+                        </div>
+                        <div class="distinction-card week20">
+                            <div class="distinction-card-title">Week 20: Building Shared Futures</div>
+                            <div class="distinction-card-question">Time Horizon:</div>
+                            <div class="distinction-card-desc">Long-term to Infinite (The ultimate destination)</div>
+                            <div class="distinction-card-question" style="margin-top: 8px;">Core Emotion:</div>
+                            <div class="distinction-card-desc">Hope, ambition, aspiration, fear of the unknown</div>
+                            <div class="distinction-card-question" style="margin-top: 8px;">Focus:</div>
+                            <div class="distinction-card-desc">Painting the stars and aligning on the ultimate "Why". "Imagine if...", "What could be..."</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 1</div>
+                        <div class="principle-title">The future is felt before it's built</div>
+                        <div class="principle-desc">Tương lai không được xây dựng bằng logic thuần túy. Người ta cam kết vì họ cảm thấy nó đáng để theo đuổi.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 2</div>
+                        <div class="principle-title">Possibilities require permission</div>
+                        <div class="principle-desc">Nhiều người không dám mơ vì sợ bị đánh giá. Nhiệm vụ của bạn là tạo không gian an toàn để mọi người dám nói ra ý tưởng lớn nhất.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 3</div>
+                        <div class="principle-title">Long-term thinking needs short-term anchors</div>
+                        <div class="principle-desc">Một tầm nhìn 10 năm sẽ gây choáng ngợp. Hãy neo nó vào những cột mốc nhỏ, cụ thể trong hiện tại.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 4</div>
+                        <div class="principle-title">Dreams are co-created, not dictated</div>
+                        <div class="principle-desc">Một tầm nhìn áp đặt chỉ tạo compliance. Một tầm nhìn được cùng kiến tạo mới tạo commitment.</div>
+                    </div>
+                </div>
+                
+                <div class="comparison-section">
+                    <div class="comparison-title">Shared Future Communication: B2 vs C1</div>
+                    
+                    <div class="comparison-item negative">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            B2: Dictates vision or stays vague
+                        </div>
+                        <div class="comparison-text">
+                            "By 2030, we aim to achieve 200% market share." OR "We'll cross that bridge when we come to it."
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item positive">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            C1: Creates a future people want to build together
+                        </div>
+                        <div class="comparison-text">
+                            "Imagine it's a Tuesday morning in 2030. Our clients no longer call us for support; they call us to brainstorm. Our team starts the day knowing their work directly impacts..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7 Days Grid -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-calendar"></i>
+                    7 Days of Shared Futures
+                </h2>
+                <p class="section-desc">Mỗi ngày là một khía cạnh của việc giúp người khác hình dung, cam kết và cùng xây dựng tương lai. Từ painting the future đến keeping commitment alive.</p>
+            </div>
+            
+            <div class="days-grid">
+                <a href="week-20-day-134.html" class="day-card">
+                    <div class="day-label">DAY 134</div>
+                    <span class="day-stage">Context: Family & Company Vision</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-paint-brush"></i>
+                    </div>
+                    <div class="day-title">Creating Shared Futures</div>
+                    <div class="day-subtitle">Biến tầm nhìn khô khan thành bức tranh tương lai sống động, đánh vào cảm xúc và giác quan. Make them see themselves inside it.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"Imagine it's five years from now. What does a typical day look like?"</li>
+                            <li>"When we achieve this, how will our clients/partners feel?"</li>
+                            <li>"The future we're building is one where..."</li>
+                            <li>"Beyond the numbers, what does success actually feel like?"</li>
+                            <li>"Moving from metrics to human experiences"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-20-day-135.html" class="day-card">
+                    <div class="day-label">DAY 135</div>
+                    <span class="day-stage">Context: Brainstorming & Innovation</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-sparkle"></i>
+                    </div>
+                    <div class="day-title">Giving Permission to Dream</div>
+                    <div class="day-subtitle">Tạo không gian an toàn để mọi người dám nói ra ý tưởng lớn, thậm chí điên rồ. Separate dreaming from planning.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"Let's put all constraints aside for a moment. What's the boldest version?"</li>
+                            <li>"I love the ambition here. Let's explore it fully before we look at risks."</li>
+                            <li>"What would need to be true for this 'crazy' idea to work?"</li>
+                            <li>"There are no bad ideas in this phase. Let's build on this."</li>
+                            <li>"Creating a 'yes, and...' culture"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-20-day-136.html" class="day-card">
+                    <div class="day-label">DAY 136</div>
+                    <span class="day-stage">Context: OKRs & Daily Habits</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-anchor"></i>
+                    </div>
+                    <div class="day-title">Anchoring Long-term in Short-term Action</div>
+                    <div class="day-subtitle">Kết nối tầm nhìn xa vời với hành động cụ thể trong hiện tại. Not just action - meaningful progress everyone understands.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"What's one small step we can take this week that honors our 5-year vision?"</li>
+                            <li>"How does today's task connect to the bigger picture?"</li>
+                            <li>"Let's break this 10-year dream into a 90-day experiment."</li>
+                            <li>"We don't have to build the whole future today. We just need to lay one brick."</li>
+                            <li>"North Star & Stepping Stones framework"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-20-day-137.html" class="day-card">
+                    <div class="day-label">DAY 137</div>
+                    <span class="day-stage">Context: Budget, Health & Life Choices</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-hourglass"></i>
+                    </div>
+                    <div class="day-title">Balancing Today and Tomorrow</div>
+                    <div class="day-subtitle">Thuyết phục người khác chấp nhận khó khăn ngắn hạn vì lợi ích dài hạn. Investing, not sacrificing. Applies to money, health, career, family.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"I know this is uncomfortable right now. Let's talk about why it's worth it."</li>
+                            <li>"We're not just cutting costs; we're investing in our future stability."</li>
+                            <li>"What's the cost of NOT doing this for the next 3 years?"</li>
+                            <li>"Let's look at this as a down payment on..."</li>
+                            <li>"Validating short-term pain while framing long-term gain"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-20-day-138.html" class="day-card">
+                    <div class="day-label">DAY 138</div>
+                    <span class="day-stage">Context: Strategic Offsites & Family Planning</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-users-three"></i>
+                    </div>
+                    <div class="day-title">Co-creating the Vision Together</div>
+                    <div class="day-subtitle">Chuyển từ "tầm nhìn của tôi" sang "tầm nhìn của chúng ta". Facilitate shared dreaming, not dictate.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"What does success look like to you personally?"</li>
+                            <li>"If we had a magic wand, what would we change?"</li>
+                            <li>"Let's find the common thread in all these different ideas."</li>
+                            <li>"How can we combine your focus on X with their focus on Y?"</li>
+                            <li>"Moving from 'my idea' to 'our idea'"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-20-day-139.html" class="day-card">
+                    <div class="day-label">DAY 139</div>
+                    <span class="day-stage">Context: Setbacks & Market Crashes</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-compass"></i>
+                    </div>
+                    <div class="day-title">Keeping Commitment Alive Through Setbacks</div>
+                    <div class="day-subtitle">Giữ vững định hướng khi trở ngại khiến tương lai có vẻ tuột mất. Realistic optimism, not toxic positivity. Keep the direction, pivot the path.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"This is a detour, not a dead end."</li>
+                            <li>"Our goal hasn't changed, but our timeline/method might need to."</li>
+                            <li>"Let's look at what we've already overcome to get here."</li>
+                            <li>"What's one thing we can control right now that moves us forward?"</li>
+                            <li>"Pivoting strategy while holding firm to purpose"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-20-day-140.html" class="day-card">
+                    <div class="day-label">DAY 140</div>
+                    <span class="day-stage">Context: Phase 3 Capstone</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-trophy"></i>
+                    </div>
+                    <div class="day-title">Phase 3 Capstone: My Future Playbook</div>
+                    <div class="day-subtitle">Tổng hợp toàn bộ Phase 3 và tạo personal playbook. Từ Week 13 đến Week 20 - bạn đã trở thành một professional communicator thực thụ.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Focus:</div>
+                        <ul class="focus-list">
+                            <li>Apply aspirational communication principles</li>
+                            <li>Integration Reflection: connect all 8 competencies</li>
+                            <li>Create personal Future & Vision Playbook</li>
+                            <li>🏆 Celebrate Phase 3 Completion!</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Phase 3 Capstone Reflection -->
+        <section class="capstone-section">
+            <h2 class="capstone-title">🏆 Phase 3 Capstone: Integration Reflection</h2>
+            <p class="capstone-subtitle">
+                Bạn đã đi qua 8 tuần của Phase 3. Mỗi tuần là một competency giao tiếp khác biệt. Bây giờ, hãy nhìn lại toàn bộ hành trình và tự trả lời những câu hỏi này. Đây không phải là bài test - đây là cách bạn <strong>tích hợp tất cả</strong> thành một professional communicator hoàn chỉnh.
+            </p>
+            <div class="capstone-reflection">
+                <div class="reflection-item">
+                    <strong>Week 13 · Money</strong>
+                    How do I explain difficult financial decisions with clarity and empathy?
+                </div>
+                <div class="reflection-item">
+                    <strong>Week 14 · Culture</strong>
+                    How do I bridge different cultural perspectives with curiosity and respect?
+                </div>
+                <div class="reflection-item">
+                    <strong>Week 15 · Places</strong>
+                    How do I help people compare, evaluate, and choose the right place for their stage of life?
+                </div>
+                <div class="reflection-item">
+                    <strong>Week 16 · Value</strong>
+                    How do I help people see why something matters to them?
+                </div>
+                <div class="reflection-item">
+                    <strong>Week 17 · Change</strong>
+                    How do I help people understand and navigate change together?
+                </div>
+                <div class="reflection-item">
+                    <strong>Week 18 · Rules</strong>
+                    How do I communicate boundaries, principles, and difficult choices with fairness?
+                </div>
+                <div class="reflection-item">
+                    <strong>Week 19 · Information</strong>
+                    How do I evaluate and communicate information critically in a world of noise?
+                </div>
+                <div class="reflection-item">
+                    <strong>Week 20 · Future</strong>
+                    How do I help people imagine, commit to, and build a shared future together?
+                </div>
+            </div>
+            <p style="margin-top: 24px; font-size: 14px; color: var(--text-secondary); font-style: italic;">
+                "Once people understand reality clearly (Week 19), they are ready to imagine and build a better future together (Week 20)."
+            </p>
+        </section>
+        
+        <!-- Milestone Card -->
+        <div class="milestone-card">
+            <div class="milestone-icon">
+                <i class="ph-duotone ph-trophy"></i>
+            </div>
+            <div class="milestone-title">Milestone 20: Shared Future Communication</div>
+            <p class="milestone-subtitle">Sau tuần 20 - và toàn bộ Phase 3 - bạn sẽ biết cách giúp người khác hình dung, cam kết và cùng xây dựng tương lai. Bạn biến khát vọng trừu tượng thành la bàn chung mà ai cũng muốn đi theo. <br><br><strong> Congratulations! You have completed Phase 3: Domain Communication!</strong></p>
+            <div class="milestone-skills">
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Paint a sensory, emotional picture of the future</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Create psychological safety for ambition</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Anchor long-term visions in short-term actions</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Navigate short-term pain vs long-term gain</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Facilitate co-creation of shared visions</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Keep commitment alive through setbacks</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Translate abstract goals into human experiences</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Handle cynicism and reality checks gracefully</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Ask powerful questions that unlock collective wisdom</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Maintain morale during long-term journeys</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Pivot strategy without losing sight of purpose</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Build shared ownership of the future</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2 class="section-title">
+                <i class="ph-duotone ph-pencil-simple"></i>
+                Week 20 Preview Quiz
+            </h2>
+            <p class="section-desc" style="margin-bottom: 24px;">Kiểm tra hiểu biết về shared futures vs vision dictation. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-question">
+                <h4>1. Sự khác biệt cốt lõi giữa Week 17 và Week 20 là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Week 17 là về Leadership, Week 20 là về Vision</div>
+                    <div class="quiz-option">B. Week 17: Navigating the transition (near-term); Week 20: Painting the destination (long-term)</div>
+                    <div class="quiz-option">C. Week 17 là về Business, Week 20 là về Life</div>
+                    <div class="quiz-option">D. Không có sự khác biệt nào</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>2. Câu philosophy xuyên suốt Week 20 là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "A vision is only as good as its metrics."</div>
+                    <div class="quiz-option">B. "A vision only becomes real when other people can see themselves inside it."</div>
+                    <div class="quiz-option">C. "Dream big, work hard, stay focused."</div>
+                    <div class="quiz-option">D. "The future belongs to those who prepare for it."</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>3. Khi đối mặt với setback, C1 approach là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "Everything will be fine! Just stay positive!"</div>
+                    <div class="quiz-option">B. "Maybe this goal was too ambitious."</div>
+                    <div class="quiz-option">C. "This is a detour, not a dead end. Our goal hasn't changed, but our method might need to."</div>
+                    <div class="quiz-option">D. Ignore the setback and push forward</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>4. Nguyên tắc "Dreams are co-created, not dictated" nghĩa là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Leader nên áp đặt tầm nhìn để tránh confusion</div>
+                    <div class="quiz-option">B. Một tầm nhìn được cùng kiến tạo mới tạo commitment; áp đặt chỉ tạo compliance</div>
+                    <div class="quiz-option">C. Mọi người đều phải đồng ý 100% với tầm nhìn</div>
+                    <div class="quiz-option">D. Tầm vision nên được giữ bí mật cho đến khi hoàn thiện</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>5. Day 140 của Week 20 khác gì so với các tuần trước?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Chỉ review riêng Week 20</div>
+                    <div class="quiz-option">B. Phase 3 Capstone: Integration Reflection kết nối tất cả 8 competency từ Week 13-20</div>
+                    <div class="quiz-option">C. Bắt đầu Phase 4</div>
+                    <div class="quiz-option">D. Chỉ là một ngày nghỉ</div>
+                </div>
+            </div>
+            
+            <button class="check-btn">
+                <i class="ph-duotone ph-check"></i>
+                Check Answers
+            </button>
+        </section>
+        
+        <!-- Looking Back Section - NEW -->
+        <section class="looking-back-section">
+            <div class="looking-back-icon">🌟</div>
+            <h2 class="looking-back-title">Looking Back at Phase 3</h2>
+            
+            <p class="looking-back-journey">
+                You started Phase 3 by learning to <strong>explain money</strong>.<br>
+                You finished Phase 3 by helping people <strong>build a shared future</strong>.
+            </p>
+            
+            <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 16px;">
+                In between, you learned to:
+            </p>
+            
+            <div class="looking-back-list">
+                <div class="looking-back-item">
+                    <i class="ph-duotone ph-globe-hemisphere-west"></i>
+                    <span>Bridge cultures</span>
+                </div>
+                <div class="looking-back-item">
+                    <i class="ph-duotone ph-house-line"></i>
+                    <span>Compare choices</span>
+                </div>
+                <div class="looking-back-item">
+                    <i class="ph-duotone ph-megaphone"></i>
+                    <span>Communicate value</span>
+                </div>
+                <div class="looking-back-item">
+                    <i class="ph-duotone ph-compass"></i>
+                    <span>Guide change</span>
+                </div>
+                <div class="looking-back-item">
+                    <i class="ph-duotone ph-scales"></i>
+                    <span>Discuss ethics</span>
+                </div>
+                <div class="looking-back-item">
+                    <i class="ph-duotone ph-newspaper-clipping"></i>
+                    <span>Evaluate information</span>
+                </div>
+            </div>
+            
+            <p class="looking-back-closing">
+                You now communicate with confidence across the conversations adults face in real life.<br>
+                <strong>This is Professional Fluency.</strong>
+            </p>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="week-navigation">
+            <a href="week-19.html" class="nav-card">
+                <div class="nav-label">← Previous Week</div>
+                <div class="nav-title">Week 19: Communicating Information Critically</div>
+            </a>
+            <a href="week-21.html" class="nav-card">
+                <div class="nav-label">Next Phase →</div>
+                <div class="nav-title">Week 21: Phase 4 Begins</div>
+            </a>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="cta-container">
+            <a href="week-20-day-134.html" class="cta-button">
+                <i class="ph-duotone ph-rocket-launch"></i>
+                <span>Start Week 20: Day 134 - Creating Shared Futures</span>
+            </a>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Phase 3 Complete · Week 20 · Building Shared Futures</div>
+        </div>
+    </footer>
+    
+</body>
+</html>
