@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 16: Communicating Value & Building Influence | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Phase 3: Pink + Blue Theme */
+            --pink: #EC4899;
+            --pink-bright: #DB2777;
+            --pink-soft: #FCE7F3;
+            --pink-deep: #9D174D;
+            --blue: #3B82F6;
+            --blue-bright: #2563EB;
+            --blue-soft: #DBEAFE;
+            --blue-deep: #1E40AF;
+            --rose: #F43F5E;
+            --sky: #0EA5E9;
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #FCE7F3 0%, #DBEAFE 25%, #FCE7F3 50%, #DBEAFE 75%, #FCE7F3 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Aurora Background Animation - Phase 3 Pink + Blue */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(236, 72, 153, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(244, 63, 94, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 30% 60%, rgba(14, 165, 233, 0.3) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+            animation: aurora 20s ease-in-out infinite;
+        }
+        
+        @keyframes aurora {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            33% { transform: scale(1.15) rotate(120deg); opacity: 1; }
+            66% { transform: scale(0.95) rotate(240deg); opacity: 0.85; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .top-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--pink-bright); }
+        
+        .week-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .week-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-icon-large { font-size: 3.5rem; margin-bottom: 16px; }
+        .week-icon-large i { --ph-color: var(--pink-bright); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--pink-bright), var(--blue-bright));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .week-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+        
+        .week-quote {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--pink-bright);
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 24px auto;
+            max-width: 650px;
+        }
+        
+        .week-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        
+        .week-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .week-tag i { --ph-color: var(--pink-bright); }
+        
+        .section { margin: 48px 0; }
+        .section-header { margin-bottom: 32px; text-align: center; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .section-title i { --ph-color: var(--pink-bright); }
+        
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(59, 130, 246, 0.12));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border-left: 4px solid var(--pink-bright);
+            margin-bottom: 24px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--pink-bright); }
+        
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .principle-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 4px solid var(--blue-bright);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .principle-number {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--blue-deep);
+            background: var(--blue-soft);
+            padding: 4px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .principle-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .principle-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .comparison-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-top: 24px;
+        }
+        
+        .comparison-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-item {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            border-left: 4px solid;
+        }
+        
+        .comparison-item.negative { background: rgba(245, 101, 101, 0.1); border-left-color: #F56565; }
+        .comparison-item.positive { background: rgba(72, 187, 120, 0.1); border-left-color: #48BB78; }
+        
+        .comparison-label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        /* Distinction box - Week 6 vs Week 16 */
+        .distinction-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 24px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .distinction-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .distinction-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        .distinction-card {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border-left: 4px solid;
+        }
+        
+        .distinction-card.week6 {
+            border-left-color: var(--pink-bright);
+            background: rgba(252, 231, 243, 0.3);
+        }
+        
+        .distinction-card.week16 {
+            border-left-color: var(--blue-bright);
+            background: rgba(219, 234, 254, 0.3);
+        }
+        
+        .distinction-card-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .distinction-card-question {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+        
+        .distinction-card-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        /* 7 DAYS GRID */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .day-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--pink-bright);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.4s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(236, 72, 153, 0.2);
+        }
+        
+        .day-label {
+            background: linear-gradient(135deg, var(--pink-soft), var(--blue-soft));
+            color: var(--pink-deep);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .day-stage {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--blue-bright);
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .day-icon { margin-bottom: 16px; }
+        .day-icon i { font-size: 2rem; --ph-color: var(--pink-bright); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .day-focus {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(252, 231, 243, 0.5);
+        }
+        
+        .focus-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+        
+        .focus-list { list-style: none; }
+        
+        .focus-list li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed rgba(252, 231, 243, 0.5);
+        }
+        
+        .focus-list li:last-child { border-bottom: none; }
+        
+        .focus-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--pink-bright);
+            font-weight: 600;
+        }
+        
+        .day-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(59, 130, 246, 0.12));
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--pink-deep);
+            font-weight: 600;
+            border: 1px solid rgba(236, 72, 153, 0.2);
+        }
+        
+        .day-time i { --ph-color: var(--pink-bright); }
+        
+        /* MILESTONE */
+        .milestone-card {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(59, 130, 246, 0.12));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid var(--pink-bright);
+            text-align: center;
+        }
+        
+        .milestone-icon { font-size: 3.5rem; margin-bottom: 16px; }
+        .milestone-icon i { --ph-color: var(--pink-bright); }
+        
+        .milestone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .milestone-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        
+        .milestone-skill {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.5;
+        }
+        
+        .milestone-skill i {
+            --ph-color: var(--pink-bright);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        /* QUIZ */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .quiz-question {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--pink-bright);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        
+        .quiz-options { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 6px; 
+        }
+        
+        .quiz-option {
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(252, 231, 243, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.3;
+        }
+        
+        .quiz-option:hover { 
+            border-color: var(--pink-bright); 
+            background: rgba(252, 231, 243, 0.2); 
+        }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--pink-bright), var(--blue-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+        
+        /* NAVIGATION */
+        .week-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 48px 0;
+        }
+        
+        .nav-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 231, 243, 0.5));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--pink-bright), var(--blue-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.25);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .cta-container { text-align: center; margin: 48px 0; }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--pink-bright), var(--blue-bright));
+            color: white;
+            padding: 18px 36px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(236, 72, 153, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(236, 72, 153, 0.5);
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-fox { font-size: 2.5rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .week-title { font-size: 2.5rem; }
+            .days-grid { grid-template-columns: 1fr; }
+            .milestone-skills { grid-template-columns: 1fr; }
+            .week-navigation { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+            .distinction-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Roadmap</span>
+            </a>
+            <div class="week-indicator">Week 16/24</div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="phase-03.html">Phase 3: Domain Communication</a> › Week 16
+            </div>
+            <div class="week-icon-large">
+                <i class="ph-duotone ph-megaphone"></i>
+            </div>
+            <h1 class="week-title">Communicating Value & Building Influence</h1>
+            <p class="week-description">Sau khi học cách giúp người khác đưa ra quyết định (Week 15), tuần này bạn sẽ học cách giúp họ <strong>nhìn thấy giá trị</strong> của một ý tưởng trước khi họ ra quyết định. Week 16 không dạy Marketing hay Sales. Week 16 dạy bạn cách truyền tải giá trị sao cho người khác tự thấy "why it matters to them".</p>
+            <div class="week-quote">"People rarely act because they understand your idea. They act because they understand why it matters to them."</div>
+            <div class="week-tags">
+                <div class="week-tag"><i class="ph-duotone ph-sparkle"></i> Phase 3</div>
+                <div class="week-tag"><i class="ph-duotone ph-clock"></i> 7 days × 60 min</div>
+                <div class="week-tag"><i class="ph-duotone ph-house"></i> 50% Life</div>
+                <div class="week-tag"><i class="ph-duotone ph-briefcase"></i> 50% Business</div>
+                <div class="week-tag"><i class="ph-duotone ph-megaphone"></i> Value Communication</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <!-- Philosophy Section -->
+        <section class="section">
+            <div class="philosophy-section">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-lightbulb"></i>
+                    Week 16 Philosophy
+                </h2>
+                
+                <div class="philosophy-box">
+                    <div class="philosophy-title">
+                        <i class="ph-duotone ph-megaphone"></i>
+                        Domain is Context, Communication is Competency
+                    </div>
+                    <p>
+                        Phase 3 đưa bạn vào các chủ đề phức tạp. Week 16 tập trung vào <strong>giá trị và ảnh hưởng</strong>. Bạn sẽ không học Marketing, Branding hay Sales. Bạn sẽ học cách giúp người khác <strong>nhìn thấy giá trị</strong> của ý tưởng, dự án, hoặc chính bản thân bạn. Đây là sự khác biệt cốt lõi so với Week 6: Week 6 dạy bạn <em>persuade</em> (thuyết phục người khác đồng ý), Week 16 dạy bạn <em>illuminate</em> (giúp người khác tự thấy giá trị).
+                    </p>
+                </div>
+                
+                <!-- Distinction: Week 6 vs Week 16 -->
+                <div class="distinction-box">
+                    <div class="distinction-title">
+                        <i class="ph-duotone ph-info"></i>
+                        Week 6 vs Week 16: Two Different Competencies
+                    </div>
+                    <div class="distinction-grid">
+                        <div class="distinction-card week6">
+                            <div class="distinction-card-title">Week 6: Persuasion</div>
+                            <div class="distinction-card-question">Core question:</div>
+                            <div class="distinction-card-desc">"How do I persuade someone to agree with me?"</div>
+                            <div class="distinction-card-question" style="margin-top: 8px;">Focus:</div>
+                            <div class="distinction-card-desc">Winning the argument, creating value together, handling objections</div>
+                        </div>
+                        <div class="distinction-card week16">
+                            <div class="distinction-card-title">Week 16: Communicating Value</div>
+                            <div class="distinction-card-question">Core question:</div>
+                            <div class="distinction-card-desc">"How do I help people see why this matters to them?"</div>
+                            <div class="distinction-card-question" style="margin-top: 8px;">Focus:</div>
+                            <div class="distinction-card-desc">Making value visible, storytelling as evidence, building trust over time</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 1</div>
+                        <div class="principle-title">Value is perceived, not stated</div>
+                        <div class="principle-desc">Bạn không thể nói bạn có giá trị. Bạn phải cho họ thấy tác động. Show the impact, don't just state the features.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 2</div>
+                        <div class="principle-title">Influence is alignment, not manipulation</div>
+                        <div class="principle-desc">Ảnh hưởng thật sự là tìm ra điểm giao thoa giữa điều bạn cung cấp và điều họ thực sự cần.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 3</div>
+                        <div class="principle-title">Features tell, benefits sell, meaning connects</div>
+                        <div class="principle-desc">Đừng chỉ nói nó hoạt động thế nào. Hãy nói về ý nghĩa của nó đối với cuộc sống của họ.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 4</div>
+                        <div class="principle-title">Trust is the ultimate currency</div>
+                        <div class="principle-desc">Mọi kỹ thuật influence đều vô nghĩa nếu không có trust. Giao tiếp nhất quán, minh bạch mới là nền tảng.</div>
+                    </div>
+                </div>
+                
+                <div class="comparison-section">
+                    <div class="comparison-title">Value Communication: B2 vs C1</div>
+                    
+                    <div class="comparison-item negative">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            B2: States features & makes claims
+                        </div>
+                        <div class="comparison-text">
+                            "This project is very innovative and will bring great ROI." OR "I am a hard-working and results-oriented person."
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item positive">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            C1: Shows impact through stories & outcomes
+                        </div>
+                        <div class="comparison-text">
+                            "This project will save the team 10 hours a week on manual reporting, freeing us up to focus on client strategy." OR "Let me tell you about Sarah, one of our users. Before this update, she was spending 2 hours every night on this task..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7 Days Grid -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-calendar"></i>
+                    7 Days of Value Communication
+                </h2>
+                <p class="section-desc">Mỗi ngày là một khía cạnh của việc truyền tải giá trị. Từ articulating impact đến creating momentum và building trust.</p>
+            </div>
+            
+            <div class="days-grid">
+                <a href="week-16-day-106.html" class="day-card">
+                    <div class="day-label">DAY 106</div>
+                    <span class="day-stage">Context: Pitching Ideas & Personal Value</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-lightbulb"></i>
+                    </div>
+                    <div class="day-title">Articulating Value & Impact</div>
+                    <div class="day-subtitle">Diễn đạt giá trị mà không nghe như khoe khoang. Từ "what it is" sang "why it matters". Áp dụng cho ideas và personal value.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"What this means for you is..."</li>
+                            <li>"The impact we've seen so far is..."</li>
+                            <li>"Instead of just [feature], it actually helps you [outcome]..."</li>
+                            <li>"The real value here isn't X, it's Y..."</li>
+                            <li>"Applying the 'So what?' test to every claim"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-16-day-107.html" class="day-card">
+                    <div class="day-label">DAY 107</div>
+                    <span class="day-stage">Context: Making Data Human</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-book-open-text"></i>
+                    </div>
+                    <div class="day-title">Storytelling as Evidence</div>
+                    <div class="day-subtitle">Story không phải entertainment - story là evidence được đóng gói trong narrative. Biến data thành thứ người khác cảm nhận được.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"Let me give you a real example..."</li>
+                            <li>"Picture this scenario..."</li>
+                            <li>"The moment we knew this was working was when..."</li>
+                            <li>"It's not just about the numbers; it's about what happened to..."</li>
+                            <li>"Story as evidence, not entertainment"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-16-day-108.html" class="day-card">
+                    <div class="day-label">DAY 108</div>
+                    <span class="day-stage">Context: Different Audiences</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-users"></i>
+                    </div>
+                    <div class="day-title">Persuading Different Audiences</div>
+                    <div class="day-subtitle">Cùng một ý tưởng, cách truyền tải khác nhau cho child, parent, spouse, friend, client, CEO. WIIFM filter.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"I know your main focus right now is X, so let me frame it that way..."</li>
+                            <li>"From a technical standpoint... but from a business perspective..."</li>
+                            <li>"What this means for your team specifically is..."</li>
+                            <li>"Let me put this in terms of our daily lives..."</li>
+                            <li>"Adapting message for child, parent, spouse, friend, client, CEO"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-16-day-109.html" class="day-card">
+                    <div class="day-label">DAY 109</div>
+                    <span class="day-stage">Context: Facing Doubt</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-shield-question"></i>
+                    </div>
+                    <div class="day-title">Handling Skepticism & Objections</div>
+                    <div class="day-subtitle">Khi người ta không tin vào giá trị bạn truyền tải. Validate concern, reframe value, maintain warmth under pressure.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"That's a valid point. Many people initially feel that way..."</li>
+                            <li>"I appreciate you bringing that up. It actually highlights why..."</li>
+                            <li>"Help me understand what specifically makes you hesitant..."</li>
+                            <li>"If we could solve [their specific concern], would that change your perspective?"</li>
+                            <li>"Using objections to clarify value, not as attacks"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-16-day-110.html" class="day-card">
+                    <div class="day-label">DAY 110</div>
+                    <span class="day-stage">Context: Long-term Reputation</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-handshake"></i>
+                    </div>
+                    <div class="day-title">Communicating Consistency & Trust</div>
+                    <div class="day-subtitle">Xây dựng uy tín qua giao tiếp nhất quán: consistency, transparency, reliability, managing expectations.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"Here's exactly what you can expect, and what you shouldn't expect..."</li>
+                            <li>"I want to be transparent about the limitations here..."</li>
+                            <li>"We hit a snag, and here's how we're handling it..."</li>
+                            <li>"I'm confident about X, but Y is still an area we're monitoring."</li>
+                            <li>"Under-promising and over-delivering through words"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-16-day-111.html" class="day-card">
+                    <div class="day-label">DAY 111</div>
+                    <span class="day-stage">Context: Building Movement</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-trend-up"></i>
+                    </div>
+                    <div class="day-title">Creating Momentum & Gaining Buy-in</div>
+                    <div class="day-subtitle">Tạo đà cho ý tưởng: early adopters, pilot programs, social proof, building movement. Khác với Week 7 Leadership.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"A few others have started exploring this, and..."</li>
+                            <li>"What if we just tried a small pilot for two weeks?"</li>
+                            <li>"I'm not saying we have to commit fully, but would you be open to..."</li>
+                            <li>"Imagine if we could..."</li>
+                            <li>"Creating pull dynamics, not push dynamics"</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-16-day-112.html" class="day-card">
+                    <div class="day-label">DAY 112</div>
+                    <span class="day-stage">Context: Personal Philosophy</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-trophy"></i>
+                    </div>
+                    <div class="day-title">My Value Communication Playbook</div>
+                    <div class="day-subtitle">Tổng hợp và tạo personal playbook. Remember: people act when they understand why it matters to them. Celebrate Milestone 16.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Focus:</div>
+                        <ul class="focus-list">
+                            <li>Apply value communication principles</li>
+                            <li>Self-assessment: Where am I naturally influential?</li>
+                            <li>Create personal Value Communication Playbook</li>
+                            <li>Celebrate Milestone 16</li>
+                        </ul>
+                    </div>
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Milestone Card -->
+        <div class="milestone-card">
+            <div class="milestone-icon">
+                <i class="ph-duotone ph-trophy"></i>
+            </div>
+            <div class="milestone-title">Milestone 16: Communicating Value & Building Influence</div>
+            <p class="milestone-subtitle">Sau tuần 16, bạn sẽ biết cách giúp người khác nhìn thấy giá trị của ý tưởng, dự án, hoặc chính bản thân bạn. Bạn sẽ dùng storytelling như evidence, adapt message cho từng audience, và xây dựng trust qua giao tiếp nhất quán.</p>
+            <div class="milestone-skills">
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Articulate value and impact without sounding arrogant</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Use storytelling as evidence, not entertainment</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Adapt messages for different audiences</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Handle skepticism and objections with grace</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Build trust through consistent communication</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Create momentum and gain buy-in</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Translate jargon into audience-specific language</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Use social proof and shared vision ethically</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Manage expectations and avoid over-promising</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Turn abstract concepts into tangible benefits</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Maintain warmth and confidence under pressure</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Help people see why something matters to them</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2 class="section-title">
+                <i class="ph-duotone ph-pencil-simple"></i>
+                Week 16 Preview Quiz
+            </h2>
+            <p class="section-desc" style="margin-bottom: 24px;">Kiểm tra hiểu biết về value communication vs persuasion. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-question">
+                <h4>1. Sự khác biệt cốt lõi giữa Week 6 (Persuasion) và Week 16 (Communicating Value) là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Week 6 dạy persuasion, Week 16 cũng dạy persuasion nhưng ở level cao hơn</div>
+                    <div class="quiz-option">B. Week 6: "How do I persuade someone to agree with me?" - Week 16: "How do I help people see why this matters to them?"</div>
+                    <div class="quiz-option">C. Week 6 là về Business, Week 16 là về Life</div>
+                    <div class="quiz-option">D. Không có sự khác biệt nào</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>2. Nguyên tắc "Value is perceived, not stated" nghĩa là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Bạn phải nói rõ giá trị của mình nhiều lần</div>
+                    <div class="quiz-option">B. Bạn không thể nói bạn có giá trị - bạn phải cho họ thấy tác động</div>
+                    <div class="quiz-option">C. Giá trị chỉ tồn tại trong nhận thức của người khác</div>
+                    <div class="quiz-option">D. Bạn nên để người khác tự khám phá giá trị</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>3. Câu nào thể hiện C1 value communication?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "This project is very innovative and will bring great ROI."</div>
+                    <div class="quiz-option">B. "This project will save the team 10 hours a week on manual reporting, freeing us up to focus on client strategy."</div>
+                    <div class="quiz-option">C. "I am a hard-working and results-oriented person."</div>
+                    <div class="quiz-option">D. "You should do this because it's the right thing to do."</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>4. Tại sao Day 107 nhấn mạnh "Storytelling as Evidence" thay vì "Storytelling for Entertainment"?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Vì storytelling chỉ để giải trí trong business context</div>
+                    <div class="quiz-option">B. Vì story là bằng chứng được đóng gói trong narrative - làm cho data đáng tin và đáng nhớ</div>
+                    <div class="quiz-option">C. Vì người học không cần học kể chuyện dài</div>
+                    <div class="quiz-option">D. Vì entertainment không phù hợp với professional context</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>5. Câu philosophy xuyên suốt Week 16 là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "People act when they understand your idea."</div>
+                    <div class="quiz-option">B. "People rarely act because they understand your idea. They act because they understand why it matters to them."</div>
+                    <div class="quiz-option">C. "The best persuasion is no persuasion."</div>
+                    <div class="quiz-option">D. "Value is what you say it is."</div>
+                </div>
+            </div>
+            
+            <button class="check-btn">
+                <i class="ph-duotone ph-check"></i>
+                Check Answers
+            </button>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="week-navigation">
+            <a href="week-15.html" class="nav-card">
+                <div class="nav-label">← Previous Week</div>
+                <div class="nav-title">Week 15: Communicating About Places & Location Decisions</div>
+            </a>
+            <a href="week-17.html" class="nav-card">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 17: Communicating Vision & Change</div>
+            </a>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="cta-container">
+            <a href="week-16-day-106.html" class="cta-button">
+                <i class="ph-duotone ph-rocket-launch"></i>
+                <span>Start Week 16: Day 106 - Articulating Value & Impact</span>
+            </a>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Phase 3 · Week 16 · Communicating Value & Building Influence</div>
+        </div>
+    </footer>
+    
+</body>
+</html>
