@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 5 Day 29: Executive Updates | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+/* Amber Theme - Executive Updates */
+--primary: #D97706;
+--primary-bright: #B45309;
+--primary-soft: #FEF3C7;
+--primary-deep: #78350F;
+--primary-light: #FDBA74;
+/* Flexible Highlight Colors */
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--red: #DC2626;
+--red-soft: #FEE2E2;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* Top Nav */
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator { font-size: 13px; color: var(--text-muted); font-weight: 500; display: flex; align-items: center; gap: 10px; }
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 4%; }
+
+/* Day Tabs */
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none;
+box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+/* Header */
+.day-header {
+background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDBA74 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after {
+content: '📊'; position: absolute; top: 40px; right: 40px;
+font-size: 4rem; opacity: 0.3;
+}
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title {
+font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600;
+color: var(--text-primary);
+}
+.day-subtitle {
+font-size: 15px; color: var(--text-secondary);
+max-width: 700px; margin-bottom: 20px; line-height: 1.3;
+}
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px;
+border-radius: 20px; font-size: 13px; font-weight: 500;
+color: var(--text-secondary); display: flex; align-items: center; gap: 6px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+/* Content */
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+/* C1 Insight */
+.c1-insight {
+background: linear-gradient(135deg, var(--primary-soft), rgba(253, 186, 116, 0.3));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 11px; font-weight: 700;
+color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px;
+margin-bottom: 8px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1.3rem; font-weight: 600;
+color: var(--primary-deep);
+font-style: italic; line-height: 1.4;
+}
+
+/* Philosophy */
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(217, 119, 6, 0.2);
+}
+.philosophy-box {
+background: #FFFBEB;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.comparison-box { border-radius: var(--radius-sm); padding: 16px; }
+.comparison-box.negative { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.comparison-box.positive { background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10B981; }
+.comparison-title {
+font-weight: 600; margin-bottom: 8px;
+display: flex; align-items: center; gap: 6px; font-size: 13px;
+}
+.comparison-box.negative .comparison-title { color: #C53030; }
+.comparison-box.positive .comparison-title { color: #065F46; }
+.comparison-list { list-style: none; }
+.comparison-list li {
+padding: 3px 0; padding-left: 20px; position: relative;
+font-size: 12px; color: var(--text-secondary); line-height: 1.3;
+}
+.comparison-box.negative .comparison-list li::before { content: '✕'; position: absolute; left: 0; color: #E53E3E; font-weight: 600; }
+.comparison-box.positive .comparison-list li::before { content: '✓'; position: absolute; left: 0; color: #10B981; font-weight: 600; }
+
+/* Framework boxes */
+.framework-box {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 24px;
+margin-top: 20px;
+border: 1px solid rgba(217, 119, 6, 0.2);
+}
+.framework-box h3 {
+font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 14px;
+display: flex; align-items: center; gap: 8px;
+}
+.formula-steps {
+display: flex; flex-wrap: wrap; justify-content: center;
+gap: 10px; align-items: center; margin-bottom: 14px;
+}
+.formula-step {
+background: rgba(255, 255, 255, 0.9); padding: 10px 16px;
+border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+color: var(--text-primary); border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.formula-arrow { font-size: 18px; color: var(--text-muted); }
+.formula-result {
+background: var(--primary-soft); color: var(--primary-deep);
+padding: 10px 16px; border-radius: var(--radius-sm);
+font-size: 13px; font-weight: 600; border: 1px solid var(--primary);
+}
+.formula-explanation {
+font-size: 12px; color: var(--text-muted);
+line-height: 1.3; font-style: italic; text-align: center;
+}
+
+/* Principles */
+.principles-grid {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 12px; margin-top: 16px;
+}
+.principle-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-sm);
+padding: 18px;
+border: 1px solid rgba(0, 0, 0, 0.06);
+position: relative;
+}
+.principle-card:nth-child(1) { border-left: 4px solid var(--highlight-gold); background: rgba(255, 237, 213, 0.3); }
+.principle-card:nth-child(2) { border-left: 4px solid var(--highlight-green); background: rgba(209, 250, 229, 0.3); }
+.principle-card:nth-child(3) { border-left: 4px solid var(--highlight-blue); background: rgba(219, 234, 254, 0.3); }
+.principle-card:nth-child(4) { border-left: 4px solid var(--highlight-purple); background: rgba(243, 232, 255, 0.3); }
+.principle-number {
+position: absolute; top: -10px; left: 16px;
+width: 28px; height: 28px;
+background: var(--bg-neutral); color: var(--text-primary);
+border: 1px solid var(--border-medium);
+border-radius: 50%; display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 14px;
+}
+.principle-title {
+font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; margin-top: 6px;
+}
+.principle-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.3; }
+
+/* Reading Signals */
+.reading-signals {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 24px;
+margin-top: 20px;
+border: 1px solid rgba(217, 119, 6, 0.2);
+}
+.reading-signals h3 {
+font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 14px;
+display: flex; align-items: center; gap: 8px;
+}
+.rs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; }
+.rs-col { padding: 14px; border-radius: var(--radius-sm); }
+.rs-col.ready { background: var(--green-soft); border-left: 3px solid var(--green); }
+.rs-col.space { background: var(--blue-soft); border-left: 3px solid var(--blue); }
+.rs-col h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 8px; }
+.rs-col.ready h4 { color: var(--green-deep); }
+.rs-col.space h4 { color: var(--blue-deep); }
+.rs-col ul { list-style: none; }
+.rs-col li {
+padding: 3px 0; padding-left: 20px; position: relative;
+font-size: 12px; color: var(--text-secondary); line-height: 1.3;
+}
+.rs-col.ready li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 600; }
+.rs-col.space li::before { content: '⚠'; position: absolute; left: 0; color: var(--blue); font-weight: 600; }
+.rs-action {
+margin-top: 14px; padding: 12px 14px;
+background: var(--bg-neutral); border-radius: var(--radius-sm);
+font-size: 12px; color: var(--text-secondary); line-height: 1.3;
+border-left: 3px solid var(--text-muted);
+}
+.rs-action strong { color: var(--text-primary); }
+
+/* Plan grid */
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 16px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-sm);
+padding: 16px;
+text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-deep); font-weight: 600;
+margin-bottom: 4px; background: var(--primary-soft);
+padding: 2px 8px; border-radius: 8px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+/* Pattern Cards */
+.patterns-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-left: 4px solid var(--primary);
+}
+.pattern-header {
+display: flex;
+gap: 12px;
+align-items: flex-start;
+margin-bottom: 10px;
+}
+.pattern-number {
+flex-shrink: 0;
+width: 36px; height: 36px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 16px;
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 4px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 11px; color: var(--green);
+font-family: 'SF Mono', 'Menlo', monospace;
+margin-bottom: 6px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.pattern-rating { font-size: 11px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 11px; color: var(--text-muted);
+background: var(--bg-neutral); padding: 2px 8px;
+border-radius: 10px; border: 1px solid var(--border-light);
+}
+.pattern-desc {
+font-size: 12px; color: var(--text-secondary);
+line-height: 1.3; margin-bottom: 10px;
+}
+.pattern-why {
+background: var(--purple-soft);
+border-radius: var(--radius-sm);
+padding: 10px 12px;
+margin-bottom: 12px;
+border-left: 3px solid var(--purple);
+}
+.pattern-why strong {
+color: var(--purple-deep);
+display: block; margin-bottom: 4px; font-size: 11px;
+}
+.pattern-why p { font-size: 11px; color: var(--text-secondary); line-height: 1.3; }
+.pattern-examples {
+background: var(--bg-neutral);
+border-radius: var(--radius-sm);
+padding: 12px;
+margin-bottom: 12px;
+}
+.pattern-examples h4 {
+font-family: 'Fraunces', serif; font-size: 10px;
+margin-bottom: 8px; color: var(--text-muted);
+text-transform: uppercase; letter-spacing: 0.5px;
+display: flex; align-items: center; gap: 6px;
+}
+.example {
+padding: 8px 10px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 12px; color: var(--text-secondary);
+line-height: 1.3;
+display: flex; align-items: flex-start; gap: 8px;
+border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.example:last-child { margin-bottom: 0; }
+.example-tag {
+flex-shrink: 0; font-size: 10px; padding: 2px 6px;
+border-radius: 8px; font-weight: 600;
+background: var(--primary-soft); color: var(--primary-deep);
+}
+.example-tag.business { background: var(--blue-soft); color: var(--blue-deep); }
+.audio-btn {
+flex-shrink: 0; width: 22px; height: 22px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+}
+.audio-btn:hover { transform: scale(1.1); box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3); }
+.audio-btn i { --ph-color: white; font-size: 10px; }
+.pattern-mistake {
+background: var(--red-soft);
+border-radius: var(--radius-sm);
+padding: 10px 12px;
+margin-bottom: 10px;
+border-left: 3px solid var(--red);
+}
+.pattern-mistake strong {
+color: var(--red); display: block;
+font-size: 11px; margin-bottom: 4px;
+}
+.pattern-mistake .wrong { color: var(--red); font-size: 11px; margin-bottom: 4px; }
+.pattern-mistake .right { color: var(--green-deep); font-size: 11px; }
+.pattern-mistake .right::before { content: '✓ '; font-weight: 700; }
+.pattern-alternatives {
+font-size: 11px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.pattern-alternatives strong { color: var(--text-muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px; }
+.pattern-alternatives ul { list-style: none; padding-left: 0; }
+.pattern-alternatives li { padding: 2px 0; padding-left: 12px; position: relative; }
+.pattern-alternatives li::before { content: '•'; position: absolute; left: 0; color: var(--text-muted); }
+
+/* Real-world Examples */
+.realworld-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 24px;
+margin-top: 20px;
+border: 1px solid rgba(217, 119, 6, 0.2);
+}
+.realworld-section h3 {
+font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 14px;
+display: flex; align-items: center; gap: 8px;
+}
+.realworld-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.realworld-card {
+background: var(--bg-neutral);
+border-radius: var(--radius-sm);
+padding: 14px;
+border-left: 3px solid var(--primary);
+}
+.realworld-card h4 {
+font-size: 11px; font-weight: 700;
+color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 0.5px;
+margin-bottom: 6px;
+}
+.realworld-card .before {
+font-size: 12px; color: var(--red);
+font-style: italic; margin-bottom: 6px;
+padding: 6px 8px;
+background: var(--red-soft);
+border-radius: var(--radius-sm);
+}
+.realworld-card .after {
+font-size: 12px; color: var(--green-deep);
+font-style: italic;
+padding: 6px 8px;
+background: var(--green-soft);
+border-radius: var(--radius-sm);
+}
+.realworld-card .context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 6px; font-style: italic;
+}
+
+/* Story cards */
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 22px;
+margin-bottom: 16px;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-left: 4px solid var(--primary);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.1rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 10px; font-style: italic;
+}
+.story-text {
+background: var(--primary-soft);
+padding: 16px; border-radius: var(--radius-sm);
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.4; font-style: italic;
+margin-bottom: 12px;
+border-left: 3px solid var(--primary);
+}
+.story-text strong { color: var(--primary-deep); font-style: normal; }
+.story-audio-controls { display: flex; gap: 8px; margin-bottom: 12px; }
+.story-audio-btn {
+padding: 8px 16px; border-radius: 18px;
+font-size: 12px; font-weight: 600; cursor: pointer;
+display: inline-flex; align-items: center; gap: 6px;
+border: none; transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(217, 119, 6, 0.3); }
+.story-stop-btn {
+background: var(--red-soft); color: var(--red);
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { background: rgba(245, 101, 101, 0.2); }
+.story-analysis {
+background: var(--bg-neutral);
+border-radius: var(--radius-sm);
+padding: 14px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 11px;
+margin-bottom: 8px; color: var(--text-muted);
+text-transform: uppercase; letter-spacing: 0.5px;
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 3px 0; padding-left: 18px; position: relative;
+font-size: 12px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+/* Pronunciation - Green background */
+.pronunciation-section {
+background: var(--green-soft);
+border-radius: var(--radius-lg);
+padding: 24px;
+margin-top: 20px;
+border: 1px solid var(--green);
+}
+.pronunciation-section h3 {
+font-family: 'Fraunces', serif; font-size: 1.1rem;
+margin-bottom: 12px; color: var(--green-deep);
+display: flex; align-items: center; gap: 6px;
+}
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 18px;
+margin-bottom: 14px;
+border: 1px solid var(--green);
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: var(--green);
+color: white;
+padding: 10px 12px;
+text-align: left; font-size: 11px; font-weight: 700;
+text-transform: uppercase; letter-spacing: 0.5px;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 12px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa {
+color: var(--green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-weight: 500;
+}
+.pronunciation-table td.stress {
+color: var(--text-primary);
+font-weight: 600;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+/* Intonation */
+.intonation-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 24px;
+margin-top: 16px;
+border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.intonation-section h3 {
+font-family: 'Fraunces', serif; font-size: 1.1rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 6px;
+}
+.intonation-subtitle {
+font-size: 12px; color: var(--text-muted);
+margin-top: 4px; font-style: italic;
+}
+.intonation-item {
+background: var(--bg-neutral);
+padding: 10px 14px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 12px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+border: 1px solid rgba(0, 0, 0, 0.06);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 2px;
+}
+.intonation-item .pattern {
+color: var(--green); font-weight: 600; font-size: 11px;
+}
+.intonation-item .context {
+color: var(--text-muted); font-size: 11px; font-style: italic;
+}
+.intonation-item .highlight {
+color: var(--primary-deep);
+font-weight: 600;
+background: var(--primary-soft);
+padding: 2px 6px;
+border-radius: 4px;
+}
+
+/* Scenario cards */
+.scenario-grid {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 14px;
+}
+.scenario-card {
+border-radius: var(--radius-md); padding: 20px;
+border: 2px solid;
+}
+.scenario-card.casual { background: var(--green-soft); border-color: var(--green); }
+.scenario-card.professional { background: var(--blue-soft); border-color: var(--blue); }
+.scenario-card.mixed { background: var(--purple-soft); border-color: var(--purple); }
+.scenario-card.challenge { background: var(--orange-soft); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 3px 10px;
+border-radius: 10px; font-size: 10px; font-weight: 700;
+text-transform: uppercase; letter-spacing: 0.5px;
+margin-bottom: 10px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 6px; color: var(--text-primary); }
+.scenario-context { font-size: 12px; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.3; }
+.scenario-requirements {
+background: rgba(255, 255, 255, 0.8);
+border-radius: var(--radius-sm); padding: 10px; margin-bottom: 10px;
+}
+.scenario-requirements h4 { font-size: 10px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li {
+padding: 2px 0; padding-left: 16px; position: relative;
+font-size: 11px; color: var(--text-secondary); line-height: 1.3;
+}
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.sample-flow-btn {
+background: white; border: 2px solid; padding: 8px 14px;
+border-radius: 18px; font-size: 11px; font-weight: 600;
+cursor: pointer; transition: all 0.3s ease;
+display: inline-flex; align-items: center; gap: 4px;
+}
+.scenario-card.casual .sample-flow-btn { border-color: var(--green); color: var(--green-deep); }
+.scenario-card.professional .sample-flow-btn { border-color: var(--blue); color: var(--blue-deep); }
+.scenario-card.mixed .sample-flow-btn { border-color: var(--purple); color: var(--purple-deep); }
+.scenario-card.challenge .sample-flow-btn { border-color: var(--orange); color: var(--orange-deep); }
+.sample-flow-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); }
+
+/* Task cards */
+.task-grid {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 14px;
+}
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border: 2px solid;
+position: relative;
+}
+.task-card.easy { border-color: var(--green); }
+.task-card.standard { border-color: var(--primary); }
+.task-card.challenge { border-color: var(--red); }
+.task-level {
+position: absolute; top: 12px; right: 12px;
+font-size: 10px; font-weight: 700;
+padding: 3px 10px; border-radius: 10px;
+letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: var(--green-soft); color: var(--green-deep); }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: var(--red-soft); color: var(--red); }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 4px; color: var(--text-primary); }
+.task-time { font-size: 11px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; }
+.task-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 10px; }
+.task-requirements {
+background: var(--bg-neutral);
+border-radius: var(--radius-sm); padding: 10px; margin-bottom: 10px;
+}
+.task-requirements h4 { font-size: 10px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li {
+padding: 2px 0; padding-left: 16px; position: relative;
+font-size: 11px; color: var(--text-secondary); line-height: 1.3;
+}
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable {
+font-size: 11px; color: var(--text-secondary);
+padding: 8px 10px; background: var(--primary-soft);
+border-radius: var(--radius-sm);
+}
+.task-deliverable strong { color: var(--primary-deep); }
+
+/* Mastery */
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 24px;
+border: 2px solid var(--primary);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 14px;
+display: flex; align-items: center; gap: 8px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 10px;
+padding: 10px; background: var(--bg-neutral);
+border-radius: var(--radius-sm); margin-bottom: 8px;
+border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.mastery-item input[type="checkbox"] {
+width: 18px; height: 18px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 13px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+/* Success + Tips Grid */
+.success-tips-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 12px;
+margin-top: 16px;
+}
+.success-tip-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-sm);
+padding: 14px;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-left: 3px solid var(--green);
+}
+.success-tip-card.tip {
+border-left-color: var(--primary);
+}
+.success-tip-card h4 {
+font-size: 11px; font-weight: 700;
+color: var(--text-primary);
+margin-bottom: 6px;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.success-tip-card p {
+font-size: 12px;
+color: var(--text-secondary);
+line-height: 1.3;
+}
+
+/* Flashcard */
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 24px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: var(--primary-soft);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 12px;
+min-height: 160px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+border: 1px solid var(--primary);
+}
+.flashcard:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(217, 119, 6, 0.15); }
+.flashcard-front p {
+font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 12px;
+}
+.flashcard-front button {
+background: var(--primary); color: white; border: none;
+padding: 6px 14px; border-radius: 16px;
+font-size: 11px; font-weight: 600; cursor: pointer;
+}
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic; margin-bottom: 10px; line-height: 1.3;
+}
+.flashcard-tip {
+background: rgba(255, 255, 255, 0.8);
+padding: 10px 12px; border-radius: var(--radius-sm);
+font-size: 12px; color: var(--text-secondary); line-height: 1.3;
+}
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 14px; }
+.flashcard-nav button {
+background: var(--bg-neutral); border: 1px solid rgba(0, 0, 0, 0.06);
+padding: 6px 12px; border-radius: 16px;
+font-size: 11px; font-weight: 600; color: var(--text-secondary);
+cursor: pointer; transition: all 0.3s ease;
+}
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+/* Quiz */
+.quiz-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 24px; margin: 24px 0;
+border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.quiz-question {
+background: var(--bg-neutral); border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 10px;
+border-left: 3px solid var(--primary);
+}
+.quiz-question h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 8px; color: var(--text-primary);
+}
+.quiz-options { display: flex; flex-direction: column; gap: 6px; }
+.quiz-option {
+padding: 8px 10px; background: rgba(255, 255, 255, 0.9);
+border: 2px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm); cursor: pointer;
+transition: all 0.3s ease; font-size: 12px; color: var(--text-secondary);
+}
+.quiz-option:hover { border-color: var(--primary); background: var(--primary-soft); }
+.check-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; padding: 10px 20px;
+border-radius: 20px; font-weight: 600; cursor: pointer;
+margin-top: 12px; font-size: 13px;
+box-shadow: 0 3px 10px rgba(217, 119, 6, 0.3);
+}
+
+/* Navigation */
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 32px 0; }
+.nav-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 18px; text-decoration: none; color: inherit;
+transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06);
+position: relative; overflow: hidden;
+}
+.nav-card::before {
+content: ''; position: absolute; top: 0; left: 0; right: 0;
+height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright));
+}
+.nav-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(217, 119, 6, 0.15); }
+.nav-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 32px 0; }
+.complete-btn {
+display: inline-flex; align-items: center; gap: 10px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 14px 28px; border-radius: 32px;
+font-weight: 600; font-size: 14px; border: none; cursor: pointer;
+transition: all 0.4s ease;
+box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+}
+.complete-btn:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 28px rgba(217, 119, 6, 0.5); }
+.complete-btn i { font-size: 1.1rem; }
+.complete-message { margin-top: 12px; font-size: 13px; color: var(--text-muted); }
+
+.footer {
+background: rgba(255, 255, 255, 0.95); padding: 28px 0 20px;
+text-align: center; margin-top: 40px;
+border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.footer-fox { font-size: 1.8rem; margin-bottom: 10px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 4px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 12px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.6rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.patterns-grid { grid-template-columns: 1fr; }
+.scenario-grid { grid-template-columns: 1fr; }
+.task-grid { grid-template-columns: 1fr; }
+.rs-grid { grid-template-columns: 1fr; }
+.comparison-grid { grid-template-columns: 1fr; }
+.principles-grid { grid-template-columns: 1fr; }
+.success-tips-grid { grid-template-columns: 1fr; }
+.realworld-grid { grid-template-columns: 1fr; }
+.formula-steps { flex-direction: column; }
+.formula-arrow { transform: rotate(90deg); }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-05.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 5 Hub</span>
+</a>
+<div class="day-indicator">
+Day 29 / 35
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-05.html" class="day-tab">Overview</a>
+<a href="week-05-day-29.html" class="day-tab active">Day 29</a>
+<a href="week-05-day-30.html" class="day-tab">Day 30</a>
+<a href="week-05-day-31.html" class="day-tab">Day 31</a>
+<a href="week-05-day-32.html" class="day-tab">Day 32</a>
+<a href="week-05-day-33.html" class="day-tab">Day 33</a>
+<a href="week-05-day-34.html" class="day-tab">Day 34</a>
+<a href="week-05-day-35.html" class="day-tab">Day 35</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-05.html">Week 5</a> › Day 29
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">📊</span>
+<h1 class="day-title">Executive Updates</h1>
+</div>
+<p class="day-subtitle">Senior people don't need more information — they need <strong>better thinking</strong>. Today you'll learn 5 executive patterns to communicate impact over activity, curate what deserves attention, and reduce other people's cognitive load.</p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-chart-line-up"></i> Executive Updates</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-books"></i> 5 patterns</div>
+<div class="meta-tag"><i class="ph-duotone ph-briefcase"></i> Professional Presence</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<!-- C1 Insight -->
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
+<div style="font-size: 14px;">"I completed the report. I had 5 meetings. I sent 20 emails."</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
+<div style="font-size: 14px;">"The report identified two risks that may delay approval. Here's what I'd recommend..."</div>
+</div>
+</div>
+"B2 speakers report activity. C1 speakers curate information. The difference is professional presence."
+</div>
+</div>
+
+<!-- Philosophy -->
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Activity Reports to Impact Communication
+</div>
+<p>Most people describe their work flatly: "I did X. I met with Y. I sent Z." But professionals with presence understand that <strong>activities are just the vehicle</strong>. What matters is <strong>what changed because of your work</strong> — and more importantly, <strong>choosing which information deserves the listener's attention</strong>.<br><br><strong>Professional presence isn't about saying more. It's about helping others see what matters.</strong><br><br><strong>What deserves attention depends on the audience.</strong> The same information, framed differently, serves a manager, a client, or a family member in completely different ways.</p>
+</div>
+<div class="comparison-grid">
+<div class="comparison-box negative">
+<div class="comparison-title"><i class="ph-duotone ph-x-circle"></i> Why most updates fail</div>
+<ul class="comparison-list">
+<li>Report everything instead of curating what matters</li>
+<li>No connection to the listener's priorities</li>
+<li>No clear direction or next steps</li>
+<li>Listener has to think: "So what?"</li>
+<li>Hardworking people get overlooked</li>
+</ul>
+</div>
+<div class="comparison-box positive">
+<div class="comparison-title"><i class="ph-duotone ph-check-circle"></i> What C1 communicators do differently</div>
+<ul class="comparison-list">
+<li>Choose what deserves attention before speaking</li>
+<li>Lead with impact: "We've made significant progress on X, which unblocks Y"</li>
+<li>Connect to the listener's priorities</li>
+<li>Guide attention forward: "Next steps are..."</li>
+<li>Reduce cognitive load for the listener</li>
+</ul>
+</div>
+</div>
+
+<!-- Executive Thinking Framework -->
+<div class="framework-box">
+<h3>🧠 The Executive Thinking Framework</h3>
+<div class="formula-steps">
+<div class="formula-step">What's happening?</div>
+<div class="formula-arrow">→</div>
+<div class="formula-step">Why does it matter?</div>
+<div class="formula-arrow">→</div>
+<div class="formula-step">What's next?</div>
+</div>
+<div class="formula-explanation">3 questions to ask yourself before every update. Not a rigid template — a thinking process. Risk and recommendation only appear when needed.</div>
+</div>
+
+<!-- Update Lifecycle -->
+<div class="framework-box" style="margin-top: 14px;">
+<h3>📈 The Lifecycle of an Executive Update</h3>
+<div class="formula-steps">
+<div class="formula-step">Activity</div>
+<div class="formula-arrow">→</div>
+<div class="formula-step">Analysis</div>
+<div class="formula-arrow">→</div>
+<div class="formula-step">Impact</div>
+<div class="formula-arrow">→</div>
+<div class="formula-step">Decision</div>
+<div class="formula-arrow">→</div>
+<div class="formula-step">Action</div>
+</div>
+<div class="formula-explanation">The real value is in the <strong>Impact</strong> and <strong>Decision</strong> phases. That's where an activity becomes an update. B2 speakers stop at Activity. C1 speakers go all the way to Action.</div>
+</div>
+</div>
+</section>
+
+<!-- 4 Principles -->
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-star"></i>
+4 Principles of Executive Communication
+</h2>
+<p class="section-desc">Framework để communicate impact trong mọi professional context.</p>
+</div>
+<div class="principles-grid">
+<div class="principle-card">
+<div class="principle-number">1</div>
+<div class="principle-title">Curate, don't dump</div>
+<div class="principle-desc">Choose what deserves attention. Not everything you did matters to the listener. Select the 1-2 things that do.</div>
+</div>
+<div class="principle-card">
+<div class="principle-number">2</div>
+<div class="principle-title">Impact over activity</div>
+<div class="principle-desc">Report what CHANGED because of your work, not what you DID. Activity is invisible; impact is visible.</div>
+</div>
+<div class="principle-card">
+<div class="principle-number">3</div>
+<div class="principle-title">Flag what matters</div>
+<div class="principle-desc">Highlight risks, decisions, and blockers clearly. Hiding important information is worse than sharing it.</div>
+</div>
+<div class="principle-card">
+<div class="principle-number">4</div>
+<div class="principle-title">Guide attention forward</div>
+<div class="principle-desc">Every communication should point to what's next. "We'll continue working on this" is not an update — it's a placeholder.</div>
+</div>
+</div>
+
+<!-- Reading Signals -->
+<div class="reading-signals">
+<h3><i class="ph-duotone ph-eye"></i> Reading the Room: When Updates Work</h3>
+<div class="rs-grid">
+<div class="rs-col ready">
+<h4>✅ Signs your update is working:</h4>
+<ul>
+<li>People understand quickly</li>
+<li>Listener doesn't ask "So what?"</li>
+<li>Fewer clarification questions</li>
+<li>Discussions move forward faster</li>
+<li>People know what action to take</li>
+</ul>
+</div>
+<div class="rs-col space">
+<h4>⚠️ Signs you're just reporting:</h4>
+<ul>
+<li>People ask "So what?" or "What does that mean?"</li>
+<li>You have to repeat yourself</li>
+<li>People seem confused or disengaged</li>
+<li>Discussions get stuck in details</li>
+<li>People don't know what to do next</li>
+</ul>
+</div>
+</div>
+<div class="rs-action">
+<strong>💡 What to do:</strong>
+<ul style="margin-top: 6px; padding-left: 16px; list-style: none;">
+<li style="padding: 3px 0;">• Update working → Continue curating, apply the 3-question framework</li>
+<li style="padding: 3px 0;">• Just reporting → Lead with impact, flag risks, close with clear next steps</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Today's Plan -->
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">💡</div>
+<div class="plan-title">5 Patterns</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">Executive communication patterns</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Examples</div>
+<div class="plan-time">10 min</div>
+<div class="plan-desc">Integrated stories</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">25 min</div>
+<div class="plan-desc">4 scenarios + record</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">10 min</div>
+<div class="plan-desc">Flashcards + quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 5 Patterns -->
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chat-centered-text"></i>
+5 Executive Communication Patterns
+</h2>
+<p class="section-desc">5 patterns để communicate impact thay vì activity. Mỗi pattern có 4 examples (Life casual, Life semi-formal, Business). Click 🔊 để nghe phát âm.</p>
+</div>
+
+<div class="patterns-grid">
+
+<!-- Pattern 1 -->
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">"We've made significant progress on [X]"</div>
+<div class="pattern-ipa">/wiːv med sɪɡˈnɪfɪkənt ˈprɑɡres ɑːn/</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Semi-formal → Formal</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">State progress with impact. Show what moved forward, not just what you did.</div>
+<div class="pattern-why">
+<strong>Why C1?</strong>
+<p>"We've made significant progress" = state outcome with weight. Creates sense of forward movement. More strategic than "I worked on X."</p>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"We've made significant progress on the house renovation — the kitchen is finally done."</span>
+<button class="audio-btn" onclick="playAudio('We\'ve made significant progress on the house renovation — the kitchen is finally done.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"We've made significant progress on our savings goal — we're 80% there."</span>
+<button class="audio-btn" onclick="playAudio('We\'ve made significant progress on our savings goal — we\'re 80% there.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"We've made significant progress on the partnership deal — legal review is 90% complete."</span>
+<button class="audio-btn" onclick="playAudio('We\'ve made significant progress on the partnership deal — legal review is 90% complete.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"We've made significant progress on Q3 targets — we're at 80% with a month to go."</span>
+<button class="audio-btn" onclick="playAudio('We\'ve made significant progress on Q3 targets — we\'re at 80% with a month to go.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake</strong>
+<div class="wrong">❌ "We've made significant progress" when nothing actually moved</div>
+<div class="right">"We've made significant progress on X — legal review is 90% complete" (with evidence)</div>
+</div>
+<div class="pattern-alternatives">
+<strong>Alternatives:</strong>
+<ul>
+<li>"We're making good progress on..." (casual)</li>
+<li>"We have achieved substantial progress regarding..." (formal)</li>
+</ul>
+</div>
+</div>
+
+<!-- Pattern 2 -->
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">"The key impact has been [X]"</div>
+<div class="pattern-ipa">/ðə kiː ˈɪmpækt hæz biːn/</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Semi-formal → Formal</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Highlight the main impact. Connect activity to outcome that matters to the listener.</div>
+<div class="pattern-why">
+<strong>Why C1?</strong>
+<p>"The key impact has been" = highlight main outcome. Shows you've thought about what matters. More impactful than "The result was."</p>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"The key impact has been more family time — the shorter commute gives us 2 extra hours."</span>
+<button class="audio-btn" onclick="playAudio('The key impact has been more family time — the shorter commute gives us 2 extra hours.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"The key impact has been better sleep — I'm more energized for everything."</span>
+<button class="audio-btn" onclick="playAudio('The key impact has been better sleep — I\'m more energized for everything.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"The key impact has been unblocking the sales team — they can now close deals 3 days faster."</span>
+<button class="audio-btn" onclick="playAudio('The key impact has been unblocking the sales team — they can now close deals 3 days faster.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"The key impact has been customer retention — we saved a $50K account."</span>
+<button class="audio-btn" onclick="playAudio('The key impact has been customer retention — we saved a $50K account.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake</strong>
+<div class="wrong">❌ "The key impact has been..." for small results (inflates)</div>
+<div class="right">"The key impact has been unblocking the sales team" (genuine, measurable)</div>
+</div>
+<div class="pattern-alternatives">
+<strong>Alternatives:</strong>
+<ul>
+<li>"The main thing is..." (casual)</li>
+<li>"The primary outcome has been..." (formal)</li>
+</ul>
+</div>
+</div>
+
+<!-- Pattern 3 -->
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">"One thing to watch is [X]"</div>
+<div class="pattern-ipa">/wʌn θɪŋ tuː wɑːtʃ ɪz/</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Semi-formal → Formal</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Flag a risk or watch-out professionally. Show you're monitoring without creating panic.</div>
+<div class="pattern-why">
+<strong>Why C1?</strong>
+<p>"One thing to watch" = flag risk calmly. Shows awareness without alarm. More professional than "There's a problem."</p>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"One thing to watch is the weather next weekend — we might need a backup plan."</span>
+<button class="audio-btn" onclick="playAudio('One thing to watch is the weather next weekend — we might need a backup plan.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"One thing to watch is the budget — we're close to the limit."</span>
+<button class="audio-btn" onclick="playAudio('One thing to watch is the budget — we\'re close to the limit.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"One thing to watch is the legal review timeline — it could add a week to our launch."</span>
+<button class="audio-btn" onclick="playAudio('One thing to watch is the legal review timeline — it could add a week to our launch.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"One thing to watch is the third-party rate limit — I'm monitoring it closely."</span>
+<button class="audio-btn" onclick="playAudio('One thing to watch is the third-party rate limit — I\'m monitoring it closely.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake</strong>
+<div class="wrong">❌ "One thing to watch is..." without a monitoring plan</div>
+<div class="right">"One thing to watch is X — I'm monitoring it closely and will update you by Friday"</div>
+</div>
+<div class="pattern-alternatives">
+<strong>Alternatives:</strong>
+<ul>
+<li>"Just a heads-up about..." (casual)</li>
+<li>"We should monitor [X] closely..." (formal)</li>
+</ul>
+</div>
+</div>
+
+<!-- Pattern 4 -->
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">"Here's what I'd recommend"</div>
+<div class="pattern-ipa">/hɪrz wɑːt aɪd ˌrɛkəmɛnd/</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Semi-formal → Formal</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Offer a recommendation with confidence. Show you've thought through options.</div>
+<div class="pattern-why">
+<strong>Why C1?</strong>
+<p>"Here's what I'd recommend" = offer opinion with weight. Shows leadership and strategic thinking. More confident than "I think we should."</p>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"Here's what I'd recommend — let's book the venue now before prices go up."</span>
+<button class="audio-btn" onclick="playAudio('Here\'s what I\'d recommend — let\'s book the venue now before prices go up.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"Here's what I'd recommend — we compare three options before deciding."</span>
+<button class="audio-btn" onclick="playAudio('Here\'s what I\'d recommend — we compare three options before deciding.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"Here's what I'd recommend — we activate the backup supplier by next week."</span>
+<button class="audio-btn" onclick="playAudio('Here\'s what I\'d recommend — we activate the backup supplier by next week.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"Here's what I'd recommend — we go with Option A to hit the deadline."</span>
+<button class="audio-btn" onclick="playAudio('Here\'s what I\'d recommend — we go with Option A to hit the deadline.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake</strong>
+<div class="wrong">❌ "Here's what I'd recommend..." without reasoning</div>
+<div class="right">"Here's what I'd recommend X, because Y" (shows you've thought it through)</div>
+</div>
+<div class="pattern-alternatives">
+<strong>Alternatives:</strong>
+<ul>
+<li>"I think we should..." (casual)</li>
+<li>"My recommendation would be..." (formal)</li>
+</ul>
+</div>
+</div>
+
+<!-- Pattern 5 -->
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">"Next steps are [X]" / "From here, the priority is..."</div>
+<div class="pattern-ipa">/nɛkst stps ɑːr/</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Semi-formal → Formal</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Close with clear direction. Show forward motion and ownership.</div>
+<div class="pattern-why">
+<strong>Why C1?</strong>
+<p>"Next steps are" or "From here, the priority is" = close with clarity. Shows ownership and forward motion. More professional than "We'll continue."</p>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"So the next thing we'll focus on is finalizing the guest list by Friday."</span>
+<button class="audio-btn" onclick="playAudio('So the next thing we\'ll focus on is finalizing the guest list by Friday.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag">🏠 Life</span>
+<span>"From here, the priority is comparing the venues this weekend."</span>
+<button class="audio-btn" onclick="playAudio('From here, the priority is comparing the venues this weekend.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"Next steps are the synthesis report by Tuesday, owned by the team."</span>
+<button class="audio-btn" onclick="playAudio('Next steps are the synthesis report by Tuesday, owned by the team.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"From here, the priority is team training this week, owned by operations."</span>
+<button class="audio-btn" onclick="playAudio('From here, the priority is team training this week, owned by operations.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake</strong>
+<div class="wrong">❌ "Next steps are..." without owner or timeline</div>
+<div class="right">"Next steps are X by [date], owned by [person]" (clear accountability)</div>
+</div>
+<div class="pattern-alternatives">
+<strong>Alternatives:</strong>
+<ul>
+<li>"So next we'll..." (casual)</li>
+<li>"The subsequent actions will be..." (formal)</li>
+</ul>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Real-World Examples -->
+<section class="section">
+<div class="realworld-section">
+<h3><i class="ph-duotone ph-lightbulb"></i> Real-World Examples: Before vs After</h3>
+<p style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px; font-style: italic;">Xem cách biến activity reports thành impact communication trong các tình huống thực tế.</p>
+<div class="realworld-grid">
+<div class="realworld-card">
+<h4>📧 Weekly Email to Manager</h4>
+<div class="before">❌ "This week I had 5 meetings, reviewed 10 documents, and sent 20 emails."</div>
+<div class="after">✅ "We've made significant progress on the partnership deal — legal review is 90% complete. The key impact has been unblocking the Q3 pipeline."</div>
+<div class="context">Context: Friday afternoon update email</div>
+</div>
+<div class="realworld-card">
+<h4>🏠 Family Update</h4>
+<div class="before">❌ "I went to the bank, paid some bills, and called the insurance company."</div>
+<div class="after">✅ "We've made significant progress on our finances — all bills are paid. The key impact has been we're now 3 months ahead on our savings goal."</div>
+<div class="context">Context: Dinner conversation with spouse</div>
+</div>
+<div class="realworld-card">
+<h4>💼 Project Status Meeting</h4>
+<div class="before">❌ "Things are going well. We're working on the design and development."</div>
+<div class="after">✅ "We've made significant progress on the design phase. One thing to watch is the development timeline — we might need 1 extra week. Here's what I'd recommend: we prioritize the core features first."</div>
+<div class="context">Context: Monday standup with team</div>
+</div>
+<div class="realworld-card">
+<h4>🏠 Home Renovation</h4>
+<div class="before">❌ "We've been working on the house. The kitchen is done and we're doing the bathroom now."</div>
+<div class="after">✅ "We've made significant progress on the renovation — the kitchen is finally done. The key impact has been we're actually cooking at home now. Next steps are finalizing the bathroom design by Friday."</div>
+<div class="context">Context: Update to family members</div>
+</div>
+<div class="realworld-card">
+<h4>💼 Client Presentation</h4>
+<div class="before">❌ "We've been working hard on your project. We had several meetings and made some changes."</div>
+<div class="after">✅ "We've made significant progress on your project — we've completed the research phase ahead of schedule. The key impact has been we can now move to implementation 2 weeks early."</div>
+<div class="context">Context: Quarterly review with client</div>
+</div>
+<div class="realworld-card">
+<h4>🏠 Trip Planning</h4>
+<div class="before">❌ "I looked at some hotels and flights. We should book soon."</div>
+<div class="after">✅ "We've made significant progress on trip planning — I've narrowed it down to 3 hotels. One thing to watch is flight prices — they're going up. Here's what I'd recommend: we book by Wednesday."</div>
+<div class="context">Context: Planning vacation with partner</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Integrated Stories -->
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Executive Stories
+</h2>
+<p class="section-desc">Xem cách 5 executive patterns được kết hợp trong 2 updates hoàn chỉnh. Story 1: Life context (family renovation). Story 2: Business context (Q3 campaign).</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Story 1: The House Renovation Update</h3>
+<div class="story-context">Context: Bạn đang update gia đình về tiến độ renovate nhà. Audience: family members who care about timeline, budget, and living situation.</div>
+<div class="story-text" id="dialogue1">
+"<strong>We've made significant progress on</strong> the house renovation — the kitchen is finally done and it's transformed the space. <strong>The key impact has been</strong> more family time; we're actually cooking together now instead of ordering takeout. <strong>One thing to watch is</strong> the bathroom timeline — the contractor mentioned a potential 1-week delay due to tile shipping. <strong>Here's what I'd recommend</strong> — we lock in the backup tiler just in case. <strong>So the next thing we'll focus on is</strong> finalizing the bathroom design by Friday, and I'll update you all next weekend."
+</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue1').textContent)">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Why this works:</h4>
+<ul>
+<li><strong>"We've made significant progress on"</strong> → Opens with concrete progress (kitchen done), not vague "things are going well"</li>
+<li><strong>"The key impact has been"</strong> → Connects to what family cares about (more family time), not just construction details</li>
+<li><strong>"One thing to watch is"</strong> → Flags risk calmly (1-week delay) without panic, shows you're monitoring</li>
+<li><strong>"Here's what I'd recommend"</strong> → Offers solution (backup tiler), shows you've thought ahead</li>
+<li><strong>"So the next thing we'll focus on"</strong> → Closes with clear next step (bathroom design by Friday) + owner (I'll update)</li>
+<li><strong>Audience awareness:</strong> Family doesn't need construction jargon — they need to know: Is it on track? How does it affect us? What's next?</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Story 2: The Q3 Campaign Update</h3>
+<div class="story-context">Context: Bạn đang update leadership team về Q3 campaign performance. Audience: senior leaders who care about metrics, pipeline, and risks to targets.</div>
+<div class="story-text" id="dialogue2">
+"<strong>We've made significant progress on</strong> the Q3 campaign — it launched Monday with 150% above target engagement. <strong>The key impact has been</strong> positioning us strongly for the holiday pipeline; early signals suggest we'll exceed Q3 targets by 20%. <strong>One thing to watch is</strong> the conversion rate — it's strong on awareness but we need to track whether it converts to sales. <strong>Here's what I'd recommend</strong> — we monitor closely and adjust ad spending by Wednesday if needed. <strong>Next steps are</strong> the conversion analysis by Wednesday, owned by marketing, and I'll present findings at Friday's leadership meeting."
+</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue2').textContent)">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Why this works:</h4>
+<ul>
+<li><strong>"We've made significant progress on"</strong> → Opens with specific metric (150% above target), not "campaign is going well"</li>
+<li><strong>"The key impact has been"</strong> → Connects to what leaders care about (holiday pipeline, exceeding targets by 20%)</li>
+<li><strong>"One thing to watch is"</strong> → Flags real risk (conversion rate) without alarm, shows you're tracking it</li>
+<li><strong>"Here's what I'd recommend"</strong> → Offers conditional plan (monitor + adjust by Wednesday), shows strategic thinking</li>
+<li><strong>"Next steps are"</strong> → Closes with clear action (conversion analysis), date (Wednesday), owner (marketing), and follow-up (Friday meeting)</li>
+<li><strong>Audience awareness:</strong> Leaders don't need creative details — they need: Are we on track? What's the risk? What are you doing about it?</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Pronunciation Focus -->
+<section class="section">
+<div class="pronunciation-section">
+<h3><i class="ph-duotone ph-microphone-stage"></i> Pronunciation Focus</h3>
+<p style="font-size: 12px; color: var(--green-deep); margin-bottom: 14px; font-style: italic;">Executive communication phrases pronunciation và connected speech patterns.</p>
+
+<div class="pronunciation-table">
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>IPA</th>
+<th>Stress / Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>We've made significant progress</td>
+<td class="ipa">/wiːv med sɪɡˈnɪfɪkənt ˈprɑɡres/</td>
+<td class="stress">Stress on "<strong>sig-NIF-i-cant</strong>" and "<strong>PRO-gress</strong>"</td>
+</tr>
+<tr>
+<td>The key impact has been</td>
+<td class="ipa">/ðə kiː ˈɪmpækt hæz biːn/</td>
+<td class="stress">Stress on "<strong>KEY</strong>" and "<strong>IM-pact</strong>"</td>
+</tr>
+<tr>
+<td>One thing to watch</td>
+<td class="ipa">/wʌn θɪŋ tuː wɑtʃ/</td>
+<td class="stress">Smooth linking: "<strong>thing-to-watch</strong>"</td>
+</tr>
+<tr>
+<td>Here's what I'd recommend</td>
+<td class="ipa">/hɪrz wɑːt aɪd ˌrɛkəmɛnd/</td>
+<td class="stress">Stress on "<strong>rec-om-MEND</strong>"</td>
+</tr>
+<tr>
+<td>Next steps are / From here, the priority is</td>
+<td class="ipa">/nɛkst stɛps ɑːr/</td>
+<td class="stress">Linking: "<strong>steps-are</strong>" → /stɛpsɑr/</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- Intonation Patterns -->
+<div class="intonation-section">
+<h3><i class="ph-duotone ph-music-notes"></i> Intonation Patterns — When & Why</h3>
+<p class="intonation-subtitle">Intonation không chỉ là "lên xuống" — nó truyền tải cảm xúc và intention. Dùng đúng intonation = nghe natural và có authority.</p>
+
+<div class="intonation-item">
+<span class="phrase">"We've made significant progress on..."</span>
+<span class="pattern">↗↘ Rise-fall</span>
+<span class="context">— <span class="highlight">Confident, forward-moving</span>. Dùng khi mở đầu update với good news. <span class="highlight">Rise tạo anticipation</span>, fall thể hiện certainty.</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"The key impact has been..."</span>
+<span class="pattern">↘ Falling</span>
+<span class="context">— <span class="highlight">Emphasis on key outcome</span>. Dùng khi highlight điều quan trọng nhất. <span class="highlight">Falling tone = "đây là điều bạn cần nhớ"</span>.</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"One thing to watch is..."</span>
+<span class="pattern">↗ Rising</span>
+<span class="context">— <span class="highlight">Calm alertness</span>. Dùng khi flag risk. <span class="highlight">Rising tone = "cần chú ý nhưng không panic"</span>. Tránh falling tone (nghe như bad news).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Here's what I'd recommend..."</span>
+<span class="pattern">↘ Falling</span>
+<span class="context">— <span class="highlight">Confident recommendation</span>. Dùng khi đưa ra suggestion. <span class="highlight">Falling tone = "tôi đã nghĩ kỹ về điều này"</span>. Tránh rising (nghe uncertain).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Next steps are..." / "From here, the priority is..."</span>
+<span class="pattern">↘ Falling</span>
+<span class="context">— <span class="highlight">Clear, decisive closure</span>. Dùng khi kết thúc update. <span class="highlight">Falling tone = "đây là plan, không phải suggestion"</span>. Tạo sense of ownership.</span>
+</div>
+</div>
+</section>
+
+<!-- Practice Scenarios -->
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Practice Scenarios
+</h2>
+<p class="section-desc">Practice executive communication in different contexts. Always reduce the listener's cognitive load!</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Update to Partner</h3>
+<p class="scenario-context">You're updating your partner about a home project, financial decision, or trip planning.</p>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use 3+ executive patterns</li>
+<li>Lead with impact, not activity</li>
+<li>Flag any risks calmly</li>
+<li>Close with clear direction</li>
+</ul>
+</div>
+<button class="sample-flow-btn">🎭 See Sample Structure</button>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Professional - 3-4 min</span>
+<h3>Scenario 2: Weekly Update to Manager</h3>
+<p class="scenario-context">Write or deliver a weekly update about your work. Focus on what changed, not what you did.</p>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use 4+ executive patterns</li>
+<li>Connect to bigger picture</li>
+<li>Flag risks with monitoring plan</li>
+<li>Clear ownership and timeline</li>
+</ul>
+</div>
+<button class="sample-flow-btn">🎭 See Sample Structure</button>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Mixed - 4-5 min</span>
+<h3>Scenario 3: Cross-functional Update</h3>
+<p class="scenario-context">Update another team about something your team completed that affects them.</p>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use 4+ executive patterns</li>
+<li>Reduce their cognitive load</li>
+<li>Highlight what matters to THEM</li>
+<li>Clear next steps for both teams</li>
+</ul>
+</div>
+<button class="sample-flow-btn">🎭 See Sample Structure</button>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: 30-Second Verbal Update</h3>
+<p class="scenario-context">In a meeting, you have 30 seconds to update everyone. Make every word count.</p>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use ALL 5 executive patterns</li>
+<li>Under 30 seconds</li>
+<li>Maximum impact, minimum words</li>
+<li>Sound strategic, not busy</li>
+</ul>
+</div>
+<button class="sample-flow-btn">🎭 See Sample Structure</button>
+</div>
+</div>
+</section>
+
+<!-- Reality Task -->
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level
+</h2>
+<p class="section-desc">Bài tập THỰC TẾ - apply executive communication vào đời thật. Chọn 1 trong 3 levels.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Rewrite an Update</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Take your last work or life update and rewrite it using executive thinking. Lead with impact, not activity.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use 3+ executive patterns</li>
+<li>Lead with impact</li>
+<li>Flag what matters</li>
+<li>Clear direction</li>
+</ul>
+</div>
+<div class="task-deliverable">
+<strong>Deliverable:</strong> Before/after comparison (email or text)
+</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record an Executive Update</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record a 2-minute executive update about a real project or life situation you're managing.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use 4+ executive patterns</li>
+<li>Sound strategic, not busy</li>
+<li>Natural delivery</li>
+<li>Under 2 minutes</li>
+</ul>
+</div>
+<div class="task-deliverable">
+<strong>Deliverable:</strong> Audio recording
+</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Executive Communication Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">Create a real executive update for a real stakeholder using ALL 5 patterns. Send it and get feedback.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use ALL 5 executive patterns</li>
+<li>Send to a real person</li>
+<li>Get feedback on clarity</li>
+<li>3 iterations</li>
+</ul>
+</div>
+<div class="task-deliverable">
+<strong>Deliverable:</strong> Sent email OR video
+</div>
+</div>
+</div>
+</section>
+
+<!-- Mastery -->
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Executive Communication Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">Can curate information before speaking</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Can state progress with impact using "We've made significant progress on..."</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Can highlight key outcomes with "The key impact has been..."</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">Can flag risks calmly with "One thing to watch is..."</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Can offer recommendations with confidence using "Here's what I'd recommend..."</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery6">
+<label for="mastery6">Can close with clear direction using "Next steps are..." or "From here, the priority is..."</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery7">
+<label for="mastery7">Can apply the 3-question framework before every update</label>
+</div>
+</div>
+
+<!-- Success Criteria + Pro Tips Grid -->
+<div class="success-tips-grid">
+<div class="success-tip-card">
+<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> People understand quickly</h4>
+<p>Your update is clear and concise. No need to repeat or explain further.</p>
+</div>
+<div class="success-tip-card">
+<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> Listener doesn't ask "So what?"</h4>
+<p>You've already answered the implicit question. Impact is clear.</p>
+</div>
+<div class="success-tip-card">
+<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> Risks are flagged, not hidden</h4>
+<p>You've mentioned potential issues calmly with a monitoring plan.</p>
+</div>
+<div class="success-tip-card">
+<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> Direction is clear</h4>
+<p>Next steps include action, date, and owner. No ambiguity.</p>
+</div>
+<div class="success-tip-card">
+<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> You sound strategic, not busy</h4>
+<p>You focus on outcomes and impact, not activities and effort.</p>
+</div>
+<div class="success-tip-card tip">
+<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Curate, don't dump</h4>
+<p>Choose what deserves attention. Not everything you did matters.</p>
+</div>
+<div class="success-tip-card tip">
+<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Impact over activity</h4>
+<p>Report what CHANGED, not what you DID. Activity is invisible.</p>
+</div>
+<div class="success-tip-card tip">
+<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Flag what matters</h4>
+<p>Don't hide important info. Hiding risks is worse than sharing them.</p>
+</div>
+<div class="success-tip-card tip">
+<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Guide forward</h4>
+<p>Always point to what's next. "We'll continue" is not an update.</p>
+</div>
+<div class="success-tip-card tip">
+<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Audience matters</h4>
+<p>What deserves attention depends on who's listening. Adapt accordingly.</p>
+</div>
+</div>
+</section>
+
+<!-- Flashcard Review -->
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards với executive patterns và tips. Mặt trước: pattern. Mặt sau: example + tip.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>We've made significant progress on...</p>
+<button>Tap to reveal example →</button>
+</div>
+<div class="flashcard-back">
+<p>"We've made significant progress on the partnership deal — legal review is 90% complete."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> State progress with impact. Follow with specific evidence. Avoid if nothing actually moved.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<!-- Quiz -->
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Executive Communication
+</h2>
+<p class="section-desc">7 câu hỏi về executive communication patterns. Chọn đáp án ĐÚNG NHẤT.</p>
+</div>
+<div class="quiz-question">
+<h4>1. Pattern nào state progress với impact tốt nhất?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I worked on the project this week."</div>
+<div class="quiz-option">B. "We've made significant progress on the partnership deal — legal review is 90% complete."</div>
+<div class="quiz-option">C. "The project is going well."</div>
+<div class="quiz-option">D. "I had 5 meetings about the project."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. "The key impact has been..." dùng để làm gì?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Describe activities</div>
+<div class="quiz-option">B. Highlight main outcome and connect to bigger picture</div>
+<div class="quiz-option">C. List tasks completed</div>
+<div class="quiz-option">D. Ask for help</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. "One thing to watch is..." thêm gì vào communication?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Panic and alarm</div>
+<div class="quiz-option">B. Calm risk awareness with monitoring plan</div>
+<div class="quiz-option">C. Excuse for delay</div>
+<div class="quiz-option">D. Blame on others</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. "Here's what I'd recommend..." thể hiện điều gì?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Uncertainty</div>
+<div class="quiz-option">B. Strategic thinking and confidence</div>
+<div class="quiz-option">C. Weakness</div>
+<div class="quiz-option">D. Indifference</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. "Next steps are..." / "From here, the priority is..." phải bao gồm gì?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Vague plans</div>
+<div class="quiz-option">B. Clear direction and timing when possible</div>
+<div class="quiz-option">C. Just the action</div>
+<div class="quiz-option">D. Just the timeline</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. Communication nào là executive thinking C1 style?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I had 5 meetings. I reviewed 10 documents. I sent 20 emails."</div>
+<div class="quiz-option">B. "We've made significant progress on the deal, which unblocks Q3 revenue. One thing to watch is legal timeline. Next steps are finalization by Friday."</div>
+<div class="quiz-option">C. "Things are going well. Making good progress."</div>
+<div class="quiz-option">D. "I've been busy with the project."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. Triết lý cốt lõi của executive communication là gì?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Report everything you did</div>
+<div class="quiz-option">B. Use the most formal vocabulary possible</div>
+<div class="quiz-option">C. Professional presence isn't about saying more. It's about helping others see what matters.</div>
+<div class="quiz-option">D. Always use data and numbers</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<!-- Navigation -->
+<div class="day-navigation">
+<a href="week-05.html" class="nav-card">
+<div class="nav-label">← Previous</div>
+<div class="nav-title">Week 5 Hub</div>
+</a>
+<a href="week-05-day-30.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 30: Speaking Up & Interjecting</div>
+</a>
+</div>
+
+<!-- Complete Button -->
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 29 Complete & Continue to Day 30</span>
+</button>
+<div class="complete-message">Communicate impact. Reduce cognitive load. 📊</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 5 · Day 29 · Executive Updates</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+
+speechSynthesis.cancel();
+
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-29')) {
+completed.push('day-29');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 29 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'Communicate impact. Reduce cognitive load. 📊';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-29')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 29 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
