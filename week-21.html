@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 21: Understanding Beyond Words | Professional Fluency Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+    
+    <style>
+        :root {
+            /* Phase 4: Orange + Green Theme */
+            --orange: #F97316;
+            --orange-bright: #EA580C;
+            --orange-soft: #FFEDD5;
+            --orange-deep: #9A3412;
+            --green: #10B981;
+            --green-bright: #059669;
+            --green-soft: #D1FAE5;
+            --green-deep: #065F46;
+            --text-primary: #1E293B;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #FFEDD5 0%, #D1FAE5 25%, #FFEDD5 50%, #D1FAE5 75%, #FFEDD5 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Aurora Background Animation - Phase 4 Orange + Green */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(249, 115, 22, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 85% 20%, rgba(16, 185, 129, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(234, 88, 12, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 30% 60%, rgba(5, 150, 105, 0.3) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+            animation: aurora 20s ease-in-out infinite;
+        }
+        
+        @keyframes aurora {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            33% { transform: scale(1.15) rotate(120deg); opacity: 1; }
+            66% { transform: scale(0.95) rotate(240deg); opacity: 0.85; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .top-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(30px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-back {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-back i { --ph-color: var(--orange-bright); }
+        
+        .week-indicator {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .week-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .week-icon-large { font-size: 3.5rem; margin-bottom: 16px; }
+        .week-icon-large i { --ph-color: var(--orange-bright); }
+        
+        .week-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--orange-bright), var(--green-bright));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .week-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+        
+        .week-quote {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--orange-bright);
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 24px auto;
+            max-width: 650px;
+        }
+        
+        .week-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        
+        .week-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .week-tag i { --ph-color: var(--orange-bright); }
+        
+        .section { margin: 48px 0; }
+        .section-header { margin-bottom: 32px; text-align: center; }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .section-title i { --ph-color: var(--orange-bright); }
+        
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(16, 185, 129, 0.12));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            border-left: 4px solid var(--orange-bright);
+            margin-bottom: 24px;
+        }
+        
+        .philosophy-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .philosophy-title i { --ph-color: var(--orange-bright); }
+        
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .principle-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border-left: 4px solid var(--green-bright);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .principle-number {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--green-deep);
+            background: var(--green-soft);
+            padding: 4px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .principle-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .principle-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .comparison-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-top: 24px;
+        }
+        
+        .comparison-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-item {
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            border-left: 4px solid;
+        }
+        
+        .comparison-item.negative { background: rgba(245, 101, 101, 0.1); border-left-color: #F56565; }
+        .comparison-item.positive { background: rgba(72, 187, 120, 0.1); border-left-color: #48BB78; }
+        
+        .comparison-label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        /* 7 DAYS GRID */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .day-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--orange-bright);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.4s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(249, 115, 22, 0.2);
+        }
+        
+        .day-label {
+            background: linear-gradient(135deg, var(--orange-soft), var(--green-soft));
+            color: var(--orange-deep);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .day-context {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--green-bright);
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .day-icon { margin-bottom: 16px; }
+        .day-icon i { font-size: 2rem; --ph-color: var(--orange-bright); }
+        
+        .day-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .day-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .day-focus {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 237, 213, 0.5);
+        }
+        
+        .focus-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+        
+        .focus-list { list-style: none; }
+        
+        .focus-list li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed rgba(255, 237, 213, 0.5);
+        }
+        
+        .focus-list li:last-child { border-bottom: none; }
+        
+        .focus-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--orange-bright);
+            font-weight: 600;
+        }
+        
+        /* Communication Choice Box */
+        .choice-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(249, 115, 22, 0.08));
+            border: 2px solid var(--orange-bright);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .choice-box-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--orange-bright);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .choice-box-title i { --ph-color: var(--orange-bright); }
+        
+        .choice-box-content {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .choice-box-content p {
+            margin-bottom: 8px;
+        }
+        
+        .choice-box-content strong {
+            color: var(--green-bright);
+        }
+        
+        /* Mature Communicator Reminder */
+        .reminder-box {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(16, 185, 129, 0.1));
+            border-left: 4px solid var(--green-bright);
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
+            margin-top: 16px;
+            font-style: italic;
+            font-size: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .reminder-box i {
+            --ph-color: var(--green-bright);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .day-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(16, 185, 129, 0.12));
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--orange-deep);
+            font-weight: 600;
+            border: 1px solid rgba(249, 115, 22, 0.2);
+        }
+        
+        .day-time i { --ph-color: var(--orange-bright); }
+        
+        /* MILESTONE */
+        .milestone-card {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(16, 185, 129, 0.12));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid var(--orange-bright);
+            text-align: center;
+        }
+        
+        .milestone-icon { font-size: 3.5rem; margin-bottom: 16px; }
+        .milestone-icon i { --ph-color: var(--orange-bright); }
+        
+        .milestone-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .milestone-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .milestone-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        
+        .milestone-skill {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.5;
+        }
+        
+        .milestone-skill i {
+            --ph-color: var(--orange-bright);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        /* QUIZ */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .quiz-question {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--orange-bright);
+        }
+        
+        .quiz-question h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        
+        .quiz-options { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 6px; 
+        }
+        
+        .quiz-option {
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(255, 237, 213, 0.5);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.3;
+        }
+        
+        .quiz-option:hover { 
+            border-color: var(--orange-bright); 
+            background: rgba(255, 237, 213, 0.2); 
+        }
+        
+        .check-btn {
+            background: linear-gradient(135deg, var(--orange-bright), var(--green-bright));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+        
+        /* NAVIGATION */
+        .week-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 48px 0;
+        }
+        
+        .nav-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 237, 213, 0.5));
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange-bright), var(--green-bright));
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(249, 115, 22, 0.25);
+        }
+        
+        .nav-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .cta-container { text-align: center; margin: 48px 0; }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--orange-bright), var(--green-bright));
+            color: white;
+            padding: 18px 36px;
+            border-radius: 36px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 28px rgba(249, 115, 22, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 36px rgba(249, 115, 22, 0.5);
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px 0 28px;
+            text-align: center;
+            margin-top: 56px;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-fox { font-size: 2.5rem; margin-bottom: 12px; }
+        .footer-title { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 6px; font-weight: 600; }
+        .footer-tagline { color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .week-title { font-size: 2.5rem; }
+            .days-grid { grid-template-columns: 1fr; }
+            .milestone-skills { grid-template-columns: 1fr; }
+            .week-navigation { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">
+                <i class="ph-duotone ph-arrow-left"></i>
+                <span>Roadmap</span>
+            </a>
+            <div class="week-indicator">Week 21/24 · Phase 4</div>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="week-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <a href="phase-04.html">Phase 4: Communication Maturity</a> › Week 21
+            </div>
+            <div class="week-icon-large">
+                <i class="ph-duotone ph-brain"></i>
+            </div>
+            <h1 class="week-title">Understanding Beyond Words</h1>
+            <p class="week-description">Week 21 không dạy bạn cách đọc. Week 21 dạy bạn cách <strong>giải mã thông điệp</strong> để đưa ra lựa chọn giao tiếp trưởng thành. Bạn sẽ học cách hiểu ý đồ thực sự, phát hiện những gì không được nói ra, và biết khi nào im lặng là câu trả lời tốt nhất.</p>
+            <div class="week-quote">"Understanding is not the end of communication. It is the beginning of every good communication choice."</div>
+            <div class="week-tags">
+                <div class="week-tag"><i class="ph-duotone ph-sparkle"></i> Phase 4 Begins</div>
+                <div class="week-tag"><i class="ph-duotone ph-clock"></i> 7 days × 60 min</div>
+                <div class="week-tag"><i class="ph-duotone ph-house"></i> Life + Business</div>
+                <div class="week-tag"><i class="ph-duotone ph-brain"></i> Communication Decoding</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <!-- Philosophy Section -->
+        <section class="section">
+            <div class="philosophy-section">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-lightbulb"></i>
+                    Week 21 Philosophy
+                </h2>
+                
+                <div class="philosophy-box">
+                    <div class="philosophy-title">
+                        <i class="ph-duotone ph-brain"></i>
+                        Phase 4: Communication Maturity
+                    </div>
+                    <p>
+                        Phase 4 không dạy bạn thêm grammar, vocabulary, hay patterns mới. Phase 4 chứng minh rằng bạn đã <strong>hình thành tư duy giao tiếp C1</strong>. Week 21 bắt đầu với competency đầu tiên: <strong>Understand</strong>. Bạn sẽ không học cách đọc hiểu. Bạn sẽ học cách giải mã thông điệp để đưa ra lựa chọn giao tiếp phù hợp.
+                    </p>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 1</div>
+                        <div class="principle-title">Read for intention, not just information</div>
+                        <div class="principle-desc">Mọi thông điệp đều có mục đích thực sự (cảnh báo, thăm dò, thuyết phục, từ chối khéo). Tìm ra nó trước khi đọc chữ.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 2</div>
+                        <div class="principle-title">Understanding comes first. Communication comes second.</div>
+                        <div class="principle-desc">The same intention often leads to different communication choices depending on the audience, purpose, and context.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 3</div>
+                        <div class="principle-title">What is NOT said matters most</div>
+                        <div class="principle-desc">Sự im lặng, những chi tiết bị lược bỏ, hoặc những điều được nhấn mạnh quá mức đều là tín hiệu giao tiếp.</div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">PRINCIPLE 4</div>
+                        <div class="principle-title">Sometimes the best response is strategic silence</div>
+                        <div class="principle-desc">Hiểu rõ thông điệp đôi khi dẫn đến quyết định: Không cần phản hồi ngay, không cần tranh luận, hoặc không cần giải thích.</div>
+                    </div>
+                </div>
+                
+                <div class="comparison-section">
+                    <div class="comparison-title">B2 Reading vs C1 Decoding</div>
+                    
+                    <div class="comparison-item negative">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-x-circle"></i>
+                            B2: Reads literal words
+                        </div>
+                        <div class="comparison-text">
+                            "They said it's fine, so it's fine." OR "The article says this is true, so it must be."
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item positive">
+                        <div class="comparison-label">
+                            <i class="ph-duotone ph-check-circle"></i>
+                            C1: Decodes intention and chooses response
+                        </div>
+                        <div class="comparison-text">
+                            "The tone is unusually brief. This isn't 'fine', this is a warning. I need to reply with a detailed action plan." OR "This article uses emotional rhetoric but lacks data. I will choose NOT to share this."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7 Days Grid -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="ph-duotone ph-calendar"></i>
+                    7 Days of Communication Decoding
+                </h2>
+                <p class="section-desc">Mỗi ngày là một khía cạnh của việc giải mã thông điệp. Từ decoding tone đến strategic silence. Life và Business song hành.</p>
+            </div>
+            
+            <div class="days-grid">
+                <a href="week-21-day-141.html" class="day-card">
+                    <div class="day-label">DAY 141</div>
+                    <span class="day-context">Life: Tin nhắn người yêu · Business: Email từ sếp</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-chat-circle-text"></i>
+                    </div>
+                    <div class="day-title">Decoding Tone and Hidden Intent</div>
+                    <div class="day-subtitle">Hiểu ý đồ thực sự đằng sau bề mặt ngôn từ. "It's okay" có thực sự okay?</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"The tone is unusually brief. This isn't 'fine', this is a warning."</li>
+                            <li>"I need to reply with a detailed action plan, not just 'Thanks'."</li>
+                            <li>"Don't react to words. Respond to intentions."</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Communication Choice Box -->
+                    <div class="choice-box">
+                        <div class="choice-box-title">
+                            <i class="ph-duotone ph-target"></i>
+                            Communication Choice Box
+                        </div>
+                        <div class="choice-box-content">
+                            <p><strong>Audience:</strong> Your partner vs. Your best friend</p>
+                            <p><strong>How would you change it?</strong> How do you respond to your partner (gentle probe) vs. how you vent to your friend (direct)?</p>
+                            <p><strong>Why?</strong> What does each person need from you in this moment?</p>
+                            <p><strong>What would you NOT say?</strong> Why do you withhold your true frustration from your partner but share it with your friend?</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Mature Communicator Reminder -->
+                    <div class="reminder-box">
+                        <i class="ph-duotone ph-star"></i>
+                        <span>🟠 Mature Communicator Reminder: Don't react to words. Respond to intentions.</span>
+                    </div>
+                    
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-21-day-142.html" class="day-card">
+                    <div class="day-label">DAY 142</div>
+                    <span class="day-context">Life: Review khách sạn · Business: Vendor proposal</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-magnifying-glass"></i>
+                    </div>
+                    <div class="day-title">Spot Assumptions Before Responding</div>
+                    <div class="day-subtitle">Phát hiện những điều được ngầm định. Before I reply, what assumptions am I accepting?</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"They assume we have the technical capacity. I need to ask, not reject."</li>
+                            <li>"'Seamlessly' ignores transition costs. 'Rockstar' signals burnout culture."</li>
+                            <li>"Ask before assuming."</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="choice-box">
+                        <div class="choice-box-title">
+                            <i class="ph-duotone ph-target"></i>
+                            Communication Choice Box
+                        </div>
+                        <div class="choice-box-content">
+                            <p><strong>Audience:</strong> The Vendor vs. Your Technical Team</p>
+                            <p><strong>How would you change it?</strong> How do you phrase your concern to the vendor (diplomatic) vs. how you warn your team (direct)?</p>
+                            <p><strong>Why?</strong> What outcome are you trying to achieve with each?</p>
+                            <p><strong>What would you NOT say?</strong> Why don't you accuse the vendor of hiding something, but you DO tell your team to be skeptical?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reminder-box">
+                        <i class="ph-duotone ph-star"></i>
+                        <span>🟠 Mature Communicator Reminder: Ask before assuming.</span>
+                    </div>
+                    
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-21-day-143.html" class="day-card">
+                    <div class="day-label">DAY 143</div>
+                    <span class="day-context">Life: Bài đăng Facebook · Business: Báo cáo dự án</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-eye"></i>
+                    </div>
+                    <div class="day-title">Reading Between the Lines (Implication)</div>
+                    <div class="day-subtitle">Hiểu những gì được NGỤ Ý, không phải những gì được NÓI. "Steady progress" che giấu delay?</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"They are using positive words to mask a 2-week delay."</li>
+                            <li>"I need to prepare the client for bad news before the official meeting."</li>
+                            <li>"Read what's missing, not only what's written."</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="choice-box">
+                        <div class="choice-box-title">
+                            <i class="ph-duotone ph-target"></i>
+                            Communication Choice Box
+                        </div>
+                        <div class="choice-box-content">
+                            <p><strong>Audience:</strong> The Client vs. The Project Manager</p>
+                            <p><strong>How would you change it?</strong> How do you "pre-wire" the client (softening the blow) vs. how do you confront the PM (demanding facts)?</p>
+                            <p><strong>Why?</strong> What is the goal of each conversation?</p>
+                            <p><strong>What would you NOT say?</strong> Why don't you blame the PM in front of the client?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reminder-box">
+                        <i class="ph-duotone ph-star"></i>
+                        <span>🟠 Mature Communicator Reminder: Read what's missing, not only what's written.</span>
+                    </div>
+                    
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-21-day-144.html" class="day-card">
+                    <div class="day-label">DAY 144</div>
+                    <span class="day-context">Life: Bài báo cho bố mẹ · Business: Báo cáo 50 trang</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-funnel"></i>
+                    </div>
+                    <div class="day-title">Information Reduction (Audience-driven Filtering)</div>
+                    <div class="day-subtitle">Chọn lọc thông tin dựa trên nhu cầu của người nghe. CEO cần 3 bullets. Team cần flow. Customer cần outcome.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"The CEO needs 3 bullet points on risk. The team needs step-by-step changes."</li>
+                            <li>"I will create two different versions."</li>
+                            <li>"Different people need different information."</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="choice-box">
+                        <div class="choice-box-title">
+                            <i class="ph-duotone ph-target"></i>
+                            Communication Choice Box
+                        </div>
+                        <div class="choice-box-content">
+                            <p><strong>Audience:</strong> CEO (needs decision) vs. Team (needs execution) vs. Customer (needs outcome)</p>
+                            <p><strong>How would you change it?</strong> Draft the opening sentence for each.</p>
+                            <p><strong>Why?</strong> Why did you strip out the context for the CEO but keep it for the team?</p>
+                            <p><strong>What would you NOT say?</strong> What information did you deliberately leave out for each audience, and why?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reminder-box">
+                        <i class="ph-duotone ph-star"></i>
+                        <span> Mature Communicator Reminder: Different people need different information.</span>
+                    </div>
+                    
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-21-day-145.html" class="day-card">
+                    <div class="day-label">DAY 145</div>
+                    <span class="day-context">Life: Tin viral · Business: Bài báo industry</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-share-network"></i>
+                    </div>
+                    <div class="day-title">Before You Share (Credibility & Rhetoric)</div>
+                    <div class="day-subtitle">Đánh giá thông điệp trước khi quyết định lan truyền. Share, Clarify, Verify, Wait, hay Ignore?</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"This article uses emotional rhetoric but lacks data."</li>
+                            <li>"I will choose NOT to share this with my team to avoid unnecessary anxiety."</li>
+                            <li>"Not everything deserves to be shared."</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="choice-box">
+                        <div class="choice-box-title">
+                            <i class="ph-duotone ph-target"></i>
+                            Communication Choice Box
+                        </div>
+                        <div class="choice-box-content">
+                            <p><strong>Audience:</strong> A friend who sent you the link vs. Your team vs. Your manager</p>
+                            <p><strong>How would you change it?</strong> How do you reply to the friend (acknowledging without validating) vs. how do you address the team (ignoring or clarifying)?</p>
+                            <p><strong>Why?</strong> What is the cost of sharing vs. not sharing?</p>
+                            <p><strong>What would you NOT say?</strong> Why do you choose NOT to forward this to your manager?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reminder-box">
+                        <i class="ph-duotone ph-star"></i>
+                        <span>🟠 Mature Communicator Reminder: Not everything deserves to be shared.</span>
+                    </div>
+                    
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-21-day-146.html" class="day-card">
+                    <div class="day-label">DAY 146</div>
+                    <span class="day-context">Life: Tin nhắn cãi nhau · Business: Email công kích</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-pause-circle"></i>
+                    </div>
+                    <div class="day-title">The Power of Strategic Silence</div>
+                    <div class="day-subtitle">Biết khi nào KHÔNG phản hồi là lựa chọn giao tiếp tốt nhất. Silence is sometimes the strongest response.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">Key Patterns:</div>
+                        <ul class="focus-list">
+                            <li>"Replying now will escalate this."</li>
+                            <li>"My best communication choice right now is to wait 24 hours."</li>
+                            <li>"Silence is sometimes the strongest response."</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="choice-box">
+                        <div class="choice-box-title">
+                            <i class="ph-duotone ph-target"></i>
+                            Communication Choice Box
+                        </div>
+                        <div class="choice-box-content">
+                            <p><strong>Audience:</strong> The angry sender vs. Your mentor vs. Your close colleague</p>
+                            <p><strong>How would you change it?</strong> Why do you choose silence with the sender, but choose to seek advice from your mentor?</p>
+                            <p><strong>Why?</strong> What is the goal of each choice?</p>
+                            <p><strong>What would you NOT say?</strong> Why do you NOT vent to your close colleague about this?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reminder-box">
+                        <i class="ph-duotone ph-star"></i>
+                        <span>🟠 Mature Communicator Reminder: Silence is sometimes the strongest response.</span>
+                    </div>
+                    
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+                
+                <a href="week-21-day-147.html" class="day-card">
+                    <div class="day-label">DAY 147</div>
+                    <span class="day-context">Life + Business Integration</span>
+                    <div class="day-icon">
+                        <i class="ph-duotone ph-trophy"></i>
+                    </div>
+                    <div class="day-title">My Information Filter (Week 21 Review)</div>
+                    <div class="day-subtitle">Tạo bộ lọc cá nhân cho mọi thông điệp nhận được. Good communication begins before you speak.</div>
+                    <div class="day-focus">
+                        <div class="focus-title">My Information Filter Checklist:</div>
+                        <ul class="focus-list">
+                            <li>Do I understand the intention behind this message?</li>
+                            <li>Am I reacting emotionally or responding strategically?</li>
+                            <li>Who really needs this information?</li>
+                            <li>What should I leave out?</li>
+                            <li>Should I wait before responding?</li>
+                            <li>Should I ask a clarifying question first?</li>
+                            <li>Is silence the best choice right now?</li>
+                            <li>Before I influence someone... Do I truly understand?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="choice-box">
+                        <div class="choice-box-title">
+                            <i class="ph-duotone ph-target"></i>
+                            Communication Choice Box (Final Reflection)
+                        </div>
+                        <div class="choice-box-content">
+                            <p><strong>Audience:</strong> Yourself (6 months from now)</p>
+                            <p><strong>How would you change it?</strong> What advice would you give your future self about decoding information?</p>
+                            <p><strong>Why?</strong> What did you learn about your own communication patterns this week?</p>
+                            <p><strong>What would you NOT say?</strong> What communication habit will you deliberately stop?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reminder-box">
+                        <i class="ph-duotone ph-star"></i>
+                        <span>🟠 Mature Communicator Reminder: Good communication begins before you speak.</span>
+                    </div>
+                    
+                    <div class="day-time">
+                        <i class="ph-duotone ph-clock"></i>
+                        60 min
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Milestone Card -->
+        <div class="milestone-card">
+            <div class="milestone-icon">
+                <i class="ph-duotone ph-trophy"></i>
+            </div>
+            <div class="milestone-title">Milestone 21: Communication Decoding Mastery</div>
+            <p class="milestone-subtitle">Sau tuần 21, bạn sẽ biết cách giải mã thông điệp để đưa ra lựa chọn giao tiếp trưởng thành. Bạn không còn đọc chữ - bạn đọc ý đồ, hàm ý, và biết khi nào im lặng là câu trả lời tốt nhất.</p>
+            <div class="milestone-skills">
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Separate information from interpretation</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Decode the true intention behind polite or vague language</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Spot assumptions before responding</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Read between the lines to anticipate unspoken issues</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Filter information based on what each audience needs</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Evaluate credibility before sharing</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Choose strategic silence over immediate reaction</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Adapt the level of detail based on audience needs</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Separate emotional rhetoric from factual data</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Recognize the communication purpose behind a message</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Formulate the "Why" behind every communication choice</span>
+                </div>
+                <div class="milestone-skill">
+                    <i class="ph-duotone ph-check-circle"></i>
+                    <span>Understand that not communicating is sometimes the best choice</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2 class="section-title">
+                <i class="ph-duotone ph-pencil-simple"></i>
+                Week 21 Preview Quiz
+            </h2>
+            <p class="section-desc" style="margin-bottom: 24px;">Kiểm tra hiểu biết về communication decoding vs reading comprehension. Chọn đáp án ĐÚNG NHẤT.</p>
+            
+            <div class="quiz-question">
+                <h4>1. Week 21 dạy bạn điều gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Cách đọc hiểu văn bản C1 (IELTS/TOEIC)</div>
+                    <div class="quiz-option">B. Cách giải mã thông điệp để đưa ra lựa chọn giao tiếp trưởng thành</div>
+                    <div class="quiz-option">C. Cách tóm tắt văn bản dài</div>
+                    <div class="quiz-option">D. Cách phát hiện bias trong bài báo</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>2. Communication Choice Box hỏi bạn điều gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. How would you change it?</div>
+                    <div class="quiz-option">B. Why did you make this choice?</div>
+                    <div class="quiz-option">C. What would you NOT say?</div>
+                    <div class="quiz-option">D. Tất cả các câu trên</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>3. Khi nào "strategic silence" là lựa chọn tốt nhất?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Khi bạn không biết câu trả lời</div>
+                    <div class="quiz-option">B. Khi phản hồi ngay sẽ leo thang xung đột</div>
+                    <div class="quiz-option">C. Khi bạn không quan tâm</div>
+                    <div class="quiz-option">D. Khi người khác đang giận dữ</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>4. "Same intention, different communication choices" nghĩa là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. Luôn nói cùng một điều với mọi người</div>
+                    <div class="quiz-option">B. Cùng một ý đồ nhưng cách truyền tải khác nhau tùy audience, purpose, context</div>
+                    <div class="quiz-option">C. Chỉ thay đổi từ vựng, không thay đổi cấu trúc</div>
+                    <div class="quiz-option">D. Luôn dùng tone formal trong business</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h4>5. Week Quote của Week 21 là gì?</h4>
+                <div class="quiz-options">
+                    <div class="quiz-option">A. "Understanding is the end of communication."</div>
+                    <div class="quiz-option">B. "Understanding is not the end of communication. It is the beginning of every good communication choice."</div>
+                    <div class="quiz-option">C. "Read more, speak less."</div>
+                    <div class="quiz-option">D. "Knowledge is power."</div>
+                </div>
+            </div>
+            
+            <button class="check-btn">
+                <i class="ph-duotone ph-check"></i>
+                Check Answers
+            </button>
+        </section>
+        
+        <!-- Navigation -->
+        <div class="week-navigation">
+            <a href="week-20.html" class="nav-card">
+                <div class="nav-label">← Previous Week</div>
+                <div class="nav-title">Week 20: Building Shared Futures (Phase 3 Complete)</div>
+            </a>
+            <a href="week-22.html" class="nav-card">
+                <div class="nav-label">Next Week →</div>
+                <div class="nav-title">Week 22: Expressing Complex Ideas Naturally</div>
+            </a>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="cta-container">
+            <a href="week-21-day-141.html" class="cta-button">
+                <i class="ph-duotone ph-rocket-launch"></i>
+                <span>Start Week 21: Day 141 - Decoding Tone and Hidden Intent</span>
+            </a>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-fox">🦊</div>
+            <div class="footer-title">Professional Fluency Roadmap</div>
+            <div class="footer-tagline">Phase 4 · Week 21 · Understanding Beyond Words</div>
+        </div>
+    </footer>
+    
+</body>
+</html>
