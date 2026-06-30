@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Week 5 Day 31: Framing Your Message | Professional Fluency Roadmap</title>
+<title>Week 5 Day 31: Handling Pushback | Professional Fluency Roadmap</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
 <style>
 :root {
---primary: #8B5CF6;
---primary-bright: #7C3AED;
---primary-soft: #F3E8FF;
---primary-deep: #5B21B6;
---primary-light: #A78BFA;
+--primary: #14B8A6;
+--primary-bright: #0D9488;
+--primary-soft: #CCFBF1;
+--primary-deep: #115E59;
+--primary-light: #2DD4BF;
 --highlight-gold: #D97706;
 --highlight-green: #059669;
 --highlight-blue: #2563EB;
@@ -68,7 +68,7 @@ font-size: 13px; color: var(--text-muted); font-weight: 500;
 display: flex; align-items: center; gap: 10px;
 }
 .progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
-.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 89%; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 91%; }
 
 .day-tabs-container {
 background: rgba(255, 255, 255, 0.95);
@@ -85,14 +85,14 @@ font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s eas
 .day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
 .day-tab.active {
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
-color: white; border: none; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+color: white; border: none; box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
 }
 
 .day-header {
-background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%);
+background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 50%, #99F6E4 100%);
 padding: 48px 0 40px; position: relative;
 }
-.day-header::after { content: '💬'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.day-header::after { content: '🛡️'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
 .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
 .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
 .day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
@@ -120,7 +120,7 @@ display: flex; align-items: center; gap: 10px;
 .section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
 
 .c1-insight {
-background: linear-gradient(135deg, rgba(243, 232, 255, 0.6), rgba(221, 214, 254, 0.25));
+background: linear-gradient(135deg, rgba(204, 251, 241, 0.6), rgba(153, 246, 228, 0.25));
 border-radius: var(--radius-md);
 padding: 24px 28px;
 margin-bottom: 28px;
@@ -145,20 +145,20 @@ background: rgba(255, 255, 255, 0.95);
 border-radius: var(--radius-lg);
 padding: 32px;
 box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-border: 1px solid rgba(139, 92, 246, 0.2);
+border: 1px solid rgba(20, 184, 166, 0.2);
 }
 .philosophy-box {
-background: #F5F3FF;
+background: #F0FDFA;
 border-radius: var(--radius-md);
 padding: 20px;
-border-left: 4px solid var(--highlight-gold);
+border-left: 4px solid var(--primary);
 margin-bottom: 20px;
 }
 .philosophy-title {
 font-weight: 600; color: var(--text-primary);
 margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
 }
-.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-title i { --ph-color: var(--primary); }
 .philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
 .philosophy-box strong { color: var(--primary-deep); }
 
@@ -191,7 +191,7 @@ font-size: 13px; color: var(--text-secondary); line-height: 1.3;
 .register-note {
 margin-top: 20px;
 padding: 16px 20px;
-background: rgba(139, 92, 246, 0.08);
+background: rgba(20, 184, 166, 0.08);
 border-radius: var(--radius-sm);
 border-left: 3px solid var(--primary);
 font-size: 13px;
@@ -212,7 +212,7 @@ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 .plan-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
 .plan-time {
 font-size: 12px; color: var(--primary-bright); font-weight: 600;
-margin-bottom: 4px; background: rgba(243, 232, 255, 0.5);
+margin-bottom: 4px; background: rgba(204, 251, 241, 0.5);
 padding: 2px 10px; border-radius: 10px; display: inline-block;
 }
 .plan-desc { font-size: 12px; color: var(--text-muted); }
@@ -231,7 +231,7 @@ background: linear-gradient(135deg, var(--primary), var(--primary-bright));
 color: white; border-radius: 50%;
 display: flex; align-items: center; justify-content: center;
 font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
-box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
 }
 .pattern-content { flex: 1; }
 .pattern-text {
@@ -248,11 +248,11 @@ margin-bottom: 8px;
 .pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
 .pattern-context {
 font-size: 12px; color: var(--text-muted);
-background: rgba(243, 232, 255, 0.5); padding: 4px 10px; border-radius: 12px;
+background: rgba(204, 251, 241, 0.5); padding: 4px 10px; border-radius: 12px;
 }
 .pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
 .pattern-why {
-background: rgba(243, 232, 255, 0.4);
+background: rgba(204, 251, 241, 0.4);
 border-radius: var(--radius-sm);
 padding: 14px; margin-bottom: 14px;
 border-left: 3px solid var(--primary);
@@ -334,7 +334,7 @@ color: white; border: none; border-radius: 50%;
 cursor: pointer; display: flex; align-items: center; justify-content: center;
 transition: all 0.3s ease;
 }
-.audio-btn:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); }
+.audio-btn:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3); }
 .audio-btn i { --ph-color: white; font-size: 12px; }
 
 .pattern-mistake {
@@ -350,7 +350,7 @@ border-left: 3px solid var(--highlight-orange);
 .mistake-right::before { content: '✅ '; }
 
 .pattern-alternatives {
-background: rgba(243, 232, 255, 0.3);
+background: rgba(204, 251, 241, 0.3);
 border-radius: var(--radius-sm);
 padding: 12px 14px;
 border-left: 3px solid var(--primary);
@@ -408,11 +408,11 @@ display: flex; align-items: center; gap: 10px;
 font-size: 12px; color: var(--text-muted);
 margin-bottom: 14px; font-style: italic;
 padding: 10px 14px;
-background: rgba(243, 232, 255, 0.3);
+background: rgba(204, 251, 241, 0.3);
 border-radius: var(--radius-sm);
 }
 .story-dialogue {
-background: rgba(243, 232, 255, 0.2);
+background: rgba(204, 251, 241, 0.2);
 padding: 18px; border-radius: var(--radius-sm);
 margin-bottom: 14px;
 border-left: 3px solid var(--primary);
@@ -420,7 +420,7 @@ border-left: 3px solid var(--primary);
 .dialogue-turn {
 margin-bottom: 12px;
 padding-bottom: 12px;
-border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+border-bottom: 1px solid rgba(20, 184, 166, 0.1);
 }
 .dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 .dialogue-speaker {
@@ -444,14 +444,14 @@ border: none; transition: all 0.3s ease;
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
 color: white;
 }
-.story-play-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); }
+.story-play-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3); }
 .story-stop-btn {
 background: rgba(245, 101, 101, 0.1); color: #DC2626;
 border: 1px solid rgba(220, 38, 38, 0.2);
 }
 .story-stop-btn:hover { background: rgba(245, 101, 101, 0.2); }
 .story-analysis {
-background: rgba(243, 232, 255, 0.3);
+background: rgba(204, 251, 241, 0.3);
 border-radius: var(--radius-sm);
 padding: 16px;
 }
@@ -569,12 +569,12 @@ border-radius: 12px; letter-spacing: 0.5px;
 .task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
 .task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
 .task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
-.task-requirements { background: rgba(243, 232, 255, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements { background: rgba(204, 251, 241, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
 .task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
 .task-requirements ul { list-style: none; }
 .task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
 .task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
-.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(243, 232, 255, 0.3); border-radius: var(--radius-sm); }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(204, 251, 241, 0.3); border-radius: var(--radius-sm); }
 
 .mastery-card {
 background: rgba(255, 255, 255, 0.95);
@@ -589,7 +589,7 @@ display: flex; align-items: center; gap: 10px;
 }
 .mastery-item {
 display: flex; align-items: flex-start; gap: 12px;
-padding: 14px; background: rgba(243, 232, 255, 0.2);
+padding: 14px; background: rgba(204, 251, 241, 0.2);
 border-radius: var(--radius-sm); margin-bottom: 10px;
 }
 .mastery-item input[type="checkbox"] {
@@ -635,14 +635,14 @@ padding: 32px; text-align: center;
 box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .flashcard {
-background: linear-gradient(135deg, rgba(243, 232, 255, 0.5), rgba(221, 214, 254, 0.3));
+background: linear-gradient(135deg, rgba(204, 251, 241, 0.5), rgba(153, 246, 228, 0.3));
 border-radius: var(--radius-md);
 padding: 32px; margin-bottom: 16px; min-height: 180px;
 display: flex; flex-direction: column;
 justify-content: center; align-items: center;
 cursor: pointer; transition: all 0.4s ease;
 }
-.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15); }
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(20, 184, 166, 0.15); }
 .flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
 .flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
 .flashcard-back { display: none; }
@@ -651,7 +651,7 @@ cursor: pointer; transition: all 0.4s ease;
 .flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
 .flashcard-tip strong { color: var(--primary-deep); }
 .flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
-.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(139, 92, 246, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(20, 184, 166, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
 .flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
 .flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
 
@@ -659,20 +659,20 @@ cursor: pointer; transition: all 0.4s ease;
 .quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
 .quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
 .quiz-options { display: flex; flex-direction: column; gap: 8px; }
-.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(243, 232, 255, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
-.quiz-option:hover { border-color: var(--primary); background: rgba(243, 232, 255, 0.2); }
-.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(204, 251, 241, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(204, 251, 241, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3); }
 
 .day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
 .nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
 .nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
-.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(20, 184, 166, 0.15); }
 .nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
 .nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
 
 .complete-container { text-align: center; margin: 40px 0; }
-.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(139, 92, 246, 0.4); }
-.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(139, 92, 246, 0.5); }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(20, 184, 166, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(20, 184, 166, 0.5); }
 .complete-btn i { font-size: 1.2rem; }
 .complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
 
@@ -728,15 +728,15 @@ Day 31 / 35
 <a href="index.html">Home</a> › <a href="week-05.html">Week 5</a> › Day 31
 </div>
 <div class="day-title-row">
-<span class="day-icon-inline">💬</span>
-<h1 class="day-title">Framing Your Message</h1>
+<span class="day-icon-inline">🛡️</span>
+<h1 class="day-title">Handling Pushback</h1>
 </div>
-<p class="day-subtitle">Cùng một ý, nhưng nói 4 cách khác nhau tùy context. Hôm nay bạn sẽ học cách <strong>frame cùng 1 message</strong> theo Casual → Neutral → Professional → More Formal — và biết khi nào dùng cách nào.</p>
+<p class="day-subtitle">When someone disagrees, challenges, or pushes back — C1 speakers don't get defensive. They stay calm, acknowledge the concern, and find common ground. Hôm nay bạn sẽ học 5 patterns để <strong>handle pushback gracefully</strong>.</p>
 <div class="day-meta">
-<div class="meta-tag"><i class="ph-duotone ph-chat-centered-text"></i> Message Framing</div>
+<div class="meta-tag"><i class="ph-duotone ph-shield-check"></i> Diplomatic Disagreement</div>
 <div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
-<div class="meta-tag"><i class="ph-duotone ph-books"></i> 5 message pairs</div>
-<div class="meta-tag"><i class="ph-duotone ph-users"></i> Register Awareness</div>
+<div class="meta-tag"><i class="ph-duotone ph-books"></i> 5 patterns</div>
+<div class="meta-tag"><i class="ph-duotone ph-users"></i> Conflict Resolution</div>
 </div>
 </div>
 </header>
@@ -750,14 +750,14 @@ Day 31 / 35
 <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
 <div>
 <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
-<div style="font-size: 14px;">"We should leave earlier." (1 cách nói)</div>
+<div style="font-size: 14px;">"You're wrong." / "But that's not true." (Defensive, confrontational)</div>
 </div>
 <div>
 <div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
-<div style="font-size: 14px;">"Maybe we should leave a bit earlier." / "One option might be to leave earlier." / "Perhaps we should consider adjusting the schedule."</div>
+<div style="font-size: 14px;">"I see where you're coming from, and at the same time, we need to consider..."</div>
 </div>
 </div>
-"C1 isn't knowing more words — it's knowing which word for which moment. No register is 'better' — it's about appropriateness."
+"B2 speakers argue to win. C1 speakers explore to align. Pushback isn't an attack — it's just a different perspective."
 </div>
 </div>
 
@@ -770,44 +770,46 @@ Today's Philosophy
 <div class="philosophy-box">
 <div class="philosophy-title">
 <i class="ph-duotone ph-brain"></i>
-Same Idea, Different Frames
+From Defensive to Diplomatic
 </div>
 <p>
-Người B2 nói 1 ý theo 1 cách. Người C1 nói cùng 1 ý theo nhiều cách tùy context. Hôm nay bạn sẽ học cách frame cùng 1 message theo 4 registers: <span style="color: var(--highlight-green); font-weight: 600;">Casual → Neutral → Professional → More Formal</span>.
+Khi bị phản bác (pushback), phản xạ tự nhiên là phòng thủ (defensive) hoặc nhượng bộ (give in). Người C1 hiểu rằng <span style="color: var(--primary); font-weight: 600;">bất đồng là một phần của giao tiếp</span>. Họ không dùng từ "but" một cách máy móc — họ biết khi nào "but" nghe hợp lý, khi nào "and" hoặc "though" tạo hiệu ứng tốt hơn.
 <br><br>
-<span style="color: var(--highlight-gold); font-weight: 600;">No register is "better" than another.</span> Casual, neutral, and professional are all correct when they match the context. The lesson teaches <strong>appropriateness, not hierarchy</strong>.
+<span style="color: var(--primary); font-weight: 600;">Don't automatically replace every "but".</span> Learn when "and", "though", or "but" creates the right effect.
 <br><br>
-<span style="color: var(--highlight-blue); font-weight: 600;">Context quyết định lựa chọn.</strong> Đó mới là C1.
+<span style="color: var(--highlight-green); font-weight: 600;">Pushback isn't an attack — it's just a different perspective.</span>
 </p>
 </div>
 <div class="philosophy-grid">
 <div class="philosophy-card negative">
 <div class="philosophy-card-title">
 <i class="ph-duotone ph-x-circle"></i>
-Register Mismatch
+Why most disagreements fail
 </div>
 <ul class="philosophy-card-list">
-<li>Dùng "Perhaps we should consider..." với bạn → nghe robotic</li>
-<li>Dùng "We should leave earlier" với sếp → nghe pushy</li>
-<li>Stuck ở 1 register, không shift linh hoạt</li>
-<li>Không đọc được context</li>
+<li>Get defensive: "You're wrong!"</li>
+<li>Give in too quickly to avoid conflict</li>
+<li>Use "but" to dismiss the other person's point</li>
+<li>Argue to win, not to understand</li>
+<li>Make it personal instead of about the issue</li>
 </ul>
 </div>
 <div class="philosophy-card positive">
 <div class="philosophy-card-title">
 <i class="ph-duotone ph-check-circle"></i>
-Register Awareness
+What C1 communicators do differently
 </div>
 <ul class="philosophy-card-list">
-<li>Đọc được context (who, where, relationship)</li>
-<li>Adjust register linh hoạt</li>
-<li>Khi không chắc → chọn neutral (safe choice)</li>
-<li>Cùng 1 ý, nhưng nói 4 cách khác nhau</li>
+<li>Validate first: "I see where you're coming from..."</li>
+<li>Choose the right connector: "and", "though", or "but" — depending on effect</li>
+<li>Get curious: "Help me understand..."</li>
+<li>Hold ground politely: say no without burning bridges</li>
+<li>Keep it about the issue, not the person</li>
 </ul>
 </div>
 </div>
 <div class="register-note">
-<strong>💡 Register là Continuum, không phải hierarchy:</strong> Casual ←→ Neutral ←→ Professional ←→ More Formal. Không có level nào "tốt hơn" — chỉ có level nào phù hợp hơn với context.
+<strong>💡 About "but":</strong> Native speakers still use "but" all the time. "I understand your concern, <strong>but</strong> we simply don't have the budget" sounds perfectly natural. The problem isn't the word "but" — it's using it to dismiss. "I hear you, <strong>but</strong> you're wrong" → problematic. "I hear you, <strong>but</strong> we have a different constraint" → natural. Learn the effect, not the rule.
 </div>
 </div>
 </section>
@@ -821,20 +823,20 @@ Today's Plan (60 min)
 <div class="plan-grid">
 <div class="plan-card">
 <div class="plan-icon">💡</div>
-<div class="plan-title">5 Message Pairs</div>
+<div class="plan-title">5 Patterns</div>
 <div class="plan-time">15 min</div>
-<div class="plan-desc">Same idea, 4 registers</div>
+<div class="plan-desc">Pushback handling patterns</div>
 </div>
 <div class="plan-card">
 <div class="plan-icon">🎭</div>
 <div class="plan-title">Dialogues</div>
-<div class="plan-time">10 min</div>
-<div class="plan-desc">10+ turn conversations</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">2 dialogues, 10+ turns each</div>
 </div>
 <div class="plan-card">
 <div class="plan-icon">🗣️</div>
 <div class="plan-title">Speaking</div>
-<div class="plan-time">25 min</div>
+<div class="plan-time">20 min</div>
 <div class="plan-desc">4 scenarios + record</div>
 </div>
 <div class="plan-card">
@@ -850,53 +852,53 @@ Today's Plan (60 min)
 <section class="section">
 <div class="section-header">
 <h2 class="section-title">
-<i class="ph-duotone ph-chat-centered-text"></i>
-5 Message Framing Pairs
+<i class="ph-duotone ph-shield-check"></i>
+5 Handling Pushback Patterns
 </h2>
-<p class="section-desc">Cùng 1 ý, nhưng frame theo 4 cách khác nhau tùy context. Click 🔊 để nghe từng register.</p>
+<p class="section-desc">5 patterns để handle disagreement gracefully. Mỗi pattern có register progression và Life/Business examples. Click 🔊 để nghe.</p>
 </div>
 
 <div class="pattern-card">
 <div class="pattern-header">
 <div class="pattern-number">1</div>
 <div class="pattern-content">
-<div class="pattern-text">Đề xuất thay đổi</div>
-<div class="pattern-ipa">Core idea: "We should leave earlier."</div>
+<div class="pattern-text">The Validate & Pivot</div>
+<div class="pattern-ipa">Core idea: "I disagree with you."</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
-<div class="pattern-context">Everyday situations</div>
+<div class="pattern-context">Everyday disagreements</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">Cùng 1 ý "nên rời đi sớm hơn", nhưng nói 4 cách khác nhau tùy context.</div>
+<div class="pattern-desc">Acknowledge their perspective first, then gently introduce yours. The key is the connector — "and", "though", or sometimes "but".</div>
 <div class="register-table">
 <h4>Register Progression 🔊</h4>
 <div class="register-row">
 <div><span class="register-tag casual">🏠 Casual</span></div>
 <div>
-<div class="register-phrase">"Maybe we should leave a bit earlier."</div>
-<div class="register-context">Với bạn bè, gia đình, peer</div>
+<div class="register-phrase">"I get what you're saying, and..."</div>
+<div class="register-context">Bạn bè, gia đình</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag neutral">☕ Neutral</span></div>
 <div>
-<div class="register-phrase">"One option might be to leave earlier."</div>
-<div class="register-context">Với đồng nghiệp, networking</div>
+<div class="register-phrase">"I see your point, though..."</div>
+<div class="register-context">Đồng nghiệp, peer</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag professional">💼 Professional</span></div>
 <div>
-<div class="register-phrase">"One approach worth considering is leaving earlier."</div>
-<div class="register-context">Trong meeting, với client</div>
+<div class="register-phrase">"I understand where you're coming from, and at the same time..."</div>
+<div class="register-context">Meeting, client</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag formal">📋 More Formal</span></div>
 <div>
-<div class="register-phrase">"Perhaps we should consider adjusting the schedule slightly."</div>
-<div class="register-context">Với senior leaders, formal settings</div>
+<div class="register-phrase">"While I appreciate that perspective, we must also consider..."</div>
+<div class="register-context">Senior leaders, board</div>
 </div>
 </div>
 </div>
@@ -904,37 +906,37 @@ Today's Plan (60 min)
 <h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"We're having fun, but <strong>maybe we should leave a bit earlier</strong> — I've got an early morning tomorrow."</span>
-<button class="audio-btn" onclick="playAudio('We\'re having fun, but maybe we should leave a bit earlier. I\'ve got an early morning tomorrow.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I get what you're saying about the hotel, <strong>and</strong> we also need to think about how far it is from the airport."</span>
+<button class="audio-btn" onclick="playAudio('I get what you\'re saying about the hotel, and we also need to think about how far it is from the airport.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"The agenda is packed. <strong>One option might be to leave earlier</strong> so everyone has time to prepare."</span>
-<button class="audio-btn" onclick="playAudio('The agenda is packed. One option might be to leave earlier so everyone has time to prepare.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I see your point about going out tonight, <strong>though</strong> I'm pretty tired — could we do tomorrow instead?"</span>
+<button class="audio-btn" onclick="playAudio('I see your point about going out tonight, though I\'m pretty tired — could we do tomorrow instead?')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"Given the tight timeline, <strong>one approach worth considering is leaving earlier</strong> to ensure quality."</span>
-<button class="audio-btn" onclick="playAudio('Given the tight timeline, one approach worth considering is leaving earlier to ensure quality.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I understand where you're coming from on the timeline, <strong>and at the same time</strong>, we can't compromise on QA testing."</span>
+<button class="audio-btn" onclick="playAudio('I understand where you\'re coming from on the timeline, and at the same time, we can\'t compromise on QA testing.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"<strong>Perhaps we should consider adjusting the schedule slightly</strong> to optimize resource allocation."</span>
-<button class="audio-btn" onclick="playAudio('Perhaps we should consider adjusting the schedule slightly to optimize resource allocation.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I understand your concern, <strong>but</strong> we simply don't have the budget for that right now."</span>
+<button class="audio-btn" onclick="playAudio('I understand your concern, but we simply don\'t have the budget for that right now.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
 <div class="pattern-mistake">
 <strong>⚠️ Common mistake:</strong>
-<div class="mistake-wrong">Dùng "Perhaps we should consider..." với bạn → nghe robotic</div>
-<div class="mistake-right">Match register với context</div>
+<div class="mistake-wrong">"I hear you, but you're wrong." (Dismissive)</div>
+<div class="mistake-right">"I hear you, but we have a different constraint." (Natural, respectful)</div>
 </div>
 <div class="pattern-alternatives">
 <h5>Why native speakers dùng:</h5>
 <ul>
-<li>Casual "maybe" = softens suggestion, gives room to disagree</li>
-<li>Neutral "one option" = presents as possibility, not demand</li>
-<li>Professional "worth considering" = shows respect for listener's decision</li>
-<li>More Formal "perhaps" = polite, formal, non-confrontational</li>
+<li>"And" = keeps both perspectives alive</li>
+<li>"Though" = softens the pushback</li>
+<li>"But" = still natural when stating a clear constraint</li>
+<li>"At the same time" = professional, balanced</li>
 </ul>
 </div>
 </div>
@@ -943,43 +945,43 @@ Today's Plan (60 min)
 <div class="pattern-header">
 <div class="pattern-number">2</div>
 <div class="pattern-content">
-<div class="pattern-text">Thể hiện ý kiến</div>
-<div class="pattern-ipa">Core idea: "I think this is a bad idea."</div>
+<div class="pattern-text">The Curiosity Pivot</div>
+<div class="pattern-ipa">Core idea: "Why do you think that?"</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
-<div class="pattern-context">Giving opinions</div>
+<div class="pattern-context">When you don't understand their reasoning</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">Cùng 1 ý "tôi nghĩ đây là ý kiến không tốt", nhưng nói 4 cách khác nhau.</div>
+<div class="pattern-desc">Ask a question instead of arguing. Shifts from argument to exploration. Often softens their stance.</div>
 <div class="register-table">
 <h4>Register Progression 🔊</h4>
 <div class="register-row">
 <div><span class="register-tag casual">🏠 Casual</span></div>
 <div>
-<div class="register-phrase">"I'm not sure this is the best approach."</div>
-<div class="register-context">Với bạn bè, gia đình</div>
+<div class="register-phrase">"What makes you say that?"</div>
+<div class="register-context">Bạn bè, gia đình</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag neutral">☕ Neutral</span></div>
 <div>
-<div class="register-phrase">"My sense is that this might not work."</div>
-<div class="register-context">Với đồng nghiệp, peer</div>
+<div class="register-phrase">"Could you walk me through your thinking?"</div>
+<div class="register-context">Đồng nghiệp</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag professional">💼 Professional</span></div>
 <div>
-<div class="register-phrase">"From my perspective, there are some concerns."</div>
-<div class="register-context">Trong meeting, với client</div>
+<div class="register-phrase">"Help me understand the reasoning behind this."</div>
+<div class="register-context">Client, meeting</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag formal">📋 More Formal</span></div>
 <div>
-<div class="register-phrase">"I have some reservations about this approach."</div>
-<div class="register-context">Với senior leaders, formal settings</div>
+<div class="register-phrase">"Could you elaborate on the factors driving this concern?"</div>
+<div class="register-context">Senior leaders</div>
 </div>
 </div>
 </div>
@@ -987,37 +989,37 @@ Today's Plan (60 min)
 <h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"I love the enthusiasm, but <strong>I'm not sure this is the best approach</strong> — have we considered the risks?"</span>
-<button class="audio-btn" onclick="playAudio('I love the enthusiasm, but I\'m not sure this is the best approach. Have we considered the risks?')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"You think we shouldn't invite them? <strong>What makes you say that?</strong>"</span>
+<button class="audio-btn" onclick="playAudio('You think we shouldn\'t invite them? What makes you say that?')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"I see the logic, but <strong>my sense is that this might not work</strong> given our current constraints."</span>
-<button class="audio-btn" onclick="playAudio('I see the logic, but my sense is that this might not work given our current constraints.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"That's interesting — <strong>could you walk me through your thinking?</strong> I want to understand where you're coming from."</span>
+<button class="audio-btn" onclick="playAudio('That\'s interesting — could you walk me through your thinking? I want to understand where you\'re coming from.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"<strong>From my perspective, there are some concerns</strong> about feasibility that we should address."</span>
-<button class="audio-btn" onclick="playAudio('From my perspective, there are some concerns about feasibility that we should address.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"You feel this feature isn't necessary. <strong>Help me understand the reasoning behind this</strong> so I can see your angle."</span>
+<button class="audio-btn" onclick="playAudio('You feel this feature isn\'t necessary. Help me understand the reasoning behind this so I can see your angle.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"<strong>I have some reservations about this approach</strong> given the market conditions."</span>
-<button class="audio-btn" onclick="playAudio('I have some reservations about this approach given the market conditions.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>Could you elaborate on the factors driving this concern?</strong> I want to make sure I'm not missing something."</span>
+<button class="audio-btn" onclick="playAudio('Could you elaborate on the factors driving this concern? I want to make sure I\'m not missing something.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
 <div class="pattern-mistake">
 <strong>⚠️ Common mistake:</strong>
-<div class="mistake-wrong">"I think this is a bad idea" → nghe confrontational</div>
-<div class="mistake-right">"I'm not sure this is the best approach" → nghe collaborative</div>
+<div class="mistake-wrong">"Why would you think that?" (Aggressive, judgmental)</div>
+<div class="mistake-right">"Help me understand..." (Collaborative, curious)</div>
 </div>
 <div class="pattern-alternatives">
 <h5>Why native speakers dùng:</h5>
 <ul>
-<li>Casual "I'm not sure" = hedges opinion, opens dialogue</li>
-<li>Neutral "my sense" = personal perspective, not absolute truth</li>
-<li>Professional "from my perspective" = acknowledges subjectivity</li>
-<li>More Formal "reservations" = formal, measured, professional</li>
+<li>"Help me understand" shifts dynamic from argument to exploration</li>
+<li>Forces the other person to explain their logic</li>
+<li>Often softens their stance when they hear themselves</li>
+<li>Shows emotional intelligence</li>
 </ul>
 </div>
 </div>
@@ -1026,43 +1028,43 @@ Today's Plan (60 min)
 <div class="pattern-header">
 <div class="pattern-number">3</div>
 <div class="pattern-content">
-<div class="pattern-text">Đề xuất giải pháp</div>
-<div class="pattern-ipa">Core idea: "We need to fix this problem."</div>
+<div class="pattern-text">Partial Agreement</div>
+<div class="pattern-ipa">Core idea: "You're partly right."</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
-<div class="pattern-context">Problem-solving</div>
+<div class="pattern-context">When they have a valid point</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">Cùng 1 ý "cần giải quyết vấn đề này", nhưng nói 4 cách khác nhau.</div>
+<div class="pattern-desc">Agree with part of their argument before introducing your counterpoint. Makes them feel heard.</div>
 <div class="register-table">
 <h4>Register Progression 🔊</h4>
 <div class="register-row">
 <div><span class="register-tag casual">🏠 Casual</span></div>
 <div>
-<div class="register-phrase">"We should probably figure this out."</div>
-<div class="register-context">Với bạn bè, gia đình</div>
+<div class="register-phrase">"You've got a point there."</div>
+<div class="register-context">Bạn bè, gia đình</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag neutral">☕ Neutral</span></div>
 <div>
-<div class="register-phrase">"We might want to address this."</div>
-<div class="register-context">Với đồng nghiệp</div>
+<div class="register-phrase">"That's true to some extent."</div>
+<div class="register-context">Đồng nghiệp</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag professional">💼 Professional</span></div>
 <div>
-<div class="register-phrase">"This is something we should look into."</div>
-<div class="register-context">Trong meeting, với client</div>
+<div class="register-phrase">"I agree with the main point, however..."</div>
+<div class="register-context">Client, meeting</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag formal">📋 More Formal</span></div>
 <div>
-<div class="register-phrase">"This deserves a closer look."</div>
-<div class="register-context">Với senior leaders, formal settings</div>
+<div class="register-phrase">"I think you're right about that part, yet..."</div>
+<div class="register-context">Senior leaders</div>
 </div>
 </div>
 </div>
@@ -1070,37 +1072,37 @@ Today's Plan (60 min)
 <h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"The leak is getting worse. <strong>We should probably figure this out</strong> before it gets worse."</span>
-<button class="audio-btn" onclick="playAudio('The leak is getting worse. We should probably figure this out before it gets worse.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>You've got a point there</strong>, the weather might be bad. Let's have a backup plan."</span>
+<button class="audio-btn" onclick="playAudio('You\'ve got a point there, the weather might be bad. Let\'s have a backup plan.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"The error rate is increasing. <strong>We might want to address this</strong> before the release."</span>
-<button class="audio-btn" onclick="playAudio('The error rate is increasing. We might want to address this before the release.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>That's true to some extent</strong>, though I think we're also overlooking the cost."</span>
+<button class="audio-btn" onclick="playAudio('That\'s true to some extent, though I think we\'re also overlooking the cost.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"The customer feedback suggests a pattern. <strong>This is something we should look into</strong>."</span>
-<button class="audio-btn" onclick="playAudio('The customer feedback suggests a pattern. This is something we should look into.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>I agree with the main point</strong> that we need to cut costs, however, cutting the marketing budget might hurt Q4 sales."</span>
+<button class="audio-btn" onclick="playAudio('I agree with the main point that we need to cut costs, however, cutting the marketing budget might hurt Q4 sales.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"The market shift <strong>deserves a closer look</strong> to maintain competitive position."</span>
-<button class="audio-btn" onclick="playAudio('The market shift deserves a closer look to maintain competitive position.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>I think you're right about that part</strong>, yet we should also consider the long-term impact."</span>
+<button class="audio-btn" onclick="playAudio('I think you\'re right about that part, yet we should also consider the long-term impact.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
 <div class="pattern-mistake">
 <strong>⚠️ Common mistake:</strong>
-<div class="mistake-wrong">"We need to fix this problem" → nghe urgent, panicky</div>
-<div class="mistake-right">"This is something we should look into" → nghe measured, professional</div>
+<div class="mistake-wrong">"You're right, but..." (The "but" erases the agreement)</div>
+<div class="mistake-right">"That's true to some extent, though..." ("Though" at the end sounds more natural)</div>
 </div>
 <div class="pattern-alternatives">
 <h5>Why native speakers dùng:</h5>
 <ul>
-<li>Casual "probably" = softens urgency</li>
-<li>Neutral "might want" = presents as option</li>
-<li>Professional "look into" = shows importance without panic</li>
-<li>More Formal "deserves" = formal, measured</li>
+<li>"You've got a point" = casual, friendly acknowledgment</li>
+<li>"That's true to some extent" = measured, nuanced</li>
+<li>"I agree with the main point" = professional, specific</li>
+<li>"I think you're right about that part" = validates without fully conceding</li>
 </ul>
 </div>
 </div>
@@ -1109,43 +1111,43 @@ Today's Plan (60 min)
 <div class="pattern-header">
 <div class="pattern-number">4</div>
 <div class="pattern-content">
-<div class="pattern-text">Thể hiện sự đồng ý</div>
-<div class="pattern-ipa">Core idea: "I agree with you."</div>
+<div class="pattern-text">Proposing an Alternative</div>
+<div class="pattern-ipa">Core idea: "Let's do something else."</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
-<div class="pattern-context">Agreement</div>
+<div class="pattern-context">When you need to redirect</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">Cùng 1 ý "tôi đồng ý với bạn", nhưng nói 4 cách khác nhau.</div>
+<div class="pattern-desc">Don't just say "no" — offer a "yes, if..." Shows you're solution-oriented, not just a blocker.</div>
 <div class="register-table">
 <h4>Register Progression 🔊</h4>
 <div class="register-row">
 <div><span class="register-tag casual">🏠 Casual</span></div>
 <div>
-<div class="register-phrase">"Yeah, totally."</div>
-<div class="register-context">Với bạn bè, gia đình</div>
+<div class="register-phrase">"What if we tried this instead?"</div>
+<div class="register-context">Bạn bè, gia đình</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag neutral">☕ Neutral</span></div>
 <div>
-<div class="register-phrase">"That makes sense."</div>
-<div class="register-context">Với đồng nghiệp, peer</div>
+<div class="register-phrase">"Another way to look at it might be..."</div>
+<div class="register-context">Đồng nghiệp</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag professional">💼 Professional</span></div>
 <div>
-<div class="register-phrase">"I share that perspective."</div>
-<div class="register-context">Trong meeting, với client</div>
+<div class="register-phrase">"An alternative approach could be..."</div>
+<div class="register-context">Client, meeting</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag formal">📋 More Formal</span></div>
 <div>
-<div class="register-phrase">"I'm aligned with that view."</div>
-<div class="register-context">Với senior leaders, formal settings</div>
+<div class="register-phrase">"Perhaps a more viable path would be..."</div>
+<div class="register-context">Senior leaders</div>
 </div>
 </div>
 </div>
@@ -1153,37 +1155,37 @@ Today's Plan (60 min)
 <h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"This movie is amazing!" — "<strong>Yeah, totally!</strong> The acting is incredible."</span>
-<button class="audio-btn" onclick="playAudio('Yeah, totally! The acting is incredible.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I know you want to eat out, but <strong>what if we tried this instead</strong> — I'll cook your favorite and we open a bottle of wine?"</span>
+<button class="audio-btn" onclick="playAudio('I know you want to eat out, but what if we tried this instead — I\'ll cook your favorite and we open a bottle of wine?')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"I think we should focus on quality." — "<strong>That makes sense.</strong> Quantity isn't sustainable."</span>
-<button class="audio-btn" onclick="playAudio('That makes sense. Quantity isn\'t sustainable.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>Another way to look at it might be</strong> — what if we split the trip into two shorter ones?"</span>
+<button class="audio-btn" onclick="playAudio('Another way to look at it might be — what if we split the trip into two shorter ones?')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"We need to prioritize customer experience." — "<strong>I share that perspective.</strong> It's our competitive advantage."</span>
-<button class="audio-btn" onclick="playAudio('I share that perspective. It\'s our competitive advantage.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I know a full redesign is out of budget. <strong>An alternative approach could be</strong> updating just the landing page for now."</span>
+<button class="audio-btn" onclick="playAudio('I know a full redesign is out of budget. An alternative approach could be updating just the landing page for now.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"We should invest in innovation." — "<strong>I'm aligned with that view</strong> for the next 3 years."</span>
-<button class="audio-btn" onclick="playAudio('I\'m aligned with that view for the next 3 years.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>Perhaps a more viable path would be</strong> to phase the rollout over two quarters."</span>
+<button class="audio-btn" onclick="playAudio('Perhaps a more viable path would be to phase the rollout over two quarters.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
 <div class="pattern-mistake">
 <strong>⚠️ Common mistake:</strong>
-<div class="mistake-wrong">Dùng "Yeah, totally" trong formal meeting → nghe unprofessional</div>
-<div class="mistake-right">Match register với context</div>
+<div class="mistake-wrong">"No, that won't work." (Just a blocker)</div>
+<div class="mistake-right">"That's challenging, but what if we tried..." (Solution-oriented)</div>
 </div>
 <div class="pattern-alternatives">
 <h5>Why native speakers dùng:</h5>
 <ul>
-<li>Casual "totally" = enthusiastic agreement</li>
-<li>Neutral "makes sense" = logical agreement</li>
-<li>Professional "share that perspective" = professional alignment</li>
-<li>More Formal "aligned" = formal, strategic alignment</li>
+<li>Shows you're not just saying "no"</li>
+<li>Offers a "yes, if..." alternative</li>
+<li>Keeps the conversation moving forward</li>
+<li>Makes you look collaborative, not obstructive</li>
 </ul>
 </div>
 </div>
@@ -1192,43 +1194,43 @@ Today's Plan (60 min)
 <div class="pattern-header">
 <div class="pattern-number">5</div>
 <div class="pattern-content">
-<div class="pattern-text">Đề xuất hành động</div>
-<div class="pattern-ipa">Core idea: "Let's do this."</div>
+<div class="pattern-text">Holding Ground Politely</div>
+<div class="pattern-ipa">Core idea: "No, we can't do that."</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
-<div class="pattern-context">Taking action</div>
+<div class="pattern-context">When you need to say no</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">Cùng 1 ý "hãy làm điều này", nhưng nói 4 cách khác nhau.</div>
+<div class="pattern-desc">Say no without burning bridges. Blame the constraint, not the person.</div>
 <div class="register-table">
 <h4>Register Progression 🔊</h4>
 <div class="register-row">
 <div><span class="register-tag casual">🏠 Casual</span></div>
 <div>
-<div class="register-phrase">"Let's give it a shot."</div>
-<div class="register-context">Với bạn bè, gia đình</div>
+<div class="register-phrase">"I'd love to, but this week is really full."</div>
+<div class="register-context">Bạn bè, gia đình</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag neutral">☕ Neutral</span></div>
 <div>
-<div class="register-phrase">"We could try this approach."</div>
-<div class="register-context">Với đồng nghiệp</div>
+<div class="register-phrase">"I don't think we can make that work."</div>
+<div class="register-context">Đồng nghiệp</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag professional">💼 Professional</span></div>
 <div>
-<div class="register-phrase">"I'd suggest we move forward with this."</div>
-<div class="register-context">Trong meeting, với client</div>
+<div class="register-phrase">"Given our current constraints, that's not feasible."</div>
+<div class="register-context">Client, meeting</div>
 </div>
 </div>
 <div class="register-row">
 <div><span class="register-tag formal">📋 More Formal</span></div>
 <div>
-<div class="register-phrase">"I think it's worth moving forward."</div>
-<div class="register-context">Với senior leaders, formal settings</div>
+<div class="register-phrase">"Unfortunately, that isn't viable given our current scope."</div>
+<div class="register-context">Senior leaders</div>
 </div>
 </div>
 </div>
@@ -1236,37 +1238,37 @@ Today's Plan (60 min)
 <h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"I have an idea for the weekend. <strong>Let's give it a shot</strong> and see how it goes."</span>
-<button class="audio-btn" onclick="playAudio('I have an idea for the weekend. Let\'s give it a shot and see how it goes.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I'd love to help you move this weekend, but <strong>this week is really full</strong> — we have family in town."</span>
+<button class="audio-btn" onclick="playAudio('I\'d love to help you move this weekend, but this week is really full — we have family in town.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span>"I've been thinking about the workflow. <strong>We could try this approach</strong> for a week."</span>
-<button class="audio-btn" onclick="playAudio('I\'ve been thinking about the workflow. We could try this approach for a week.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>I don't think we can make that work</strong> — the timing just doesn't line up for us."</span>
+<button class="audio-btn" onclick="playAudio('I don\'t think we can make that work — the timing just doesn\'t line up for us.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"After reviewing the options, <strong>I'd suggest we move forward with this</strong> solution."</span>
-<button class="audio-btn" onclick="playAudio('After reviewing the options, I\'d suggest we move forward with this solution.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I understand the urgency, but <strong>given our current constraints, that's not feasible</strong> without pulling resources from Project X."</span>
+<button class="audio-btn" onclick="playAudio('I understand the urgency, but given our current constraints, that\'s not feasible without pulling resources from Project X.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span>"The data supports this direction. <strong>I think it's worth moving forward</strong> in Q2."</span>
-<button class="audio-btn" onclick="playAudio('The data supports this direction. I think it\'s worth moving forward in Q2.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"<strong>Unfortunately, that isn't viable given our current scope</strong>, but we could revisit it in Q2."</span>
+<button class="audio-btn" onclick="playAudio('Unfortunately, that isn\'t viable given our current scope, but we could revisit it in Q2.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
 <div class="pattern-mistake">
 <strong>⚠️ Common mistake:</strong>
-<div class="mistake-wrong">"Let's give it a shot" trong board meeting → nghe quá casual</div>
-<div class="mistake-right">Match register với context và audience</div>
+<div class="mistake-wrong">"We can't do that." (Too blunt, causes conflict)</div>
+<div class="mistake-right">"Given [reason], that's going to be challenging." (Blame the constraint, not the person)</div>
 </div>
 <div class="pattern-alternatives">
 <h5>Why native speakers dùng:</h5>
 <ul>
-<li>Casual "give it a shot" = low-pressure experiment</li>
-<li>Neutral "could try" = presents as test</li>
-<li>Professional "suggest" = shows recommendation</li>
-<li>More Formal "worth moving forward" = formal, measured</li>
+<li>"I'd love to, but..." = softens the no with warmth</li>
+<li>"I don't think we can make that work" = collaborative framing</li>
+<li>"Given our constraints" = blames the situation, not the person</li>
+<li>"Unfortunately" = shows you wish it were possible</li>
 </ul>
 </div>
 </div>
@@ -1278,60 +1280,60 @@ Today's Plan (60 min)
 <i class="ph-duotone ph-chats-circle"></i>
 Integrated Dialogues
 </h2>
-<p class="section-desc">Xem cách register được dùng trong 2 dialogues hoàn chỉnh (10+ lượt). Click 🔊 để nghe.</p>
+<p class="section-desc">Xem cách 5 pushback patterns được dùng trong 2 dialogues hoàn chỉnh (10+ lượt). Click 🔊 để nghe.</p>
 </div>
 
 <div class="story-card">
-<h3>🏠 Dialogue 1: Planning Weekend (Casual)</h3>
-<div class="story-context">Context: Minh và Sarah (bạn bè) đang讨论 cuối tuần. Register: Casual throughout.</div>
+<h3>🏠 Dialogue 1: Wedding Budget Pushback</h3>
+<div class="story-context">Context: Minh và Sarah (couple) đang discuss ngân sách đám cưới. Sarah muốn mời thêm 50 người, Minh cần giữ budget.</div>
 <div class="story-dialogue">
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Sarah:</div>
-<div class="dialogue-text">"I was thinking we could go hiking this weekend. The weather looks perfect."</div>
+<div class="dialogue-text">"I really think we should invite my parents' friends. It's only 50 more people."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"That sounds fun! But <strong>maybe we should leave a bit earlier</strong> — last time we got stuck in traffic."</div>
+<div class="dialogue-text">"<strong>I get what you're saying</strong>, and they are important to your family. <strong>And at the same time</strong>, the venue strictly caps us at 150 guests."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Sarah:</div>
-<div class="dialogue-text">"Good point. <strong>One option might be to leave at 7 AM</strong> instead of 9."</div>
+<div class="dialogue-text">"But it's our wedding! We should be able to squeeze them in."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"<strong>Yeah, totally.</strong> That gives us more time on the trail."</div>
+<div class="dialogue-text">"<strong>Help me understand</strong> — is it about them being there, or just making your parents happy?"</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Sarah:</div>
-<div class="dialogue-text">"Actually, I heard about this new trail that's less crowded. <strong>We could try this approach</strong> — go there instead of the usual one."</div>
+<div class="dialogue-text">"Mostly making my parents happy. They feel obligated to invite them."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"<strong>That makes sense.</strong> I've been meaning to check it out. <strong>Let's give it a shot!</strong>"</div>
+<div class="dialogue-text">"<strong>You've got a point there.</strong> Family obligations are tough. <strong>What if we tried this instead?</strong> We host a separate, casual dinner for them a week after the wedding."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Sarah:</div>
-<div class="dialogue-text">"Perfect! I'll send you the details tonight."</div>
+<div class="dialogue-text">"Hmm. That might actually work. It saves the main day for our closest friends."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"Great! Oh, <strong>one thing we should probably figure out</strong> is parking. I heard it gets full."</div>
+<div class="dialogue-text">"Exactly. <strong>That might be a bit difficult</strong> to explain to them at first, though."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Sarah:</div>
-<div class="dialogue-text">"Good call. I'll check the parking situation and let you know."</div>
+<div class="dialogue-text">"I'll talk to my mom. <strong>Given our budget constraints</strong>, I think she'll see the logic."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"Awesome. Looking forward to it!"</div>
+<div class="dialogue-text">"Thanks for being open to it. Let's look at some restaurants for the dinner."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Sarah:</div>
-<div class="dialogue-text">"Me too! See you Saturday!"</div>
+<div class="dialogue-text">"Sounds like a plan!"</div>
 </div>
 </div>
 <div class="story-audio-controls">
-<button class="story-audio-btn story-play-btn" onclick="playAudio('Sarah: I was thinking we could go hiking this weekend. The weather looks perfect. Minh: That sounds fun! But maybe we should leave a bit earlier — last time we got stuck in traffic. Sarah: Good point. One option might be to leave at 7 AM instead of 9. Minh: Yeah, totally. That gives us more time on the trail. Sarah: Actually, I heard about this new trail that\'s less crowded. We could try this approach — go there instead of the usual one. Minh: That makes sense. I\'ve been meaning to check it out. Let\'s give it a shot! Sarah: Perfect! I\'ll send you the details tonight. Minh: Great! Oh, one thing we should probably figure out is parking. I heard it gets full. Sarah: Good call. I\'ll check the parking situation and let you know. Minh: Awesome. Looking forward to it! Sarah: Me too! See you Saturday!')">
+<button class="story-audio-btn story-play-btn" onclick="playAudio('Sarah: I really think we should invite my parents\' friends. It\'s only 50 more people. Minh: I get what you\'re saying, and they are important to your family. And at the same time, the venue strictly caps us at 150 guests. Sarah: But it\'s our wedding! We should be able to squeeze them in. Minh: Help me understand — is it about them being there, or just making your parents happy? Sarah: Mostly making my parents happy. They feel obligated to invite them. Minh: You\'ve got a point there. Family obligations are tough. What if we tried this instead? We host a separate, casual dinner for them a week after the wedding. Sarah: Hmm. That might actually work. It saves the main day for our closest friends. Minh: Exactly. That might be a bit difficult to explain to them at first, though. Sarah: I\'ll talk to my mom. Given our budget constraints, I think she\'ll see the logic. Minh: Thanks for being open to it. Let\'s look at some restaurants for the dinner. Sarah: Sounds like a plan!')">
 <i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
 </button>
 <button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
@@ -1339,76 +1341,70 @@ Integrated Dialogues
 </button>
 </div>
 <div class="story-analysis">
-<h4>Analysis — Register Usage:</h4>
+<h4>Analysis — Pattern Usage:</h4>
 <ul>
-<li>"maybe we should" = casual suggestion</li>
-<li>"one option might be" = neutral proposal</li>
-<li>"yeah, totally" = casual agreement</li>
-<li>"we could try" = neutral suggestion</li>
-<li>"that makes sense" = neutral agreement</li>
-<li>"let's give it a shot" = casual action</li>
-<li>"should probably figure out" = casual problem-solving</li>
-<li><strong>Register:</strong> Casual throughout (friends)</li>
-<li><strong>11 lượt hội thoại</strong> tự nhiên</li>
+<li>"I get what you're saying, and at the same time" → Validate & Pivot (Pattern 1)</li>
+<li>"Help me understand" → Curiosity Pivot (Pattern 2)</li>
+<li>"You've got a point there" → Partial Agreement (Pattern 3)</li>
+<li>"What if we tried this instead" → Proposing Alternative (Pattern 4)</li>
+<li>"Given our budget constraints" → Holding Ground Politely (Pattern 5)</li>
+<li><strong>Register:</strong> Casual throughout (couple)</li>
+<li><strong>11 lượt hội thoại</strong> tự nhiên, không ai bị "thua"</li>
 </ul>
 </div>
 </div>
 
 <div class="story-card">
-<h3>💼 Dialogue 2: Project Meeting (Professional)</h3>
-<div class="story-context">Context: Minh và Lisa (colleagues) đang trong project meeting. Register: Professional → More Formal.</div>
+<h3>💼 Dialogue 2: Client Scope Creep</h3>
+<div class="story-context">Context: Minh (Agency) và Client đang trong meeting. Client đòi thêm feature mà không tăng budget.</div>
 <div class="story-dialogue">
 <div class="dialogue-turn">
-<div class="dialogue-speaker">Lisa:</div>
-<div class="dialogue-text">"I've been reviewing the timeline, and I think we need to adjust the launch date."</div>
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"We really need to add the live chat feature before launch. It's critical."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"<strong>From my perspective, there are some concerns</strong> about the current timeline. The QA phase is too compressed."</div>
+<div class="dialogue-text">"<strong>I understand where you're coming from</strong>, live chat is great for support. <strong>And at the same time</strong>, adding it now will delay the launch by 3 weeks."</div>
 </div>
 <div class="dialogue-turn">
-<div class="dialogue-speaker">Lisa:</div>
-<div class="dialogue-text">"<strong>I share that perspective.</strong> We're risking quality for speed."</div>
-</div>
-<div class="dialogue-turn">
-<div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"<strong>One approach worth considering is</strong> pushing the launch by 2 weeks. That gives us proper testing time."</div>
-</div>
-<div class="dialogue-turn">
-<div class="dialogue-speaker">Lisa:</div>
-<div class="dialogue-text">"<strong>That makes sense.</strong> But we need to communicate this to stakeholders."</div>
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"Can't your team just work overtime to get it done? We can't afford a delay."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"<strong>I'd suggest we move forward with this</strong> approach and prepare a stakeholder update."</div>
+<div class="dialogue-text">"<strong>Help me understand the reasoning behind this</strong> urgency. Is there a specific marketing push tied to the launch date?"</div>
 </div>
 <div class="dialogue-turn">
-<div class="dialogue-speaker">Lisa:</div>
-<div class="dialogue-text">"Agreed. <strong>This deserves a closer look</strong> — let's analyze the impact on other projects."</div>
-</div>
-<div class="dialogue-turn">
-<div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"Good idea. <strong>We might want to address this</strong> in tomorrow's standup."</div>
-</div>
-<div class="dialogue-turn">
-<div class="dialogue-speaker">Lisa:</div>
-<div class="dialogue-text">"Perfect. I'll draft the communication."</div>
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"Yes, we have a major PR campaign dropping on the 15th. We need the site live."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"<strong>I'm aligned with that view.</strong> Let's also consider the budget implications."</div>
+<div class="dialogue-text">"<strong>I agree with the main point</strong> that the PR date is fixed. However, rushing the chat feature might cause bugs that ruin the PR launch."</div>
 </div>
 <div class="dialogue-turn">
-<div class="dialogue-speaker">Lisa:</div>
-<div class="dialogue-text">"Definitely. <strong>I think it's worth moving forward</strong> with a detailed analysis."</div>
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"So what do you suggest? We can't launch without it."</div>
 </div>
 <div class="dialogue-turn">
 <div class="dialogue-speaker">Minh:</div>
-<div class="dialogue-text">"Great. Let's schedule a follow-up meeting for next week."</div>
+<div class="dialogue-text">"<strong>An alternative approach could be</strong> launching on the 15th with a 'Chat Coming Soon' email capture, and rolling out the live chat in Phase 2 on the 30th."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"That... actually makes sense. It keeps the PR date."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"Exactly. <strong>Unfortunately, adding it fully now isn't viable given our current scope</strong>, but the Phase 2 approach protects your launch."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"Let's go with Phase 2. Send me the updated timeline."</div>
 </div>
 </div>
 <div class="story-audio-controls">
-<button class="story-audio-btn story-play-btn" onclick="playAudio('Lisa: I\'ve been reviewing the timeline, and I think we need to adjust the launch date. Minh: From my perspective, there are some concerns about the current timeline. The QA phase is too compressed. Lisa: I share that perspective. We\'re risking quality for speed. Minh: One approach worth considering is pushing the launch by 2 weeks. That gives us proper testing time. Lisa: That makes sense. But we need to communicate this to stakeholders. Minh: I\'d suggest we move forward with this approach and prepare a stakeholder update. Lisa: Agreed. This deserves a closer look — let\'s analyze the impact on other projects. Minh: Good idea. We might want to address this in tomorrow\'s standup. Lisa: Perfect. I\'ll draft the communication. Minh: I\'m aligned with that view. Let\'s also consider the budget implications. Lisa: Definitely. I think it\'s worth moving forward with a detailed analysis. Minh: Great. Let\'s schedule a follow-up meeting for next week.')">
+<button class="story-audio-btn story-play-btn" onclick="playAudio('Client: We really need to add the live chat feature before launch. It\'s critical. Minh: I understand where you\'re coming from, live chat is great for support. And at the same time, adding it now will delay the launch by 3 weeks. Client: Can\'t your team just work overtime to get it done? We can\'t afford a delay. Minh: Help me understand the reasoning behind this urgency. Is there a specific marketing push tied to the launch date? Client: Yes, we have a major PR campaign dropping on the 15th. We need the site live. Minh: I agree with the main point that the PR date is fixed. However, rushing the chat feature might cause bugs that ruin the PR launch. Client: So what do you suggest? We can\'t launch without it. Minh: An alternative approach could be launching on the 15th with a \'Chat Coming Soon\' email capture, and rolling out the live chat in Phase 2 on the 30th. Client: That... actually makes sense. It keeps the PR date. Minh: Exactly. Unfortunately, adding it fully now isn\'t viable given our current scope, but the Phase 2 approach protects your launch. Client: Let\'s go with Phase 2. Send me the updated timeline.')">
 <i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
 </button>
 <button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
@@ -1416,19 +1412,15 @@ Integrated Dialogues
 </button>
 </div>
 <div class="story-analysis">
-<h4>Analysis — Register Usage:</h4>
+<h4>Analysis — Pattern Usage:</h4>
 <ul>
-<li>"from my perspective" = professional opinion</li>
-<li>"i share that perspective" = professional agreement</li>
-<li>"one approach worth considering" = professional suggestion</li>
-<li>"that makes sense" = neutral agreement</li>
-<li>"i'd suggest we move forward" = professional action</li>
-<li>"deserves a closer look" = more formal analysis</li>
-<li>"might want to address" = neutral proposal</li>
-<li>"aligned with that view" = more formal alignment</li>
-<li>"worth moving forward" = more formal decision</li>
-<li><strong>Register:</strong> Professional → More Formal (meeting context)</li>
-<li><strong>12 lượt hội thoại</strong>, thấy register shift</li>
+<li>"I understand where you're coming from, and at the same time" → Validate & Pivot (Pattern 1)</li>
+<li>"Help me understand the reasoning" → Curiosity Pivot (Pattern 2) — uncovers the REAL constraint (PR date)</li>
+<li>"I agree with the main point" → Partial Agreement (Pattern 3)</li>
+<li>"An alternative approach could be" → Proposing Alternative (Pattern 4)</li>
+<li>"Unfortunately, that isn't viable given our current scope" → Holding Ground Politely (Pattern 5)</li>
+<li><strong>Register:</strong> Professional throughout (client meeting)</li>
+<li><strong>11 lượt hội thoại</strong>, thấy register shift và problem-solving</li>
 </ul>
 </div>
 </div>
@@ -1440,20 +1432,20 @@ Integrated Dialogues
 <i class="ph-duotone ph-microphone-stage"></i>
 Pronunciation Focus
 </h2>
-<p class="section-desc">Framing phrases pronunciation và intonation patterns.</p>
+<p class="section-desc">Pushback phrases pronunciation và intonation patterns.</p>
 </div>
 <div class="pronunciation-table">
-<h3>🔤 Framing Phrases</h3>
+<h3>🔤 Pushback Phrases</h3>
 <table>
 <thead>
 <tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
 </thead>
 <tbody>
-<tr><td>Maybe we should</td><td class="ipa-cell">/ˈmeɪbi wi ʃʊd/</td><td>Stress on <strong>"MAY-be"</strong></td></tr>
-<tr><td>One option might be</td><td class="ipa-cell">/wʌn ˈɑːpʃən maɪt bi/</td><td>Smooth flow</td></tr>
-<tr><td>Worth considering</td><td class="ipa-cell">/wɜːrθ kənˈsɪdərɪŋ/</td><td>Linking</td></tr>
-<tr><td>From my perspective</td><td class="ipa-cell">/frɒm maɪ pərˈspɛktɪv/</td><td>Stress on <strong>"per-SPEC-tive"</strong></td></tr>
-<tr><td>Let's give it a shot</td><td class="ipa-cell">/lɛts ɡɪv ɪt ə ʃɒt/</td><td>Smooth</td></tr>
+<tr><td>And at the same time</td><td class="ipa-cell">/ænd æt ðə seɪm taɪm/</td><td>Smooth linking, emphasize "same"</td></tr>
+<tr><td>Help me understand</td><td class="ipa-cell">/hɛlp mi ʌndərˈstænd/</td><td>Soft 'h', calm tone</td></tr>
+<tr><td>You've got a point</td><td class="ipa-cell">/juːv ɡɒt ə pɔɪnt/</td><td>Linking "got-a"</td></tr>
+<tr><td>Given our constraints</td><td class="ipa-cell">/ˈɡɪvən aʊər kənˈstreɪnts/</td><td>Stress on "straints"</td></tr>
+<tr><td>I don't think we can</td><td class="ipa-cell">/aɪ doʊnt θɪŋk wi kæn/</td><td>Soft "don't", not aggressive</td></tr>
 </tbody>
 </table>
 </div>
@@ -1461,29 +1453,29 @@ Pronunciation Focus
 <h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
 </div>
 <div class="intonation-item">
-<span class="phrase">"Maybe we should..."</span>
-<span class="pattern-label">↗↘ Rise-fall</span>
-<span class="context-tip"><strong>Context:</strong> Dùng khi đưa ra suggestion nhẹ nhàng. Rise tạo softness, fall thể hiện suggestion. <strong>Tránh:</strong> Dùng với urgent matters (nghe quá casual).</span>
-</div>
-<div class="intonation-item">
-<span class="phrase">"One option might be..."</span>
+<span class="phrase">"I understand where you're coming from..."</span>
 <span class="pattern-label">↘ Falling</span>
-<span class="context-tip"><strong>Context:</strong> Dùng khi presents as possibility. Falling tone = presents as option, not demand. <strong>Tránh:</strong> Rising (nghe như question).</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi validate. Falling tone = empathetic, grounded. <strong>Tránh:</strong> Rising (nghe sarcastic).</span>
 </div>
 <div class="intonation-item">
-<span class="phrase">"Worth considering..."</span>
-<span class="pattern-label">↘ Falling</span>
-<span class="context-tip"><strong>Context:</strong> Dùng khi shows importance. Falling tone = shows respect for listener's decision. <strong>Tránh:</strong> Rising (nghe uncertain).</span>
-</div>
-<div class="intonation-item">
-<span class="phrase">"From my perspective..."</span>
-<span class="pattern-label">↘ Falling</span>
-<span class="context-tip"><strong>Context:</strong> Dùng khi sharing professional opinion. Falling tone = acknowledges subjectivity. <strong>Tránh:</strong> Rising (nghe như questioning).</span>
-</div>
-<div class="intonation-item">
-<span class="phrase">"Let's give it a shot"</span>
+<span class="phrase">"Help me understand..."</span>
 <span class="pattern-label">↗ Rising</span>
-<span class="context-tip"><strong>Context:</strong> Dùng khi enthusiastic, low-pressure. Rising tone = enthusiastic invitation. <strong>Tránh:</strong> Falling (nghe như command).</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi curious. Rising tone = open, non-threatening. <strong>Tránh:</strong> Falling (nghe like demand).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"And at the same time..."</span>
+<span class="pattern-label">↗↘ Rise-fall</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi bridging two ideas. Rise-fall = smooth transition. <strong>Tránh:</strong> Too abrupt (nghe like "but").</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"What if we tried..."</span>
+<span class="pattern-label">↗ Rising</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi proposing alternative. Rising tone = inviting collaboration. <strong>Tránh:</strong> Falling (nghe like command).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Unfortunately, that isn't viable..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi holding ground. Falling tone = firm but respectful. <strong>Tránh:</strong> Too soft (nghe uncertain).</span>
 </div>
 </section>
 
@@ -1493,62 +1485,62 @@ Pronunciation Focus
 <i class="ph-duotone ph-chats"></i>
 Practice Scenarios
 </h2>
-<p class="section-desc">Practice register shifting in different contexts. Remember: no register is "better" — it's about appropriateness!</p>
+<p class="section-desc">Practice handling pushback in different contexts. Remember: no register is "better" — it's about appropriateness!</p>
 </div>
 <div class="scenario-grid">
 <div class="scenario-card casual">
 <span class="scenario-badge">🟢 Casual - 3-4 min</span>
-<h3>Scenario 1: Planning with Friend</h3>
-<p class="scenario-context">Bạn đang讨论 kế hoạch với bạn. Frame same idea theo casual register.</p>
+<h3>Scenario 1: Group Trip Disagreement</h3>
+<p class="scenario-context">Bạn bè muốn thuê một căn villa quá đắt. Bạn cần giữ budget mà không làm mất vui.</p>
 <div class="scenario-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Use 3+ casual frames</li>
-<li>Soften suggestions with "maybe", "could"</li>
-<li>Show agreement with "yeah, totally"</li>
-<li>End with "let's give it a shot"</li>
+<li>Dùng "I get what you're saying, and..."</li>
+<li>Dùng "What if we tried..."</li>
+<li>Dùng "That might be a bit difficult"</li>
+<li>Keep it light, not confrontational</li>
 </ul>
 </div>
 </div>
 <div class="scenario-card professional">
 <span class="scenario-badge">🔵 Neutral - 3-4 min</span>
-<h3>Scenario 2: Discussing with Colleague</h3>
-<p class="scenario-context">Bạn đang thảo luận với đồng nghiệp về workflow. Frame same idea theo neutral register.</p>
+<h3>Scenario 2: Colleague's Bad Idea</h3>
+<p class="scenario-context">Đồng nghiệp đề xuất một workflow mới mà bạn biết là sẽ gây lỗi.</p>
 <div class="scenario-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Use 3+ neutral frames</li>
-<li>Present as options: "one option might be"</li>
-<li>Show agreement: "that makes sense"</li>
-<li>Suggest action: "we could try"</li>
+<li>Dùng "Help me understand..."</li>
+<li>Dùng "You've got a point there, though..."</li>
+<li>Dùng "Another way to look at it..."</li>
+<li>Don't make it personal</li>
 </ul>
 </div>
 </div>
 <div class="scenario-card mixed">
 <span class="scenario-badge">🟣 Professional - 4-5 min</span>
-<h3>Scenario 3: Meeting with Client</h3>
-<p class="scenario-context">Bạn đang trong meeting với client. Frame same idea theo professional register.</p>
+<h3>Scenario 3: Client Scope Creep</h3>
+<p class="scenario-context">Client đòi thêm việc gấp mà không trả thêm phí.</p>
 <div class="scenario-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Use 3+ professional frames</li>
-<li>Show opinion: "from my perspective"</li>
-<li>Suggest approach: "one approach worth considering"</li>
-<li>Recommend action: "i'd suggest we move forward"</li>
+<li>Dùng "I understand where you're coming from, and at the same time..."</li>
+<li>Dùng "Given our current constraints..."</li>
+<li>Offer alternative, not just "no"</li>
+<li>Keep relationship intact</li>
 </ul>
 </div>
 </div>
 <div class="scenario-card challenge">
 <span class="scenario-badge">🟠 Challenge - 5 min</span>
-<h3>Scenario 4: 3 Conversations in 5 Minutes</h3>
-<p class="scenario-context">Bạn nói chuyện với: 1. Bạn ở party (casual) 2. Đồng nghiệp ở pantry (neutral) 3. Sếp trong meeting (professional)</p>
+<h3>Scenario 4: The Double Pushback</h3>
+<p class="scenario-context">Sáng: Từ chối bạn bè mượn tiền (Casual). Chiều: Từ chối sếp giao thêm project (Professional).</p>
 <div class="scenario-requirements">
 <h4>Requirements:</h4>
 <ul>
 <li>Shift register linh hoạt</li>
-<li>Cùng 1 ý, nhưng frame khác nhau</li>
-<li>Không bị "stuck" ở 1 register</li>
+<li>Giữ vững lập trường (hold ground) nhưng không gây mất lòng</li>
 <li>Mỗi conversation có opening + elaboration + closing</li>
+<li>Use different patterns for each</li>
 </ul>
 </div>
 </div>
@@ -1560,55 +1552,53 @@ Practice Scenarios
 <h2 class="section-title">
 <i class="ph-duotone ph-target"></i>
 Reality Task - Choose Your Level</h2>
-<p class="section-desc">Bài tập THỰC TẾ - apply register awareness vào đời thật. Chọn 1 trong 3 levels.</p>
+<p class="section-desc">Bài tập THỰC TẾ - apply pushback handling vào đời thật. Chọn 1 trong 3 levels.</p>
 </div>
 <div class="task-grid">
 <div class="task-card easy">
 <div class="task-level">EASY</div>
-<h3>📝 Frame Same Idea 4 Ways</h3>
+<h3>📝 Write a Pushback Script</h3>
 <div class="task-time">⏱️ 15 minutes</div>
-<p class="task-desc">Chọn 1 ý tưởng (ví dụ: "We should start earlier"). Viết 4 versions theo 4 registers.</p>
+<p class="task-desc">Viết script từ chối 1 yêu cầu vô lý (dùng Pattern 5 & Pattern 1).</p>
 <div class="task-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Casual version</li>
-<li>Neutral version</li>
-<li>Professional version</li>
-<li>More Formal version</li>
-<li>Explain WHY each version works</li>
+<li>Use Validate & Pivot</li>
+<li>Use Holding Ground Politely</li>
+<li>Offer alternative if possible</li>
+<li>Keep relationship intact</li>
 </ul>
 </div>
-<div class="task-deliverable"><strong>Deliverable:</strong> Text comparison</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written script</div>
 </div>
 <div class="task-card standard">
 <div class="task-level">STANDARD</div>
-<h3>🎙️ Record 3 Registers</h3>
+<h3>🎙️ Record 2 Pushback Scenarios</h3>
 <div class="task-time">⏱️ 30 minutes</div>
-<p class="task-desc">Record cùng 1 ý tưởng theo 3 registers (casual, neutral, professional).</p>
+<p class="task-desc">Record giọng nói 2 tình huống pushback (Life & Business). Chú ý intonation không được gay gắt.</p>
 <div class="task-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Same core message</li>
-<li>Different register each time</li>
-<li>Natural delivery</li>
-<li>Explain context for each</li>
+<li>1 Life scenario (casual register)</li>
+<li>1 Business scenario (professional register)</li>
+<li>Calm, respectful tone</li>
+<li>Use at least 3 patterns each</li>
 </ul>
 </div>
-<div class="task-deliverable"><strong>Deliverable:</strong> 3 audio recordings</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
 </div>
 <div class="task-card challenge">
 <div class="task-level">CHALLENGE</div>
-<h3>🎥 The Register Shifting Challenge</h3>
+<h3>🎥 The Curiosity Challenge</h3>
 <div class="task-time">⏱️ 60 minutes</div>
-<p class="task-desc">Trong 1 ngày, consciously shift register trong 3 conversations khác nhau.</p>
+<p class="task-desc">Trong tuần này, khi có ai đó bất đồng ý kiến, dùng "Help me understand..." thay vì giải thích ngay lập tức. Note lại kết quả.</p>
 <div class="task-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Conversation 1: Casual (friend/family)</li>
-<li>Conversation 2: Neutral (colleague)</li>
-<li>Conversation 3: Professional (meeting/client)</li>
+<li>Use "Help me understand..." at least 3 times</li>
+<li>Note how the other person responds</li>
 <li>Reflect on what worked/didn't work</li>
-<li>Identify which register felt most natural</li>
+<li>Identify which pattern felt most natural</li>
 </ul>
 </div>
 <div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
@@ -1618,26 +1608,26 @@ Reality Task - Choose Your Level</h2>
 
 <section class="section">
 <div class="mastery-card">
-<h2>🎯 Framing Mastery</h2>
+<h2>🎯 Pushback Handling Mastery</h2>
 <div class="mastery-item">
 <input type="checkbox" id="mastery1">
-<label for="mastery1">Can frame same idea theo 4 registers</label>
+<label for="mastery1">Can validate before pivoting</label>
 </div>
 <div class="mastery-item">
 <input type="checkbox" id="mastery2">
-<label for="mastery2">Can shift register linh hoạt tùy context</label>
+<label for="mastery2">Can use curiosity to de-escalate</label>
 </div>
 <div class="mastery-item">
 <input type="checkbox" id="mastery3">
-<label for="mastery3">Can soften suggestions với hedging</label>
+<label for="mastery3">Can partially agree without fully conceding</label>
 </div>
 <div class="mastery-item">
 <input type="checkbox" id="mastery4">
-<label for="mastery4">Can show professional alignment</label>
+<label for="mastery4">Can propose alternatives, not just say no</label>
 </div>
 <div class="mastery-item">
 <input type="checkbox" id="mastery5">
-<label for="mastery5">Can recommend action appropriately</label>
+<label for="mastery5">Can hold ground politely without burning bridges</label>
 </div>
 </div>
 
@@ -1645,23 +1635,23 @@ Reality Task - Choose Your Level</h2>
 <h2><i class="ph-duotone ph-check-circle"></i> Success Criteria</h2>
 <div class="success-item">
 <i class="ph-duotone ph-check"></i>
-<span>Register matches context</span>
+<span>Pushback doesn't escalate into argument</span>
 </div>
 <div class="success-item">
 <i class="ph-duotone ph-check"></i>
-<span>Suggestions sound collaborative, not pushy</span>
+<span>Other person feels heard, even if you disagree</span>
 </div>
 <div class="success-item">
 <i class="ph-duotone ph-check"></i>
-<span>Opinions sound professional, not confrontational</span>
+<span>You can say no without damaging the relationship</span>
 </div>
 <div class="success-item">
 <i class="ph-duotone ph-check"></i>
-<span>Agreements sound genuine, not robotic</span>
+<span>Conversation moves toward solution, not blame</span>
 </div>
 <div class="success-item">
 <i class="ph-duotone ph-check"></i>
-<span>Actions sound strategic, not reactive</span>
+<span>You stay calm and respectful throughout</span>
 </div>
 </div>
 
@@ -1669,23 +1659,23 @@ Reality Task - Choose Your Level</h2>
 <h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
 <div class="tip-item">
 <i class="ph-duotone ph-lightbulb"></i>
-<span><strong>Khi không chắc</strong> → chọn neutral (safe choice)</span>
+<span><strong>Validate first:</strong> "I see where you're coming from" before introducing your view</span>
 </div>
 <div class="tip-item">
 <i class="ph-duotone ph-lightbulb"></i>
-<span><strong>Với bạn</strong> → casual: "maybe", "could", "let's"</span>
+<span><strong>Get curious:</strong> "Help me understand..." often softens their stance</span>
 </div>
 <div class="tip-item">
 <i class="ph-duotone ph-lightbulb"></i>
-<span><strong>Với đồng nghiệp</strong> → neutral: "one option", "might be"</span>
+<span><strong>Blame the constraint:</strong> "Given our budget..." not "I don't want to..."</span>
 </div>
 <div class="tip-item">
 <i class="ph-duotone ph-lightbulb"></i>
-<span><strong>Với client</strong> → professional: "from my perspective", "worth considering"</span>
+<span><strong>Offer alternatives:</strong> "What if we tried..." instead of just "No"</span>
 </div>
 <div class="tip-item">
 <i class="ph-duotone ph-lightbulb"></i>
-<span><strong>Với sếp</strong> → more formal: "perhaps", "deserves", "aligned"</span>
+<span><strong>Choose the right connector:</strong> "and", "though", or "but" — depending on the effect you want</span>
 </div>
 </div>
 </section>
@@ -1696,18 +1686,18 @@ Reality Task - Choose Your Level</h2>
 <i class="ph-duotone ph-cards"></i>
 Flashcard Review
 </h2>
-<p class="section-desc">5 flashcards với framing pairs. Mặt trước: ý tưởng. Mặt sau: 4 registers.</p>
+<p class="section-desc">5 flashcards với pushback patterns. Mặt trước: intent. Mặt sau: 4 registers.</p>
 </div>
 <div class="flashcard-container">
 <div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
 <div class="flashcard-front">
-<p>"We should leave earlier"</p>
+<p>Intent: Disagree respectfully</p>
 <button>Tap to reveal 4 registers →</button>
 </div>
 <div class="flashcard-back">
-<p>🏠 Casual: "Maybe we should leave a bit earlier."<br>☕ Neutral: "One option might be to leave earlier."<br>💼 Professional: "One approach worth considering is leaving earlier."<br>📋 More Formal: "Perhaps we should consider adjusting the schedule slightly."</p>
+<p>🏠 Casual: "I get what you're saying, and..."<br>☕ Neutral: "I see your point, though..."<br>💼 Professional: "I understand where you're coming from, and at the same time..."<br>📋 More Formal: "While I appreciate that perspective, we must also consider..."</p>
 <div class="flashcard-tip">
-<strong>💡 Tip:</strong> Match register với context. Khi không chắc → chọn neutral.
+<strong>💡 Tip:</strong> Don't automatically replace "but" — learn when "and", "though", or "but" creates the right effect.
 </div>
 </div>
 </div>
@@ -1723,71 +1713,71 @@ Flashcard Review
 <div class="section-header">
 <h2 class="section-title">
 <i class="ph-duotone ph-pencil-simple"></i>
-Quiz: Framing Your Message
+Quiz: Handling Pushback
 </h2>
-<p class="section-desc">7 câu hỏi về register appropriateness. Chọn đáp án ĐÚNG NHẤT cho context.</p>
+<p class="section-desc">7 câu hỏi về register appropriateness và pushback handling. Chọn đáp án ĐÚNG NHẤT cho context.</p>
 </div>
 <div class="quiz-question">
-<h4>1. Bạn gặp bạn ở party. Muốn đề xuất rời sớm. Câu nào NGHE TỰ NHIÊN NHẤT?</h4>
+<h4>1. Bạn đang trong meeting với client. Client đòi thêm feature mà không tăng budget. Câu nào TỐT NHẤT?</h4>
 <div class="quiz-options">
-<div class="quiz-option">A. "One approach worth considering is leaving earlier."</div>
-<div class="quiz-option">B. "Maybe we should leave a bit earlier."</div>
-<div class="quiz-option">C. "Perhaps we should consider adjusting the schedule."</div>
-<div class="quiz-option">D. "This deserves a closer look."</div>
-</div>
-</div>
-<div class="quiz-question">
-<h4>2. Bạn đang trong meeting với client. Muốn thể hiện ý kiến. Câu nào TỐT NHẤT?</h4>
-<div class="quiz-options">
-<div class="quiz-option">A. "I think this is wrong."</div>
-<div class="quiz-option">B. "Yeah, totally."</div>
-<div class="quiz-option">C. "From my perspective, there are some concerns."</div>
-<div class="quiz-option">D. "Maybe we should reconsider."</div>
+<div class="quiz-option">A. "No, we can't do that."</div>
+<div class="quiz-option">B. "I understand where you're coming from, and at the same time, adding it now will delay the launch."</div>
+<div class="quiz-option">C. "That's not possible."</div>
+<div class="quiz-option">D. "You're wrong about that."</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>3. Bạn đang thảo luận với đồng nghiệp. Muốn đề xuất giải pháp. Câu nào TỐT NHẤT?</h4>
+<h4>2. "Help me understand..." dùng khi nào?</h4>
 <div class="quiz-options">
-<div class="quiz-option">A. "Let's give it a shot."</div>
-<div class="quiz-option">B. "We could try this approach."</div>
-<div class="quiz-option">C. "This deserves a closer look."</div>
-<div class="quiz-option">D. "One option might be to try this."</div>
+<div class="quiz-option">A. Khi bạn muốn end conversation</div>
+<div class="quiz-option">B. Khi muốn de-escalate và understand their reasoning</div>
+<div class="quiz-option">C. Khi bạn đồng ý hoàn toàn</div>
+<div class="quiz-option">D. Khi muốn change subject</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>4. Câu nào có REGISTER MISMATCH?</h4>
+<h4>3. Câu nào có REGISTER MISMATCH?</h4>
 <div class="quiz-options">
-<div class="quiz-option">A. (Với bạn) "Maybe we should leave earlier."</div>
-<div class="quiz-option">B. (Với sếp) "Maybe we should leave earlier."</div>
-<div class="quiz-option">C. (Với đồng nghiệp) "One option might be to leave earlier."</div>
-<div class="quiz-option">D. (Với client) "One approach worth considering is leaving earlier."</div>
+<div class="quiz-option">A. (Với bạn) "I get what you're saying, and..."</div>
+<div class="quiz-option">B. (Với sếp) "I get what you're saying, and..."</div>
+<div class="quiz-option">C. (Với đồng nghiệp) "I see your point, though..."</div>
+<div class="quiz-option">D. (Với client) "I understand where you're coming from..."</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>5. Bạn muốn thể hiện sự đồng ý trong meeting professional. Câu nào TỐT NHẤT?</h4>
+<h4>4. Bạn muốn từ chối yêu cầu của bạn bè mà không làm mất lòng. Câu nào TỐT NHẤT?</h4>
 <div class="quiz-options">
-<div class="quiz-option">A. "Yeah, totally."</div>
-<div class="quiz-option">B. "That makes sense."</div>
-<div class="quiz-option">C. "I share that perspective."</div>
-<div class="quiz-option">D. "I'm aligned with that view."</div>
+<div class="quiz-option">A. "No, I can't."</div>
+<div class="quiz-option">B. "I'd love to, but this week is really full."</div>
+<div class="quiz-option">C. "That's not possible."</div>
+<div class="quiz-option">D. "I don't want to."</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>6. Khi KHÔNG CHẮC nên dùng register nào, bạn nên chọn:</h4>
+<h4>5. "You've got a point there" là loại gì?</h4>
 <div class="quiz-options">
-<div class="quiz-option">A. Casual (an toàn nhất)</div>
-<div class="quiz-option">B. Neutral (safe choice)</div>
-<div class="quiz-option">C. Professional (impressive)</div>
-<div class="quiz-option">D. More Formal (authoritative)</div>
+<div class="quiz-option">A. Full agreement</div>
+<div class="quiz-option">B. Partial agreement</div>
+<div class="quiz-option">C. Disagreement</div>
+<div class="quiz-option">D. Indifference</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>7. Bạn vừa kết thúc meeting với board. Muốn đề xuất hành động. Câu nào TỐT NHẤT?</h4>
+<h4>6. Khi KHÔNG CHẮC nên dùng connector nào, bạn nên:</h4>
 <div class="quiz-options">
-<div class="quiz-option">A. "Let's give it a shot."</div>
-<div class="quiz-option">B. "We could try this approach."</div>
-<div class="quiz-option">C. "I'd suggest we move forward with this."</div>
-<div class="quiz-option">D. "I think it's worth moving forward."</div>
+<div class="quiz-option">A. Luôn dùng "but"</div>
+<div class="quiz-option">B. Learn when "and", "though", or "but" creates the right effect</div>
+<div class="quiz-option">C. Luôn dùng "and"</div>
+<div class="quiz-option">D. Tránh tất cả connectors</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. TÌNH HUỐNG: Client đòi deadline gấp hơn. Bạn biết là không feasible. Câu nào TỐT NHẤT?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "That's impossible."</div>
+<div class="quiz-option">B. "I understand the urgency, but given our current constraints, that's not feasible without compromising quality."</div>
+<div class="quiz-option">C. "No way."</div>
+<div class="quiz-option">D. "You're being unreasonable."</div>
 </div>
 </div>
 <button class="check-btn">
@@ -1803,7 +1793,7 @@ Check Answers
 </a>
 <a href="week-05-day-32.html" class="nav-card">
 <div class="nav-label">Next Day →</div>
-<div class="nav-title">Day 32: Handling Pushback</div>
+<div class="nav-title">Day 32: Managing Up & Expectations</div>
 </a>
 </div>
 
@@ -1812,7 +1802,7 @@ Check Answers
 <i class="ph-duotone ph-check-circle"></i>
 <span>Mark Day 31 Complete & Continue to Day 32</span>
 </button>
-<div class="complete-message">Frame your message. Match your context. 💬</div>
+<div class="complete-message">Handle pushback gracefully. Stay diplomatic. 🛡️</div>
 </div>
 
 </div>
@@ -1822,7 +1812,7 @@ Check Answers
 <div class="container">
 <div class="footer-fox">🦊</div>
 <div class="footer-title">Professional Fluency Roadmap</div>
-<div class="footer-tagline">Week 5 · Day 31 · Framing Your Message</div>
+<div class="footer-tagline">Week 5 · Day 31 · Handling Pushback</div>
 </div>
 </footer>
 
@@ -1884,7 +1874,7 @@ btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 31 Complet
 btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
 btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
 const msg = document.querySelector('.complete-message');
-msg.textContent = 'Frame your message. Match your context. 💬';
+msg.textContent = 'Handle pushback gracefully. Stay diplomatic. 🛡️';
 }
 
 window.addEventListener('DOMContentLoaded', () => {
