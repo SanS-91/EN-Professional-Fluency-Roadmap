@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 5 Day 33: Managing Expectations | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #F59E0B;
+--primary-bright: #D97706;
+--primary-soft: #FEF3C7;
+--primary-deep: #92400E;
+--primary-light: #FBBF24;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 97%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🎯'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(254, 243, 199, 0.6), rgba(253, 224, 71, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(245, 158, 11, 0.2);
+}
+.philosophy-box {
+background: #FFFBEB;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.philosophy-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+.philosophy-card {
+padding: 20px;
+border-radius: var(--radius-md);
+border-left: 4px solid;
+}
+.philosophy-card.negative { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.philosophy-card.positive { background: rgba(16, 185, 129, 0.08); border-left-color: #10B981; }
+.philosophy-card-title {
+font-weight: 600; margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-card.negative .philosophy-card-title { color: #C53030; }
+.philosophy-card.positive .philosophy-card-title { color: #065F46; }
+.philosophy-card-list { list-style: none; }
+.philosophy-card-list li {
+padding: 4px 0; padding-left: 24px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.philosophy-card.negative .philosophy-card-list li::before { content: '✕'; position: absolute; left: 0; color: #E53E3E; font-weight: 600; }
+.philosophy-card.positive .philosophy-card-list li::before { content: '✓'; position: absolute; left: 0; color: #10B981; font-weight: 600; }
+
+.register-note {
+margin-top: 20px;
+padding: 16px 20px;
+background: rgba(245, 158, 11, 0.08);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--primary);
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+}
+.register-note strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.8rem; margin-bottom: 8px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 12px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(254, 243, 199, 0.5);
+padding: 2px 10px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 12px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(254, 243, 199, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.pattern-why {
+background: rgba(254, 243, 199, 0.4);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.pattern-why strong { color: var(--primary-deep); display: block; margin-bottom: 6px; font-size: 13px; }
+.pattern-why ul { list-style: none; padding: 0; }
+.pattern-why li {
+font-size: 12px; color: var(--text-secondary);
+padding: 3px 0; padding-left: 16px; position: relative;
+}
+.pattern-why li::before { content: '✓'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+
+.pattern-examples {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.pattern-examples h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.example {
+padding: 10px 12px; background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm); margin-bottom: 8px;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+display: flex; align-items: flex-start; gap: 10px;
+}
+.example:last-child { margin-bottom: 0; }
+.example-tag {
+flex-shrink: 0; font-size: 11px; padding: 2px 8px;
+border-radius: 8px; font-weight: 600;
+}
+.example-tag.life { background: var(--green-soft); color: var(--green-deep); }
+.example-tag.business { background: var(--blue-soft); color: var(--blue-deep); }
+.audio-btn {
+flex-shrink: 0; width: 26px; height: 26px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+}
+.audio-btn:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+.audio-btn i { --ph-color: white; font-size: 12px; }
+
+.pattern-mistake {
+background: rgba(254, 226, 226, 0.5);
+border-radius: var(--radius-sm);
+padding: 12px 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.pattern-mistake strong { color: var(--highlight-orange); display: block; margin-bottom: 6px; font-size: 12px; }
+.mistake-wrong { font-size: 12px; color: #C53030; margin-bottom: 4px; }
+.mistake-wrong::before { content: '❌ '; }
+.mistake-right { font-size: 12px; color: var(--highlight-green); }
+.mistake-right::before { content: '✅ '; }
+
+.pattern-alternatives {
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+padding: 12px 14px;
+border-left: 3px solid var(--primary);
+}
+.pattern-alternatives h5 {
+font-size: 11px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+}
+.pattern-alternatives ul { list-style: none; padding: 0; }
+.pattern-alternatives li {
+font-size: 12px; color: var(--text-secondary);
+padding: 3px 0; padding-left: 16px; position: relative;
+}
+.pattern-alternatives li::before { content: '•'; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(254, 243, 199, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.story-audio-controls { display: flex; gap: 10px; margin-bottom: 14px; }
+.story-audio-btn {
+padding: 10px 20px; border-radius: 20px;
+font-size: 13px; font-weight: 600; cursor: pointer;
+display: inline-flex; align-items: center; gap: 8px;
+border: none; transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { background: rgba(245, 101, 101, 0.2); }
+.story-analysis {
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+.intonation-item .context-tip strong {
+color: var(--primary-deep); font-style: normal;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { border-radius: var(--radius-md); padding: 24px; border: 2px solid; }
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 12px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.scenario-context { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.3; }
+.scenario-requirements { background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.scenario-requirements h4 { font-size: 12px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(254, 243, 199, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(254, 243, 199, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(254, 243, 199, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 224, 71, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(245, 158, 11, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(254, 243, 199, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(254, 243, 199, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(245, 158, 11, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(245, 158, 11, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.philosophy-grid { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-05.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 5 Hub</span>
+</a>
+<div class="day-indicator">
+Day 33 / 35
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-05.html" class="day-tab">Overview</a>
+<a href="week-05-day-29.html" class="day-tab">Day 29</a>
+<a href="week-05-day-30.html" class="day-tab">Day 30</a>
+<a href="week-05-day-31.html" class="day-tab">Day 31</a>
+<a href="week-05-day-32.html" class="day-tab">Day 32</a>
+<a href="week-05-day-33.html" class="day-tab active">Day 33</a>
+<a href="week-05-day-34.html" class="day-tab">Day 34</a>
+<a href="week-05-day-35.html" class="day-tab">Day 35</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-05.html">Week 5</a> › Day 33
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🎯</span>
+<h1 class="day-title">Managing Expectations</h1>
+</div>
+<p class="day-subtitle">C1 speakers don't say "yes" and burn out, or "no" and burn bridges. They say <strong>"yes, if..."</strong> or <strong>"no, but..."</strong> — giving others the choice while protecting their own capacity. Hôm nay bạn sẽ học 5 patterns để chủ động thiết lập kỳ vọng rõ ràng.</p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-target"></i> Proactive Alignment</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-books"></i> 5 patterns</div>
+<div class="meta-tag"><i class="ph-duotone ph-shield-check"></i> Boundaries</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
+<div style="font-size: 14px;">"Yes, I'll do it." (Then silently struggle, miss deadline, cause disappointment)</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
+<div style="font-size: 14px;">"I can take that on, as long as we push the Q3 review to next week."</div>
+</div>
+</div>
+"Managing expectations isn't about saying no. It's about making sure 'done' means the same thing to both of you."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From "People Pleaser" to "Strategic Partner"
+</div>
+<p>
+Nhiều người nghĩ "managing expectations" là thao túng hoặc ra lệnh. Thực tế, nó chỉ là <span style="color: var(--primary); font-weight: 600;">làm cho người khác dễ làm việc với bạn</span>. Khi bạn rõ ràng về capacity, timeline, và trade-offs, người khác sẽ tin tưởng bạn hơn.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Bad news early is a strategy. Bad news late is a crisis.</span>
+<br><br>
+<span style="color: var(--highlight-green); font-weight: 600;">No register is "better" than another.</span> Casual, neutral, and professional are all correct when they match the context. The lesson teaches appropriateness, not hierarchy.
+</p>
+</div>
+<div class="philosophy-grid">
+<div class="philosophy-card negative">
+<div class="philosophy-card-title">
+<i class="ph-duotone ph-x-circle"></i>
+Why most people fail at expectations
+</div>
+<ul class="philosophy-card-list">
+<li>Nói "Yes" với mọi thứ vì sợ mất lòng → overpromise, underdeliver</li>
+<li>Giấu tin xấu cho đến phút chót vì sợ bị đánh giá</li>
+<li>Để người khác tự đoán "done" nghĩa là gì → dẫn đến thất vọng</li>
+<li>Hỏi "Em phải làm gì?" thay vì đưa ra options</li>
+</ul>
+</div>
+<div class="philosophy-card positive">
+<div class="philosophy-card-title">
+<i class="ph-duotone ph-check-circle"></i>
+What C1 communicators do differently
+</div>
+<ul class="philosophy-card-list">
+<li>Offer trade-offs: "I can do X, but Y will have to wait"</li>
+<li>Flag early: "I want to flag that we might miss the Friday deadline"</li>
+<li>Define "done" upfront: "By Friday, you'll have the draft, but not the final polish"</li>
+<li>Ask for priorities: "Should I focus on X or Y first?"</li>
+</ul>
+</div>
+</div>
+<div class="register-note">
+<strong>💡 About connectors:</strong> Native speakers dùng nhiều cách để đưa ra điều kiện: <strong>if</strong>, <strong>as long as</strong>, <strong>assuming</strong>, <strong>so long as</strong>, <strong>provided</strong>. Đừng đóng khung vào 1 từ — học cách dùng linh hoạt tùy ngữ cảnh.
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">💡</div>
+<div class="plan-title">5 Patterns</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">Expectation patterns</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Dialogues</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">2 dialogues, 10+ turns each</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">20 min</div>
+<div class="plan-desc">4 scenarios + record</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">10 min</div>
+<div class="plan-desc">Flashcards + quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+5 Managing Expectations Patterns
+</h2>
+<p class="section-desc">5 patterns để chủ động thiết lập kỳ vọng. Mỗi pattern có register progression và Life/Business examples. Click 🔊 để nghe.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">The Capacity Check (Trade-offs)</div>
+<div class="pattern-ipa">Core idea: "I'm too busy to do this."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">When you need to say yes with conditions</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Đưa ra sự lựa chọn, không phải từ chối. Chuyển giao quyền quyết định một cách chuyên nghiệp.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I can help with X, if that means we skip Y."</div>
+<div class="register-context">Bạn bè, gia đình</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I can take a look, as long as it doesn't clash with Friday's deadline."</div>
+<div class="register-context">Đồng nghiệp</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I can take that on, assuming we push the Q3 review to next week."</div>
+<div class="register-context">Sếp, Client</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I'm happy to lead this, so long as we have the budget for it."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+</div>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"I can help with the party invitations, <strong>if</strong> that means you handle the grocery run today."</span>
+<button class="audio-btn" onclick="playAudio('I can help with the party invitations, if that means you handle the grocery run today.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"I can drive you to the airport, <strong>as long as</strong> you're ready by 6 AM."</span>
+<button class="audio-btn" onclick="playAudio('I can drive you to the airport, as long as you\'re ready by 6 AM.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"I can take that on, <strong>assuming</strong> we push the Q3 review to next week."</span>
+<button class="audio-btn" onclick="playAudio('I can take that on, assuming we push the Q3 review to next week.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"I'm happy to lead this, <strong>so long as</strong> we have the budget for it."</span>
+<button class="audio-btn" onclick="playAudio('I\'m happy to lead this, so long as we have the budget for it.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake:</strong>
+<div class="mistake-wrong">"I can't do that, I have too much on my plate." (Nghe như phàn nàn, victim mindset)</div>
+<div class="mistake-right">"I can do that, provided we pause the other project." (Nghe như project manager, đưa ra lựa chọn)</div>
+</div>
+<div class="pattern-alternatives">
+<h5>Why native speakers dùng:</h5>
+<ul>
+<li>"If" / "as long as" / "assuming" / "so long as" = shifts burden of choice to them</li>
+<li>Không nghe lazy hay incompetent</li>
+<li>Bạn đang nói "yes" với công việc, nhưng đặt điều kiện</li>
+</ul>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">The Early Warning (Flag Early)</div>
+<div class="pattern-ipa">Core idea: "It's going to be late / fail."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">When you see a risk early</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Báo tin xấu sớm. Cho phép người khác điều chỉnh plan, thể hiện sự kiểm soát.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Just a heads-up, I'm running a bit behind on..."</div>
+<div class="register-context">Bạn bè, gia đình</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I want to give you a quick heads-up that..."</div>
+<div class="register-context">Đồng nghiệp</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I want to flag early that we might miss the Friday deadline due to..."</div>
+<div class="register-context">Sếp, Client</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I want to manage expectations upfront — the timeline is at risk because..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+</div>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"<strong>Just a heads-up</strong>, I'm running a bit behind on the reservations, so we might not get the window table."</span>
+<button class="audio-btn" onclick="playAudio('Just a heads-up, I\'m running a bit behind on the reservations, so we might not get the window table.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"<strong>Just a heads-up</strong>, the flight might be delayed — I'll keep you posted."</span>
+<button class="audio-btn" onclick="playAudio('Just a heads-up, the flight might be delayed — I\'ll keep you posted.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"<strong>I want to flag early that</strong> we might miss the Friday deadline due to the legal review. I'm pushing them, but I wanted you to know."</span>
+<button class="audio-btn" onclick="playAudio('I want to flag early that we might miss the Friday deadline due to the legal review. I\'m pushing them, but I wanted you to know.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"<strong>I want to manage expectations upfront</strong> — the timeline is at risk because the vendor is delayed."</span>
+<button class="audio-btn" onclick="playAudio('I want to manage expectations upfront — the timeline is at risk because the vendor is delayed.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake:</strong>
+<div class="mistake-wrong">(Im lặng cho đến thứ Sáu) "Sorry, it's not done." (Gây khủng hoảng, mất niềm tin)</div>
+<div class="mistake-right">(Nói vào thứ Tư) "I want to flag early..." (Cho phép sếp điều chỉnh plan, thể hiện sự kiểm soát)</div>
+</div>
+<div class="pattern-alternatives">
+<h5>Why native speakers dùng:</h5>
+<ul>
+<li>"Flag early" and "heads-up" frame the delay as a shared problem to solve</li>
+<li>Không phải personal failure</li>
+<li>Bad news early is a strategy; bad news late is a crisis</li>
+</ul>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">The Priority Clarifier</div>
+<div class="pattern-ipa">Core idea: "What do you want me to do first?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">When you can't do both</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Hỏi thứ tự ưu tiên. Cho thấy bạn hiểu rõ capacity của mình, chủ động thay vì bị động.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Which one first?" / "Should I tackle X or Y?"</div>
+<div class="register-context">Bạn bè, gia đình</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Just to check, should I focus on X or Y first?"</div>
+<div class="register-context">Đồng nghiệp</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"To make sure I'm focusing on the right things, should I prioritize X or Y?"</div>
+<div class="register-context">Sếp, Client</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Given our current bandwidth, which of these two initiatives takes precedence?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+</div>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"We only have one afternoon. <strong>Which one first</strong> — pack the car or clean the kitchen?"</span>
+<button class="audio-btn" onclick="playAudio('We only have one afternoon. Which one first — pack the car or clean the kitchen?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"<strong>Should I tackle</strong> the grocery shopping <strong>or</strong> the laundry first?"</span>
+<button class="audio-btn" onclick="playAudio('Should I tackle the grocery shopping or the laundry first?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"<strong>To make sure I'm focusing on the right things, should I prioritize</strong> the client deck <strong>or</strong> the internal budget report? I can get one done by 5 PM."</span>
+<button class="audio-btn" onclick="playAudio('To make sure I\'m focusing on the right things, should I prioritize the client deck or the internal budget report? I can get one done by 5 PM.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"<strong>Just to check, should I focus on</strong> the Q3 review <strong>or</strong> the client proposal first?"</span>
+<button class="audio-btn" onclick="playAudio('Just to check, should I focus on the Q3 review or the client proposal first?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake:</strong>
+<div class="mistake-wrong">"Which one do you want?" (Nghe bị động, bắt sếp phải nghĩ hộ bạn)</div>
+<div class="mistake-right">"To make sure I'm focusing on the right things..." (Nghe chủ động, cho thấy bạn hiểu rõ capacity)</div>
+</div>
+<div class="pattern-alternatives">
+<h5>Why native speakers dùng:</h5>
+<ul>
+<li>"Which one first?" = short, casual, efficient</li>
+<li>"Should I tackle X or Y?" = shows you're ready to act</li>
+<li>"To make sure I'm focusing..." = professional framing</li>
+<li>Forces them to choose, not you</li>
+</ul>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">The Scope Anchor (Define "Done")</div>
+<div class="pattern-ipa">Core idea: "Here is exactly what I will do (and won't do)."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">When you need to set boundaries</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Định nghĩa chữ "Xong" rõ ràng. Chặn đứng sự thất vọng trước khi nó xảy ra.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I'll do X, but not Y." / "Just so you know, I'll only have time for the draft."</div>
+<div class="register-context">Bạn bè, gia đình</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Just to align, I'll send you the draft today, but the final polish will be tomorrow."</div>
+<div class="register-context">Đồng nghiệp</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Just to align on expectations, by Friday I'll have the wireframes ready, but not the final UI."</div>
+<div class="register-context">Sếp, Client</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"To set clear expectations, this phase covers X, but excludes Y."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+</div>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"<strong>Just so you know, I'll only have time for</strong> the draft tonight. The final version can wait till tomorrow."</span>
+<button class="audio-btn" onclick="playAudio('Just so you know, I\'ll only have time for the draft tonight. The final version can wait till tomorrow.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"<strong>I'll book the flights and hotel, but</strong> you'll need to handle the car rental and itinerary."</span>
+<button class="audio-btn" onclick="playAudio('I\'ll book the flights and hotel, but you\'ll need to handle the car rental and itinerary.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"<strong>Just to align on expectations, by Friday I'll have</strong> the wireframes ready, <strong>but not</strong> the final UI. That will be next week."</span>
+<button class="audio-btn" onclick="playAudio('Just to align on expectations, by Friday I\'ll have the wireframes ready, but not the final UI. That will be next week.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"<strong>To set clear expectations, this phase covers</strong> the research, <strong>but excludes</strong> the implementation."</span>
+<button class="audio-btn" onclick="playAudio('To set clear expectations, this phase covers the research, but excludes the implementation.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake:</strong>
+<div class="mistake-wrong">"I'll work on the design." (Mơ hồ. Sếp tưởng là bản final, bạn mới làm bản nháp)</div>
+<div class="mistake-right">"Just to align on expectations, by Friday I'll have X, but not Y." (Chặn đứng sự thất vọng)</div>
+</div>
+<div class="pattern-alternatives">
+<h5>Why native speakers dùng:</h5>
+<ul>
+<li>"Just to align" = collaborative framing</li>
+<li>"Just so you know" = casual heads-up</li>
+<li>"To set clear expectations" = professional boundary</li>
+<li>Prevents the "I thought you meant..." conversation later</li>
+</ul>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Asking for Support (Removing Blockers)</div>
+<div class="pattern-ipa">Core idea: "I'm stuck and need you to do your job so I can do mine."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">When you need help to move forward</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Xin trợ giúp một cách chuyên nghiệp. Tập trung vào mục tiêu chung, không đổ lỗi cá nhân.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I can't figure this out. Can you give me a hand?"</div>
+<div class="register-context">Bạn bè, gia đình</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I'm a bit stuck on the formatting. Could you take a quick look?"</div>
+<div class="register-context">Đồng nghiệp</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I've hit a bottleneck with the client data. To keep us on track, I'll need your approval."</div>
+<div class="register-context">Sếp, Client</div>
+</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"To unblock the team and maintain the timeline, we require a decision on..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+</div>
+</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"<strong>I've hit a wall with</strong> the tax forms. <strong>To get this done tonight, I'll need</strong> you to find the W-2s."</span>
+<button class="audio-btn" onclick="playAudio('I\'ve hit a wall with the tax forms. To get this done tonight, I\'ll need you to find the W-2s.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag life">🏠 Life</span>
+<span>"<strong>I'm stuck on</strong> assembling this IKEA furniture. <strong>Can you give me a hand?</strong>"</span>
+<button class="audio-btn" onclick="playAudio('I\'m stuck on assembling this IKEA furniture. Can you give me a hand?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"<strong>I've hit a bottleneck with</strong> the client data. <strong>To keep us on track, I'll need</strong> your approval on the budget by tomorrow morning."</span>
+<button class="audio-btn" onclick="playAudio('I\'ve hit a bottleneck with the client data. To keep us on track, I\'ll need your approval on the budget by tomorrow morning.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="example">
+<span class="example-tag business">💼 Business</span>
+<span>"<strong>To unblock the team and maintain the timeline, we require a decision on</strong> the vendor selection by EOD."</span>
+<button class="audio-btn" onclick="playAudio('To unblock the team and maintain the timeline, we require a decision on the vendor selection by EOD.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="pattern-mistake">
+<strong>⚠️ Common mistake:</strong>
+<div class="mistake-wrong">"I can't finish because you haven't approved the budget." (Nghe như đổ lỗi, aggressive)</div>
+<div class="mistake-right">"To keep us on track, I'll need..." (Tập trung vào mục tiêu chung, không đổ lỗi cá nhân)</div>
+</div>
+<div class="pattern-alternatives">
+<h5>Why native speakers dùng:</h5>
+<ul>
+<li>"Hit a bottleneck" / "hit a wall" = neutral, not blaming</li>
+<li>"To keep us on track" = shared goal framing</li>
+<li>"I'll need" = clear, direct, professional</li>
+<li>Focuses on the blocker, not the person</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">Xem cách 5 expectation patterns được dùng trong 2 dialogues hoàn chỉnh (10+ lượt). Click 🔊 để nghe.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: The Family Reunion Overload</h3>
+<div class="story-context">Context: Minh và em gái (Sarah) đang lên kế hoạch cho buổi họp mặt gia đình 50 người. Sarah liên tục giao thêm việc cho Minh.</div>
+<div class="story-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sarah:</div>
+<div class="dialogue-text">"Minh, can you also design the photo booth backdrop and call the caterer to change the menu?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"I can call the caterer, <strong>as long as you don't mind me skipping</strong> the grocery run today. I only have two hands."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sarah:</div>
+<div class="dialogue-text">"But the photo booth is going to be so cute! Can't you just do it tonight?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"<strong>Just to align on expectations</strong>, if I do the backdrop tonight, I won't have time to confirm the hotel blocks for the cousins."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sarah:</div>
+<div class="dialogue-text">"Ugh, okay. The hotel blocks are more important."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"<strong>To make sure I'm focusing on the right things, should I prioritize</strong> the caterer <strong>or</strong> the hotel blocks first thing tomorrow?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sarah:</div>
+<div class="dialogue-text">"Hotel blocks. Definitely."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"Got it. <strong>Just a heads-up</strong>, the caterer might charge a fee for the late menu change. I wanted to flag that early."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sarah:</div>
+<div class="dialogue-text">"Oh, good catch. Just ask them how much it is before we commit."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"Will do. <strong>I've hit a bottleneck with</strong> the guest list, though. I need Mom to finalize her side of the family."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sarah:</div>
+<div class="dialogue-text">"I'll text her right now."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"Perfect. Thanks!"</div>
+</div>
+</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playAudio('Sarah: Minh, can you also design the photo booth backdrop and call the caterer to change the menu? Minh: I can call the caterer, as long as you don\'t mind me skipping the grocery run today. I only have two hands. Sarah: But the photo booth is going to be so cute! Can\'t you just do it tonight? Minh: Just to align on expectations, if I do the backdrop tonight, I won\'t have time to confirm the hotel blocks for the cousins. Sarah: Ugh, okay. The hotel blocks are more important. Minh: To make sure I\'m focusing on the right things, should I prioritize the caterer or the hotel blocks first thing tomorrow? Sarah: Hotel blocks. Definitely. Minh: Got it. Just a heads-up, the caterer might charge a fee for the late menu change. I wanted to flag that early. Sarah: Oh, good catch. Just ask them how much it is before we commit. Minh: Will do. I\'ve hit a bottleneck with the guest list, though. I need Mom to finalize her side of the family. Sarah: I\'ll text her right now. Minh: Perfect. Thanks!')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Pattern Usage:</h4>
+<ul>
+<li>"As long as you don't mind me skipping" → Capacity Check (Trade-off)</li>
+<li>"Just to align on expectations" → Scope Anchor (Defines "done")</li>
+<li>"To make sure I'm focusing on the right things" → Priority Clarifier</li>
+<li>"Just a heads-up" → Early Warning (Flag early)</li>
+<li>"I've hit a bottleneck with" → Asking for Support (Removing blocker)</li>
+<li><strong>Register:</strong> Casual throughout (siblings)</li>
+<li><strong>12 lượt hội thoại</strong> tự nhiên, áp dụng kỹ năng professional để không bị overworked</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: The Friday Afternoon Dump</h3>
+<div class="story-context">Context: 4:00 PM thứ Sáu. Manager (Lisa) giao cho Minh 2 task "khẩn cấp".</div>
+<div class="story-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Lisa:</div>
+<div class="dialogue-text">"Minh, I need the Q3 financial model updated, and also the slide deck for Monday's board meeting. Both are urgent."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"<strong>I want to flag early that</strong> doing both by Monday morning is going to be tight. The model alone takes about 6 hours."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Lisa:</div>
+<div class="dialogue-text">"I know it's a lot, but the board really needs both."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"<strong>To make sure I'm focusing on the right things, should I prioritize</strong> the slide deck <strong>or</strong> the financial model first? I can get one 100% done, or both at 70% quality."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Lisa:</div>
+<div class="dialogue-text">"Quality matters for the deck. The model can have some estimates."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"Okay. <strong>Just to align on expectations</strong>, I'll have the final slide deck in your inbox by 8 PM tonight. For the model, I'll provide the high-level estimates, <strong>but not</strong> the granular breakdown."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Lisa:</div>
+<div class="dialogue-text">"That works. Thanks for being flexible."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"No problem. <strong>To keep us on track</strong> for next week, <strong>I'll need</strong> your sign-off on the deck by 9 AM tomorrow so I can print the handouts."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Lisa:</div>
+<div class="dialogue-text">"I'll review it first thing in the morning."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Minh:</div>
+<div class="dialogue-text">"Perfect. Have a good evening, Lisa."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Lisa:</div>
+<div class="dialogue-text">"You too, Minh."</div>
+</div>
+</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playAudio('Lisa: Minh, I need the Q3 financial model updated, and also the slide deck for Monday\'s board meeting. Both are urgent. Minh: I want to flag early that doing both by Monday morning is going to be tight. The model alone takes about 6 hours. Lisa: I know it\'s a lot, but the board really needs both. Minh: To make sure I\'m focusing on the right things, should I prioritize the slide deck or the financial model first? I can get one 100% done, or both at 70% quality. Lisa: Quality matters for the deck. The model can have some estimates. Minh: Okay. Just to align on expectations, I\'ll have the final slide deck in your inbox by 8 PM tonight. For the model, I\'ll provide the high-level estimates, but not the granular breakdown. Lisa: That works. Thanks for being flexible. Minh: No problem. To keep us on track for next week, I\'ll need your sign-off on the deck by 9 AM tomorrow so I can print the handouts. Lisa: I\'ll review it first thing in the morning. Minh: Perfect. Have a good evening, Lisa. Lisa: You too, Minh.')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Pattern Usage:</h4>
+<ul>
+<li>"I want to flag early that" → Early Warning (Proactive, not complaining)</li>
+<li>"To make sure I'm focusing on the right things" → Priority Clarifier (Forces manager to choose)</li>
+<li>"Just to align on expectations... but not..." → Scope Anchor (Defines "done")</li>
+<li>"To keep us on track, I'll need..." → Asking for Support (Sets boundary for weekend/morning)</li>
+<li><strong>Register:</strong> Professional. Giữ được relationship mà không phải làm việc quá sức vô lý.</li>
+<li><strong>11 lượt hội thoại</strong>, thấy register shift và problem-solving</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Expectation phrases pronunciation và intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Expectation Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>As long as we push</td><td class="ipa-cell">/æz lɒŋ æz wi pʊʃ/</td><td>Smooth linking, stress on "push"</td></tr>
+<tr><td>Just to align</td><td class="ipa-cell">/dʒʌst tu əˈlaɪn/</td><td>Linking "to-align"</td></tr>
+<tr><td>Flag early</td><td class="ipa-cell">/flæɡ ˈɜrli/</td><td>Clear 'g', stress on "ear"</td></tr>
+<tr><td>Hit a bottleneck</td><td class="ipa-cell">/hɪt ə ˈbɒtlnɛk/</td><td>Linking "hit-a", glottal stop on "neck"</td></tr>
+<tr><td>To keep us on track</td><td class="ipa-cell">/tuː kiːp ʌs ɒn træk/</td><td>Stress on "track"</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"I want to flag early that..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi báo tin xấu sớm. Falling tone = factual, calm, in control. <strong>Tránh:</strong> Rising (nghe như bạn đang hoảng loạn).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"To make sure I'm focusing on the right things..."</span>
+<span class="pattern-label">↗↘ Rise-fall</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi hỏi priority. Rise-fall = collaborative, helpful. <strong>Tránh:</strong> Flat (nghe robotic).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Just to align on expectations..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi định nghĩa scope. Falling tone = firm, clear boundary. <strong>Tránh:</strong> Up-talk (nghe như bạn đang xin phép).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"As long as you don't mind..."</span>
+<span class="pattern-label">↗ Rising</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi đưa ra trade-off nhẹ nhàng. Rising = polite, checking for agreement. <strong>Tránh:</strong> Falling (nghe như demand).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"To keep us on track, I'll need..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Dùng khi xin support. Falling tone = firm but respectful. <strong>Tránh:</strong> Too soft (nghe uncertain).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Practice Scenarios
+</h2>
+<p class="section-desc">Practice managing expectations in different contexts. Remember: no register is "better" — it's about appropriateness!</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: The Overloaded Weekend</h3>
+<p class="scenario-context">Bạn bè rủ bạn đi phượt, nhưng bạn đang phải dọn nhà và làm việc vặt.</p>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Dùng "I can help/do X, as long as..."</li>
+<li>Dùng "Just a heads-up..."</li>
+<li>Dùng "Which one first?"</li>
+<li>Keep it light, not confrontational</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Colleague's "Quick Favor"</h3>
+<p class="scenario-context">Đồng nghiệp nhờ bạn "review nhanh" một cái proposal 50 trang vào cuối ngày.</p>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Dùng "Just to align on expectations, I can read the executive summary, but not the whole thing."</li>
+<li>Dùng "I've hit a bottleneck..."</li>
+<li>Define "done" rõ ràng</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: The Scope Creep Client</h3>
+<p class="scenario-context">Client email đòi thêm 3 tính năng mới khi project sắp close.</p>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Dùng "I want to flag early..."</li>
+<li>Dùng "To keep us on track, I'll need..."</li>
+<li>Offer trade-offs, not just "no"</li>
+<li>Keep relationship intact</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Boundary</h3>
+<p class="scenario-context">Sáng: Từ chối nhận thêm việc nhà từ spouse (Casual). Chiều: Clarify priority với sếp khi bị giao 2 task urgent (Professional).</p>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register linh hoạt</li>
+<li>Define "done" rõ ràng ở cả 2 context</li>
+<li>Mỗi conversation có opening + elaboration + closing</li>
+<li>Use different patterns for each</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Bài tập THỰC TẾ - apply expectation management vào đời thật. Chọn 1 trong 3 levels.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Write an Early Warning Email</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Viết 1 email "Early Warning" cho sếp/client về một task đang bị delay. Dùng Pattern 2 & 4.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use Early Warning pattern</li>
+<li>Use Scope Anchor pattern</li>
+<li>Offer alternative if possible</li>
+<li>Keep relationship intact</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written email</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Priority Clarifications</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 tình huống clarify priority (Life & Business). Chú ý intonation không được nghe defensive.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register)</li>
+<li>1 Business scenario (professional register)</li>
+<li>Calm, respectful tone</li>
+<li>Use at least 3 patterns each</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The "Define Done" Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">Trong tuần này, mỗi khi ai đó nhờ bạn làm gì, dùng "Just to align on expectations..." để định nghĩa chữ "Xong" trước khi bắt tay vào làm. Note lại phản ứng của họ.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use Scope Anchor pattern at least 3 times</li>
+<li>Note how the other person responds</li>
+<li>Reflect on what worked/didn't work</li>
+<li>Identify which pattern felt most natural</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Expectation Management Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">Can offer trade-offs, not just refusals</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Can flag bad news early, not late</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Can clarify priorities proactively</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">Can define "done" upfront to prevent disappointment</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Can ask for support without sounding helpless</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Success Criteria</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>Others know exactly what "done" looks like</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>Bad news is shared early, not at the deadline</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>Priorities are clear, not assumed</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You can say "yes, if..." or "no, but..." professionally</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>Relationships stay intact even when setting boundaries</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Bad news early is a strategy:</strong> Bad news late is a crisis.</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Offer trade-offs:</strong> "I can do X, but Y will have to wait" — gives them the choice</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Define "done" upfront:</strong> Prevents the "I thought you meant..." conversation later</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Ask for priorities:</strong> "Should I focus on X or Y?" — forces them to choose, not you</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Use varied connectors:</strong> if, as long as, assuming, so long as — don't get stuck on "provided"</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards với expectation patterns. Mặt trước: intent. Mặt sau: 4 registers.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Intent: Say yes with conditions</p>
+<button>Tap to reveal 4 registers →</button>
+</div>
+<div class="flashcard-back">
+<p>🏠 Casual: "I can help with X, if that means we skip Y."<br>☕ Neutral: "I can take a look, as long as it doesn't clash with Friday's deadline."<br>💼 Professional: "I can take that on, assuming we push the Q3 review to next week."<br>📋 More Formal: "I'm happy to lead this, so long as we have the budget for it."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Use varied connectors: if, as long as, assuming, so long as. Don't get stuck on "provided".
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Managing Expectations
+</h2>
+<p class="section-desc">7 câu hỏi về register appropriateness và expectation management. Chọn đáp án ĐÚNG NHẤT cho context.</p>
+</div>
+<div class="quiz-question">
+<h4>1. Sếp giao bạn 2 task urgent cùng lúc. Câu nào TỐT NHẤT?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I can't do both. It's impossible."</div>
+<div class="quiz-option">B. "To make sure I'm focusing on the right things, should I prioritize the slide deck or the financial model first?"</div>
+<div class="quiz-option">C. "Okay, I'll do my best."</div>
+<div class="quiz-option">D. "Which one do you want?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. "I want to flag early that..." dùng khi nào?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Khi bạn muốn end conversation</div>
+<div class="quiz-option">B. Khi muốn báo tin xấu sớm, trước khi thành crisis</div>
+<div class="quiz-option">C. Khi bạn đồng ý hoàn toàn</div>
+<div class="quiz-option">D. Khi muốn change subject</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. Câu nào có REGISTER MISMATCH?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. (Với bạn) "I can help, if that means we skip Y."</div>
+<div class="quiz-option">B. (Với sếp) "I can help, if that means we skip Y."</div>
+<div class="quiz-option">C. (Với đồng nghiệp) "I can take a look, as long as it doesn't clash with Friday."</div>
+<div class="quiz-option">D. (Với client) "I can take that on, assuming we push the review."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. Bạn muốn từ chối yêu cầu của bạn bè mà không làm mất lòng. Câu nào TỐT NHẤT?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "No, I can't."</div>
+<div class="quiz-option">B. "I can help with the invitations, as long as you handle the grocery run."</div>
+<div class="quiz-option">C. "That's not possible."</div>
+<div class="quiz-option">D. "I don't want to."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. "Just to align on expectations..." là loại gì?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Full agreement</div>
+<div class="quiz-option">B. Scope Anchor (Define "done")</div>
+<div class="quiz-option">C. Disagreement</div>
+<div class="quiz-option">D. Indifference</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. Khi KHÔNG CHẮC nên dùng connector nào, bạn nên:</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Luôn dùng "provided"</div>
+<div class="quiz-option">B. Use varied connectors: if, as long as, assuming, so long as — tùy ngữ cảnh</div>
+<div class="quiz-option">C. Luôn dùng "if"</div>
+<div class="quiz-option">D. Tránh tất cả connectors</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. TÌNH HUỐNG: Client đòi deadline gấp hơn. Bạn biết là không feasible. Câu nào TỐT NHẤT?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "That's impossible."</div>
+<div class="quiz-option">B. "I want to flag early that the timeline is at risk. To keep us on track, I'll need your approval on the scope by EOD."</div>
+<div class="quiz-option">C. "No way."</div>
+<div class="quiz-option">D. "You're being unreasonable."</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-05-day-32.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 32: Handling Pushback</div>
+</a>
+<a href="week-05-day-34.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 34: Giving Constructive Feedback</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 33 Complete & Continue to Day 34</span>
+</button>
+<div class="complete-message">Set expectations. Protect relationships. 🎯</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 5 · Day 33 · Managing Expectations</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-33')) {
+completed.push('day-33');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 33 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'Set expectations. Protect relationships. 🎯';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-33')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 33 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
