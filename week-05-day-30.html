@@ -8,11 +8,18 @@
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
 <style>
 :root {
+/* Blue Theme - Strategic Workplace Communication */
 --primary: #3B82F6;
 --primary-bright: #2563EB;
 --primary-soft: #DBEAFE;
 --primary-deep: #1E40AF;
 --primary-light: #60A5FA;
+/* Flexible Highlight Colors */
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
 --green: #10B981;
 --green-soft: #D1FAE5;
 --green-deep: #065F46;
@@ -44,6 +51,7 @@ min-height: 100vh;
 }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
+/* Top Nav */
 .top-nav {
 background: rgba(255, 255, 255, 0.95);
 backdrop-filter: blur(30px);
@@ -58,10 +66,14 @@ color: var(--text-primary); text-decoration: none;
 display: flex; align-items: center; gap: 8px;
 }
 .nav-back i { --ph-color: var(--primary-bright); }
-.day-indicator { font-size: 13px; color: var(--text-muted); font-weight: 500; display: flex; align-items: center; gap: 10px; }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
 .progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
-.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 4%; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 86%; }
 
+/* Day Tabs */
 .day-tabs-container {
 background: rgba(255, 255, 255, 0.95);
 border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -77,11 +89,12 @@ font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s eas
 .day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
 .day-tab.active {
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
-color: white; border: none; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+color: white; border: none; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
+/* Header */
 .day-header {
-background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #BFDBFE 100%);
+background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #93C5FD 100%);
 padding: 48px 0 40px; position: relative;
 }
 .day-header::after { content: '💬'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
@@ -100,6 +113,7 @@ display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0
 }
 .meta-tag i { --ph-color: var(--primary-bright); }
 
+/* Content area */
 .content-area { background: #FAFAFA; padding: 40px 0; }
 .section { margin: 40px 0; }
 .section-header { margin-bottom: 28px; }
@@ -111,9 +125,9 @@ display: flex; align-items: center; gap: 10px;
 .section-title i { --ph-color: var(--primary-bright); }
 .section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
 
-/* C1 Insight - Smaller font, lighter background */
+/* C1 Insight - Paragraph form, opacity 60% */
 .c1-insight {
-background: linear-gradient(135deg, rgba(219, 234, 254, 0.6), rgba(147, 197, 253, 0.18));
+background: linear-gradient(135deg, rgba(219, 234, 254, 0.6), rgba(147, 197, 253, 0.25));
 border-radius: var(--radius-md);
 padding: 24px 28px;
 margin-bottom: 28px;
@@ -121,22 +135,15 @@ border-left: 4px solid var(--primary);
 text-align: center;
 }
 .c1-insight .label {
-font-size: 10px;
-font-weight: 700;
-color: var(--primary-deep);
-text-transform: uppercase;
-letter-spacing: 1px;
-margin-bottom: 10px;
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
 }
 .c1-insight .insight {
-font-family: 'Fraunces', serif;
-font-size: 1rem;
-font-weight: 600;
-color: var(--primary-deep);
-font-style: italic;
-line-height: 1.4;
+font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 500;
+color: var(--primary-deep); font-style: italic; line-height: 1.4;
 }
 
+/* Philosophy section - Card grid */
 .philosophy-section {
 background: rgba(255, 255, 255, 0.95);
 border-radius: var(--radius-lg);
@@ -148,567 +155,190 @@ border: 1px solid rgba(59, 130, 246, 0.2);
 background: #EFF6FF;
 border-radius: var(--radius-md);
 padding: 20px;
-border-left: 4px solid var(--highlight-gold);
+border-left: 4px solid var(--primary);
 margin-bottom: 20px;
 }
 .philosophy-title {
-font-weight: 600;
-color: var(--text-primary);
-margin-bottom: 8px;
-display: flex;
-align-items: center;
-gap: 8px;
-font-size: 14px;
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
 }
-.philosophy-title i { --ph-color: var(--highlight-gold); }
-.philosophy-box p {
-font-size: 14px;
-color: var(--text-secondary);
-line-height: 1.5;
-}
-.philosophy-box strong {
-color: var(--primary-deep);
-}
-.comparison-box {
-border-radius: var(--radius-md);
-padding: 20px;
-margin-bottom: 16px;
-}
-.comparison-box.negative {
-background: rgba(245, 101, 101, 0.08);
-border-left: 4px solid #F56565;
-}
-.comparison-box.positive {
-background: rgba(16, 185, 129, 0.08);
-border-left: 4px solid #10B981;
-}
-.comparison-title {
-font-weight: 600;
-margin-bottom: 10px;
-display: flex;
-align-items: center;
-gap: 8px;
-font-size: 14px;
-}
-.comparison-box.negative .comparison-title { color: #C53030; }
-.comparison-box.positive .comparison-title { color: #065F46; }
-.comparison-list {
-list-style: none;
-}
-.comparison-list li {
-padding: 4px 0;
-padding-left: 24px;
-position: relative;
-font-size: 13px;
-color: var(--text-secondary);
-}
-.comparison-box.negative .comparison-list li::before {
-content: '✕';
-position: absolute;
-left: 0;
-color: #E53E3E;
-font-weight: 600;
-}
-.comparison-box.positive .comparison-list li::before {
-content: '✓';
-position: absolute;
-left: 0;
-color: #10B981;
-font-weight: 600;
-}
+.philosophy-title i { --ph-color: var(--primary); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
 
-.executive-formula {
-background: linear-gradient(135deg, rgba(219, 234, 254, 0.5), rgba(147, 197, 253, 0.3));
-border-radius: var(--radius-lg);
-padding: 32px;
-margin-top: 28px;
-border: 2px solid var(--primary);
-text-align: center;
-}
-.executive-formula h3 {
-font-family: 'Fraunces', serif;
-font-size: 1.3rem;
-font-weight: 600;
-color: var(--primary-deep);
-margin-bottom: 20px;
-}
-.formula-content {
-background: rgba(255, 255, 255, 0.9);
-border-radius: var(--radius-md);
-padding: 24px;
-margin-bottom: 20px;
-}
-.formula-steps {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 12px;
-align-items: center;
-margin-bottom: 16px;
-}
-.formula-step {
-background: rgba(255, 255, 255, 0.9);
-padding: 12px 20px;
-border-radius: var(--radius-sm);
-font-size: 14px;
-font-weight: 600;
-color: var(--primary-deep);
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-.formula-arrow {
-font-size: 20px;
-color: var(--primary);
-}
-.formula-explanation {
-font-size: 13px;
-color: var(--text-secondary);
-line-height: 1.5;
-font-style: italic;
-}
-
-.update-lifecycle {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-lg);
-padding: 32px;
-margin-top: 28px;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-border: 1px solid rgba(59, 130, 246, 0.2);
-}
-.update-lifecycle h3 {
-font-family: 'Fraunces', serif;
-font-size: 1.3rem;
-font-weight: 600;
-color: var(--primary-deep);
-margin-bottom: 20px;
-text-align: center;
-}
-.lifecycle-steps {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 12px;
-align-items: center;
-}
-.lifecycle-step { text-align: center; }
-.lifecycle-step .phase {
-background: rgba(255, 255, 255, 0.9);
-padding: 10px 16px;
-border-radius: var(--radius-sm);
-font-size: 13px;
-font-weight: 600;
-color: var(--primary-deep);
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-margin-bottom: 4px;
-}
-.lifecycle-step .meaning {
-font-size: 11px;
-color: var(--text-muted);
-}
-.lifecycle-arrow {
-font-size: 20px;
-color: var(--primary);
-}
-.lifecycle-insight {
-margin-top: 20px;
-padding: 14px 18px;
-background: rgba(219, 234, 254, 0.5);
-border-radius: var(--radius-sm);
-font-size: 13px;
-color: var(--text-secondary);
-line-height: 1.5;
-border-left: 3px solid var(--primary);
-}
-.lifecycle-insight strong {
-color: var(--primary-deep);
-}
-
-.principles-grid {
+.philosophy-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 16px;
-margin-top: 20px;
 }
-.principle-card {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-md);
-padding: 24px;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-position: relative;
-}
-.principle-card:nth-child(1) { border-left: 4px solid var(--highlight-gold); }
-.principle-card:nth-child(2) { border-left: 4px solid var(--highlight-green); }
-.principle-card:nth-child(3) { border-left: 4px solid var(--highlight-blue); }
-.principle-card:nth-child(4) { border-left: 4px solid var(--highlight-purple); }
-.principle-number {
-position: absolute;
-top: -12px;
-left: 20px;
-width: 32px;
-height: 32px;
-background: linear-gradient(135deg, var(--primary), var(--primary-bright));
-color: white;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: 700;
-font-family: 'Fraunces', serif;
-font-size: 16px;
-box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-}
-.principle-title {
-font-family: 'Fraunces', serif;
-font-size: 1.1rem;
-font-weight: 600;
-color: var(--primary-deep);
-margin-bottom: 8px;
-margin-top: 8px;
-}
-.principle-desc {
-font-size: 13px;
-color: var(--text-secondary);
-line-height: 1.4;
-}
-
-.reading-signals {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-lg);
-padding: 32px;
-margin-top: 28px;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-border: 1px solid rgba(59, 130, 246, 0.2);
-}
-.reading-signals h3 {
-font-family: 'Fraunces', serif;
-font-size: 1.3rem;
-font-weight: 600;
-color: var(--primary-deep);
-margin-bottom: 16px;
-display: flex;
-align-items: center;
-gap: 10px;
-}
-.rs-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 20px;
-margin-top: 16px;
-}
-.rs-col {
+.philosophy-card {
 padding: 20px;
 border-radius: var(--radius-md);
+border-left: 4px solid;
 }
-.rs-col.ready {
-background: rgba(16, 185, 129, 0.08);
-border-left: 4px solid #10B981;
+.philosophy-card.negative { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.philosophy-card.positive { background: rgba(16, 185, 129, 0.08); border-left-color: #10B981; }
+.philosophy-card-title {
+font-weight: 600; margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px; font-size: 14px;
 }
-.rs-col.space {
-background: rgba(59, 130, 246, 0.08);
-border-left: 4px solid #3B82F6;
+.philosophy-card.negative .philosophy-card-title { color: #C53030; }
+.philosophy-card.positive .philosophy-card-title { color: #065F46; }
+.philosophy-card-list { list-style: none; }
+.philosophy-card-list li {
+padding: 4px 0; padding-left: 24px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
 }
-.rs-col h4 {
-font-family: 'Fraunces', serif;
-font-size: 1.1rem;
-margin-bottom: 12px;
+.philosophy-card.negative .philosophy-card-list li::before {
+content: '✕'; position: absolute; left: 0; color: #E53E3E; font-weight: 600;
 }
-.rs-col.ready h4 { color: #065F46; }
-.rs-col.space h4 { color: #1E40AF; }
-.rs-col ul {
-list-style: none;
-}
-.rs-col li {
-padding: 6px 0;
-padding-left: 24px;
-position: relative;
-font-size: 13px;
-color: var(--text-secondary);
-}
-.rs-col.ready li::before {
-content: '✓';
-position: absolute;
-left: 0;
-color: #10B981;
-font-weight: 600;
-}
-.rs-col.space li::before {
-content: '⚠';
-position: absolute;
-left: 0;
-color: #3B82F6;
-font-weight: 600;
-}
-.rs-action {
-margin-top: 20px;
-padding: 14px 18px;
-background: rgba(219, 234, 254, 0.5);
-border-radius: var(--radius-sm);
-font-size: 13px;
-color: var(--text-secondary);
-line-height: 1.5;
-border-left: 3px solid var(--primary);
-}
-.rs-action strong {
-color: var(--primary-deep);
+.philosophy-card.positive .philosophy-card-list li::before {
+content: '✓'; position: absolute; left: 0; color: #10B981; font-weight: 600;
 }
 
-.plan-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 16px;
-margin-top: 20px;
-}
+/* Plan grid */
+.plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
 .plan-card {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-md);
-padding: 20px;
-text-align: center;
-border: 1px solid rgba(0, 0, 0, 0.06);
+background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md);
+padding: 20px; text-align: center; border: 1px solid rgba(0, 0, 0, 0.06);
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
-.plan-icon {
-font-size: 1.8rem;
-margin-bottom: 8px;
-}
-.plan-title {
-font-family: 'Fraunces', serif;
-font-size: 1rem;
-font-weight: 600;
-color: var(--text-primary);
-margin-bottom: 4px;
-}
+.plan-icon { font-size: 1.8rem; margin-bottom: 8px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
 .plan-time {
-font-size: 12px;
-color: var(--primary-bright);
-font-weight: 600;
-margin-bottom: 4px;
-background: rgba(219, 234, 254, 0.5);
-padding: 2px 10px;
-border-radius: 10px;
-display: inline-block;
+font-size: 12px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(219, 234, 254, 0.5);
+padding: 2px 10px; border-radius: 10px; display: inline-block;
 }
-.plan-desc {
-font-size: 12px;
-color: var(--text-muted);
-}
+.plan-desc { font-size: 12px; color: var(--text-muted); }
 
-.patterns-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-}
+/* Pattern card */
 .pattern-card {
 background: rgba(255, 255, 255, 0.95);
 border-radius: var(--radius-md);
-padding: 24px;
+padding: 28px;
+margin-bottom: 20px;
 border-left: 4px solid var(--primary);
 box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
-.pattern-header {
-display: flex;
-gap: 16px;
-align-items: flex-start;
-margin-bottom: 14px;
-}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
 .pattern-number {
-flex-shrink: 0;
-width: 40px;
-height: 40px;
+flex-shrink: 0; width: 40px; height: 40px;
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
-color: white;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: 700;
-font-family: 'Fraunces', serif;
-font-size: 18px;
-box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 .pattern-content { flex: 1; }
 .pattern-text {
-font-family: 'Fraunces', serif;
-font-size: 1.15rem;
-font-weight: 600;
-color: var(--text-primary);
-margin-bottom: 6px;
-line-height: 1.3;
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
 }
 .pattern-ipa {
-font-size: 12px;
-color: var(--highlight-green);
-font-family: monospace;
-font-style: italic;
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace; font-style: italic;
 margin-bottom: 8px;
 }
-.pattern-meta {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-margin-bottom: 12px;
-}
-.pattern-rating {
-font-size: 12px;
-color: var(--primary-bright);
-font-weight: 600;
-}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
 .pattern-context {
-font-size: 12px;
-color: var(--text-muted);
-background: rgba(219, 234, 254, 0.5);
-padding: 4px 10px;
-border-radius: 12px;
+font-size: 12px; color: var(--text-muted);
+background: rgba(219, 234, 254, 0.5); padding: 4px 10px; border-radius: 12px;
 }
-.pattern-desc {
-font-size: 13px;
-color: var(--text-secondary);
-line-height: 1.3;
-margin-bottom: 14px;
-}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
 .pattern-why {
 background: rgba(219, 234, 254, 0.4);
 border-radius: var(--radius-sm);
-padding: 12px;
-margin-bottom: 12px;
+padding: 14px; margin-bottom: 14px;
 border-left: 3px solid var(--primary);
 }
-.pattern-why strong {
-color: var(--primary-deep);
-display: block;
-margin-bottom: 6px;
-font-size: 12px;
-}
-.pattern-why p {
-font-size: 12px;
-color: var(--text-secondary);
-line-height: 1.3;
-}
-.examples-section {
+.pattern-why strong { color: var(--primary-deep); display: block; margin-bottom: 6px; font-size: 13px; }
+.pattern-why p { font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.pattern-examples {
 background: rgba(248, 250, 252, 0.8);
 border-radius: var(--radius-sm);
-padding: 14px;
-margin-bottom: 12px;
+padding: 16px; margin-bottom: 14px;
 }
-.examples-title {
-font-family: 'Fraunces', serif;
-font-size: 0.95rem;
-font-weight: 600;
-color: var(--text-primary);
-margin-bottom: 10px;
-display: flex;
-align-items: center;
-gap: 8px;
+.pattern-examples h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem; margin-bottom: 10px;
+color: var(--text-primary); display: flex; align-items: center; gap: 8px;
 }
 .example {
-padding: 8px 10px;
-background: rgba(255, 255, 255, 0.9);
-border-radius: var(--radius-sm);
-margin-bottom: 6px;
-font-size: 12px;
-color: var(--text-secondary);
-line-height: 1.3;
-display: flex;
-align-items: flex-start;
-gap: 8px;
+padding: 10px 12px; background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm); margin-bottom: 8px;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+display: flex; align-items: flex-start; gap: 10px;
 }
+.example:last-child { margin-bottom: 0; }
 .example-tag {
-flex-shrink: 0;
-font-size: 10px;
-padding: 2px 6px;
-border-radius: 8px;
-font-weight: 600;
+flex-shrink: 0; font-size: 11px; padding: 2px 8px;
+border-radius: 10px; font-weight: 600;
 }
 .example-tag.life { background: rgba(209, 250, 229, 0.8); color: var(--green-deep); }
 .example-tag.business { background: rgba(219, 234, 254, 0.8); color: var(--blue-deep); }
-.example-text { flex: 1; }
 .audio-btn {
-flex-shrink: 0;
-width: 24px;
-height: 24px;
+flex-shrink: 0; width: 26px; height: 26px;
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
-color: white;
-border: none;
-border-radius: 50%;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
+color: white; border: none; border-radius: 50%; cursor: pointer;
+display: flex; align-items: center; justify-content: center;
 transition: all 0.3s ease;
 }
-.audio-btn:hover {
-transform: scale(1.1);
-box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-}
-.audio-btn i { --ph-color: white; font-size: 11px; }
-.common-mistake-box {
-background: rgba(254, 226, 226, 0.5);
+.audio-btn:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
+.audio-btn i { --ph-color: white; font-size: 12px; }
+.pattern-alternatives {
+background: rgba(243, 232, 255, 0.4);
 border-radius: var(--radius-sm);
-padding: 14px;
-margin-bottom: 14px;
-border-left: 3px solid var(--highlight-orange);
+padding: 14px 18px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-purple);
 }
-.common-mistake-box strong {
-color: var(--highlight-orange);
-display: block;
-margin-bottom: 8px;
-font-size: 13px;
+.pattern-alternatives h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-purple);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
 }
-.mistake-wrong {
-font-size: 13px;
-color: var(--highlight-orange);
-margin-bottom: 6px;
-display: flex;
-align-items: flex-start;
-gap: 6px;
+.pattern-alternatives ul { list-style: none; }
+.pattern-alternatives li {
+font-size: 13px; color: var(--text-secondary); font-style: italic;
+padding: 4px 0; padding-left: 16px; position: relative; line-height: 1.3;
 }
-.mistake-wrong::before { content: '✕'; color: var(--highlight-orange); font-weight: 700; flex-shrink: 0; }
-.mistake-right {
-font-size: 13px;
-color: var(--highlight-green);
-display: flex;
-align-items: flex-start;
-gap: 6px;
-}
-.mistake-right::before { content: '✓'; color: var(--highlight-green); font-weight: 700; flex-shrink: 0; }
-.alternatives-section {
-margin-bottom: 14px;
-}
-.alternatives-title {
-font-size: 11px;
-font-weight: 700;
-color: var(--text-muted);
-text-transform: uppercase;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-.alternatives-list {
-list-style: none;
-}
-.alternatives-list li {
-font-size: 13px;
-color: var(--text-secondary);
-padding: 4px 0;
-padding-left: 16px;
-position: relative;
-line-height: 1.4;
-}
-.alternatives-list li::before { content: '•'; position: absolute; left: 0; color: var(--text-muted); }
-.alternatives-list li .register-tag {
-font-size: 11px;
-color: var(--text-muted);
-font-style: italic;
-}
+.pattern-alternatives li::before { content: '•'; position: absolute; left: 0; color: var(--highlight-purple); font-weight: 700; }
 .pattern-usage {
 background: rgba(219, 234, 254, 0.3);
 border-radius: var(--radius-sm);
-padding: 10px;
-font-size: 12px;
-color: var(--text-secondary);
-line-height: 1.3;
+padding: 12px;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
 }
-.pattern-usage strong {
-color: var(--primary-deep);
-}
+.pattern-usage strong { color: var(--primary-deep); }
 
+/* Common Mistakes */
+.common-mistakes {
+background: #FEF2F2;
+border-radius: var(--radius-lg);
+padding: 32px;
+margin-top: 28px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.common-mistakes h3 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--highlight-orange); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.cm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.cm-item {
+padding: 16px; border-radius: var(--radius-sm);
+background: rgba(255, 255, 255, 0.8); border-left: 3px solid #F56565;
+}
+.cm-item .mistake {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+}
+.cm-item .better {
+font-size: 12px; color: var(--text-secondary); font-style: italic; padding-left: 20px;
+}
+.cm-item .better::before { content: '→ '; color: #10B981; font-weight: 600; }
+
+/* Story card */
 .story-card {
 background: rgba(255, 255, 255, 0.95);
 border-radius: var(--radius-md);
@@ -718,632 +348,348 @@ border-left: 4px solid var(--primary);
 box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .story-card h3 {
-font-family: 'Fraunces', serif;
-font-size: 1.15rem;
-margin-bottom: 14px;
-color: var(--text-primary);
-display: flex;
-align-items: center;
-gap: 10px;
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
 }
 .story-context {
-font-size: 12px;
-color: var(--text-muted);
-margin-bottom: 10px;
-font-style: italic;
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
 }
 .story-text {
 background: rgba(219, 234, 254, 0.2);
 padding: 18px;
 border-radius: var(--radius-sm);
-font-size: 13px;
-color: var(--text-secondary);
-line-height: 1.4;
-font-style: italic;
+font-size: 14px; color: var(--text-secondary);
+line-height: 1.3; font-style: italic;
 margin-bottom: 14px;
 border-left: 3px solid var(--primary);
 }
-.story-text strong {
-color: var(--primary-deep);
-font-style: normal;
-}
-.story-audio-controls {
-display: flex;
-gap: 10px;
-margin-bottom: 14px;
-}
+.story-text strong { color: var(--primary-deep); font-style: normal; }
+.story-audio-controls { display: flex; gap: 10px; margin-bottom: 14px; }
 .story-audio-btn {
-padding: 10px 20px;
-border-radius: 20px;
-font-size: 13px;
-font-weight: 600;
-cursor: pointer;
-display: inline-flex;
-align-items: center;
-gap: 8px;
-border: none;
-transition: all 0.3s ease;
+padding: 10px 20px; border-radius: 20px;
+font-size: 13px; font-weight: 600; cursor: pointer;
+display: inline-flex; align-items: center; gap: 8px;
+border: none; transition: all 0.3s ease;
 }
 .story-play-btn {
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
 color: white;
 }
-.story-play-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-}
+.story-play-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
 .story-stop-btn {
-background: rgba(245, 101, 101, 0.1);
-color: #DC2626;
+background: rgba(245, 101, 101, 0.1); color: #DC2626;
 border: 1px solid rgba(220, 38, 38, 0.2);
+display: none;
 }
-.story-stop-btn:hover {
-background: rgba(245, 101, 101, 0.2);
+.story-stop-btn.active { display: inline-flex; }
+.story-stop-btn:hover { background: rgba(245, 101, 101, 0.2); }
+.story-analysis {
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
 }
 .story-analysis h4 {
-font-family: 'Fraunces', serif;
-font-size: 0.95rem;
-margin-bottom: 10px;
-color: var(--text-primary);
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
 }
-.story-analysis ul {
-list-style: none;
-}
+.story-analysis ul { list-style: none; }
 .story-analysis li {
-padding: 6px 0;
-padding-left: 20px;
-position: relative;
-font-size: 13px;
-color: var(--text-secondary);
+padding: 6px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
 }
 .story-analysis li::before {
-content: '→';
-position: absolute;
-left: 0;
-color: var(--primary-bright);
-font-weight: 600;
+content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600;
 }
 
+/* Pronunciation table */
 .pronunciation-table {
 background: rgba(255, 255, 255, 0.95);
 border-radius: var(--radius-md);
-padding: 20px;
-margin-bottom: 16px;
+padding: 20px; margin-bottom: 16px;
 box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .pronunciation-table h3 {
-font-family: 'Fraunces', serif;
-font-size: 1rem;
-margin-bottom: 14px;
-color: var(--text-primary);
-display: flex;
-align-items: center;
-gap: 8px;
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
 }
-.pronunciation-table table {
-width: 100%;
-border-collapse: collapse;
-}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
 .pronunciation-table th {
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
-color: white;
-padding: 10px 12px;
-text-align: left;
-font-size: 12px;
-font-weight: 600;
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
 }
 .pronunciation-table td {
-padding: 10px 12px;
-border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-font-size: 13px;
-color: var(--text-secondary);
+padding: 10px 12px; border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
 }
 .pronunciation-table td.ipa-cell {
 color: var(--highlight-green);
-font-family: monospace;
-font-style: italic;
-font-weight: 500;
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic; font-weight: 500;
 }
-.pronunciation-table tr:last-child td {
-border-bottom: none;
-}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+/* Intonation items */
 .intonation-item {
 background: rgba(255, 255, 255, 0.95);
-padding: 12px 16px;
+padding: 14px 18px;
 border-radius: var(--radius-sm);
-margin-bottom: 8px;
-font-size: 13px;
-color: var(--text-secondary);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
 border-left: 3px solid var(--primary);
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
 }
 .intonation-item .phrase {
-font-family: 'Fraunces', serif;
-font-weight: 600;
-color: var(--text-primary);
-display: block;
-margin-bottom: 4px;
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+font-size: 14px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+}
+.intonation-item .context {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 4px;
 }
 
-.scenario-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-}
-.scenario-card {
-border-radius: var(--radius-md);
-padding: 24px;
-border: 2px solid;
-}
-.scenario-card.casual {
-background: rgba(209, 250, 229, 0.3);
-border-color: var(--green);
-}
-.scenario-card.professional {
-background: rgba(219, 234, 254, 0.3);
-border-color: var(--blue);
-}
-.scenario-card.mixed {
-background: rgba(243, 232, 255, 0.3);
-border-color: var(--purple);
-}
-.scenario-card.challenge {
-background: rgba(255, 237, 213, 0.3);
-border-color: var(--orange);
-}
+/* Scenario cards */
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { border-radius: var(--radius-md); padding: 24px; border: 2px solid; }
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
 .scenario-badge {
-display: inline-block;
-padding: 4px 12px;
-border-radius: 12px;
-font-size: 11px;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 0.5px;
-margin-bottom: 12px;
-color: white;
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 12px; color: white;
 }
 .scenario-card.casual .scenario-badge { background: var(--green); }
 .scenario-card.professional .scenario-badge { background: var(--blue); }
 .scenario-card.mixed .scenario-badge { background: var(--purple); }
 .scenario-card.challenge .scenario-badge { background: var(--orange); }
-.scenario-card h3 {
-font-family: 'Fraunces', serif;
-font-size: 1.1rem;
-margin-bottom: 8px;
-color: var(--text-primary);
-}
-.scenario-context {
-font-size: 13px;
-color: var(--text-secondary);
-margin-bottom: 14px;
-line-height: 1.4;
-}
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.scenario-context { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.3; }
 .scenario-requirements {
-background: rgba(255, 255, 255, 0.8);
-border-radius: var(--radius-sm);
-padding: 14px;
-margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
 }
-.scenario-requirements h4 {
-font-size: 12px;
-font-weight: 600;
-color: var(--text-primary);
-margin-bottom: 8px;
-}
-.scenario-requirements ul {
-list-style: none;
-}
+.scenario-requirements h4 { font-size: 12px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.scenario-requirements ul { list-style: none; }
 .scenario-requirements li {
-padding: 4px 0;
-padding-left: 20px;
-position: relative;
-font-size: 13px;
-color: var(--text-secondary);
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
 }
-.scenario-requirements li::before {
-content: '•';
-position: absolute;
-left: 0;
-color: var(--primary-bright);
-font-weight: 600;
-}
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
 .sample-flow-btn {
-background: white;
-border: 2px solid;
-padding: 10px 18px;
-border-radius: 20px;
-font-size: 13px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.3s ease;
-display: inline-flex;
-align-items: center;
-gap: 6px;
+background: white; border: 2px solid; padding: 10px 18px;
+border-radius: 20px; font-size: 13px; font-weight: 600;
+cursor: pointer; transition: all 0.3s ease;
+display: inline-flex; align-items: center; gap: 6px;
 }
 .scenario-card.casual .sample-flow-btn { border-color: var(--green); color: var(--green-deep); }
 .scenario-card.professional .sample-flow-btn { border-color: var(--blue); color: var(--blue-deep); }
 .scenario-card.mixed .sample-flow-btn { border-color: var(--purple); color: var(--purple-deep); }
 .scenario-card.challenge .sample-flow-btn { border-color: var(--orange); color: var(--orange-deep); }
-.sample-flow-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+.sample-flow-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 
-.task-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 16px;
-}
+/* Task cards */
 .task-card {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-md);
-padding: 24px;
-position: relative;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-border-left: 4px solid;
+background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px; position: relative;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); border-left: 4px solid;
 }
 .task-card.easy { border-left-color: #10B981; }
 .task-card.standard { border-left-color: var(--primary); }
 .task-card.challenge { border-left-color: #EF4444; }
 .task-level {
-position: absolute;
-top: 16px;
-right: 16px;
-font-size: 11px;
-font-weight: 700;
-padding: 4px 12px;
-border-radius: 12px;
-letter-spacing: 0.5px;
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
 }
 .task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
 .task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
 .task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
-.task-card h3 {
-font-family: 'Fraunces', serif;
-font-size: 1.1rem;
-margin-bottom: 8px;
-color: var(--text-primary);
-}
-.task-time {
-font-size: 12px;
-color: var(--text-muted);
-font-weight: 600;
-margin-bottom: 10px;
-}
-.task-desc {
-font-size: 13px;
-color: var(--text-secondary);
-line-height: 1.3;
-margin-bottom: 14px;
-}
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
 .task-requirements {
-background: rgba(219, 234, 254, 0.3);
-border-radius: var(--radius-sm);
-padding: 14px;
-margin-bottom: 14px;
+background: rgba(219, 234, 254, 0.3); border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
 }
-.task-requirements h4 {
-font-size: 12px;
-font-weight: 600;
-color: var(--primary-deep);
-margin-bottom: 8px;
-}
-.task-requirements ul {
-list-style: none;
-}
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
 .task-requirements li {
-padding: 4px 0;
-padding-left: 20px;
-position: relative;
-font-size: 13px;
-color: var(--text-secondary);
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
 }
-.task-requirements li::before {
-content: '✓';
-position: absolute;
-left: 0;
-color: var(--primary-bright);
-font-weight: 600;
-}
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
 .task-deliverable {
-font-size: 13px;
-color: var(--text-secondary);
-padding: 10px 12px;
-background: rgba(219, 234, 254, 0.3);
-border-radius: var(--radius-sm);
+font-size: 13px; color: var(--text-secondary);
+padding: 10px 12px; background: rgba(219, 234, 254, 0.3); border-radius: var(--radius-sm);
 }
 
+/* Mastery card */
 .mastery-card {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-lg);
-padding: 32px;
-border: 2px solid var(--primary);
+background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
 box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .mastery-card h2 {
-font-family: 'Fraunces', serif;
-font-size: 1.5rem;
-font-weight: 600;
-color: var(--text-primary);
-margin-bottom: 20px;
-display: flex;
-align-items: center;
-gap: 10px;
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
 }
 .mastery-item {
-display: flex;
-align-items: flex-start;
-gap: 12px;
-padding: 14px;
-background: rgba(219, 234, 254, 0.2);
-border-radius: var(--radius-sm);
-margin-bottom: 10px;
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(219, 234, 254, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
 }
 .mastery-item input[type="checkbox"] {
-width: 20px;
-height: 20px;
-border: 2px solid var(--primary);
-border-radius: 4px;
-cursor: pointer;
-accent-color: var(--primary);
-flex-shrink: 0;
-margin-top: 2px;
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
 }
-.mastery-item label {
-font-size: 14px;
-color: var(--text-secondary);
-cursor: pointer;
-line-height: 1.4;
-}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
 
-.success-tips-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 12px;
-margin-top: 16px;
+/* Success criteria */
+.success-card {
+background: rgba(209, 250, 229, 0.5); border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green); margin-top: 20px;
 }
-.success-tip-card {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-sm);
-padding: 14px;
-border: 1px solid rgba(0, 0, 0, 0.06);
-border-left: 3px solid var(--text-muted);
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
 }
-.success-tip-card.tip { border-left-color: var(--primary); }
-.success-tip-card h4 {
-font-size: 12px;
-font-weight: 600;
-color: var(--text-primary);
-margin-bottom: 6px;
-display: flex;
-align-items: center;
-gap: 6px;
+.success-item {
+display: flex; align-items: center; gap: 10px;
+padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3;
 }
-.success-tip-card p {
-font-size: 12px;
-color: var(--text-secondary);
-line-height: 1.3;
-}
+.success-item i { --ph-color: var(--green); font-size: 18px; }
 
+/* Pro tips */
+.tips-card {
+background: #FFF7ED; border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange); margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item {
+padding: 8px 0; font-size: 14px; color: var(--orange-deep);
+display: flex; align-items: flex-start; gap: 10px; line-height: 1.3;
+}
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+/* Flashcard */
 .flashcard-container {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-lg);
-padding: 32px;
-text-align: center;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg);
+padding: 32px; text-align: center; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .flashcard {
 background: linear-gradient(135deg, rgba(219, 234, 254, 0.5), rgba(147, 197, 253, 0.3));
-border-radius: var(--radius-md);
-padding: 32px;
-margin-bottom: 16px;
-min-height: 180px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-transition: all 0.4s ease;
+border-radius: var(--radius-md); padding: 32px; margin-bottom: 16px;
+min-height: 180px; display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
 }
-.flashcard:hover {
-transform: translateY(-4px);
-box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
-}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15); }
 .flashcard-front p {
-font-family: 'Fraunces', serif;
-font-size: 1.15rem;
-font-weight: 600;
-color: var(--text-primary);
-margin-bottom: 14px;
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 14px;
 }
 .flashcard-front button {
-background: var(--primary);
-color: white;
-border: none;
-padding: 8px 18px;
-border-radius: 20px;
-font-size: 13px;
-font-weight: 600;
-cursor: pointer;
+background: var(--primary); color: white; border: none;
+padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer;
 }
 .flashcard-back { display: none; }
 .flashcard-back.active { display: block; }
-.flashcard-back p {
-font-size: 14px;
-color: var(--text-secondary);
-font-style: italic;
-margin-bottom: 14px;
-line-height: 1.4;
-}
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
 .flashcard-tip {
-background: rgba(255, 255, 255, 0.8);
-padding: 12px 14px;
-border-radius: var(--radius-sm);
-font-size: 13px;
-color: var(--text-secondary);
-line-height: 1.4;
+background: rgba(255, 255, 255, 0.8); padding: 12px 14px;
+border-radius: var(--radius-sm); font-size: 13px;
+color: var(--text-secondary); line-height: 1.3;
 }
-.flashcard-tip strong {
-color: var(--primary-deep);
-}
-.flashcard-nav {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 16px;
-}
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
 .flashcard-nav button {
-background: rgba(255, 255, 255, 0.9);
-border: 1px solid rgba(59, 130, 246, 0.3);
-padding: 8px 16px;
-border-radius: 20px;
-font-size: 13px;
-font-weight: 600;
-color: var(--text-secondary);
-cursor: pointer;
+background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(59, 130, 246, 0.3);
+padding: 8px 16px; border-radius: 20px; font-size: 13px;
+font-weight: 600; color: var(--text-secondary); cursor: pointer;
 transition: all 0.3s ease;
 }
-.flashcard-nav button:hover {
-background: var(--primary);
-color: white;
-border-color: var(--primary);
-}
-.flashcard-nav span {
-font-size: 13px;
-color: var(--text-muted);
-font-weight: 600;
-}
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
 
+/* Quiz */
 .quiz-section {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-lg);
-padding: 32px;
-margin: 32px 0;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg);
+padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .quiz-question {
-background: rgba(248, 250, 252, 0.8);
-border-radius: var(--radius-md);
-padding: 18px;
-margin-bottom: 14px;
-border-left: 3px solid var(--primary);
+background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md);
+padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary);
 }
-.quiz-question h4 {
-font-family: 'Fraunces', serif;
-font-size: 1rem;
-margin-bottom: 10px;
-color: var(--text-primary);
-}
-.quiz-options {
-display: flex;
-flex-direction: column;
-gap: 8px;
-}
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
 .quiz-option {
-padding: 10px;
-background: rgba(255, 255, 255, 0.9);
-border: 2px solid rgba(219, 234, 254, 0.5);
-border-radius: var(--radius-sm);
-cursor: pointer;
-transition: all 0.3s ease;
-font-size: 13px;
-color: var(--text-secondary);
+padding: 10px; background: rgba(255, 255, 255, 0.9);
+border: 2px solid rgba(219, 234, 254, 0.5); border-radius: var(--radius-sm);
+cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3;
 }
-.quiz-option:hover {
-border-color: var(--primary);
-background: rgba(219, 234, 254, 0.2);
-}
+.quiz-option:hover { border-color: var(--primary); background: rgba(219, 234, 254, 0.2); }
 .check-btn {
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
-color: white;
-border: none;
-padding: 12px 24px;
-border-radius: 24px;
-font-weight: 600;
-cursor: pointer;
-margin-top: 16px;
-box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+color: white; border: none; padding: 12px 24px;
+border-radius: 24px; font-weight: 600; cursor: pointer;
+margin-top: 16px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-.day-navigation {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-margin: 40px 0;
-}
+/* Navigation */
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
 .nav-card {
-background: rgba(255, 255, 255, 0.95);
-border-radius: var(--radius-md);
-padding: 20px;
-text-decoration: none;
-color: inherit;
-transition: all 0.3s ease;
-border: 1px solid rgba(0, 0, 0, 0.06);
-position: relative;
-overflow: hidden;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md);
+padding: 20px; text-decoration: none; color: inherit;
+transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06);
+position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .nav-card::before {
-content: '';
-position: absolute;
-top: 0; left: 0; right: 0;
-height: 3px;
-background: linear-gradient(90deg, var(--primary), var(--primary-bright));
+content: ''; position: absolute; top: 0; left: 0; right: 0;
+height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright));
 }
-.nav-card:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
-}
-.nav-label {
-font-size: 12px;
-color: var(--text-muted);
-text-transform: uppercase;
-letter-spacing: 0.5px;
-margin-bottom: 6px;
-}
-.nav-title {
-font-family: 'Fraunces', serif;
-font-size: 1rem;
-font-weight: 600;
-color: var(--text-primary);
-}
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
 
-.complete-container {
-text-align: center;
-margin: 40px 0;
-}
+/* Complete button */
+.complete-container { text-align: center; margin: 40px 0; }
 .complete-btn {
-display: inline-flex;
-align-items: center;
-gap: 12px;
+display: inline-flex; align-items: center; gap: 12px;
 background: linear-gradient(135deg, var(--primary), var(--primary-bright));
-color: white;
-padding: 16px 32px;
-border-radius: 36px;
-font-weight: 600;
-font-size: 15px;
-border: none;
-cursor: pointer;
-transition: all 0.4s ease;
-box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4);
+color: white; padding: 16px 32px; border-radius: 36px;
+font-weight: 600; font-size: 15px; border: none; cursor: pointer;
+transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(59, 130, 246, 0.4);
 }
-.complete-btn:hover {
-transform: translateY(-3px) scale(1.02);
-box-shadow: 0 12px 36px rgba(37, 99, 235, 0.5);
-}
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(59, 130, 246, 0.5); }
 .complete-btn i { font-size: 1.2rem; }
-.complete-message {
-margin-top: 16px;
-font-size: 14px;
-color: var(--text-muted);
-}
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
 
+/* Footer */
 .footer {
-background: rgba(255, 255, 255, 0.95);
-padding: 32px 0 24px;
-text-align: center;
-margin-top: 48px;
-border-top: 1px solid rgba(0, 0, 0, 0.08);
+background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px;
+text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 .footer-fox { font-size: 2rem; margin-bottom: 12px; }
 .footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
@@ -1353,17 +699,11 @@ border-top: 1px solid rgba(0, 0, 0, 0.08);
 .day-title { font-size: 1.8rem; }
 .day-tabs-container { top: 52px; }
 .day-navigation { grid-template-columns: 1fr; }
-.patterns-grid { grid-template-columns: 1fr; }
-.principles-grid { grid-template-columns: 1fr; }
-.scenario-grid { grid-template-columns: 1fr; }
-.task-grid { grid-template-columns: 1fr; }
-.rs-grid { grid-template-columns: 1fr; }
-.success-tips-grid { grid-template-columns: 1fr; }
-.lifecycle-steps { flex-direction: column; }
-.lifecycle-arrow { transform: rotate(90deg); }
-.formula-steps { flex-direction: column; }
-.formula-arrow { transform: rotate(90deg); }
 .pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.philosophy-grid { grid-template-columns: 1fr; }
+.plan-grid { grid-template-columns: repeat(2, 1fr); }
+.cm-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -1371,14 +711,8 @@ border-top: 1px solid rgba(0, 0, 0, 0.08);
 
 <nav class="top-nav">
 <div class="container">
-<a href="week-05.html" class="nav-back">
-<i class="ph-duotone ph-arrow-left"></i>
-<span>Week 5 Hub</span>
-</a>
-<div class="day-indicator">
-Day 30 / 35
-<div class="progress-bar"><div class="progress-fill"></div></div>
-</div>
+<a href="week-05.html" class="nav-back"><i class="ph-duotone ph-arrow-left"></i><span>Week 5 Hub</span></a>
+<div class="day-indicator">Day 30 / 35 <div class="progress-bar"><div class="progress-fill"></div></div></div>
 </div>
 </nav>
 
@@ -1399,16 +733,11 @@ Day 30 / 35
 
 <header class="day-header">
 <div class="container">
-<div class="breadcrumb">
-<a href="index.html">Home</a> › <a href="week-05.html">Week 5</a> › Day 30
-</div>
-<div class="day-title-row">
-<span class="day-icon-inline">💬</span>
-<h1 class="day-title">Speaking Up & Interjecting</h1>
-</div>
-<p class="day-subtitle">Claim space in meetings gracefully without being rude. Today you'll learn 5 patterns to interject smoothly, build on others' ideas, and contribute strategically — without interrupting or dominating.</p>
+<div class="breadcrumb"><a href="index.html">Home</a> › <a href="week-05.html">Week 5</a> › Day 30</div>
+<div class="day-title-row"><span class="day-icon-inline">💬</span><h1 class="day-title">Speaking Up & Interjecting</h1></div>
+<p class="day-subtitle">Claim space in conversations gracefully without being rude. Today you'll learn 5 interjection patterns to <strong>enter conversations naturally</strong>, build on others' ideas, and contribute strategically.</p>
 <div class="day-meta">
-<div class="meta-tag"><i class="ph-duotone ph-chat-centered-text"></i> Speaking Up</div>
+<div class="meta-tag"><i class="ph-duotone ph-chat-centered-text"></i> Interjecting</div>
 <div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
 <div class="meta-tag"><i class="ph-duotone ph-books"></i> 5 patterns</div>
 <div class="meta-tag"><i class="ph-duotone ph-users"></i> Meeting Presence</div>
@@ -1419,632 +748,515 @@ Day 30 / 35
 <div class="content-area">
 <div class="container">
 
+<!-- C1 Insight - Paragraph form, opacity 60% -->
 <div class="c1-insight">
 <div class="label">💡 C1 Insight</div>
 <div class="insight">
-<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
-<div>
-<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
-<div style="font-size: 14px;">"Sorry to interrupt, but..." → (Apologetic, weak)</div>
-</div>
-<div>
-<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
-<div style="font-size: 14px;">"Building on what Sarah just said..." → (Confident, collaborative)</div>
-</div>
-</div>
-"B2 speakers apologize for speaking. C1 speakers claim space strategically."
+"B2 speakers either stay silent or apologize for speaking: 'Sorry to interrupt, but...' C1 speakers enter conversations strategically: 'Building on what Sarah just said, I'd add...' — confident, collaborative, and value-adding. The difference isn't vocabulary — it's presence."
 </div>
 </div>
 
+<!-- Today's Philosophy - Card grid -->
 <section class="section">
 <div class="philosophy-section">
-<h2 class="section-title">
-<i class="ph-duotone ph-lightbulb"></i>
-Today's Philosophy
-</h2>
+<h2 class="section-title"><i class="ph-duotone ph-lightbulb"></i> Today's Philosophy</h2>
 <div class="philosophy-box">
-<div class="philosophy-title">
-<i class="ph-duotone ph-brain"></i>
-From Passive to Strategic Participation
+<div class="philosophy-title"><i class="ph-duotone ph-brain"></i> From Interruption to Strategic Entry</div>
+<p>Most people either stay silent (miss opportunity) or interrupt rudely (damage relationship). C1 communicators understand that <strong>interjecting is a skill</strong> — not an interruption. They know how to enter conversations gracefully by building on others' ideas, not competing with them. <strong>Professional presence isn't about talking the most. It's about contributing strategically.</strong></p>
 </div>
-<p>
-Most people either stay silent or wait for a "perfect" moment to speak. But C1 communicators understand that <span style="color: var(--highlight-gold); font-weight: 600;">meetings are conversations</span>, not monologues. They know how to <span style="color: var(--highlight-gold); font-weight: 600;">claim space gracefully</span> — not by interrupting rudely, but by building on what others said.
-<br><br>
-<span style="color: var(--highlight-gold); font-weight: 600;">Professional presence isn't about talking the most. It's about contributing strategically.</span>
-<br><br>
-<span style="color: var(--highlight-green); font-weight: 600;">The best interjections don't feel like interruptions.</span> They feel like natural conversation flow.
-</p>
-</div>
-<div class="comparison-box negative">
-<div class="comparison-title">
-<i class="ph-duotone ph-x-circle"></i>
-Why most people struggle to speak up
-</div>
-<ul class="comparison-list">
+<div class="philosophy-grid">
+<div class="philosophy-card negative">
+<div class="philosophy-card-title"><i class="ph-duotone ph-x-circle"></i> Why most people struggle to speak up</div>
+<ul class="philosophy-card-list">
 <li>Wait for "perfect" moment that never comes</li>
-<li>Apologize for speaking: "Sorry, but..."</li>
-<li>Interrupt rudely without acknowledging others</li>
-<li>Dominate conversation without building on ideas</li>
+<li>Apologize: "Sorry to interrupt, but..."</li>
+<li>Interrupt without acknowledging others</li>
+<li>Dominate without building on ideas</li>
 <li>Stay silent and resent it later</li>
 </ul>
 </div>
-<div class="comparison-box positive">
-<div class="comparison-title">
-<i class="ph-duotone ph-check-circle"></i>
-What C1 communicators do differently
-</div>
-<ul class="comparison-list">
-<li>Use smooth transitions: "Building on what [Name] said..."</li>
-<li>Acknowledge before adding: "That's a great point, and..."</li>
-<li>Build on others' ideas, don't just add their own</li>
-<li>Claim space confidently but respectfully</li>
-<li>Balance speaking and listening strategically</li>
+<div class="philosophy-card positive">
+<div class="philosophy-card-title"><i class="ph-duotone ph-check-circle"></i> What C1 communicators do differently</div>
+<ul class="philosophy-card-list">
+<li>Build on others: "Building on what [Name] said..."</li>
+<li>Request space politely: "Can I jump in here?"</li>
+<li>Signal intention: "I'd like to add something..."</li>
+<li>Share brief insights: "One thing I'd add..."</li>
+<li>Contribute quickly: "Just one quick thought..."</li>
 </ul>
-</div>
-
-<div class="executive-formula">
-<h3>🧠 The Interjection Framework</h3>
-<div class="formula-content">
-<div class="formula-steps">
-<div class="formula-step">Acknowledge</div>
-<div class="formula-arrow">→</div>
-<div class="formula-step">Add Value</div>
-<div class="formula-arrow">→</div>
-<div class="formula-step">Invite Response</div>
-</div>
-<div class="formula-explanation">
-3 steps to smooth interjection. Not a rigid template — a flow pattern. Always acknowledge before adding.
-</div>
-</div>
-</div>
-
-<div class="update-lifecycle">
-<h3>📈 The Lifecycle of Strategic Participation</h3>
-<div class="lifecycle-steps">
-<div class="lifecycle-step">
-<div class="phase">Listening</div>
-<div class="meaning">Active engagement</div>
-</div>
-<div class="lifecycle-arrow">→</div>
-<div class="lifecycle-step">
-<div class="phase">Identifying</div>
-<div class="meaning">Hook to build on</div>
-</div>
-<div class="lifecycle-arrow">→</div>
-<div class="lifecycle-step">
-<div class="phase">Acknowledging</div>
-<div class="meaning">Validate others</div>
-</div>
-<div class="lifecycle-arrow">→</div>
-<div class="lifecycle-step">
-<div class="phase">Adding</div>
-<div class="meaning">Contribute value</div>
-</div>
-<div class="lifecycle-arrow">→</div>
-<div class="lifecycle-step">
-<div class="phase">Inviting</div>
-<div class="meaning">Keep flow going</div>
-</div>
-</div>
-<div class="lifecycle-insight">
-<strong>💡 Key Insight:</strong> The real skill is in the <strong>Acknowledging</strong> and <strong>Adding</strong> phases. That's where you show respect while claiming space. B2 speakers skip acknowledgment. C1 speakers make it seamless.
 </div>
 </div>
 </div>
 </section>
 
-<section class="section">
-<div class="section-header">
-<h2 class="section-title">
-<i class="ph-duotone ph-star"></i>
-4 Principles of Strategic Interjection
-</h2>
-<p class="section-desc">Framework để speak up gracefully trong mọi meeting context.</p>
-</div>
-<div class="principles-grid">
-<div class="principle-card">
-<div class="principle-number">1</div>
-<div class="principle-title">Build, don't bulldoze</div>
-<div class="principle-desc"><span style="color: var(--highlight-gold); font-weight: 600;">Acknowledge before adding.</span> Show you're listening, not just waiting to talk.</div>
-</div>
-<div class="principle-card">
-<div class="principle-number">2</div>
-<div class="principle-title">Add value, not volume</div>
-<div class="principle-desc"><span style="color: var(--highlight-green); font-weight: 600;">Contribute strategically, not just to be heard.</span> Quality over quantity.</div>
-</div>
-<div class="principle-card">
-<div class="principle-number">3</div>
-<div class="principle-title">Use smooth transitions</div>
-<div class="principle-desc"><span style="color: var(--highlight-blue); font-weight: 600;">"Building on..." "That's interesting, and..."</span> Natural flow, not abrupt interruption.</div>
-</div>
-<div class="principle-card">
-<div class="principle-number">4</div>
-<div class="principle-title">Invite, don't dominate</div>
-<div class="principle-desc"><span style="color: var(--highlight-purple); font-weight: 600;">Keep conversation flowing.</span> "What do others think?" shows collaborative mindset.</div>
-</div>
-</div>
-
-<div class="reading-signals">
-<h3><i class="ph-duotone ph-eye"></i> Reading the Room: When to Speak Up</h3>
-<div class="rs-grid">
-<div class="rs-col ready">
-<h4>✅ Good moments to interject:</h4>
-<ul>
-<li>Someone just finished a point (natural pause)</li>
-<li>You can build directly on what was said</li>
-<li>You have unique expertise/information</li>
-<li>Conversation is stuck and you can unblock it</li>
-<li>Decision needs to be made and you have input</li>
-</ul>
-</div>
-<div class="rs-col space">
-<h4>⚠️ Wait for better moment:</h4>
-<ul>
-<li>Someone is mid-sentence (unless urgent)</li>
-<li>Emotional moment (let them finish)</li>
-<li>You're just repeating what was said</li>
-<li>You don't have anything new to add</li>
-<li>Senior leader is making a key point</li>
-</ul>
-</div>
-</div>
-<div class="rs-action">
-<strong>💡 What to do:</strong>
-<ul style="margin-top: 8px; padding-left: 20px; list-style: none;">
-<li style="padding: 4px 0;">• Good moment → Use smooth transition, acknowledge, add value</li>
-<li style="padding: 4px 0;">• Bad moment → Note your point, wait for natural pause, or use "Can I jump in?"</li>
-</ul>
-</div>
-</div>
-</section>
-
+<!-- Today's Plan -->
 <section class="section">
 <div class="philosophy-section">
-<h2 class="section-title">
-<i class="ph-duotone ph-calendar-check"></i>
-Today's Plan (60 min)
-</h2>
+<h2 class="section-title"><i class="ph-duotone ph-calendar-check"></i> Today's Plan (60 min)</h2>
 <div class="plan-grid">
-<div class="plan-card">
-<div class="plan-icon">💡</div>
-<div class="plan-title">5 Patterns</div>
-<div class="plan-time">15 min</div>
-<div class="plan-desc">Interjection patterns</div>
-</div>
-<div class="plan-card">
-<div class="plan-icon">🎭</div>
-<div class="plan-title">Examples</div>
-<div class="plan-time">10 min</div>
-<div class="plan-desc">Integrated stories</div>
-</div>
-<div class="plan-card">
-<div class="plan-icon">🗣️</div>
-<div class="plan-title">Speaking</div>
-<div class="plan-time">25 min</div>
-<div class="plan-desc">4 scenarios + record</div>
-</div>
-<div class="plan-card">
-<div class="plan-icon">🎴</div>
-<div class="plan-title">Review</div>
-<div class="plan-time">10 min</div>
-<div class="plan-desc">Flashcards + quiz</div>
-</div>
+<div class="plan-card"><div class="plan-icon">💡</div><div class="plan-title">5 Patterns</div><div class="plan-time">15 min</div><div class="plan-desc">Interjection patterns</div></div>
+<div class="plan-card"><div class="plan-icon">🎭</div><div class="plan-title">Dialogues</div><div class="plan-time">15 min</div><div class="plan-desc">4 mini dialogues</div></div>
+<div class="plan-card"><div class="plan-icon">🗣️</div><div class="plan-title">Speaking</div><div class="plan-time">25 min</div><div class="plan-desc">4 scenarios + record</div></div>
+<div class="plan-card"><div class="plan-icon">🎴</div><div class="plan-title">Review</div><div class="plan-time">10 min</div><div class="plan-desc">Flashcards + quiz</div></div>
 </div>
 </div>
 </section>
 
+<!-- 5 Interjection Patterns -->
 <section class="section">
 <div class="section-header">
-<h2 class="section-title">
-<i class="ph-duotone ph-chat-centered-text"></i>
-5 Interjection Patterns
-</h2>
-<p class="section-desc">5 patterns để speak up smoothly trong meetings. Mỗi pattern có 4 examples (Life casual, Life semi-formal, Business). Click 🔊 để nghe phát âm.</p>
+<h2 class="section-title"><i class="ph-duotone ph-chat-centered-text"></i> 5 Interjection Patterns</h2>
+<p class="section-desc">5 patterns để enter conversations gracefully. Mỗi pattern có life & business examples + alternatives. Click 🔊 để nghe phát âm.</p>
 </div>
 
-<div class="patterns-grid">
-
+<!-- Pattern 1 -->
 <div class="pattern-card">
 <div class="pattern-header">
 <div class="pattern-number">1</div>
 <div class="pattern-content">
 <div class="pattern-text">"Building on what [Name] just said..."</div>
-<div class="pattern-ipa">/ˈbɪldɪŋ ɑːn wʌt [neɪm] dʒʌst sed/</div>
+<div class="pattern-ipa">/ˈbɪldɪŋ ɒn wɒt [neɪm] dʒʌst sɛd/</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
-<div class="pattern-context">Semi-formal → Formal</div>
+<div class="pattern-context">Casual → Professional</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">
-Acknowledge + add value. Show you're building on their idea, not replacing it.
-</div>
+<div class="pattern-desc">Acknowledge + add value. Show you're building on their idea, not replacing it.</div>
 <div class="pattern-why">
 <strong>Why C1?</strong>
-<p><span style="color: var(--highlight-gold); font-weight: 600;">"Building on" = collaborative framing.</span> Shows you listened and are adding, not competing. Most professional way to interject.</p>
+<p><span style="color: var(--highlight-blue); font-weight: 600;">"Building on" = collaborative framing.</span> Shows you listened and are adding, not competing. Creates sense of teamwork. Natural way to enter conversation.</p>
 </div>
-<div class="examples-section">
-<div class="examples-title">Examples 🔊</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"Building on what you just said about the trip, I found this amazing hotel..."</span>
-<button class="audio-btn" onclick="playAudio('Building on what you just said about the trip, I found this amazing hotel.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Building on what you just said about the trip, I found this amazing hotel that's actually cheaper."</span>
+<button class="audio-btn" onclick="playAudio('Building on what you just said about the trip, I found this amazing hotel that\'s actually cheaper.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"Building on what Sarah mentioned, we could also invite the neighbors..."</span>
-<button class="audio-btn" onclick="playAudio('Building on what Sarah mentioned, we could also invite the neighbors.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Building on what Sarah mentioned about the restaurant, I know this place that has better reviews."</span>
+<button class="audio-btn" onclick="playAudio('Building on what Sarah mentioned about the restaurant, I know this place that has better reviews.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"Building on what Minh just said about the timeline, I think we should also consider..."</span>
-<button class="audio-btn" onclick="playAudio('Building on what Minh just said about the timeline, I think we should also consider the resource constraints.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Building on what Minh just said about the timeline, I think we should also consider resource constraints."</span>
+<button class="audio-btn" onclick="playAudio('Building on what Minh just said about the timeline, I think we should also consider resource constraints.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"Building on Sarah's point about customer feedback, we've actually seen similar patterns..."</span>
+<span>"Building on Sarah's point about customer feedback, we've actually seen similar patterns in our data."</span>
 <button class="audio-btn" onclick="playAudio('Building on Sarah\'s point about customer feedback, we\'ve actually seen similar patterns in our data.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
-<div class="common-mistake-box">
-<strong>⚠️ Common mistake</strong>
-<div class="mistake-wrong">"Building on what you said, but I think..." (contradicts)</div>
-<div class="mistake-right">"Building on what you said, and I'd add..." (adds value)</div>
-</div>
-<div class="alternatives-section">
-<div class="alternatives-title">ALTERNATIVES:</div>
-<ul class="alternatives-list">
-<li>"To add to what [Name] said..." <span class="register-tag">(slightly more casual)</span></li>
-<li>"Expanding on [Name]'s point..." <span class="register-tag">(more formal)</span></li>
+<div class="pattern-alternatives">
+<h5>Alternatives</h5>
+<ul>
+<li>"To add to what [Name] said..." (slightly more casual)</li>
+<li>"Expanding on [Name]'s point..." (more formal)</li>
+<li>"That's a great point, and I'd add..." (acknowledge + add)</li>
 </ul>
+</div>
+<div class="pattern-usage">
+<strong>💡 Usage Notes:</strong> Must reference what they actually said. Shows you're listening. Creates natural flow.
 </div>
 </div>
 
+<!-- Pattern 2 -->
 <div class="pattern-card">
 <div class="pattern-header">
 <div class="pattern-number">2</div>
 <div class="pattern-content">
 <div class="pattern-text">"Can I jump in here?"</div>
-<div class="pattern-ipa">/kæn aɪ dʒʌmp ɪn hɪr/</div>
+<div class="pattern-ipa">/kæn aɪ dʒʌmp ɪn hɪər/</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
-<div class="pattern-context">Casual → Semi-formal</div>
+<div class="pattern-context">Casual → Professional</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">
-Request permission to interject. Polite way to claim space when conversation is flowing fast.
-</div>
+<div class="pattern-desc">Request permission to interject. Polite way to claim space when conversation is flowing fast.</div>
 <div class="pattern-why">
 <strong>Why C1?</strong>
-<p><span style="color: var(--highlight-green); font-weight: 600;">"Can I jump in" = respectful request.</span> Shows awareness of flow while claiming space. More confident than "Sorry to interrupt."</p>
+<p><span style="color: var(--highlight-green); font-weight: 600;">"Can I" = respectful request.</span> More confident than "Sorry to interrupt." Shows awareness of flow while claiming space.</p>
 </div>
-<div class="examples-section">
-<div class="examples-title">Examples 🔊</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"Can I jump in here? I actually know a great restaurant for that..."</span>
-<button class="audio-btn" onclick="playAudio('Can I jump in here? I actually know a great restaurant for that.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Can I jump in here? I actually know a great restaurant for that — my cousin works there."</span>
+<button class="audio-btn" onclick="playAudio('Can I jump in here? I actually know a great restaurant for that — my cousin works there.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"Can I jump in? I have a suggestion about the venue..."</span>
-<button class="audio-btn" onclick="playAudio('Can I jump in? I have a suggestion about the venue.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Can I jump in? I have a suggestion about the venue that might work better."</span>
+<button class="audio-btn" onclick="playAudio('Can I jump in? I have a suggestion about the venue that might work better.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"Can I jump in here? I have some data that might be relevant..."</span>
-<button class="audio-btn" onclick="playAudio('Can I jump in here? I have some data that might be relevant to this discussion.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Can I jump in here? I have some data from last quarter that might be relevant to this discussion."</span>
+<button class="audio-btn" onclick="playAudio('Can I jump in here? I have some data from last quarter that might be relevant to this discussion.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"Can I jump in quickly? There's a compliance issue we should flag..."</span>
+<span>"Can I jump in quickly? There's a compliance issue we should flag before we proceed."</span>
 <button class="audio-btn" onclick="playAudio('Can I jump in quickly? There\'s a compliance issue we should flag before we proceed.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
-<div class="common-mistake-box">
-<strong>⚠️ Common mistake</strong>
-<div class="mistake-wrong">"Can I jump in?" then say something irrelevant</div>
-<div class="mistake-right">"Can I jump in?" then add clear, relevant value</div>
-</div>
-<div class="alternatives-section">
-<div class="alternatives-title">ALTERNATIVES:</div>
-<ul class="alternatives-list">
-<li>"Can I add something here?" <span class="register-tag">(softer)</span></li>
-<li>"Mind if I jump in?" <span class="register-tag">(more casual)</span></li>
+<div class="pattern-alternatives">
+<h5>Alternatives</h5>
+<ul>
+<li>"Mind if I jump in?" (more casual)</li>
+<li>"Can I add something here?" (softer)</li>
+<li>"If I could just jump in for a moment..." (more formal)</li>
 </ul>
+</div>
+<div class="pattern-usage">
+<strong>💡 Usage Notes:</strong> Wait for natural pause. Don't interrupt mid-sentence. Add value immediately after.
 </div>
 </div>
 
+<!-- Pattern 3 -->
 <div class="pattern-card">
 <div class="pattern-header">
 <div class="pattern-number">3</div>
 <div class="pattern-content">
 <div class="pattern-text">"I'd like to add something..."</div>
-<div class="pattern-ipa">/aɪd laɪk tu æd ˈsʌmθɪŋ/</div>
+<div class="pattern-ipa">/aɪd laɪk tuː æd ˈsʌmθɪŋ/</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
-<div class="pattern-context">Semi-formal → Formal</div>
+<div class="pattern-context">Casual → Professional</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">
-Signal intention to contribute. Professional way to claim space without being aggressive.
-</div>
+<div class="pattern-desc">Signal intention to contribute. Professional way to claim space without being aggressive.</div>
 <div class="pattern-why">
 <strong>Why C1?</strong>
-<p><span style="color: var(--highlight-blue); font-weight: 600;">"I'd like to add" = confident but polite.</span> States intention clearly. More professional than "Can I say something?"</p>
+<p><span style="color: var(--highlight-gold); font-weight: 600;">"I'd like to" = confident but polite.</span> States intention clearly. More professional than "Can I say something?"</p>
 </div>
-<div class="examples-section">
-<div class="examples-title">Examples 🔊</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"I'd like to add something about the budget — we should also consider..."</span>
-<button class="audio-btn" onclick="playAudio('I\'d like to add something about the budget — we should also consider the hidden costs.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I'd like to add something about the budget — we should also consider hidden costs like maintenance."</span>
+<button class="audio-btn" onclick="playAudio('I\'d like to add something about the budget — we should also consider hidden costs like maintenance.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"I'd like to add something from my experience with this..."</span>
-<button class="audio-btn" onclick="playAudio('I\'d like to add something from my experience with this.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I'd like to add something from my experience with this — it's not as simple as it looks."</span>
+<button class="audio-btn" onclick="playAudio('I\'d like to add something from my experience with this — it\'s not as simple as it looks.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"I'd like to add something about the risk assessment..."</span>
-<button class="audio-btn" onclick="playAudio('I\'d like to add something about the risk assessment we conducted last quarter.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I'd like to add something from the client's perspective on this proposal — they're particularly concerned about timeline."</span>
+<button class="audio-btn" onclick="playAudio('I\'d like to add something from the client\'s perspective on this proposal — they\'re particularly concerned about timeline.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"I'd like to add something from the client's perspective..."</span>
-<button class="audio-btn" onclick="playAudio('I\'d like to add something from the client\'s perspective on this.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"I'd like to add something about the risk assessment we conducted last quarter — it might change our approach."</span>
+<button class="audio-btn" onclick="playAudio('I\'d like to add something about the risk assessment we conducted last quarter — it might change our approach.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
-<div class="common-mistake-box">
-<strong>⚠️ Common mistake</strong>
-<div class="mistake-wrong">"I'd like to add something" then repeat what was said</div>
-<div class="mistake-right">"I'd like to add something" then bring NEW perspective</div>
-</div>
-<div class="alternatives-section">
-<div class="alternatives-title">ALTERNATIVES:</div>
-<ul class="alternatives-list">
-<li>"I'd like to chime in here..." <span class="register-tag">(slightly softer)</span></li>
-<li>"I'd like to contribute something..." <span class="register-tag">(more formal)</span></li>
+<div class="pattern-alternatives">
+<h5>Alternatives</h5>
+<ul>
+<li>"I'd just like to add..." (softer)</li>
+<li>"If I may add..." (more formal)</li>
+<li>"I just wanted to mention..." (more casual)</li>
 </ul>
+</div>
+<div class="pattern-usage">
+<strong>💡 Usage Notes:</strong> Must add NEW perspective, not repeat what was said. Shows you're contributing value.
 </div>
 </div>
 
+<!-- Pattern 4 -->
 <div class="pattern-card">
 <div class="pattern-header">
 <div class="pattern-number">4</div>
 <div class="pattern-content">
-<div class="pattern-text">"If I could just weigh in..."</div>
-<div class="pattern-ipa">/ɪf a kʊd dʒʌst weɪ ɪn/</div>
+<div class="pattern-text">"One thing I'd add..."</div>
+<div class="pattern-ipa">/wʌn θɪŋ aɪd æd/</div>
 <div class="pattern-meta">
-<div class="pattern-rating">⭐⭐⭐⭐ High</div>
-<div class="pattern-context">Semi-formal → Formal</div>
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Casual → Professional</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">
-Offer perspective humbly. Shows expertise without being pushy.
-</div>
+<div class="pattern-desc">Add brief insight without taking over. Perfect for casual interjection when you have something short but valuable.</div>
 <div class="pattern-why">
 <strong>Why C1?</strong>
-<p><span style="color: var(--highlight-purple); font-weight: 600;">"Weigh in" = offer expertise/perspective.</span> Humble but confident. Shows you have valuable input without dominating.</p>
+<p><span style="color: var(--highlight-purple); font-weight: 600;">"One thing I'd add" = signal brevity.</span> Shows respect for others' time. Higher frequency than "If I could just weigh in" in real life.</p>
 </div>
-<div class="examples-section">
-<div class="examples-title">Examples 🔊</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"If I could just weigh in — I've been to that place before and..."</span>
-<button class="audio-btn" onclick="playAudio('If I could just weigh in — I\'ve been to that place before and I have some tips.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"One thing I'd add — I heard that restaurant has amazing dessert."</span>
+<button class="audio-btn" onclick="playAudio('One thing I\'d add — I heard that restaurant has amazing dessert.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"If I could just weigh in on the timeline..."</span>
-<button class="audio-btn" onclick="playAudio('If I could just weigh in on the timeline.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"One thing I'd add — this store has a better return policy if you're not sure."</span>
+<button class="audio-btn" onclick="playAudio('One thing I\'d add — this store has a better return policy if you\'re not sure.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"If I could just weigh in on the technical feasibility..."</span>
-<button class="audio-btn" onclick="playAudio('If I could just weigh in on the technical feasibility of this approach.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"One thing I'd like to add — we should also consider the budget implications before we commit."</span>
+<button class="audio-btn" onclick="playAudio('One thing I\'d like to add — we should also consider the budget implications before we commit.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"If I could just weigh in from a legal perspective..."</span>
-<button class="audio-btn" onclick="playAudio('If I could just weigh in from a legal perspective on this clause.')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"One thing I'd add — our clients typically see results within 30 days, not 60."</span>
+<button class="audio-btn" onclick="playAudio('One thing I\'d add — our clients typically see results within 30 days, not 60.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
-<div class="common-mistake-box">
-<strong>⚠️ Common mistake</strong>
-<div class="mistake-wrong">"If I could just weigh in" then give long monologue</div>
-<div class="mistake-right">"If I could just weigh in" then be concise and relevant</div>
-</div>
-<div class="alternatives-section">
-<div class="alternatives-title">ALTERNATIVES:</div>
-<ul class="alternatives-list">
-<li>"From my experience..." <span class="register-tag">(direct)</span></li>
-<li>"Just to add my perspective..." <span class="register-tag">(humble)</span></li>
+<div class="pattern-alternatives">
+<h5>Alternatives</h5>
+<ul>
+<li>"Oh, one thing..." (very casual)</li>
+<li>"Just one quick point..." (brief)</li>
+<li>"If I could just add one thing..." (more formal)</li>
 </ul>
+</div>
+<div class="pattern-usage">
+<strong>💡 Usage Notes:</strong> Must be truly brief (1-2 sentences). Violates promise if you talk for 5 minutes after saying "one thing."
 </div>
 </div>
 
+<!-- Pattern 5 -->
 <div class="pattern-card">
 <div class="pattern-header">
 <div class="pattern-number">5</div>
 <div class="pattern-content">
-<div class="pattern-text">"To play devil's advocate..."</div>
-<div class="pattern-ipa">/tuː pleɪ ˈdɛvəlz ˈædvəkət/</div>
+<div class="pattern-text">"Just one quick thought..."</div>
+<div class="pattern-ipa">/dʒʌst wʌn kwɪk θɔːt/</div>
 <div class="pattern-meta">
 <div class="pattern-rating">⭐⭐⭐⭐ High</div>
-<div class="pattern-context">Semi-formal → Formal</div>
+<div class="pattern-context">Casual → Professional</div>
 </div>
 </div>
 </div>
-<div class="pattern-desc">
-Challenge idea constructively. Show critical thinking without being negative.
-</div>
+<div class="pattern-desc">Add brief insight without taking over. Perfect for casual interjection when you have something short but valuable.</div>
 <div class="pattern-why">
 <strong>Why C1?</strong>
-<p><span style="color: var(--highlight-gold); font-weight: 600;">"Devil's advocate" = constructive challenge.</span> Signals you're testing the idea, not attacking. Shows strategic thinking.</p>
+<p><span style="color: var(--highlight-blue); font-weight: 600;">"Just one quick thought" = signal brevity.</span> Shows respect for others' time. Perfect for casual interjection without dominating.</p>
 </div>
-<div class="examples-section">
-<div class="examples-title">Examples 🔊</div>
+<div class="pattern-examples">
+<h4>Examples 🔊</h4>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"To play devil's advocate, what if the weather doesn't cooperate?"</span>
-<button class="audio-btn" onclick="playAudio('To play devil\'s advocate, what if the weather doesn\'t cooperate?')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Just one quick thought — what if we tested this with a small pilot first?"</span>
+<button class="audio-btn" onclick="playAudio('Just one quick thought — what if we tested this with a small pilot first?')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag life">🏠 Life</span>
-<span class="example-text">"To play devil's advocate, have we considered the budget implications?"</span>
-<button class="audio-btn" onclick="playAudio('To play devil\'s advocate, have we considered the budget implications?')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Just one quick thought — we should book the flights soon before prices go up."</span>
+<button class="audio-btn" onclick="playAudio('Just one quick thought — we should book the flights soon before prices go up.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"To play devil's advocate, what if the client pushes back on the timeline?"</span>
-<button class="audio-btn" onclick="playAudio('To play devil\'s advocate, what if the client pushes back on the timeline?')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Just one quick thought — what if we tested this with a small pilot before rolling out company-wide?"</span>
+<button class="audio-btn" onclick="playAudio('Just one quick thought — what if we tested this with a small pilot before rolling out company-wide?')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 <div class="example">
 <span class="example-tag business">💼 Business</span>
-<span class="example-text">"To play devil's advocate, have we stress-tested this assumption?"</span>
-<button class="audio-btn" onclick="playAudio('To play devil\'s advocate, have we stress-tested this assumption?')"><i class="ph-duotone ph-speaker-high"></i></button>
+<span>"Just one quick thought — our clients typically see results within 30 days, not 60."</span>
+<button class="audio-btn" onclick="playAudio('Just one quick thought — our clients typically see results within 30 days, not 60.')"><i class="ph-duotone ph-speaker-high"></i></button>
 </div>
 </div>
-<div class="common-mistake-box">
-<strong>⚠️ Common mistake</strong>
-<div class="mistake-wrong">"To play devil's advocate" then be purely negative</div>
-<div class="mistake-right">"To play devil's advocate" then offer alternative perspective constructively</div>
-</div>
-<div class="alternatives-section">
-<div class="alternatives-title">ALTERNATIVES:</div>
-<ul class="alternatives-list">
-<li>"Just to challenge this slightly..." <span class="register-tag">(softer)</span></li>
-<li>"Have we considered the flip side?" <span class="register-tag">(question format)</span></li>
+<div class="pattern-alternatives">
+<h5>Alternatives</h5>
+<ul>
+<li>"Oh, one thing..." (very casual)</li>
+<li>"Just one quick point..." (brief)</li>
+<li>"If I could just add one thing..." (more formal)</li>
 </ul>
 </div>
+<div class="pattern-usage">
+<strong>💡 Usage Notes:</strong> Must be truly brief. Emphasis on "quick" and "thought". Shows respect for time.
 </div>
-
 </div>
 </section>
 
+<!-- Common Mistakes -->
+<section class="section">
+<div class="common-mistakes">
+<h3><i class="ph-duotone ph-warning"></i> ⚠️ Common Interjection Mistakes</h3>
+<div class="cm-grid">
+<div class="cm-item">
+<div class="mistake">❌ "Sorry to interrupt, but..." (apologetic)</div>
+<div class="better">"Building on what you said..." (confident)</div>
+</div>
+<div class="cm-item">
+<div class="mistake">❌ Interrupting mid-sentence</div>
+<div class="better">Wait for natural pause, then "Can I jump in?"</div>
+</div>
+<div class="cm-item">
+<div class="mistake">❌ "Can I jump in?" then say something irrelevant</div>
+<div class="better">Add clear, relevant value immediately</div>
+</div>
+<div class="cm-item">
+<div class="mistake">❌ "One thing I'd add" then talk for 5 minutes</div>
+<div class="better">Be truly brief (1-2 sentences)</div>
+</div>
+<div class="cm-item">
+<div class="mistake">❌ Repeating what was already said</div>
+<div class="better">Add NEW perspective or insight</div>
+</div>
+<div class="cm-item">
+<div class="mistake">❌ Staying silent and resenting it later</div>
+<div class="better">Use patterns to enter conversation gracefully</div>
+</div>
+<div class="cm-item">
+<div class="mistake">❌ Dominating without building on others</div>
+<div class="better">"Building on what [Name] said..." shows teamwork</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4 Mini Dialogues -->
 <section class="section">
 <div class="section-header">
-<h2 class="section-title">
-<i class="ph-duotone ph-chats-circle"></i>
-Integrated Meeting Stories
-</h2>
-<p class="section-desc">Xem cách 5 interjection patterns được dùng trong 2 meeting scenarios. Story 1: Team meeting (casual). Story 2: Client meeting (formal).</p>
+<h2 class="section-title"><i class="ph-duotone ph-chats-circle"></i> 4 Mini Dialogues</h2>
+<p class="section-desc">Xem cách 5 interjection patterns được dùng trong thực tế. Click 🔊 để nghe.</p>
 </div>
 
+<!-- Dialogue 1 -->
 <div class="story-card">
-<h3>🏠 Story 1: Team Planning Meeting</h3>
-<div class="story-context">Context: Team meeting để plan company retreat. Mọi người đang discuss về venue và activities.</div>
+<h3>💼 Dialogue 1: Team Meeting — Strategy Discussion</h3>
+<div class="story-context"><strong>Context:</strong> Weekly team meeting. Manager discussing Q4 priorities. Sarah just proposed focusing on customer acquisition. You have data showing retention is actually the bigger opportunity.</div>
 <div class="story-text" id="dialogue1">
-"<strong>Sarah:</strong> So I think we should do the retreat at Da Lat — it's beautiful this time of year and the team loves it there.<br><br>
-<strong>Minh:</strong> <strong>Building on what Sarah just said</strong> about Da Lat, I actually found this amazing venue that has both conference facilities and team-building activities. <strong>Can I jump in here</strong> with the details?<br><br>
-<strong>Lisa:</strong> Sure, go ahead.<br><br>
-<strong>Minh:</strong> <strong>I'd like to add something</strong> about the budget — this venue is actually 20% cheaper than our usual spot, and it includes all the activities. <strong>If I could just weigh in</strong> from my experience last year, the team really appreciated having everything in one location.<br><br>
-<strong>Sarah:</strong> That sounds perfect! What about the dates?<br><br>
-<strong>Minh:</strong> <strong>To play devil's advocate</strong>, what if some people can't make those dates? Should we have a backup option?"
+"<strong>Sarah:</strong> I think we should focus on customer acquisition in Q4 to hit our growth targets.<br><br>
+<strong>You:</strong> <strong>Building on what Sarah just said</strong> about customer acquisition, I completely agree that's important. <strong>I'd like to add something</strong> from the analytics perspective — our data shows that retention is actually the bigger opportunity right now. We're losing 15% of customers each quarter.<br><br>
+<strong>Sarah:</strong> That's interesting. What does that mean for our strategy?<br><br>
+<strong>You:</strong> It means we might want to balance acquisition with retention efforts. Maybe 60% acquisition, 40% retention?"
 </div>
 <div class="story-audio-controls">
-<button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue1').textContent)">
-<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
-</button>
-<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
-<i class="ph-duotone ph-stop"></i> Dừng
-</button>
+<button class="story-audio-btn story-play-btn" onclick="playStory('dialogue1', this)"><i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopStory(this)"><i class="ph-duotone ph-stop"></i> Dừng</button>
 </div>
 <div class="story-analysis">
 <h4>Analysis — Why this works:</h4>
 <ul>
-<li><strong>"Building on what Sarah just said"</strong> → Acknowledges her idea, shows collaboration</li>
-<li><strong>"Can I jump in here"</strong> → Polite request to share information</li>
-<li><strong>"I'd like to add something"</strong> → Confident contribution about budget</li>
-<li><strong>"If I could just weigh in"</strong> → Offers experience humbly</li>
-<li><strong>"To play devil's advocate"</strong> → Constructive challenge about dates</li>
-<li><strong>Flow:</strong> Each interjection builds on previous, keeps conversation moving forward</li>
+<li><strong>"Building on what Sarah just said"</strong> → Acknowledges her idea first, shows you're listening and building, not competing</li>
+<li><strong>"I completely agree that's important"</strong> → Validates her point before adding your perspective</li>
+<li><strong>"I'd like to add something"</strong> → Signals intention to contribute new perspective (not repeat)</li>
+<li><strong>"from the analytics perspective"</strong> → Shows you're adding unique value (data)</li>
+<li><strong>"We're losing 15% of customers"</strong> → Specific data point, not vague "retention is important"</li>
+<li><strong>4-turn dialogue</strong> → Natural flow: Sarah proposes → You build → Sarah asks → You respond</li>
 </ul>
 </div>
 </div>
 
+<!-- Dialogue 2 -->
 <div class="story-card">
-<h3>💼 Story 2: Client Strategy Meeting</h3>
-<div class="story-context">Context: Meeting với client để discuss về Q4 marketing strategy. Client đang propose aggressive timeline.</div>
+<h3>🏠 Dialogue 2: Restaurant Misunderstanding — Unexpected Situation</h3>
+<div class="story-context"><strong>Context:</strong> You're at a restaurant with friends. Waiter brings the wrong dish (extra onions when you asked for no onions). You need to correct them politely without making a scene.</div>
 <div class="story-text" id="dialogue2">
-"<strong>Client:</strong> We'd like to launch the campaign by November 1st to capture the holiday shopping season.<br><br>
-<strong>Minh:</strong> <strong>Building on what you just said</strong> about the November 1st launch, I completely agree that timing is critical for the holiday season.<br><br>
-<strong>Client:</strong> Exactly, that's our main priority.<br><br>
-<strong>Minh:</strong> <strong>Can I jump in here</strong> with some data from our previous campaigns? <strong>I'd like to add something</strong> about the production timeline — based on similar campaigns, we typically need 6 weeks for creative development and approvals.<br><br>
-<strong>Client:</strong> Hmm, that would push us to mid-November.<br><br>
-<strong>Minh:</strong> <strong>If I could just weigh in</strong> on this — we could potentially fast-track by running parallel processes, but <strong>to play devil's advocate</strong>, have we considered the risk of rushing the creative? Quality might suffer, and that could impact the campaign performance more than a 2-week delay."
+"<strong>Waiter:</strong> Here's your pasta with extra onions, just like you ordered.<br><br>
+<strong>You:</strong> <strong>Can I jump in here?</strong> I think there might be a small misunderstanding — I actually asked for no onions.<br><br>
+<strong>Waiter:</strong> Oh, I'm sorry. Let me check the order again.<br><br>
+<strong>You:</strong> <strong>One thing I'd add</strong> — could you also check if it's the vegetarian version? I want to make sure there's no meat in the sauce.<br><br>
+<strong>Waiter:</strong> Of course, let me confirm with the kitchen.<br><br>
+<strong>Friend:</strong> No worries, these things happen.<br><br>
+<strong>You:</strong> Thanks for checking. I appreciate it."
 </div>
 <div class="story-audio-controls">
-<button class="story-audio-btn story-play-btn" onclick="playAudio(document.getElementById('dialogue2').textContent)">
-<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
-</button>
-<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
-<i class="ph-duotone ph-stop"></i> Dừng
-</button>
+<button class="story-audio-btn story-play-btn" onclick="playStory('dialogue2', this)"><i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopStory(this)"><i class="ph-duotone ph-stop"></i> Dừng</button>
 </div>
 <div class="story-analysis">
 <h4>Analysis — Why this works:</h4>
 <ul>
-<li><strong>"Building on what you just said"</strong> → Validates client's priority before adding concern</li>
-<li><strong>"Can I jump in here"</strong> → Polite way to introduce data/constraints</li>
-<li><strong>"I'd like to add something"</strong> → Professional contribution about timeline</li>
-<li><strong>"If I could just weigh in"</strong> → Offers solution (fast-track) humbly</li>
-<li><strong>"To play devil's advocate"</strong> → Constructive challenge about quality vs speed</li>
-<li><strong>Balance:</strong> Respects client while protecting project quality</li>
+<li><strong>"Can I jump in here?"</strong> → Polite request to interject (unexpected situation)</li>
+<li><strong>"I think there might be a small misunderstanding"</strong> → Softens correction, not confrontational</li>
+<li><strong>"I actually asked for no onions"</strong> → Clear correction with specific detail</li>
+<li><strong>"One thing I'd add"</strong> → Adds second concern (vegetarian) briefly</li>
+<li><strong>6-turn dialogue</strong> → Waiter serves → You correct → Waiter responds → You add → Waiter confirms → Friend comments → You thank</li>
+<li><strong>Graceful handling</strong> → Polite but clear, no scene, no embarrassment</li>
+</ul>
+</div>
+</div>
+
+<!-- Dialogue 3 -->
+<div class="story-card">
+<h3>💼 Dialogue 3: Client Presentation Q&A — Professional Challenge</h3>
+<div class="story-context"><strong>Context:</strong> You're presenting to a client. They ask a challenging question about ROI. You need to answer professionally while adding valuable insights.</div>
+<div class="story-text" id="dialogue3">
+"<strong>Client:</strong> Can you elaborate on the expected ROI for this solution?<br><br>
+<strong>You:</strong> <strong>Building on your question</strong> about ROI, I'd like to share some specific numbers from similar implementations. <strong>One thing I'd like to add</strong> — our clients typically see 30% improvement in the first quarter, with full ROI within 12 months.<br><br>
+<strong>Client:</strong> What about the implementation costs?<br><br>
+<strong>You:</strong> From my perspective, the upfront investment is offset by the efficiency gains. Let me show you a case study..."
+</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playStory('dialogue3', this)"><i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopStory(this)"><i class="ph-duotone ph-stop"></i> Dừng</button>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Why this works:</h4>
+<ul>
+<li><strong>"Building on your question"</strong> → Acknowledges client's question, shows you're addressing it directly</li>
+<li><strong>"I'd like to share some specific numbers"</strong> → Signals you're adding value (data)</li>
+<li><strong>"One thing I'd like to add"</strong> → Adds specific metric (30% improvement)</li>
+<li><strong>"30% improvement in the first quarter"</strong> → Specific, not vague "good results"</li>
+<li><strong>4-turn dialogue</strong> → Client asks → You answer with data → Client asks follow-up → You provide insight</li>
+<li><strong>Professional tone</strong> → Confident, data-driven, solution-oriented</li>
+</ul>
+</div>
+</div>
+
+<!-- Dialogue 4 -->
+<div class="story-card">
+<h3>🏠 Dialogue 4: Doctor's Office — Asking for Clarification</h3>
+<div class="story-context"><strong>Context:</strong> You're at the doctor's office. The doctor is explaining medication instructions too quickly. You need to ask them to slow down and clarify without seeming difficult.</div>
+<div class="story-text" id="dialogue4">
+"<strong>Doctor:</strong> So you'll take this twice daily with food, and watch for these side effects: nausea, dizziness, and potential interactions with other medications.<br><br>
+<strong>You:</strong> <strong>Can I jump in for a second?</strong> Could you slow down a bit? I want to make sure I understand the instructions correctly.<br><br>
+<strong>Doctor:</strong> Of course. Let me go over it again more slowly.<br><br>
+<strong>You:</strong> <strong>I'd just like to add</strong> that I'm also taking a blood pressure medication. Are there any interactions I should be aware of?<br><br>
+<strong>Doctor:</strong> Good question. Let me check that for you.<br><br>
+<strong>You:</strong> Thanks. I just want to make sure I'm taking everything safely."
+</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playStory('dialogue4', this)"><i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopStory(this)"><i class="ph-duotone ph-stop"></i> Dừng</button>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Why this works:</h4>
+<ul>
+<li><strong>"Can I jump in for a second?"</strong> → Polite request (doctor speaking too fast)</li>
+<li><strong>"Could you slow down a bit?"</strong> → Clear request, not demanding</li>
+<li><strong>"I want to make sure I understand"</strong> → Shows you care about getting it right</li>
+<li><strong>"I'd just like to add"</strong> → Adds important medical info (blood pressure medication)</li>
+<li><strong>"Are there any interactions?"</strong> → Specific question, shows engagement</li>
+<li><strong>6-turn dialogue</strong> → Doctor explains → You request → Doctor slows → You add info → Doctor responds → You thank</li>
+<li><strong>Respectful but clear</strong> → Not difficult, just careful about health</li>
 </ul>
 </div>
 </div>
 </section>
 
+<!-- Pronunciation Focus -->
 <section class="section">
 <div class="section-header">
-<h2 class="section-title">
-<i class="ph-duotone ph-microphone-stage"></i>
-Pronunciation Focus
-</h2>
+<h2 class="section-title"><i class="ph-duotone ph-microphone-stage"></i> Pronunciation Focus</h2>
 <p class="section-desc">Interjection phrases pronunciation và intonation patterns.</p>
 </div>
 <div class="pronunciation-table">
 <h3>🔤 Interjection Phrases</h3>
 <table>
 <thead>
-<tr>
-<th>Phrase</th>
-<th>IPA</th>
-<th>Stress / Note</th>
-</tr>
+<tr><th>Phrase</th><th>IPA</th><th>Stress / Note</th></tr>
 </thead>
 <tbody>
-<tr>
-<td>Building on what [Name] just said</td>
-<td class="ipa-cell">/ˈbɪldɪŋ ɑːn wʌt [neɪm] dʒʌst sed/</td>
-<td>Stress on "<strong>BUIL-ding</strong>" and "<strong>just</strong>"</td>
-</tr>
-<tr>
-<td>Can I jump in here</td>
-<td class="ipa-cell">/kæn aɪ dʒʌmp ɪn hɪr/</td>
-<td>Stress on "<strong>jump</strong>"</td>
-</tr>
-<tr>
-<td>I'd like to add something</td>
-<td class="ipa-cell">/aɪd laɪk tu æd ˈsʌmθɪŋ/</td>
-<td>Stress on "<strong>ADD</strong>" and "<strong>SOME-thing</strong>"</td>
-</tr>
-<tr>
-<td>If I could just weigh in</td>
-<td class="ipa-cell">/ɪf aɪ kʊd dʒʌst weɪ ɪn/</td>
-<td>Stress on "<strong>weigh</strong>"</td>
-</tr>
-<tr>
-<td>To play devil's advocate</td>
-<td class="ipa-cell">/tuː pleɪ ˈdɛvəlz ˈædvəkət/</td>
-<td>Stress on "<strong>DEV-il's</strong>" and "<strong>AD-vo-cate</strong>"</td>
-</tr>
+<tr><td>Building on what [Name] just said</td><td class="ipa-cell">/ˈbɪldɪŋ ɒn wɒt [neɪm] dʒʌst sɛd/</td><td>Stress on <strong>"BUIL-ding"</strong> and <strong>"just"</strong></td></tr>
+<tr><td>Can I jump in here</td><td class="ipa-cell">/kæn aɪ dʒʌmp ɪn hɪər/</td><td>Stress on <strong>"jump"</strong> — rising intonation for question</td></tr>
+<tr><td>I'd like to add something</td><td class="ipa-cell">/aɪd laɪk tuː æd ˈsʌmθɪŋ/</td><td>Stress on <strong>"ADD"</strong> — falling intonation</td></tr>
+<tr><td>One thing I'd add</td><td class="ipa-cell">/wʌn θɪŋ aɪd æd/</td><td>Stress on <strong>"one"</strong> and <strong>"add"</strong> — brief delivery</td></tr>
+<tr><td>Just one quick thought</td><td class="ipa-cell">/dʒʌst wʌn kwɪk θɔːt/</td><td>Stress on <strong>"quick"</strong> and <strong>"thought"</strong> — fast delivery</td></tr>
 </tbody>
 </table>
 </div>
@@ -2053,96 +1265,94 @@ Pronunciation Focus
 </div>
 <div class="intonation-item">
 <span class="phrase">"Building on what [Name] just said..."</span>
-<span class="pattern">↘ Falling</span>
-<span class="context">— <span class="highlight">Confident, collaborative</span>. Dùng khi acknowledge + add value. <span class="highlight">Falling tone = "I'm building, not competing"</span>.</span>
+<span class="pattern-label">↘ Falling</span> — <strong>Confident, collaborative.</strong> Dùng khi acknowledge + add value. Falling tone thể hiện bạn đang build, không compete. Cho thấy bạn listened và adding value.
+<div class="context">💡 Tip: Pause nhẹ sau "said" trước khi add your point. Tạo natural flow.</div>
 </div>
 <div class="intonation-item">
 <span class="phrase">"Can I jump in here?"</span>
-<span class="pattern">↗ Rising</span>
-<span class="context">— <span class="highlight">Polite request</span>. Dùng khi cần permission. <span class="highlight">Rising tone = question, shows respect</span>.</span>
+<span class="pattern-label">↗ Rising</span> — <strong>Polite request.</strong> Rising tone shows respect. Cho thấy bạn aware of flow và asking permission.
+<div class="context">💡 Tip: Wait for natural pause. Don't interrupt mid-sentence. Rising tone = question, not demand.</div>
 </div>
 <div class="intonation-item">
 <span class="phrase">"I'd like to add something..."</span>
-<span class="pattern">↘ Falling</span>
-<span class="context">— <span class="highlight">Confident contribution</span>. Dùng khi state intention. <span class="highlight">Falling tone = clear, professional</span>.</span>
+<span class="pattern-label">↘ Falling</span> — <strong>Confident contribution.</strong> Falling tone thể hiện bạn stating intention clearly. Professional, not aggressive.
+<div class="context">💡 Tip: Emphasis on "add". Shows you're contributing value, not repeating.</div>
 </div>
 <div class="intonation-item">
-<span class="phrase">"If I could just weigh in..."</span>
-<span class="pattern">↗↘ Rise-fall</span>
-<span class="context">— <span class="highlight">Humble expertise</span>. Dùng khi offer perspective. <span class="highlight">Rise-fall = confident but not pushy</span>.</span>
+<span class="phrase">"One thing I'd add..."</span>
+<span class="pattern-label">↘ Falling</span> — <strong>Brief, confident.</strong> Falling tone + quick delivery. Shows respect for time.
+<div class="context">💡 Tip: Must be truly brief (1-2 sentences). Violates promise if you talk for 5 minutes.</div>
 </div>
 <div class="intonation-item">
-<span class="phrase">"To play devil's advocate..."</span>
-<span class="pattern">↘ Falling</span>
-<span class="context">— <span class="highlight">Constructive challenge</span>. Dùng khi question idea. <span class="highlight">Falling tone = serious, strategic</span>.</span>
+<span class="phrase">"Just one quick thought..."</span>
+<span class="pattern-label">↘ Falling</span> — <strong>Brief, confident.</strong> Emphasis on "quick" and "thought". Fast delivery shows respect for time.
+<div class="context">💡 Tip: Quick delivery is key. Shows you're not going to dominate.</div>
 </div>
 </section>
 
+<!-- Practice Scenarios -->
 <section class="section">
 <div class="section-header">
-<h2 class="section-title">
-<i class="ph-duotone ph-chats"></i>
-Practice Scenarios
-</h2>
-<p class="section-desc">Practice interjecting in different meeting contexts. Always acknowledge before adding!</p>
+<h2 class="section-title"><i class="ph-duotone ph-chats"></i> Practice Scenarios</h2>
+<p class="section-desc">Practice interjecting in different contexts. Always enter gracefully!</p>
 </div>
 <div class="scenario-grid">
-<div class="scenario-card casual">
-<span class="scenario-badge">🟢 Casual - 3-4 min</span>
-<h3>Scenario 1: Team Brainstorming</h3>
-<p class="scenario-context">You're in a casual team brainstorming session. People are throwing out ideas quickly.</p>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Business - 3-4 min</span>
+<h3>Scenario 1: Team Meeting</h3>
+<p class="scenario-context">Manager just proposed a new strategy. You have concerns but want to contribute constructively.</p>
 <div class="scenario-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Use 3+ interjection patterns</li>
-<li>Build on others' ideas</li>
-<li>Keep energy high</li>
-<li>Don't dominate</li>
+<li>Use at least 2 patterns (e.g., Pattern 1 + Pattern 3)</li>
+<li>Acknowledge the strategy first</li>
+<li>Add data or perspective</li>
+<li>Offer solutions, not just problems</li>
 </ul>
 </div>
 <button class="sample-flow-btn">🎭 See Sample Structure</button>
 </div>
-<div class="scenario-card professional">
-<span class="scenario-badge">🔵 Professional - 3-4 min</span>
-<h3>Scenario 2: Weekly Team Meeting</h3>
-<p class="scenario-context">Weekly team meeting. Manager is discussing Q4 priorities. You have important input.</p>
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Life - 3-4 min</span>
+<h3>Scenario 2: Restaurant Misunderstanding</h3>
+<p class="scenario-context">Waiter brings the wrong dish or misunderstands your order. You need to correct them politely.</p>
 <div class="scenario-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Use 4+ interjection patterns</li>
-<li>Acknowledge before adding</li>
-<li>Bring data/insights</li>
-<li>Invite others' input</li>
+<li>Use at least 2 patterns (e.g., Pattern 2 + Pattern 4)</li>
+<li>Request permission to interject</li>
+<li>Clarify the misunderstanding calmly</li>
+<li>Add any other relevant details</li>
 </ul>
 </div>
 <button class="sample-flow-btn">🎭 See Sample Structure</button>
 </div>
 <div class="scenario-card mixed">
-<span class="scenario-badge">🟣 Mixed - 4-5 min</span>
-<h3>Scenario 3: Cross-functional Meeting</h3>
-<p class="scenario-context">Meeting with other departments. You need to challenge an idea constructively.</p>
+<span class="scenario-badge">🟣 Business - 4-5 min</span>
+<h3>Scenario 3: Client Presentation Q&A</h3>
+<p class="scenario-context">Client asks a challenging question about ROI or timeline. You need to answer professionally.</p>
 <div class="scenario-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Use 4+ interjection patterns</li>
-<li>Use "devil's advocate" pattern</li>
-<li>Stay diplomatic</li>
-<li>Offer alternative</li>
+<li>Use at least 3 patterns (e.g., Pattern 1 + Pattern 3 + Pattern 4)</li>
+<li>Acknowledge their question first</li>
+<li>Offer expertise humbly</li>
+<li>Provide specific data or examples</li>
 </ul>
 </div>
 <button class="sample-flow-btn">🎭 See Sample Structure</button>
 </div>
 <div class="scenario-card challenge">
-<span class="scenario-badge">🟠 Challenge - 5 min</span>
-<h3>Scenario 4: Client Meeting</h3>
-<p class="scenario-context">Client is proposing aggressive timeline. You need to push back professionally.</p>
+<span class="scenario-badge">🟠 Life - 3-4 min</span>
+<h3>Scenario 4: Doctor's Office</h3>
+<p class="scenario-context">Doctor is explaining medication instructions too quickly. You need to ask them to slow down and clarify.</p>
 <div class="scenario-requirements">
 <h4>Requirements:</h4>
 <ul>
-<li>Use ALL 5 interjection patterns</li>
-<li>Respect client while protecting quality</li>
-<li>Offer solutions, not just problems</li>
-<li>Maintain relationship</li>
+<li>Use at least 2 patterns (e.g., Pattern 2 + Pattern 3)</li>
+<li>Request permission to interject</li>
+<li>Ask for clarification politely</li>
+<li>Add any relevant information about other medications</li>
 </ul>
 </div>
 <button class="sample-flow-btn">🎭 See Sample Structure</button>
@@ -2150,155 +1360,93 @@ Practice Scenarios
 </div>
 </section>
 
+<!-- Reality Task -->
 <section class="section">
 <div class="section-header">
-<h2 class="section-title">
-<i class="ph-duotone ph-target"></i>
-Reality Task - Choose Your Level
-</h2>
+<h2 class="section-title"><i class="ph-duotone ph-target"></i> Reality Task - Choose Your Level</h2>
 <p class="section-desc">Bài tập THỰC TẾ - apply interjection skills vào đời thật. Chọn 1 trong 3 levels.</p>
 </div>
-<div class="task-grid">
 <div class="task-card easy">
 <div class="task-level">EASY</div>
-<h3>📝 Practice Interjection Scripts</h3>
+<h3>📝 Write 5 Scripts</h3>
 <div class="task-time">⏱️ 15 minutes</div>
-<p class="task-desc">Write 5 interjection scripts for your next meeting using the patterns from today.</p>
+<p class="task-desc">Write 5 interjection scripts for different contexts (2 business, 2 life, 1 unexpected).</p>
 <div class="task-requirements">
 <h4>Requirements:</h4>
 <ul>
 <li>Use all 5 patterns</li>
 <li>Context-specific</li>
-<li>Relevant to your work</li>
 <li>Ready to use</li>
 </ul>
 </div>
-<div class="task-deliverable">
-<strong>Deliverable:</strong> 5 written scripts
-</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 5 written scripts</div>
 </div>
 <div class="task-card standard">
 <div class="task-level">STANDARD</div>
-<h3>🎙️ Record Meeting Practice</h3>
+<h3>🎙️ Record Practice</h3>
 <div class="task-time">⏱️ 30 minutes</div>
-<p class="task-desc">Record yourself practicing interjections in a mock meeting scenario.</p>
+<p class="task-desc">Record yourself practicing interjections in 4 different scenarios (2 business, 2 life).</p>
 <div class="task-requirements">
 <h4>Requirements:</h4>
 <ul>
 <li>Use 4+ patterns</li>
 <li>Natural delivery</li>
-<li>Smooth transitions</li>
-<li>Under 3 minutes</li>
+<li>Under 3 minutes each</li>
 </ul>
 </div>
-<div class="task-deliverable">
-<strong>Deliverable:</strong> Audio recording
-</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Audio recordings</div>
 </div>
 <div class="task-card challenge">
 <div class="task-level">CHALLENGE</div>
-<h3>🎥 Real Meeting Application</h3>
+<h3>🎥 Real Interjection Challenge</h3>
 <div class="task-time">⏱️ 60 minutes</div>
-<p class="task-desc">Use interjection patterns in a real meeting this week. Record and reflect.</p>
+<p class="task-desc">Use interjection patterns in real situations this week. Record and reflect.</p>
 <div class="task-requirements">
 <h4>Requirements:</h4>
 <ul>
 <li>Use ALL 5 patterns</li>
-<li>In real meeting</li>
+<li>In real situations (meetings, restaurants, doctor's office, etc.)</li>
 <li>Get feedback</li>
-<li>Self-reflection</li>
+<li>Self-reflection notes</li>
 </ul>
 </div>
-<div class="task-deliverable">
-<strong>Deliverable:</strong> Reflection notes
-</div>
-</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
 </div>
 </section>
 
+<!-- Mastery + Success + Tips -->
 <section class="section">
 <div class="mastery-card">
 <h2>🎯 Interjection Mastery</h2>
-<div class="mastery-item">
-<input type="checkbox" id="mastery1">
-<label for="mastery1">Can acknowledge before adding value</label>
+<div class="mastery-item"><input type="checkbox" id="mastery1"><label for="mastery1">Can acknowledge before adding value</label></div>
+<div class="mastery-item"><input type="checkbox" id="mastery2"><label for="mastery2">Can use "Building on what [Name] said..." smoothly</label></div>
+<div class="mastery-item"><input type="checkbox" id="mastery3"><label for="mastery3">Can request space with "Can I jump in?"</label></div>
+<div class="mastery-item"><input type="checkbox" id="mastery4"><label for="mastery4">Can contribute with "I'd like to add something..."</label></div>
+<div class="mastery-item"><input type="checkbox" id="mastery5"><label for="mastery5">Can add brief insight with "One thing I'd add..."</label></div>
+<div class="mastery-item"><input type="checkbox" id="mastery6"><label for="mastery6">Can signal brevity with "Just one quick thought..."</label></div>
 </div>
-<div class="mastery-item">
-<input type="checkbox" id="mastery2">
-<label for="mastery2">Can use "Building on what [Name] said..." smoothly</label>
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Success Criteria</h2>
+<div class="success-item"><i class="ph-duotone ph-check"></i><span>Can enter conversations gracefully without interrupting</span></div>
+<div class="success-item"><i class="ph-duotone ph-check"></i><span>Can build on others' ideas before adding your own</span></div>
+<div class="success-item"><i class="ph-duotone ph-check"></i><span>Can request permission politely when conversation is flowing fast</span></div>
+<div class="success-item"><i class="ph-duotone ph-check"></i><span>Can add brief insights without dominating</span></div>
+<div class="success-item"><i class="ph-duotone ph-check"></i><span>Can contribute strategically, not just to be heard</span></div>
 </div>
-<div class="mastery-item">
-<input type="checkbox" id="mastery3">
-<label for="mastery3">Can request space with "Can I jump in?"</label>
-</div>
-<div class="mastery-item">
-<input type="checkbox" id="mastery4">
-<label for="mastery4">Can contribute with "I'd like to add something..."</label>
-</div>
-<div class="mastery-item">
-<input type="checkbox" id="mastery5">
-<label for="mastery5">Can offer perspective with "If I could just weigh in..."</label>
-</div>
-<div class="mastery-item">
-<input type="checkbox" id="mastery6">
-<label for="mastery6">Can challenge constructively with "To play devil's advocate..."</label>
-</div>
-<div class="mastery-item">
-<input type="checkbox" id="mastery7">
-<label for="mastery7">Can balance speaking and listening strategically</label>
-</div>
-</div>
-
-<div class="success-tips-grid">
-<div class="success-tip-card">
-<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> Smooth transitions</h4>
-<p>Your interjections feel natural, not abrupt.</p>
-</div>
-<div class="success-tip-card">
-<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> Others welcome your input</h4>
-<p>People nod and engage when you speak.</p>
-</div>
-<div class="success-tip-card">
-<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> You add value, not volume</h4>
-<p>Your contributions move conversation forward.</p>
-</div>
-<div class="success-tip-card">
-<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> You're not dominating</h4>
-<p>You speak strategically, not constantly.</p>
-</div>
-<div class="success-tip-card">
-<h4><i class="ph-duotone ph-check-circle" style="--ph-color: var(--green);"></i> You challenge respectfully</h4>
-<p>Devil's advocate feels constructive, not negative.</p>
-</div>
-<div class="success-tip-card tip">
-<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Acknowledge first</h4>
-<p>Always validate before adding your point.</p>
-</div>
-<div class="success-tip-card tip">
-<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Build, don't bulldoze</h4>
-<p>Add to ideas, don't replace them.</p>
-</div>
-<div class="success-tip-card tip">
-<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Quality over quantity</h4>
-<p>One strategic point beats five random ones.</p>
-</div>
-<div class="success-tip-card tip">
-<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Read the room</h4>
-<p>Wait for natural pauses when possible.</p>
-</div>
-<div class="success-tip-card tip">
-<h4><i class="ph-duotone ph-lightbulb" style="--ph-color: var(--primary);"></i> Invite others</h4>
-<p>"What do others think?" keeps flow going.</p>
-</div>
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item"><i class="ph-duotone ph-lightbulb"></i><span><strong>Build, don't bulldoze:</strong> Always acknowledge before adding your point.</span></div>
+<div class="tip-item"><i class="ph-duotone ph-lightbulb"></i><span><strong>Wait for natural pause:</strong> Don't interrupt mid-sentence.</span></div>
+<div class="tip-item"><i class="ph-duotone ph-lightbulb"></i><span><strong>Add value immediately:</strong> After "Can I jump in?", add clear, relevant value.</span></div>
+<div class="tip-item"><i class="ph-duotone ph-lightbulb"></i><span><strong>Be truly brief:</strong> "One thing I'd add" means 1-2 sentences, not 5 minutes.</span></div>
+<div class="tip-item"><i class="ph-duotone ph-lightbulb"></i><span><strong>Contribute strategically:</strong> Quality over quantity. One good point beats five random ones.</span></div>
 </div>
 </section>
 
+<!-- Flashcard Review -->
 <section class="section">
 <div class="section-header">
-<h2 class="section-title">
-<i class="ph-duotone ph-cards"></i>
-Flashcard Review
-</h2>
+<h2 class="section-title"><i class="ph-duotone ph-cards"></i> Flashcard Review</h2>
 <p class="section-desc">5 flashcards với interjection patterns và tips. Mặt trước: pattern. Mặt sau: example + tip.</p>
 </div>
 <div class="flashcard-container">
@@ -2308,10 +1456,8 @@ Flashcard Review
 <button>Tap to reveal example →</button>
 </div>
 <div class="flashcard-back">
-<p>"Building on what Sarah just said about the timeline, I think we should also consider the resource constraints."</p>
-<div class="flashcard-tip">
-<strong>💡 Tip:</strong> Acknowledge + add value. Shows you're building, not competing. Most professional interjection pattern.
-</div>
+<p>"Building on what Sarah just said about the timeline, I think we should also consider resource constraints."</p>
+<div class="flashcard-tip"><strong>💡 Tip:</strong> Acknowledge + add value. Shows you're building, not competing. Creates sense of teamwork.</div>
 </div>
 </div>
 <div class="flashcard-nav">
@@ -2322,21 +1468,19 @@ Flashcard Review
 </div>
 </section>
 
+<!-- Quiz -->
 <section class="quiz-section">
 <div class="section-header">
-<h2 class="section-title">
-<i class="ph-duotone ph-pencil-simple"></i>
-Quiz: Speaking Up & Interjecting
-</h2>
-<p class="section-desc">7 câu hỏi về interjection patterns. Chọn đáp án ĐÚNG NHẤT.</p>
+<h2 class="section-title"><i class="ph-duotone ph-pencil-simple"></i> Quiz: Interjection Patterns</h2>
+<p class="section-desc">7 câu hỏi để kiểm tra bạn đã thực sự hiểu interjection chưa. Chọn đáp án ĐÚNG NHẤT.</p>
 </div>
 <div class="quiz-question">
-<h4>1. Pattern nào acknowledge trước khi add value?</h4>
+<h4>1. Pattern nào acknowledge trước khi add value tốt nhất?</h4>
 <div class="quiz-options">
 <div class="quiz-option">A. "Can I jump in here?"</div>
 <div class="quiz-option">B. "Building on what [Name] just said..."</div>
 <div class="quiz-option">C. "I'd like to add something..."</div>
-<div class="quiz-option">D. "To play devil's advocate..."</div>
+<div class="quiz-option">D. "Just one quick thought..."</div>
 </div>
 </div>
 <div class="quiz-question">
@@ -2344,78 +1488,68 @@ Quiz: Speaking Up & Interjecting
 <div class="quiz-options">
 <div class="quiz-option">A. Khi muốn dominate conversation</div>
 <div class="quiz-option">B. Khi muốn request permission to interject politely</div>
-<div class="quiz-option">C. Khi muốn end meeting</div>
+<div class="quiz-option">C. Khi muốn end conversation</div>
 <div class="quiz-option">D. Khi muốn change subject</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>3. "To play devil's advocate..." thêm gì vào discussion?</h4>
+<h4>3. "Just one quick thought..." thêm gì vào conversation?</h4>
 <div class="quiz-options">
-<div class="quiz-option">A. Pure negativity</div>
-<div class="quiz-option">B. Constructive challenge</div>
+<div class="quiz-option">A. Long monologue</div>
+<div class="quiz-option">B. Brief, actionable insight</div>
 <div class="quiz-option">C. Agreement</div>
 <div class="quiz-option">D. Confusion</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>4. "If I could just weigh in..." thể hiện điều gì?</h4>
+<h4>4. "One thing I'd add..." thể hiện điều gì?</h4>
 <div class="quiz-options">
 <div class="quiz-option">A. Arrogance</div>
-<div class="quiz-option">B. Humble expertise</div>
+<div class="quiz-option">B. Brief expertise with respect for time</div>
 <div class="quiz-option">C. Uncertainty</div>
 <div class="quiz-option">D. Indifference</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>5. Interjection nào là C1 style?</h4>
+<h4>5. "I'd like to add something..." phải bao gồm gì?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Repeat what was already said</div>
+<div class="quiz-option">B. NEW perspective or insight</div>
+<div class="quiz-option">C. Just the action</div>
+<div class="quiz-option">D. Just the timeline</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. Interjection nào là C1 style?</h4>
 <div class="quiz-options">
 <div class="quiz-option">A. "Sorry to interrupt, but I think..."</div>
-<div class="quiz-option">B. "Building on what Sarah said, I'd add..."</div>
+<div class="quiz-option">B. "Building on what Sarah said, and I'd add that our data shows retention is the bigger opportunity."</div>
 <div class="quiz-option">C. "Can I talk now?"</div>
 <div class="quiz-option">D. "I disagree completely."</div>
 </div>
 </div>
 <div class="quiz-question">
-<h4>6. Khi nào KHÔNG nên interject?</h4>
+<h4>7. TÌNH HUỐNG: You're in a team meeting. Manager just said "We need to focus on customer acquisition." You have data showing retention is actually bigger. What's the BEST response?</h4>
 <div class="quiz-options">
-<div class="quiz-option">A. Khi có natural pause</div>
-<div class="quiz-option">B. Khi someone is mid-sentence (unless urgent)</div>
-<div class="quiz-option">C. Khi bạn có unique expertise</div>
-<div class="quiz-option">D. Khi conversation is stuck</div>
+<div class="quiz-option">A. "Sorry to interrupt, but I disagree. We should focus on retention."</div>
+<div class="quiz-option">B. "Building on what you said about acquisition, I'd like to add that our data shows retention is actually the bigger opportunity — we're losing 15% of customers each quarter."</div>
+<div class="quiz-option">C. "Can I talk? I have something important to say."</div>
+<div class="quiz-option">D. "I think you're wrong. Retention is more important."</div>
 </div>
 </div>
-<div class="quiz-question">
-<h4>7. Triết lý cốt lõi của strategic interjection là gì?</h4>
-<div class="quiz-options">
-<div class="quiz-option">A. Talk as much as possible</div>
-<div class="quiz-option">B. Build on others' ideas, acknowledge before adding, add value not volume</div>
-<div class="quiz-option">C. Always agree with others</div>
-<div class="quiz-option">D. Never challenge ideas</div>
-</div>
-</div>
-<button class="check-btn">
-<i class="ph-duotone ph-check"></i>
-Check Answers
-</button>
+<button class="check-btn"><i class="ph-duotone ph-check"></i> Check Answers</button>
 </section>
 
+<!-- Navigation -->
 <div class="day-navigation">
-<a href="week-05-day-29.html" class="nav-card">
-<div class="nav-label">← Previous Day</div>
-<div class="nav-title">Day 29: Executive Updates</div>
-</a>
-<a href="week-05-day-31.html" class="nav-card">
-<div class="nav-label">Next Day →</div>
-<div class="nav-title">Day 31: Framing Ideas</div>
-</a>
+<a href="week-05-day-29.html" class="nav-card"><div class="nav-label">← Previous Day</div><div class="nav-title">Day 29: Executive Updates</div></a>
+<a href="week-05-day-31.html" class="nav-card"><div class="nav-label">Next Day →</div><div class="nav-title">Day 31: Framing Ideas</div></a>
 </div>
 
+<!-- Complete Button -->
 <div class="complete-container">
-<button class="complete-btn" onclick="markComplete()">
-<i class="ph-duotone ph-check-circle"></i>
-<span>Mark Day 30 Complete & Continue to Day 31</span>
-</button>
-<div class="complete-message">Claim space gracefully. Build, don't bulldoze. 💬</div>
+<button class="complete-btn" onclick="markComplete()"><i class="ph-duotone ph-check-circle"></i><span>Mark Day 30 Complete & Continue to Day 31</span></button>
+<div class="complete-message">Enter conversations gracefully. Build, don't bulldoze. 💬</div>
 </div>
 
 </div>
@@ -2432,6 +1566,8 @@ Check Answers
 <script>
 let voices = [];
 let selectedVoice = null;
+let currentUtterance = null;
+let currentStopBtn = null;
 
 function loadVoices() {
 voices = speechSynthesis.getVoices();
@@ -2445,11 +1581,9 @@ console.log('Selected voice:', selectedVoice?.name);
 }
 
 loadVoices();
-
 if (speechSynthesis.onvoiceschanged !== undefined) {
 speechSynthesis.onvoiceschanged = loadVoices;
 }
-
 setTimeout(loadVoices, 500);
 setTimeout(loadVoices, 1000);
 
@@ -2458,28 +1592,47 @@ if (!('speechSynthesis' in window)) {
 alert('Trình duyệt không hỗ trợ phát âm thanh');
 return;
 }
-
 speechSynthesis.cancel();
-
 setTimeout(() => {
 const utterance = new SpeechSynthesisUtterance(text);
 utterance.lang = 'en-US';
 utterance.rate = 0.95;
 utterance.pitch = 1.05;
 utterance.volume = 1.0;
-
 if (selectedVoice) {
 utterance.voice = selectedVoice;
 }
-
 speechSynthesis.speak(utterance);
 }, 100);
 }
 
-function stopSpeaking() {
+function playStory(elementId, btn) {
+if (currentStopBtn) {
+currentStopBtn.classList.remove('active');
+}
+const el = document.getElementById(elementId);
+if (!el) return;
+const text = el.innerText || el.textContent;
+const stopBtn = btn.nextElementSibling;
+if (stopBtn) {
+stopBtn.classList.add('active');
+currentStopBtn = stopBtn;
+}
+playAudio(text);
+if (currentUtterance) {
+currentUtterance.onend = function() {
+if (stopBtn) stopBtn.classList.remove('active');
+currentStopBtn = null;
+};
+}
+}
+
+function stopStory(btn) {
 if ('speechSynthesis' in window) {
 speechSynthesis.cancel();
 }
+btn.classList.remove('active');
+currentStopBtn = null;
 }
 
 function markComplete() {
@@ -2493,7 +1646,7 @@ btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 30 Complet
 btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
 btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
 const msg = document.querySelector('.complete-message');
-msg.textContent = 'Claim space gracefully. Build, don't bulldoze. 💬';
+msg.textContent = 'Enter conversations gracefully. Build, don\'t bulldoze. 💬';
 }
 
 window.addEventListener('DOMContentLoaded', () => {
