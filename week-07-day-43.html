@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 7 Day 43: Vision Casting & Inspiration | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #4338CA;
+--primary-bright: #3730A3;
+--primary-soft: #E0E7FF;
+--primary-deep: #312E81;
+--primary-light: #6366F1;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 1%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(67, 56, 202, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 50%, #C7D2FE 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🔭'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(224, 231, 255, 0.6), rgba(199, 210, 254, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(67, 56, 202, 0.2);
+}
+.philosophy-box {
+background: #EEF2FF;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(224, 231, 255, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(67, 56, 202, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(224, 231, 255, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(67, 56, 202, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.usage-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 14px;
+}
+.usage-box {
+padding: 12px;
+border-radius: var(--radius-sm);
+font-size: 13px;
+}
+.usage-box.when { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.usage-box.avoid { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.usage-box strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.usage-box.when strong { color: var(--green-deep); }
+.usage-box.avoid strong { color: #C53030; }
+.usage-box ul { list-style: none; padding: 0; }
+.usage-box li { padding: 2px 0; padding-left: 16px; position: relative; color: var(--text-secondary); }
+.usage-box.when li::before { content: '✔'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+.usage-box.avoid li::before { content: '✘'; position: absolute; left: 0; color: #F56565; font-weight: 700; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.weak { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.strong { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.weak strong { color: #C53030; }
+.compare-level.strong strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.mistakes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.mistake-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-orange);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.mistake-card h4 {
+font-family: 'Fraunces', serif; font-size: 1.05rem;
+color: var(--text-primary); margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px;
+}
+.mistake-wrong {
+background: rgba(245, 101, 101, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: #C53030;
+border-left: 3px solid #F56565;
+}
+.mistake-right {
+background: rgba(16, 185, 129, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: var(--green-deep);
+border-left: 3px solid var(--highlight-green);
+}
+.mistake-why {
+font-size: 12px; color: var(--text-secondary); font-style: italic;
+}
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.comparison-table th {
+background: rgba(224, 231, 255, 0.5);
+padding: 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--primary-deep);
+border-bottom: 2px solid rgba(67, 56, 202, 0.2);
+}
+.comparison-table td {
+padding: 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.comparison-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-task {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.better { background: rgba(251, 146, 60, 0.08); border-left: 3px solid var(--highlight-orange); }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.better strong { color: var(--orange-deep); }
+.rewrite-level.professional strong { color: var(--green-deep); }
+.rewrite-why {
+margin-top: 8px;
+padding: 8px;
+background: rgba(67, 56, 202, 0.08);
+border-radius: var(--radius-sm);
+font-size: 12px;
+color: var(--primary-deep);
+font-style: italic;
+}
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(224, 231, 255, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(224, 231, 255, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(67, 56, 202, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.future { background: var(--highlight-blue); }
+.move-highlight.purpose { background: var(--highlight-purple); }
+.move-highlight.belief { background: var(--highlight-orange); }
+.move-highlight.ownership { background: var(--highlight-green); }
+.move-highlight.action { background: var(--primary); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(67, 56, 202, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(224, 231, 255, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.listening-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.listening-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.listening-question {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.listening-question p {
+font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;
+}
+.listening-answer {
+font-size: 12px; color: var(--green-deep); font-style: italic;
+}
+
+.grammar-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-gold);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.grammar-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.grammar-item {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+}
+.grammar-item strong {
+font-size: 13px; color: var(--primary-deep); display: block; margin-bottom: 4px;
+}
+.grammar-item span {
+font-size: 13px; color: var(--text-secondary);
+}
+
+.vocab-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.vocab-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.vocab-item {
+padding: 12px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--highlight-blue);
+}
+.vocab-item strong {
+display: block; font-size: 13px; color: var(--blue-deep); margin-bottom: 4px;
+}
+.vocab-item span {
+font-size: 12px; color: var(--text-secondary);
+}
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { 
+border-radius: var(--radius-md); 
+padding: 20px; 
+border: 2px solid;
+font-size: 13px;
+}
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 10px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { 
+font-family: 'Fraunces', serif; 
+font-size: 13px; 
+font-weight: 600;
+margin-bottom: 8px; 
+color: var(--text-primary); 
+}
+.scenario-context { 
+font-size: 13px; 
+color: var(--text-secondary); 
+margin-bottom: 12px; 
+line-height: 1.3; 
+}
+.scenario-requirements { 
+background: rgba(255, 255, 255, 0.8); 
+border-radius: var(--radius-sm); 
+padding: 12px; 
+margin-bottom: 12px; 
+}
+.scenario-requirements h4 { 
+font-size: 12px; 
+font-weight: 600; 
+color: var(--text-primary); 
+margin-bottom: 6px; 
+}
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { 
+padding: 3px 0; 
+padding-left: 18px; 
+position: relative; 
+font-size: 13px; 
+color: var(--text-secondary); 
+line-height: 1.3; 
+}
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 12px;
+margin-bottom: 12px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 4px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(224, 231, 255, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(224, 231, 255, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(224, 231, 255, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(224, 231, 255, 0.5), rgba(199, 210, 254, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(67, 56, 202, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(67, 56, 202, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(224, 231, 255, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(224, 231, 255, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(67, 56, 202, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(67, 56, 202, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(67, 56, 202, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(67, 56, 202, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.usage-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-07.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 7 Hub</span>
+</a>
+<div class="day-indicator">
+Day 43 / 49
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-07.html" class="day-tab">Overview</a>
+<a href="week-07-day-43.html" class="day-tab active">Day 43</a>
+<a href="week-07-day-44.html" class="day-tab">Day 44</a>
+<a href="week-07-day-45.html" class="day-tab">Day 45</a>
+<a href="week-07-day-46.html" class="day-tab">Day 46</a>
+<a href="week-07-day-47.html" class="day-tab">Day 47</a>
+<a href="week-07-day-48.html" class="day-tab">Day 48</a>
+<a href="week-07-day-49.html" class="day-tab">Day 49</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-07.html">Week 7</a> › Day 43
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🔭</span>
+<h1 class="day-title">Vision Casting & Inspiration</h1>
+</div>
+<p class="day-subtitle">Week 7 bắt đầu bằng bước nhảy vọt: Từ quản lý hiện tại sang kiến tạo tương lai. Hôm nay bạn sẽ học cách <strong>vẽ ra tầm nhìn</strong> khiến người khác muốn đi theo. <strong>B2 explains today's work. C1 helps people believe in tomorrow.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-telescope"></i> Vision Casting</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 1 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2 Leader</div>
+<div style="font-size: 14px;">Explains today's work. (Quản lý công việc hiện tại)</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1 Leader</div>
+<div style="font-size: 14px;">Helps people believe in tomorrow. (Kiến tạo niềm tin vào tương lai)</div>
+</div>
+</div>
+"B2 managers tell people what to do. C1 leaders help people see where they are going and why it matters."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Managing Tasks to Inspiring Futures
+</div>
+<p>
+Leadership không phải là đứng trên bục và ra lệnh. Leadership là khả năng <strong>paint a picture of the future</strong> (vẽ ra bức tranh về tương lai) rõ ràng và hấp dẫn đến mức người khác tự nhiên muốn bước vào bức tranh đó.
+<br><br>
+Khi bạn cast a vision, bạn không nói về <em>tasks</em> (công việc), bạn nói về <em>outcomes and meaning</em> (kết quả và ý nghĩa). Bạn không ép buộc (force), bạn truyền cảm hứng (inspire).
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Vision casting không dành riêng cho CEO. Một người cha truyền cảm hứng cho con cái, một người vợ vẽ ra tương lai cho gia đình, một team lead khơi dậy tinh thần cho nhóm - đó đều là Vision Casting.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Vision casting</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common mistakes</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Task vs Vision</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Dialogues + Listen</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">8 min</div>
+<div class="plan-desc">Grammar + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves (Vision Casting)
+</h2>
+<p class="section-desc">5 moves to cast a vision and inspire others. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">Paint the Future</div>
+<div class="pattern-ipa">Core idea: "Imagine where we'll be..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Opening the vision</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Pull attention away from today's tasks and point it toward tomorrow's possibilities. Make the future vivid and tangible.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Picture this time next year..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Picture this time next year...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Imagine where we'll be in 12 months..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Imagine where we\'ll be in 12 months...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Imagine where we'll be in 12 months if we pull this off..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Imagine where we\'ll be in 12 months if we pull this off...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Envision our position in two years once this initiative matures..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Envision our position in two years once this initiative matures...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>Opening a story or conversation</li>
+<li>Pulling attention away from current tasks</li>
+<li>Making the future vivid and tangible</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The team is in crisis and needs immediate action</li>
+<li>You haven't acknowledged current reality yet</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "We need to finish this project."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "Imagine where we'll be when this launches..."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">Connect to Meaning</div>
+<div class="pattern-ipa">Core idea: "This is bigger than..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Attaching purpose to work</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Connect the daily grind to a larger meaning. (Note: Day 44 will dive deep into Purpose/Mission/Values. Today, we just connect the vision to immediate meaning).</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"This isn't just about [task], it's about..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This isn\'t just about task, it\'s about...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"This is bigger than just hitting a target..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This is bigger than just hitting a target...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"This is bigger than Q3 revenue; it's about..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This is bigger than Q3 revenue; it\'s about...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"This initiative transcends our immediate metrics; it represents..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This initiative transcends our immediate metrics; it represents...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When work feels mundane or exhausting</li>
+<li>To attach meaning to a difficult task</li>
+<li>To shift focus from "what" to "why"</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It sounds like empty corporate speak</li>
+<li>The team needs practical help, not philosophy</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "We need to hit the sales quota."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "This is bigger than a quota; it's about proving our new model works."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Create Belief</div>
+<div class="pattern-ipa">Core idea: "I truly believe..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Overcoming doubt</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">When the team is doubting, the leader must be the first believer. Share your conviction and the evidence behind it.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I really believe we can do this because..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I really believe we can do this because...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I truly believe this is possible, and here's why..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I truly believe this is possible, and here\'s why...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I have full confidence in this direction because..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I have full confidence in this direction because...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I am firmly convinced of this strategy, given..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I am firmly convinced of this strategy, given...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When the team is doubting or fearful</li>
+<li>After acknowledging the difficulty</li>
+<li>To provide conviction and evidence</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You don't actually believe it (fake positivity)</li>
+<li>You haven't listened to their concerns yet</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "Hopefully we can do it."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "I truly believe we can do this because I've seen this team overcome worse."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Invite Ownership</div>
+<div class="pattern-ipa">Core idea: "How do you see yourself shaping this?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Making it "our" vision</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Shift the vision from "my idea" to "our future". Ask them how they see themselves in the picture you just painted.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"What part of this excites you the most?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What part of this excites you the most?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"How do you see yourself contributing to this?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('How do you see yourself contributing to this?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"How do you see yourself shaping this future?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('How do you see yourself shaping this future?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"In what ways do you envision your role evolving with this initiative?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('In what ways do you envision your role evolving with this initiative?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After painting the future and creating belief</li>
+<li>To transition from inspiration to action</li>
+<li>To make the vision personal to them</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It's a crisis requiring immediate top-down direction</li>
+<li>They haven't bought into the vision yet</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "Do you understand the plan?"</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "How do you see yourself shaping this?"</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Inspire Action</div>
+<div class="pattern-ipa">Core idea: "Let's build this together."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Closing with energy</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">End with energy and forward momentum. Focus on the excitement of creating, not just the mechanics of the first step (leave mechanics for Day 41).</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Let's make this happen."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Let\'s make this happen.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I'm excited to see what we'll create."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'m excited to see what we\'ll create.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Let's build this together."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Let\'s build this together.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I look forward to achieving this milestone with you."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I look forward to achieving this milestone with you.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>Closing a vision-casting conversation</li>
+<li>To generate immediate energy and momentum</li>
+<li>To reinforce the collaborative nature of the work</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It sounds like a generic corporate sign-off</li>
+<li>The team is still processing doubt or fear</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "Okay, get to work."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "Let's build this together. I'm excited to see what we'll create."</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+Common Mistakes
+</h2>
+<p class="section-desc">3 lỗi phổ biến khi casting vision. Tránh những lỗi này để giữ inspiration authentic.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: Focusing on tasks instead of outcomes</h4>
+<div class="mistake-wrong">❌ "We need to write 50 pages of code and fix 20 bugs." (Task-driven)</div>
+<div class="mistake-right">✅ "We are building the engine that will power the next million users." (Vision-driven)</div>
+<div class="mistake-why">Tasks drain energy. Visions generate energy.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Forcing belief instead of earning it</h4>
+<div class="mistake-wrong">❌ "You have to believe in this! It's mandatory!"</div>
+<div class="mistake-right">✅ "I truly believe this is possible because [evidence]. What do you think?"</div>
+<div class="mistake-why">Belief cannot be mandated. It must be inspired through conviction and evidence.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Dictating the "how" instead of inspiring the "why"</h4>
+<div class="mistake-wrong">❌ "Here is exactly how you will achieve the vision, step by step."</div>
+<div class="mistake-right">✅ "Here is where we are going and why it matters. How do you see us getting there?"</div>
+<div class="mistake-why">Micromanaging the "how" kills ownership. Inspiring the "why" unlocks creativity.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+The Vision Decoder (Signature Section)
+</h2>
+<p class="section-desc">Task-Driven Language (B2) vs Vision-Driven Language (C1). Learn to shift your vocabulary.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 The Vision Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>Situation</th><th>Task-Driven (B2)</th><th>Vision-Driven (C1)</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Starting a project</strong></td><td>"Here are the tasks for Q1."</td><td>"Imagine where we'll be when we solve this problem."</td></tr>
+<tr><td><strong>Facing a challenge</strong></td><td>"We need to work harder."</td><td>"This is the challenge that will define our team."</td></tr>
+<tr><td><strong>Explaining the goal</strong></td><td>"The goal is 20% growth."</td><td>"This is bigger than a metric; it's about market leadership."</td></tr>
+<tr><td><strong>Dealing with doubt</strong></td><td>"Just trust the process."</td><td>"I truly believe in us because of what we survived last year."</td></tr>
+<tr><td><strong>Assigning roles</strong></td><td>"You are in charge of X."</td><td>"How do you see yourself shaping this new chapter?"</td></tr>
+<tr><td><strong>Low morale</strong></td><td>"Keep working."</td><td>"Imagine what success will feel like."</td></tr>
+<tr><td><strong>Ending a meeting</strong></td><td>"Okay, let's get to work."</td><td>"Let's build this together."</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Notice when you are using task-driven language. 2. Pause. 3. Shift to vision-driven language. 4. Watch the energy in the room change.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-left-right"></i>
+Casual ↔ Professional Comparison
+</h2>
+<p class="section-desc">Same moves, different registers. Match the register to the context.</p>
+</div>
+<div class="decoder-card" style="border-left-color: var(--highlight-blue);">
+<h3>🔄 Register Comparison</h3>
+<table class="comparison-table">
+<thead>
+<tr><th>Situation</th><th>🏠 Casual (Life/Family)</th><th>💼 Professional (Business)</th></tr>
+</thead>
+<tbody>
+<tr><td>Paint the Future</td><td>"Picture this time next year..."</td><td>"Imagine where we'll be in 12 months..."</td></tr>
+<tr><td>Connect to Meaning</td><td>"This isn't just about money, it's about our freedom."</td><td>"This is bigger than Q3 revenue; it's about our legacy."</td></tr>
+<tr><td>Create Belief</td><td>"I really believe we can pull this off."</td><td>"I truly believe this is possible, and here's why."</td></tr>
+<tr><td>Invite Ownership</td><td>"What part of this excites you?"</td><td>"How do you see yourself shaping this future?"</td></tr>
+<tr><td>Inspire Action</td><td>"Let's make this happen."</td><td>"Let's build this together."</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Casual uses emotional, personal language. Professional uses strategic, legacy-focused language. Match the register to the context.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: The CEO's Pivot Email
+</h2>
+<p class="section-desc">Read this email from a Founder announcing a major company pivot. Pause and analyze before reading the model answer.</p>
+</div>
+<div class="reading-card">
+<h3>📧 The Pivot Email</h3>
+<div class="email-box">
+<strong>Subject:</strong> Our Next Chapter: Why we are pivoting to AI<br><br>
+Team,<br><br>
+For the last three years, we've built a great analytics tool. But the world is moving faster than we anticipated. <br><br>
+<strong>Imagine where we'll be</strong> in two years if we don't adapt. We'll be maintaining a legacy product while our competitors define the future. <strong>This is bigger than</strong> just protecting our current MRR. It's about staying at the bleeding edge of how businesses make decisions.<br><br>
+I know a pivot is scary. But <strong>I truly believe</strong> this team is the only one that can pull this off, because we already understand the customer's deepest pain points better than anyone else in the market. <br><br>
+I don't have all the answers on <em>how</em> we build this. That's why I want to ask: <strong>How do you see yourself shaping</strong> this new AI direction? What's the one thing you're most excited to explore?<br><br>
+Reply to this email with your thoughts. <strong>Let's build this together.</strong><br><br>
+- Sarah (CEO)
+</div>
+<div class="reading-questions">
+<h4>🤔 Your Turn: Pause and Analyze</h4>
+<p style="margin-bottom: 10px;">Before reading the answer, ask yourself:</p>
+<p style="font-size: 13px; color: var(--text-secondary); margin-left: 20px; margin-bottom: 10px;">1. How does Sarah use the 5 moves in this short email?<br>2. Why is this more effective than just saying "We are pivoting to AI, here are your new tasks"?</p>
+<p style="margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue-deep); margin-bottom: 10px;">✅ Model Answer:</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">1. She Paints the Future ("Imagine where we'll be"), Connects to Meaning ("bigger than MRR"), Creates Belief ("I truly believe"), Invites Ownership ("How do you see yourself shaping"), and Inspires Action ("Let's build this together").<br>2. It shifts the narrative from a top-down mandate (which causes resistance) to a shared mission (which generates excitement and ownership).</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Task-Driven to Vision-Driven
+</h2>
+<p class="section-desc">Rewrite these boring, task-driven statements into inspiring vision casts. Explain WHY your version is better.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Task-Driven → Vision-Driven</h3>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Task-Driven (Business): "We need to clean up the database this weekend. It's a mess and causing errors."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"Let's fix the database this weekend."</div>
+<div class="rewrite-level better"><strong>Better</strong>"We need to clean up the database so the system runs smoothly."</div>
+<div class="rewrite-level professional"><strong>Vision-Driven</strong>"Imagine a Monday morning where the system runs flawlessly and no one is stressed about errors. This weekend's cleanup is bigger than just fixing bugs; it's about giving our team their peace of mind back. I truly believe we can knock this out in two days. Let's build this foundation together."</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The vision-driven version paints a future state, connects to meaning (peace of mind), creates belief, and inspires action. It transforms a chore into a mission.</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Task-Driven (Life): "We need to save $10,000 this year by cutting expenses."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"Let's try to save $10k this year."</div>
+<div class="rewrite-level better"><strong>Better</strong>"We should cut expenses to save $10k."</div>
+<div class="rewrite-level professional"><strong>Vision-Driven</strong>"Picture this time next year, sitting on the beach in Italy without checking our bank accounts. This isn't just about saving $10k; it's about buying our freedom to travel. I really believe we can do this if we track it together. Let's make this happen."</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The vision-driven version makes the future vivid (beach in Italy), connects to a deeper meaning (freedom), and creates a shared belief. It makes the sacrifice feel worth it.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 leaders cast vision in real conversations. Notice how the conversation moves back to belief after resistance (non-linear flow).</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Couple Planning a Passion Business (Life)</h3>
+<div class="story-context">Context: You and your spouse are sitting down after work. You want to inspire both of you to start a small side-business instead of just working for others.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Hey, <strong>picture this time next year.</strong> What if we weren't just trading our time for money at our day jobs?" <span class="move-highlight future">Paint Future</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"I don't know, I'm just so tired after work. Starting a business sounds exhausting."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I get that. But <strong>this is bigger than</strong> just extra income. It's about building something that is actually ours. Something we can eventually pass down to the kids." <span class="move-highlight purpose">Connect Meaning</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"But what if it fails? We could lose our savings."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I truly believe</strong> we can do this because we've already tested the idea with 10 people and they all said they'd pay for it. We aren't guessing anymore." <span class="move-highlight belief">Create Belief</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Okay, that's true. But I don't even know where to start."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"We don't have to figure it all out tonight. <strong>What part of this idea excites you the most?</strong> Is it the product design, or talking to customers?" <span class="move-highlight ownership">Invite Ownership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"I actually really like the product design part. I've been sketching some ideas."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That's perfect. You own the design, I'll handle the operations. <strong>Let's make this happen.</strong> Let's just commit to one hour every Sunday night to work on it." <span class="move-highlight action">Inspire Action</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"One hour on Sundays? Yeah, I can definitely do that. I'm actually kind of excited now."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Non-Linear Flow:</h4>
+<ul>
+<li><strong>Notice:</strong> The conversation didn't go perfectly linear. After Paint Future, there was resistance ("exhausting"). The leader had to go back to Connect Meaning and Create Belief before moving to Invite Ownership.</li>
+<li><strong>Paint Future:</strong> "Picture this time next year..."</li>
+<li><strong>Connect Meaning:</strong> "This is bigger than just extra income..."</li>
+<li><strong>Create Belief:</strong> "I truly believe we can do this because..."</li>
+<li><strong>Invite Ownership:</strong> "What part of this idea excites you the most?"</li>
+<li><strong>Inspire Action:</strong> "Let's make this happen."</li>
+<li><strong>Register:</strong> Casual throughout (spouses)</li>
+<li><strong>10 turns</strong> natural flow, all 5 moves used naturally</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: First Day as New Team Lead (Business)</h3>
+<div class="story-context">Context: You were just promoted to Team Lead. This is your first meeting with the team. The team is tired because the previous manager micromanaged them.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thanks everyone for joining. <strong>Imagine where we'll be</strong> six months from now. No more weekend emails. No more status meetings that could have been an email." <span class="move-highlight future">Paint Future</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 1:</div>
+<div class="dialogue-text">"Sounds like a dream. But the director still expects the same output."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>This is bigger than</strong> just hitting the director's metrics. It's about proving that a team can deliver elite work <em>without</em> burning out. We are going to change the culture of this department." <span class="move-highlight purpose">Connect Meaning</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 2:</div>
+<div class="dialogue-text">"I want to believe that, but the last manager said the same thing and then micromanaged us anyway."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I truly believe</strong> we can do this differently, because I've watched this team deliver miracles under terrible conditions. If you can do that with bad leadership, imagine what you'll do with autonomy." <span class="move-highlight belief">Create Belief</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 1:</div>
+<div class="dialogue-text">"So how are we going to work differently?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That's up to us. <strong>How do you see yourself shaping</strong> our new workflow? What's the one process you'd kill immediately?" <span class="move-highlight ownership">Invite Ownership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 2:</div>
+<div class="dialogue-text">"I'd kill the Friday afternoon reporting sync. It's useless."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Done. Consider it killed. <strong>Let's build this new culture together.</strong> I'll send out our new team charter tomorrow." <span class="move-highlight action">Inspire Action</span></div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Non-Linear Flow:</h4>
+<ul>
+<li><strong>Notice:</strong> Again, resistance appeared ("last manager said the same thing"). The leader didn't get defensive. They went back to Create Belief with specific evidence ("I've watched this team deliver miracles...").</li>
+<li><strong>Paint Future:</strong> "Imagine where we'll be six months from now..."</li>
+<li><strong>Connect Meaning:</strong> "This is bigger than just hitting the director's metrics..."</li>
+<li><strong>Create Belief:</strong> "I truly believe we can do this differently, because..."</li>
+<li><strong>Invite Ownership:</strong> "How do you see yourself shaping our new workflow?"</li>
+<li><strong>Inspire Action:</strong> "Let's build this new culture together."</li>
+<li><strong>Register:</strong> Professional (team meeting)</li>
+<li><strong>9 turns</strong> natural flow, all 5 moves used naturally</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Task
+</h2>
+<p class="section-desc">Listen to Dialogue 2 again. Answer these outcome-based questions.</p>
+</div>
+<div class="listening-card">
+<h3>🎧 Listening Comprehension</h3>
+<div class="listening-question">
+<p>1. Which sentence made the team feel safe to share their real concerns?</p>
+<div class="listening-answer">✅ "I truly believe we can do this differently, because I've watched this team deliver miracles under terrible conditions." (It validated their past struggle and showed the leader sees their potential).</div>
+</div>
+<div class="listening-question">
+<p>2. What changed Team Member 2's mindset from skeptical to engaged?</p>
+<div class="listening-answer">✅ The leader didn't argue. They connected the vision to the team's proven resilience ("If you can do that with bad leadership, imagine what you'll do with autonomy") and then asked them to shape the workflow.</div>
+</div>
+<div class="listening-question">
+<p>3. Why did the leader ask "How do you see yourself shaping our new workflow?" instead of assigning tasks?</p>
+<div class="listening-answer">✅ To transfer ownership. If the leader assigns the new workflow, it's "their" idea. If the team shapes it, it becomes "our" idea, which guarantees buy-in.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-code"></i>
+Grammar in Context
+</h2>
+<p class="section-desc">Why we use these specific structures when casting vision.</p>
+</div>
+<div class="grammar-card">
+<h3>📝 Grammar for Vision Casting</h3>
+<div class="grammar-item">
+<strong>1. Future State / Conditional ("Imagine where we'll be...")</strong>
+<span>We use "Imagine" + future state to pull the listener's brain into the future. It's not a promise ("We will be..."), it's an invitation to visualize ("Imagine where we'll be..."). This lowers resistance and increases engagement.</span>
+</div>
+<div class="grammar-item">
+<strong>2. Present Continuous for Future Action ("We are building...")</strong>
+<span>Instead of "We will build" (distant future), we use "We are building" (happening now). It creates urgency and makes the vision feel real and active right now.</span>
+</div>
+<div class="grammar-item">
+<strong>3. "This is bigger than..." (Comparative for Meaning)</strong>
+<span>We use comparatives not to compare size, but to compare <em>meaning</em>. "This is bigger than [task]; it's about [meaning]." This structure instantly elevates a mundane task to a meaningful mission.</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Vision phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Vision Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>Imagine where we'll be</td><td class="ipa-cell">/ɪˈmædʒɪn wɛr wɪl biː/</td><td>Stress on "Imagine"</td></tr>
+<tr><td>This is bigger than</td><td class="ipa-cell">/ðɪs z ˈbɪɡər ðæn/</td><td>Stress on "bigger"</td></tr>
+<tr><td>I truly believe</td><td class="ipa-cell">/aɪ ˈtruːli bɪˈliːv/</td><td>Stress on "truly" and "believe"</td></tr>
+<tr><td>How do you see yourself</td><td class="ipa-cell">/haʊ duː juː siː jːrˈsɛlf/</td><td>Rising intonation (question)</td></tr>
+<tr><td>Let's build this together</td><td class="ipa-cell">/lɛts bɪld ðɪs təˈɡɛðər/</td><td>Stress on "build" and "together"</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Imagine where we'll be..."</span>
+<span class="pattern-label">↗ Rising then ↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when painting the future. Rise on "Imagine" to invite, fall on "be" to ground it. <strong>Avoid:</strong> Flat (sounds like a command).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"I truly believe..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when creating belief. Falling tone = conviction, certainty. <strong>Avoid:</strong> Rising (sounds uncertain or like you're asking for permission to believe).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Let's build this together."</span>
+<span class="pattern-label">↘ Falling with energy</span>
+<span class="context-tip"><strong>Context:</strong> Used when inspiring action. Falling tone = decisive, forward-moving. Add energy to the word "together". <strong>Avoid:</strong> Weak ending (kills momentum).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice casting vision in different contexts. Focus on the communication goal, not just using moves.</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Inspiring Your Family</h3>
+<p class="scenario-context">Your family is frustrated because the plan to save money for a house is too difficult. You need to inspire everyone to keep trying.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Create belief & ownership.
+<strong>📖 Possible Response:</strong> "Picture this time two years from now, sitting in our new living room without worrying about rent. This isn't just about saving money; it's about buying our stability. I really believe we can do this if we track it together. What part of the new house are you most excited about? Let's make this happen."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Paint a vivid future</li>
+<li>Connect to a deeper meaning (stability/freedom)</li>
+<li>Create belief in the family's ability</li>
+<li>Invite ownership</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: The Promoted Leader</h3>
+<p class="scenario-context">You were just promoted to Manager. The team is worried you'll change everything and create pressure. Speak for 3 minutes to inspire confidence and ease their fears.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Address fear & paint future.
+<strong>📖 Possible Response:</strong> "Imagine where we'll be in 6 months. No more micromanagement. No more weekend emails. This is bigger than just hitting metrics; it's about proving we can deliver elite work without burning out. I truly believe this team can do it because I've seen you deliver miracles under bad leadership. How do you see yourself shaping our new culture? Let's build this together."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Acknowledge the fear</li>
+<li>Connect to a better culture</li>
+<li>Create belief in the team's ability</li>
+<li>Invite them to shape the new era</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: The Community Project</h3>
+<p class="scenario-context">You are rallying neighbors/friends to clean up and build a shared playground for the neighborhood. People are lazy and think "let the government handle it".</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Connect to purpose & inspire action.
+<strong>📖 Possible Response:</strong> "Imagine what this empty lot could be. Kids playing safely, neighbors chatting on benches. This is bigger than just cleaning up trash; it's about taking pride in where we live. I truly believe a small group like us can do this because we've done hard things before. How do you see yourself contributing? Let's make this happen."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Paint a vivid picture of the future</li>
+<li>Connect to community pride</li>
+<li>Create belief that a small group can do it</li>
+<li>Inspire immediate action</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Vision Challenge</h3>
+<p class="scenario-context">Morning: Inspire your spouse to start a health/fitness journey together. Afternoon: Inspire your team to adopt a new, difficult technology.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Shift register. Inspire in both.
+<strong>📖 Possible Response (Life):</strong> "Picture us a year from now, hiking that trail we always talked about without getting out of breath. This isn't just about losing weight; it's about having the energy to enjoy our lives. I really believe we can do this if we support each other. What activity are you most excited to try? Let's make this happen."
+<strong>📖 Possible Response (Business):</strong> "Imagine where we'll be in 6 months when this new tech is fully integrated. No more manual data entry. This is bigger than just a software update; it's about freeing up our time for strategic work. I truly believe we can master this because this team learns faster than anyone I know. How do you see yourself shaping this transition? Let's build this together."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Life = emotional, personal future. Business = professional legacy, team pride.</li>
+<li>Handle concerns in both</li>
+<li>Show leadership presence</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply vision casting to actual situations this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Vision Cast Template Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Choose 1 situation (Life or Business) where you need to inspire someone. Practice using the 5 moves.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Paint the future</li>
+<li>Connect to meaning</li>
+<li>Create belief</li>
+<li>Write down the flow of the conversation</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written vision structure</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Vision Conversations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 conversations (Life & Business) where you cast a vision. Focus on confidence and inspiration.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register, simple language)</li>
+<li>1 Business scenario (professional register, structured language)</li>
+<li>Use the 5 moves naturally</li>
+<li>Handle resistance</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Vision Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, when you assign a boring task to someone, use Vision Casting to connect it to a larger meaning. Note the results.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Cast vision for at least 1 real task</li>
+<li>Map which moves you used at each stage</li>
+<li>Handle resistance</li>
+<li>Did people become more engaged? Note their reaction</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Vision Casting Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People listen when you speak about the future</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Team feels confident in your direction</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Concerns are addressed, not dismissed</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">Buy-in is genuine, not forced</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Next steps are clear and actionable</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You claim space confidently before speaking</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You set the frame before proposing solutions</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You speak with conviction, not uncertainty</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You invite input before closing</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You close with clarity, not ambiguity</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Claim space first:</strong> "Let me take a moment..." before "I think maybe..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Set frame first:</strong> "Here's how I see this..." before "We should..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Speak with conviction:</strong> "I'm confident this is right..." before "Maybe we could..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Invite input:</strong> "I'd like to hear your perspective..." before "Any questions?"</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Close with clarity:</strong> "Here's what we're going to do..." before "Let's figure it out..."</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with vision casting moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Stage: Opening a vision conversation</p>
+<button>Tap to reveal best move →</button>
+</div>
+<div class="flashcard-back">
+<p><strong>Move 1: Paint the Future</strong><br><br>"Imagine where we'll be..."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always start by pulling attention to the future. Don't start with tasks.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Vision Casting
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Judgement) You need to start an important meeting. Best first move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Um, can I start?"</div>
+<div class="quiz-option">B. "Let me take a moment to address why we're here today."</div>
+<div class="quiz-option">C. "Sorry to bother you, but..."</div>
+<div class="quiz-option">D. "I think maybe we could start?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Judgement) Team has many concerns about a new change. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Đây là quyết định của tôi. Mọi người thực hiện đi."</div>
+<div class="quiz-option">B. "Here's how I see this situation. I'd like to hear your perspective on what concerns you most."</div>
+<div class="quiz-option">C. "I'm not sure, but maybe we could try this?"</div>
+<div class="quiz-option">D. "Does that make sense?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) You need to propose a solution. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Maybe we could try this?"</div>
+<div class="quiz-option">B. "I'm confident this is the right path because we've analyzed the data and considered alternatives."</div>
+<div class="quiz-option">C. "I think this might work..."</div>
+<div class="quiz-option">D. "I could be wrong, but..."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) You've proposed a solution. Next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Any questions?"</div>
+<div class="quiz-option">B. "I'd like to hear your perspective on this before we finalize."</div>
+<div class="quiz-option">C. "Let's just do it."</div>
+<div class="quiz-option">D. "Sorry if this doesn't work..."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Judgement) Meeting is about to end. Best closing?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Okay, let's figure it out..."</div>
+<div class="quiz-option">B. "Here's what we're going to do next: Sarah will handle X by Friday, Mike will take care of Y by Wednesday. We'll check in on Monday."</div>
+<div class="quiz-option">C. "I think we should do this..."</div>
+<div class="quiz-option">D. "Let me know if anyone has concerns..."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Life) You need to lead a family meeting about a big decision. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Um, can I say something?"</div>
+<div class="quiz-option">B. "Let me take a moment to address why we're here. Here's how I see this situation. I'd like to hear your perspective."</div>
+<div class="quiz-option">C. "I think maybe we should..."</div>
+<div class="quiz-option">D. "Sorry to bother you, but..."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Business) Team member says "I don't think this will work." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "You're wrong."</div>
+<div class="quiz-option">B. "I'm confident this will work because we've analyzed the data. I'd like to hear your perspective on what concerns you."</div>
+<div class="quiz-option">C. "Maybe you're right..."</div>
+<div class="quiz-option">D. "I'm not sure either..."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Judgement) Which sentence shows a weak leadership signal?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I'm confident this is the right path..."</div>
+<div class="quiz-option">B. "I think maybe we could try this?"</div>
+<div class="quiz-option">C. "Here's what we're going to do..."</div>
+<div class="quiz-option">D. "I'd like to hear your perspective..."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Judgement) Which sentence shows a strong leadership signal?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Sorry to bother you, but..."</div>
+<div class="quiz-option">B. "I could be wrong, but..."</div>
+<div class="quiz-option">C. "Let me take a moment to address this..."</div>
+<div class="quiz-option">D. "I think maybe..."</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-07.html" class="nav-card">
+<div class="nav-label">← Week 7 Hub</div>
+<div class="nav-title">Week 7: Leadership Communication</div>
+</a>
+<a href="week-07-day-44.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 44: Communicating Purpose</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 43 Complete & Continue to Day 44</span>
+</button>
+<div class="complete-message">B2 leaders command respect through position. C1 leaders earn trust through presence. 🔭</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 7 · Day 43 · Vision Casting & Inspiration</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `You: Hey, picture this time next year. What if we weren't just trading our time for money at our day jobs? Spouse: I don't know, I'm just so tired after work. Starting a business sounds exhausting. You: I get that. But this is bigger than just extra income. It's about building something that is actually ours. Something we can eventually pass down to the kids. Spouse: But what if it fails? We could lose our savings. You: I truly believe we can do this because we've already tested the idea with 10 people and they all said they'd pay for it. We aren't guessing anymore. Spouse: Okay, that's true. But I don't even know where to start. You: We don't have to figure it all out tonight. What part of this idea excites you the most? Is it the product design, or talking to customers? Spouse: I actually really like the product design part. I've been sketching some ideas. You: That's perfect. You own the design, I'll handle the operations. Let's make this happen. Let's just commit to one hour every Sunday night to work on it. Spouse: One hour on Sundays? Yeah, I can definitely do that. I'm actually kind of excited now.`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `You: Thanks everyone for joining. Imagine where we'll be six months from now. No more weekend emails. No more status meetings that could have been an email. Team Member 1: Sounds like a dream. But the director still expects the same output. You: This is bigger than just hitting the director's metrics. It's about proving that a team can deliver elite work without burning out. We are going to change the culture of this department. Team Member 2: I want to believe that, but the last manager said the same thing and then micromanaged us anyway. You: I truly believe we can do this differently, because I've watched this team deliver miracles under terrible conditions. If you can do that with bad leadership, imagine what you'll do with autonomy. Team Member 1: So how are we going to work differently? You: That's up to us. How do you see yourself shaping our new workflow? What's the one process you'd kill immediately? Team Member 2: I'd kill the Friday afternoon reporting sync. It's useless. You: Done. Consider it killed. Let's build this new culture together. I'll send out our new team charter tomorrow.`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-43')) {
+completed.push('day-43');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 43 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'B2 leaders command respect through position. C1 leaders earn trust through presence. 🔭';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-43')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 43 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
