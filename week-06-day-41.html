@@ -1,0 +1,2479 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 6 Day 41: Commitment & Follow-through | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #334155;
+--primary-bright: #1E293B;
+--primary-soft: #E2E8F0;
+--primary-deep: #0F172A;
+--primary-light: #475569;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 14%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(51, 65, 85, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 50%, #CBD5E1 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🔒'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(226, 232, 240, 0.6), rgba(203, 213, 225, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(51, 65, 85, 0.2);
+}
+.philosophy-box {
+background: #F1F5F9;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(226, 232, 240, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(51, 65, 85, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(226, 232, 240, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(51, 65, 85, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.usage-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 14px;
+}
+.usage-box {
+padding: 12px;
+border-radius: var(--radius-sm);
+font-size: 13px;
+}
+.usage-box.when { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.usage-box.avoid { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.usage-box strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.usage-box.when strong { color: var(--green-deep); }
+.usage-box.avoid strong { color: #C53030; }
+.usage-box ul { list-style: none; padding: 0; }
+.usage-box li { padding: 2px 0; padding-left: 16px; position: relative; color: var(--text-secondary); }
+.usage-box.when li::before { content: '✔'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+.usage-box.avoid li::before { content: '✘'; position: absolute; left: 0; color: #F56565; font-weight: 700; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.vague { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.specific { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.vague strong { color: #C53030; }
+.compare-level.specific strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.mistakes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.mistake-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-orange);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.mistake-card h4 {
+font-family: 'Fraunces', serif; font-size: 1.05rem;
+color: var(--text-primary); margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px;
+}
+.mistake-wrong {
+background: rgba(245, 101, 101, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: #C53030;
+border-left: 3px solid #F56565;
+}
+.mistake-right {
+background: rgba(16, 185, 129, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: var(--green-deep);
+border-left: 3px solid var(--highlight-green);
+}
+.mistake-why {
+font-size: 12px; color: var(--text-secondary); font-style: italic;
+}
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.signals-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.signals-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.signals-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+.signal-column {
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.signal-column.weak {
+background: rgba(245, 101, 101, 0.08);
+border-left: 3px solid #F56565;
+}
+.signal-column.strong {
+background: rgba(16, 185, 129, 0.08);
+border-left: 3px solid var(--highlight-green);
+}
+.signal-column h4 {
+font-size: 13px; font-weight: 700; margin-bottom: 10px;
+}
+.signal-column.weak h4 { color: #C53030; }
+.signal-column.strong h4 { color: var(--green-deep); }
+.signal-column ul { list-style: none; padding: 0; }
+.signal-column li {
+padding: 6px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.signal-column.weak li::before { content: '❌'; position: absolute; left: 0; font-size: 12px; }
+.signal-column.strong li::before { content: '✅'; position: absolute; left: 0; font-size: 12px; }
+
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.comparison-table th {
+background: rgba(226, 232, 240, 0.5);
+padding: 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--primary-deep);
+border-bottom: 2px solid rgba(51, 65, 85, 0.2);
+}
+.comparison-table td {
+padding: 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.comparison-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-vague {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.better { background: rgba(251, 146, 60, 0.08); border-left: 3px solid var(--highlight-orange); }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.better strong { color: var(--orange-deep); }
+.rewrite-level.professional strong { color: var(--green-deep); }
+.rewrite-why {
+margin-top: 8px;
+padding: 8px;
+background: rgba(51, 65, 85, 0.08);
+border-radius: var(--radius-sm);
+font-size: 12px;
+color: var(--primary-deep);
+font-style: italic;
+}
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(226, 232, 240, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(226, 232, 240, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(51, 65, 85, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.summarize { background: var(--highlight-green); }
+.move-highlight.ownership { background: var(--highlight-blue); }
+.move-highlight.timeline { background: var(--highlight-purple); }
+.move-highlight.success { background: var(--highlight-orange); }
+.move-highlight.checkin { background: var(--highlight-gold); }
+.move-highlight.negotiate { background: var(--highlight-purple); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(51, 65, 85, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(226, 232, 240, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.listening-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.listening-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.listening-question {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.listening-question p {
+font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;
+}
+.listening-answer {
+font-size: 12px; color: var(--green-deep); font-style: italic;
+}
+
+.vocab-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.vocab-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.vocab-item {
+padding: 12px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--highlight-blue);
+}
+.vocab-item strong {
+display: block; font-size: 13px; color: var(--blue-deep); margin-bottom: 4px;
+}
+.vocab-item span {
+font-size: 12px; color: var(--text-secondary);
+}
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { border-radius: var(--radius-md); padding: 24px; border: 2px solid; }
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 12px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.scenario-context { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.3; }
+.scenario-requirements { background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.scenario-requirements h4 { font-size: 12px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 14px;
+margin-bottom: 14px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 6px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(226, 232, 240, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(226, 232, 240, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(226, 232, 240, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(226, 232, 240, 0.5), rgba(203, 213, 225, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(51, 65, 85, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(51, 65, 85, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(226, 232, 240, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(51, 65, 85, 0.3); }
+
+.reality-check {
+background: linear-gradient(135deg, rgba(51, 65, 85, 0.08), rgba(30, 41, 59, 0.08));
+border-radius: var(--radius-lg);
+padding: 32px;
+margin: 32px 0;
+border-left: 4px solid var(--primary);
+}
+.reality-check h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--primary-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.reality-check p {
+font-size: 14px; color: var(--text-secondary); line-height: 1.4; margin-bottom: 12px;
+}
+.reality-check strong { color: var(--primary-deep); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(51, 65, 85, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(51, 65, 85, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(51, 65, 85, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.usage-grid { grid-template-columns: 1fr; }
+.signals-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-06.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 6 Hub</span>
+</a>
+<div class="day-indicator">
+Day 41 / 42
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-06.html" class="day-tab">Overview</a>
+<a href="week-06-day-36.html" class="day-tab">Day 36</a>
+<a href="week-06-day-37.html" class="day-tab">Day 37</a>
+<a href="week-06-day-38.html" class="day-tab">Day 38</a>
+<a href="week-06-day-39.html" class="day-tab">Day 39</a>
+<a href="week-06-day-40.html" class="day-tab">Day 40</a>
+<a href="week-06-day-41.html" class="day-tab active">Day 41</a>
+<a href="week-06-day-42.html" class="day-tab">Day 42</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-06.html">Week 6</a> › Day 41
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🔒</span>
+<h1 class="day-title">Commitment & Follow-through</h1>
+</div>
+<p class="day-subtitle">Day 40 taught you to build influence. Today, you'll learn to <strong>lock in commitments after the decision</strong>. B2 speakers celebrate agreements. C1 speakers document commitments.</p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-check-square"></i> Commitment</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 6 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Day 40 (Social Influence)</div>
+<div style="font-size: 14px;">"Let me build support before I present."</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">Day 41 (Commitment)</div>
+<div style="font-size: 14px;">"Let me confirm exactly who does what, by when, and how we'll know it's done."</div>
+</div>
+</div>
+"B2 speakers celebrate agreements. C1 speakers document commitments."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Agreement to Commitment
+</div>
+<p>
+An agreement is when people say "yes." A commitment is when people know exactly what they're saying yes to.
+<br><br>
+Most meetings end with vague enthusiasm: "Great discussion! Let's make it happen!" Then nothing happens because no one knows who's doing what. C1 communicators don't leave meetings with agreements. They leave with commitments — specific, documented, and scheduled.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Commitment isn't about control. It's about clarity. People don't resist commitments. They resist ambiguity. When you make commitments specific, you're not micromanaging — you're making it easy for everyone to follow through.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Lock in commitment</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common mistakes</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Vague vs Specific</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📊</div>
+<div class="plan-title">Signals</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Commitment language</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Dialogues + Listen</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Vocab + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves (Lock in Commitment Process)
+</h2>
+<p class="section-desc">5 moves to lock in commitments after the decision. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">Summarize the Decision</div>
+<div class="pattern-ipa">Core idea: "Based on what we've discussed, here's what we've decided..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">First move always</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Summarizing ensures everyone heard the same thing. It's the foundation before moving to specifics.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"So here's the plan..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('So here\'s the plan...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Let me recap what we agreed on..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Let me recap what we agreed on...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Based on what we've discussed, here's what we've decided..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Based on what we\'ve discussed, here\'s what we\'ve decided...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"To confirm our decision, let me summarize the key points..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('To confirm our decision, let me summarize the key points...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>First move after reaching agreement</li>
+<li>Before moving to next steps</li>
+<li>To ensure everyone heard the same thing</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You're still negotiating (premature)</li>
+<li>There's no clear decision yet</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Vague → Specific</h5>
+<div class="compare-level vague"><strong>❌ Vague:</strong> "Great, we have a plan!"</div>
+<div class="compare-level specific"><strong>✅ Specific:</strong> "Based on what we've discussed, here's what we've decided..."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">Confirm Willingness, Then Assign Ownership</div>
+<div class="pattern-ipa">Core idea: "Would you be comfortable leading this? Great — you'll own X, and I'll take care of Y..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Getting genuine commitment</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Asking "Would you be comfortable?" before assigning shows respect and gets genuine commitment, not just compliance.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Want to take the lead on this? Cool — you do X, I'll do Y..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Want to take the lead on this? Cool — you do X, I\'ll do Y...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Would you be happy to take this on? Perfect — you handle X, I'll manage Y..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Would you be happy to take this on? Perfect — you handle X, I\'ll manage Y...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Would you be comfortable leading this? Great — you'll own X, and I'll take care of Y..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Would you be comfortable leading this? Great — you\'ll own X, and I\'ll take care of Y...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Would you be willing to take ownership of this? Excellent — I'd like to assign X to you, while I manage Y..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Would you be willing to take ownership of this? Excellent — I\'d like to assign X to you, while I manage Y...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After summarizing the decision</li>
+<li>Before assigning ownership (confirm willingness first)</li>
+<li>To make responsibilities clear and get buy-in</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You haven't summarized the decision yet</li>
+<li>You're assigning without checking capacity</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Vague → Specific</h5>
+<div class="compare-level vague"><strong>❌ Vague:</strong> "We'll work on this together."</div>
+<div class="compare-level specific"><strong>✅ Specific:</strong> "Would you be comfortable leading this? Great — you'll own X, and I'll take care of Y..."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Set Timeline</div>
+<div class="pattern-ipa">Core idea: "Let's commit to [action] by [date]..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Creating accountability</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Setting a specific timeline creates accountability. "Soon" is not a deadline.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Can you have it done by Friday?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Can you have it done by Friday?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"When can we expect X to be ready?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('When can we expect X to be ready?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Let's commit to [action] by [date]..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Let\'s commit to action by date...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I'd like to establish a deadline of [date] for [deliverable]..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'d like to establish a deadline of date for deliverable...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After assigning ownership</li>
+<li>To create accountability</li>
+<li>To prevent indefinite delays</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You don't have authority to set deadlines</li>
+<li>The timeline is unrealistic</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Vague → Specific</h5>
+<div class="compare-level vague"><strong>❌ Vague:</strong> "We'll get to it soon."</div>
+<div class="compare-level specific"><strong>✅ Specific:</strong> "Let's commit to [action] by [date]..."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Define Success Metrics</div>
+<div class="pattern-ipa">Core idea: "How will we know this is successful?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Aligning expectations</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Defining success metrics prevents "good enough" vs "done" debates later.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"How will we know it worked?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('How will we know it worked?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"What does success look like for this?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What does success look like for this?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"How will we know this is successful?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('How will we know this is successful?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"What metrics will we use to evaluate the outcome?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What metrics will we use to evaluate the outcome?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After setting timeline</li>
+<li>To align on expectations</li>
+<li>To prevent "good enough" vs "done" debates</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The outcome is too subjective to measure</li>
+<li>You're still in early exploration phase</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Vague → Specific</h5>
+<div class="compare-level vague"><strong>❌ Vague:</strong> "We'll see how it goes."</div>
+<div class="compare-level specific"><strong>✅ Specific:</strong> "How will we know this is successful?"</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Schedule Check-in</div>
+<div class="pattern-ipa">Core idea: "Let's touch base on [date] to review progress..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Ensuring follow-through</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Scheduling a check-in ensures follow-through. Commitments without follow-up become forgotten promises.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Let's check in next week..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Let\'s check in next week...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"When should we sync on this?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('When should we sync on this?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Let's touch base on [date] to review progress..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Let\'s touch base on date to review progress...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I propose we schedule a follow-up meeting on [date] to assess progress..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I propose we schedule a follow-up meeting on date to assess progress...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>As the final move</li>
+<li>To ensure follow-through</li>
+<li>To catch problems early</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The commitment is one-time and self-contained</li>
+<li>You're micromanaging unnecessarily</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Vague → Specific</h5>
+<div class="compare-level vague"><strong>❌ Vague:</strong> "We'll keep each other posted."</div>
+<div class="compare-level specific"><strong>✅ Specific:</strong> "Let's touch base on [date] to review progress..."</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+Common Mistakes
+</h2>
+<p class="section-desc">3 lỗi phổ biến khi locking in commitments. Tránh những lỗi này để giữ follow-through authentic.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: Leaving with vague "we'll figure it out"</h4>
+<div class="mistake-wrong">❌ "Great discussion! Let's make it happen!" (rồi không ai làm gì)</div>
+<div class="mistake-right">✅ "Based on what we've discussed, you'll handle X by Friday, and I'll deliver Y by Wednesday. Does that capture it?"</div>
+<div class="mistake-why">Vague agreements feel good in the moment but accomplish nothing.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Assuming everyone understood the same thing</h4>
+<div class="mistake-wrong">❌ "We're all on the same page, right?" (rồi mỗi người hiểu khác nhau)</div>
+<div class="mistake-right">✅ "Let me confirm — you'll handle X, and I'll take care of Y. Does that match your understanding?"</div>
+<div class="mistake-why">People nod in meetings but leave with different interpretations. Confirmation prevents misalignment.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Not following up after the meeting</h4>
+<div class="mistake-wrong">❌ Send commitments and never check in</div>
+<div class="mistake-right">✅ Send summary email within 24 hours + schedule check-in meeting</div>
+<div class="mistake-why">Commitments without follow-up become forgotten promises.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+Vague Agreement vs Specific Commitment Decoder
+</h2>
+<p class="section-desc">Common vague statements và cách chuyển thành cam kết cụ thể.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 Vague Agreement vs Specific Commitment Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>They say (Vague)</th><th>They actually need</th><th>Best move</th></tr>
+</thead>
+<tbody>
+<tr><td>"We'll work on it."</td><td>Who specifically? By when?</td><td>Assign Ownership + Set Timeline</td></tr>
+<tr><td>"Let's circle back on this."</td><td>When exactly? What triggers the circle-back?</td><td>Set Timeline + Schedule Check-in</td></tr>
+<tr><td>"I'll get back to you."</td><td>By when? With what information?</td><td>Set Timeline + Define Success Metrics</td></tr>
+<tr><td>"We're aligned."</td><td>On what specifically?</td><td>Summarize the Decision</td></tr>
+<tr><td>"That sounds good."</td><td>Does that mean yes to action, or just approval of idea?</td><td>Summarize the Decision + Assign Ownership</td></tr>
+<tr><td>"We'll figure it out."</td><td>Who figures it out? By when?</td><td>Assign Ownership + Set Timeline</td></tr>
+<tr><td>"Let's keep the momentum going."</td><td>What does momentum look like concretely?</td><td>Define Success Metrics + Schedule Check-in</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Listen for vague agreement language. 2. Decode what's actually missing (who, when, how). 3. Use the move that fills the gap. 4. Confirm understanding before leaving.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chart-bar"></i>
+Commitment Signals (Signature Section)
+</h2>
+<p class="section-desc">Strong vs Weak commitment language. Learn to recognize and use strong commitment signals.</p>
+</div>
+<div class="signals-card">
+<h3>📊 Commitment Signals</h3>
+<div class="signals-grid">
+<div class="signal-column weak">
+<h4>❌ Weak Commitment Signals (Avoid)</h4>
+<ul>
+<li>"I'll try."</li>
+<li>"It should be okay."</li>
+<li>"Hopefully."</li>
+<li>"We'll see."</li>
+<li>"I'll do my best."</li>
+<li>"Let me see what I can do."</li>
+<li>"I'll get to it when I can."</li>
+</ul>
+</div>
+<div class="signal-column strong">
+<h4>✅ Strong Commitment Signals (Use)</h4>
+<ul>
+<li>"I'll have it done by Friday."</li>
+<li>"I'll send you an update Thursday."</li>
+<li>"If anything changes, I'll let you know immediately."</li>
+<li>"I'll deliver X by [date]."</li>
+<li>"I'll take ownership of this."</li>
+<li>"You can count on me for this."</li>
+<li>"I'll follow up by [date] with [specific deliverable]."</li>
+</ul>
+</div>
+</div>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Why this matters:</strong> Weak commitment language creates ambiguity. Strong commitment language creates accountability. When you hear "I'll try," you should clarify: "Can you commit to a specific date?"
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-left-right"></i>
+Casual ↔ Professional Comparison
+</h2>
+<p class="section-desc">Same moves, different registers. Match the register to the context.</p>
+</div>
+<div class="decoder-card" style="border-left-color: var(--highlight-blue);">
+<h3>🔄 Register Comparison</h3>
+<table class="comparison-table">
+<thead>
+<tr><th>Situation</th><th>🏠 Casual</th><th>💼 Professional</th></tr>
+</thead>
+<tbody>
+<tr><td>Summarize Decision</td><td>"So here's the plan..."</td><td>"Based on what we've discussed, here's what we've decided..."</td></tr>
+<tr><td>Confirm Willingness</td><td>"Want to take the lead on this?"</td><td>"Would you be comfortable leading this?"</td></tr>
+<tr><td>Assign Ownership</td><td>"You do X, I'll do Y..."</td><td>"You'll handle X, and I'll take care of Y..."</td></tr>
+<tr><td>Set Timeline</td><td>"Can you have it done by Friday?"</td><td>"Let's commit to [action] by [date]..."</td></tr>
+<tr><td>Define Success</td><td>"How will we know it worked?"</td><td>"How will we know this is successful?"</td></tr>
+<tr><td>Schedule Check-in</td><td>"Let's check in next week..."</td><td>"Let's touch base on [date] to review progress..."</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Casual uses simple, direct language. Professional uses structured, respectful language. Match the register to the context.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: The Meeting That Accomplished Nothing
+</h2>
+<p class="section-desc">Read this meeting recap email. What's missing? (Hint: It has owners and deadlines, but something crucial is missing.)</p>
+</div>
+<div class="reading-card">
+<h3>📧 Meeting Recap Email</h3>
+<div class="email-box">
+<strong>Subject:</strong> Meeting Recap - Q3 Planning<br><br>
+Hi team,<br><br>
+Great discussion today! Here's what we decided:<br><br>
+- Sarah will draft the customer retention plan by Friday<br>
+- Mike will redesign the onboarding process by next Wednesday<br>
+- Marketing and Sales will hold a joint planning session on Tuesday at 2 PM<br><br>
+Let's keep the momentum going!<br><br>
+Best,<br>
+Alex
+</div>
+<div class="reading-questions">
+<h4>🤔 Questions:</h4>
+<p>1. This email has owners and deadlines. So what's missing?</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">A. Enthusiasm | B. Success metrics and a check-in date | C. Owners | D. Deadlines</p>
+<p style="margin-top: 10px;">2. How would you rewrite it to create complete commitments?</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">A. "Hi team, Based on our discussion, here are the specific commitments: Sarah will draft the customer retention plan by Friday. Success metric: 10% improvement in retention by end of Q3. Mike will redesign the onboarding process by next Wednesday. Success metric: 20% faster onboarding time. Marketing and Sales will hold a joint planning session on Tuesday at 2 PM. Success metric: 3 joint campaigns launched by end of Q3. We'll review progress on all three items in our next meeting on [date]. Does this capture everyone's understanding?"</p>
+<p style="margin-top: 10px; color: var(--green-deep); font-weight: 600;">✅ Answers: 1. B. The email has owners and deadlines, but no success metrics and no check-in date. How will we know if Sarah's plan is successful? When will we review progress? Without these, commitments can drift. 2. A. The rewrite adds specific success metrics and a check-in date. Everyone knows exactly what they're committing to and how success will be measured.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Vague Commitments
+</h2>
+<p class="section-desc">Rewrite these vague commitments to be specific. Explain WHY your version is better.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Vague → Specific Commitments</h3>
+<div class="rewrite-item">
+<div class="rewrite-vague">❌ Vague: "We'll work on improving customer satisfaction."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"Let's focus on customer satisfaction."</div>
+<div class="rewrite-level better"><strong>Better</strong>"Who will lead this? By when?"</div>
+<div class="rewrite-level professional"><strong>Professional</strong>"Sarah will conduct a customer satisfaction survey by Friday. Mike will analyze the results by next Wednesday. We'll review findings and commit to 3 specific improvements on [date]. Success metric: 15% improvement in NPS score by end of Q3. Does this capture it?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The professional version assigns ownership, sets deadlines, defines success metrics, and schedules a check-in — transforming a vague goal into actionable commitments.</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-vague">❌ Vague: "Let's circle back on the budget next week."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"We'll discuss the budget soon."</div>
+<div class="rewrite-level better"><strong>Better</strong>"When exactly next week? With what information?"</div>
+<div class="rewrite-level professional"><strong>Professional</strong>"Let's commit to reviewing the budget on Tuesday at 10 AM. Sarah will prepare the Q2 actuals by Monday EOD. Mike will bring the Q3 projections. We'll decide on final allocations by end of Tuesday. Does this match your understanding?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The professional version sets a specific date/time, assigns preparation tasks, defines the decision point, and confirms understanding — turning "circle back" into a concrete commitment.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 speakers lock in commitments in real conversations. Each dialogue has 1 light resistance to show how to negotiate timelines.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Planning a Home Renovation (Life)</h3>
+<div class="story-context">Context: You and your spouse just discussed renovating the kitchen. Need to lock in specific commitments before ending the conversation. Spouse has 1 light resistance about timeline.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Okay, <strong>so here's the plan</strong> — we're going to renovate the kitchen." <span class="move-highlight summarize">Summarize</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Great! I'm excited."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Would you be comfortable handling</strong> the contractor research? <strong>I'd like to take care of</strong> the design and materials." <span class="move-highlight ownership">Confirm Willingness + Assign</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Yeah, I can do that. When do we start?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let's commit to</strong> having 3 contractor quotes by next Friday. <strong>I'll have</strong> the design finalized by next Wednesday." <span class="move-highlight timeline">Set Timeline</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Friday? That's a bit tight with work. Can we do Monday?" <span style="color: var(--highlight-orange);">← Light resistance</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I understand. <strong>What if we commit to</strong> 2 quotes by Friday and 1 by Monday? <strong>Does that work?</strong>" <span class="move-highlight negotiate">Negotiate Timeline</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Yeah, that's more realistic."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>How will we know this is successful?</strong> We'll have a clear timeline, fixed budget, and 5-star reviews from past clients." <span class="move-highlight success">Define Success</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Perfect. What if we get stuck?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let's touch base</strong> on Sunday evening to review the quotes and make a decision. <strong>Does that work?</strong>" <span class="move-highlight checkin">Schedule Check-in</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Yeah, Sunday at 7 PM?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Perfect. <strong>Let me confirm</strong> — you'll get 2 quotes by Friday and 1 by Monday, I'll finalize the design by Wednesday, and we'll decide together on Sunday. <strong>Does that capture it?</strong>" <span class="move-highlight summarize">Confirm Understanding</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Yep, that's it!"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Great. I'll send a quick text summary so we don't forget. <strong>Are we aligned on</strong> starting the renovation next month?" <span class="move-highlight summarize">Final Confirmation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Absolutely!"</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"So here's the plan..." → <strong>Summarize the Decision</strong> (Move 1)</li>
+<li>"Would you be comfortable handling... I'd like to take care of..." → <strong>Confirm Willingness + Assign Ownership</strong> (Move 2)</li>
+<li>"Let's commit to... by next Friday" → <strong>Set Timeline</strong> (Move 3)</li>
+<li>Spouse said <strong>"Friday? That's a bit tight"</strong> → <strong>Negotiate Timeline</strong> (1 light resistance, not overwhelming)</li>
+<li>"How will we know this is successful?" → <strong>Define Success Metrics</strong> (Move 4)</li>
+<li>"Let's touch base on Sunday evening" → <strong>Schedule Check-in</strong> (Move 5)</li>
+<li><strong>Register:</strong> Casual throughout (spouses)</li>
+<li><strong>14 turns</strong> natural flow, all 5 moves used naturally</li>
+<li><strong>1 light resistance</strong> about timeline (realistic, shows commitment can be negotiated)</li>
+<li><strong>Ends with confirmation</strong> to ensure alignment</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: After a Strategy Meeting (Business)</h3>
+<div class="story-context">Context: You just finished a strategy meeting with your team. Need to lock in specific commitments before everyone leaves. Product Lead has 1 light resistance about capacity.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Based on what we've discussed, here's what we've decided</strong> — we're launching the new product in Q3." <span class="move-highlight summarize">Summarize</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Great! What's next?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Sarah, would you be comfortable leading</strong> the marketing campaign? <strong>Mike, would you be happy to take</strong> the product development timeline? <strong>I'll manage</strong> the budget and stakeholder communication." <span class="move-highlight ownership">Confirm Willingness + Assign</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"I can do that. When do we need to have this ready?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let's commit to</strong> having the marketing plan finalized by next Friday. <strong>Mike, can you have</strong> the development timeline ready by next Wednesday?" <span class="move-highlight timeline">Set Timeline</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Product Lead:</div>
+<div class="dialogue-text">"Wednesday is tight — I have 3 other deadlines that day. Can we do Monday?" <span style="color: var(--highlight-orange);">← Light resistance</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I understand. <strong>What if you send me a draft by Friday EOD, and we finalize Monday morning? Does that work?</strong>" <span class="move-highlight negotiate">Negotiate Timeline</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Product Lead:</div>
+<div class="dialogue-text">"Yeah, that's doable."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>How will we know this is successful?</strong> We'll have a clear launch date, approved budget, and all stakeholders aligned." <span class="move-highlight success">Define Success</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"What if we hit roadblocks?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let's touch base</strong> on Monday at 10 AM to review progress and address any issues. <strong>Does that work for everyone?</strong>" <span class="move-highlight checkin">Schedule Check-in</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Product Lead:</div>
+<div class="dialogue-text">"Works for me."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Perfect. <strong>Let me confirm</strong> — Sarah will deliver the marketing plan by Friday, Mike will send a draft by Friday EOD and we'll finalize Monday morning, and we'll review together on Monday at 10 AM. <strong>Does that match everyone's understanding?</strong>" <span class="move-highlight summarize">Confirm Understanding</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Yep, that's it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Product Lead:</div>
+<div class="dialogue-text">"Agreed."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Great. <strong>I'll send</strong> a summary email within the hour with all the commitments. <strong>Are we aligned on</strong> launching in Q3?" <span class="move-highlight summarize">Final Confirmation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Absolutely!"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Product Lead:</div>
+<div class="dialogue-text">"Let's do it!"</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"Based on what we've discussed..." → <strong>Summarize the Decision</strong> (Move 1)</li>
+<li>"Would you be comfortable leading... Would you be happy to take..." → <strong>Confirm Willingness + Assign Ownership</strong> (Move 2)</li>
+<li>"Let's commit to... by next Friday" → <strong>Set Timeline</strong> (Move 3)</li>
+<li>Product Lead said <strong>"Wednesday is tight"</strong> → <strong>Negotiate Timeline</strong> (1 light resistance, realistic)</li>
+<li>"How will we know this is successful?" → <strong>Define Success Metrics</strong> (Move 4)</li>
+<li>"Let's touch base on Monday at 10 AM" → <strong>Schedule Check-in</strong> (Move 5)</li>
+<li><strong>Register:</strong> Professional (team meeting)</li>
+<li><strong>15 turns</strong>, complete commitment-locking conversation</li>
+<li><strong>1 light resistance</strong> about capacity (shows commitment can be negotiated)</li>
+<li><strong>Ends with summary email promise</strong> to ensure documentation</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Task
+</h2>
+<p class="section-desc">Listen to Dialogue 2 again. Answer these questions to test your comprehension.</p>
+</div>
+<div class="listening-card">
+<h3>🎧 Listening Comprehension</h3>
+<div class="listening-question">
+<p>1. What was the first move the speaker used?</p>
+<div class="listening-answer">✅ B. Summarize the Decision ("Based on what we've discussed, here's what we've decided...")</div>
+</div>
+<div class="listening-question">
+<p>2. Why did they ask "Would you be comfortable leading?" before assigning?</p>
+<div class="listening-answer">✅ B. To confirm willingness and get genuine commitment, not just compliance</div>
+</div>
+<div class="listening-question">
+<p>3. When the Product Lead said "Wednesday is tight," what did the speaker do?</p>
+<div class="listening-answer">✅ B. Negotiated: draft by Friday EOD, finalize Monday morning</div>
+</div>
+<div class="listening-question">
+<p>4. Which move created accountability?</p>
+<div class="listening-answer">✅ B. Set Timeline ("Let's commit to... by next Friday")</div>
+</div>
+<div class="listening-question">
+<p>5. What made this meeting different from most meetings?</p>
+<div class="listening-answer">✅ B. The speaker confirmed willingness, locked in specific commitments with owners, deadlines, success metrics, and a check-in date</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-book-bookmark"></i>
+Vocabulary Box: Commitment Collocations
+</h2>
+<p class="section-desc">C1 collocations with commitment. Use these to sound more professional.</p>
+</div>
+<div class="vocab-card">
+<h3>📝 Commitment Collocations</h3>
+<div class="vocab-grid">
+<div class="vocab-item"><strong>lock in commitments</strong><span>Chốt cam kết cụ thể. "Let's lock in the commitments before we leave."</span></div>
+<div class="vocab-item"><strong>confirm willingness</strong><span>Xác nhận sẵn lòng. "Would you be comfortable leading this?"</span></div>
+<div class="vocab-item"><strong>assign ownership</strong><span>Gán trách nhiệm. "I'll assign ownership of this task to Sarah."</span></div>
+<div class="vocab-item"><strong>set a deadline</strong><span>Đặt thời hạn. "Let's set a deadline of next Friday."</span></div>
+<div class="vocab-item"><strong>define success metrics</strong><span>Định nghĩa metric thành công. "How will we define success metrics for this project?"</span></div>
+<div class="vocab-item"><strong>schedule a check-in</strong><span>Lên lịch check-in. "Let's schedule a check-in for next Monday."</span></div>
+<div class="vocab-item"><strong>confirm understanding</strong><span>Xác nhận hiểu biết. "Let me confirm understanding — you'll handle X, right?"</span></div>
+<div class="vocab-item"><strong>send a summary</strong><span>Gửi tóm tắt. "I'll send a summary email within the hour."</span></div>
+<div class="vocab-item"><strong>follow up</strong><span>Theo dõi. "I'll follow up on Friday to check progress."</span></div>
+<div class="vocab-item"><strong>deliver on commitments</strong><span>Thực hiện cam kết. "We need to deliver on our commitments."</span></div>
+</div>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Use these collocations to sound more professional. "Lock in commitments" is more C1 than "make sure everyone agrees." "Confirm willingness" is more C1 than "give tasks."
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Commitment phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Commitment Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>Based on what we've discussed</td><td class="ipa-cell">/beɪst ɒn wʌt wiːv dɪˈskʌst/</td><td>Smooth "based on" linking</td></tr>
+<tr><td>Would you be comfortable</td><td class="ipa-cell">/wʊd juː biː ˈkʌmftərəbəl/</td><td>Rising intonation (question)</td></tr>
+<tr><td>Let's commit to</td><td class="ipa-cell">/lɛts kəˈmɪt tuː/</td><td>Stress on "commit"</td></tr>
+<tr><td>How will we know</td><td class="ipa-cell">/haʊ wɪl wiː noʊ/</td><td>Rising intonation (question)</td></tr>
+<tr><td>Let's touch base</td><td class="ipa-cell">/lɛts ttʃ beɪs/</td><td>Smooth "touch base" idiom</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Based on what we've discussed..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when summarizing decision. Falling tone = confident, authoritative. <strong>Avoid:</strong> Rising (sounds like you're questioning).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Would you be comfortable..."</span>
+<span class="pattern-label">↗ Rising</span>
+<span class="context-tip"><strong>Context:</strong> Used when confirming willingness. Rising tone = genuine question, seeking input. <strong>Avoid:</strong> Falling (sounds like you already know).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Let's commit to..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when setting timeline. Falling tone = decisive, serious. <strong>Avoid:</strong> Rising (sounds uncertain).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice locking in commitments in different contexts. Remember: no register is "better" — it's about appropriateness!</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Planning a Family Vacation</h3>
+<p class="scenario-context">You and your spouse just discussed a family vacation. Need to lock in specific commitments before ending the conversation.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "So here's the plan..."
+<strong>📖 Possible Response:</strong> "So here's the plan — we're going to the beach for a week. Would you be comfortable handling the flights and hotel? I'd like to take care of planning the activities and packing. Let's commit to having the flights booked by next Friday, and I'll have the itinerary ready by next Wednesday. How will we know this is successful? We'll have confirmed bookings, a clear itinerary, and everyone excited. Let's touch base on Sunday evening to review progress. Does that work?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "So here's the plan..."</li>
+<li>Use "Would you be comfortable handling... I'd like to take care of..."</li>
+<li>Use "Let's commit to... by next Friday"</li>
+<li>Keep it collaborative, not controlling</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: After a Team Meeting</h3>
+<p class="scenario-context">You just finished a team meeting about a new project. Need to lock in specific commitments with 2-3 colleagues.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "Let me recap what we agreed on..."
+<strong>📖 Possible Response:</strong> "Let me recap what we agreed on — we're launching the new feature next month. Sarah, would you be comfortable handling the testing? Mike, would you be happy to take the documentation? I'll manage the stakeholder communication. Let's commit to having the testing complete by next Friday, and Mike, can you have the documentation ready by next Wednesday? How will we know this is successful? We'll have passed all tests, complete documentation, and stakeholder approval. Let's touch base on Monday at 10 AM to review progress. Does that work for everyone?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "Let me recap what we agreed on..."</li>
+<li>Use "Would you be comfortable handling... Would you be happy to take..."</li>
+<li>Use "Let's commit to... by next Friday"</li>
+<li>Confirm willingness before assigning</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: After a Client Meeting</h3>
+<p class="scenario-context">You just finished a client meeting. Need to lock in specific commitments with the client before ending.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "Based on what we've discussed, here's what we've decided..."
+<strong>📖 Possible Response:</strong> "Based on what we've discussed, here's what we've decided — we're moving forward with Phase 1. Would you be comfortable providing the brand assets by next Friday? I'd like to take care of delivering the first draft by next Wednesday. Let's commit to having the brand assets ready by next Friday, and I'll have the first draft ready for review by next Wednesday. How will we know this is successful? We'll have approved brand assets, a complete first draft, and alignment on the direction. Let's touch base on Monday at 2 PM to review progress. Does that match your understanding?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "Based on what we've discussed..."</li>
+<li>Use "Would you be comfortable... I'd like to take care of..."</li>
+<li>Use "Let's commit to... by next Friday"</li>
+<li>Confirm understanding before leaving</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Commitment with Resistance</h3>
+<p class="scenario-context">Morning: Lock in commitments with spouse for home project (Casual). <strong>Spouse says "Friday is tight" — you must negotiate timeline.</strong> Afternoon: Lock in commitments with team after meeting (Professional). <strong>One person says "I'm not sure I can do it by Wednesday" — you must confirm willingness and adjust.</strong></p>
+<div class="model-response">
+<strong>💡 Model Opening (Life):</strong> "So here's the plan..."
+<strong>💡 Model Opening (Business):</strong> "Based on what we've discussed..."
+<strong>📖 Possible Response (Life):</strong> "So here's the plan — we're renovating the bathroom. Would you be comfortable researching contractors? I'd like to take care of the design. Let's commit to having 3 quotes by next Friday, and I'll have the design ready by next Wednesday. How will we know this is successful? We'll have a clear timeline, fixed budget, and good reviews. Let's touch base on Sunday evening to review. Does that work?"
+<strong>📖 Possible Response (Business):</strong> "Based on what we've discussed, here's what we've decided — we're launching the new campaign next month. Sarah, would you be comfortable handling the creative? Mike, would you be happy to take the media buying? Let's commit to having the creative ready by next Friday, and Mike, can you have the media plan ready by next Wednesday? How will we know this is successful? We'll have approved creative, a complete media plan, and stakeholder alignment. Let's touch base on Monday at 10 AM to review. Does that match everyone's understanding?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Use different moves for each context</li>
+<li>Life: simple, direct language. Business: structured, professional language</li>
+<li>Lock in commitments in both contexts</li>
+<li>Handle resistance naturally</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply commitment locking to actual situations this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Commitment Template Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Choose 1 situation (Life or Business) where you just reached an agreement. Practice locking in specific commitments using 2-3 moves (not all 5!).</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use the fewest moves needed (quality over quantity)</li>
+<li>Write down: Which moves you used and why</li>
+<li>Note the result</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written commitment structure</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Commitment Conversations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 conversations (Life & Business) where you lock in commitments. Focus on clarity and specificity.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register, simple language)</li>
+<li>1 Business scenario (professional register, structured language)</li>
+<li>Use 2-5 communication moves (choose based on situation)</li>
+<li>Make commitments specific and actionable</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Commitment Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, when you reach an agreement in a meeting, use the Vague Agreement vs Specific Commitment Decoder to identify what's missing, then lock in specific commitments. Note the results.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Lock in commitments for at least 1 real agreement</li>
+<li>Map what was vague and make it specific</li>
+<li>Use Vague Agreement vs Specific Commitment Decoder</li>
+<li>Note their response and outcome</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Commitment Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People know exactly what they're committing to</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Responsibilities are clear, not assumed</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Deadlines are specific, not vague</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">Success metrics are defined, not ambiguous</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Follow-up is scheduled, not forgotten</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You confirm willingness before assigning ownership</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You summarize the decision before moving to next steps</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You assign specific owners for each action</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You set clear deadlines for each deliverable</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You define success metrics to align expectations</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You schedule check-ins to ensure follow-through</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Confirm willingness first:</strong> "Would you be comfortable leading this?" before "You'll handle X..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Summarize first:</strong> "Based on what we've discussed..." before "Here's what's next..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Assign owners:</strong> "You'll handle X, and I'll take care of Y..." makes responsibilities clear</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Set deadlines:</strong> "Let's commit to [action] by [date]..." creates accountability</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Define success:</strong> "How will we know this is successful?" aligns expectations</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Schedule check-ins:</strong> "Let's touch base on [date]..." ensures follow-through</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with communication moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>You just reached an agreement in a meeting</p>
+<button>Pause → Say it → Tap to reveal →</button>
+</div>
+<div class="flashcard-back">
+<p>🏠 Casual: "So here's the plan..."<br>☕ Neutral: "Let me recap what we agreed on..."<br>💼 Professional: "Based on what we've discussed, here's what we've decided..."<br>📋 More Formal: "To confirm our decision, let me summarize the key points..."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always confirm willingness first, then summarize the decision. Then assign ownership, set timeline, define success, and schedule check-in.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Commitment & Follow-through
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Life) You and your spouse just agreed to renovate the kitchen. Best first move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Great, let's do it!"</div>
+<div class="quiz-option">B. "So here's the plan — we're renovating the kitchen."</div>
+<div class="quiz-option">C. "You do X, I'll do Y."</div>
+<div class="quiz-option">D. "When do we start?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Business) You just finished a team meeting. Best first move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Great meeting everyone!"</div>
+<div class="quiz-option">B. "Based on what we've discussed, here's what we've decided..."</div>
+<div class="quiz-option">C. "Let's commit to deadlines."</div>
+<div class="quiz-option">D. "Who's doing what?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) Colleague says "I'll try my best to get it done." This is:</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Specific commitment</div>
+<div class="quiz-option">B. Vague agreement</div>
+<div class="quiz-option">C. Clear deadline</div>
+<div class="quiz-option">D. Assigned ownership</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) Colleague says "I'll get back to you." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Okay, thanks."</div>
+<div class="quiz-option">B. "By when? With what information?"</div>
+<div class="quiz-option">C. "No problem."</div>
+<div class="quiz-option">D. "Let's keep the momentum going."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Life) You and your spouse confirmed willingness. Next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Assign ownership</div>
+<div class="quiz-option">B. Set timeline</div>
+<div class="quiz-option">C. Define success metrics</div>
+<div class="quiz-option">D. Summarize decision</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Business) You set the timeline. Next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Assign ownership</div>
+<div class="quiz-option">B. Define success metrics</div>
+<div class="quiz-option">C. Schedule check-in</div>
+<div class="quiz-option">D. Summarize decision</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Judgement) Meeting ends with "Great discussion! Let's make it happen!" What's missing?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Enthusiasm</div>
+<div class="quiz-option">B. Specific commitments with owners, deadlines, success metrics, and check-in date</div>
+<div class="quiz-option">C. Agreement</div>
+<div class="quiz-option">D. Action</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Business) Client says "We're aligned." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Great!"</div>
+<div class="quiz-option">B. "Let me confirm — you'll handle X by Friday, and I'll deliver Y by Wednesday. Does that capture it?"</div>
+<div class="quiz-option">C. "We're on the same page."</div>
+<div class="quiz-option">D. "Let's keep the momentum going."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Life) You locked in commitments with your spouse. Best final move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Say "Great!"</div>
+<div class="quiz-option">B. Send a quick text summary so you don't forget</div>
+<div class="quiz-option">C. Forget about it</div>
+<div class="quiz-option">D. Assume they'll remember</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="reality-check">
+<h2><i class="ph-duotone ph-lightbulb"></i> Reality Check</h2>
+<p><strong>Commitment isn't about control. It's about clarity.</strong></p>
+<p>People don't resist commitments. <strong>They resist ambiguity.</strong> When you make commitments specific, you're not micromanaging — you're making it easy for everyone to follow through.</p>
+<p><strong>Key insight:</strong> The goal isn't to create paperwork. The goal is to ensure everyone leaves the meeting knowing exactly what they're committing to, by when, and how success will be measured.</p>
+</div>
+
+<div class="day-navigation">
+<a href="week-06-day-40.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 40: Building Influence Before the Decision</div>
+</a>
+<a href="week-06-day-42.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 42: Negotiation Simulation</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 41 Complete & Continue to Day 42</span>
+</button>
+<div class="complete-message">You no longer celebrate agreements. You document commitments. 🔒</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 6 · Day 41 · Commitment & Follow-through</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `You: Okay, so here's the plan — we're going to renovate the kitchen. Spouse: Great! I'm excited. You: Would you be comfortable handling the contractor research? I'd like to take care of the design and materials. Spouse: Yeah, I can do that. When do we start? You: Let's commit to having 3 contractor quotes by next Friday. I'll have the design finalized by next Wednesday. Spouse: Friday? That's a bit tight with work. Can we do Monday? You: I understand. What if we commit to 2 quotes by Friday and 1 by Monday? Does that work? Spouse: Yeah, that's more realistic. You: How will we know this is successful? We'll have a clear timeline, fixed budget, and 5-star reviews from past clients. Spouse: Perfect. What if we get stuck? You: Let's touch base on Sunday evening to review the quotes and make a decision. Does that work? Spouse: Yeah, Sunday at 7 PM? You: Perfect. Let me confirm — you'll get 2 quotes by Friday and 1 by Monday, I'll finalize the design by Wednesday, and we'll decide together on Sunday. Does that capture it? Spouse: Yep, that's it! You: Great. I'll send a quick text summary so we don't forget. Are we aligned on starting the renovation next month? Spouse: Absolutely!`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `You: Based on what we've discussed, here's what we've decided — we're launching the new product in Q3. Marketing Lead: Great! What's next? You: Sarah, would you be comfortable leading the marketing campaign? Mike, would you be happy to take the product development timeline? I'll manage the budget and stakeholder communication. Marketing Lead: I can do that. When do we need to have this ready? You: Let's commit to having the marketing plan finalized by next Friday. Mike, can you have the development timeline ready by next Wednesday? Product Lead: Wednesday is tight — I have 3 other deadlines that day. Can we do Monday? You: I understand. What if you send me a draft by Friday EOD, and we finalize Monday morning? Does that work? Product Lead: Yeah, that's doable. You: How will we know this is successful? We'll have a clear launch date, approved budget, and all stakeholders aligned. Marketing Lead: What if we hit roadblocks? You: Let's touch base on Monday at 10 AM to review progress and address any issues. Does that work for everyone? Product Lead: Works for me. You: Perfect. Let me confirm — Sarah will deliver the marketing plan by Friday, Mike will send a draft by Friday EOD and we'll finalize Monday morning, and we'll review together on Monday at 10 AM. Does that match everyone's understanding? Marketing Lead: Yep, that's it. Product Lead: Agreed. You: Great. I'll send a summary email within the hour with all the commitments. Are we aligned on launching in Q3? Marketing Lead: Absolutely! Product Lead: Let's do it!`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-41')) {
+completed.push('day-41');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 41 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'You no longer celebrate agreements. You document commitments. 🔒';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-41')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 41 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
