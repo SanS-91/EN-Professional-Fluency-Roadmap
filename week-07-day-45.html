@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 7 Day 45: Active Listening & Powerful Questions | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #581C87;
+--primary-bright: #6B21A8;
+--primary-soft: #F3E8FF;
+--primary-deep: #3B0764;
+--primary-light: #7E22CE;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 5%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(88, 28, 135, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 50%, #E9D5FF 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '👂'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(243, 232, 255, 0.6), rgba(233, 213, 255, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(88, 28, 135, 0.2);
+}
+.philosophy-box {
+background: #FAF5FF;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(243, 232, 255, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(88, 28, 135, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(243, 232, 255, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(88, 28, 135, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.usage-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 14px;
+}
+.usage-box {
+padding: 12px;
+border-radius: var(--radius-sm);
+font-size: 13px;
+}
+.usage-box.when { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.usage-box.avoid { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.usage-box strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.usage-box.when strong { color: var(--green-deep); }
+.usage-box.avoid strong { color: #C53030; }
+.usage-box ul { list-style: none; padding: 0; }
+.usage-box li { padding: 2px 0; padding-left: 16px; position: relative; color: var(--text-secondary); }
+.usage-box.when li::before { content: '✔'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+.usage-box.avoid li::before { content: '✘'; position: absolute; left: 0; color: #F56565; font-weight: 700; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.weak { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.strong { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.weak strong { color: #C53030; }
+.compare-level.strong strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.mistakes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.mistake-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-orange);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.mistake-card h4 {
+font-family: 'Fraunces', serif; font-size: 1.05rem;
+color: var(--text-primary); margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px;
+}
+.mistake-wrong {
+background: rgba(245, 101, 101, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: #C53030;
+border-left: 3px solid #F56565;
+}
+.mistake-right {
+background: rgba(16, 185, 129, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: var(--green-deep);
+border-left: 3px solid var(--highlight-green);
+}
+.mistake-why {
+font-size: 12px; color: var(--text-secondary); font-style: italic;
+}
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.comparison-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--primary-deep);
+border-bottom: 2px solid rgba(88, 28, 135, 0.2);
+}
+.comparison-table td {
+padding: 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.comparison-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-task {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.better { background: rgba(251, 146, 60, 0.08); border-left: 3px solid var(--highlight-orange); }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.better strong { color: var(--orange-deep); }
+.rewrite-level.professional strong { color: var(--green-deep); }
+.rewrite-why {
+margin-top: 8px;
+padding: 8px;
+background: rgba(88, 28, 135, 0.08);
+border-radius: var(--radius-sm);
+font-size: 12px;
+color: var(--primary-deep);
+font-style: italic;
+}
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(243, 232, 255, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(243, 232, 255, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(88, 28, 135, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.unsaid { background: var(--highlight-blue); }
+.move-highlight.reflect { background: var(--highlight-green); }
+.move-highlight.question { background: var(--highlight-purple); }
+.move-highlight.silence { background: var(--highlight-gold); }
+.move-highlight.summarize { background: var(--highlight-orange); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(88, 28, 135, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(243, 232, 255, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.listening-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.listening-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.listening-question {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.listening-question p {
+font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;
+}
+.listening-answer {
+font-size: 12px; color: var(--green-deep); font-style: italic;
+}
+
+.grammar-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-gold);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.grammar-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.grammar-item {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+}
+.grammar-item strong {
+font-size: 13px; color: var(--primary-deep); display: block; margin-bottom: 4px;
+}
+.grammar-item span {
+font-size: 13px; color: var(--text-secondary);
+}
+
+.vocab-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.vocab-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.vocab-item {
+padding: 12px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--highlight-blue);
+}
+.vocab-item strong {
+display: block; font-size: 13px; color: var(--blue-deep); margin-bottom: 4px;
+}
+.vocab-item span {
+font-size: 12px; color: var(--text-secondary);
+}
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { 
+border-radius: var(--radius-md); 
+padding: 20px; 
+border: 2px solid;
+font-size: 13px;
+}
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 10px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { 
+font-family: 'Fraunces', serif; 
+font-size: 13px; 
+font-weight: 600;
+margin-bottom: 8px; 
+color: var(--text-primary); 
+}
+.scenario-context { 
+font-size: 13px; 
+color: var(--text-secondary); 
+margin-bottom: 12px; 
+line-height: 1.3; 
+}
+.scenario-requirements { 
+background: rgba(255, 255, 255, 0.8); 
+border-radius: var(--radius-sm); 
+padding: 12px; 
+margin-bottom: 12px; 
+}
+.scenario-requirements h4 { 
+font-size: 12px; 
+font-weight: 600; 
+color: var(--text-primary); 
+margin-bottom: 6px; 
+}
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { 
+padding: 3px 0; 
+padding-left: 18px; 
+position: relative; 
+font-size: 13px; 
+color: var(--text-secondary); 
+line-height: 1.3; 
+}
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 12px;
+margin-bottom: 12px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 4px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(243, 232, 255, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(243, 232, 255, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(243, 232, 255, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(243, 232, 255, 0.5), rgba(233, 213, 255, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(88, 28, 135, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(88, 28, 135, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(243, 232, 255, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(243, 232, 255, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(88, 28, 135, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(88, 28, 135, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(88, 28, 135, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(88, 28, 135, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.usage-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-07.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 7 Hub</span>
+</a>
+<div class="day-indicator">
+Day 45 / 49
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-07.html" class="day-tab">Overview</a>
+<a href="week-07-day-43.html" class="day-tab">Day 43</a>
+<a href="week-07-day-44.html" class="day-tab">Day 44</a>
+<a href="week-07-day-45.html" class="day-tab active">Day 45</a>
+<a href="week-07-day-46.html" class="day-tab">Day 46</a>
+<a href="week-07-day-47.html" class="day-tab">Day 47</a>
+<a href="week-07-day-48.html" class="day-tab">Day 48</a>
+<a href="week-07-day-49.html" class="day-tab">Day 49</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-07.html">Week 7</a> › Day 45
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">👂</span>
+<h1 class="day-title">Active Listening & Powerful Questions</h1>
+</div>
+<p class="day-subtitle">Day 43 taught you to speak about the future. Day 44 taught you to speak about identity. Today, you learn to <strong>LISTEN</strong>. <strong>B2 leaders listen to respond. C1 leaders listen to understand.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-ear"></i> Deep Listening</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 3 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2 Leader</div>
+<div style="font-size: 14px;">Hears words. Asks "What happened?" (Surface level).</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1 Leader</div>
+<div style="font-size: 14px;">Hears meaning. Asks "What does this mean for you?" (Deep level).</div>
+</div>
+</div>
+"B2 leaders listen to respond. C1 leaders listen to understand. The most powerful tool in leadership is not the answer — it's the question."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Hearing to Listening
+</div>
+<p>
+Hearing is passive (sound waves hit your ears). Listening is active (you decode meaning, emotion, and the unsaid).
+<br><br>
+Most leaders think their job is to have all the answers. C1 leaders know their job is to ask the right questions. When you listen deeply, people feel seen. When you ask powerful questions, people discover their own answers.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Powerful questions are not interrogation questions. Interrogation questions close people down ("Why did you do that?"). Powerful questions open people up ("What were you hoping would happen?").
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Active listening</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common mistakes</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Hearing vs Listening</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Dialogues + Listen</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">8 min</div>
+<div class="plan-desc">Grammar + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves (Active Listening)
+</h2>
+<p class="section-desc">5 moves to listen deeply and ask powerful questions. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">Listen for the Unsaid</div>
+<div class="pattern-ipa">Core idea: "What's behind that?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Decoding hidden meaning</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Hear what is NOT being said. Notice when emotions don't match words, or when someone is avoiding a key topic.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"There's something more, isn't there?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('There\'s something more, isn\'t there?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I'm noticing some hesitation..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'m noticing some hesitation...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Help me understand what's really going on here."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Help me understand what\'s really going on here.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I sense there may be underlying factors we haven't addressed..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I sense there may be underlying factors we haven\'t addressed...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When someone is avoiding a key topic</li>
+<li>When emotions don't match their words</li>
+<li>To uncover the real concern</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>They just need to vent, not be analyzed</li>
+<li>It sounds like you're playing therapist</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "Okay, got it."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "I'm noticing some hesitation. What's the real concern?"</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">Reflect Back</div>
+<div class="pattern-ipa">Core idea: "What I'm hearing is..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Confirming understanding</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Paraphrase what they said to confirm you understood, and to make them feel truly heard.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"So what you're saying is..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('So what you\'re saying is...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"It sounds like you're feeling..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('It sounds like you\'re feeling...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"If I understand correctly, the core issue is..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('If I understand correctly, the core issue is...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"To ensure I've captured your perspective accurately..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('To ensure I\'ve captured your perspective accurately...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>To confirm you understood correctly</li>
+<li>To make the speaker feel heard</li>
+<li>Before offering a solution or question</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You're just parroting their words back robotically</li>
+<li>It sounds like you're putting words in their mouth</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "I understand."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "What I'm hearing is that you feel undervalued. Is that right?"</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Ask Powerful Questions</div>
+<div class="pattern-ipa">Core idea: "What would success look like for you?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Opening up discovery</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Ask questions that open people up, not shut them down. Help them discover their own answers.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"What do you really want here?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What do you really want here?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"What's the outcome you're hoping for?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What\'s the outcome you\'re hoping for?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"What would success look like for you?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What would success look like for you?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"What would an ideal resolution look like from your perspective?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What would an ideal resolution look like from your perspective?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When someone is stuck or confused</li>
+<li>To help them clarify their own values</li>
+<li>To shift from complaining to problem-solving</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It's a crisis requiring immediate directive action</li>
+<li>You're using "why" questions that sound judgmental</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "Why did you do that?"</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "What were you hoping would happen?"</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Hold Silence</div>
+<div class="pattern-ipa">Core idea: (Let the silence do the work)</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐ High</div>
+<div class="pattern-context">Creating space for insight</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Silence is where insight happens. Don't rush to fill every pause. Let them think deeper.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"(Pause 3-5 seconds after they speak)"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Silence...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"(Maintain eye contact, nod slowly)"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Silence...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"(Pause intentionally after a powerful question)"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Silence...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"(Allow space for reflection before responding)"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Silence...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After asking a powerful question</li>
+<li>When someone is processing emotion</li>
+<li>To invite them to go deeper</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The silence becomes awkward or hostile</li>
+<li>They are clearly waiting for your answer</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> Filling every silence with your own words.</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> Letting the silence do the work.</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Summarize for Clarity</div>
+<div class="pattern-ipa">Core idea: "So the key points are..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Closing the loop</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Bring everything together at the end. Show respect by capturing their core message accurately.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"So what matters most to you is..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('So what matters most to you is...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Let me make sure I've got this..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Let me make sure I\'ve got this...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Let me make sure I've captured this correctly..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Let me make sure I\'ve captured this correctly...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"To summarize our discussion, the key takeaways are..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('To summarize our discussion, the key takeaways are...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>At the end of a deep conversation</li>
+<li>To ensure alignment before moving forward</li>
+<li>To show you valued their input</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You're just repeating everything they said verbatim</li>
+<li>It cuts them off while they're still processing</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "Cool, let's move on."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "So what I'm taking away is [X, Y, Z]. Did I get that right?"</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+Common Mistakes
+</h2>
+<p class="section-desc">3 common mistakes when listening. Avoid these to keep conversations deep and authentic.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: Listening to respond instead of to understand</h4>
+<div class="mistake-wrong">❌ Nodding while mentally preparing your reply.</div>
+<div class="mistake-right">✅ Fully present, letting their words sink in before you speak.</div>
+<div class="mistake-why">When you listen to respond, you miss 50% of what they're saying.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Asking "Why" questions that put people on defense</h4>
+<div class="mistake-wrong">❌ "Why did you make that decision?" (Sounds judgmental)</div>
+<div class="mistake-right">✅ "What led you to that decision?" (Sounds curious)</div>
+<div class="mistake-why">"Why" triggers justification. "What led you to" invites explanation.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Filling every silence with advice</h4>
+<div class="mistake-wrong">❌ Jumping in with solutions before they finish processing.</div>
+<div class="mistake-right">✅ Holding silence for 3-5 seconds after they speak. Let them go deeper.</div>
+<div class="mistake-why">Silence is where insight happens. Your advice often interrupts their own discovery.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+The Listening Decoder (Signature Section)
+</h2>
+<p class="section-desc">Hearing (B2) vs Listening (C1) vs Deep Listening (C1+). Learn to shift your level.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 The Listening Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>Level</th><th>What it looks like</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Hearing (B2)</strong></td><td>Nodding, waiting to talk</td><td>"Uh-huh. Anyway, let me tell you about..."</td></tr>
+<tr><td><strong>Active Listening (C1)</strong></td><td>Paraphrasing, asking clarifying questions</td><td>"So what you're saying is..."</td></tr>
+<tr><td><strong>Deep Listening (C1+)</strong></td><td>Hearing the unsaid, asking powerful questions</td><td>"I'm noticing some hesitation. What's the real concern?"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; font-weight: 700; color: var(--primary-deep); margin: 16px 0 10px 0;">Ordinary Questions (B2) vs Powerful Questions (C1):</p>
+<table class="decoder-table">
+<thead>
+<tr><th>Ordinary (Closes down)</th><th>Powerful (Opens up)</th></tr>
+</thead>
+<tbody>
+<tr><td>"Why did you do that?"</td><td>"What were you hoping would happen?"</td></tr>
+<tr><td>"What's the problem?"</td><td>"What would success look like?"</td></tr>
+<tr><td>"Do you agree?"</td><td>"How does this sit with your values?"</td></tr>
+<tr><td>"When will it be done?"</td><td>"What would it take to make this happen?"</td></tr>
+<tr><td>"Is that what you want?"</td><td>"What matters most to you here?"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Notice when you are asking ordinary questions. 2. Pause. 3. Shift to a powerful question. 4. Watch the conversation go deeper.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-left-right"></i>
+Casual ↔ Professional Comparison
+</h2>
+<p class="section-desc">Same moves, different registers. Match the register to the context.</p>
+</div>
+<div class="decoder-card" style="border-left-color: var(--highlight-blue);">
+<h3>🔄 Register Comparison</h3>
+<table class="comparison-table">
+<thead>
+<tr><th>Situation</th><th>🏠 Casual (Life/Family)</th><th>💼 Professional (Business)</th></tr>
+</thead>
+<tbody>
+<tr><td>Listen for Unsaid</td><td>"There's something more, isn't there?"</td><td>"Help me understand what's really going on here."</td></tr>
+<tr><td>Reflect Back</td><td>"So what you're saying is..."</td><td>"If I understand correctly, the core issue is..."</td></tr>
+<tr><td>Ask Powerful Q</td><td>"What do you really want here?"</td><td>"What's the outcome you're hoping for?"</td></tr>
+<tr><td>Hold Silence</td><td>(Pause 3-5 seconds)</td><td>(Pause after key question)</td></tr>
+<tr><td>Summarize</td><td>"So what matters most to you is..."</td><td>"Let me make sure I've captured this correctly..."</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Casual uses emotional, direct language. Professional uses structured, exploratory language. Match the register to the context.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: The Email That Wasn't Really About the Deadline
+</h2>
+<p class="section-desc">Read this email from an employee. Pause and analyze what's REALLY being said before reading the model answer.</p>
+</div>
+<div class="reading-card">
+<h3>📧 The Deadline Email</h3>
+<div class="email-box">
+<strong>Subject:</strong> Quick question about the project timeline<br><br>
+Hi [Manager],<br><br>
+I wanted to check if we can push the Friday deadline to next Wednesday. I know this is inconvenient, but I've been working on three other projects this week and I'm a bit overwhelmed.<br><br>
+I'll make sure to get it done as soon as possible. Sorry for the inconvenience.<br><br>
+Thanks,<br>
+Alex
+</div>
+<div class="reading-questions">
+<h4>🤔 Your Turn: Pause and Analyze</h4>
+<p style="margin-bottom: 10px;">Before reading the answer, ask yourself:</p>
+<p style="font-size: 13px; color: var(--text-secondary); margin-left: 20px; margin-bottom: 10px;">1. What is Alex REALLY saying beneath the surface?<br>2. What would a B2 manager reply? What would a C1 manager reply?</p>
+<p style="margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue-deep); margin-bottom: 10px;">✅ Model Answer:</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">1. <strong>The Unsaid:</strong> Alex is not just asking for a deadline extension. Alex is signaling burnout, lack of prioritization support, and possibly feeling undervalued. The "sorry for the inconvenience" is a red flag — Alex feels guilty for having limits.<br>2. <strong>B2 Reply:</strong> "Sure, Wednesday works. Just get it done." (Misses the real issue; Alex stays burnt out).<br>3. <strong>C1 Reply:</strong> "Thanks for flagging this, Alex. Before we adjust the deadline, I want to check in — you mentioned three other projects. What's the real challenge here? Is it workload, prioritization, or something else? Let's talk for 15 minutes today." (Listens for the unsaid, asks powerful questions, creates space).</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Ordinary Questions to Powerful Questions
+</h2>
+<p class="section-desc">Rewrite these ordinary questions into powerful questions. Explain WHY your version is better.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Ordinary → Powerful Questions</h3>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Ordinary (Business): "Why did you miss the deadline?"</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"What happened with the deadline?"</div>
+<div class="rewrite-level better"><strong>Better</strong>"What got in the way of the deadline?"</div>
+<div class="rewrite-level professional"><strong>Powerful</strong>"What were you hoping would happen with the timeline, and what got in the way?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> "Why" triggers defensiveness. The powerful version assumes positive intent and invites reflection on both the goal and the obstacle.</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Ordinary (Life): "Why are you so upset?"</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"What's making you upset?"</div>
+<div class="rewrite-level better"><strong>Better</strong>"What's bothering you right now?"</div>
+<div class="rewrite-level professional"><strong>Powerful</strong>"What's the thing that matters most to you right now?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> "Why are you upset" sounds dismissive of their emotion. The powerful version honors their feelings and helps them identify the core value that's been threatened.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 leaders listen deeply in real conversations. Notice the power of silence and powerful questions.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Teenager's Hidden Struggle (Life)</h3>
+<div class="story-context">Context: Your 16-year-old daughter says "I don't want to go to school anymore." You need to listen for what's NOT being said.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Daughter:</div>
+<div class="dialogue-text">"Dad, I don't want to go to school anymore. It's pointless."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That's a strong statement. <strong>What's behind that?</strong>" <span class="move-highlight unsaid">Listen Unsaid</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Daughter:</div>
+<div class="dialogue-text">"I just... I don't see the point. None of this matters."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>So what I'm hearing is</strong> you're feeling disconnected from what you're learning. Is that right?" <span class="move-highlight reflect">Reflect Back</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Daughter:</div>
+<div class="dialogue-text">"Yeah. And everyone else seems to have it figured out except me."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"(Pause 3 seconds)" <span class="move-highlight silence">Hold Silence</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Daughter:</div>
+<div class="dialogue-text">"Actually, I've been struggling with math for months. I'm too embarrassed to ask for help."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thank you for telling me. <strong>What would success look like</strong> for you in math class?" <span class="move-highlight question">Powerful Q</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Daughter:</div>
+<div class="dialogue-text">"I just want to not feel stupid anymore."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>So what matters most to you</strong> is feeling capable, not getting good grades. Is that right?" <span class="move-highlight summarize">Summarize</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Daughter:</div>
+<div class="dialogue-text">"Yeah. That's it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I hear you. Let's figure this out together. What kind of support would actually help?"</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Deep Listening:</h4>
+<ul>
+<li><strong>Listen for Unsaid:</strong> "What's behind that?" (Moved past the surface complaint).</li>
+<li><strong>Reflect Back:</strong> "So what I'm hearing is..." (Made her feel heard).</li>
+<li><strong>Hold Silence:</strong> (Pause 3 seconds) (Gave her space to reveal the real issue: math struggle).</li>
+<li><strong>Ask Powerful Q:</strong> "What would success look like?" (Shifted from problem to vision).</li>
+<li><strong>Summarize:</strong> "So what matters most to you is feeling capable..." (Captured the core value).</li>
+<li><strong>Register:</strong> Casual throughout (parent-teenager)</li>
+<li><strong>12 turns</strong> natural flow, all 5 moves used naturally</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: Employee's Real Fear (Business)</h3>
+<div class="story-context">Context: A high-performing employee suddenly says "I think I need to move on." You need to listen for the real fear.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Employee:</div>
+<div class="dialogue-text">"I think I need to move on. I've been thinking about it for a while."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I appreciate you sharing that. <strong>Help me understand what's really going on here.</strong>" <span class="move-highlight unsaid">Listen Unsaid</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Employee:</div>
+<div class="dialogue-text">"I just feel like I'm not growing. I've been doing the same work for two years."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>If I understand correctly</strong>, the core issue is growth, not the work itself. Is that right?" <span class="move-highlight reflect">Reflect Back</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Employee:</div>
+<div class="dialogue-text">"Yeah. And I see people getting promoted who haven't been here as long."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"(Pause 3 seconds)" <span class="move-highlight silence">Hold Silence</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Employee:</div>
+<div class="dialogue-text">"Honestly, I'm scared I'm stuck. That I've peaked here."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That's a really important thing to share. <strong>What would success look like</strong> for you in the next year?" <span class="move-highlight question">Powerful Q</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Employee:</div>
+<div class="dialogue-text">"I want to lead a project. I want to feel like I'm building something."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let me make sure I've captured this correctly</strong>: You're not looking to leave the company; you're looking for a new challenge and ownership. Is that accurate?" <span class="move-highlight summarize">Summarize</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Employee:</div>
+<div class="dialogue-text">"Yeah. That's exactly it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thank you for trusting me with this. Let's explore what that could look like here."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Deep Listening:</h4>
+<ul>
+<li><strong>Listen for Unsaid:</strong> "Help me understand what's really going on here."</li>
+<li><strong>Reflect Back:</strong> "If I understand correctly, the core issue is growth..."</li>
+<li><strong>Hold Silence:</strong> (Pause 3 seconds) (Allowed the real fear to surface: "I'm scared I'm stuck").</li>
+<li><strong>Ask Powerful Q:</strong> "What would success look like for you in the next year?"</li>
+<li><strong>Summarize:</strong> "Let me make sure I've captured this correctly..."</li>
+<li><strong>Register:</strong> Professional (manager-employee)</li>
+<li><strong>12 turns</strong> natural flow, all 5 moves used naturally</li>
+<li><strong>Employee had hidden fear</strong> → Leader created safety through silence and powerful questions</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Task
+</h2>
+<p class="section-desc">Listen to Dialogue 2 again. Answer these outcome-based questions.</p>
+</div>
+<div class="listening-card">
+<h3>🎧 Listening Comprehension</h3>
+<div class="listening-question">
+<p>1. Which sentence made the employee feel safe enough to share their real fear?</p>
+<div class="listening-answer">✅ "I appreciate you sharing that. Help me understand what's really going on here." (It showed curiosity, not judgment, and invited depth).</div>
+</div>
+<div class="listening-question">
+<p>2. Why did the leader pause for 3 seconds after "people getting promoted who haven't been here as long"?</p>
+<div class="listening-answer">✅ To hold silence. The leader didn't rush to defend the promotion process. The silence gave the employee space to go deeper and reveal the real fear: "I'm scared I'm stuck."</div>
+</div>
+<div class="listening-question">
+<p>3. What changed the employee's mindset from "I need to quit" to "Let's explore options"?</p>
+<div class="listening-answer">✅ The leader didn't argue or make promises. They asked "What would success look like?" and summarized accurately. This made the employee feel truly understood, which shifted the energy from exit to exploration.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-code"></i>
+Grammar in Context
+</h2>
+<p class="section-desc">Why we use these specific structures when listening deeply.</p>
+</div>
+<div class="grammar-card">
+<h3>📝 Grammar for Deep Listening</h3>
+<div class="grammar-item">
+<strong>1. Indirect Questions for Softening ("I'm wondering what's behind that...")</strong>
+<span>We use "I'm wondering..." or "I'm curious about..." instead of direct questions. It creates psychological safety and sounds like curiosity, not interrogation.</span>
+</div>
+<div class="grammar-item">
+<strong>2. Reflective Statements ("What I'm hearing is...")</strong>
+<span>We use "What I'm hearing is..." or "If I understand correctly..." to confirm understanding without imposing our own interpretation. It invites correction if we're wrong.</span>
+</div>
+<div class="grammar-item">
+<strong>3. Open-ended vs Closed Questions</strong>
+<span>"What would success look like?" (Open - invites exploration) vs "Do you want to quit?" (Closed - forces a yes/no). Open questions unlock discovery.</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Listening phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Listening Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>What's behind that</td><td class="ipa-cell">/wʌts bɪˈhaɪnd ðæt/</td><td>Stress on "behind"</td></tr>
+<tr><td>What I'm hearing is</td><td class="ipa-cell">/wʌt aɪm ˈhɪrɪŋ ɪz/</td><td>Smooth "I'm hearing"</td></tr>
+<tr><td>What would success look like</td><td class="ipa-cell">/wʌt wʊd səkˈsɛs lʊk laɪk/</td><td>Stress on "success" and "look"</td></tr>
+<tr><td>Help me understand</td><td class="ipa-cell">/hɛlp miː ʌndərˈstænd/</td><td>Stress on "understand"</td></tr>
+<tr><td>So what matters most</td><td class="ipa-cell">/soʊ wʌt ˈmætərz moʊst/</td><td>Stress on "matters" and "most"</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"What's behind that?"</span>
+<span class="pattern-label">↗ Rising</span>
+<span class="context-tip"><strong>Context:</strong> Used when listening for the unsaid. Rising tone = inviting, curious. <strong>Avoid:</strong> Falling (sounds like an accusation).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"So what matters most to you is..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when summarizing. Falling tone = grounded, confirming. <strong>Avoid:</strong> Rising (sounds like you're unsure of your summary).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"What would success look like?"</span>
+<span class="pattern-label">↗ Rising then ↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when asking powerful questions. Rise on "What", fall on "like". <strong>Avoid:</strong> Flat (sounds like a survey question).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice deep listening in different contexts. Focus on the communication goal, not just using moves.</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Listening to a Friend in Crisis</h3>
+<p class="scenario-context">Your friend just went through a divorce. They say "I'm fine" but their voice and eyes say otherwise. Listen for what's NOT being said.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Listen for the unsaid & hold space.
+<strong>📖 Possible Response:</strong> "You say you're okay, but something feels off. There's something more, isn't there? ... (Pause 3 seconds) ... I'm here. What's really going on?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Notice the mismatch between words and emotion</li>
+<li>Ask gently what's behind it</li>
+<li>Hold silence to let them open up</li>
+<li>Reflect back what you hear</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Listening to an Employee Who Wants to Quit</h3>
+<p class="scenario-context">A high-performing employee says they want to leave. Don't try to keep them immediately. Listen for the real reason.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Reflect back & ask powerful questions.
+<strong>📖 Possible Response:</strong> "I appreciate you telling me. Help me understand what's really going on here. ... If I understand correctly, the core issue is growth, not the work itself. Is that right? ... What would success look like for you in the next year?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Acknowledge their courage to share</li>
+<li>Ask what's really going on</li>
+<li>Reflect back their core issue</li>
+<li>Ask a powerful question about their future</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Listening in a Team Conflict</h3>
+<p class="scenario-context">Two team members are arguing fiercely about a project approach. You need to listen to both to find the real fear behind the conflict.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Summarize for clarity & ask powerful questions.
+<strong>📖 Possible Response:</strong> "Let me make sure I'm hearing both of you correctly. Sarah, you're worried about speed. Mike, you're worried about quality. Is that right? ... What would success look like for both of you? ... What matters most to each of you here?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Reflect back both perspectives accurately</li>
+<li>Find the underlying values (speed vs quality)</li>
+<li>Ask powerful questions to shift from positions to interests</li>
+<li>Summarize the shared goal</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Listening Challenge</h3>
+<p class="scenario-context">Morning: Listen to your child talk about school pressure (Casual). Afternoon: Listen to a colleague talk about burnout (Professional).</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Shift register. Life = emotional safety. Business = growth & ownership.
+<strong>📖 Possible Response (Life):</strong> "You say school is fine, but something feels off. What's really going on? ... (Pause) ... So what matters most to you right now is feeling capable, not just getting good grades. Is that right?"
+<strong>📖 Possible Response (Business):</strong> "I appreciate you sharing this. Help me understand what's really going on here. ... If I understand correctly, the core issue is workload, not the work itself. ... What would success look like for you in terms of balance?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Life = emotional safety, validation. Business = growth, ownership, balance.</li>
+<li>Listen for the unsaid in both</li>
+<li>Ask powerful questions in both</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply deep listening to actual situations this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 The 10-Minute Listening Challenge</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Have a 10-minute conversation where you ONLY listen and ask powerful questions. Do NOT give advice. Note the result.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Listen for the unsaid</li>
+<li>Reflect back what you hear</li>
+<li>Ask at least 2 powerful questions</li>
+<li>Write down what happened</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written reflection</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Listening Conversations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 short speeches (2 min) about how you would listen. 1 for family (crisis), 1 for work (burnout).</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register)</li>
+<li>1 Business scenario (professional register)</li>
+<li>Use the 5 moves naturally</li>
+<li>Focus on creating safety</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Listening Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, in every meeting, ask at least 1 powerful question and hold silence for 3 seconds after the question. Note people's reactions.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Ask at least 1 powerful question per meeting</li>
+<li>Hold silence for 3 seconds after asking</li>
+<li>Did people go deeper? Note their reaction</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Active Listening Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People feel truly heard and understood</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Hidden concerns surface naturally</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">People discover their own answers through your questions</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">Conversations go deeper, not wider</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Trust is built through presence, not advice</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You listen for the unsaid, not just the words</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You reflect back to confirm understanding</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You ask powerful questions that open people up</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You hold silence to create space for insight</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You summarize for clarity before moving forward</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Listen for the unsaid:</strong> "What's behind that?" before "Okay, got it."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Reflect back:</strong> "What I'm hearing is..." before "I understand."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Ask powerful questions:</strong> "What would success look like?" before "What's the problem?"</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Hold silence:</strong> Pause 3-5 seconds after a powerful question. Let the silence do the work.</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Summarize for clarity:</strong> "So what matters most to you is..." before "Let's move on."</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with listening moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Stage: Someone says "I'm fine" but looks upset</p>
+<button>Tap to reveal best move →</button>
+</div>
+<div class="flashcard-back">
+<p><strong>Move 1: Listen for the Unsaid</strong><br><br>"You say you're fine, but something feels off. What's really going on?"</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always notice the mismatch between words and emotion. Ask gently what's behind it.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Active Listening & Powerful Questions
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Judgement) An employee says "I'm fine" but their voice is flat and they avoid eye contact. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Okay, glad to hear it."</div>
+<div class="quiz-option">B. "You say you're fine, but something feels off. What's really going on?"</div>
+<div class="quiz-option">C. "Are you sure?"</div>
+<div class="quiz-option">D. "You look tired."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Judgement) A team member missed a deadline. Best question to ask?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Why did you miss the deadline?"</div>
+<div class="quiz-option">B. "What were you hoping would happen with the timeline, and what got in the way?"</div>
+<div class="quiz-option">C. "When will it be done?"</div>
+<div class="quiz-option">D. "Do you need help?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) Someone is sharing a difficult problem. You've been listening for 2 minutes. Best move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Offer a solution immediately.</div>
+<div class="quiz-option">B. Say "I understand" and move on.</div>
+<div class="quiz-option">C. Reflect back: "So what I'm hearing is that you feel overwhelmed. Is that right?"</div>
+<div class="quiz-option">D. Tell them a similar story about yourself.</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) You just asked "What would success look like for you?" The person pauses and looks thoughtful. Best move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Repeat the question louder.</div>
+<div class="quiz-option">B. Hold silence for 3-5 seconds. Let them think.</div>
+<div class="quiz-option">C. Offer your own definition of success.</div>
+<div class="quiz-option">D. Ask a different question.</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Judgement) At the end of a deep conversation, best way to close?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Cool, let's move on."</div>
+<div class="quiz-option">B. "So what I'm taking away is [X, Y, Z]. Did I get that right?"</div>
+<div class="quiz-option">C. "Thanks for sharing."</div>
+<div class="quiz-option">D. "Let me know if you need anything."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Life) Your teenager says "School is pointless." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "That's not true. Education is important."</div>
+<div class="quiz-option">B. "What's behind that? What's really going on?"</div>
+<div class="quiz-option">C. "You'll thank me later."</div>
+<div class="quiz-option">D. "Everyone feels that way sometimes."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Business) A colleague says "I'm thinking about leaving the company." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Oh no, please don't!"</div>
+<div class="quiz-option">B. "I appreciate you sharing that. Help me understand what's really going on here."</div>
+<div class="quiz-option">C. "Where are you going?"</div>
+<div class="quiz-option">D. "Let's talk to HR."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Judgement) Which question is a "Powerful Question"?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Why did you do that?"</div>
+<div class="quiz-option">B. "Do you agree?"</div>
+<div class="quiz-option">C. "What would success look like for you?"</div>
+<div class="quiz-option">D. "When will it be done?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Judgement) Which response shows "Deep Listening (C1+)"?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Uh-huh. Anyway, let me tell you about..."</div>
+<div class="quiz-option">B. "So what you're saying is..."</div>
+<div class="quiz-option">C. "I'm noticing some hesitation. What's the real concern?"</div>
+<div class="quiz-option">D. "I understand."</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-07-day-44.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 44: Communicating Purpose & Identity</div>
+</a>
+<a href="week-07-day-46.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 46: Recognition & Appreciation</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 45 Complete & Continue to Day 46</span>
+</button>
+<div class="complete-message">B2 leaders listen to respond. C1 leaders listen to understand. 👂</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 7 · Day 45 · Active Listening & Powerful Questions</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `Daughter: Dad, I don't want to go to school anymore. It's pointless. You: That's a strong statement. What's behind that? Daughter: I just... I don't see the point. None of this matters. You: So what I'm hearing is you're feeling disconnected from what you're learning. Is that right? Daughter: Yeah. And everyone else seems to have it figured out except me. You: (Pause 3 seconds) Daughter: Actually, I've been struggling with math for months. I'm too embarrassed to ask for help. You: Thank you for telling me. What would success look like for you in math class? Daughter: I just want to not feel stupid anymore. You: So what matters most to you is feeling capable, not getting good grades. Is that right? Daughter: Yeah. That's it. You: I hear you. Let's figure this out together. What kind of support would actually help?`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `Employee: I think I need to move on. I've been thinking about it for a while. You: I appreciate you sharing that. Help me understand what's really going on here. Employee: I just feel like I'm not growing. I've been doing the same work for two years. You: If I understand correctly, the core issue is growth, not the work itself. Is that right? Employee: Yeah. And I see people getting promoted who haven't been here as long. You: (Pause 3 seconds) Employee: Honestly, I'm scared I'm stuck. That I've peaked here. You: That's a really important thing to share. What would success look like for you in the next year? Employee: I want to lead a project. I want to feel like I'm building something. You: Let me make sure I've captured this correctly: You're not looking to leave the company; you're looking for a new challenge and ownership. Is that accurate? Employee: Yeah. That's exactly it. You: Thank you for trusting me with this. Let's explore what that could look like here.`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-45')) {
+completed.push('day-45');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 45 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'B2 leaders listen to respond. C1 leaders listen to understand. 👂';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-45')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 45 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
