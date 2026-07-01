@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 6 Day 42: Negotiation Simulation | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #FF6B6B;
+--primary-bright: #EE5A5A;
+--primary-soft: #FFE5E5;
+--primary-deep: #CC4444;
+--primary-light: #FF8E8E;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 100%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #FFF5F5 0%, #FFE5E5 50%, #FFD0D0 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🎯'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(255, 229, 229, 0.6), rgba(255, 208, 208, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(255, 107, 107, 0.2);
+}
+.philosophy-box {
+background: #FFF5F5;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(255, 229, 229, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(255, 229, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(255, 229, 229, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(255, 107, 107, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.day36 { background: var(--highlight-green); }
+.move-highlight.day37 { background: var(--highlight-blue); }
+.move-highlight.day38 { background: var(--highlight-orange); }
+.move-highlight.day39 { background: var(--highlight-purple); }
+.move-highlight.day40 { background: var(--highlight-gold); }
+.move-highlight.day41 { background: var(--primary); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(255, 229, 229, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { 
+border-radius: var(--radius-md); 
+padding: 20px; 
+border: 2px solid;
+font-size: 13px;
+}
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 10px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { 
+font-family: 'Fraunces', serif; 
+font-size: 13px; 
+font-weight: 600;
+margin-bottom: 8px; 
+color: var(--text-primary); 
+}
+.scenario-context { 
+font-size: 13px; 
+color: var(--text-secondary); 
+margin-bottom: 12px; 
+line-height: 1.3; 
+}
+.scenario-requirements { 
+background: rgba(255, 255, 255, 0.8); 
+border-radius: var(--radius-sm); 
+padding: 12px; 
+margin-bottom: 12px; 
+}
+.scenario-requirements h4 { 
+font-size: 12px; 
+font-weight: 600; 
+color: var(--text-primary); 
+margin-bottom: 6px; 
+}
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { 
+padding: 3px 0; 
+padding-left: 18px; 
+position: relative; 
+font-size: 13px; 
+color: var(--text-secondary); 
+line-height: 1.3; 
+}
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 12px;
+margin-bottom: 12px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 4px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(255, 229, 229, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(255, 229, 229, 0.3); border-radius: var(--radius-sm); }
+
+.reflection-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reflection-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.3rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 16px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.reflection-question {
+margin-bottom: 16px;
+padding: 16px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+}
+.reflection-question p {
+font-size: 14px;
+color: var(--text-primary);
+font-weight: 600;
+margin-bottom: 8px;
+}
+.reflection-question .hint {
+font-size: 13px;
+color: var(--text-secondary);
+font-style: italic;
+}
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(255, 229, 229, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.celebration-card {
+background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 142, 142, 0.1));
+border-radius: var(--radius-lg);
+padding: 32px;
+margin: 32px 0;
+border: 2px solid var(--primary);
+text-align: center;
+}
+.celebration-card h2 {
+font-family: 'Fraunces', serif;
+font-size: 1.8rem;
+font-weight: 600;
+color: var(--primary-deep);
+margin-bottom: 16px;
+}
+.celebration-card .achievement {
+font-size: 14px;
+color: var(--text-secondary);
+line-height: 1.4;
+margin-bottom: 20px;
+}
+.celebration-card .skills-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 12px;
+margin-top: 20px;
+text-align: left;
+}
+.celebration-card .skill-item {
+padding: 10px;
+background: rgba(255, 255, 255, 0.8);
+border-radius: var(--radius-sm);
+font-size: 13px;
+color: var(--text-secondary);
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.celebration-card .skill-item::before {
+content: '✅';
+font-size: 14px;
+}
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(255, 229, 229, 0.5), rgba(255, 208, 208, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(255, 107, 107, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 107, 107, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(255, 229, 229, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(255, 229, 229, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(255, 107, 107, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(255, 107, 107, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(255, 107, 107, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.scenario-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-06.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 6 Hub</span>
+</a>
+<div class="day-indicator">
+Day 42 / 42
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-06.html" class="day-tab">Overview</a>
+<a href="week-06-day-36.html" class="day-tab">Day 36</a>
+<a href="week-06-day-37.html" class="day-tab">Day 37</a>
+<a href="week-06-day-38.html" class="day-tab">Day 38</a>
+<a href="week-06-day-39.html" class="day-tab">Day 39</a>
+<a href="week-06-day-40.html" class="day-tab">Day 40</a>
+<a href="week-06-day-41.html" class="day-tab">Day 41</a>
+<a href="week-06-day-42.html" class="day-tab active">Day 42</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-06.html">Week 6</a> › Day 42
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🎯</span>
+<h1 class="day-title">Negotiation Simulation</h1>
+</div>
+<p class="day-subtitle">Today is the culmination of Week 6. You'll apply all 6 days in complete negotiation simulations. <strong>You no longer think about moves. You think about outcomes.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Milestone 6</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> Full Integration</div>
+<div class="meta-tag"><i class="ph-duotone ph-confetti"></i> Celebration</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Day 36-41 (Individual Skills)</div>
+<div style="font-size: 14px;">"Use the right move for the right moment."</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">Day 42 (Integration)</div>
+<div style="font-size: 14px;">"You no longer think about moves. You think about outcomes."</div>
+</div>
+</div>
+"B2 speakers follow frameworks. C1 speakers create outcomes. After Week 6, you no longer negotiate — you collaborate."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Patterns to Instinct
+</div>
+<p>
+Tuần này bạn đã học 30+ communication moves. Nhưng negotiation mastery không phải là nhớ 30 moves. Nó là biết <strong>khi nào dùng move nào</strong> và <strong>tại sao</strong>.
+<br><br>
+Hôm nay, bạn sẽ apply tất cả vào một cuộc đàm phán hoàn chỉnh. Bạn sẽ thấy rằng:
+<br><br>
+• <strong>Day 36</strong> (Understand Interests) → Mở đầu cuộc đàm phán<br>
+• <strong>Day 37</strong> (Persuasive Proposal) → Đưa ra giải pháp<br>
+• <strong>Day 38</strong> (Handling Concerns) → Xử lý từ chối<br>
+• <strong>Day 39</strong> (Win-Win Solutions) → Tạo giá trị chung<br>
+• <strong>Day 40</strong> (Building Influence) → Xây dựng liên minh<br>
+• <strong>Day 41</strong> (Commitment) → Chốt cam kết
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> After Week 6, you no longer think "Which pattern should I use?" You think "What outcome do we both want?" That's the difference between B2 and C1.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Life Simulation</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">Family vacation</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Business Simulation</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">Software implementation</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Integration Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">When to use what</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📝</div>
+<div class="plan-title">Reflection</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Week 6 review</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Flashcards + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Full Negotiation Simulations
+</h2>
+<p class="section-desc">Two complete negotiations applying all 6 days. Listen to how C1 speakers integrate everything naturally.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Simulation 1: Planning a Family Vacation with Extended Family (Life)</h3>
+<div class="story-context">Context: You and your spouse are discussing a family vacation with your brother, sister, and parents. Everyone has different interests: budget, location, activities, timing. You need to apply all 6 days to create a win-win solution.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thanks everyone for coming. <strong>I'd love to understand</strong> what everyone's hoping for from this vacation." <span class="move-highlight day36">Day 36</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"I just want to relax. No stress, no rushing."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"I want adventure. Something exciting for the kids."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Mom:</div>
+<div class="dialogue-text">"I want to spend time with everyone. That's most important to me."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Dad:</div>
+<div class="dialogue-text">"Budget is a concern. We can't spend too much."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>So what I'm hearing is</strong> we all want to spend quality time together, but we have different ideas about how to do it. <strong>What's most important to each of you?</strong>" <span class="move-highlight day36">Day 36</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Relaxation. No packed schedules."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Activities for the kids. They need to be entertained."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Mom:</div>
+<div class="dialogue-text">"Being together. That's it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Dad:</div>
+<div class="dialogue-text">"Keeping costs reasonable."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Based on what we've discussed, here's what we've decided</strong> — we need a vacation that balances relaxation, activities, togetherness, and budget." <span class="move-highlight day37">Day 37</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Would you be comfortable if I proposed</strong> a beach house rental? <strong>Here's how this helps all of us:</strong> You get relaxation, the kids have beach activities, we're all together, and it's more affordable than a resort." <span class="move-highlight day37">Day 37</span> <span class="move-highlight day39">Day 39</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Beach? That's boring. What about mountains?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I understand your concern about adventure.</strong> <strong>What if we approached it this way</strong> — we rent a beach house, but we also plan one day trip to the mountains for hiking? <strong>That way</strong> everyone gets what they want." <span class="move-highlight day38">Day 38</span> <span class="move-highlight day39">Day 39</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Hmm, that could work. But what if it rains?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>That's a valid point.</strong> <strong>Here's how we'd mitigate that risk</strong> — we'll choose a beach house with indoor activities: games room, movie theater, etc. <strong>And</strong> we'll have a backup plan for indoor activities if weather is bad." <span class="move-highlight day38">Day 38</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Mom:</div>
+<div class="dialogue-text">"That sounds nice. But how do we split the cost?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Great question.</strong> <strong>Here's what I'd recommend:</strong> We split the cost 4 ways — you, me, brother, and sister. <strong>That way</strong> it's affordable for everyone." <span class="move-highlight day37">Day 37</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Dad:</div>
+<div class="dialogue-text">"I can do that. But I need to know the total cost first."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let's commit to</strong> getting 3 quotes from different rental companies by next Friday. <strong>I'll handle</strong> the research and present the options to everyone." <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Friday works for me. But can we decide by Sunday?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Would you be comfortable if we decided</strong> on Sunday evening after reviewing the quotes? <strong>That gives us</strong> time to think it through." <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Sunday works. But I want to see the activities planned too."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Perfect.</strong> <strong>I'll take care of</strong> researching the beach house options and planning the activities. <strong>You'll handle</strong> checking the kids' schedules and confirming dates." <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Mom:</div>
+<div class="dialogue-text">"That sounds good. But what if someone can't make it?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>How will we know this is successful?</strong> We'll have a confirmed booking, everyone's dates aligned, and a clear plan for activities and costs." <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Dad:</div>
+<div class="dialogue-text">"I like that. But I need to know the payment schedule."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let's touch base</strong> on Sunday at 7 PM to review the quotes and make a decision. <strong>Does that work for everyone?</strong>" <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Everyone:</div>
+<div class="dialogue-text">"Yes, that works."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Perfect.</strong> <strong>Let me confirm</strong> — I'll research 3 beach house options by Friday, brother will check schedules, and we'll decide together on Sunday at 7 PM. <strong>Does that capture everyone's understanding?</strong>" <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Everyone:</div>
+<div class="dialogue-text">"Yep!"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Great. <strong>I'll send</strong> a summary text with all the commitments. <strong>Are we aligned on</strong> planning a beach vacation with a mountain day trip?" <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Everyone:</div>
+<div class="dialogue-text">"Absolutely!"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Awesome. <strong>I'm really excited about this.</strong> Thanks everyone for working together to make this happen." <span class="move-highlight day40">Day 40</span></div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — All 6 Days Applied:</h4>
+<ul>
+<li><strong>Day 36 (Understand Interests):</strong> "I'd love to understand what everyone's hoping for..." → Opened with curiosity</li>
+<li><strong>Day 37 (Persuasive Proposal):</strong> "Would you be comfortable if I proposed..." → Structured proposal with benefits</li>
+<li><strong>Day 38 (Handling Concerns):</strong> "I understand your concern about adventure..." → Addressed brother's objection</li>
+<li><strong>Day 39 (Win-Win Solutions):</strong> "That way everyone gets what they want" → Created value for all</li>
+<li><strong>Day 40 (Building Influence):</strong> (Implicit) Got buy-in from everyone through collaboration</li>
+<li><strong>Day 41 (Commitment):</strong> "Let's commit to... by Friday" → Locked in specific commitments</li>
+<li><strong>Register:</strong> Casual throughout (family)</li>
+<li><strong>20 turns</strong> complete negotiation from start to finish</li>
+<li><strong>All 6 days applied naturally</strong> in one conversation</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Simulation 2: Negotiating a New Software Implementation (Business)</h3>
+<div class="story-context">Context: You're a Project Manager proposing a new project management tool. You need to convince: Director (budget concern), Marketing Lead (learning curve concern), Engineering Lead (integration concern), and Finance Lead (ROI concern). Apply all 6 days to create a win-win solution.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thanks everyone for joining. <strong>I'd love to understand</strong> what each of you is hoping to achieve with our project management process." <span class="move-highlight day36">Day 36</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Director:</div>
+<div class="dialogue-text">"I need to see better visibility into project status. I'm spending too much time in status meetings."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"I need a tool that's easy to use. My team is already overwhelmed."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering Lead:</div>
+<div class="dialogue-text">"I need something that integrates with our existing systems. We can't afford disruption."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Finance Lead:</div>
+<div class="dialogue-text">"I need to see clear ROI. We can't justify the cost without data."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>So what I'm hearing is</strong> we all want to improve our project management, but we have different priorities: visibility, ease of use, integration, and ROI. <strong>What's most important to each of you?</strong>" <span class="move-highlight day36">Day 36</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Director:</div>
+<div class="dialogue-text">"Visibility. That's #1."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Ease of use. If it's complicated, we won't adopt it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering Lead:</div>
+<div class="dialogue-text">"Integration. It has to work with our current stack."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Finance Lead:</div>
+<div class="dialogue-text">"ROI. I need to see the payback period."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Based on what we've discussed, here's what we've decided</strong> — we need a project management tool that provides visibility, is easy to use, integrates with existing systems, and delivers clear ROI." <span class="move-highlight day37">Day 37</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Would you be comfortable if I proposed</strong> Asana as our new tool? <strong>Here's how this helps all of us:</strong> Director gets real-time dashboards, Marketing gets an intuitive interface, Engineering gets API integration, and Finance sees 30% time savings within 6 months." <span class="move-highlight day37">Day 37</span> <span class="move-highlight day39">Day 39</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Asana? I've heard the learning curve is steep. My team can't afford that."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I understand your concern about the learning curve.</strong> <strong>What if we approached it this way</strong> — we start with a 2-week pilot with just Marketing and Engineering. <strong>That way</strong> we can test the learning curve before full rollout." <span class="move-highlight day38">Day 38</span> <span class="move-highlight day39">Day 39</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering Lead:</div>
+<div class="dialogue-text">"But what about integration with our Jira and Slack? That's critical."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>That's a valid point.</strong> <strong>The data actually shows</strong> Asana has native integrations with both Jira and Slack. <strong>Here's how we'd mitigate that risk</strong> — we'll do a technical review in week 1 of the pilot to confirm integration works seamlessly." <span class="move-highlight day38">Day 38</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Finance Lead:</div>
+<div class="dialogue-text">"What's the cost? And when do we see ROI?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Great question.</strong> <strong>Here's what I'd recommend:</strong> The cost is $50/user/month. <strong>Based on our current time spent</strong> in status meetings and manual tracking, we'll save 10 hours per person per week. <strong>That means</strong> ROI within 3 months." <span class="move-highlight day37">Day 37</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Director:</div>
+<div class="dialogue-text">"I like that. But I need to see a detailed business case before approving."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let's commit to</strong> me preparing a detailed business case by next Friday, including cost analysis, ROI projections, and integration plan. <strong>I'll handle</strong> the research and present it to everyone." <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Friday works. But can we review it together before you present to the Director?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Would you be comfortable if we reviewed</strong> the business case together on Monday morning, then I present to the Director on Monday afternoon? <strong>That gives us</strong> time to refine it." <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering Lead:</div>
+<div class="dialogue-text">"Monday works. But I want to be part of the technical review."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Perfect.</strong> <strong>I'll take care of</strong> preparing the business case and cost analysis. <strong>Engineering Lead, you'll handle</strong> the technical review of integrations. <strong>Marketing Lead, you'll handle</strong> testing the user experience during the pilot." <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Finance Lead:</div>
+<div class="dialogue-text">"I like that. But what if the ROI doesn't materialize?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>How will we know this is successful?</strong> We'll have 30% time savings within 6 months, 90% adoption rate, and positive feedback from all teams." <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Director:</div>
+<div class="dialogue-text">"That sounds good. But I need to see the pilot results before full rollout."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Let's touch base</strong> on Monday at 10 AM to review the business case, then we'll schedule a pilot review for 6 weeks later. <strong>Does that work for everyone?</strong>" <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Everyone:</div>
+<div class="dialogue-text">"Yes, that works."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Perfect.</strong> <strong>Let me confirm</strong> — I'll prepare the business case by Friday, Engineering Lead will do technical review, Marketing Lead will test user experience, and we'll review together on Monday at 10 AM. <strong>Does that match everyone's understanding?</strong>" <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Everyone:</div>
+<div class="dialogue-text">"Yep!"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Great. <strong>I'll send</strong> a summary email within the hour with all the commitments. <strong>Are we aligned on</strong> implementing Asana with a 2-week pilot?" <span class="move-highlight day41">Day 41</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Everyone:</div>
+<div class="dialogue-text">"Absolutely!"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Awesome. <strong>I'm really excited about this.</strong> Thanks everyone for working together to improve our project management. <strong>This is going to make a real difference for all of us.</strong>" <span class="move-highlight day40">Day 40</span></div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — All 6 Days Applied:</h4>
+<ul>
+<li><strong>Day 36 (Understand Interests):</strong> "I'd love to understand what each of you is hoping to achieve..." → Opened with curiosity</li>
+<li><strong>Day 37 (Persuasive Proposal):</strong> "Would you be comfortable if I proposed..." → Structured proposal with benefits</li>
+<li><strong>Day 38 (Handling Concerns):</strong> "I understand your concern about the learning curve..." → Addressed Marketing Lead's objection</li>
+<li><strong>Day 39 (Win-Win Solutions):</strong> "That way everyone gets what they want" → Created value for all</li>
+<li><strong>Day 40 (Building Influence):</strong> (Implicit) Got buy-in from all stakeholders through collaboration</li>
+<li><strong>Day 41 (Commitment):</strong> "Let's commit to... by Friday" → Locked in specific commitments</li>
+<li><strong>Register:</strong> Professional (cross-functional meeting)</li>
+<li><strong>25 turns</strong> complete negotiation from start to finish</li>
+<li><strong>All 6 days applied naturally</strong> in one conversation</li>
+<li><strong>Multiple concerns addressed</strong> (learning curve, integration, cost, ROI)</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+Integration Decoder (Signature Section)
+</h2>
+<p class="section-desc">When to use which move during a negotiation. This is your roadmap for applying all 6 days.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 Integration Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>Stage of Negotiation</th><th>Best Day</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Opening</strong></td><td>Day 36: Understand Interests</td><td>"I'd love to understand what you're hoping to achieve..."</td></tr>
+<tr><td><strong>Proposing Solution</strong></td><td>Day 37: Persuasive Proposal</td><td>"Would you be comfortable if I proposed..."</td></tr>
+<tr><td><strong>Handling Objection</strong></td><td>Day 38: Handle Concerns</td><td>"I understand your concern about..."</td></tr>
+<tr><td><strong>Creating Value</strong></td><td>Day 39: Win-Win Solutions</td><td>"What if we structured this so everyone wins?"</td></tr>
+<tr><td><strong>Building Support</strong></td><td>Day 40: Building Influence</td><td>"I'd love your perspective on this..."</td></tr>
+<tr><td><strong>Locking Commitment</strong></td><td>Day 41: Commitment</td><td>"Let's commit to... by [date]"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Identify which stage of negotiation you're in. 2. Choose the day that fits that stage. 3. Apply the moves naturally. 4. Move to the next stage.
+<br><br>
+<strong>Key insight:</strong> You don't use all 6 days in every conversation. You use the right day for the right stage.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice applying all 6 days in different contexts. Integrate everything you've learned this week.</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Family Budget Discussion</h3>
+<p class="scenario-context">You and your spouse are discussing buying a new car. There are multiple concerns: budget, timing, type of car. Apply all 6 days.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I'd love to understand what you're hoping for in a new car."
+<strong>📖 Possible Response:</strong> "I'd love to understand what you're hoping for in a new car. So what I'm hearing is you want reliability, I want fuel efficiency, and we both want to stay within budget. Would you be comfortable if I proposed a hybrid? That way we get reliability, fuel efficiency, and it's within our budget. I understand your concern about the upfront cost. What if we looked at leasing instead of buying? That way we get the car now and pay less upfront. Let's commit to researching 3 options by Friday and deciding on Sunday. Does that work?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use all 6 days naturally</li>
+<li>Handle at least 1 concern</li>
+<li>Lock in specific commitments</li>
+<li>Keep it collaborative</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Team Process Improvement</h3>
+<p class="scenario-context">You want to propose a new workflow for the team. There are concerns from 2-3 colleagues: learning curve, time investment, disruption. Apply all 6 days.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I'd love to understand what each of you is hoping to achieve with our current process."
+<strong>📖 Possible Response:</strong> "I'd love to understand what each of you is hoping to achieve with our current process. So what I'm hearing is you want efficiency, you want less manual work, and you want better visibility. Would you be comfortable if I proposed a new workflow tool? That way we get automation, visibility, and less manual work. I understand your concern about the learning curve. What if we started with a 1-week pilot? That way we can test it before full rollout. Let's commit to testing the tool this week and reviewing on Friday. Does that work for everyone?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use all 6 days naturally</li>
+<li>Handle multiple concerns</li>
+<li>Lock in specific commitments</li>
+<li>Build support from team</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Client Scope Negotiation</h3>
+<p class="scenario-context">Client wants to add features but won't increase budget. There are concerns: timeline, cost, quality. Apply all 6 days.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I'd love to understand what you're hoping to achieve with these additional features."
+<strong>📖 Possible Response:</strong> "I'd love to understand what you're hoping to achieve with these additional features. So what I'm hearing is you want better user experience, you want competitive advantage, and you want to stay within budget. Would you be comfortable if I proposed a phased approach? That way we deliver core features now and add advanced features in Phase 2. I understand your concern about the timeline. What if we prioritized the most critical features for Phase 1? That way we launch on time and add the rest later. Let's commit to finalizing the Phase 1 scope by Friday and reviewing on Monday. Does that match your understanding?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use all 6 days naturally</li>
+<li>Handle scope creep concerns</li>
+<li>Lock in specific commitments</li>
+<li>Create win-win solution</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Full Negotiation Challenge</h3>
+<p class="scenario-context">Morning: Negotiate with family about a big decision (Casual). Apply all 6 days. Afternoon: Negotiate with stakeholders about a business initiative (Professional). Apply all 6 days.</p>
+<div class="model-response">
+<strong>💡 Model Opening (Life):</strong> "I'd love to understand what everyone's hoping for..."
+<strong>💡 Model Opening (Business):</strong> "I'd love to understand what each of you is hoping to achieve..."
+<strong>📖 Possible Response (Life):</strong> "I'd love to understand what everyone's hoping for from this decision. So what I'm hearing is we all want to make the right choice, but we have different priorities. Would you be comfortable if I proposed a solution that addresses everyone's concerns? I understand your concern about the cost. What if we structured this so it's affordable for everyone? Let's commit to researching options by Friday and deciding on Sunday. Does that work?"
+<strong>📖 Possible Response (Business):</strong> "I'd love to understand what each of you is hoping to achieve with this initiative. So what I'm hearing is you want ROI, you want efficiency, and you want minimal disruption. Would you be comfortable if I proposed a phased approach? That way we get quick wins now and scale later. I understand your concern about the investment. What if we started with a pilot? That way we can prove ROI before full rollout. Let's commit to preparing the business case by Friday and reviewing on Monday. Does that match everyone's understanding?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Use all 6 days in each context</li>
+<li>Life: simple, direct language. Business: structured, professional language</li>
+<li>Handle multiple concerns in each</li>
+<li>Lock in specific commitments</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply all 6 days in actual negotiations this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Full Negotiation Template Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Choose 1 situation (Life or Business) where you need to negotiate. Practice applying all 6 days in one conversation.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Apply all 6 days naturally</li>
+<li>Handle at least 1 concern</li>
+<li>Lock in specific commitments</li>
+<li>Write down the flow of the negotiation</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written negotiation structure</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Full Negotiations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 conversations (Life & Business) where you apply all 6 days. Focus on natural flow and integration.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register, simple language)</li>
+<li>1 Business scenario (professional register, structured language)</li>
+<li>Apply all 6 days in each</li>
+<li>Handle multiple concerns</li>
+<li>Lock in specific commitments</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Negotiation Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, when you need to negotiate something important, use the Integration Decoder to apply all 6 days in real-time. Note the results.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Apply all 6 days in at least 1 real negotiation</li>
+<li>Map which day you used at each stage</li>
+<li>Handle multiple concerns</li>
+<li>Lock in specific commitments</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="reflection-card">
+<h3>📝 Week 6 Reflection</h3>
+<div class="reflection-question">
+<p>1. The Biggest Shift</p>
+<p class="hint">Điều gì thay đổi lớn nhất trong cách bạn tư duy về negotiation sau Week 6?</p>
+</div>
+<div class="reflection-question">
+<p>2. The Most Valuable Day</p>
+<p class="hint">Day nào trong Week 6 có giá trị nhất với bạn? Tại sao?</p>
+</div>
+<div class="reflection-question">
+<p>3. The Integration Challenge</p>
+<p class="hint">Khó khăn lớn nhất khi tích hợp 6 days vào một cuộc đàm phán là gì? Bạn sẽ làm gì để cải thiện?</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Negotiation Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">You understand interests before positions</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">You create value instead of dividing value</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">You handle objections gracefully</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">You build coalitions and influence</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">You lock in specific commitments</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery6">
+<label for="mastery6">You integrate all 6 days naturally</label>
+</div>
+</div>
+
+<div class="celebration-card">
+<h2>🎉 Milestone 6: Negotiation Thinking Complete!</h2>
+<p class="achievement">
+<strong>Congratulations!</strong> You've completed Week 6: Negotiation Thinking. You now think like a C1 negotiator — creating value instead of dividing value, understanding interests instead of fighting positions.
+</p>
+<div class="skills-list">
+<div class="skill-item">Understand interests before positions</div>
+<div class="skill-item">Build compelling business cases</div>
+<div class="skill-item">Handle objections gracefully</div>
+<div class="skill-item">Map stakeholder interests</div>
+<div class="skill-item">Create win-win solutions</div>
+<div class="skill-item">Build coalitions across departments</div>
+<div class="skill-item">Get specific commitments</div>
+<div class="skill-item">Follow through on agreements</div>
+<div class="skill-item">Navigate complex negotiations</div>
+<div class="skill-item">Create value for all parties</div>
+<div class="skill-item">Think strategically about trade-offs</div>
+<div class="skill-item">Lead negotiations with confidence</div>
+</div>
+<p style="margin-top: 20px; font-size: 14px; color: var(--text-secondary);">
+<strong>Week 6 Achievement:</strong> 7 days completed • 30+ communication moves learned • 4 negotiation principles mastered • 6 days integrated into natural flow • Milestone 6 achieved
+</p>
+<p style="margin-top: 16px; font-size: 15px; color: var(--primary-deep); font-weight: 600;">
+<strong>Next step:</strong> Week 7 - Leadership Communication
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with integration stages. Front: stage. Back: best day to use.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Stage: Opening a negotiation</p>
+<button>Tap to reveal best day →</button>
+</div>
+<div class="flashcard-back">
+<p><strong>Day 36: Understand Interests</strong><br><br>"I'd love to understand what you're hoping to achieve..."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always start with curiosity. Understand interests before proposing solutions.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Negotiation Simulation
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response based on all 6 days.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Judgement) You're opening a negotiation with a client. Best first move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Here's my proposal..."</div>
+<div class="quiz-option">B. "I'd love to understand what you're hoping to achieve..."</div>
+<div class="quiz-option">C. "Let's commit to a deadline..."</div>
+<div class="quiz-option">D. "You need to approve this..."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Judgement) Client says "That's too expensive." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "No, it's not."</div>
+<div class="quiz-option">B. "I understand your concern about cost. What if we structured this so it delivers ROI within 3 months?"</div>
+<div class="quiz-option">C. "Okay, we'll lower the price."</div>
+<div class="quiz-option">D. "That's our final offer."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) Team member says "I don't think this will work." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "You're wrong."</div>
+<div class="quiz-option">B. "That's a valid point. Here's how we'd mitigate that risk..."</div>
+<div class="quiz-option">C. "Fine, we'll do it your way."</div>
+<div class="quiz-option">D. "You have to support this."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) You've proposed a solution. Next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Lock in commitments</div>
+<div class="quiz-option">B. Handle concerns</div>
+<div class="quiz-option">C. Build support</div>
+<div class="quiz-option">D. All of the above depending on response</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Judgement) Stakeholder says "I need to think about it." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Okay, let me know."</div>
+<div class="quiz-option">B. "By when? With what information? Let's commit to reviewing this on [date]."</div>
+<div class="quiz-option">C. "No problem."</div>
+<div class="quiz-option">D. "You have to decide now."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Judgement) You've handled all concerns. Next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Propose new solution</div>
+<div class="quiz-option">B. Lock in commitments with owners, deadlines, and success metrics</div>
+<div class="quiz-option">C. Start over</div>
+<div class="quiz-option">D. Give up</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Judgement) Meeting ends with "Great discussion!" What's missing?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Enthusiasm</div>
+<div class="quiz-option">B. Specific commitments with owners, deadlines, success metrics, and check-in date</div>
+<div class="quiz-option">C. Agreement</div>
+<div class="quiz-option">D. Action</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Life) You're negotiating with your spouse about a vacation. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We're going to the beach. End of discussion."</div>
+<div class="quiz-option">B. "I'd love to understand what you're hoping for. What if we found something that works for both of us?"</div>
+<div class="quiz-option">C. "You always want mountains. Fine, mountains it is."</div>
+<div class="quiz-option">D. "I've already booked it."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Business) You've built a coalition with 3 stakeholders. Next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Present to decision-maker alone</div>
+<div class="quiz-option">B. Present to decision-maker with coalition backing</div>
+<div class="quiz-option">C. Wait for more support</div>
+<div class="quiz-option">D. Give up</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-06-day-41.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 41: Commitment & Follow-through</div>
+</a>
+<a href="week-07.html" class="nav-card">
+<div class="nav-label">Next Week →</div>
+<div class="nav-title">Week 7: Leadership Communication</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 42 Complete & Finish Week 6</span>
+</button>
+<div class="complete-message">You no longer negotiate — you collaborate. After Week 6, you create value instead of dividing value. 🎯</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 6 · Day 42 · Negotiation Simulation · Milestone 6 Complete!</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `You: Thanks everyone for coming. I'd love to understand what everyone's hoping for from this vacation. Spouse: I just want to relax. No stress, no rushing. Brother: I want adventure. Something exciting for the kids. Mom: I want to spend time with everyone. That's most important to me. Dad: Budget is a concern. We can't spend too much. You: So what I'm hearing is we all want to spend quality time together, but we have different ideas about how to do it. What's most important to each of you? Spouse: Relaxation. No packed schedules. Brother: Activities for the kids. They need to be entertained. Mom: Being together. That's it. Dad: Keeping costs reasonable. You: Based on what we've discussed, here's what we've decided — we need a vacation that balances relaxation, activities, togetherness, and budget. Would you be comfortable if I proposed a beach house rental? Here's how this helps all of us: You get relaxation, the kids have beach activities, we're all together, and it's more affordable than a resort. Brother: Beach? That's boring. What about mountains? You: I understand your concern about adventure. What if we approached it this way — we rent a beach house, but we also plan one day trip to the mountains for hiking? That way everyone gets what they want. Brother: Hmm, that could work. But what if it rains? You: That's a valid point. Here's how we'd mitigate that risk — we'll choose a beach house with indoor activities: games room, movie theater, etc. And we'll have a backup plan for indoor activities if weather is bad. Mom: That sounds nice. But how do we split the cost? You: Great question. Here's what I'd recommend: We split the cost 4 ways — you, me, brother, and sister. That way it's affordable for everyone. Dad: I can do that. But I need to know the total cost first. You: Let's commit to getting 3 quotes from different rental companies by next Friday. I'll handle the research and present the options to everyone. Spouse: Friday works for me. But can we decide by Sunday? You: Would you be comfortable if we decided on Sunday evening after reviewing the quotes? That gives us time to think it through. Brother: Sunday works. But I want to see the activities planned too. You: Perfect. I'll take care of researching the beach house options and planning the activities. You'll handle checking the kids' schedules and confirming dates. Mom: That sounds good. But what if someone can't make it? You: How will we know this is successful? We'll have a confirmed booking, everyone's dates aligned, and a clear plan for activities and costs. Dad: I like that. But I need to know the payment schedule. You: Let's touch base on Sunday at 7 PM to review the quotes and make a decision. Does that work for everyone? Everyone: Yes, that works. You: Perfect. Let me confirm — I'll research 3 beach house options by Friday, brother will check schedules, and we'll decide together on Sunday at 7 PM. Does that capture everyone's understanding? Everyone: Yep! You: Great. I'll send a summary text with all the commitments. Are we aligned on planning a beach vacation with a mountain day trip? Everyone: Absolutely! You: Awesome. I'm really excited about this. Thanks everyone for working together to make this happen.`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `You: Thanks everyone for joining. I'd love to understand what each of you is hoping to achieve with our project management process. Director: I need to see better visibility into project status. I'm spending too much time in status meetings. Marketing Lead: I need a tool that's easy to use. My team is already overwhelmed. Engineering Lead: I need something that integrates with our existing systems. We can't afford disruption. Finance Lead: I need to see clear ROI. We can't justify the cost without data. You: So what I'm hearing is we all want to improve our project management, but we have different priorities: visibility, ease of use, integration, and ROI. What's most important to each of you? Director: Visibility. That's number 1. Marketing Lead: Ease of use. If it's complicated, we won't adopt it. Engineering Lead: Integration. It has to work with our current stack. Finance Lead: ROI. I need to see the payback period. You: Based on what we've discussed, here's what we've decided — we need a project management tool that provides visibility, is easy to use, integrates with existing systems, and delivers clear ROI. Would you be comfortable if I proposed Asana as our new tool? Here's how this helps all of us: Director gets real-time dashboards, Marketing gets an intuitive interface, Engineering gets API integration, and Finance sees 30 percent time savings within 6 months. Marketing Lead: Asana? I've heard the learning curve is steep. My team can't afford that. You: I understand your concern about the learning curve. What if we approached it this way — we start with a 2-week pilot with just Marketing and Engineering. That way we can test the learning curve before full rollout. Engineering Lead: But what about integration with our Jira and Slack? That's critical. You: That's a valid point. The data actually shows Asana has native integrations with both Jira and Slack. Here's how we'd mitigate that risk — we'll do a technical review in week 1 of the pilot to confirm integration works seamlessly. Finance Lead: What's the cost? And when do we see ROI? You: Great question. Here's what I'd recommend: The cost is 50 dollars per user per month. Based on our current time spent in status meetings and manual tracking, we'll save 10 hours per person per week. That means ROI within 3 months. Director: I like that. But I need to see a detailed business case before approving. You: Let's commit to me preparing a detailed business case by next Friday, including cost analysis, ROI projections, and integration plan. I'll handle the research and present it to everyone. Marketing Lead: Friday works. But can we review it together before you present to the Director? You: Would you be comfortable if we reviewed the business case together on Monday morning, then I present to the Director on Monday afternoon? That gives us time to refine it. Engineering Lead: Monday works. But I want to be part of the technical review. You: Perfect. I'll take care of preparing the business case and cost analysis. Engineering Lead, you'll handle the technical review of integrations. Marketing Lead, you'll handle testing the user experience during the pilot. Finance Lead: I like that. But what if the ROI doesn't materialize? You: How will we know this is successful? We'll have 30 percent time savings within 6 months, 90 percent adoption rate, and positive feedback from all teams. Director: That sounds good. But I need to see the pilot results before full rollout. You: Let's touch base on Monday at 10 AM to review the business case, then we'll schedule a pilot review for 6 weeks later. Does that work for everyone? Everyone: Yes, that works. You: Perfect. Let me confirm — I'll prepare the business case by Friday, Engineering Lead will do technical review, Marketing Lead will test user experience, and we'll review together on Monday at 10 AM. Does that match everyone's understanding? Everyone: Yep! You: Great. I'll send a summary email within the hour with all the commitments. Are we aligned on implementing Asana with a 2-week pilot? Everyone: Absolutely! You: Awesome. I'm really excited about this. Thanks everyone for working together to improve our project management. This is going to make a real difference for all of us.`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-42')) {
+completed.push('day-42');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Week 6 Complete! Milestone 6 Achieved!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'You no longer negotiate — you collaborate. After Week 6, you create value instead of dividing value. 🎯';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-42')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Week 6 Completed - Milestone 6 Achieved!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
