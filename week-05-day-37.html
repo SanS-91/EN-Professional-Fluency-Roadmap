@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 6 Day 37: Building a Persuasive Proposal | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #10B981;
+--primary-bright: #059669;
+--primary-soft: #D1FAE5;
+--primary-deep: #065F46;
+--primary-light: #34D399;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 5%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 50%, #A7F3D0 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '📊'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(209, 250, 229, 0.6), rgba(167, 243, 208, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(16, 185, 129, 0.2);
+}
+.philosophy-box {
+background: #ECFDF5;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.philosophy-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+.philosophy-card {
+padding: 20px;
+border-radius: var(--radius-md);
+border-left: 4px solid;
+}
+.philosophy-card.negative { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.philosophy-card.positive { background: rgba(16, 185, 129, 0.08); border-left-color: #10B981; }
+.philosophy-card-title {
+font-weight: 600; margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-card.negative .philosophy-card-title { color: #C53030; }
+.philosophy-card.positive .philosophy-card-title { color: #065F46; }
+.philosophy-card-list { list-style: none; }
+.philosophy-card-list li {
+padding: 4px 0; padding-left: 24px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.philosophy-card.negative .philosophy-card-list li::before { content: '✕'; position: absolute; left: 0; color: #E53E3E; font-weight: 600; }
+.philosophy-card.positive .philosophy-card-list li::before { content: '✓'; position: absolute; left: 0; color: #10B981; font-weight: 600; }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.8rem; margin-bottom: 8px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 12px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(209, 250, 229, 0.5);
+padding: 2px 10px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 12px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(209, 250, 229, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.pattern-why {
+background: rgba(209, 250, 229, 0.4);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.pattern-why strong { color: var(--primary-deep); display: block; margin-bottom: 6px; font-size: 13px; }
+.pattern-why ul { list-style: none; padding: 0; }
+.pattern-why li {
+font-size: 12px; color: var(--text-secondary);
+padding: 3px 0; padding-left: 16px; position: relative;
+}
+.pattern-why li::before { content: '✓'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.weak { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.strong { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.weak strong { color: #C53030; }
+.compare-level.strong strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(209, 250, 229, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.value { background: var(--highlight-green); }
+.move-highlight.risk { background: var(--highlight-orange); }
+.move-highlight.options { background: var(--highlight-blue); }
+.move-highlight.recommendation { background: var(--highlight-purple); }
+.move-highlight.tradeoff { background: var(--highlight-gold); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { border-radius: var(--radius-md); padding: 24px; border: 2px solid; }
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 12px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.scenario-context { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.3; }
+.scenario-requirements { background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.scenario-requirements h4 { font-size: 12px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 14px;
+margin-bottom: 14px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 6px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(209, 250, 229, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(209, 250, 229, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(209, 250, 229, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(209, 250, 229, 0.5), rgba(167, 243, 208, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(16, 185, 129, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(209, 250, 229, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(209, 250, 229, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(16, 185, 129, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(16, 185, 129, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.philosophy-grid { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-06.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 6 Hub</span>
+</a>
+<div class="day-indicator">
+Day 37 / 42
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-06.html" class="day-tab">Overview</a>
+<a href="week-06-day-36.html" class="day-tab">Day 36</a>
+<a href="week-06-day-37.html" class="day-tab active">Day 37</a>
+<a href="week-06-day-38.html" class="day-tab">Day 38</a>
+<a href="week-06-day-39.html" class="day-tab">Day 39</a>
+<a href="week-06-day-40.html" class="day-tab">Day 40</a>
+<a href="week-06-day-41.html" class="day-tab">Day 41</a>
+<a href="week-06-day-42.html" class="day-tab">Day 42</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-06.html">Week 6</a> › Day 37
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">📊</span>
+<h1 class="day-title">Building a Persuasive Proposal</h1>
+</div>
+<p class="day-subtitle">Week 6 không dạy persuasion. Week 6 dạy negotiation thinking. Hôm nay bạn sẽ học cách structure proposal sao cho người khác có thể evaluate và support. <strong>Strong proposals don't focus on what you want. They help the other person understand why it makes sense.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-presentation-chart"></i> Persuasive Proposal</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 2 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
+<div style="font-size: 14px;">"We should buy the new washing machine. It's really important. Please agree." (Vague, emotional appeal)</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
+<div style="font-size: 14px;">"It'll cost more upfront, but we'll save money on repairs over the next five years. Here are the three options I considered..." (Structured, easy to evaluate)</div>
+</div>
+</div>
+"B2 speakers ask for things. C1 speakers present proposals. The difference isn't what you want — it's how you help others understand why it makes sense."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From "Asking" to "Proposing"
+</div>
+<p>
+Strong proposals don't focus on what you want. They help the other person understand why it makes sense.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">4 Principles of Week 6:</span> Understand before persuading • Interests before positions • Value before compromise • Commitment before agreement.
+<br><br>
+<span style="color: var(--highlight-green); font-weight: 600;">Today is about Move 1: Showing value.</span> Help people see why it makes sense.
+</p>
+</div>
+<div class="philosophy-grid">
+<div class="philosophy-card negative">
+<div class="philosophy-card-title">
+<i class="ph-duotone ph-x-circle"></i>
+Why most proposals fail
+</div>
+<ul class="philosophy-card-list">
+<li>Chỉ tập trung vào "what I want" thay vì "why it makes sense"</li>
+<li>Không mention alternatives đã consider</li>
+<li>Vague about what happens if we don't act</li>
+<li>Không address trade-offs upfront</li>
+<li>No clear recommendation</li>
+</ul>
+</div>
+<div class="philosophy-card positive">
+<div class="philosophy-card-title">
+<i class="ph-duotone ph-check-circle"></i>
+What C1 communicators do differently
+</div>
+<ul class="philosophy-card-list">
+<li>Show the value clearly (benefit + timeframe)</li>
+<li>Highlight the risk of inaction (what we lose by waiting)</li>
+<li>Compare the options (show alternatives considered)</li>
+<li>Make the recommendation with reasoning</li>
+<li>Explain the trade-off honestly</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">Communication moves</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">2 dialogues, 12+ turns</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">20 min</div>
+<div class="plan-desc">4 scenarios + record</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">10 min</div>
+<div class="plan-desc">Flashcards + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves
+</h2>
+<p class="section-desc">5 moves to build persuasive proposals. Each has register progression and Weak/Strong comparison. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">Show the Value</div>
+<div class="pattern-ipa">Core idea: "It'll cost [X], but we'll gain [Y] within [timeframe]."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Opening any proposal</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Decision-makers need to see value, not just cost. Value framing shifts the conversation from "Can we afford this?" to "Can we afford NOT to do this?"</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"It'll cost more now, but it'll save us later."</div>
+<div class="register-context">Personal decisions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('It\'ll cost more now, but it\'ll save us later.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"The investment is around X, with expected benefits of Y."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The investment is around X, with expected benefits of Y.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"This would take about X hours, but save us Y hours per month."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This would take about X hours, but save us Y hours per month.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"The upfront cost is X, with projected savings of Y over Z period."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The upfront cost is X, with projected savings of Y over Z period.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "We need this new software." (Just asking)</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "The new software takes 2 weeks to learn, but it'll save our team 10 hours per week on reporting." (Value + timeframe)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">Highlight the Risk</div>
+<div class="pattern-ipa">Core idea: "If we don't do this, we'll end up with [specific consequence]."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Creating urgency</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Specific, concrete consequences create urgency. Vague warnings don't.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"If we don't fix this now, we'll end up with..."</div>
+<div class="register-context">Personal decisions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('If we don\'t fix this now, we\'ll end up with...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"The downside of waiting is..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The downside of waiting is...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"If we don't act now, we'll likely face [specific problem]."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('If we don\'t act now, we\'ll likely face specific problem.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Failure to act would result in [quantified loss]."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Failure to act would result in quantified loss.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "We should do this soon or we might have problems." (Vague, weak urgency)</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "If we don't update our process now, we'll end up with a backlog of 500 unresolved tickets by Q4." (Specific, concrete consequence)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Compare the Options</div>
+<div class="pattern-ipa">Core idea: "Here are the [X] options I considered..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Showing due diligence</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Showing options demonstrates you've done your homework. It builds credibility and helps decision-makers understand why your recommendation is the best choice.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"We looked at a few options..."</div>
+<div class="register-context">Personal decisions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('We looked at a few options...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"We considered X, Y, and Z..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('We considered X, Y, and Z...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Here are the 3 options I looked at..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Here are the 3 options I looked at...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"We evaluated 4 options with the following trade-offs..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('We evaluated 4 options with the following trade-offs...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "This is the best option." (No comparison)</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "Here are the 3 options I considered. Option B balances cost with time best for our situation." (Shows due diligence)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Make the Recommendation</div>
+<div class="pattern-ipa">Core idea: "I recommend [X] because [specific reason tied to value]."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Clear proposal</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Clear reasoning tied to value helps decision-makers understand why this is the best choice.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I think we should go with X because..."</div>
+<div class="register-context">Personal decisions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I think we should go with X because...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I'd recommend X because..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'d recommend X because...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I recommend X because [clear reason]."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I recommend X because clear reason.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Based on the analysis, I recommend X for the following reasons..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Based on the analysis, I recommend X for the following reasons...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "I think we should do this." (No reasoning)</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "I recommend the new scheduling tool because it reduces manual work by 40% and integrates with our current systems." (Clear reasoning tied to value)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Explain the Trade-off</div>
+<div class="pattern-ipa">Core idea: "The trade-off is [what we gain] vs [what we give up]."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐ High</div>
+<div class="pattern-context">Honest evaluation</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Trade-offs show you understand there's no perfect solution. It demonstrates strategic thinking and helps decision-makers make informed choices.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"We get X, but we give up Y."</div>
+<div class="register-context">Personal decisions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('We get X, but we give up Y.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"The trade-off is X vs Y."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The trade-off is X vs Y.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"The trade-off is [specific benefit] vs [specific cost/risk]."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The trade-off is specific benefit vs specific cost or risk.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"This approach involves trading [X] for [Y], with implications for..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This approach involves trading X for Y, with implications for...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "There are some pros and cons." (Vague)</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "The trade-off is moving closer to work vs the kids changing schools. We'd save 1 hour daily but they'd lose their current friends." (Specific, honest)</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 speakers build persuasive proposals in real conversations. No labels in real life — just natural flow.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Proposing Hybrid Work Schedule for Family (Life)</h3>
+<div class="story-context">Context: You and your spouse are discussing changing work schedules to better manage housework and childcare.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I've been thinking about our schedule situation. <strong>Can I walk you through</strong> what I've found?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Sure, what are you thinking?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I think we should try</strong> a hybrid schedule where I work from home 3 days a week. <strong>The trade-off is</strong> less office face time <strong>vs</strong> more flexibility for school pickups and house stuff." <span class="move-highlight tradeoff">Trade-off</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Will your boss be okay with that?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Good question. <strong>Here are the 3 options I considered:</strong> Option A is keeping the current schedule. Option B is hybrid 3 days WFH. Option C is going fully remote. <strong>I recommend</strong> Option B <strong>because</strong> it gives us flexibility without losing team connection." <span class="move-highlight options">Options</span> <span class="move-highlight recommendation">Recommendation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"What happens if we don't change anything?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>If we don't adjust</strong> our schedule, <strong>we'll end up with</strong> the same stress we've had for 6 months — rushing for pickups, paying for after-school care, and feeling burnt out." <span class="move-highlight risk">Risk</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"That's true. What's the value though?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>It'll save us</strong> about $400/month on after-school care <strong>and</strong> give us 5 more hours per week together as a family. <strong>The trade-off is</strong> I might need to be more intentional about team meetings, <strong>but we'll gain</strong> real flexibility." <span class="move-highlight value">Value</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"How do we try it out?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>My recommendation is</strong> we try it for 4 weeks and check in. <strong>If it doesn't work</strong>, we can always go back to the current schedule. <strong>Are we aligned on</strong> starting next Monday?" <span class="move-highlight recommendation">Recommendation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Yeah, let's try it. Sounds good."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"The trade-off is..." → <strong>Explain the Trade-off</strong> (Move 5)</li>
+<li>"Here are the 3 options I considered..." → <strong>Compare the Options</strong> (Move 3)</li>
+<li>"I recommend... because..." → <strong>Make the Recommendation</strong> (Move 4)</li>
+<li>"If we don't adjust... we'll end up with..." → <strong>Highlight the Risk</strong> (Move 2)</li>
+<li>"It'll save us... and give us..." → <strong>Show the Value</strong> (Move 1)</li>
+<li><strong>Register:</strong> Casual throughout (spouses)</li>
+<li><strong>12 turns</strong> natural flow, building persuasive proposal for family decision</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: Proposing New Process for Team (Business)</h3>
+<div class="story-context">Context: You're a team lead wanting to propose a new process for handling client requests. Currently the team uses manual spreadsheets and it takes too much time.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Manager:</div>
+<div class="dialogue-text">"You mentioned wanting to discuss our client request process. What's on your mind?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thanks for making time. <strong>I'd like to propose</strong> switching from spreadsheets to a ticketing system. <strong>Can I walk you through</strong> why?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Manager:</div>
+<div class="dialogue-text">"Go ahead."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>It'll take</strong> about 2 weeks to set up <strong>and</strong> 1 week for the team to learn, <strong>but it'll save</strong> us about 15 hours per week on manual tracking and status updates." <span class="move-highlight value">Value</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Manager:</div>
+<div class="dialogue-text">"That sounds good, but what's the risk of switching?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>The trade-off is</strong> upfront learning time <strong>vs</strong> long-term efficiency. <strong>Here are the 3 options I considered:</strong> Option A is keeping spreadsheets. Option B is the ticketing system I'm proposing. Option C is hiring an admin to manage the spreadsheets." <span class="move-highlight tradeoff">Trade-off</span> <span class="move-highlight options">Options</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Manager:</div>
+<div class="dialogue-text">"What about Option C?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Option C costs $3K/month ongoing. Option B is a one-time $500 setup with no ongoing cost. <strong>I recommend</strong> Option B <strong>because</strong> it's sustainable and the team becomes self-sufficient." <span class="move-highlight recommendation">Recommendation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Manager:</div>
+<div class="dialogue-text">"What happens if we don't change?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>If we don't switch</strong> systems, <strong>we'll end up with</strong> the same bottleneck we have now — requests falling through the cracks and the team spending 30% of their time on admin instead of client work." <span class="move-highlight risk">Risk</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Manager:</div>
+<div class="dialogue-text">"What's the timeline?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>My recommendation is</strong> we start setup next week, have the team trained by end of month, and fully transition by mid-next month. <strong>The trade-off is</strong> a busy month now <strong>vs</strong> 15 hours saved per week going forward." <span class="move-highlight recommendation">Recommendation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Manager:</div>
+<div class="dialogue-text">"Okay, let's do it. Send me the plan."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Perfect. <strong>I'll send over</strong> the implementation timeline by EOD. <strong>Are we aligned on</strong> starting Monday?"</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"It'll take... but it'll save..." → <strong>Show the Value</strong> (Move 1)</li>
+<li>"The trade-off is..." → <strong>Explain the Trade-off</strong> (Move 5)</li>
+<li>"Here are the 3 options I considered..." → <strong>Compare the Options</strong> (Move 3)</li>
+<li>"I recommend... because..." → <strong>Make the Recommendation</strong> (Move 4)</li>
+<li>"If we don't switch... we'll end up with..." → <strong>Highlight the Risk</strong> (Move 2)</li>
+<li><strong>Register:</strong> Professional (manager-employee)</li>
+<li><strong>14 turns</strong>, complete persuasive proposal presentation</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Proposal phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3> Proposal Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>It'll cost more now</td><td class="ipa-cell">/ˈɪtəl kɒst mɔːr naʊ/</td><td>Smooth "it'll" contraction</td></tr>
+<tr><td>If we don't do this</td><td class="ipa-cell">/ɪf wi doʊnt duː ðɪs/</td><td>Weak form "do"</td></tr>
+<tr><td>Here are the options</td><td class="ipa-cell">/hɪr ɑːr i ˈpʃənz/</td><td>Linking "here-are"</td></tr>
+<tr><td>I recommend</td><td class="ipa-cell">/aɪ ˌrɛkəˈmɛnd/</td><td>Stress on "mend"</td></tr>
+<tr><td>The trade-off is</td><td class="ipa-cell">/ðə treɪd ɔːf ɪz/</td><td>Clear "trade-off" compound</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"It'll save us..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when stating benefits. Falling tone = confident, factual. <strong>Avoid:</strong> Rising (sounds uncertain about your own numbers).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"If we don't do this..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when highlighting risk. Falling tone = serious, important. <strong>Avoid:</strong> Too soft (làm mất sense of urgency).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"I recommend..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when making clear proposal. Falling tone = decisive, confident. <strong>Avoid:</strong> Rising (sounds like you're asking permission instead of proposing).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice building persuasive proposals in different contexts. Remember: no register is "better" — it's about appropriateness!</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Proposing a Schedule Change to Partner</h3>
+<p class="scenario-context">You want to change family schedule (wake up earlier, change dinner time, rearrange chores). Build persuasive proposal.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I've been thinking about our schedule. Can I walk you through what I've found?"
+<strong>📖 Key Moves:</strong> Use "It'll save us..." or "We'll gain...", "If we don't change... we'll end up with...", "Here are the options I considered..."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "It'll save us..." hoặc "We'll gain..."</li>
+<li>Use "If we don't change... we'll end up with..."</li>
+<li>Use "Here are the options I considered..."</li>
+<li>Keep it collaborative, not pushy</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Proposing New Software to Team</h3>
+<p class="scenario-context">You want team to adopt a new tool (project management, communication, documentation). Build persuasive proposal.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I'd like to propose switching to a new tool. Can I walk you through why?"
+<strong>📖 Key Moves:</strong> Use "It'll take X time, but it'll save us Y time", "The trade-off is...", "I recommend... because..."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "It'll take X time, but it'll save us Y time"</li>
+<li>Use "The trade-off is..."</li>
+<li>Use "I recommend... because..."</li>
+<li>Address concerns upfront</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Proposing New Process to Manager</h3>
+<p class="scenario-context">You want to propose an improved process (workflow, handoff, review process, training). Build persuasive proposal.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I'd like to propose a change to our current process. Can I walk you through the business case?"
+<strong>📖 Key Moves:</strong> Use "Here are the 3 options I considered...", "If we don't change... we'll end up with...", "The trade-off is..."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "Here are the 3 options I considered..."</li>
+<li>Use "If we don't change... we'll end up with..."</li>
+<li>Use "The trade-off is..."</li>
+<li>Quantify value clearly (time, quality, efficiency)</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Proposal</h3>
+<p class="scenario-context">Morning: Propose schedule change with family (Casual). Afternoon: Propose adopt new tool with team (Professional).</p>
+<div class="model-response">
+<strong>💡 Model Opening (Life):</strong> "I've been thinking about our daily routine. Can I share what I've found?"
+<strong>💡 Model Opening (Business):</strong> "I'd like to propose we try a new approach to [X]. Can I walk you through why?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Use different moves for each context</li>
+<li>Each proposal has: Value → Risk → Options → Recommendation → Trade-off</li>
+<li>Quantify value appropriately for each context</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply persuasive proposal structure to actual decisions this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Proposal Template Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Choose 1 decision (Life or Business). Practice structuring proposal using 5 moves.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use at least 3 communication moves</li>
+<li>Write down: Value, Risk, Options, Recommendation, Trade-off</li>
+<li>Note the result</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written proposal structure</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Persuasive Proposals</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 proposals (Life & Business). Focus on clear structure and value framing.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register)</li>
+<li>1 Business scenario (professional register)</li>
+<li>Use all 5 communication moves</li>
+<li>Make value and trade-offs clear</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Proposal Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, build 1 real persuasive proposal for an important decision. Present to stakeholder.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use all 5 communication moves</li>
+<li>Clearly show value, risk, options, recommendation, trade-off</li>
+<li>Present to real stakeholder</li>
+<li>Note their response and decision</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Proposal + reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Persuasive Proposal Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People understand your reasoning immediately</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">They know why you're recommending this specific option</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">They can compare options easily</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">Your proposal answers obvious concerns before they're raised</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Your recommendation is easy to evaluate and decide on</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You lead with value, not just cost</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You've considered and presented alternatives</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You address risks and trade-offs honestly</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>Your recommendation has clear reasoning</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>Decision-makers can say yes or no with confidence</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Lead with value:</strong> "It'll save us 10 hours per week" before "It takes 2 weeks to learn"</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Show alternatives:</strong> Demonstrates you've done your homework</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Be specific:</strong> "500 unresolved tickets" not "a lot of problems"</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Address risks upfront:</strong> Shows you're thinking strategically</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Make clear recommendation:</strong> Don't make them guess what you want</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with communication moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Proposing schedule change to family</p>
+<button>Pause → Say it → Tap to reveal →</button>
+</div>
+<div class="flashcard-back">
+<p>🏠 Casual: "It'll save us time and give us more flexibility."<br>☕ Neutral: "The change would save us about 5 hours per week."<br>💼 Professional: "This adjustment would reduce our weekly admin time by 30%."<br>📋 More Formal: "The proposed schedule modification yields estimated time savings of 5 hours weekly."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always show value first. Help people understand why it makes sense.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Persuasive Proposals
+</h2>
+<p class="section-desc">7 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Life) You want to propose buying a new car for the family. Which response shows C1 style?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We need a new car because the old one is terrible."</div>
+<div class="quiz-option">B. "It'll cost $35K, but we'll save $3K/year on repairs and get better safety features."</div>
+<div class="quiz-option">C. "Please let's buy a new car."</div>
+<div class="quiz-option">D. "The old car is going to break down any day."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Business) Team is spending too much time on manual reporting. You propose new tool. Which response is strongest?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We should get new software."</div>
+<div class="quiz-option">B. "The new tool takes 2 weeks to learn, but it'll save us 10 hours per week on reporting."</div>
+<div class="quiz-option">C. "The current system is bad."</div>
+<div class="quiz-option">D. "I really think we need this."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Life) You want to propose schedule change with partner. Which move highlights risk?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I think we should change our schedule."</div>
+<div class="quiz-option">B. "If we don't adjust our schedule, we'll end up with the same stress we've had for 6 months."</div>
+<div class="quiz-option">C. "Our schedule could be better."</div>
+<div class="quiz-option">D. "Let's try something different."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Business) You want to propose process improvement. Which move shows you've done your homework?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "This is the best option."</div>
+<div class="quiz-option">B. "Here are the 3 options I considered: Option A is fastest, Option B is balanced, Option C is cheapest."</div>
+<div class="quiz-option">C. "I think we should do this."</div>
+<div class="quiz-option">D. "We need to change something."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Life) You propose family moving house. Which move explains trade-off?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "There are some pros and cons."</div>
+<div class="quiz-option">B. "The trade-off is moving closer to work vs the kids changing schools."</div>
+<div class="quiz-option">C. "It might be good or bad."</div>
+<div class="quiz-option">D. "Let's think about it."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Business) You propose new training program. Which recommendation is strongest?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I think we should do this training."</div>
+<div class="quiz-option">B. "I recommend the new training because it reduces onboarding time from 3 months to 1 month."</div>
+<div class="quiz-option">C. "Training could be good."</div>
+<div class="quiz-option">D. "We could try this."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Life) Family is discussing whether to hire house help. Which proposal is most complete?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We should hire help because we're too busy."</div>
+<div class="quiz-option">B. "It'll cost $500/month but save us 20 hours of housework. If we don't hire help, we'll end up with the same burnout. I looked at 3 options: hire full-time, hire part-time, or keep doing it ourselves. I recommend part-time because it balances cost with relief. The trade-off is money vs time and mental health."</div>
+<div class="quiz-option">C. "We need help around the house."</div>
+<div class="quiz-option">D. "Can we hire someone please?"</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-06-day-36.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 36: Negotiation Mindset & Interests</div>
+</a>
+<a href="week-06-day-38.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 38: Handling Objections</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 37 Complete & Continue to Day 38</span>
+</button>
+<div class="complete-message">You no longer ask for things. You present proposals in a way people can evaluate and support. 📊</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 6 · Day 37 · Building a Persuasive Proposal</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `You: I've been thinking about our schedule situation. Can I walk you through what I've found? Spouse: Sure, what are you thinking? You: I think we should try a hybrid schedule where I work from home 3 days a week. The trade-off is less office face time vs more flexibility for school pickups and house stuff. Spouse: Will your boss be okay with that? You: Good question. Here are the 3 options I considered: Option A is keeping the current schedule. Option B is hybrid 3 days WFH. Option C is going fully remote. I recommend Option B because it gives us flexibility without losing team connection. Spouse: What happens if we don't change anything? You: If we don't adjust our schedule, we'll end up with the same stress we've had for 6 months — rushing for pickups, paying for after-school care, and feeling burnt out. Spouse: That's true. What's the value though? You: It'll save us about $400/month on after-school care and give us 5 more hours per week together as a family. The trade-off is I might need to be more intentional about team meetings, but we'll gain real flexibility. Spouse: How do we try it out? You: My recommendation is we try it for 4 weeks and check in. If it doesn't work, we can always go back to the current schedule. Are we aligned on starting next Monday? Spouse: Yeah, let's try it. Sounds good.`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `Manager: You mentioned wanting to discuss our client request process. What's on your mind? You: Thanks for making time. I'd like to propose switching from spreadsheets to a ticketing system. Can I walk you through why? Manager: Go ahead. You: It'll take about 2 weeks to set up and 1 week for the team to learn, but it'll save us about 15 hours per week on manual tracking and status updates. Manager: That sounds good, but what's the risk of switching? You: The trade-off is upfront learning time vs long-term efficiency. Here are the 3 options I considered: Option A is keeping spreadsheets. Option B is the ticketing system I'm proposing. Option C is hiring an admin to manage the spreadsheets. Manager: What about Option C? You: Option C costs $3K/month ongoing. Option B is a one-time $500 setup with no ongoing cost. I recommend Option B because it's sustainable and the team becomes self-sufficient. Manager: What happens if we don't change? You: If we don't switch systems, we'll end up with the same bottleneck we have now — requests falling through the cracks and the team spending 30% of their time on admin instead of client work. Manager: What's the timeline? You: My recommendation is we start setup next week, have the team trained by end of month, and fully transition by mid-next month. The trade-off is a busy month now vs 15 hours saved per week going forward. Manager: Okay, let's do it. Send me the plan. You: Perfect. I'll send over the implementation timeline by EOD. Are we aligned on starting Monday?`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-37')) {
+completed.push('day-37');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 37 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'You no longer ask for things. You present proposals in a way people can evaluate and support. 📊';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-37')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 37 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>

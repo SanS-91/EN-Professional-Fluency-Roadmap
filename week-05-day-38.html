@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 6 Day 38: Handling Concerns & Pushback | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #F59E0B;
+--primary-bright: #D97706;
+--primary-soft: #FEF3C7;
+--primary-deep: #92400E;
+--primary-light: #FBBF24;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 6%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🤝'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(254, 243, 199, 0.6), rgba(253, 224, 71, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(245, 158, 11, 0.2);
+}
+.philosophy-box {
+background: #FFFBEB;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(254, 243, 199, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(254, 243, 199, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.usage-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 14px;
+}
+.usage-box {
+padding: 12px;
+border-radius: var(--radius-sm);
+font-size: 13px;
+}
+.usage-box.when { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.usage-box.avoid { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.usage-box strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.usage-box.when strong { color: var(--green-deep); }
+.usage-box.avoid strong { color: #C53030; }
+.usage-box ul { list-style: none; padding: 0; }
+.usage-box li { padding: 2px 0; padding-left: 16px; position: relative; color: var(--text-secondary); }
+.usage-box.when li::before { content: '✔'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+.usage-box.avoid li::before { content: '✘'; position: absolute; left: 0; color: #F56565; font-weight: 700; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.defensive { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.curious { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.defensive strong { color: #C53030; }
+.compare-level.curious strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.mistakes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.mistake-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-orange);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.mistake-card h4 {
+font-family: 'Fraunces', serif; font-size: 1.05rem;
+color: var(--text-primary); margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px;
+}
+.mistake-wrong {
+background: rgba(245, 101, 101, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: #C53030;
+border-left: 3px solid #F56565;
+}
+.mistake-right {
+background: rgba(16, 185, 129, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: var(--green-deep);
+border-left: 3px solid var(--highlight-green);
+}
+.mistake-why {
+font-size: 12px; color: var(--text-secondary); font-style: italic;
+}
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.comparison-table th {
+background: rgba(254, 243, 199, 0.5);
+padding: 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--primary-deep);
+border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+}
+.comparison-table td {
+padding: 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.comparison-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-defensive {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.better { background: rgba(251, 146, 60, 0.08); border-left: 3px solid var(--highlight-orange); }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.better strong { color: var(--orange-deep); }
+.rewrite-level.professional strong { color: var(--green-deep); }
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(254, 243, 199, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.acknowledge { background: var(--highlight-green); }
+.move-highlight.validate { background: var(--highlight-blue); }
+.move-highlight.reframe { background: var(--highlight-purple); }
+.move-highlight.evidence { background: var(--highlight-orange); }
+.move-highlight.mitigate { background: var(--highlight-gold); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.listening-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.listening-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.listening-question {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.listening-question p {
+font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;
+}
+.listening-answer {
+font-size: 12px; color: var(--green-deep); font-style: italic;
+}
+
+.vocab-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.vocab-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.vocab-item {
+padding: 12px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--highlight-blue);
+}
+.vocab-item strong {
+display: block; font-size: 13px; color: var(--blue-deep); margin-bottom: 4px;
+}
+.vocab-item span {
+font-size: 12px; color: var(--text-secondary);
+}
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { border-radius: var(--radius-md); padding: 24px; border: 2px solid; }
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 12px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.scenario-context { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.3; }
+.scenario-requirements { background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.scenario-requirements h4 { font-size: 12px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 14px;
+margin-bottom: 14px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 6px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(254, 243, 199, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(254, 243, 199, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(254, 243, 199, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 224, 71, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(245, 158, 11, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(254, 243, 199, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(254, 243, 199, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(245, 158, 11, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(245, 158, 11, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.usage-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-06.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 6 Hub</span>
+</a>
+<div class="day-indicator">
+Day 38 / 42
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-06.html" class="day-tab">Overview</a>
+<a href="week-06-day-36.html" class="day-tab">Day 36</a>
+<a href="week-06-day-37.html" class="day-tab">Day 37</a>
+<a href="week-06-day-38.html" class="day-tab active">Day 38</a>
+<a href="week-06-day-39.html" class="day-tab">Day 39</a>
+<a href="week-06-day-40.html" class="day-tab">Day 40</a>
+<a href="week-06-day-41.html" class="day-tab">Day 41</a>
+<a href="week-06-day-42.html" class="day-tab">Day 42</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-06.html">Week 6</a> › Day 38
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🤝</span>
+<h1 class="day-title">Handling Concerns & Pushback</h1>
+</div>
+<p class="day-subtitle">Week 6 không dạy persuasion. Week 6 dạy negotiation thinking. Hôm nay bạn sẽ học cách biến lo ngại thành cơ hội. <strong>B2 speakers see objections as attacks. C1 speakers see them as information.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-shield-check"></i> Concern Handling</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 3 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
+<div style="font-size: 14px;">"No, you're wrong. Let me explain..." hoặc "Okay, fine, whatever you say." (Defensive hoặc give in)</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
+<div style="font-size: 14px;">"I understand your concern about the timeline. That's a valid point. Let me address that specifically..." (Acknowledge, validate, address)</div>
+</div>
+</div>
+"B2 speakers see objections as attacks. C1 speakers see them as information. Every concern is a clue to what matters most."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Defensive to Curious
+</div>
+<p>
+When someone raises a concern, your instinct is to defend or give in. C1 communicators do something different: they acknowledge, validate, and address. They turn pushback into progress.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> These 5 moves are communication tools, not mandatory steps. Choose the move that fits the concern. Sometimes you only need 2 moves. Sometimes you need all 5. Judgement matters more than following a process.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Communication moves</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common mistakes</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Concern Decoder</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔄</div>
+<div class="plan-title">Compare</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Casual ↔ Pro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Dialogues + Listen</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Vocab + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves
+</h2>
+<p class="section-desc">5 moves to handle concerns. Each has register progression, When to use/Avoid when. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">Acknowledge the Concern</div>
+<div class="pattern-ipa">Core idea: "I understand your concern about [specific issue]."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">First move always</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Acknowledging shows you heard them. It lowers their defensiveness and opens the door to productive conversation.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I get why you're worried about..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I get why you\'re worried about...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I understand your concern about..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I understand your concern about...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I appreciate you raising that concern..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I appreciate you raising that concern...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I recognize the validity of your concern regarding..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I recognize the validity of your concern regarding...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>First move when someone raises a concern</li>
+<li>When the concern is emotional or personal</li>
+<li>Before any explanation or evidence</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You haven't actually listened yet (sounds fake)</li>
+<li>The concern is minor and doesn't need acknowledgment</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Defensive → Curious</h5>
+<div class="compare-level defensive"><strong>❌ Defensive:</strong> "No, that's not a problem." (Dismisses concern)</div>
+<div class="compare-level curious"><strong>✅ Curious:</strong> "I understand your concern about the timeline. Let me address that." (Acknowledges concern)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">Validate the Point</div>
+<div class="pattern-ipa">Core idea: "That's a valid point. Let me address that..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Showing respect</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Validating shows respect for their thinking. It builds trust before you offer a solution.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"You're right to worry about..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('You\'re right to worry about...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"That's a fair point..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('That\'s a fair point...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"That's a valid concern. Here's how I'd address it..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('That\'s a valid concern. Here\'s how I\'d address it...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Your point is well-taken. Allow me to elaborate..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Your point is well-taken. Allow me to elaborate...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When the concern is legitimate and you agree</li>
+<li>Before offering a solution</li>
+<li>To show respect for their thinking</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The concern is based on wrong information (correct first)</li>
+<li>You don't actually think it's valid (be honest)</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Defensive → Curious</h5>
+<div class="compare-level defensive"><strong>❌ Defensive:</strong> "That's not really an issue." (Dismisses)</div>
+<div class="compare-level curious"><strong>✅ Curious:</strong> "That's a valid concern. Here's how I'd address it..." (Validates + addresses)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Reframe the Issue</div>
+<div class="pattern-ipa">Core idea: "What if we looked at it this way..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐ High</div>
+<div class="pattern-context">Opening new perspectives</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Reframing helps people see the issue from a different angle without feeling attacked. It opens their mind to new possibilities.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"What if we thought about it like this..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What if we thought about it like this...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Another way to look at it..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Another way to look at it...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"What if we approached it this way..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What if we approached it this way...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Consider an alternative perspective..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Consider an alternative perspective...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When someone is stuck in one perspective</li>
+<li>When the concern is based on a narrow view</li>
+<li>To open up new possibilities</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The person needs empathy first (reframe too early feels dismissive)</li>
+<li>The concern is factual (correct facts, don't reframe)</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Defensive → Curious</h5>
+<div class="compare-level defensive"><strong>❌ Defensive:</strong> "You're looking at it wrong." (Condescending)</div>
+<div class="compare-level curious"><strong>✅ Curious:</strong> "What if we looked at it this way..." (Invites new perspective)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Provide Evidence</div>
+<div class="pattern-ipa">Core idea: "The data actually shows..." / "From what I've seen..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐ High</div>
+<div class="pattern-context">Backing up claims</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Evidence builds credibility. But match the evidence to the concern: data for business, experience for personal.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Actually, I found that..." / "Remember when..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Actually, I found that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"From what I've seen..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('From what I\'ve seen...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"The data actually shows..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The data actually shows...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"The evidence indicates..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The evidence indicates...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When facts matter (business decisions, safety concerns)</li>
+<li>When the concern is based on misinformation</li>
+<li>When you have credible data to share</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The person mainly needs empathy (spouse saying "I'm scared")</li>
+<li>You don't have solid evidence (sounds defensive)</li>
+<li>It's a personal/emotional concern (use experience instead of data)</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Defensive → Curious</h5>
+<div class="compare-level defensive"><strong>❌ Defensive:</strong> "You're wrong, the data says..." (Aggressive)</div>
+<div class="compare-level curious"><strong>✅ Curious:</strong> "The data actually shows..." (Factual, non-confrontational)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Offer Mitigation</div>
+<div class="pattern-ipa">Core idea: "Here's how we'd address that..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Showing proactive thinking</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Offering mitigation shows you've thought about their concern and have a plan. It builds confidence and trust.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Here's what we can do about that..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Here\'s what we can do about that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Here's how we'd handle that..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Here\'s how we\'d handle that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Here's how we'd mitigate that risk..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Here\'s how we\'d mitigate that risk...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Here's our mitigation strategy for that concern..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Here\'s our mitigation strategy for that concern...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After acknowledging and validating the concern</li>
+<li>When you have a concrete plan</li>
+<li>To show proactive thinking</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You haven't acknowledged the concern yet (sounds dismissive)</li>
+<li>You don't actually have a plan (be honest)</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Defensive → Curious</h5>
+<div class="compare-level defensive"><strong>❌ Defensive:</strong> "Don't worry about it." (Dismisses)</div>
+<div class="compare-level curious"><strong>✅ Curious:</strong> "Here's how we'd address that..." (Shows proactive thinking)</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+Common Mistakes
+</h2>
+<p class="section-desc">3 lỗi phổ biến khi handle concerns. Tránh những lỗi này để giữ conversation productive.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: Explain too early</h4>
+<div class="mistake-wrong">❌ "No, that's not a problem. Let me explain why..."</div>
+<div class="mistake-right">✅ "I understand your concern about [X]. That's a valid point."</div>
+<div class="mistake-why">Acknowledge first, explain second. People need to feel heard before they can listen.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Give data to emotions</h4>
+<div class="mistake-wrong">❌ Spouse says "I'm scared" → You say "The data shows 85% success rate"</div>
+<div class="mistake-right">✅ "I get why you're scared. That's a big change. Let's take it step by step."</div>
+<div class="mistake-why">Match the concern type. Emotional concerns need empathy, not evidence.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Use all 5 moves every time</h4>
+<div class="mistake-wrong">❌ "I understand... That's valid... What if... The data shows... Here's how..."</div>
+<div class="mistake-right">✅ Choose the fewest moves needed. Quality over quantity.</div>
+<div class="mistake-why">Over-explaining sounds defensive. Sometimes 2 moves are enough.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+Concern Decoder (Signature Section)
+</h2>
+<p class="section-desc">Common concerns và ý nghĩa thực sự đằng sau. Decode the real issue before choosing your move.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 Concern Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>They say</th><th>They may actually mean</th><th>Possible deeper meaning</th><th>Best move</th></tr>
+</thead>
+<tbody>
+<tr><td>"It's expensive."</td><td>I don't see enough value.</td><td>I'm afraid of wasting money.</td><td>Reframe + Evidence</td></tr>
+<tr><td>"It's risky."</td><td>I'm afraid of failing.</td><td>I need a backup plan.</td><td>Validate + Mitigation</td></tr>
+<tr><td>"We don't have time."</td><td>This isn't my priority.</td><td>I'm overwhelmed right now.</td><td>Reframe + Acknowledge</td></tr>
+<tr><td>"I'm not convinced."</td><td>I need more evidence.</td><td>I'm not ready to commit.</td><td>Provide Evidence</td></tr>
+<tr><td>"Let's wait."</td><td>I'm uncomfortable changing now.</td><td>I need more reassurance.</td><td>Validate + Mitigation</td></tr>
+<tr><td>"What if it doesn't work?"</td><td>I need a backup plan.</td><td>I'm afraid of consequences.</td><td>Offer Mitigation</td></tr>
+<tr><td>"I need to think about it."</td><td>I'm not ready to commit.</td><td>I need to discuss with others.</td><td>Acknowledge + Mitigation</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Listen to the concern. 2. Decode what they actually mean (and possibly deeper meaning). 3. Choose the move that fits (not all 5!). 4. Address the real issue, not the surface words.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-left-right"></i>
+Casual ↔ Professional Comparison
+</h2>
+<p class="section-desc">Same moves, different registers. Match the register to the context.</p>
+</div>
+<div class="decoder-card" style="border-left-color: var(--highlight-blue);">
+<h3>🔄 Register Comparison</h3>
+<table class="comparison-table">
+<thead>
+<tr><th>Situation</th><th>🏠 Casual</th><th>💼 Professional</th></tr>
+</thead>
+<tbody>
+<tr><td>Acknowledge</td><td>"I get why you're worried."</td><td>"I appreciate you raising that concern."</td></tr>
+<tr><td>Validate</td><td>"Yeah, that's fair."</td><td>"That's a valid concern."</td></tr>
+<tr><td>Reframe</td><td>"What if we thought about it like this..."</td><td>"What if we approached it this way..."</td></tr>
+<tr><td>Evidence</td><td>"Remember when we moved before?"</td><td>"The data actually shows..."</td></tr>
+<tr><td>Mitigate</td><td>"Here's what we can do about that..."</td><td>"Here's how we'd mitigate that risk..."</td></tr>
+<tr><td>Close</td><td>"Let's take it one step at a time."</td><td>"Are we aligned on moving forward?"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Casual uses experience and emotion. Professional uses data and structure. Match the register to the context.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: Hidden Concerns
+</h2>
+<p class="section-desc">Read this email from a client. What's the REAL concern? And what move would you use first?</p>
+</div>
+<div class="reading-card">
+<h3>📧 Email from Client</h3>
+<div class="email-box">
+<strong>Subject:</strong> Re: Project Proposal<br><br>
+Hi team,<br><br>
+Thanks for sending over the proposal. The approach looks solid, and I appreciate the detailed timeline.<br><br>
+A few thoughts:<br>
+- The budget is within our range, though on the higher end<br>
+- We'd need to see some case studies from similar projects<br>
+- Our team is going through a busy period right now with the year-end close<br><br>
+Let's touch base next week to discuss further.<br><br>
+Best,<br>
+Sarah
+</div>
+<div class="reading-questions">
+<h4>🤔 Questions:</h4>
+<p>1. What's the real concern?</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">A. Budget is too high | B. They need proof it will work | C. Timing is bad - they're too busy right now | D. All of the above, but C is the biggest blocker</p>
+<p style="margin-top: 10px;">2. What communication move would you use first? WHY?</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">A. Acknowledge (to show you heard them) | B. Provide Evidence (to address their concerns) | C. Offer Mitigation (to solve the timing issue) | D. Reframe (to change their perspective)</p>
+<p style="margin-top: 10px; color: var(--green-deep); font-weight: 600;">✅ Answers: 1. D, but C is the hidden blocker. The "busy period" is code for "we can't commit to this right now." 2. A. Acknowledge first. Show you heard all three concerns before addressing them. Best response: Acknowledge their busy period + offer to revisit after year-end.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Defensive Responses
+</h2>
+<p class="section-desc">Rewrite these defensive responses to be more C1. See the progression from Weak → Better → Professional.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Defensive → C1</h3>
+<div class="rewrite-item">
+<div class="rewrite-defensive">❌ Defensive: "No, that's not a problem. We can handle it."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"No, that's not a problem."</div>
+<div class="rewrite-level better"><strong>Better</strong>"I understand your concern about [X]."</div>
+<div class="rewrite-level professional"><strong>Professional</strong>"I appreciate you raising that concern. Let me address it specifically."</div>
+</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-defensive">❌ Defensive: "You're wrong. The data shows we're on track."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"You're wrong."</div>
+<div class="rewrite-level better"><strong>Better</strong>"I understand your concern. Let me share what we're seeing."</div>
+<div class="rewrite-level professional"><strong>Professional</strong>"I appreciate you raising that. The data actually shows we're on track, and here's how we'd address any risks."</div>
+</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-defensive">❌ Defensive: "We've always done it this way."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"We've always done it this way."</div>
+<div class="rewrite-level better"><strong>Better</strong>"I get why you're hesitant. What if we thought about it this way..."</div>
+<div class="rewrite-level professional"><strong>Professional</strong>"I understand your concern about change. What if we approached it this way — we can pilot the new approach while maintaining our current process as a backup?"</div>
+</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-defensive">❌ Defensive: "That's not my department."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"That's not my department."</div>
+<div class="rewrite-level better"><strong>Better</strong>"That's a fair point. Let me connect you with the right person."</div>
+<div class="rewrite-level professional"><strong>Professional</strong>"That's a valid concern. Let me connect you with [Name] who can address that specifically and ensure we have a clear answer by [date]."</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 speakers handle concerns in real conversations. No labels in real life — just natural flow.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Partner Worried About Moving (Life)</h3>
+<div class="story-context">Context: You and your spouse are discussing moving house. Spouse has many concerns. <strong>Note: Only 3-4 moves used - Acknowledge, Validate, Mitigation. No hard data with spouse!</strong></div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I've been thinking more about the move. <strong>Can I walk you through</strong> what I've found?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"I'm still not sure about this. What about the kids?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I get why you're worried about</strong> the kids. That's really important." <span class="move-highlight acknowledge">Acknowledge</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"They'll lose all their friends. They're already settled here."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>You're right to worry about</strong> that. It's a big transition for them." <span class="move-highlight validate">Validate</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"And what about my job? I just got promoted."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>That's a valid concern.</strong> I've already started looking into companies there. There seem to be quite a few opportunities in your field." <span class="move-highlight validate">Validate</span> <span class="move-highlight reframe">Reframe (soft)</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Really? Which ones?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I found a few that match your profile. <strong>Remember when we moved before?</strong> We were worried about the same things, and it worked out much better than we expected." <span class="move-highlight evidence">Evidence (experience)</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"I don't know. It still feels risky."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Here's what we can do about that</strong> — we'll visit the new schools together, talk to other parents, and make sure it's a good fit before we commit. We can also time the move for after your bonus." <span class="move-highlight mitigate">Mitigation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"I guess that makes sense. But I'm still nervous."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I get why you're nervous.</strong> This is a big decision. <strong>What if we</strong> take it one step at a time — first we visit, then we decide. <strong>Are we aligned on</strong> that approach?" <span class="move-highlight acknowledge">Acknowledge</span> <span class="move-highlight mitigate">Mitigation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Spouse:</div>
+<div class="dialogue-text">"Yeah, let's do that. One step at a time."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"I get why you're worried about..." → <strong>Acknowledge</strong> (Move 1)</li>
+<li>"You're right to worry about..." → <strong>Validate</strong> (Move 2)</li>
+<li>"Remember when we moved before?" → <strong>Evidence</strong> (Move 4 - experience, not data!)</li>
+<li>"Here's what we can do about that..." → <strong>Mitigation</strong> (Move 5)</li>
+<li><strong>Register:</strong> Casual throughout (spouses)</li>
+<li><strong>12 turns</strong> natural flow, handling concerns with empathy</li>
+<li><strong>Only 4 moves used</strong> - no hard Reframe, no data</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: Client Pushing Back on Timeline (Business)</h3>
+<div class="story-context">Context: You're presenting a proposal to a client. Client has concerns about timeline and risk. <strong>Note: Uses all 5 moves naturally, with one extra pushback.</strong></div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"I've reviewed your proposal. I like the approach, but I'm concerned about the 6-month timeline."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I appreciate you raising that concern.</strong> Timeline is critical for this project." <span class="move-highlight acknowledge">Acknowledge</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"We need results by Q3. Six months puts us in Q4."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>That's a valid concern.</strong> Here's how I'd address it — we can phase the delivery to give you early wins in Q3 while completing the full project in Q4." <span class="move-highlight validate">Validate</span> <span class="move-highlight mitigate">Mitigation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"What do you mean by 'early wins'?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>What if we approached it this way</strong> — we deliver the core functionality in 3 months, which gives you immediate value, then we add the advanced features in months 4-6." <span class="move-highlight reframe">Reframe</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"But what if the core functionality isn't enough?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>The data actually shows</strong> that 80% of the value comes from the core features. The advanced features are nice-to-haves, not must-haves." <span class="move-highlight evidence">Evidence</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"I'm still worried about the risk. What if something goes wrong?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Here's how we'd mitigate that risk</strong> — we'll build in 2-week buffers at each phase, and we'll have weekly check-ins to catch issues early." <span class="move-highlight mitigate">Mitigation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"Okay, that makes sense. But I need to discuss this with my team."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I understand your concern about</strong> getting team buy-in. <strong>Here's what we can do</strong> — I'll prepare a summary document highlighting the key points, and I'm available to join your team meeting to answer questions." <span class="move-highlight acknowledge">Acknowledge</span> <span class="move-highlight mitigate">Mitigation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"That would be helpful. Let's schedule that for next week."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Perfect. <strong>Are we aligned on</strong> me sending the summary by Friday and joining your meeting next Wednesday?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Client:</div>
+<div class="dialogue-text">"Yes, let's do that."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"I appreciate you raising that concern..." → <strong>Acknowledge</strong> (Move 1)</li>
+<li>"That's a valid concern..." → <strong>Validate</strong> (Move 2)</li>
+<li>"What if we approached it this way..." → <strong>Reframe</strong> (Move 3)</li>
+<li>"The data actually shows..." → <strong>Evidence</strong> (Move 4)</li>
+<li>"Here's how we'd mitigate that risk..." → <strong>Mitigation</strong> (Move 5)</li>
+<li><strong>Register:</strong> Professional (client-vendor)</li>
+<li><strong>14 turns</strong>, complete concern-handling conversation</li>
+<li><strong>All 5 moves used naturally</strong> - because business concerns often need full range</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Task
+</h2>
+<p class="section-desc">Listen to Dialogue 1 again. Answer these questions to test your comprehension.</p>
+</div>
+<div class="listening-card">
+<h3>🎧 Listening Comprehension</h3>
+<div class="listening-question">
+<p>1. Which concern was hidden?</p>
+<div class="listening-answer">✅ C. The spouse's job was the hidden concern (they said "I just got promoted")</div>
+</div>
+<div class="listening-question">
+<p>2. What move did the speaker use first?</p>
+<div class="listening-answer">✅ B. Acknowledge first ("I get why you're worried")</div>
+</div>
+<div class="listening-question">
+<p>3. Why did they choose that move?</p>
+<div class="listening-answer">✅ A. The concern was emotional (kids, job, fear)</div>
+</div>
+<div class="listening-question">
+<p>4. Which move did they NOT use?</p>
+<div class="listening-answer">✅ C. They used soft Reframe ("I've started looking into companies") but not hard Reframe</div>
+</div>
+<div class="listening-question">
+<p>5. Why didn't they use hard data?</p>
+<div class="listening-answer">✅ B. Emotional concerns need empathy and experience, not data</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-book-bookmark"></i>
+Vocabulary Box: Concern Collocations
+</h2>
+<p class="section-desc">C1 collocations with "concern". Use these to sound more natural and professional.</p>
+</div>
+<div class="vocab-card">
+<h3>📝 Concern Collocations</h3>
+<div class="vocab-grid">
+<div class="vocab-item"><strong>raise a concern</strong><span>Đưa ra lo ngại. "I appreciate you raising that concern."</span></div>
+<div class="vocab-item"><strong>address a concern</strong><span>Giải quyết lo ngại. "Let me address that specifically."</span></div>
+<div class="vocab-item"><strong>ease concerns</strong><span>Làm dịu lo ngại. "Here's how we'd ease your concerns."</span></div>
+<div class="vocab-item"><strong>dismiss concerns</strong><span>Bỏ qua lo ngại (negative). "Don't dismiss their concerns."</span></div>
+<div class="vocab-item"><strong>underlying concern</strong><span>Lo ngại ngầm. "The underlying concern is timing."</span></div>
+<div class="vocab-item"><strong>legitimate concern</strong><span>Lo ngại hợp lý. "That's a legitimate concern."</span></div>
+<div class="vocab-item"><strong>lingering concern</strong><span>Lo ngại kéo dài. "I still have a lingering concern about risk."</span></div>
+<div class="vocab-item"><strong>valid concern</strong><span>Lo ngại có giá trị. "That's a valid concern."</span></div>
+<div class="vocab-item"><strong>shared concern</strong><span>Lo ngại chung. "We share that concern."</span></div>
+<div class="vocab-item"><strong>address the root concern</strong><span>Giải quyết lo ngại gốc. "Let's address the root concern."</span></div>
+</div>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Use these collocations to sound more natural and professional. "Raise a concern" is more C1 than "say a problem."
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Concern-handling phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Concern-Handling Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>I understand your concern</td><td class="ipa-cell">/aɪ ʌndərstænd jɔːr kənˈsɜːrn/</td><td>Stress on "stand" and "cern"</td></tr>
+<tr><td>That's a valid point</td><td class="ipa-cell">/ðæts ə ˈvælɪd pɔɪnt/</td><td>Smooth "that's a" linking</td></tr>
+<tr><td>What if we approached</td><td class="ipa-cell">/wʌt ɪf wi əˈproʊtʃt/</td><td>Weak form "if"</td></tr>
+<tr><td>The data actually shows</td><td class="ipa-cell">/ðə ˈdeɪtə ˈæktuəli ʃoʊz/</td><td>Stress on "ac-tu-al-ly"</td></tr>
+<tr><td>Here's how we'd mitigate</td><td class="ipa-cell">/hɪrz haʊ wiːd ˈmɪtɪɡet/</td><td>Smooth "here's how" linking</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"I understand your concern..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when acknowledging. Falling tone = sincere, empathetic. <strong>Avoid:</strong> Rising (sounds like you're questioning their concern).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"That's a valid point..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when validating. Falling tone = respectful, serious. <strong>Avoid:</strong> Too soft (làm mất sense of validation).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"What if we approached..."</span>
+<span class="pattern-label">↗ Rising</span>
+<span class="context-tip"><strong>Context:</strong> Used when reframing. Rising tone = inviting, curious. <strong>Avoid:</strong> Falling (sounds like you're telling them what to do).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice handling concerns in different contexts. Remember: no register is "better" — it's about appropriateness!</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Friend Worried About Your Decision</h3>
+<p class="scenario-context">You want to explain an important decision (career change, moving, big purchase) to a friend. They have concerns. Handle concerns with empathy.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I understand your concern about [X]. That's a valid point."
+<strong>📖 Possible Response:</strong> "I get why you're worried about the career change. That's a big decision. You're right to think about the risks. Remember when I considered changing jobs 2 years ago? We talked about it and decided to wait. This feels different because I've already researched the new role. Here's what we can do — I'll take the new job on a 3-month trial, and if it doesn't work out, I have options."
+<strong>🔄 Alternative Response:</strong> "I hear you. It's a big change. What if we looked at it this way — I'm not leaving the company, I'm growing my career. From what I've seen, people who make these moves usually end up happier. Let's take it step by step."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "I understand your concern about..."</li>
+<li>Use experience/memory instead of data</li>
+<li>Use "Here's what we can do..."</li>
+<li>Keep it collaborative, not defensive</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Team Member Concerned About Change</h3>
+<p class="scenario-context">You want to propose a change to the team (new process, new tool, new workflow). Team has concerns. Handle concerns calmly.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I appreciate you raising that concern. Let me address that."
+<strong>📖 Possible Response:</strong> "I appreciate you raising that concern about the new tool. That's a valid point — learning something new takes time. Here's how we'd handle that — we'll do a 2-week pilot with just 2 people first, then roll out to the rest of the team. The data actually shows that teams using this tool complete projects 30% faster. What if we approached it this way — we start small, learn from it, then scale up?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "That's a valid concern..."</li>
+<li>Use "Here's how we'd handle that..."</li>
+<li>Use "The data actually shows..."</li>
+<li>Address concerns upfront</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Manager Pushing Back on Proposal</h3>
+<p class="scenario-context">You present a proposal to your manager. Manager has concerns about budget, timeline, or risk. Handle concerns professionally.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I understand your concern about [X]. That's a valid point."
+<strong>📖 Possible Response:</strong> "I understand your concern about the budget. That's a valid point — it's a significant investment. What if we approached it this way — instead of seeing this as a cost, we see it as risk mitigation. The data actually shows that companies investing in this area see 3x ROI within 12 months. Here's how we'd mitigate that risk — we'll phase the investment over 2 quarters, so we can adjust based on early results. Are we aligned on starting with a small pilot?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "I appreciate you raising that concern..."</li>
+<li>Use "What if we approached it this way..."</li>
+<li>Use "Here's how we'd mitigate that risk..."</li>
+<li>Provide evidence when appropriate</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Concern</h3>
+<p class="scenario-context">Morning: Handle spouse's concerns about big purchase (Casual). Afternoon: Handle client's concerns about timeline (Professional).</p>
+<div class="model-response">
+<strong>💡 Model Opening (Life):</strong> "I get why you're worried about..."
+<strong>💡 Model Opening (Business):</strong> "I appreciate you raising that concern..."
+<strong>📖 Possible Response (Life):</strong> "I get why you're worried about the cost. It's a big investment. You're right to think about it carefully. Remember how we felt when we bought the car last year? We were worried, but it's been great. Here's what we can do — we'll set aside an emergency fund and research alternatives. Let's take it step by step."
+<strong>📖 Possible Response (Business):</strong> "I appreciate you raising that concern about the timeline. That's a valid point — Q3 is critical. What if we approached it this way — we deliver core features in 3 months, then add advanced features in months 4-6. The data actually shows 80% of value comes from core features. Here's how we'd mitigate that risk — we'll build in 2-week buffers and have weekly check-ins."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Use different moves for each context</li>
+<li>Life: empathy + experience, Business: evidence + mitigation</li>
+<li>Keep it empathetic in Life, professional in Business</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply concern-handling to actual conversations this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Concern-Handling Template Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Choose 1 situation (Life or Business) where someone raises a concern. Practice handling it using 2-3 moves (not all 5!).</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use the fewest moves needed (quality over quantity)</li>
+<li>Write down: Which moves you used and why</li>
+<li>Note the result</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written concern-handling structure</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Concern-Handling Conversations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 conversations (Life & Business) where you handle concerns. Focus on empathetic response.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register, use experience not data)</li>
+<li>1 Business scenario (professional register, use evidence)</li>
+<li>Use 2-5 communication moves (choose based on concern)</li>
+<li>Keep it collaborative, not defensive</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Concern Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, when someone raises a concern, use the Concern Decoder to identify the real issue, then choose the right move. Note the results.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Decode at least 3 real concerns</li>
+<li>Choose the fewest moves needed for each (not always all 5!)</li>
+<li>Note their response and outcome</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Concern-Handling Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People feel heard and understood</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Concerns are addressed, not dismissed</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Conversations stay productive, not defensive</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">You turn pushback into progress</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Both sides move forward with confidence</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You acknowledge before defending</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You validate before explaining</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You choose the fewest moves needed (quality over quantity)</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You provide evidence when appropriate, experience when personal</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You show proactive thinking</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Acknowledge first:</strong> "I understand your concern..." before "Let me explain..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Validate the point:</strong> "That's a valid concern..." shows respect</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Choose wisely:</strong> Use the fewest moves needed, not all 5</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Match the context:</strong> Data for business, experience for personal</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Show your plan:</strong> "Here's how we'd address that..." builds confidence</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with communication moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Client worried about timeline</p>
+<button>Pause → Say it → Tap to reveal →</button>
+</div>
+<div class="flashcard-back">
+<p>🏠 Casual: "I get why you're worried about the timeline."<br>☕ Neutral: "I understand your concern about the timeline."<br>💼 Professional: "I appreciate you raising that concern about the timeline."<br>📋 More Formal: "I recognize the validity of your concern regarding the timeline."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always acknowledge first. Show you heard them before addressing.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Handling Concerns
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Life) Partner worried about moving. What should you say first?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Don't worry, it'll be fine."</div>
+<div class="quiz-option">B. "I understand your concern about the move. That's a valid point."</div>
+<div class="quiz-option">C. "You're overreacting."</div>
+<div class="quiz-option">D. "Let me explain why we should move."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Business) Client concerned about timeline. Which move shows empathy?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "The timeline is fine."</div>
+<div class="quiz-option">B. "I appreciate you raising that concern about the timeline."</div>
+<div class="quiz-option">C. "You're wrong about the timeline."</div>
+<div class="quiz-option">D. "We can't change the timeline."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Life) Friend worried about your career change. Which move validates their concern?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "That's a valid concern. Here's how I'd address it..."</div>
+<div class="quiz-option">B. "Don't worry about it."</div>
+<div class="quiz-option">C. "You don't understand."</div>
+<div class="quiz-option">D. "I've already decided."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Life) Spouse says "I'm scared about the move." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "The data shows 85% of moves are successful."</div>
+<div class="quiz-option">B. "I get why you're scared. That's a big change."</div>
+<div class="quiz-option">C. "Don't be scared."</div>
+<div class="quiz-option">D. "We have to do this."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Business) Manager concerned about budget. Which move provides evidence?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "The budget is fine."</div>
+<div class="quiz-option">B. "The data actually shows this investment will pay off in 6 months."</div>
+<div class="quiz-option">C. "We need this budget."</div>
+<div class="quiz-option">D. "I can't explain it."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Life) Spouse worried about kids changing schools. Which move offers mitigation?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Don't worry about the schools."</div>
+<div class="quiz-option">B. "Here's what we can do — we'll visit the schools together and talk to other parents."</div>
+<div class="quiz-option">C. "The schools are fine."</div>
+<div class="quiz-option">D. "We'll figure it out."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Business) Client says "Let's wait." Concern Decoder says they actually mean:</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. They need more time to think</div>
+<div class="quiz-option">B. They're uncomfortable changing now</div>
+<div class="quiz-option">C. They don't like the proposal</div>
+<div class="quiz-option">D. They're busy</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Judgement) Team member says "I'm not sure about this new tool." Which response is BEST?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "The data shows it increases productivity by 30%."</div>
+<div class="quiz-option">B. "I appreciate you raising that concern. What specifically are you worried about?"</div>
+<div class="quiz-option">C. "Don't worry, it's easy to learn."</div>
+<div class="quiz-option">D. "We have to use it."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Judgement) Client says "It's expensive." Which response is BETTER?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "The data shows 3x ROI within 12 months."</div>
+<div class="quiz-option">B. "I understand your concern about cost. What if we approached it this way — instead of seeing this as a cost, we see it as risk mitigation?"</div>
+<div class="quiz-option">C. "It's worth it."</div>
+<div class="quiz-option">D. "We can't lower the price."</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-06-day-37.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 37: Building a Persuasive Proposal</div>
+</a>
+<a href="week-06-day-39.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 39: Stakeholder Mapping & Win-Win</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 38 Complete & Continue to Day 39</span>
+</button>
+<div class="complete-message">You no longer see objections as attacks. You see them as information. 🤝</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 6 · Day 38 · Handling Concerns & Pushback</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `You: I've been thinking more about the move. Can I walk you through what I've found? Spouse: I'm still not sure about this. What about the kids? You: I get why you're worried about the kids. That's really important. Spouse: They'll lose all their friends. They're already settled here. You: You're right to worry about that. It's a big transition for them. Spouse: And what about my job? I just got promoted. You: That's a valid concern. I've already started looking into companies there. There seem to be quite a few opportunities in your field. Spouse: Really? Which ones? You: I found a few that match your profile. Remember when we moved before? We were worried about the same things, and it worked out much better than we expected. Spouse: I don't know. It still feels risky. You: Here's what we can do about that — we'll visit the new schools together, talk to other parents, and make sure it's a good fit before we commit. We can also time the move for after your bonus. Spouse: I guess that makes sense. But I'm still nervous. You: I get why you're nervous. This is a big decision. What if we take it one step at a time — first we visit, then we decide. Are we aligned on that approach? Spouse: Yeah, let's do that. One step at a time.`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `Client: I've reviewed your proposal. I like the approach, but I'm concerned about the 6-month timeline. You: I appreciate you raising that concern. Timeline is critical for this project. Client: We need results by Q3. Six months puts us in Q4. You: That's a valid concern. Here's how I'd address it — we can phase the delivery to give you early wins in Q3 while completing the full project in Q4. Client: What do you mean by 'early wins'? You: What if we approached it this way — we deliver the core functionality in 3 months, which gives you immediate value, then we add the advanced features in months 4-6. Client: But what if the core functionality isn't enough? You: The data actually shows that 80% of the value comes from the core features. The advanced features are nice-to-haves, not must-haves. Client: I'm still worried about the risk. What if something goes wrong? You: Here's how we'd mitigate that risk — we'll build in 2-week buffers at each phase, and we'll have weekly check-ins to catch issues early. Client: Okay, that makes sense. But I need to discuss this with my team. You: I understand your concern about getting team buy-in. Here's what we can do — I'll prepare a summary document highlighting the key points, and I'm available to join your team meeting to answer questions. Client: That would be helpful. Let's schedule that for next week. You: Perfect. Are we aligned on me sending the summary by Friday and joining your meeting next Wednesday? Client: Yes, let's do that.`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-38')) {
+completed.push('day-38');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 38 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'You no longer see objections as attacks. You see them as information. 🤝';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-38')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 38 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
