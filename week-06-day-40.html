@@ -1,0 +1,2360 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 6 Day 40: Building Influence Before the Decision | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #7C3AED;
+--primary-bright: #6D28D9;
+--primary-soft: #EDE9FE;
+--primary-deep: #4C1D95;
+--primary-light: #A78BFA;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 11%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🕸️'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(237, 233, 254, 0.6), rgba(221, 214, 254, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(124, 58, 237, 0.2);
+}
+.philosophy-box {
+background: #F5F3FF;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(237, 233, 254, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(237, 233, 254, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.usage-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 14px;
+}
+.usage-box {
+padding: 12px;
+border-radius: var(--radius-sm);
+font-size: 13px;
+}
+.usage-box.when { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.usage-box.avoid { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.usage-box strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.usage-box.when strong { color: var(--green-deep); }
+.usage-box.avoid strong { color: #C53030; }
+.usage-box ul { list-style: none; padding: 0; }
+.usage-box li { padding: 2px 0; padding-left: 16px; position: relative; color: var(--text-secondary); }
+.usage-box.when li::before { content: '✔'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+.usage-box.avoid li::before { content: '✘'; position: absolute; left: 0; color: #F56565; font-weight: 700; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.zerosum { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.winwin { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.zerosum strong { color: #C53030; }
+.compare-level.winwin strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.mistakes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.mistake-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-orange);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.mistake-card h4 {
+font-family: 'Fraunces', serif; font-size: 1.05rem;
+color: var(--text-primary); margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px;
+}
+.mistake-wrong {
+background: rgba(245, 101, 101, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: #C53030;
+border-left: 3px solid #F56565;
+}
+.mistake-right {
+background: rgba(16, 185, 129, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: var(--green-deep);
+border-left: 3px solid var(--highlight-green);
+}
+.mistake-why {
+font-size: 12px; color: var(--text-secondary); font-style: italic;
+}
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.comparison-table th {
+background: rgba(237, 233, 254, 0.5);
+padding: 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--primary-deep);
+border-bottom: 2px solid rgba(124, 58, 237, 0.2);
+}
+.comparison-table td {
+padding: 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.comparison-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-selfcentered {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.better { background: rgba(251, 146, 60, 0.08); border-left: 3px solid var(--highlight-orange); }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.better strong { color: var(--orange-deep); }
+.rewrite-level.professional strong { color: var(--green-deep); }
+.rewrite-why {
+margin-top: 8px;
+padding: 8px;
+background: rgba(124, 58, 237, 0.08);
+border-radius: var(--radius-sm);
+font-size: 12px;
+color: var(--primary-deep);
+font-style: italic;
+}
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(237, 233, 254, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(237, 233, 254, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.curiosity { background: var(--highlight-green); }
+.move-highlight.shared { background: var(--highlight-blue); }
+.move-highlight.contribution { background: var(--highlight-purple); }
+.move-highlight.ownership { background: var(--highlight-orange); }
+.move-highlight.support { background: var(--highlight-gold); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(237, 233, 254, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.listening-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.listening-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.listening-question {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.listening-question p {
+font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;
+}
+.listening-answer {
+font-size: 12px; color: var(--green-deep); font-style: italic;
+}
+
+.vocab-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.vocab-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.vocab-item {
+padding: 12px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--highlight-blue);
+}
+.vocab-item strong {
+display: block; font-size: 13px; color: var(--blue-deep); margin-bottom: 4px;
+}
+.vocab-item span {
+font-size: 12px; color: var(--text-secondary);
+}
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { border-radius: var(--radius-md); padding: 24px; border: 2px solid; }
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 12px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.scenario-context { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.3; }
+.scenario-requirements { background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.scenario-requirements h4 { font-size: 12px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 14px;
+margin-bottom: 14px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 6px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(237, 233, 254, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(237, 233, 254, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(237, 233, 254, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(237, 233, 254, 0.5), rgba(221, 214, 254, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(124, 58, 237, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(124, 58, 237, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(237, 233, 254, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(237, 233, 254, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3); }
+
+.reality-check {
+background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(139, 92, 246, 0.08));
+border-radius: var(--radius-lg);
+padding: 32px;
+margin: 32px 0;
+border-left: 4px solid var(--primary);
+}
+.reality-check h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--primary-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.reality-check p {
+font-size: 14px; color: var(--text-secondary); line-height: 1.4; margin-bottom: 12px;
+}
+.reality-check strong { color: var(--primary-deep); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(124, 58, 237, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(124, 58, 237, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(124, 58, 237, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.usage-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-06.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 6 Hub</span>
+</a>
+<div class="day-indicator">
+Day 40 / 42
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-06.html" class="day-tab">Overview</a>
+<a href="week-06-day-36.html" class="day-tab">Day 36</a>
+<a href="week-06-day-37.html" class="day-tab">Day 37</a>
+<a href="week-06-day-38.html" class="day-tab">Day 38</a>
+<a href="week-06-day-39.html" class="day-tab">Day 39</a>
+<a href="week-06-day-40.html" class="day-tab active">Day 40</a>
+<a href="week-06-day-41.html" class="day-tab">Day 41</a>
+<a href="week-06-day-42.html" class="day-tab">Day 42</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-06.html">Week 6</a> › Day 40
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🕸️</span>
+<h1 class="day-title">Building Influence Before the Decision</h1>
+</div>
+<p class="day-subtitle">Day 39 taught you to create win-win solutions. Today, you'll learn to <strong>build influence before you present</strong>. People rarely support ideas. People support ideas they helped shape.</p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-users-three"></i> Social Influence</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 5 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Day 39 (Solution Design)</div>
+<div style="font-size: 14px;">"Let's find where our interests align and expand the options."</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">Day 40 (Social Influence)</div>
+<div style="font-size: 14px;">"Let me build support before I present. People support ideas they helped shape."</div>
+</div>
+</div>
+"B2 speakers try to persuade one person. C1 speakers build influence so the decision becomes obvious."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Persuasion to Influence
+</div>
+<p>
+<strong>People rarely support ideas. People support ideas they helped shape.</strong>
+<br><br>
+Influence isn't about convincing people to agree with you. It's about bringing people into the process so the idea becomes partially theirs. When you build influence correctly, by the time you reach the decision-maker, the answer is often already clear.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Influence doesn't mean everyone agrees. It means enough people trust the process to move forward together. Someone can support you without fully agreeing. Building influence doesn't mean everyone says yes — it means enough people say "I can work with this."
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Build influence</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common mistakes</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Ally vs Decision Maker</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔄</div>
+<div class="plan-title">Compare</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Casual ↔ Pro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Dialogues + Listen</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Vocab + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves (Build Influence Process)
+</h2>
+<p class="section-desc">5 moves to build influence before the decision. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">Start with Curiosity</div>
+<div class="pattern-ipa">Core idea: "I'm exploring something and would value your perspective..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">First move always</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Starting with curiosity shows respect for their thinking. You're asking for input, not agreement. This opens the door without pressure.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I'm thinking about something — can I get your take?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'m thinking about something — can I get your take?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I'm exploring an idea and would love your thoughts..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'m exploring an idea and would love your thoughts...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I'm exploring something and would value your perspective..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'m exploring something and would value your perspective...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I'm considering an initiative and would appreciate your insight..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'m considering an initiative and would appreciate your insight...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>First move when approaching potential allies</li>
+<li>When you want input, not agreement</li>
+<li>To show respect for their thinking</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You've already decided and just want them to agree (sounds fake)</li>
+<li>They have no relevant expertise</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-sum:</strong> "I need you to support my idea."</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "I'm exploring something and would value your perspective..."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">Find Shared Interest</div>
+<div class="pattern-ipa">Core idea: "I noticed this connects to what you've been working on..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Showing relevance</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Finding shared interest shows you've done your homework. It makes the idea feel less like "yours" and more like something that matters to them too.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"This is kind of like what you've been doing..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This is kind of like what you\'ve been doing...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"This connects to your work on..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This connects to your work on...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I noticed this connects to what you've been working on..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I noticed this connects to what you\'ve been working on...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"This initiative directly supports your department's objectives..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This initiative directly supports your department\'s objectives...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After starting with curiosity</li>
+<li>To show relevance to their priorities</li>
+<li>To make the idea feel less like "yours"</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The connection is forced or fake</li>
+<li>You haven't researched their work</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-sum:</strong> "You should support this because it's important."</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "I noticed this connects to what you've been working on..."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Invite Contribution</div>
+<div class="pattern-ipa">Core idea: "Your input would really help shape this..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Creating ownership</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Inviting contribution transforms "my idea" into "our idea." When people help shape something, they become invested in its success.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"You're good at this — can you help me think it through?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('You\'re good at this — can you help me think it through?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Your experience would really help here..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Your experience would really help here...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Your input would really help shape this..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Your input would really help shape this...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Your expertise would be invaluable in refining this approach..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Your expertise would be invaluable in refining this approach...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After finding shared interest</li>
+<li>To give them ownership of part of the idea</li>
+<li>To transform "my idea" into "our idea"</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You don't actually want their input (sounds manipulative)</li>
+<li>You're just flattering to get something</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-sum:</strong> "I need your help."</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "Your input would really help shape this..."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Build Ownership</div>
+<div class="pattern-ipa">Core idea: "Would you be open to being part of this?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Deepening commitment</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Building ownership turns allies into co-creators. When someone is part of something, they defend it, promote it, and fight for it.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Want to be part of this?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Want to be part of this?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Would you be interested in being involved?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Would you be interested in being involved?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Would you be open to being part of this?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Would you be open to being part of this?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"I'd welcome your participation in shaping this initiative..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'d welcome your participation in shaping this initiative...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After they've contributed input</li>
+<li>To create genuine ownership</li>
+<li>To turn allies into co-creators</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>They've shown no interest</li>
+<li>You don't have time for real collaboration</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-sum:</strong> "I need you to support my idea."</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "Would you be open to being part of this?"</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Ask for Visible Support</div>
+<div class="pattern-ipa">Core idea: "Would you be comfortable backing this when we present?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Final move</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Asking for visible support makes their commitment concrete. This is the final move — only after you've built ownership.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Can I count on you when we talk to them?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Can I count on you when we talk to them?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Would you be willing to support this when we present?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Would you be willing to support this when we present?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Would you be comfortable backing this when we present?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Would you be comfortable backing this when we present?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"May I count on your endorsement when we bring this forward?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('May I count on your endorsement when we bring this forward?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>Only AFTER they've contributed and feel ownership</li>
+<li>As the final move before approaching decision-maker</li>
+<li>To make support specific and visible</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You haven't built ownership first (sounds demanding)</li>
+<li>You're asking too much too soon</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-sum:</strong> "You have to support this."</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "Would you be comfortable backing this when we present?"</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+Common Mistakes
+</h2>
+<p class="section-desc">3 lỗi phổ biến khi building influence. Tránh những lỗi này để giữ collaboration authentic.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: Asking for support before building input</h4>
+<div class="mistake-wrong">❌ "Can you support my proposal?" (ngay lần đầu nói chuyện)</div>
+<div class="mistake-right">✅ "I'm exploring something and would value your perspective..." (build first)</div>
+<div class="mistake-why">People support what they helped shape, not what they were told to support.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Collecting supporters instead of building contributors</h4>
+<div class="mistake-wrong">❌ "I need 5 people to agree with me." (collecting signatures)</div>
+<div class="mistake-right">✅ "I need 5 people to help shape this." (building contributors)</div>
+<div class="mistake-why">Supporters can disappear. Contributors stay invested because they helped create it.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Going to the decision-maker too early</h4>
+<div class="mistake-wrong">❌ Đi thẳng đến CEO mà không build influence</div>
+<div class="mistake-right">✅ Map stakeholders → Find allies → Build ownership → Present together</div>
+<div class="mistake-why">Decision-makers listen to coalitions, not individuals. Influence makes the decision obvious.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+Ally vs Decision Maker Decoder (Signature Section)
+</h2>
+<p class="section-desc">Who should you talk to first? Understanding roles in influence building.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 Ally vs Decision Maker Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>Person</th><th>Role</th><th>How to approach</th><th>When to approach</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Decision maker</strong></td><td>Final yes/no</td><td>Present with coalition already built</td><td>Last, after allies are on board</td></tr>
+<tr><td><strong>Ally</strong></td><td>Helps shape decision</td><td>Seek perspective and input</td><td>First, before anyone else</td></tr>
+<tr><td><strong>Influencer</strong></td><td>Trusted voice</td><td>Ask for endorsement</td><td>After ally, before decision-maker</td></tr>
+<tr><td><strong>Blocker</strong></td><td>Needs reassurance</td><td>Address concerns first, then invite</td><td>After understanding their worry</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Map everyone involved in the decision. 2. Identify who is ally, influencer, blocker, decision-maker. 3. Start with allies (seek perspective). 4. Build ownership with influencers (invite contribution). 5. Address blockers' concerns (find shared interest). 6. Present to decision-maker with coalition already built.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-left-right"></i>
+Casual ↔ Professional Comparison
+</h2>
+<p class="section-desc">Same moves, different registers. Match the register to the context.</p>
+</div>
+<div class="decoder-card" style="border-left-color: var(--highlight-blue);">
+<h3>🔄 Register Comparison</h3>
+<table class="comparison-table">
+<thead>
+<tr><th>Situation</th><th>🏠 Casual</th><th>💼 Professional</th></tr>
+</thead>
+<tbody>
+<tr><td>Start with Curiosity</td><td>"I'm thinking about something — can I get your take?"</td><td>"I'm exploring something and would value your perspective..."</td></tr>
+<tr><td>Find Shared Interest</td><td>"This is kind of like what you've been doing..."</td><td>"I noticed this connects to what you've been working on..."</td></tr>
+<tr><td>Invite Contribution</td><td>"You're good at this — can you help me think it through?"</td><td>"Your input would really help shape this..."</td></tr>
+<tr><td>Build Ownership</td><td>"Want to be part of this?"</td><td>"Would you be open to being part of this?"</td></tr>
+<tr><td>Ask for Support</td><td>"Can I count on you when we talk to them?"</td><td>"Would you be comfortable backing this when we present?"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Casual uses simple, direct language. Professional uses structured, respectful language. Match the register to the context.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: The Email That Missed the Mark
+</h2>
+<p class="section-desc">Read this email from a colleague. What's wrong with their approach? (Hint: It's not what they asked for — it's what they didn't do.)</p>
+</div>
+<div class="reading-card">
+<h3>📧 Email from Colleague</h3>
+<div class="email-box">
+<strong>Subject:</strong> New client request process<br><br>
+Hi team,<br><br>
+I've been working on a new process for handling client requests, and I think it will save us a lot of time. The director is reviewing proposals next week, and I'm planning to present mine.<br><br>
+Let me know if you have any questions.<br><br>
+Thanks,<br>
+Alex
+</div>
+<div class="reading-questions">
+<h4>🤔 Questions:</h4>
+<p>1. Alex didn't ask for support directly. So what's wrong?</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">A. The email is too short | B. Alex skipped ALL the influence-building moves — no curiosity, no shared interest, no invitation to contribute, no ownership building | C. Alex should have attached a document | D. Nothing is wrong</p>
+<p style="margin-top: 10px;">2. How would you rewrite this email to build influence before the presentation?</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">A. "Hi team, I'm exploring a new approach to handling client requests and would value your perspective before I take it further. I noticed this connects to the efficiency improvements you've been working on, and your input would really help shape this. Would you be open to being part of this? If we can refine it together, I think we'd have a stronger case when we present to the director next week."</p>
+<p style="margin-top: 10px; color: var(--green-deep); font-weight: 600;">✅ Answers: 1. B. Alex is presenting a finished idea instead of shaping it with the team. By the time Alex presents to the director, the team has no reason to support it. 2. A. The rewrite starts with curiosity, finds shared interest, invites contribution, and builds ownership — BEFORE asking anyone to present.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Self-Centered Requests
+</h2>
+<p class="section-desc">Rewrite these self-centered requests to build influence. Explain WHY your version is better.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Self-Centered → Influence Building</h3>
+<div class="rewrite-item">
+<div class="rewrite-selfcentered">❌ Self-centered: "I need you to approve my proposal."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"Please approve this."</div>
+<div class="rewrite-level better"><strong>Better</strong>"I'd love your thoughts on this proposal..."</div>
+<div class="rewrite-level professional"><strong>Professional</strong>"I'm exploring a new approach and would value your perspective. This connects to your team's efficiency goals, and your input would really help shape it. Would you be open to being part of this?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The professional version starts with curiosity, finds shared interest, and invites contribution — transforming a demand into collaboration.</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-selfcentered">❌ Self-centered: "You have to support this because it's important."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"This is important, so support it."</div>
+<div class="rewrite-level better"><strong>Better</strong>"This connects to your work, so I thought you'd be interested..."</div>
+<div class="rewrite-level professional"><strong>Professional</strong>"I noticed this aligns with your Q3 objectives. Your expertise would really help shape this, and your input would make it stronger. Would you be comfortable backing this when we present?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The professional version acknowledges their expertise, invites contribution, and asks for specific support — building ownership before requesting backing.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 speakers build influence in real conversations. No labels in real life — just natural flow.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Building Family Support for Career Change (Life)</h3>
+<div class="story-context">Context: You want to change careers (from accounting to design). Instead of going straight to parents, you build influence with your brother first. Brother is initially skeptical.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Anh, em muốn nói với anh về một quyết định quan trọng. <strong>I'm exploring something and would value your perspective.</strong>" <span class="move-highlight curiosity">Start with Curiosity</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Sure, what's up?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Em đang cân nhắc chuyển từ kế toán sang design. Em biết đây là quyết định lớn, nên em muốn nghe ý kiến anh trước khi nói với bố mẹ."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Hmm, that's a big change. Are you sure about this?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I'm not 100% sure yet, which is why I want your perspective. <strong>I noticed this connects to what you did</strong> when you switched from engineering to product management." <span class="move-highlight shared">Find Shared Interest</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Yeah, it was tough but worth it. But design is different."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That's true. <strong>Your input would really help shape this</strong> — you've been through a similar transition and know what questions Mom and Dad will ask." <span class="move-highlight contribution">Invite Contribution</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"I guess I can help you think through it. What's your plan?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Em đã research một số khóa học và cơ hội việc làm. <strong>Would you be open to being part of this?</strong> Maybe we could work on the presentation to Mom and Dad together?" <span class="move-highlight ownership">Build Ownership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Okay, I can do that. But you need to have solid answers about job security."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Exactly. <strong>Would you be comfortable backing this when we talk to them?</strong> Your perspective carries weight with Mom." <span class="move-highlight support">Ask for Visible Support</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"I can back you up. But let's refine the plan first."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Perfect. Cảm ơn anh. Em cũng sẽ nói chuyện với cô Lan. Your input would really help with the financial concerns."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Good idea. She can help with that part."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Nếu chúng ta cùng nhau, sẽ dễ hơn."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Brother:</div>
+<div class="dialogue-text">"Đúng. Teamwork makes the dream work."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"I'm exploring something and would value your perspective" → <strong>Start with Curiosity</strong> (Move 1)</li>
+<li>"I noticed this connects to what you did..." → <strong>Find Shared Interest</strong> (Move 2)</li>
+<li>"Your input would really help shape this..." → <strong>Invite Contribution</strong> (Move 3)</li>
+<li>"Would you be open to being part of this?" → <strong>Build Ownership</strong> (Move 4)</li>
+<li>"Would you be comfortable backing this..." → <strong>Ask for Visible Support</strong> (Move 5)</li>
+<li><strong>Register:</strong> Casual throughout (siblings)</li>
+<li><strong>14 turns</strong> natural flow, all 5 moves used naturally</li>
+<li><strong>Brother was initially skeptical</strong> ("Are you sure?") — had to build influence, not just ask for support</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: Building Cross-Functional Coalition (Business)</h3>
+<div class="story-context">Context: You want to propose a new project management tool. Marketing Lead is initially not convinced because of the learning curve.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Hi Sarah, <strong>I'm exploring something and would value your perspective before I go further.</strong>" <span class="move-highlight curiosity">Start with Curiosity</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Sure, what's on your mind?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I'm considering proposing a new project management tool for the team. <strong>I noticed this connects to what you've been working on</strong> — the workflow efficiency improvements." <span class="move-highlight shared">Find Shared Interest</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Interesting. What tool are you thinking?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Asana. But I'm not sure it's the right fit yet. <strong>Your input would really help shape this</strong> because you've led similar transitions before." <span class="move-highlight contribution">Invite Contribution</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"I've used Asana. Honestly, <strong>I'm not convinced</strong>. The learning curve is steep and my team is already overloaded."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That's a valid concern. <strong>What if we looked at this differently?</strong> Instead of a full rollout, what if we started with a small pilot — just our two teams for 4 weeks?" <span class="move-highlight contribution">Address concern + Expand options</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"A pilot might work. But I'd need to see it doesn't slow us down."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Would you be open to being part of this?</strong> We could design the pilot together, with your team's constraints in mind." <span class="move-highlight ownership">Build Ownership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"I'd be willing to try that. What about Engineering?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I'm talking to Mike next. <strong>Would you be comfortable backing this when we present to the director?</strong> Your perspective carries weight, and having both Marketing and Engineering on board would make a stronger case." <span class="move-highlight support">Ask for Visible Support</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"I can back you up if the pilot shows results. But you'll need data on ROI."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Exactly. If we can show efficiency gains from the pilot, it'll be easier to get approval."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"Smart approach. Let's sync next week to plan the pilot."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Perfect. Thanks for being open to this."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing Lead:</div>
+<div class="dialogue-text">"No problem. This could really help both our teams — if we do it right."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"I'm exploring something and would value your perspective..." → <strong>Start with Curiosity</strong> (Move 1)</li>
+<li>"I noticed this connects to what you've been working on..." → <strong>Find Shared Interest</strong> (Move 2)</li>
+<li>"Your input would really help shape this..." → <strong>Invite Contribution</strong> (Move 3)</li>
+<li>Marketing Lead said <strong>"I'm not convinced"</strong> — had to address concern before continuing</li>
+<li>"Would you be open to being part of this?" → <strong>Build Ownership</strong> (Move 4)</li>
+<li>"Would you be comfortable backing this..." → <strong>Ask for Visible Support</strong> (Move 5)</li>
+<li><strong>Register:</strong> Professional (cross-functional leads)</li>
+<li><strong>15 turns</strong>, complete influence building conversation</li>
+<li><strong>Marketing Lead was initially skeptical</strong> ("I'm not convinced") — had to address concern and expand options before building ownership</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Task
+</h2>
+<p class="section-desc">Listen to Dialogue 2 again. Answer these questions to test your comprehension.</p>
+</div>
+<div class="listening-card">
+<h3>🎧 Listening Comprehension</h3>
+<div class="listening-question">
+<p>1. What was the first move the speaker used?</p>
+<div class="listening-answer">✅ B. Start with Curiosity ("I'm exploring something and would value your perspective...")</div>
+</div>
+<div class="listening-question">
+<p>2. Why did they mention "workflow efficiency improvements"?</p>
+<div class="listening-answer">✅ B. To find shared interest and show relevance to Marketing Lead's work</div>
+</div>
+<div class="listening-question">
+<p>3. When Marketing Lead said "I'm not convinced," what did the speaker do?</p>
+<div class="listening-answer">✅ B. Addressed the concern and expanded options (proposed a pilot instead of full rollout)</div>
+</div>
+<div class="listening-question">
+<p>4. Which move created ownership?</p>
+<div class="listening-answer">✅ B. Build Ownership ("Would you be open to being part of this?")</div>
+</div>
+<div class="listening-question">
+<p>5. What made this persuasive?</p>
+<div class="listening-answer">✅ B. The speaker built influence step by step, addressed concerns, and created ownership before asking for support</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-book-bookmark"></i>
+Vocabulary Box: Influence Collocations (Đời thường)
+</h2>
+<p class="section-desc">C1 collocations with influence building (giảm MBA, tăng đời thường).</p>
+</div>
+<div class="vocab-card">
+<h3>📝 Influence Collocations</h3>
+<div class="vocab-grid">
+<div class="vocab-item"><strong>get someone on board</strong><span>Thuyết phục ai đó tham gia. "I need to get Sarah on board before we present."</span></div>
+<div class="vocab-item"><strong>build trust</strong><span>Xây dựng niềm tin. "Trust takes time to build."</span></div>
+<div class="vocab-item"><strong>earn support</strong><span>Kiếm được sự ủng hộ (qua effort). "You have to earn support, not demand it."</span></div>
+<div class="vocab-item"><strong>bring people with you</strong><span>Dẫn dắt mọi người cùng tiến. "The key is bringing people with you, not leaving them behind."</span></div>
+<div class="vocab-item"><strong>have someone backing you</strong><span>Có ai đó ủng hộ. "It helps to have the director backing you."</span></div>
+<div class="vocab-item"><strong>find common ground</strong><span>Tìm điểm chung. "Let's find common ground before we argue."</span></div>
+<div class="vocab-item"><strong>shape the idea together</strong><span>Cùng nhau định hình ý tưởng. "If we shape the idea together, everyone will support it."</span></div>
+<div class="vocab-item"><strong>create buy-in</strong><span>Tạo sự đồng thuận. "We need to create buy-in before the meeting."</span></div>
+<div class="vocab-item"><strong>carry weight</strong><span>Có ảnh hưởng. "Your perspective carries weight with the team."</span></div>
+<div class="vocab-item"><strong>back someone up</strong><span>Ủng hộ ai đó. "Can you back me up in the meeting?"</span></div>
+</div>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Use these collocations to sound more natural. "Get someone on board" is more C1 than "garner support." "Bring people with you" is more C1 than "leverage influence."
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Influence phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Influence Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>I'm exploring something</td><td class="ipa-cell">/aɪm ɪkˈsplɔːrɪŋ ˈsʌmθɪŋ/</td><td>Smooth "exploring"</td></tr>
+<tr><td>I noticed this connects</td><td class="ipa-cell">/aɪ ˈnoʊtɪst ɪs kəˈnɛkts/</td><td>Weak form "this"</td></tr>
+<tr><td>Your input would help</td><td class="ipa-cell">/jɔːr ˈɪnpʊt wʊd hɛlp/</td><td>Weak form "would" /wʊd/</td></tr>
+<tr><td>Would you be open to</td><td class="ipa-cell">/wʊd juː biː ˈoʊpən tuː/</td><td>Rising intonation on "open"</td></tr>
+<tr><td>Would you be comfortable backing</td><td class="ipa-cell">/wʊd juː biː ˈkʌmftərəbəl ˈbækŋ/</td><td>Stress on "comfortable"</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"I'm exploring something..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when starting with curiosity. Falling tone = sincere, open. <strong>Avoid:</strong> Rising (sounds like you're questioning).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Your input would really help..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when inviting contribution. Falling tone = genuine, appreciative. <strong>Avoid:</strong> Rising (sounds like flattery).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Would you be comfortable backing..."</span>
+<span class="pattern-label">↗↘ Rise-fall</span>
+<span class="context-tip"><strong>Context:</strong> Used when asking for visible support. Rise-fall = respectful question, not demand. <strong>Avoid:</strong> Flat (sounds robotic) or Falling (sounds like a demand).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice building influence in different contexts. Remember: no register is "better" — it's about appropriateness!</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Building Family Support for Career Change</h3>
+<p class="scenario-context">You want to change careers (from accounting to design). You need to build influence with your sibling before talking to parents.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I'm exploring something and would value your perspective."
+<strong>📖 Possible Response:</strong> "Anh, em muốn nói với anh về một quyết định quan trọng. I'm exploring something and would value your perspective. Em đang cân nhắc chuyển từ kế toán sang design. I noticed this connects to what you did when you switched careers. Your input would really help shape this — you've been through a similar transition. Would you be open to being part of this? Can I count on you to back me up when we talk to Mom and Dad?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "I'm exploring something and would value your perspective"</li>
+<li>Use "I noticed this connects to..."</li>
+<li>Use "Your input would really help shape this"</li>
+<li>Keep it collaborative, not demanding</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Building Team Support for New Process</h3>
+<p class="scenario-context">You want to propose a new workflow to the team. You need to build influence with 2-3 colleagues before presenting to the manager. <strong>One person initially says "I'm not sure about this" — you must address concern.</strong></p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I'm exploring an idea and would love your thoughts."
+<strong>📖 Possible Response:</strong> "Hi, I'm exploring an idea and would love your thoughts. I've been thinking about a new workflow that could save us time. I noticed this connects to the efficiency improvements you've been working on. Your experience would really help shape this. Would you be open to being part of this? I'd appreciate your support when we present to the manager."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "I'm exploring an idea and would love your thoughts"</li>
+<li>Use "I noticed this connects to..."</li>
+<li>Use "Your experience would really help shape this"</li>
+<li>Build relationship before asking for support</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Building Cross-Functional Coalition</h3>
+<p class="scenario-context">You want to propose a new tool for the company. You need to build influence with team leads before presenting to the director. <strong>One lead says "I don't have time for this" — you must reframe.</strong></p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "I'm exploring something and would value your perspective."
+<strong>📖 Possible Response:</strong> "Hi Sarah, I'm exploring something and would value your perspective before I go further. I'm considering proposing a new project management tool. I noticed this connects to your team's workflow efficiency goals. Your expertise would really help shape this. Would you be open to being part of this with a small pilot? I'd appreciate your backing when we present to the director."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "I'm exploring something and would value your perspective"</li>
+<li>Use "I noticed this connects to..."</li>
+<li>Use "Your expertise would really help shape this"</li>
+<li>Request specific support (pilot, endorsement)</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Influence</h3>
+<p class="scenario-context">Morning: Build family support for big purchase (Casual). <strong>Sister initially says "That's too expensive" — you must address concern.</strong> Afternoon: Build cross-functional coalition for new initiative (Professional). <strong>One lead says "I'm not convinced" — you must reframe.</strong></p>
+<div class="model-response">
+<strong>💡 Model Opening (Life):</strong> "I'm exploring something and would value your perspective."
+<strong>💡 Model Opening (Business):</strong> "I'm exploring something and would value your perspective."
+<strong>📖 Possible Response (Life):</strong> "Chị, em muốn nói với chị về một quyết định quan trọng. I'm exploring something and would value your perspective. Em và anh đang cân nhắc mua nhà. I noticed this connects to what you did when you bought your first home. Your input would really help shape this. Would you be open to being part of this? Can I count on you to back me up when we talk to Mom and Dad?"
+<strong>📖 Possible Response (Business):</strong> "Hi Mike, I'm exploring something and would value your perspective before I go further. I'm considering proposing a new CRM system. I noticed this connects to your team's customer management goals. Your expertise would really help shape this. Would you be open to being part of this with a pilot? I'd appreciate your backing when we present to the director."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Use different moves for each context</li>
+<li>Life: simple, direct language. Business: structured, professional language</li>
+<li>Build influence in both contexts</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply influence building to actual situations this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Influence Building Template Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Choose 1 situation (Life or Business) where you need to build influence. Practice using 2-3 influence moves (not all 5!).</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use the fewest moves needed (quality over quantity)</li>
+<li>Write down: Which moves you used and why</li>
+<li>Note the result</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written influence structure</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Influence Building Conversations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 conversations (Life & Business) where you build influence. Focus on respectful, collaborative language.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register, simple language)</li>
+<li>1 Business scenario (professional register, structured language)</li>
+<li>Use 2-5 communication moves (choose based on situation)</li>
+<li>Build relationship before asking for support</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Influence Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, when you need support for an idea/project, use the Ally vs Decision Maker Decoder to identify roles, then build influence step by step. Note the results.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Build influence for at least 1 real idea</li>
+<li>Map stakeholders first (ally, influencer, blocker, decision-maker)</li>
+<li>Use Ally vs Decision Maker Decoder for each person</li>
+<li>Note their response and outcome</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Influence Building Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People feel respected and valued</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">You build genuine relationships, not manipulation</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Conversations stay collaborative, not transactional</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">You turn "my idea" into "our idea"</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Decision-makers see broad support, not just your voice</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You start with curiosity before asking for support</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You find shared interest to show relevance</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You invite contribution to create ownership</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You build ownership before requesting visible support</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You ask for specific support with clear reasoning</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Start with curiosity:</strong> "I'm exploring something..." before "I need your support..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Find shared interest:</strong> "This connects to..." shows you've done your homework</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Invite contribution:</strong> "Your input would help shape this..." creates ownership</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Build ownership:</strong> "Would you be open to being part of this?" transforms allies into co-creators</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Ask for visible support:</strong> "Would you be comfortable backing this..." is clear and confident</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with communication moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>You need support from a colleague for a new initiative</p>
+<button>Pause → Say it → Tap to reveal →</button>
+</div>
+<div class="flashcard-back">
+<p>🏠 Casual: "I'm thinking about something — can I get your take?"<br>☕ Neutral: "I'm exploring an idea and would love your thoughts..."<br>💼 Professional: "I'm exploring something and would value your perspective..."<br>📋 More Formal: "I'm considering an initiative and would appreciate your insight..."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always start with curiosity. Build influence before asking for support.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Building Influence Before the Decision
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Life) You want to convince parents to let you study abroad. Best first move with your brother?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Anh, em cần anh ủng hộ em đi du học."</div>
+<div class="quiz-option">B. "Anh, I'm exploring something and would value your perspective."</div>
+<div class="quiz-option">C. "Anh phải ủng hộ em vì đây là cơ hội tốt."</div>
+<div class="quiz-option">D. "Em đã quyết định đi du học, anh đồng ý chứ?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Business) You want to propose a new tool. Best first move with team lead?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Tôi cần chị ủng hộ proposal này."</div>
+<div class="quiz-option">B. "Chị, I'm exploring something and would value your perspective before I go further."</div>
+<div class="quiz-option">C. "Proposal này rất quan trọng, chị phải approve."</div>
+<div class="quiz-option">D. "Tôi đã quyết định, chị chỉ cần đồng ý."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) Colleague says "I'm not convinced." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I understand. Goodbye."</div>
+<div class="quiz-option">B. "I noticed this connects to your efficiency goals, and your input would really help shape this. Would you be open to being part of a small pilot?"</div>
+<div class="quiz-option">C. "You're wrong, it's a great idea."</div>
+<div class="quiz-option">D. "Fine, I'll do it myself."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) Colleague says "I don't have time for this." Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Okay, sorry to bother you."</div>
+<div class="quiz-option">B. "I understand. What if we started with just 30 minutes of your time to explore this together?"</div>
+<div class="quiz-option">C. "You're always too busy."</div>
+<div class="quiz-option">D. "Fine, I'll find someone else."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Life) You want to buy a house, need to build influence with sister. Which move creates ownership?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Chị phải ủng hộ em."</div>
+<div class="quiz-option">B. "Would you be open to being part of this?"</div>
+<div class="quiz-option">C. "Em đã quyết định rồi."</div>
+<div class="quiz-option">D. "Chị đồng ý chứ?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Business) You want to propose a new process. Which move invites contribution?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Tôi cần chị giúp."</div>
+<div class="quiz-option">B. "Your expertise would really help shape this."</div>
+<div class="quiz-option">C. "Chị phải approve vì chị là manager."</div>
+<div class="quiz-option">D. "Tôi không cần chị, tôi sẽ làm một mình."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Judgement) You've started with curiosity, found shared interest, invited contribution. Next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Ask for Visible Support ngay</div>
+<div class="quiz-option">B. Build Ownership</div>
+<div class="quiz-option">C. Go straight to decision-maker</div>
+<div class="quiz-option">D. Give up</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Business) Director says "Why are you coming to me?" Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Because you're the boss."</div>
+<div class="quiz-option">B. "Your perspective carries weight with the team, and having Marketing and Engineering backing this would make a stronger case."</div>
+<div class="quiz-option">C. "Because no one else will approve it."</div>
+<div class="quiz-option">D. "I don't know, someone told me to."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Life) You've built influence with brother and aunt. Now talking to parents. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Đi một mình</div>
+<div class="quiz-option">B. Đi cùng anh trai và cô gái để present together</div>
+<div class="quiz-option">C. Gửi email</div>
+<div class="quiz-option">D. Nhờ bạn bè nói giúp</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="reality-check">
+<h2><i class="ph-duotone ph-lightbulb"></i> Reality Check</h2>
+<p><strong>Influence doesn't mean everyone agrees.</strong> It means enough people trust the process to move forward together.</p>
+<p>Someone can support you without fully agreeing. Building influence doesn't mean everyone says yes — it means enough people say <strong>"I can work with this."</strong></p>
+<p><strong>Key insight:</strong> The goal isn't unanimous agreement. The goal is enough support to make the decision obvious.</p>
+</div>
+
+<div class="day-navigation">
+<a href="week-06-day-39.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 39: Aligning Interests & The Win-Win</div>
+</a>
+<a href="week-06-day-41.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 41: Commitment & Follow-through</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 40 Complete & Continue to Day 41</span>
+</button>
+<div class="complete-message">You no longer try to persuade one person. You build influence so the decision becomes obvious. 🕸️</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 6 · Day 40 · Building Influence Before the Decision</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `You: Anh, em muốn nói với anh về một quyết định quan trọng. I'm exploring something and would value your perspective. Brother: Sure, what's up? You: Em đang cân nhắc chuyển từ kế toán sang design. Em biết đây là quyết định lớn, nên em muốn nghe ý kiến anh trước khi nói với bố mẹ. Brother: Hmm, that's a big change. Are you sure about this? You: I'm not 100% sure yet, which is why I want your perspective. I noticed this connects to what you did when you switched from engineering to product management. Brother: Yeah, it was tough but worth it. But design is different. You: That's true. Your input would really help shape this — you've been through a similar transition and know what questions Mom and Dad will ask. Brother: I guess I can help you think through it. What's your plan? You: Em đã research một số khóa học và cơ hội việc làm. Would you be open to being part of this? Maybe we could work on the presentation to Mom and Dad together? Brother: Okay, I can do that. But you need to have solid answers about job security. You: Exactly. Would you be comfortable backing this when we talk to them? Your perspective carries weight with Mom. Brother: I can back you up. But let's refine the plan first. You: Perfect. Cảm ơn anh. Em cũng sẽ nói chuyện với cô Lan. Your input would really help with the financial concerns. Brother: Good idea. She can help with that part. You: Nếu chúng ta cùng nhau, sẽ dễ hơn. Brother: Đúng. Teamwork makes the dream work.`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `You: Hi Sarah, I'm exploring something and would value your perspective before I go further. Marketing Lead: Sure, what's on your mind? You: I'm considering proposing a new project management tool for the team. I noticed this connects to what you've been working on — the workflow efficiency improvements. Marketing Lead: Interesting. What tool are you thinking? You: Asana. But I'm not sure it's the right fit yet. Your input would really help shape this because you've led similar transitions before. Marketing Lead: I've used Asana. Honestly, I'm not convinced. The learning curve is steep and my team is already overloaded. You: That's a valid concern. What if we looked at this differently? Instead of a full rollout, what if we started with a small pilot — just our two teams for 4 weeks? Marketing Lead: A pilot might work. But I'd need to see it doesn't slow us down. You: Would you be open to being part of this? We could design the pilot together, with your team's constraints in mind. Marketing Lead: I'd be willing to try that. What about Engineering? You: I'm talking to Mike next. Would you be comfortable backing this when we present to the director? Your perspective carries weight, and having both Marketing and Engineering on board would make a stronger case. Marketing Lead: I can back you up if the pilot shows results. But you'll need data on ROI. You: Exactly. If we can show efficiency gains from the pilot, it'll be easier to get approval. Marketing Lead: Smart approach. Let's sync next week to plan the pilot. You: Perfect. Thanks for being open to this. Marketing Lead: No problem. This could really help both our teams — if we do it right.`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-40')) {
+completed.push('day-40');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 40 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'You no longer try to persuade one person. You build influence so the decision becomes obvious. 🕸️';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-40')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 40 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
