@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 6 Day 39: Aligning Interests & The Win-Win | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #0D9488;
+--primary-bright: #0F766E;
+--primary-soft: #CCFBF1;
+--primary-deep: #134E4A;
+--primary-light: #14B8A6;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 9%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 50%, #99F6E4 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🤝'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(204, 251, 241, 0.6), rgba(153, 246, 228, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(13, 148, 136, 0.2);
+}
+.philosophy-box {
+background: #F0FDFA;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(204, 251, 241, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(204, 251, 241, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.usage-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 14px;
+}
+.usage-box {
+padding: 12px;
+border-radius: var(--radius-sm);
+font-size: 13px;
+}
+.usage-box.when { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.usage-box.avoid { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.usage-box strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.usage-box.when strong { color: var(--green-deep); }
+.usage-box.avoid strong { color: #C53030; }
+.usage-box ul { list-style: none; padding: 0; }
+.usage-box li { padding: 2px 0; padding-left: 16px; position: relative; color: var(--text-secondary); }
+.usage-box.when li::before { content: '✔'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+.usage-box.avoid li::before { content: '✘'; position: absolute; left: 0; color: #F56565; font-weight: 700; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.zerosum { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.winwin { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.zerosum strong { color: #C53030; }
+.compare-level.winwin strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.mistakes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.mistake-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-orange);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.mistake-card h4 {
+font-family: 'Fraunces', serif; font-size: 1.05rem;
+color: var(--text-primary); margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px;
+}
+.mistake-wrong {
+background: rgba(245, 101, 101, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: #C53030;
+border-left: 3px solid #F56565;
+}
+.mistake-right {
+background: rgba(16, 185, 129, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: var(--green-deep);
+border-left: 3px solid var(--highlight-green);
+}
+.mistake-why {
+font-size: 12px; color: var(--text-secondary); font-style: italic;
+}
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.comparison-table th {
+background: rgba(204, 251, 241, 0.5);
+padding: 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--primary-deep);
+border-bottom: 2px solid rgba(13, 148, 136, 0.2);
+}
+.comparison-table td {
+padding: 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.comparison-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-zerosum {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.better { background: rgba(251, 146, 60, 0.08); border-left: 3px solid var(--highlight-orange); }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.better strong { color: var(--orange-deep); }
+.rewrite-level.professional strong { color: var(--green-deep); }
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(204, 251, 241, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(204, 251, 241, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(13, 148, 136, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.overlap { background: var(--highlight-green); }
+.move-highlight.shared { background: var(--highlight-blue); }
+.move-highlight.expand { background: var(--highlight-purple); }
+.move-highlight.trade { background: var(--highlight-orange); }
+.move-highlight.fairness { background: var(--highlight-gold); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(204, 251, 241, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.listening-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.listening-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.listening-question {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.listening-question p {
+font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;
+}
+.listening-answer {
+font-size: 12px; color: var(--green-deep); font-style: italic;
+}
+
+.vocab-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.vocab-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.vocab-item {
+padding: 12px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--highlight-blue);
+}
+.vocab-item strong {
+display: block; font-size: 13px; color: var(--blue-deep); margin-bottom: 4px;
+}
+.vocab-item span {
+font-size: 12px; color: var(--text-secondary);
+}
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { border-radius: var(--radius-md); padding: 24px; border: 2px solid; }
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 12px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.scenario-context { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.3; }
+.scenario-requirements { background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.scenario-requirements h4 { font-size: 12px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 14px;
+margin-bottom: 14px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 6px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(204, 251, 241, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(204, 251, 241, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(204, 251, 241, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(204, 251, 241, 0.5), rgba(153, 246, 228, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13, 148, 136, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(13, 148, 136, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(204, 251, 241, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(204, 251, 241, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(13, 148, 136, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(13, 148, 136, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(13, 148, 136, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.usage-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-06.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 6 Hub</span>
+</a>
+<div class="day-indicator">
+Day 39 / 42
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-06.html" class="day-tab">Overview</a>
+<a href="week-06-day-36.html" class="day-tab">Day 36</a>
+<a href="week-06-day-37.html" class="day-tab">Day 37</a>
+<a href="week-06-day-38.html" class="day-tab">Day 38</a>
+<a href="week-06-day-39.html" class="day-tab active">Day 39</a>
+<a href="week-06-day-40.html" class="day-tab">Day 40</a>
+<a href="week-06-day-41.html" class="day-tab">Day 41</a>
+<a href="week-06-day-42.html" class="day-tab">Day 42</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-06.html">Week 6</a> › Day 39
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🤝</span>
+<h1 class="day-title">Aligning Interests & The Win-Win</h1>
+</div>
+<p class="day-subtitle">Week 6 không dạy persuasion. Week 6 dạy negotiation thinking. Hôm nay bạn sẽ học cách biến "tôi vs bạn" thành "chúng ta vs vấn đề". <strong>B2 speakers compromise and both sides lose a little. C1 speakers collaborate and both sides get what actually matters.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-handshake"></i> Win-Win Thinking</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 4 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2</div>
+<div style="font-size: 14px;">"If you win, I lose. Let's split the difference." (Zero-sum thinking: Chia chiếc bánh)</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1</div>
+<div style="font-size: 14px;">"We both want the same underlying thing. Let's find a way to get it." (Positive-sum thinking: Làm chiếc bánh lớn hơn)</div>
+</div>
+</div>
+"B2 speakers compromise and both sides lose a little. C1 speakers collaborate and both sides get what actually matters."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Compromise to Collaboration
+</div>
+<p>
+Compromise (thỏa hiệp) thường có nghĩa là cả hai bên đều phải từ bỏ một phần điều mình muốn. C1 communicators don't just compromise. They look beneath the surface positions to find where interests align, and they expand the options so both sides win.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Finding a win-win doesn't mean giving the other person everything they ask for. It means structuring the solution so that both sides' core interests are met. Sometimes you only need 1 move to shift the dynamic from "me vs you" to "us vs the problem".
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Communication moves</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common mistakes</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Zero-Sum vs Win-Win</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔄</div>
+<div class="plan-title">Compare</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Casual ↔ Pro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Dialogues + Listen</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Vocab + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves
+</h2>
+<p class="section-desc">5 moves to align interests and create win-win solutions. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">Find the Overlap</div>
+<div class="pattern-ipa">Core idea: "It seems like we both want..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Resetting to collaborative</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Finding the overlap shifts the dynamic from "me vs you" to "us vs the problem". It resets the tone to collaborative.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"It seems like we both just want..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('It seems like we both just want...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"We both seem to want..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('We both seem to want...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"It seems like we both want..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('It seems like we both want...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"It seems our shared goal is..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('It seems our shared goal is...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When the conversation feels stuck in "me vs you"</li>
+<li>To reset the tone to collaborative</li>
+<li>Before proposing any solution</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You haven't listened enough to know what they actually want</li>
+<li>The interests genuinely don't overlap (be honest)</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-Sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-Sum:</strong> "I need the car this weekend. You take an Uber." (Me vs You)</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "It seems we both need transportation this weekend. How can we make that work?" (Us vs Problem)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">Highlight Shared Value</div>
+<div class="pattern-ipa">Core idea: "Here's how this helps both of us..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Showing mutual benefit</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Highlighting shared value shows that the solution isn't just good for you — it's good for them too. It builds buy-in.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"This works for both of us because..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This works for both of us because...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"This benefits both of us by..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This benefits both of us by...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Here's how this helps both of us..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Here\'s how this helps both of us...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Here's how this creates mutual value..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Here\'s how this creates mutual value...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When proposing a new idea</li>
+<li>To show mutual benefit</li>
+<li>To build buy-in for a decision</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The benefit is entirely one-sided (be honest)</li>
+<li>You're forcing a "win-win" that isn't real</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-Sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-Sum:</strong> "I get the budget, you get nothing." (One winner)</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "Here's how this helps both of us — Marketing gets the data, and Engineering gets the automated dashboard." (Mutual value)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Expand the Options</div>
+<div class="pattern-ipa">Core idea: "What if we looked beyond just A or B..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐ High</div>
+<div class="pattern-context">Breaking binary choices</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Expanding options breaks people out of binary thinking (Yes/No, This/That). It opens up new possibilities where both sides can win.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"What if we tried something else..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What if we tried something else...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"What if we looked at other options..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What if we looked at other options...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"What if we looked beyond just A or B..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What if we looked beyond just A or B...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"What if we explored a third option..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What if we explored a third option...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When people are stuck in a binary choice</li>
+<li>To open up new possibilities</li>
+<li>When the current options don't serve both sides</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>A quick decision is needed and the binary choice is fine</li>
+<li>You're expanding options just to avoid deciding</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-Sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-Sum:</strong> "We either host at my place or yours." (Binary)</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "What if we looked beyond just my place or yours — what if we rented a large Airbnb nearby?" (Expanded)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Offer a Trade</div>
+<div class="pattern-ipa">Core idea: "If I can do X, would you be open to Y?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Balancing concessions</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Offering a trade balances concessions. It shows you're willing to give, but you need something in return. It tests flexibility.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"If I do X, will you do Y?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('If I do X, will you do Y?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"If I handle X, can you handle Y?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('If I handle X, can you handle Y?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"If I can do X, would you be open to Y?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('If I can do X, would you be open to Y?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"If we can accommodate X, would you be open to Y?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('If we can accommodate X, would you be open to Y?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When interests conflict and you need to balance concessions</li>
+<li>To test flexibility</li>
+<li>When you need something in return for giving</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>The other person's core boundary is being crossed</li>
+<li>You're trading core values (don't do this)</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-Sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-Sum:</strong> "I'll pay for everything, you do nothing." (One-sided)</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "If I handle the booking and cooking, would you be open to splitting the rental cost 50/50?" (Balanced trade)</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Check for Fairness</div>
+<div class="pattern-ipa">Core idea: "Does this feel like a fair balance for both of us?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐ High</div>
+<div class="pattern-context">Finalizing agreements</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Checking for fairness ensures long-term commitment. If one side feels the deal is unfair, they won't follow through.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Does this feel fair to you?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Does this feel fair to you?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Does this work for both of us?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Does this work for both of us?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Does this feel like a fair balance for both of us?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Does this feel like a fair balance for both of us?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Does this feel like a balanced approach for both teams?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Does this feel like a balanced approach for both teams?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>Before finalizing an agreement</li>
+<li>To ensure long-term commitment</li>
+<li>To check if the other side feels heard</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You are in a position of absolute power and don't care about buy-in (bad leadership)</li>
+<li>The decision is already made and non-negotiable</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Zero-Sum → Win-Win</h5>
+<div class="compare-level zerosum"><strong>❌ Zero-Sum:</strong> "Take it or leave it." (Dictator)</div>
+<div class="compare-level winwin"><strong>✅ Win-Win:</strong> "Does this feel like a fair balance for both of us?" (Collaborative)</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+Common Mistakes
+</h2>
+<p class="section-desc">3 lỗi phổ biến khi trying to create win-win. Tránh những lỗi này để giữ collaboration authentic.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: Splitting the difference too early</h4>
+<div class="mistake-wrong">❌ "You want $100, I want to pay $50. Let's do $75." (Neither side is happy).</div>
+<div class="mistake-right">✅ "Why do you need $100? Why do I want to pay $50?" (Find the overlap first).</div>
+<div class="mistake-why">Splitting the difference without understanding interests means both sides lose value.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Assuming a fixed pie</h4>
+<div class="mistake-wrong">❌ "If you get the budget, I lose it." (Zero-sum thinking).</div>
+<div class="mistake-right">✅ "How can we structure this so both our projects get funded?" (Expand the pie).</div>
+<div class="mistake-why">Assuming resources are fixed prevents creative solutions that benefit both sides.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Giving in to keep the peace</h4>
+<div class="mistake-wrong">❌ "Fine, we'll do it your way." (Resentment builds).</div>
+<div class="mistake-right">✅ "I want to support you, but I need X to make this work for me too." (Honest collaboration).</div>
+<div class="mistake-why">Giving in isn't win-win. It's lose-win. And the "loser" will resent it later.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+Zero-Sum vs. Win-Win Decoder (Signature Section)
+</h2>
+<p class="section-desc">Common zero-sum statements and the hidden shared interests behind them. Decode the real alignment before choosing your move.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 Zero-Sum vs. Win-Win Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>They say (Zero-Sum)</th><th>The hidden shared interest (Win-Win)</th><th>Best Move</th></tr>
+</thead>
+<tbody>
+<tr><td>"I need the whole budget."</td><td>We both want our Q3 targets to hit.</td><td>Find the Overlap + Expand Options</td></tr>
+<tr><td>"You never help around the house."</td><td>We both want a peaceful, functional home.</td><td>Find the Overlap + Offer a Trade</td></tr>
+<tr><td>"My department needs this resource."</td><td>We both want the company to succeed.</td><td>Highlight Shared Value</td></tr>
+<tr><td>"It's my way or the highway."</td><td>They feel unheard or fear losing control.</td><td>Check for Fairness + Expand Options</td></tr>
+<tr><td>"We don't have time for this."</td><td>We both want to avoid burnout and rework.</td><td>Highlight Shared Value</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Listen to the zero-sum statement. 2. Decode the hidden shared interest. 3. Choose the move that aligns interests (not all 5!). 4. Structure the solution so both sides' core interests are met.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-left-right"></i>
+Casual ↔ Professional Comparison
+</h2>
+<p class="section-desc">Same moves, different registers. Match the register to the context.</p>
+</div>
+<div class="decoder-card" style="border-left-color: var(--highlight-blue);">
+<h3>🔄 Register Comparison</h3>
+<table class="comparison-table">
+<thead>
+<tr><th>Situation</th><th>🏠 Casual</th><th>💼 Professional</th></tr>
+</thead>
+<tbody>
+<tr><td>Find Overlap</td><td>"We both just want..."</td><td>"It seems our shared goal is..."</td></tr>
+<tr><td>Shared Value</td><td>"This works for both of us because..."</td><td>"Here's how this creates mutual value..."</td></tr>
+<tr><td>Expand Options</td><td>"What if we tried something else..."</td><td>"What if we explored a third option..."</td></tr>
+<tr><td>Offer Trade</td><td>"If I do X, will you do Y?"</td><td>"If we can accommodate X, would you be open to Y?"</td></tr>
+<tr><td>Check Fairness</td><td>"Does this feel fair to you?"</td><td>"Does this feel like a balanced approach for both teams?"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Casual uses simple, direct language. Professional uses structured, mutual-value language. Match the register to the context.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: The Shared Resource Conflict
+</h2>
+<p class="section-desc">Read this Slack thread between two team leads. What's the REAL shared interest? And what move would you use to break the deadlock?</p>
+</div>
+<div class="reading-card">
+<h3>💬 Slack Thread</h3>
+<div class="email-box">
+<strong>Marketing Lead:</strong> "I need Sarah (Data Analyst) for 20 hours this week to pull the campaign reports. We launch Monday."<br><br>
+<strong>Product Lead:</strong> "I can't spare Sarah. She's building the dashboard for the Q3 product launch. If she stops, we miss the engineering deadline."<br><br>
+<strong>Marketing Lead:</strong> "If we don't have the reports, the campaign fails."<br><br>
+<strong>Product Lead:</strong> "If we don't have the dashboard, the product fails."
+</div>
+<div class="reading-questions">
+<h4>🤔 Questions:</h4>
+<p>1. What is the hidden shared interest?</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">A. They both want Sarah to work harder | B. They both want their respective Q3 launches to succeed without burning out the shared resource | C. They both want to blame each other | D. There is no shared interest</p>
+<p style="margin-top: 10px;">2. What move would you use to break the deadlock?</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">A. Find the Overlap (to reset to collaborative) + Expand the Options (to find a third way) | B. Offer a Trade (to force a compromise) | C. Check for Fairness (to finalize) | D. Highlight Shared Value (to show mutual benefit)</p>
+<p style="margin-top: 10px; color: var(--green-deep); font-weight: 600;">✅ Answers: 1. B. Both want their Q3 launches to succeed without burning out Sarah. 2. A. Find the Overlap first ("It seems our shared goal is making sure both launches succeed..."), then Expand the Options ("What if we looked beyond Sarah just doing manual reports? Could she spend 4 hours building an automated script?").</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Zero-Sum Responses
+</h2>
+<p class="section-desc">Rewrite these competitive responses to be collaborative. See the progression from Weak → Better → Professional.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Zero-Sum → Win-Win</h3>
+<div class="rewrite-item">
+<div class="rewrite-zerosum">❌ Zero-Sum: "No, I need the car this weekend. You can take an Uber."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"I need the car."</div>
+<div class="rewrite-level better"><strong>Better</strong>"We both need the car. How can we split the time?"</div>
+<div class="rewrite-level professional"><strong>Collaborative</strong>"It seems we both need transportation this weekend. If I drop you off at your event first, would you be open to me keeping the car for the afternoon?"</div>
+</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-zerosum">❌ Zero-Sum: "Your team is hogging all the budget."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"Give us more budget."</div>
+<div class="rewrite-level better"><strong>Better</strong>"How can we share the budget?"</div>
+<div class="rewrite-level professional"><strong>Collaborative</strong>"It seems we both want to maximize our Q3 impact. What if we pooled a portion of our budgets to fund a joint initiative that benefits both teams?"</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 speakers align interests in real conversations. No labels in real life — just natural flow.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Siblings Planning Holiday Care for Parents (Life)</h3>
+<div class="story-context">Context: Two siblings arguing about where aging parents should stay for the holidays. One has a small apartment, the other lives far away.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Mom and Dad really want to be with us for the holidays, but my apartment is too small for them to stay over."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sibling:</div>
+<div class="dialogue-text">"Well, I can't fly them out to my place. The flights are too expensive and Dad's health isn't great for traveling."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>It seems like we both want</strong> them to be comfortable and safe, but also feel included in the holiday." <span class="move-highlight overlap">Find Overlap</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sibling:</div>
+<div class="dialogue-text">"Exactly. I just don't want them to be alone."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Me neither. <strong>What if we looked beyond</strong> them staying at my place or flying to yours?" <span class="move-highlight expand">Expand Options</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sibling:</div>
+<div class="dialogue-text">"What do you mean?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>What if we</strong> rented a large, accessible Airbnb just a few miles from my apartment? <strong>Here's how this helps both of us</strong> — they get their own space and don't have to fly, and we can all gather there for the big meals." <span class="move-highlight shared">Highlight Shared Value</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sibling:</div>
+<div class="dialogue-text">"That's actually a great idea. But who pays for it?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>If I can</strong> handle the booking and the cooking, <strong>would you be open to</strong> splitting the cost of the rental 50/50?" <span class="move-highlight trade">Offer Trade</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sibling:</div>
+<div class="dialogue-text">"That feels fair. Let's do it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Awesome. <strong>Does this feel like a fair balance for both of us?</strong>" <span class="move-highlight fairness">Check Fairness</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sibling:</div>
+<div class="dialogue-text">"Yeah, it really does. Thanks for figuring this out."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"It seems like we both want..." → <strong>Find the Overlap</strong> (Move 1)</li>
+<li>"What if we looked beyond..." → <strong>Expand the Options</strong> (Move 3)</li>
+<li>"Here's how this helps both of us..." → <strong>Highlight Shared Value</strong> (Move 2)</li>
+<li>"If I can handle... would you be open to..." → <strong>Offer a Trade</strong> (Move 4)</li>
+<li>"Does this feel like a fair balance..." → <strong>Check for Fairness</strong> (Move 5)</li>
+<li><strong>Register:</strong> Casual throughout (siblings)</li>
+<li><strong>12 turns</strong> natural flow, all 5 moves used naturally</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: Marketing vs. Engineering over Shared Resource (Business)</h3>
+<div class="story-context">Context: Marketing Lead and Engineering Lead arguing over the only Senior Data Analyst's time.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing:</div>
+<div class="dialogue-text">"I need David for 20 hours this week to pull the campaign reports. We launch Monday."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering:</div>
+<div class="dialogue-text">"I can't spare David. He's building the dashboard for the Q3 product launch. If he stops, we miss the deadline."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing:</div>
+<div class="dialogue-text">"If we don't have the reports, the campaign fails."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering:</div>
+<div class="dialogue-text">"<strong>It seems our shared goal is</strong> making sure both the campaign and the product launch successfully in Q3 without burning out David." <span class="move-highlight overlap">Find Overlap</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing:</div>
+<div class="dialogue-text">"Yes, but how? We both need his time."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering:</div>
+<div class="dialogue-text">"<strong>What if we explored a third option</strong> beyond David just doing manual reports for you?" <span class="move-highlight expand">Expand Options</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing:</div>
+<div class="dialogue-text">"Like what?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering:</div>
+<div class="dialogue-text">"<strong>Here's how this creates mutual value</strong> — David spends 4 hours tomorrow building an automated script. It gives you real-time campaign data instantly, and frees him up to finish my dashboard." <span class="move-highlight shared">Highlight Shared Value</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing:</div>
+<div class="dialogue-text">"Can he really automate it that fast?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering:</div>
+<div class="dialogue-text">"Yes. <strong>If we can</strong> get you the automated dashboard by Wednesday, <strong>would you be open to</strong> releasing David from your manual requests for the rest of the week?" <span class="move-highlight trade">Offer Trade</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing:</div>
+<div class="dialogue-text">"That actually saves me time in the long run. Deal."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Engineering:</div>
+<div class="dialogue-text">"Great. <strong>Does this feel like a balanced approach for both teams?</strong>" <span class="move-highlight fairness">Check Fairness</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Marketing:</div>
+<div class="dialogue-text">"Absolutely. Let's sync with David."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Move Usage:</h4>
+<ul>
+<li>"It seems our shared goal is..." → <strong>Find the Overlap</strong> (Move 1)</li>
+<li>"What if we explored a third option..." → <strong>Expand the Options</strong> (Move 3)</li>
+<li>"Here's how this creates mutual value..." → <strong>Highlight Shared Value</strong> (Move 2)</li>
+<li>"If we can get you... would you be open to..." → <strong>Offer a Trade</strong> (Move 4)</li>
+<li>"Does this feel like a balanced approach..." → <strong>Check for Fairness</strong> (Move 5)</li>
+<li><strong>Register:</strong> Professional (cross-functional leads)</li>
+<li><strong>13 turns</strong>, complete win-win negotiation</li>
+<li><strong>All 5 moves used naturally</strong> - because complex resource conflicts need full range</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Task
+</h2>
+<p class="section-desc">Listen to Dialogue 1 again. Answer these questions to test your comprehension.</p>
+</div>
+<div class="listening-card">
+<h3>🎧 Listening Comprehension</h3>
+<div class="listening-question">
+<p>1. What was the initial Zero-Sum assumption?</p>
+<div class="listening-answer">✅ Parents must stay at one sibling's house (either my small apartment or fly far away).</div>
+</div>
+<div class="listening-question">
+<p>2. Which move shifted the dynamic?</p>
+<div class="listening-answer">✅ Expand the Options - "What if we looked beyond them staying at my place or flying to yours?" (Airbnb idea).</div>
+</div>
+<div class="listening-question">
+<p>3. Why did the "Offer a Trade" move work?</p>
+<div class="listening-answer">✅ It balanced the financial cost (50/50 split) with the labor cost (booking and cooking).</div>
+</div>
+<div class="listening-question">
+<p>4. Which move was used to finalize the agreement?</p>
+<div class="listening-answer">✅ Check for Fairness - "Does this feel like a fair balance for both of us?"</div>
+</div>
+<div class="listening-question">
+<p>5. Why didn't they just "split the difference"?</p>
+<div class="listening-answer">✅ Because splitting the difference (e.g., parents stay half time at each place) wouldn't have solved the core problem. They expanded the pie instead.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-book-bookmark"></i>
+Vocabulary Box: Collaboration Collocations
+</h2>
+<p class="section-desc">C1 collocations for win-win thinking. Use these to sound more natural and collaborative.</p>
+</div>
+<div class="vocab-card">
+<h3>📝 Collaboration Collocations</h3>
+<div class="vocab-grid">
+<div class="vocab-item"><strong>find common ground</strong><span>Tìm điểm chung. "Let's find common ground before we argue."</span></div>
+<div class="vocab-item"><strong>bridge the gap</strong><span>Thu hẹp khoảng cách. "This solution bridges the gap between our needs."</span></div>
+<div class="vocab-item"><strong>mutual benefit</strong><span>Lợi ích chung. "We structured the deal for mutual benefit."</span></div>
+<div class="vocab-item"><strong>align interests</strong><span>Căn chỉnh lợi ích. "Our interests align on this project."</span></div>
+<div class="vocab-item"><strong>make a concession</strong><span>Nhượng bộ. "I'm willing to make a concession on the timeline."</span></div>
+<div class="vocab-item"><strong>expand the pie</strong><span>Làm lớn chiếc bánh (tạo thêm giá trị). "Let's expand the pie instead of fighting over slices."</span></div>
+</div>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Use these collocations to sound more collaborative. "Expand the pie" is more C1 than "make both sides happy."
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Win-win phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Win-Win Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>It seems like we both want</td><td class="ipa-cell">/ɪt siːmz laɪk wiː boʊθ wɑːnt/</td><td>Smooth "seems like" linking</td></tr>
+<tr><td>Here's how this helps both of us</td><td class="ipa-cell">/hɪrz haʊ ðɪs hɛlps boʊθ əv ʌs/</td><td>Stress on "both"</td></tr>
+<tr><td>What if we looked beyond</td><td class="ipa-cell">/wʌt ɪf wiː lʊkt bɪˈjɑːnd/</td><td>Weak form "if"</td></tr>
+<tr><td>If I can do X, would you be open to Y</td><td class="ipa-cell">/ɪf aɪ kæn duː ɛks wʊd juː biː ˈoʊpən tuː waɪ/</td><td>Rising intonation on "Y"</td></tr>
+<tr><td>Does this feel like a fair balance</td><td class="ipa-cell">/dʌz ðɪs fiːl laɪk ə fɛr ˈbæləns/</td><td>Stress on "fair"</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"It seems like we both want..."</span>
+<span class="pattern-label">↘ Falling</span>
+<span class="context-tip"><strong>Context:</strong> Used when finding overlap. Falling tone = sincere, collaborative. <strong>Avoid:</strong> Rising (sounds like you're questioning their wants).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"What if we looked beyond..."</span>
+<span class="pattern-label">↗ Rising</span>
+<span class="context-tip"><strong>Context:</strong> Used when expanding options. Rising tone = inviting, curious. <strong>Avoid:</strong> Falling (sounds like you're telling them what to do).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Does this feel like a fair balance..."</span>
+<span class="pattern-label">↗↘ Rise-fall</span>
+<span class="context-tip"><strong>Context:</strong> Used when checking fairness. Rise-fall = genuine question, seeking confirmation. <strong>Avoid:</strong> Flat (sounds robotic or insincere).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice creating win-win solutions in different contexts. Remember: no register is "better" — it's about appropriateness!</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Roommate Conflict over Chores</h3>
+<p class="scenario-context">You and your roommate are arguing about cleaning duties. Both feel they do more than their fair share. Create a win-win solution.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "It seems like we both want a clean apartment without feeling resentful."
+<strong>📖 Possible Response:</strong> "It seems like we both want a clean apartment without feeling resentful. What if we looked beyond just splitting chores 50/50? Here's how this helps both of us — if I handle all the cooking, would you be open to handling all the cleaning? Does this feel like a fair balance for both of us?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "It seems like we both want..."</li>
+<li>Use "What if we looked beyond..."</li>
+<li>Use "If I do X, would you be open to Y?"</li>
+<li>Keep it collaborative, not accusatory</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Meeting Room Conflict</h3>
+<p class="scenario-context">Two colleagues need the same meeting room at the same time. Both have important meetings. Create a win-win solution.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "It seems our shared goal is making sure both meetings happen smoothly."
+<strong>📖 Possible Response:</strong> "It seems our shared goal is making sure both meetings happen smoothly. What if we explored a third option beyond just one of us moving? Here's how this creates mutual value — if we combine the first 15 minutes since they're related topics, we both get the room and the teams get aligned. Does this feel like a balanced approach?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "It seems our shared goal is..."</li>
+<li>Use "What if we explored a third option..."</li>
+<li>Use "Here's how this creates mutual value..."</li>
+<li>Address both needs upfront</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Cross-Functional Budget Conflict</h3>
+<p class="scenario-context">Two managers arguing over a limited budget. Both need the money for critical Q3 projects. Create a win-win solution.</p>
+<div class="model-response">
+<strong>💡 Model Opening:</strong> "It seems we both want to maximize our Q3 impact."
+<strong>📖 Possible Response:</strong> "It seems we both want to maximize our Q3 impact. What if we looked beyond just splitting the budget 50/50? Here's how this helps both of us — if we pool a portion of our budgets to fund a joint initiative that benefits both teams, we get more leverage. If I can lead the project, would you be open to contributing the data resources? Does this feel like a fair balance for both teams?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use "It seems we both want..."</li>
+<li>Use "What if we looked beyond..."</li>
+<li>Use "If I can lead... would you be open to..."</li>
+<li>Provide mutual value clearly</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Conflict</h3>
+<p class="scenario-context">Morning: Handle a Life conflict with partner over weekend plans (Casual). Afternoon: Handle a Business resource conflict with another team lead (Professional).</p>
+<div class="model-response">
+<strong>💡 Model Opening (Life):</strong> "It seems like we both just want to relax this weekend."
+<strong>💡 Model Opening (Business):</strong> "It seems our shared goal is making sure both projects succeed."
+<strong>📖 Possible Response (Life):</strong> "It seems like we both just want to relax this weekend. What if we tried something else — Saturday is your outdoor adventure, Sunday is my cozy movie day? If I plan the movie night, would you be open to handling the hiking logistics? Does this feel fair to you?"
+<strong>📖 Possible Response (Business):</strong> "It seems our shared goal is making sure both projects succeed. What if we explored a third option beyond David just doing manual reports? Here's how this creates mutual value — David spends 4 hours building an automated script. If we can get you the dashboard by Wednesday, would you be open to releasing David from your requests? Does this feel like a balanced approach?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Use different moves for each context</li>
+<li>Life: simple, direct language. Business: structured, mutual-value language</li>
+<li>Keep it collaborative in both</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply win-win thinking to actual conflicts this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Win-Win Template Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Choose 1 situation (Life or Business) where there's a conflict. Practice creating a win-win solution using 2-3 moves (not all 5!).</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Use the fewest moves needed (quality over quantity)</li>
+<li>Write down: Which moves you used and why</li>
+<li>Note the result</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written win-win structure</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Win-Win Conversations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 conversations (Life & Business) where you create win-win solutions. Focus on collaborative language.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register, simple language)</li>
+<li>1 Business scenario (professional register, mutual-value language)</li>
+<li>Use 2-5 communication moves (choose based on conflict)</li>
+<li>Keep it collaborative, not competitive</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Win-Win Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, when there's a conflict, use the Zero-Sum vs. Win-Win Decoder to identify the hidden shared interest, then choose the right moves. Note the results.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Decode at least 3 real conflicts</li>
+<li>Choose the fewest moves needed for each (not always all 5!)</li>
+<li>Note their response and outcome</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Win-Win Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People feel heard and understood</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Conflicts are resolved, not just compromised</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Conversations stay collaborative, not competitive</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">You turn "me vs you" into "us vs the problem"</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Both sides move forward with commitment</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You find the overlap before proposing solutions</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You highlight mutual value, not just your own benefit</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You choose the fewest moves needed (quality over quantity)</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You offer balanced trades, not one-sided concessions</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You check for fairness before finalizing</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Find the overlap first:</strong> "It seems like we both want..." before "Here's my idea..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Highlight mutual value:</strong> "Here's how this helps both of us..." shows you care about their success</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Choose wisely:</strong> Use the fewest moves needed, not all 5</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Balance trades:</strong> "If I do X, would you be open to Y?" ensures both sides give and get</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Check fairness:</strong> "Does this feel like a fair balance?" ensures long-term commitment</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with communication moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Two teams arguing over limited budget</p>
+<button>Pause → Say it → Tap to reveal →</button>
+</div>
+<div class="flashcard-back">
+<p>🏠 Casual: "It seems like we both just want to make this work."<br>☕ Neutral: "We both seem to want to maximize our impact."<br>💼 Professional: "It seems like we both want to maximize our Q3 impact."<br>📋 More Formal: "It seems our shared goal is maximizing our Q3 impact."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always find the overlap first. Shift from "me vs you" to "us vs the problem".
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Aligning Interests & The Win-Win
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Life) Siblings arguing about paying for a parent's medical bill. Best first move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I'll pay half, you pay half."</div>
+<div class="quiz-option">B. "It seems we both want Mom to get the best care without stressing our own finances. Let's look at the options."</div>
+<div class="quiz-option">C. "You should pay more since you earn more."</div>
+<div class="quiz-option">D. "Let's just split it 50/50 and move on."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Business) Two managers want the same budget. Which response shows C1 thinking?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Let's split the budget 50/50."</div>
+<div class="quiz-option">B. "What if we pooled a portion of our budgets to fund a joint initiative that benefits both teams?"</div>
+<div class="quiz-option">C. "My project is more important, so I should get it."</div>
+<div class="quiz-option">D. "We'll just have to do without."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Life) Partner says "You never do the dishes." Which response is BEST?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I do them sometimes! You're exaggerating."</div>
+<div class="quiz-option">B. "I hear you. It seems we both want a clean kitchen. If I cook, would you be open to handling the dishes?"</div>
+<div class="quiz-option">C. "Fine, I'll do all the dishes from now on."</div>
+<div class="quiz-option">D. "You never cook either!"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Business) Client says "Your price is too high, match our competitor." Which response is BETTER?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We can lower our price by 10% to meet you halfway."</div>
+<div class="quiz-option">B. "It seems we both want this project to succeed within your budget. What if we removed the Phase 2 features to match the price, and add them back when you have the budget next quarter?"</div>
+<div class="quiz-option">C. "Our price is fixed. Take it or leave it."</div>
+<div class="quiz-option">D. "We can't match that price."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Judgement) Roommate says "I'm tired of cleaning the bathroom." Which response is BEST?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I clean it every other week. It's your turn."</div>
+<div class="quiz-option">B. "It seems we both want a clean bathroom without feeling resentful. What if we looked beyond just splitting it 50/50 — if I handle all the kitchen cleaning, would you be open to handling all the bathroom cleaning?"</div>
+<div class="quiz-option">C. "Fine, I'll clean it every time."</div>
+<div class="quiz-option">D. "You're not doing your fair share."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Judgement) Colleague says "I need the conference room at 2 PM." You also need it at 2 PM. Which response is BETTER?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I booked it first. You'll have to find another room."</div>
+<div class="quiz-option">B. "It seems our shared goal is making sure both meetings happen smoothly. What if we explored a third option — could we combine the first 15 minutes since they're related topics, and then split the room?"</div>
+<div class="quiz-option">C. "Let's just flip a coin."</div>
+<div class="quiz-option">D. "You take it. I'll move my meeting."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Life) Friend says "I want to go to the beach, but you want to go to the mountains." Best move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Let's flip a coin."</div>
+<div class="quiz-option">B. "It seems we both just want to relax and get away. What if we looked beyond just beach or mountains — what about a lake house that has both?"</div>
+<div class="quiz-option">C. "Fine, beach it is."</div>
+<div class="quiz-option">D. "Mountains are better anyway."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Business) Team member says "I can't work this weekend." You need them to. Best move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "It's mandatory. You have to work."</div>
+<div class="quiz-option">B. "It seems we both want this project to succeed without burning you out. If I can get you Monday and Tuesday off, would you be open to working Saturday morning?"</div>
+<div class="quiz-option">C. "Fine, I'll do it myself."</div>
+<div class="quiz-option">D. "You're not being a team player."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Judgement) Partner says "I want to buy a new car, but you want to save money." Which response shows the BEST win-win thinking?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Let's buy a cheaper car."</div>
+<div class="quiz-option">B. "It seems we both want to be financially responsible while also having reliable transportation. What if we looked beyond just buying new or saving — what if we leased a reliable used car for 2 years while we build our savings?"</div>
+<div class="quiz-option">C. "We can't afford a new car. End of discussion."</div>
+<div class="quiz-option">D. "Fine, buy the car. I'll just stress about the budget."</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-06-day-38.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 38: Handling Concerns & Pushback</div>
+</a>
+<a href="week-06-day-40.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 40: Coalition Building</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 39 Complete & Continue to Day 40</span>
+</button>
+<div class="complete-message">You no longer see conflicts as zero-sum. You see them as opportunities to expand the pie. 🤝</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 6 · Day 39 · Aligning Interests & The Win-Win</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `You: Mom and Dad really want to be with us for the holidays, but my apartment is too small for them to stay over. Sibling: Well, I can't fly them out to my place. The flights are too expensive and Dad's health isn't great for traveling. You: It seems like we both want them to be comfortable and safe, but also feel included in the holiday. Sibling: Exactly. I just don't want them to be alone. You: Me neither. What if we looked beyond them staying at my place or flying to yours? Sibling: What do you mean? You: What if we rented a large, accessible Airbnb just a few miles from my apartment? Here's how this helps both of us — they get their own space and don't have to fly, and we can all gather there for the big meals. Sibling: That's actually a great idea. But who pays for it? You: If I can handle the booking and the cooking, would you be open to splitting the cost of the rental 50/50? Sibling: That feels fair. Let's do it. You: Awesome. Does this feel like a fair balance for both of us? Sibling: Yeah, it really does. Thanks for figuring this out.`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `Marketing: I need David for 20 hours this week to pull the campaign reports. We launch Monday. Engineering: I can't spare David. He's building the dashboard for the Q3 product launch. If he stops, we miss the deadline. Marketing: If we don't have the reports, the campaign fails. Engineering: It seems our shared goal is making sure both the campaign and the product launch successfully in Q3 without burning out David. Marketing: Yes, but how? We both need his time. Engineering: What if we explored a third option beyond David just doing manual reports for you? Marketing: Like what? Engineering: Here's how this creates mutual value — David spends 4 hours tomorrow building an automated script. It gives you real-time campaign data instantly, and frees him up to finish my dashboard. Marketing: Can he really automate it that fast? Engineering: Yes. If we can get you the automated dashboard by Wednesday, would you be open to releasing David from your manual requests for the rest of the week? Marketing: That actually saves me time in the long run. Deal. Engineering: Great. Does this feel like a balanced approach for both teams? Marketing: Absolutely. Let's sync with David.`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-39')) {
+completed.push('day-39');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 39 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'You no longer see conflicts as zero-sum. You see them as opportunities to expand the pie. 🤝';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-39')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 39 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
