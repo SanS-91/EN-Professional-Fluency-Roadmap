@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 7 Day 44: Communicating Purpose & Identity | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #0F766E;
+--primary-bright: #115E59;
+--primary-soft: #CCFBF1;
+--primary-deep: #134E4A;
+--primary-light: #14B8A6;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 3%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 50%, #99F6E4 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🧭'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(204, 251, 241, 0.6), rgba(153, 246, 228, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(15, 118, 110, 0.2);
+}
+.philosophy-box {
+background: #F0FDFA;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(204, 251, 241, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(15, 118, 110, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(204, 251, 241, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.usage-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 14px;
+}
+.usage-box {
+padding: 12px;
+border-radius: var(--radius-sm);
+font-size: 13px;
+}
+.usage-box.when { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.usage-box.avoid { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.usage-box strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.usage-box.when strong { color: var(--green-deep); }
+.usage-box.avoid strong { color: #C53030; }
+.usage-box ul { list-style: none; padding: 0; }
+.usage-box li { padding: 2px 0; padding-left: 16px; position: relative; color: var(--text-secondary); }
+.usage-box.when li::before { content: '✔'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+.usage-box.avoid li::before { content: '✘'; position: absolute; left: 0; color: #F56565; font-weight: 700; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.weak { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.strong { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.weak strong { color: #C53030; }
+.compare-level.strong strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.mistakes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.mistake-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-orange);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.mistake-card h4 {
+font-family: 'Fraunces', serif; font-size: 1.05rem;
+color: var(--text-primary); margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px;
+}
+.mistake-wrong {
+background: rgba(245, 101, 101, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: #C53030;
+border-left: 3px solid #F56565;
+}
+.mistake-right {
+background: rgba(16, 185, 129, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: var(--green-deep);
+border-left: 3px solid var(--highlight-green);
+}
+.mistake-why {
+font-size: 12px; color: var(--text-secondary); font-style: italic;
+}
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.comparison-table th {
+background: rgba(204, 251, 241, 0.5);
+padding: 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--primary-deep);
+border-bottom: 2px solid rgba(15, 118, 110, 0.2);
+}
+.comparison-table td {
+padding: 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.comparison-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-task {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.better { background: rgba(251, 146, 60, 0.08); border-left: 3px solid var(--highlight-orange); }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.better strong { color: var(--orange-deep); }
+.rewrite-level.professional strong { color: var(--green-deep); }
+.rewrite-why {
+margin-top: 8px;
+padding: 8px;
+background: rgba(15, 118, 110, 0.08);
+border-radius: var(--radius-sm);
+font-size: 12px;
+color: var(--primary-deep);
+font-style: italic;
+}
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(204, 251, 241, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(204, 251, 241, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.belief { background: var(--highlight-blue); }
+.move-highlight.standard { background: var(--highlight-purple); }
+.move-highlight.identity { background: var(--highlight-orange); }
+.move-highlight.longterm { background: var(--highlight-gold); }
+.move-highlight.alignment { background: var(--highlight-green); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(204, 251, 241, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.listening-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.listening-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.listening-question {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.listening-question p {
+font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;
+}
+.listening-answer {
+font-size: 12px; color: var(--green-deep); font-style: italic;
+}
+
+.grammar-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-gold);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.grammar-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.grammar-item {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+}
+.grammar-item strong {
+font-size: 13px; color: var(--primary-deep); display: block; margin-bottom: 4px;
+}
+.grammar-item span {
+font-size: 13px; color: var(--text-secondary);
+}
+
+.vocab-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.vocab-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.vocab-item {
+padding: 12px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--highlight-blue);
+}
+.vocab-item strong {
+display: block; font-size: 13px; color: var(--blue-deep); margin-bottom: 4px;
+}
+.vocab-item span {
+font-size: 12px; color: var(--text-secondary);
+}
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { 
+border-radius: var(--radius-md); 
+padding: 20px; 
+border: 2px solid;
+font-size: 13px;
+}
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 10px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { 
+font-family: 'Fraunces', serif; 
+font-size: 13px; 
+font-weight: 600;
+margin-bottom: 8px; 
+color: var(--text-primary); 
+}
+.scenario-context { 
+font-size: 13px; 
+color: var(--text-secondary); 
+margin-bottom: 12px; 
+line-height: 1.3; 
+}
+.scenario-requirements { 
+background: rgba(255, 255, 255, 0.8); 
+border-radius: var(--radius-sm); 
+padding: 12px; 
+margin-bottom: 12px; 
+}
+.scenario-requirements h4 { 
+font-size: 12px; 
+font-weight: 600; 
+color: var(--text-primary); 
+margin-bottom: 6px; 
+}
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { 
+padding: 3px 0; 
+padding-left: 18px; 
+position: relative; 
+font-size: 13px; 
+color: var(--text-secondary); 
+line-height: 1.3; 
+}
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 12px;
+margin-bottom: 12px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 4px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(204, 251, 241, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(204, 251, 241, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(204, 251, 241, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(204, 251, 241, 0.5), rgba(153, 246, 228, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(15, 118, 110, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(15, 118, 110, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(204, 251, 241, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(204, 251, 241, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(15, 118, 110, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(15, 118, 110, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(15, 118, 110, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.usage-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-07.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 7 Hub</span>
+</a>
+<div class="day-indicator">
+Day 44 / 49
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-07.html" class="day-tab">Overview</a>
+<a href="week-07-day-43.html" class="day-tab">Day 43</a>
+<a href="week-07-day-44.html" class="day-tab active">Day 44</a>
+<a href="week-07-day-45.html" class="day-tab">Day 45</a>
+<a href="week-07-day-46.html" class="day-tab">Day 46</a>
+<a href="week-07-day-47.html" class="day-tab">Day 47</a>
+<a href="week-07-day-48.html" class="day-tab">Day 48</a>
+<a href="week-07-day-49.html" class="day-tab">Day 49</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-07.html">Week 7</a> › Day 44
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🧭</span>
+<h1 class="day-title">Communicating Purpose & Identity</h1>
+</div>
+<p class="day-subtitle">Day 43 taught you where to go. Today, you'll define <strong>why you exist and who you are</strong>. <strong>B2 leaders set goals to reach a destination. C1 leaders define purpose to build a culture.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-compass"></i> Purpose & Identity</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 2 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2 Leader</div>
+<div style="font-size: 14px;">Talks about goals, KPIs, and targets. (When goals change, motivation disappears).</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1 Leader</div>
+<div style="font-size: 14px;">Talks about purpose, standards, and identity. (No matter the circumstances, identity leads the way).</div>
+</div>
+</div>
+"B2 leaders set goals to reach a destination. C1 leaders define purpose to build a culture. Goals tell you where to go; purpose tells you who to be along the way."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Setting Goals to Defining Identity
+</div>
+<p>
+Goals are external (revenue, deadlines, metrics). Purpose is internal (beliefs, standards, identity).
+<br><br>
+When you communicate through Purpose, you don't command, you invite alignment. You don't say "We must do this to hit the target", you say "We do this because this is who we are."
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Purpose communication isn't about reciting corporate slogans. It's how you demonstrate your beliefs and standards in daily decisions, especially when facing difficulties.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Purpose communication</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common mistakes</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Goal vs Purpose</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Dialogues + Listen</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">8 min</div>
+<div class="plan-desc">Grammar + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves (Communicating Purpose)
+</h2>
+<p class="section-desc">5 moves to communicate purpose and identity. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">State the Core Belief</div>
+<div class="pattern-ipa">Core idea: "We believe that..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Setting the foundation</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Establish the fundamental belief that drives a decision or action. It shifts the conversation from "what we have to do" to "what we stand for".</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"In our family, we believe that..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('In our family, we believe that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"We believe that..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('We believe that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Our core belief is that..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Our core belief is that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"We are fundamentally committed to the principle that..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('We are fundamentally committed to the principle that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When setting the foundation for a decision</li>
+<li>When explaining the "why" behind a rule</li>
+<li>To shift focus from tasks to values</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It sounds like empty corporate jargon</li>
+<li>The team needs immediate tactical direction, not philosophy</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "We have to do this."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "We believe that doing this is the right thing."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">Define the Standard</div>
+<div class="pattern-ipa">Core idea: "Our standard is..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Drawing boundaries</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Draw clear boundaries or reject opportunities that don't fit your identity. It's not about what you can't do; it's about what you won't do.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"In this house, our standard is..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('In this house, our standard is...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"The way we do things here is..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The way we do things here is...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"The standard we hold ourselves to is..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The standard we hold ourselves to is...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Our operational baseline requires..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Our operational baseline requires...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When drawing boundaries</li>
+<li>When rejecting an opportunity that doesn't fit</li>
+<li>To define quality or behavioral expectations</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It sounds rigid and inflexible to necessary change</li>
+<li>You haven't explained the belief behind the standard</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "We can't do that."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "Our standard doesn't allow us to cut corners on quality."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Connect to Identity</div>
+<div class="pattern-ipa">Core idea: "This is who we are."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Building belonging</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Give the team a sense of belonging and pride. Shift the focus from "what we do" to "who we are".</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"This is just how we do things."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This is just how we do things.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"This is part of our team culture."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This is part of our team culture.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"This is part of our DNA as a team."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This is part of our DNA as a team.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"This is intrinsic to our organizational identity."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('This is intrinsic to our organizational identity.')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When the team needs a sense of belonging</li>
+<li>To build pride during difficult times</li>
+<li>To reinforce positive behaviors</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It sounds like blind loyalty</li>
+<li>The team needs practical problem-solving, not pep talks</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "You need to work harder."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "We are the kind of team that doesn't give up when it gets hard."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Anchor to the Long-term</div>
+<div class="pattern-ipa">Core idea: "Beyond this quarter, this is about..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Perspective shift</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Remind the team of the big picture when they are bogged down by short-term pressure.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"In the long run, this is for..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('In the long run, this is for...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Looking ahead, this is really about..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Looking ahead, this is really about...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Beyond the immediate metrics, this is about..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Beyond the immediate metrics, this is about...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"From a strategic horizon, this initiative serves to..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('From a strategic horizon, this initiative serves to...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>When the team is overwhelmed by short-term pressure</li>
+<li>To justify a difficult short-term sacrifice</li>
+<li>To connect daily work to a lasting legacy</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>There is an immediate crisis that needs tactical focus</li>
+<li>It sounds like you are ignoring current realities</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "We need to hit this month's target."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "Beyond this month's target, this is about building a product our kids would be proud to use."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Invite Alignment</div>
+<div class="pattern-ipa">Core idea: "How does this sit with your own values?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Creating shared ownership</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Shift purpose from "my belief" to "our shared value". (Different from Day 43 which asks about the future; this asks about value alignment).</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"Does that make sense to you?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Does that make sense to you?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"How do you feel about that approach?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('How do you feel about that approach?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"How does this resonate with how you see our role?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('How does this resonate with how you see our role?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"To what extent does this align with your professional principles?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('To what extent does this align with your professional principles?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>To turn purpose from "mine" to "ours"</li>
+<li>To check for genuine buy-in, not just compliance</li>
+<li>To invite personal connection to the mission</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It's a non-negotiable compliance issue</li>
+<li>The team is exhausted and just needs clear direction</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "Do you agree with the rules?"</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "How does this sit with your own values?"</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+Common Mistakes
+</h2>
+<p class="section-desc">3 common mistakes when communicating purpose. Avoid these to keep inspiration authentic.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: Using corporate jargon instead of authentic beliefs</h4>
+<div class="mistake-wrong">❌ "We need to leverage our synergies to optimize our core competencies." (Empty words)</div>
+<div class="mistake-right">✅ "We believe in treating our customers like family, even when it costs us money." (Authentic belief)</div>
+<div class="mistake-why">Jargon creates distance. Authentic beliefs create trust.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Confusing purpose with goals</h4>
+<div class="mistake-wrong">❌ "Our purpose is to make $10 million this year." (That's a goal, not a purpose).</div>
+<div class="mistake-right">✅ "Our purpose is to make financial freedom accessible to everyone. The $10 million is just a milestone."</div>
+<div class="mistake-why">Goals expire. Purpose endures.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Preaching instead of embodying</h4>
+<div class="mistake-wrong">❌ "You all need to follow our core values." (Dictating)</div>
+<div class="mistake-right">✅ "Here is how I tried to live out our value of transparency this week..." (Modeling)</div>
+<div class="mistake-why">Purpose cannot be mandated from a slide. It must be modeled by the leader.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+Goal-Driven vs Purpose-Driven Decoder (Signature Section)
+</h2>
+<p class="section-desc">Goal Language (B2) vs Purpose Language (C1). Learn to shift your vocabulary.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 The Purpose Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>Situation</th><th>Goal-Driven (B2)</th><th>Purpose-Driven (C1)</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Facing a setback</strong></td><td>"We missed the target. Work harder."</td><td>"This is who we are: we learn from failure and come back stronger."</td></tr>
+<tr><td><strong>Making a tough choice</strong></td><td>"Which option makes more money?"</td><td>"Which option aligns with our core belief?"</td></tr>
+<tr><td><strong>Onboarding new people</strong></td><td>"Here are your KPIs for Q1."</td><td>"Here is the standard we hold ourselves to every day."</td></tr>
+<tr><td><strong>Rejecting an opportunity</strong></td><td>"The ROI isn't high enough."</td><td>"This doesn't fit our identity as a company."</td></tr>
+<tr><td><strong>Motivating the team</strong></td><td>"If we hit this, we get a bonus."</td><td>"We are building something that matters."</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Notice when you are using goal-driven language. 2. Pause. 3. Shift to purpose-driven language. 4. Watch the team's motivation shift from external to internal.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-left-right"></i>
+Casual ↔ Professional Comparison
+</h2>
+<p class="section-desc">Same moves, different registers. Match the register to the context.</p>
+</div>
+<div class="decoder-card" style="border-left-color: var(--highlight-blue);">
+<h3>🔄 Register Comparison</h3>
+<table class="comparison-table">
+<thead>
+<tr><th>Situation</th><th>🏠 Casual (Life/Family)</th><th>💼 Professional (Business)</th></tr>
+</thead>
+<tbody>
+<tr><td>State Belief</td><td>"In our family, we believe that..."</td><td>"Our core belief is that..."</td></tr>
+<tr><td>Define Standard</td><td>"In this house, our standard is..."</td><td>"The standard we hold ourselves to is..."</td></tr>
+<tr><td>Connect Identity</td><td>"This is just how we do things."</td><td>"This is part of our DNA as a team."</td></tr>
+<tr><td>Anchor Long-term</td><td>"In the long run, this is for..."</td><td>"Beyond the immediate metrics, this is about..."</td></tr>
+<tr><td>Invite Alignment</td><td>"Does that make sense to you?"</td><td>"How does this resonate with how you see our role?"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Casual uses emotional, personal language (family, house). Professional uses strategic, legacy-focused language (core belief, DNA, metrics). Match the register to the context.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: The Founder's Memo on Saying "No"
+</h2>
+<p class="section-desc">Read this internal memo from a Founder explaining why they rejected a lucrative deal. Pause and analyze before reading the model answer.</p>
+</div>
+<div class="reading-card">
+<h3>📧 The Pivot Email</h3>
+<div class="email-box">
+<strong>Subject:</strong> Why we walked away from the $2M deal<br><br>
+Team,<br><br>
+Yesterday, we turned down a $2 million contract. I know some of you are frustrated because we've been working on it for months. <br><br>
+<strong>Our core belief is that</strong> we never sell a product we don't 100% believe will solve the customer's problem. During the final demo, it became clear that their workflow was too complex for our current tool. We could have patched it together to get the signature, but <strong>the standard we hold ourselves to is</strong> honest solutions, not quick fixes.<br><br>
+<strong>This is who we are.</strong> We are the kind of company that protects our customers' time, even when it hurts our own revenue. <br><br>
+<strong>Beyond this quarter's numbers, this is about</strong> building a reputation for integrity that will last for decades. <br><br>
+I know this is a tough pill to swallow. <strong>How does this sit with your own values?</strong> I want to hear your thoughts in our next all-hands.<br><br>
+- David (Founder)
+</div>
+<div class="reading-questions">
+<h4>🤔 Your Turn: Pause and Analyze</h4>
+<p style="margin-bottom: 10px;">Before reading the answer, ask yourself:</p>
+<p style="font-size: 13px; color: var(--text-secondary); margin-left: 20px; margin-bottom: 10px;">1. How does David use the 5 moves to turn a disappointment into a culture-building moment?<br>2. Why is this more effective than just saying "The deal wasn't a good fit"?</p>
+<p style="margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue-deep); margin-bottom: 10px;">✅ Model Answer:</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">1. He States the Core Belief ("we never sell..."), Defines the Standard ("honest solutions, not quick fixes"), Connects to Identity ("This is who we are"), Anchors to the Long-term ("reputation for integrity"), and Invites Alignment ("How does this sit with your own values?").<br>2. It shifts the narrative from a lost revenue (goal-driven) to a victory for the company's soul (purpose-driven). It makes the team proud instead of demoralized.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Goal-Driven to Purpose-Driven
+</h2>
+<p class="section-desc">Rewrite these goal-driven statements into purpose-driven leadership communication.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Goal-Driven → Purpose-Driven</h3>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Goal-Driven (Business): "We need to cut costs by 10% this quarter or we'll miss our profit target."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"Let's try to cut costs this quarter."</div>
+<div class="rewrite-level better"><strong>Better</strong>"We need to be more efficient to hit our target."</div>
+<div class="rewrite-level professional"><strong>Purpose-Driven</strong>"Our standard is to run a lean, efficient operation so we can invest more in our people. Cutting 10% of our operational waste this quarter isn't just about hitting a profit target; it's about freeing up resources to build the features our users actually need. This is who we are: resourceful and focused. How can we achieve this together?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The purpose-driven version connects a painful task (cutting costs) to a higher standard (investing in people/users) and invites the team to solve it together.</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Goal-Driven (Life): "You need to get good grades so you can get into a good university."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"You should study harder for your grades."</div>
+<div class="rewrite-level better"><strong>Better</strong>"Good grades will help your future."</div>
+<div class="rewrite-level professional"><strong>Purpose-Driven</strong>"In our family, we believe that education is about learning how to think, not just passing tests. Getting good grades is a byproduct of being curious and disciplined. This is about building a mind that can solve real problems in the future. How do you see your own curiosity fitting into this?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The purpose-driven version shifts the focus from external validation (university) to internal character (curiosity, discipline) and invites the child to own their learning journey.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 leaders communicate purpose in real conversations. Notice how they turn frustration into pride.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Teenager Questions Family Values (Life)</h3>
+<div class="story-context">Context: Your 15-year-old son is complaining about volunteering at the food bank every weekend. He finds it boring and wants to sleep in.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Son:</div>
+<div class="dialogue-text">"Dad, why do we have to volunteer at the food bank every weekend? It's boring. I just want to sleep in."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I get that it's tiring. But <strong>in our family, we believe that</strong> we have a responsibility to help those who are less fortunate." <span class="move-highlight belief">State Belief</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Son:</div>
+<div class="dialogue-text">"But other kids don't have to do this. It's not fair."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>In this house, our standard is</strong> that we don't just take from the community; we give back. It's not about what other people do; it's about who we want to be." <span class="move-highlight standard">Define Standard</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Son:</div>
+<div class="dialogue-text">"But what difference does it even make? We just pack a few boxes."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>This is who we are.</strong> We are the kind of people who show up, even when it's not glamorous. The impact isn't just the boxes; it's the consistency." <span class="move-highlight identity">Connect Identity</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Son:</div>
+<div class="dialogue-text">"I guess. But I still don't like it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>In the long run, this is about</strong> building a character that cares about others, not just yourself. One day, you'll look back and be proud of this." <span class="move-highlight longterm">Anchor Long-term</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Son:</div>
+<div class="dialogue-text">"Maybe. But can we at least listen to music while we pack?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Deal. <strong>How does this sit with you?</strong> Does it make sense why we do this, even if it's not your favorite activity?" <span class="move-highlight alignment">Invite Alignment</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Son:</div>
+<div class="dialogue-text">"Yeah, I get it. It's just hard to wake up early."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I know. I appreciate you doing it anyway. That shows real character."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Purpose Communication:</h4>
+<ul>
+<li><strong>State Belief:</strong> "In our family, we believe that..."</li>
+<li><strong>Define Standard:</strong> "In this house, our standard is..."</li>
+<li><strong>Connect Identity:</strong> "This is who we are..."</li>
+<li><strong>Anchor Long-term:</strong> "In the long run, this is about..."</li>
+<li><strong>Invite Alignment:</strong> "How does this sit with you?"</li>
+<li><strong>Register:</strong> Casual throughout (parent-teenager)</li>
+<li><strong>12 turns</strong> natural flow, all 5 moves used naturally</li>
+<li><strong>Son had resistance</strong> ("It's boring") → had to connect to character and long-term pride</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: Reaffirming Identity After a Failure (Business)</h3>
+<div class="story-context">Context: Your team just launched a new product but received heavy complaints about UX bugs. The team is panicking and blaming each other.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thanks everyone for joining. I know this week has been tough. <strong>Our core belief is that</strong> we build products to make our users' lives easier, not harder." <span class="move-highlight belief">State Belief</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 1:</div>
+<div class="dialogue-text">"We rushed the launch. QA didn't have enough time."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I hear you. But <strong>the standard we hold ourselves to is</strong> that we don't ship broken software, no matter the deadline. We own our mistakes." <span class="move-highlight standard">Define Standard</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 2:</div>
+<div class="dialogue-text">"So what do we do now? The reviews are terrible."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>This is who we are.</strong> We are the kind of team that doesn't hide from failure; we fix it. We are going to pause new features and dedicate the next two weeks to fixing the UX." <span class="move-highlight identity">Connect Identity</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 1:</div>
+<div class="dialogue-text">"But the board is going to be furious about the delay."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Beyond this quarter's metrics, this is about</strong> rebuilding the trust our users have in us. If we lose their trust, no amount of new features will save us." <span class="move-highlight longterm">Anchor Long-term</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 2:</div>
+<div class="dialogue-text">"That makes sense. I'd rather delay and do it right."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Exactly. <strong>How does this sit with your own values</strong> as engineers and designers? Are we aligned on this path?" <span class="move-highlight alignment">Invite Alignment</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 1:</div>
+<div class="dialogue-text">"Yeah. Let's fix it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Great. Let's get to work."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Purpose Communication:</h4>
+<ul>
+<li><strong>State Belief:</strong> "Our core belief is that..."</li>
+<li><strong>Define Standard:</strong> "The standard we hold ourselves to is..."</li>
+<li><strong>Connect Identity:</strong> "This is who we are..."</li>
+<li><strong>Anchor Long-term:</strong> "Beyond this quarter's metrics, this is about..."</li>
+<li><strong>Invite Alignment:</strong> "How does this sit with your own values..."</li>
+<li><strong>Register:</strong> Professional (team meeting)</li>
+<li><strong>11 turns</strong> natural flow, all 5 moves used naturally</li>
+<li><strong>Team was panicking</strong> → Leader shifted focus from blame to identity and long-term trust</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Task
+</h2>
+<p class="section-desc">Listen to Dialogue 2 again. Answer these outcome-based questions.</p>
+</div>
+<div class="listening-card">
+<h3>🎧 Listening Comprehension</h3>
+<div class="listening-question">
+<p>1. Which sentence shifted the team's focus from blaming each other to taking ownership?</p>
+<div class="listening-answer">✅ "The standard we hold ourselves to is that we don't ship broken software, no matter the deadline. We own our mistakes." (It replaced blame with a shared standard of accountability).</div>
+</div>
+<div class="listening-question">
+<p>2. Why did the leader say "Beyond this quarter's metrics..." instead of "The board will understand..."?</p>
+<div class="listening-answer">✅ To anchor the team to a long-term purpose (user trust) rather than short-term politics (board reaction). It makes the sacrifice feel meaningful, not just political.</div>
+</div>
+<div class="listening-question">
+<p>3. What changed Team Member 2's mindset from panic to determination?</p>
+<div class="listening-answer">✅ The leader connected the failure to the team's identity ("We are the kind of team that doesn't hide from failure; we fix it"). It turned a setback into a chance to prove who they are.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-code"></i>
+Grammar in Context
+</h2>
+<p class="section-desc">Why we use these specific structures when communicating purpose.</p>
+</div>
+<div class="grammar-card">
+<h3>📝 Grammar for Purpose</h3>
+<div class="grammar-item">
+<strong>1. Noun Clauses for Beliefs ("We believe that...")</strong>
+<span>We use "We believe that [clause]" to state a fundamental truth. It creates certainty and formality. It's not an opinion ("I think..."), it's a shared conviction ("We believe...").</span>
+</div>
+<div class="grammar-item">
+<strong>2. Cleft Sentences for Identity ("This is who we are.")</strong>
+<span>We use "This is who/what..." to emphasize identity. It's undeniable and powerful. Instead of "We are a team that fixes things," we say "This is who we are: we fix things." It leaves no room for argument.</span>
+</div>
+<div class="grammar-item">
+<strong>3. "Beyond..." for Perspective ("Beyond this quarter...")</strong>
+<span>We use "Beyond [short-term thing], this is about [long-term meaning]" to shift perspective. It acknowledges the current pressure while elevating the conversation to a higher purpose.</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Purpose phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Purpose Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>We believe that</td><td class="ipa-cell">/wiː bɪˈliːv ðæt/</td><td>Stress on "believe"</td></tr>
+<tr><td>The standard we hold</td><td class="ipa-cell">/ðə ˈstændərd wiː hoʊld/</td><td>Stress on "standard" and "hold"</td></tr>
+<tr><td>This is who we are</td><td class="ipa-cell">/ðɪs ɪz huː wiː ɑːr/</td><td>Heavy stress on "who" and "are"</td></tr>
+<tr><td>Beyond this quarter</td><td class="ipa-cell">/bɪˈjɒnd ɪs ˈkwɔːrtər/</td><td>Stress on "Beyond"</td></tr>
+<tr><td>How does this resonate</td><td class="ipa-cell">/haʊ dʌz ðɪs ˈrɛzəneɪt/</td><td>Rising intonation (question)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"We believe that..."</span>
+<span class="pattern-label">↘ Falling with weight</span>
+<span class="context-tip"><strong>Context:</strong> Used when stating core beliefs. Falling tone = conviction, certainty. <strong>Avoid:</strong> Rising (sounds like you're unsure of your own values).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"This is who we are."</span>
+<span class="pattern-label">↘ Falling with pause</span>
+<span class="context-tip"><strong>Context:</strong> Used when connecting to identity. Pause for 1 second after the sentence. Let the identity sink in. <strong>Avoid:</strong> Rushing through it (kills the impact).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"How does this resonate with you?"</span>
+<span class="pattern-label">↗ Rising</span>
+<span class="context-tip"><strong>Context:</strong> Used when inviting alignment. Rising tone = genuine curiosity, open question. <strong>Avoid:</strong> Falling (sounds like a test).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice communicating purpose in different contexts. Focus on the communication goal, not just using moves.</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Explaining Family Traditions</h3>
+<p class="scenario-context">You have a new boyfriend/girlfriend. They wonder why your family has strange rules (e.g., no phones at dinner). Explain using Purpose.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Connect to Identity & State Core Belief.
+<strong>📖 Possible Response:</strong> "In our family, we believe that dinner time is sacred. It's not just about eating; it's about connecting without distractions. In this house, our standard is to be fully present with each other. This is just how we do things. Does that make sense to you?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>State the core belief behind the rule</li>
+<li>Define the standard</li>
+<li>Connect to family identity</li>
+<li>Invite their understanding</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Onboarding New Hires</h3>
+<p class="scenario-context">You are a manager talking to a new employee in their first week. Don't talk about KPIs; talk about team culture and identity.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Define the Standard & Anchor to the Long-term.
+<strong>📖 Possible Response:</strong> "Welcome to the team. Our core belief is that we build things to last, not just to ship fast. The standard we hold ourselves to is that we never compromise on quality, even when the deadline is tight. Beyond this quarter's metrics, this is about building a reputation for excellence. How does this resonate with how you see your role here?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>State the team's core belief</li>
+<li>Define the quality standard</li>
+<li>Anchor to long-term reputation</li>
+<li>Invite their alignment</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Rejecting a Bad Client</h3>
+<p class="scenario-context">A potential client is lucrative but toxic, asking for things that go against your professional ethics. You must reject them professionally but firmly.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Define the Standard & Connect to Identity.
+<strong>📖 Possible Response:</strong> "Thank you for the offer. However, our core belief is that we only partner with clients who value transparency. The standard we hold ourselves to doesn't allow us to hide risks from stakeholders. This is who we are as a consultancy. Beyond this single contract, this is about maintaining our integrity. I hope you understand our position."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>State the ethical belief</li>
+<li>Define the non-negotiable standard</li>
+<li>Connect to professional identity</li>
+<li>Anchor to long-term integrity</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Purpose Challenge</h3>
+<p class="scenario-context">Morning: Talk to your kids about why they need to study hard (not just for grades). Afternoon: Talk to your sales team about why they shouldn't oversell to customers.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Shift register. Life = character building. Business = long-term trust.
+<strong>📖 Possible Response (Life):</strong> "In our family, we believe that education is about learning how to think, not just passing tests. Getting good grades is a byproduct of being curious. This is about building a mind that can solve real problems. How do you see your own curiosity fitting into this?"
+<strong>📖 Possible Response (Business):</strong> "Our core belief is that we build long-term relationships, not just quick sales. The standard we hold ourselves to is that we never promise what we can't deliver. Beyond this quarter's quota, this is about building a reputation for trust. How does this sit with your own values as salespeople?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Life = character, curiosity, long-term growth. Business = trust, reputation, integrity.</li>
+<li>State beliefs and define standards in both</li>
+<li>Invite alignment in both</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply purpose communication to actual situations this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Purpose Email Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Write a short email to your team or family explaining "Why we do what we do" instead of just assigning tasks.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>State a core belief</li>
+<li>Connect to identity</li>
+<li>Invite alignment</li>
+<li>Write down the flow</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written email</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Purpose Conversations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 short speeches (2 min) about Purpose. 1 for family (traditions), 1 for team (culture).</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register)</li>
+<li>1 Business scenario (professional register)</li>
+<li>Use the 5 moves naturally</li>
+<li>Focus on beliefs and standards</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Purpose Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, when you have to reject a request (from boss, client, or family), use "Define the Standard" to reject based on identity rather than personal reasons. Note the results.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Reject at least 1 request using purpose</li>
+<li>Map which moves you used</li>
+<li>Did people respect the boundary more? Note their reaction</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Purpose Communication Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People understand why they do the work, not just what to do</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Team feels proud of their identity, even during setbacks</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Decisions are made based on values, not just short-term gains</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">New members integrate quickly into the culture</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">You reject opportunities that don't fit your identity</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You claim space confidently before speaking</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You set the frame before proposing solutions</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You speak with conviction, not uncertainty</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You invite input before closing</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You close with clarity, not ambiguity</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>State beliefs first:</strong> "We believe that..." before "We have to..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Define standards:</strong> "Our standard is..." before "You can't..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Connect identity:</strong> "This is who we are..." before "You need to..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Anchor long-term:</strong> "Beyond this quarter..." before "Hit the target..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Invite alignment:</strong> "How does this sit with your values?" before "Do you agree?"</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with purpose moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Stage: Explaining why a rule exists</p>
+<button>Tap to reveal best move →</button>
+</div>
+<div class="flashcard-back">
+<p><strong>Move 1: State the Core Belief</strong><br><br>"We believe that..."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always start with the belief behind the rule. Don't just state the rule.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Communicating Purpose
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Judgement) You need to explain why your team has a strict quality check process. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Because the boss said so."</div>
+<div class="quiz-option">B. "Our core belief is that we never ship broken software. The standard we hold ourselves to is excellence."</div>
+<div class="quiz-option">C. "It's in the employee handbook."</div>
+<div class="quiz-option">D. "We have to do it to avoid bugs."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Judgement) Team is demoralized after missing a target. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We missed the target. Work harder next quarter."</div>
+<div class="quiz-option">B. "This is who we are: we learn from failure and come back stronger. Beyond this quarter's numbers, this is about building resilience."</div>
+<div class="quiz-option">C. "I'm disappointed in you all."</div>
+<div class="quiz-option">D. "Let's just move on."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) You have to reject a lucrative client because they are unethical. Best way to tell your team?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "The deal wasn't a good fit."</div>
+<div class="quiz-option">B. "Our standard doesn't allow us to work with companies that compromise integrity. This is who we are."</div>
+<div class="quiz-option">C. "They didn't pay enough."</div>
+<div class="quiz-option">D. "I decided it wasn't worth the effort."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) New hire asks what the team culture is like. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We work hard and play hard."</div>
+<div class="quiz-option">B. "Here are your KPIs for Q1."</div>
+<div class="quiz-option">C. "We believe in transparency and ownership. The standard we hold ourselves to is that we never hide mistakes."</div>
+<div class="quiz-option">D. "It's pretty chill here."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Judgement) Team is arguing about which feature to build first. Best way to decide?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Build the one that makes the most money."</div>
+<div class="quiz-option">B. "Which option aligns with our core belief of putting the user first?"</div>
+<div class="quiz-option">C. "Let's flip a coin."</div>
+<div class="quiz-option">D. "I'll decide since I'm the manager."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Life) Your teenager asks why they have to do chores. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Because I said so."</div>
+<div class="quiz-option">B. "In our family, we believe that we all contribute to the home. This is about building responsibility."</div>
+<div class="quiz-option">C. "Because everyone else does it."</div>
+<div class="quiz-option">D. "It's your duty."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Business) Sales team wants to oversell to hit quota. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Do whatever it takes to hit the number."</div>
+<div class="quiz-option">B. "Our core belief is that we build long-term trust. The standard we hold ourselves to is that we never promise what we can't deliver."</div>
+<div class="quiz-option">C. "Just be careful."</div>
+<div class="quiz-option">D. "It's up to you."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Judgement) Which sentence shows a goal-driven mindset?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We need to hit $10M this year."</div>
+<div class="quiz-option">B. "Our purpose is to make financial freedom accessible to everyone."</div>
+<div class="quiz-option">C. "This is who we are."</div>
+<div class="quiz-option">D. "We believe in transparency."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Judgement) Which sentence shows a purpose-driven mindset?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Cut costs by 10%."</div>
+<div class="quiz-option">B. "Ship the feature by Friday."</div>
+<div class="quiz-option">C. "Beyond this quarter's metrics, this is about building a product our kids would be proud to use."</div>
+<div class="quiz-option">D. "Get 1000 new users."</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-07-day-43.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 43: Vision Casting & Inspiration</div>
+</a>
+<a href="week-07-day-45.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 45: Active Listening & Powerful Questions</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 44 Complete & Continue to Day 45</span>
+</button>
+<div class="complete-message">B2 leaders set goals to reach a destination. C1 leaders define purpose to build a culture. 🧭</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 7 · Day 44 · Communicating Purpose & Identity</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `Son: Dad, why do we have to volunteer at the food bank every weekend? It's boring. I just want to sleep in. You: I get that it's tiring. But in our family, we believe that we have a responsibility to help those who are less fortunate. Son: But other kids don't have to do this. It's not fair. You: In this house, our standard is that we don't just take from the community; we give back. It's not about what other people do; it's about who we want to be. Son: But what difference does it even make? We just pack a few boxes. You: This is who we are. We are the kind of people who show up, even when it's not glamorous. The impact isn't just the boxes; it's the consistency. Son: I guess. But I still don't like it. You: In the long run, this is about building a character that cares about others, not just yourself. One day, you'll look back and be proud of this. Son: Maybe. But can we at least listen to music while we pack? You: Deal. How does this sit with you? Does it make sense why we do this, even if it's not your favorite activity? Son: Yeah, I get it. It's just hard to wake up early. You: I know. I appreciate you doing it anyway. That shows real character.`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `You: Thanks everyone for joining. I know this week has been tough. Our core belief is that we build products to make our users' lives easier, not harder. Team Member 1: We rushed the launch. QA didn't have enough time. You: I hear you. But the standard we hold ourselves to is that we don't ship broken software, no matter the deadline. We own our mistakes. Team Member 2: So what do we do now? The reviews are terrible. You: This is who we are. We are the kind of team that doesn't hide from failure; we fix it. We are going to pause new features and dedicate the next two weeks to fixing the UX. Team Member 1: But the board is going to be furious about the delay. You: Beyond this quarter's metrics, this is about rebuilding the trust our users have in us. If we lose their trust, no amount of new features will save us. Team Member 2: That makes sense. I'd rather delay and do it right. You: Exactly. How does this sit with your own values as engineers and designers? Are we aligned on this path? Team Member 1: Yeah. Let's fix it. You: Great. Let's get to work.`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-44')) {
+completed.push('day-44');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 44 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'B2 leaders set goals to reach a destination. C1 leaders define purpose to build a culture. 🧭';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-44')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 44 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
