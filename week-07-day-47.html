@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 7 Day 47: Difficult Conversations | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #991B1B;
+--primary-bright: #7F1D1D;
+--primary-soft: #FEE2E2;
+--primary-deep: #450A0A;
+--primary-light: #DC2626;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 11%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(153, 27, 27, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 50%, #FECACA 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '🛡️'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(254, 226, 226, 0.6), rgba(254, 202, 202, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(153, 27, 27, 0.2);
+}
+.philosophy-box {
+background: #FEF2F2;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(254, 226, 226, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.pattern-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 28px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pattern-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.pattern-number {
+flex-shrink: 0; width: 40px; height: 40px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px;
+box-shadow: 0 2px 8px rgba(153, 27, 27, 0.3);
+}
+.pattern-content { flex: 1; }
+.pattern-text {
+font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 6px; line-height: 1.3;
+}
+.pattern-ipa {
+font-size: 12px; color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+margin-bottom: 8px;
+}
+.pattern-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pattern-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.pattern-context {
+font-size: 12px; color: var(--text-muted);
+background: rgba(254, 226, 226, 0.5); padding: 4px 10px; border-radius: 12px;
+}
+.pattern-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+
+.register-table {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 16px; margin-bottom: 14px;
+}
+.register-table h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 12px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.register-row {
+display: grid;
+grid-template-columns: 100px 1fr auto;
+gap: 12px;
+padding: 10px 12px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+align-items: center;
+}
+.register-row:last-child { margin-bottom: 0; }
+.register-tag {
+font-size: 11px; font-weight: 700;
+padding: 4px 8px; border-radius: 8px;
+text-align: center;
+}
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase {
+font-size: 13px; color: var(--text-secondary);
+font-style: italic;
+}
+.register-context {
+font-size: 11px; color: var(--text-muted);
+margin-top: 2px;
+}
+.audio-btn-small {
+width: 28px; height: 28px;
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; border-radius: 50%;
+cursor: pointer; display: flex; align-items: center; justify-content: center;
+transition: all 0.3s ease;
+flex-shrink: 0;
+}
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(153, 27, 27, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.usage-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 14px;
+}
+.usage-box {
+padding: 12px;
+border-radius: var(--radius-sm);
+font-size: 13px;
+}
+.usage-box.when { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.usage-box.avoid { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.usage-box strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.usage-box.when strong { color: var(--green-deep); }
+.usage-box.avoid strong { color: #C53030; }
+.usage-box ul { list-style: none; padding: 0; }
+.usage-box li { padding: 2px 0; padding-left: 16px; position: relative; color: var(--text-secondary); }
+.usage-box.when li::before { content: '✔'; position: absolute; left: 0; color: var(--highlight-green); font-weight: 700; }
+.usage-box.avoid li::before { content: '✘'; position: absolute; left: 0; color: #F56565; font-weight: 700; }
+
+.compare-box {
+background: rgba(248, 250, 252, 0.8);
+border-radius: var(--radius-sm);
+padding: 14px; margin-bottom: 14px;
+border-left: 3px solid var(--highlight-orange);
+}
+.compare-box h5 {
+font-size: 11px; font-weight: 700; color: var(--highlight-orange);
+text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+}
+.compare-level {
+padding: 8px 12px;
+border-radius: var(--radius-sm);
+margin-bottom: 6px;
+font-size: 13px;
+border-left: 3px solid;
+}
+.compare-level.weak { background: rgba(245, 101, 101, 0.08); border-left-color: #F56565; }
+.compare-level.strong { background: rgba(16, 185, 129, 0.08); border-left-color: var(--highlight-green); }
+.compare-level strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.compare-level.weak strong { color: #C53030; }
+.compare-level.strong strong { color: var(--green-deep); }
+.compare-level p { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+.mistakes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 16px;
+margin-top: 20px;
+}
+.mistake-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-orange);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.mistake-card h4 {
+font-family: 'Fraunces', serif; font-size: 1.05rem;
+color: var(--text-primary); margin-bottom: 10px;
+display: flex; align-items: center; gap: 8px;
+}
+.mistake-wrong {
+background: rgba(245, 101, 101, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: #C53030;
+border-left: 3px solid #F56565;
+}
+.mistake-right {
+background: rgba(16, 185, 129, 0.08);
+padding: 10px; border-radius: var(--radius-sm);
+margin-bottom: 8px; font-size: 13px; color: var(--green-deep);
+border-left: 3px solid var(--highlight-green);
+}
+.mistake-why {
+font-size: 12px; color: var(--text-secondary); font-style: italic;
+}
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.comparison-table th {
+background: rgba(254, 226, 226, 0.5);
+padding: 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--primary-deep);
+border-bottom: 2px solid rgba(153, 27, 27, 0.2);
+}
+.comparison-table td {
+padding: 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.comparison-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-task {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.better { background: rgba(251, 146, 60, 0.08); border-left: 3px solid var(--highlight-orange); }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.better strong { color: var(--orange-deep); }
+.rewrite-level.professional strong { color: var(--green-deep); }
+.rewrite-why {
+margin-top: 8px;
+padding: 8px;
+background: rgba(153, 27, 27, 0.08);
+border-radius: var(--radius-sm);
+font-size: 12px;
+color: var(--primary-deep);
+font-style: italic;
+}
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(254, 226, 226, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(254, 226, 226, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(153, 27, 27, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 11px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.safety { background: var(--highlight-green); }
+.move-highlight.observation { background: var(--highlight-blue); }
+.move-highlight.impact { background: var(--highlight-orange); }
+.move-highlight.perspective { background: var(--highlight-purple); }
+.move-highlight.solution { background: var(--primary); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(153, 27, 27, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(254, 226, 226, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.listening-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.listening-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.listening-question {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(209, 250, 229, 0.3);
+border-radius: var(--radius-sm);
+}
+.listening-question p {
+font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;
+}
+.listening-answer {
+font-size: 12px; color: var(--green-deep); font-style: italic;
+}
+
+.grammar-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-gold);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.grammar-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.grammar-item {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+}
+.grammar-item strong {
+font-size: 13px; color: var(--primary-deep); display: block; margin-bottom: 4px;
+}
+.grammar-item span {
+font-size: 13px; color: var(--text-secondary);
+}
+
+.vocab-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.vocab-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 12px;
+}
+.vocab-item {
+padding: 12px;
+background: rgba(219, 234, 254, 0.3);
+border-radius: var(--radius-sm);
+border-left: 3px solid var(--highlight-blue);
+}
+.vocab-item strong {
+display: block; font-size: 13px; color: var(--blue-deep); margin-bottom: 4px;
+}
+.vocab-item span {
+font-size: 12px; color: var(--text-secondary);
+}
+
+.pronunciation-table {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 20px; margin-bottom: 16px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.pronunciation-table h3 {
+font-family: 'Fraunces', serif; font-size: 1rem;
+margin-bottom: 14px; color: var(--text-primary);
+display: flex; align-items: center; gap: 8px;
+}
+.pronunciation-table table { width: 100%; border-collapse: collapse; }
+.pronunciation-table th {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; padding: 10px 12px; text-align: left;
+font-size: 12px; font-weight: 600;
+}
+.pronunciation-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px; color: var(--text-secondary);
+}
+.pronunciation-table td.ipa-cell {
+color: var(--highlight-green);
+font-family: 'SF Mono', 'Menlo', monospace;
+font-style: italic;
+font-weight: 500;
+}
+.pronunciation-table tr:last-child td { border-bottom: none; }
+
+.intonation-item {
+background: rgba(255, 255, 255, 0.95);
+padding: 14px 18px;
+border-radius: var(--radius-sm);
+margin-bottom: 10px;
+font-size: 13px; color: var(--text-secondary);
+border-left: 3px solid var(--primary);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+line-height: 1.3;
+}
+.intonation-item .phrase {
+font-family: 'Fraunces', serif; font-weight: 600;
+color: var(--text-primary); display: block; margin-bottom: 6px;
+}
+.intonation-item .pattern-label {
+color: var(--highlight-green); font-weight: 600;
+font-family: 'SF Mono', monospace;
+display: inline-block;
+margin-right: 8px;
+}
+.intonation-item .context-tip {
+color: var(--text-muted); font-size: 12px; font-style: italic;
+margin-top: 6px; display: block;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { 
+border-radius: var(--radius-md); 
+padding: 20px; 
+border: 2px solid;
+font-size: 13px;
+}
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 10px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { 
+font-family: 'Fraunces', serif; 
+font-size: 13px; 
+font-weight: 600;
+margin-bottom: 8px; 
+color: var(--text-primary); 
+}
+.scenario-context { 
+font-size: 13px; 
+color: var(--text-secondary); 
+margin-bottom: 12px; 
+line-height: 1.3; 
+}
+.scenario-requirements { 
+background: rgba(255, 255, 255, 0.8); 
+border-radius: var(--radius-sm); 
+padding: 12px; 
+margin-bottom: 12px; 
+}
+.scenario-requirements h4 { 
+font-size: 12px; 
+font-weight: 600; 
+color: var(--text-primary); 
+margin-bottom: 6px; 
+}
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { 
+padding: 3px 0; 
+padding-left: 18px; 
+position: relative; 
+font-size: 13px; 
+color: var(--text-secondary); 
+line-height: 1.3; 
+}
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 12px;
+margin-bottom: 12px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 4px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 16px;
+position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border-left: 4px solid;
+}
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level {
+position: absolute; top: 16px; right: 16px;
+font-size: 11px; font-weight: 700; padding: 4px 12px;
+border-radius: 12px; letter-spacing: 0.5px;
+}
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.3; margin-bottom: 14px; }
+.task-requirements { background: rgba(254, 226, 226, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(254, 226, 226, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(254, 226, 226, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.success-card {
+background: rgba(209, 250, 229, 0.5);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--green);
+margin-top: 20px;
+}
+.success-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--green-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.success-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--green-deep); line-height: 1.3; }
+.success-item i { --ph-color: var(--green); font-size: 18px; }
+
+.tips-card {
+background: #FFF7ED;
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--orange);
+margin-top: 20px;
+}
+.tips-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
+color: var(--orange-deep); margin-bottom: 16px;
+display: flex; align-items: center; gap: 10px;
+}
+.tip-item { padding: 8px 0; font-size: 14px; color: var(--orange-deep); display: flex; align-items: flex-start; gap: 10px; line-height: 1.3; }
+.tip-item i { --ph-color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.tip-item strong { color: var(--orange-deep); }
+
+.flashcard-container {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; text-align: center;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.flashcard {
+background: linear-gradient(135deg, rgba(254, 226, 226, 0.5), rgba(254, 202, 202, 0.3));
+border-radius: var(--radius-md);
+padding: 32px; margin-bottom: 16px; min-height: 180px;
+display: flex; flex-direction: column;
+justify-content: center; align-items: center;
+cursor: pointer; transition: all 0.4s ease;
+}
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(153, 27, 27, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.3; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(153, 27, 27, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(254, 226, 226, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(254, 226, 226, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(153, 27, 27, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(153, 27, 27, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(153, 27, 27, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(153, 27, 27, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.pattern-header { flex-direction: column; }
+.scenario-grid { grid-template-columns: 1fr; }
+.usage-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+.register-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-07.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 7 Hub</span>
+</a>
+<div class="day-indicator">
+Day 47 / 49
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-07.html" class="day-tab">Overview</a>
+<a href="week-07-day-43.html" class="day-tab">Day 43</a>
+<a href="week-07-day-44.html" class="day-tab">Day 44</a>
+<a href="week-07-day-45.html" class="day-tab">Day 45</a>
+<a href="week-07-day-46.html" class="day-tab">Day 46</a>
+<a href="week-07-day-47.html" class="day-tab active">Day 47</a>
+<a href="week-07-day-48.html" class="day-tab">Day 48</a>
+<a href="week-07-day-49.html" class="day-tab">Day 49</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-07.html">Week 7</a> › Day 47
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">🛡️</span>
+<h1 class="day-title">Difficult Conversations</h1>
+</div>
+<p class="day-subtitle">Day 46 taught you to recognize others. Today, you learn to <strong>address the hard things</strong>. <strong>B2 leaders avoid difficult conversations to keep the peace. C1 leaders have difficult conversations to build real peace.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-shield-check"></i> Courageous Leadership</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> 5 Communication Moves</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 5 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2 Leader</div>
+<div style="font-size: 14px;">Avoids hard talks. Uses fake "sandwich feedback". (Makes problems worse).</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1 Leader</div>
+<div style="font-size: 14px;">Opens hard talks with safety, clarity, and respect. (Solves root problems, builds deep trust).</div>
+</div>
+</div>
+"B2 leaders avoid difficult conversations to keep the peace. C1 leaders have difficult conversations to build real peace."
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Avoidance to Courage
+</div>
+<p>
+Difficult conversations are not conflicts — they are opportunities. Every conversation you avoid today becomes a bigger problem tomorrow.
+<br><br>
+When you lead a difficult conversation correctly, the listener doesn't feel attacked — they feel respected. They understand that you care enough to be straight with them, and respect them enough to listen.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Courageous conversations require both <strong>honesty AND empathy</strong>. Honesty without empathy is brutality. Empathy without honesty is manipulation. You need both.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">📚</div>
+<div class="plan-title">5 Moves</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Courageous moves</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common mistakes</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Avoidance vs Courage</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Stories</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Dialogues + Listen</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">8 min</div>
+<div class="plan-desc">Grammar + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightning"></i>
+5 Communication Moves (Difficult Conversations)
+</h2>
+<p class="section-desc">5 moves to lead difficult conversations with courage and empathy. Click 🔊 to listen.</p>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">1</div>
+<div class="pattern-content">
+<div class="pattern-text">Open with Safety</div>
+<div class="pattern-ipa">Core idea: "I want to talk about this because I care about..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Always start here</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Establish safety before addressing the problem. Show that your intent is positive, not punitive.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I'm bringing this up because you matter to me..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'m bringing this up because you matter to me...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I want to talk about this because I value our relationship..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I want to talk about this because I value our relationship...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I want to have this conversation because I value your contribution to this team..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I want to have this conversation because I value your contribution to this team...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"My intention in raising this is to ensure our continued success together..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('My intention in raising this is to ensure our continued success together...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>Always. Safety comes first.</li>
+<li>When the topic is sensitive or emotional</li>
+<li>To prevent defensiveness before it starts</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>It sounds like a generic script</li>
+<li>You don't actually care (people will sense it)</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "We need to talk."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "I want to talk about this because I care about our working relationship."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">2</div>
+<div class="pattern-content">
+<div class="pattern-text">State the Observation (Not Judgment)</div>
+<div class="pattern-ipa">Core idea: "I've noticed [specific behavior/situation]..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Stating facts</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">State what you have observed, not what you think it means. Facts are debatable; judgments trigger defensiveness.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"I've been noticing that..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'ve been noticing that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"Over the last few weeks, I've seen..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Over the last few weeks, I\'ve seen...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"Over the past few weeks, I've observed..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Over the past few weeks, I\'ve observed...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"The data indicates that..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('The data indicates that...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After establishing safety</li>
+<li>When you need to address a specific behavior</li>
+<li>To keep the conversation objective</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You use words like "always", "never", "lazy", "careless"</li>
+<li>You are stating assumptions as facts</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "You're always late."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "I've noticed you've arrived after 9 AM three times this week."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">3</div>
+<div class="pattern-content">
+<div class="pattern-text">Name the Impact</div>
+<div class="pattern-ipa">Core idea: "...and the impact has been [specific consequence]."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Explaining the 'why'</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Connect the behavior to its real-world consequences. This shows why the conversation is necessary.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"...and it's been affecting..."</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('...and it\'s been affecting...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"...which has made it difficult for the team to..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('...which has made it difficult for the team to...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"...which has resulted in [specific impact on team/project]."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('...which has resulted in...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"...which has had a measurable effect on our quarterly objectives..."</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('...which has had a measurable effect on our quarterly objectives...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>Immediately after stating the observation</li>
+<li>To show the ripple effect of the behavior</li>
+<li>To create urgency without aggression</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You exaggerate the impact</li>
+<li>You make it about your personal feelings rather than objective consequences</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "It's a problem."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "It's caused the team to miss two deadlines and created frustration among colleagues."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">4</div>
+<div class="pattern-content">
+<div class="pattern-text">Invite Their Perspective</div>
+<div class="pattern-ipa">Core idea: "Help me understand what's happening from your side..."</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Creating dialogue</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Stop talking and start listening. Give them space to explain their side. There is always context you don't have.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"What's going on for you?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What\'s going on for you?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"I'd like to hear your side of this..."</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'d like to hear your side of this...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"I'd like to understand your perspective on this..."</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('I\'d like to understand your perspective on this...')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"Could you share your view on the factors contributing to this?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('Could you share your view on the factors contributing to this?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>After stating the impact</li>
+<li>When you need more information</li>
+<li>To show respect for their experience</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You ask "Why did you do that?" (Sounds accusatory)</li>
+<li>You interrupt their explanation</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "Why are you doing this?"</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "Help me understand what's been happening from your perspective."</div>
+</div>
+</div>
+
+<div class="pattern-card">
+<div class="pattern-header">
+<div class="pattern-number">5</div>
+<div class="pattern-content">
+<div class="pattern-text">Co-create the Solution</div>
+<div class="pattern-ipa">Core idea: "How can we solve this together?"</div>
+<div class="pattern-meta">
+<div class="pattern-rating">⭐⭐⭐⭐⭐ Very High</div>
+<div class="pattern-context">Moving forward</div>
+</div>
+</div>
+</div>
+<div class="pattern-desc">Don't impose a solution. Build it together. This creates ownership and commitment.</div>
+<div class="register-table">
+<h4>Register Progression 🔊</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div>
+<div class="register-phrase">"What can we do to fix this?"</div>
+<div class="register-context">Personal conversations</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What can we do to fix this?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div>
+<div class="register-phrase">"How can we make this work better?"</div>
+<div class="register-context">Team discussions</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('How can we make this work better?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div>
+<div class="register-phrase">"What would a good outcome look like for both of us?"</div>
+<div class="register-context">Colleagues, Managers</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What would a good outcome look like for both of us?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 More Formal</span></div>
+<div>
+<div class="register-phrase">"What collaborative steps can we take to ensure alignment moving forward?"</div>
+<div class="register-context">Senior leaders</div>
+</div>
+<button class="audio-btn-small" onclick="playAudio('What collaborative steps can we take to ensure alignment moving forward?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+<div class="usage-grid">
+<div class="usage-box when">
+<strong>💡 When to use:</strong>
+<ul>
+<li>At the end of the conversation</li>
+<li>When you want them to own the solution</li>
+<li>To turn conflict into collaboration</li>
+</ul>
+</div>
+<div class="usage-box avoid">
+<strong>❌ Avoid when:</strong>
+<ul>
+<li>You've already decided the solution and are just pretending to ask</li>
+<li>It's a compliance issue requiring a direct directive</li>
+</ul>
+</div>
+</div>
+<div class="compare-box">
+<h5>⚠️ Weak → Strong</h5>
+<div class="compare-level weak"><strong>❌ Weak:</strong> "You need to change."</div>
+<div class="compare-level strong"><strong>✅ Strong:</strong> "What support do you need, and what can you commit to?"</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+Common Mistakes
+</h2>
+<p class="section-desc">3 common mistakes when having difficult conversations. Avoid these to keep the conversation productive.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: The "Sandwich Feedback" trap</h4>
+<div class="mistake-wrong">❌ "You're great! But you need to improve! Keep up the good work!" (Sounds fake, people know you're avoiding the real issue).</div>
+<div class="mistake-right">✅ "I want to talk about [specific issue] because I value our relationship. Here's what I've observed..." (Direct but respectful).</div>
+<div class="mistake-why">Sandwich feedback trains people to distrust your compliments. Direct, respectful conversation builds real trust.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Waiting too long</h4>
+<div class="mistake-wrong">❌ Avoiding the issue for 3 months then exploding in anger.</div>
+<div class="mistake-right">✅ Address the issue within 48 hours of observing it. (Gentle, specific, timely).</div>
+<div class="mistake-why">The longer you wait, the more emotional charge builds up. Early conversations are easier than late explosions.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Making it about character, not behavior</h4>
+<div class="mistake-wrong">❌ "You're lazy." / "You're irresponsible." (Attacking the person).</div>
+<div class="mistake-right">✅ "You've missed three deadlines this month." (Stating specific behavior).</div>
+<div class="mistake-why">Character attacks trigger defensiveness. Behavior observations invite reflection.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+The Courage Decoder (Signature Section)
+</h2>
+<p class="section-desc">Avoidance Language (B2) vs Courageous Language (C1) vs Masterful Language (C1+). Learn to shift your vocabulary.</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 The Courage Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>Level</th><th>What it looks like</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Avoidance (B2)</strong></td><td>Vague, indirect, or silent</td><td>"We should talk sometime." / (Saying nothing)</td></tr>
+<tr><td><strong>Courageous (C1)</strong></td><td>Direct, respectful, specific</td><td>"I want to talk about this because I care. I've noticed..."</td></tr>
+<tr><td><strong>Masterful (C1+)</strong></td><td>Direct + empathetic + co-creative</td><td>"Help me understand your side. How can we solve this together?"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; font-weight: 700; color: var(--primary-deep); margin: 16px 0 10px 0;">Common Avoidance Phrases vs Courageous Alternatives:</p>
+<table class="decoder-table">
+<thead>
+<tr><th>Avoidance (B2)</th><th>Courageous (C1)</th></tr>
+</thead>
+<tbody>
+<tr><td>"We should talk sometime."</td><td>"Can we talk about this today?"</td></tr>
+<tr><td>"It's fine."</td><td>"It's not fine, and I want to address it."</td></tr>
+<tr><td>"You know what you did."</td><td>"I've noticed [specific behavior]."</td></tr>
+<tr><td>"I don't want to hurt your feelings."</td><td>"I care about you, which is why I need to be honest."</td></tr>
+<tr><td>"Let's just move on."</td><td>"We can't move on until we address this."</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Notice when you are using avoidance language. 2. Pause. 3. Shift to courageous language. 4. Watch the trust in the room increase.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-left-right"></i>
+Casual ↔ Professional Comparison
+</h2>
+<p class="section-desc">Same moves, different registers. Match the register to the context.</p>
+</div>
+<div class="decoder-card" style="border-left-color: var(--highlight-blue);">
+<h3>🔄 Register Comparison</h3>
+<table class="comparison-table">
+<thead>
+<tr><th>Situation</th><th>🏠 Casual (Life/Family)</th><th>💼 Professional (Business)</th></tr>
+</thead>
+<tbody>
+<tr><td>Open with Safety</td><td>"I'm bringing this up because you matter to me..."</td><td>"I want to have this conversation because I value your contribution..."</td></tr>
+<tr><td>State Observation</td><td>"I've been noticing that..."</td><td>"Over the past few weeks, I've observed..."</td></tr>
+<tr><td>Name Impact</td><td>"...and it's been affecting..."</td><td>"...which has resulted in [specific impact]."</td></tr>
+<tr><td>Invite Perspective</td><td>"What's going on for you?"</td><td>"I'd like to understand your perspective on this..."</td></tr>
+<tr><td>Co-create Solution</td><td>"What can we do to fix this?"</td><td>"What would a good outcome look like for both of us?"</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 Tip:</strong> Casual uses emotional, relational language. Professional uses structured, impact-focused language. Match the register to the context.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: The Email That Avoided the Conversation
+</h2>
+<p class="section-desc">Read this email from a manager. Pause and analyze what's missing before reading the model answer.</p>
+</div>
+<div class="reading-card">
+<h3>📧 The Avoidance Email</h3>
+<div class="email-box">
+<strong>Subject:</strong> Quick check-in<br><br>
+Hi Alex,<br><br>
+Hope you're doing well! Just wanted to check in and see how things are going. Let me know if there's anything I can help with.<br><br>
+Best,<br>
+Sarah
+</div>
+<div class="reading-questions">
+<h4>🤔 Your Turn: Pause and Analyze</h4>
+<p style="margin-bottom: 10px;">Context: Alex has missed 3 deadlines in the past month, but Sarah is afraid to address it directly.</p>
+<p style="font-size: 13px; color: var(--text-secondary); margin-left: 20px; margin-bottom: 10px;">1. What's wrong with Sarah's email?<br>2. How would a C1 leader write this email?</p>
+<p style="margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue-deep); margin-bottom: 10px;">✅ Model Answer:</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">1. <strong>What's wrong:</strong> Sarah's email is pure avoidance. She's pretending everything is fine when it's not. This doesn't help Alex, doesn't help the team, and makes the problem worse. It's "keeping the peace" at the cost of real performance.<br>2. <strong>C1 Rewrite:</strong> "Hi Alex, I'd like to schedule 30 minutes to talk today. I want to have this conversation because I value your contribution to this team. Over the past month, I've noticed three missed deadlines, which has impacted our project timeline and created frustration among colleagues. I'd like to understand what's been happening from your perspective and figure out how we can solve this together. Let me know what time works for you."</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Avoidance to Courage
+</h2>
+<p class="section-desc">Rewrite these avoidance phrases into courageous conversations. Explain WHY your version is better.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Avoidance → Courage</h3>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Avoidance (Business): "We should talk sometime about your performance."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"Let's discuss your work soon."</div>
+<div class="rewrite-level better"><strong>Better</strong>"Can we meet this week to talk about your recent projects?"</div>
+<div class="rewrite-level professional"><strong>Courageous</strong>"Can we talk today about the three missed deadlines this month? I want to understand what's happening and figure out how we can fix this together."</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The courageous version is specific (three deadlines), timely (today), and collaborative (figure out together). The avoidance version is vague ("sometime"), indirect ("about your performance"), and leaves the person anxious.</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Avoidance (Life): "I don't want to fight, so let's just drop it."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Weak</strong>"Let's not argue about this."</div>
+<div class="rewrite-level better"><strong>Better</strong>"I don't want to fight, but we need to talk about it."</div>
+<div class="rewrite-level professional"><strong>Courageous</strong>"I don't want to fight either, but we can't drop this. I care about us, which is why I need to talk about what happened. Can we find a time to discuss it calmly?"</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The courageous version honors the relationship ("I care about us"), commits to the conversation ("we can't drop this"), and sets a respectful tone ("calmly"). The avoidance version sacrifices truth for false peace.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues
+</h2>
+<p class="section-desc">See how C1 leaders handle difficult conversations in real life. Notice the balance of honesty and empathy.</p>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 1: Addressing a Friend's Hurtful Behavior (Life)</h3>
+<div class="story-context">Context: Your close friend has repeatedly canceled plans at the last minute. You need to address this behavior without losing the friendship.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('life')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="life-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Hey, can we talk? <strong>I'm bringing this up because our friendship matters to me.</strong>" <span class="move-highlight safety">Open Safety</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Friend:</div>
+<div class="dialogue-text">"Sure, what's up?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I've noticed</strong> that in the last month, you've canceled our plans three times at the last minute." <span class="move-highlight observation">Observation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Friend:</div>
+<div class="dialogue-text">"Oh, yeah. I've been really busy."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>And the impact has been</strong> that I've started to feel like our friendship isn't a priority. I've been hesitant to make plans because I expect you to cancel." <span class="move-highlight impact">Name Impact</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Friend:</div>
+<div class="dialogue-text">"I didn't realize it affected you that way. I'm sorry."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Help me understand what's been happening</strong> on your end. Is there something going on that I don't know about?" <span class="move-highlight perspective">Invite Perspective</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Friend:</div>
+<div class="dialogue-text">"Honestly, I've been overwhelmed with work and family stuff. I feel bad every time I cancel."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thank you for sharing that. <strong>How can we solve this together?</strong> What would work better for both of us?" <span class="move-highlight solution">Co-create Solution</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Friend:</div>
+<div class="dialogue-text">"Maybe we could plan less frequently, but make it a firm commitment?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That sounds good. What if we meet once a month instead of every two weeks, and we both commit to protecting that time?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Friend:</div>
+<div class="dialogue-text">"I'd like that. Thanks for talking to me about this."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thanks for being open. I'm glad we could fix this."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Courageous Conversation:</h4>
+<ul>
+<li><strong>Open Safety:</strong> "I'm bringing this up because our friendship matters to me."</li>
+<li><strong>Observation:</strong> "I've noticed that in the last month..."</li>
+<li><strong>Name Impact:</strong> "And the impact has been that I've started to feel..."</li>
+<li><strong>Invite Perspective:</strong> "Help me understand what's been happening..."</li>
+<li><strong>Co-create Solution:</strong> "How can we solve this together?"</li>
+<li><strong>Register:</strong> Casual throughout (friends)</li>
+<li><strong>12 turns</strong> natural flow, all 5 moves used naturally</li>
+<li><strong>Key insight:</strong> The conversation moved from defensiveness to collaboration because safety was established first.</li>
+</ul>
+</div>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 2: Addressing an Underperforming Team Member (Business)</h3>
+<div class="story-context">Context: A formerly high-performing employee has missed deadlines and produced lower quality work for 2 months. You need to address this directly.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('business')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="business-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Alex, thanks for meeting with me. <strong>I want to have this conversation because I value your contribution to this team.</strong>" <span class="move-highlight safety">Open Safety</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"Sure, what's on your mind?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>Over the past two months, I've observed</strong> that you've missed four deadlines, and the last two deliverables had significant errors." <span class="move-highlight observation">Observation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"I know. I've been struggling."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>The impact has been</strong> that the team has had to redo work, which has created frustration and delayed our project timeline." <span class="move-highlight impact">Name Impact</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"I feel terrible about it."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"<strong>I'd like to understand your perspective.</strong> What's been happening for you these past two months?" <span class="move-highlight perspective">Invite Perspective</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"Honestly, I've been dealing with some personal issues, and I haven't been able to focus."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thank you for being honest. <strong>What would a good outcome look like for both of us?</strong> What support do you need, and what can you commit to?" <span class="move-highlight solution">Co-create Solution</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"I think I need to take a week off to handle things. When I come back, I can commit to daily check-ins for a month."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That sounds reasonable. Let's approve your time off, and when you return, we'll do daily 15-minute check-ins. How does that feel?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"That feels manageable. Thank you for understanding."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thank you for being open. I believe in you, and I know you'll get back on track."</div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Courageous Conversation:</h4>
+<ul>
+<li><strong>Open Safety:</strong> "I want to have this conversation because I value your contribution..."</li>
+<li><strong>Observation:</strong> "Over the past two months, I've observed..."</li>
+<li><strong>Name Impact:</strong> "The impact has been that the team has had to redo work..."</li>
+<li><strong>Invite Perspective:</strong> "I'd like to understand your perspective..."</li>
+<li><strong>Co-create Solution:</strong> "What would a good outcome look like for both of us?"</li>
+<li><strong>Register:</strong> Professional (manager-employee)</li>
+<li><strong>13 turns</strong> natural flow, all 5 moves used naturally</li>
+<li><strong>Key insight:</strong> The leader didn't jump to conclusions. By inviting perspective, they discovered the root cause (personal issues) and co-created a supportive solution.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Task
+</h2>
+<p class="section-desc">Listen to Dialogue 2 again. Answer these outcome-based questions.</p>
+</div>
+<div class="listening-card">
+<h3>🎧 Listening Comprehension</h3>
+<div class="listening-question">
+<p>1. Which sentence made Alex feel safe enough to share his personal issues?</p>
+<div class="listening-answer">✅ "I want to have this conversation because I value your contribution to this team." (It established positive intent before addressing the problem).</div>
+</div>
+<div class="listening-question">
+<p>2. Why did the leader say "I've observed" instead of "You've been slacking"?</p>
+<div class="listening-answer">✅ "I've observed" states a fact without judgment. "You've been slacking" attacks character and triggers immediate defensiveness.</div>
+</div>
+<div class="listening-question">
+<p>3. What changed the conversation from "problem" to "solution"?</p>
+<div class="listening-answer">✅ The leader asked "What would a good outcome look like for both of us?" This shifted Alex from feeling defensive to feeling like a partner in solving the problem.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-code"></i>
+Grammar in Context
+</h2>
+<p class="section-desc">Why we use these specific structures when having difficult conversations.</p>
+</div>
+<div class="grammar-card">
+<h3>📝 Grammar for Courage</h3>
+<div class="grammar-item">
+<strong>1. Present Perfect for Observation ("I've noticed...")</strong>
+<span>We use "I've noticed..." or "I've observed..." to create distance from judgment. It focuses on the pattern of behavior over time, not a single attack.</span>
+</div>
+<div class="grammar-item">
+<strong>2. Indirect Questions for Safety ("Could you help me understand...")</strong>
+<span>We use "Could you help me understand..." or "Would you be willing to share..." to create psychological safety. It sounds like an invitation, not an interrogation.</span>
+</div>
+<div class="grammar-item">
+<strong>3. Conditional for Co-creation ("What if we...")</strong>
+<span>We use "What if we..." or "How would it work if..." to invite collaboration. It opens up possibilities instead of imposing a single solution.</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">Difficult conversation phrases pronunciation and intonation patterns.</p>
+</div>
+<div class="pronunciation-table">
+<h3>🔤 Courage Phrases</h3>
+<table>
+<thead>
+<tr><th>Phrase</th><th>IPA</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>I want to talk about this</td><td class="ipa-cell">/aɪ wɒnt tuː tɔːk əˈbaʊt ɪs/</td><td>Stress on "want" and "talk"</td></tr>
+<tr><td>I've noticed that</td><td class="ipa-cell">/aɪv ˈnoʊtɪst æt/</td><td>Smooth "I've noticed"</td></tr>
+<tr><td>The impact has been</td><td class="ipa-cell">/ði ˈɪmpækt hæz bɪn/</td><td>Stress on "impact"</td></tr>
+<tr><td>Help me understand</td><td class="ipa-cell">/hɛlp miː ʌndərˈstænd/</td><td>Rising intonation (invitation)</td></tr>
+<tr><td>How can we solve this</td><td class="ipa-cell">/haʊ kæn wiː sɒlv ðɪs/</td><td>Stress on "solve"</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section-header" style="margin-top: 24px;">
+<h3 style="font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary);">🎵 Intonation Patterns — When & Why</h3>
+</div>
+<div class="intonation-item">
+<span class="phrase">"I want to talk about this because..."</span>
+<span class="pattern-label">↘ Falling with warmth</span>
+<span class="context-tip"><strong>Context:</strong> Used when opening with safety. Falling tone = sincere, grounded. Add warmth to your voice. <strong>Avoid:</strong> Flat or aggressive (sounds like a warning).</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"I've noticed that..."</span>
+<span class="pattern-label">↘ Falling, neutral</span>
+<span class="context-tip"><strong>Context:</strong> Used when stating observation. Falling tone = factual, objective. <strong>Avoid:</strong> Rising (sounds like you're accusing) or angry tone.</span>
+</div>
+<div class="intonation-item">
+<span class="phrase">"Help me understand..."</span>
+<span class="pattern-label">↗ Rising</span>
+<span class="context-tip"><strong>Context:</strong> Used when inviting perspective. Rising tone = genuine curiosity, open invitation. <strong>Avoid:</strong> Falling (sounds like a demand for explanation).</span>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice leading difficult conversations in different contexts. Focus on the communication goal, not just using moves.</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Addressing a Family Member's Hurtful Comment</h3>
+<p class="scenario-context">A family member just said something hurtful at dinner. You need to address it without creating a huge conflict.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Open with safety + State observation + Invite perspective.
+<strong>📖 Possible Response:</strong> "I want to talk about what happened at dinner because our relationship matters to me. I noticed you made a comment about my career in front of everyone, and it made me feel dismissed. Help me understand what you were trying to say?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Establish safety first</li>
+<li>State the specific behavior</li>
+<li>Name the emotional impact</li>
+<li>Invite their perspective</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Addressing a Colleague's Toxic Behavior</h3>
+<p class="scenario-context">A colleague keeps talking behind people's backs and creating a toxic environment. You need to address this behavior.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> State observation + Name impact + Co-create solution.
+<strong>📖 Possible Response:</strong> "I want to have this conversation because I value our team culture. Over the past few weeks, I've observed you discussing team members' mistakes with others instead of directly with them. The impact has been that trust is eroding. What would a good outcome look like for both of us?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>State the specific toxic behavior</li>
+<li>Connect it to the team's trust</li>
+<li>Co-create a solution for communication</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Delivering Bad News to a Client</h3>
+<p class="scenario-context">Your client's project will be delayed by 2 weeks due to technical issues. You need to inform them without losing trust.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Open with safety + State observation + Co-create solution.
+<strong>📖 Possible Response:</strong> "I want to be transparent with you about the project timeline because I value our partnership. We've encountered a technical issue that will require two additional weeks of testing. The impact is a later launch date, but the benefit is a much more stable product. How can we adjust the rollout plan together?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Open with transparency and partnership</li>
+<li>State the facts clearly</li>
+<li>Name the impact and the silver lining</li>
+<li>Co-create the adjusted plan</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Double Difficult Conversation Challenge</h3>
+<p class="scenario-context">Morning: Address your child about phone addiction (Casual). Afternoon: Address an employee about underperformance (Professional).</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Shift register. Life = emotional safety. Business = professional accountability.
+<strong>📖 Possible Response (Life):</strong> "I'm bringing this up because I care about your well-being. I've noticed you've been on your phone for 6 hours a day, and it's affecting your sleep and mood. Help me understand what's going on. How can we solve this together?"
+<strong>📖 Possible Response (Business):</strong> "I want to have this conversation because I value your contribution. Over the past month, I've observed three missed deadlines, which has impacted the team. I'd like to understand your perspective. What support do you need, and what can you commit to?"
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Life = emotional safety, well-being. Business = professional accountability, impact.</li>
+<li>Use all 5 moves in both</li>
+<li>Make it specific and sincere in both</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task - Choose Your Level</h2>
+<p class="section-desc">Real-world practice. Apply courageous conversations to actual situations this week.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 Courage Email Practice</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Write 1 email courageously addressing an issue you've been avoiding. Use all 5 moves.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Open with safety</li>
+<li>State observation</li>
+<li>Name impact</li>
+<li>Write down the flow</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written email</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎙️ Record 2 Courage Conversations</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Record 2 short speeches (2 min) about difficult conversations. 1 for family, 1 for work.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>1 Life scenario (casual register)</li>
+<li>1 Business scenario (professional register)</li>
+<li>Use the 5 moves naturally</li>
+<li>Focus on honesty and empathy</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> 2 audio recordings</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3>🎥 The Real Courage Challenge</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, have at least 1 difficult conversation you've been avoiding. Note the result.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Have the conversation using the 5 moves</li>
+<li>Map which moves you used at each stage</li>
+<li>Did the relationship improve? Note their reaction</li>
+<li>Reflect on what worked/didn't work</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="mastery-card">
+<h2>🎯 Difficult Conversations Mastery</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">People feel safe enough to be honest</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">Problems are addressed at the root, not the surface</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">Trust deepens after the conversation, not diminishes</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">Solutions are co-created, not imposed</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">Relationships become stronger, not weaker</label>
+</div>
+</div>
+
+<div class="success-card">
+<h2><i class="ph-duotone ph-check-circle"></i> Communication Outcomes</h2>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You open with safety before addressing the problem</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You state observations, not judgments</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You name the specific impact</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You invite their perspective genuinely</span>
+</div>
+<div class="success-item">
+<i class="ph-duotone ph-check"></i>
+<span>You co-create the solution together</span>
+</div>
+</div>
+
+<div class="tips-card">
+<h2><i class="ph-duotone ph-lightbulb"></i> Pro Tips</h2>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Open with safety:</strong> "I want to talk about this because I care..." before "We need to talk."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>State observation:</strong> "I've noticed..." before "You always..."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Name impact:</strong> "The impact has been..." before "It's a problem."</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Invite perspective:</strong> "Help me understand..." before "Why did you do that?"</span>
+</div>
+<div class="tip-item">
+<i class="ph-duotone ph-lightbulb"></i>
+<span><strong>Co-create solution:</strong> "How can we solve this together?" before "You need to change."</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review
+</h2>
+<p class="section-desc">5 flashcards with difficult conversation moves. Front: situation. Back: best move.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Stage: Starting a difficult conversation</p>
+<button>Tap to reveal best move →</button>
+</div>
+<div class="flashcard-back">
+<p><strong>Move 1: Open with Safety</strong><br><br>"I want to talk about this because I care about our relationship..."</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> Always establish positive intent before addressing the problem. Safety first.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Difficult Conversations
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Judgement) You need to address a team member's poor performance. Best opening?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We need to talk about your performance."</div>
+<div class="quiz-option">B. "I want to have this conversation because I value your contribution to this team."</div>
+<div class="quiz-option">C. "You've been underperforming lately."</div>
+<div class="quiz-option">D. "Can we chat sometime?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Judgement) A colleague is always late to meetings. Best way to state the observation?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "You're always late."</div>
+<div class="quiz-option">B. "You don't respect our time."</div>
+<div class="quiz-option">C. "I've noticed you've arrived 10 minutes late to the last three meetings."</div>
+<div class="quiz-option">D. "You need to be more professional."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) After stating the impact, what's the best next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Tell them exactly what to do.</div>
+<div class="quiz-option">B. "Help me understand what's been happening from your perspective."</div>
+<div class="quiz-option">C. "Why are you doing this?"</div>
+<div class="quiz-option">D. "You need to fix this immediately."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) Which response shows "Masterful (C1+)" communication?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We should talk sometime."</div>
+<div class="quiz-option">B. "I want to talk about this because I care. I've noticed..."</div>
+<div class="quiz-option">C. "Help me understand your side. How can we solve this together?"</div>
+<div class="quiz-option">D. "You need to change your behavior."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Judgement) A friend keeps canceling plans. Best way to name the impact?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "You're a bad friend."</div>
+<div class="quiz-option">B. "It's really annoying."</div>
+<div class="quiz-option">C. "The impact has been that I've started to feel like our friendship isn't a priority."</div>
+<div class="quiz-option">D. "I don't want to hang out anymore."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Life) Your teenager is spending too much time on their phone. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Give me that phone right now."</div>
+<div class="quiz-option">B. "I'm bringing this up because I care about your well-being. I've noticed..."</div>
+<div class="quiz-option">C. "You're addicted to that thing."</div>
+<div class="quiz-option">D. "I don't want to fight, so let's drop it."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Business) An employee missed a major deadline. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "This is unacceptable."</div>
+<div class="quiz-option">B. "I want to understand your perspective. What support do you need, and what can you commit to?"</div>
+<div class="quiz-option">C. "You're fired."</div>
+<div class="quiz-option">D. "It's fine, don't worry about it."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Judgement) Which phrase is an example of "Avoidance (B2)"?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I've noticed..."</div>
+<div class="quiz-option">B. "The impact has been..."</div>
+<div class="quiz-option">C. "We should talk sometime."</div>
+<div class="quiz-option">D. "How can we solve this together?"</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Judgement) Which phrase shows "Co-creating the Solution"?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "You need to change."</div>
+<div class="quiz-option">B. "I've decided what we're going to do."</div>
+<div class="quiz-option">C. "What would a good outcome look like for both of us?"</div>
+<div class="quiz-option">D. "Just do what I say."</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-07-day-46.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 46: Recognition & Appreciation</div>
+</a>
+<a href="week-07-day-48.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 48: Difficult Decisions</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 47 Complete & Continue to Day 48</span>
+</button>
+<div class="complete-message">B2 leaders avoid difficult conversations to keep the peace. C1 leaders have difficult conversations to build real peace. 🛡️</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 7 · Day 47 · Difficult Conversations</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'life') {
+const lifeText = `You: Hey, can we talk? I'm bringing this up because our friendship matters to me. Friend: Sure, what's up? You: I've noticed that in the last month, you've canceled our plans three times at the last minute. Friend: Oh, yeah. I've been really busy. You: And the impact has been that I've started to feel like our friendship isn't a priority. I've been hesitant to make plans because I expect you to cancel. Friend: I didn't realize it affected you that way. I'm sorry. You: Help me understand what's been happening on your end. Is there something going on that I don't know about? Friend: Honestly, I've been overwhelmed with work and family stuff. I feel bad every time I cancel. You: Thank you for sharing that. How can we solve this together? What would work better for both of us? Friend: Maybe we could plan less frequently, but make it a firm commitment? You: That sounds good. What if we meet once a month instead of every two weeks, and we both commit to protecting that time? Friend: I'd like that. Thanks for talking to me about this. You: Thanks for being open. I'm glad we could fix this.`;
+playAudio(lifeText);
+} else if (type === 'business') {
+const businessText = `You: Alex, thanks for meeting with me. I want to have this conversation because I value your contribution to this team. Alex: Sure, what's on your mind? You: Over the past two months, I've observed that you've missed four deadlines, and the last two deliverables had significant errors. Alex: I know. I've been struggling. You: The impact has been that the team has had to redo work, which has created frustration and delayed our project timeline. Alex: I feel terrible about it. You: I'd like to understand your perspective. What's been happening for you these past two months? Alex: Honestly, I've been dealing with some personal issues, and I haven't been able to focus. You: Thank you for being honest. What would a good outcome look like for both of us? What support do you need, and what can you commit to? Alex: I think I need to take a week off to handle things. When I come back, I can commit to daily check-ins for a month. You: That sounds reasonable. Let's approve your time off, and when you return, we'll do daily 15-minute check-ins. How does that feel? Alex: That feels manageable. Thank you for understanding. You: Thank you for being open. I believe in you, and I know you'll get back on track.`;
+playAudio(businessText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-47')) {
+completed.push('day-47');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 47 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'B2 leaders avoid difficult conversations to keep the peace. C1 leaders have difficult conversations to build real peace. 🛡️';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-47')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 47 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
