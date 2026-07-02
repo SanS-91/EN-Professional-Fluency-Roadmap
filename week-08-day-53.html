@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 8 Day 53: Conflict Resolution | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #BE185D;
+--primary-bright: #9D174D;
+--primary-soft: #FCE7F3;
+--primary-deep: #831843;
+--primary-light: #EC4899;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.5;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* Navigation & Header */
+.top-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(30px); padding: 12px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06); position: sticky; top: 0; z-index: 100; }
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator { font-size: 13px; color: var(--text-muted); font-weight: 500; display: flex; align-items: center; gap: 10px; }
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 7%; }
+
+.day-tabs-container { background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0, 0, 0, 0.06); position: sticky; top: 57px; z-index: 99; padding: 12px 0; }
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab { padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 20px; text-decoration: none; color: var(--text-secondary); font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease; }
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; box-shadow: 0 4px 12px rgba(190, 24, 93, 0.3); }
+
+.day-header { background: linear-gradient(135deg, #FFF1F2 0%, #FCE7F3 50%, #FBCFE8 100%); padding: 48px 0 40px; position: relative; }
+.day-header::after { content: '⚖️'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.5; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag { background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 500; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+/* Content Layout */
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.5; }
+
+/* Cards & Boxes */
+.c1-insight { background: linear-gradient(135deg, rgba(252, 231, 243, 0.6), rgba(251, 207, 232, 0.25)); border-radius: var(--radius-md); padding: 24px 28px; margin-bottom: 28px; border-left: 4px solid var(--primary); }
+.c1-insight .label { font-size: 10px; font-weight: 700; color: var(--primary-deep); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+.c1-insight .insight { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 500; color: var(--primary-deep); line-height: 1.5; }
+
+.philosophy-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); border: 1px solid rgba(190, 24, 93, 0.2); }
+.philosophy-box { background: #FFF1F2; border-radius: var(--radius-md); padding: 20px; border-left: 4px solid var(--highlight-gold); margin-bottom: 20px; }
+.philosophy-title { font-weight: 600; color: var(--text-primary); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 16px; text-align: center; border: 1px solid rgba(0, 0, 0, 0.06); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time { font-size: 11px; color: var(--primary-bright); font-weight: 600; margin-bottom: 4px; background: rgba(252, 231, 243, 0.5); padding: 2px 8px; border-radius: 10px; display: inline-block; }
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+/* Loop & Lenses */
+.loop-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; border-left: 4px solid var(--primary); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); margin-bottom: 24px; }
+.loop-step { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+.loop-step:last-child { margin-bottom: 0; }
+.loop-number { flex-shrink: 0; width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: 'Fraunces', serif; font-size: 16px; }
+.loop-content h4 { font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary); margin-bottom: 4px; }
+.loop-content p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+.lens-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 28px; margin-bottom: 24px; border-left: 4px solid var(--primary); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.lens-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; }
+.lens-number { flex-shrink: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: 'Fraunces', serif; font-size: 18px; }
+.lens-content { flex: 1; }
+.lens-title { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.lens-question { font-size: 14px; color: var(--primary-deep); font-style: italic; margin-bottom: 16px; }
+.lens-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.lens-rating { font-size: 12px; color: var(--primary-bright); font-weight: 600; }
+.lens-context { font-size: 12px; color: var(--text-muted); background: rgba(252, 231, 243, 0.5); padding: 4px 10px; border-radius: 12px; }
+
+.lens-subsection { margin-bottom: 16px; }
+.lens-subsection h4 { font-family: 'Fraunces', serif; font-size: 1rem; color: var(--text-primary); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.lens-subsection h4 i { --ph-color: var(--primary-bright); }
+.lens-subsection p, .lens-subsection ul { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+.lens-subsection ul { list-style: none; padding-left: 0; }
+.lens-subsection li { padding: 4px 0; padding-left: 20px; position: relative; }
+.lens-subsection li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.register-table { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 16px; }
+.register-table h4 { font-family: 'Fraunces', serif; font-size: 0.95rem; margin-bottom: 12px; color: var(--text-primary); display: flex; align-items: center; gap: 8px; }
+.register-row { display: grid; grid-template-columns: 100px 1fr; gap: 12px; padding: 10px 12px; background: rgba(255, 255, 255, 0.9); border-radius: var(--radius-sm); margin-bottom: 8px; align-items: center; }
+.register-row:last-child { margin-bottom: 0; }
+.register-tag { font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 8px; text-align: center; }
+.register-tag.casual { background: var(--green-soft); color: var(--green-deep); }
+.register-tag.neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.register-tag.professional { background: var(--primary-soft); color: var(--primary-deep); }
+.register-tag.formal { background: var(--orange-soft); color: var(--orange-deep); }
+.register-phrase { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+.audio-btn-small { width: 28px; height: 28px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; border-radius: 50%; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; flex-shrink: 0; margin-left: 8px; }
+.audio-btn-small:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(190, 24, 93, 0.3); }
+.audio-btn-small i { --ph-color: white; font-size: 14px; }
+
+.tradeoff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.tradeoff-box { padding: 12px; border-radius: var(--radius-sm); font-size: 13px; }
+.tradeoff-box.gain { background: rgba(16, 185, 129, 0.05); border-left: 3px solid var(--highlight-green); }
+.tradeoff-box.lose { background: rgba(245, 101, 101, 0.05); border-left: 3px solid #F56565; }
+.tradeoff-box strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.tradeoff-box.gain strong { color: var(--green-deep); }
+.tradeoff-box.lose strong { color: #C53030; }
+
+.reflection-box { background: rgba(190, 24, 93, 0.05); padding: 16px; border-radius: var(--radius-sm); border-left: 3px solid var(--primary); font-style: italic; color: var(--primary-deep); font-size: 14px; }
+
+/* Integration Framework */
+.integration-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 28px; margin-bottom: 24px; border-left: 4px solid var(--highlight-purple); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.integration-step { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(124, 58, 237, 0.1); }
+.integration-step:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.integration-step h4 { font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--text-primary); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.integration-step p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+/* Mistakes & Decoder */
+.mistakes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 20px; }
+.mistake-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; border-left: 4px solid var(--highlight-orange); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
+.mistake-card h4 { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.mistake-wrong { background: rgba(245, 101, 101, 0.08); padding: 10px; border-radius: var(--radius-sm); margin-bottom: 8px; font-size: 13px; color: #C53030; border-left: 3px solid #F56565; }
+.mistake-right { background: rgba(16, 185, 129, 0.08); padding: 10px; border-radius: var(--radius-sm); margin-bottom: 8px; font-size: 13px; color: var(--green-deep); border-left: 3px solid var(--highlight-green); }
+.mistake-why { font-size: 12px; color: var(--text-secondary); font-style: italic; }
+
+.decoder-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--highlight-purple); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.decoder-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.table-container { overflow-x: auto; border-radius: var(--radius-sm); border: 1px solid rgba(0, 0, 0, 0.06); }
+.decoder-table { width: 100%; border-collapse: collapse; min-width: 900px; }
+.decoder-table th { background: rgba(252, 231, 243, 0.5); padding: 12px; text-align: left; font-size: 11px; font-weight: 700; color: var(--primary-deep); border-bottom: 2px solid rgba(190, 24, 93, 0.2); }
+.decoder-table td { padding: 10px; border-bottom: 1px solid rgba(0, 0, 0, 0.06); font-size: 12px; color: var(--text-secondary); vertical-align: top; line-height: 1.4; }
+.decoder-table td:first-child { font-weight: 600; color: var(--text-primary); min-width: 110px; }
+
+/* Reading & Executive Breakdown (Grid Layout) */
+.reading-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--highlight-blue); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.reading-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.scenario-box { background: #F8FAFC; border: 1px solid rgba(0, 0, 0, 0.06); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 16px; font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+.executive-breakdown { background: rgba(124, 58, 237, 0.05); border-radius: var(--radius-md); padding: 20px; margin: 20px 0; border-left: 4px solid var(--highlight-purple); }
+.executive-breakdown h4 { font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--purple-deep); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+
+.breakdown-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.breakdown-item { background: rgba(255, 255, 255, 0.8); padding: 16px; border-radius: var(--radius-sm); border-left: 3px solid var(--highlight-purple); box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.breakdown-item .sentence { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; font-style: italic; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 8px; }
+.breakdown-item .analysis { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.breakdown-item .analysis strong { color: var(--purple-deep); display: block; margin-top: 8px; margin-bottom: 2px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.if-change-box { background: rgba(217, 119, 6, 0.08); padding: 16px; border-radius: var(--radius-sm); margin: 16px 0; border-left: 3px solid var(--highlight-gold); }
+.if-change-box h4 { font-family: 'Fraunces', serif; font-size: 1rem; color: var(--highlight-gold); margin-bottom: 12px; }
+.if-change-box .change { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 8px; }
+.if-change-box .change strong { color: var(--primary-deep); }
+
+/* Micro Writing */
+.micro-writing-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--highlight-green); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.micro-writing-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.rewrite-item { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-task { font-size: 13px; color: #C53030; font-weight: 600; margin-bottom: 8px; }
+
+.sentence-function-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.sentence-function { background: rgba(59, 130, 246, 0.05); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid var(--highlight-blue); }
+.sentence-function .sentence { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.sentence-function .function { font-size: 12px; color: var(--blue-deep); font-weight: 600; }
+
+.before-after-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.before-after { padding: 12px; border-radius: var(--radius-sm); }
+.before-after.normal { background: rgba(245, 101, 101, 0.05); border-left: 3px solid #F56565; }
+.before-after.executive { background: rgba(16, 185, 129, 0.05); border-left: 3px solid var(--highlight-green); }
+.before-after .label { font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+.before-after.normal .label { color: #C53030; }
+.before-after.executive .label { color: var(--green-deep); }
+.before-after .text { font-size: 13px; color: var(--text-secondary); font-style: italic; margin-bottom: 4px; }
+.before-after .explanation { font-size: 12px; color: var(--text-muted); }
+
+/* Vocab */
+.vocab-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--highlight-purple); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.vocab-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.vocab-item { padding: 12px; background: rgba(243, 232, 255, 0.3); border-radius: var(--radius-sm); border-left: 3px solid var(--highlight-purple); }
+.vocab-item strong { display: block; font-size: 13px; color: var(--purple-deep); margin-bottom: 4px; }
+.vocab-item .ipa { font-size: 11px; color: var(--highlight-green); font-family: 'SF Mono', monospace; font-style: italic; }
+.vocab-item .pos { font-size: 11px; color: var(--text-muted); font-style: italic; }
+.vocab-item .meaning { font-size: 12px; color: var(--text-secondary); margin: 4px 0; }
+.vocab-item .example { font-size: 12px; color: var(--text-secondary); font-style: italic; }
+
+/* Dialogues */
+.story-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--primary); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.story-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; margin-bottom: 8px; color: var(--text-primary); display: flex; align-items: center; gap: 10px; }
+.story-context { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; font-style: italic; padding: 10px 14px; background: rgba(252, 231, 243, 0.3); border-radius: var(--radius-sm); }
+.story-dialogue { background: rgba(252, 231, 243, 0.2); padding: 18px; border-radius: var(--radius-sm); margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.dialogue-turn { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(190, 24, 93, 0.1); }
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker { font-size: 12px; font-weight: 700; color: var(--primary-deep); margin-bottom: 4px; }
+.dialogue-text { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 700; margin-left: 8px; color: white; }
+.move-highlight.presence { background: var(--highlight-blue); }
+.move-highlight.negotiation { background: var(--highlight-purple); }
+.move-highlight.leadership { background: var(--highlight-green); }
+.story-audio-controls { display: flex; gap: 10px; margin-bottom: 14px; }
+.story-audio-btn { padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; border: none; transition: all 0.3s ease; }
+.story-play-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; }
+.story-play-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(190, 24, 93, 0.3); }
+.story-stop-btn { background: rgba(245, 101, 101, 0.1); color: #DC2626; border: 1px solid rgba(220, 38, 38, 0.2); }
+.story-stop-btn:hover { background: rgba(245, 101, 101, 0.2); }
+.story-analysis { background: rgba(252, 231, 243, 0.3); border-radius: var(--radius-sm); padding: 16px; }
+.story-analysis h4 { font-family: 'Fraunces', serif; font-size: 0.95rem; margin-bottom: 10px; color: var(--text-primary); }
+.story-analysis ul { list-style: none; }
+.story-analysis li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.decision-point { background: rgba(217, 119, 6, 0.08); padding: 14px; border-radius: var(--radius-sm); margin-top: 12px; border-left: 3px solid var(--highlight-gold); }
+.decision-point strong { color: var(--highlight-gold); display: block; margin-bottom: 6px; font-size: 12px; text-transform: uppercase; }
+.decision-point p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 6px; }
+
+/* Listening Deep Dive (Grid Layout) */
+.listening-deep-dive { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--highlight-green); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.listening-deep-dive h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.listening-section { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(5, 150, 105, 0.1); }
+.listening-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.listening-section h4 { font-family: 'Fraunces', serif; font-size: 1rem; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.listening-section h4 i { --ph-color: var(--highlight-green); }
+
+.transcript-box { background: rgba(209, 250, 229, 0.3); padding: 16px; border-radius: var(--radius-sm); margin-bottom: 12px; }
+.transcript-box .key-phrase { font-weight: 600; color: var(--green-deep); background: rgba(16, 185, 129, 0.1); padding: 2px 6px; border-radius: 4px; }
+
+.deep-dive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.deep-dive-item { background: rgba(255, 255, 255, 0.8); padding: 16px; border-radius: var(--radius-sm); border-left: 3px solid var(--highlight-green); box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.deep-dive-item .phrase { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; font-style: italic; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 8px; }
+.deep-dive-item .analysis { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.deep-dive-item .analysis .arrow { color: var(--highlight-green); font-weight: 600; display: block; margin: 4px 0; }
+.deep-dive-item .analysis strong { color: var(--green-deep); display: block; margin-top: 8px; margin-bottom: 2px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.language-notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+.language-notes-box { background: rgba(59, 130, 246, 0.05); padding: 16px; border-radius: var(--radius-sm); border-left: 3px solid var(--highlight-blue); }
+.language-notes-box .phrase { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.language-notes-box .note { font-size: 12px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 4px; }
+
+.pronunciation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.pronunciation-deep-dive { background: rgba(124, 58, 237, 0.05); padding: 16px; border-radius: var(--radius-sm); border-left: 3px solid var(--highlight-purple); }
+.pronunciation-deep-dive .phrase { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.pronunciation-deep-dive .detail { font-size: 12px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 4px; }
+
+.listening-strategy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.listening-strategy-box { background: rgba(217, 119, 6, 0.08); padding: 16px; border-radius: var(--radius-sm); border-left: 3px solid var(--highlight-gold); }
+.listening-strategy-box .pass { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.listening-strategy-box .detail { font-size: 12px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 4px; }
+
+.shadowing-box { background: rgba(249, 115, 22, 0.05); padding: 16px; border-radius: var(--radius-sm); border-left: 3px solid var(--highlight-orange); }
+.shadowing-box .instruction { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 8px; }
+.shadowing-box .instruction strong { color: var(--orange-deep); }
+
+.listening-question { background: rgba(209, 250, 229, 0.3); padding: 12px; border-radius: var(--radius-sm); margin-bottom: 12px; }
+.listening-question p { font-size: 13px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px; }
+.listening-answer { font-size: 12px; color: var(--green-deep); font-style: italic; }
+
+/* Grammar & Pronunciation */
+.grammar-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--highlight-gold); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.grammar-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.grammar-table { width: 100%; border-collapse: collapse; }
+.grammar-table th { background: rgba(253, 243, 199, 0.5); padding: 10px 12px; text-align: left; font-size: 12px; font-weight: 700; color: var(--highlight-gold); border-bottom: 2px solid rgba(217, 119, 6, 0.2); }
+.grammar-table td { padding: 10px 12px; border-bottom: 1px solid rgba(0, 0, 0, 0.06); font-size: 13px; color: var(--text-secondary); vertical-align: top; }
+.grammar-table td:first-child { font-weight: 600; color: var(--text-primary); min-width: 140px; }
+
+.pronunciation-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--highlight-purple); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.pronunciation-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.pronunciation-item { padding: 12px; background: rgba(243, 232, 255, 0.3); border-radius: var(--radius-sm); margin-bottom: 10px; border-left: 3px solid var(--highlight-purple); }
+.pronunciation-item strong { font-size: 13px; color: var(--purple-deep); display: block; margin-bottom: 4px; }
+.pronunciation-item span { font-size: 13px; color: var(--text-secondary); }
+
+/* Speaking Scenarios */
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { border-radius: var(--radius-md); padding: 20px; border: 2px solid; font-size: 13px; }
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge { display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; color: white; }
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text-primary); }
+.scenario-context { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.5; }
+.pushback-step { margin-bottom: 12px; padding: 12px; border-radius: var(--radius-sm); font-size: 13px; }
+.pushback-step.r1 { background: rgba(59, 130, 246, 0.05); border-left: 3px solid var(--highlight-blue); }
+.pushback-step.pb { background: rgba(245, 101, 101, 0.05); border-left: 3px solid #F56565; }
+.pushback-step.r2 { background: rgba(16, 185, 129, 0.05); border-left: 3px solid var(--highlight-green); }
+.pushback-step.alt { background: rgba(249, 115, 22, 0.05); border-left: 3px solid var(--highlight-orange); }
+.pushback-step.mistake { background: rgba(220, 38, 38, 0.05); border-left: 3px solid #DC2626; }
+.pushback-step strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.pushback-step.r1 strong { color: var(--blue-deep); }
+.pushback-step.pb strong { color: #C53030; }
+.pushback-step.r2 strong { color: var(--green-deep); }
+.pushback-step.alt strong { color: var(--orange-deep); }
+.pushback-step.mistake strong { color: #991B1B; }
+
+/* Tasks & Mastery */
+.task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.task-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 24px; margin-bottom: 16px; position: relative; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); border-left: 4px solid; }
+.task-card.easy { border-left-color: #10B981; }
+.task-card.standard { border-left-color: var(--primary); }
+.task-card.challenge { border-left-color: #EF4444; }
+.task-level { position: absolute; top: 16px; right: 16px; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; letter-spacing: 0.5px; }
+.task-card.easy .task-level { background: #D1FAE5; color: #065F46; }
+.task-card.standard .task-level { background: var(--primary-soft); color: var(--primary-deep); }
+.task-card.challenge .task-level { background: #FEE2E2; color: #991B1B; }
+.task-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
+.task-time { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+.task-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 14px; }
+.task-requirements { background: rgba(252, 231, 243, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 14px; }
+.task-requirements h4 { font-size: 12px; font-weight: 600; color: var(--primary-deep); margin-bottom: 8px; }
+.task-requirements ul { list-style: none; }
+.task-requirements li { padding: 4px 0; padding-left: 20px; position: relative; font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.task-requirements li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.task-deliverable { font-size: 13px; color: var(--text-secondary); padding: 10px 12px; background: rgba(252, 231, 243, 0.3); border-radius: var(--radius-sm); }
+
+.mastery-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; border: 2px solid var(--primary); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.mastery-card h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-primary); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+.mastery-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: rgba(252, 231, 243, 0.2); border-radius: var(--radius-sm); margin-bottom: 10px; }
+.mastery-item input[type="checkbox"] { width: 20px; height: 20px; border: 2px solid var(--primary); border-radius: 4px; cursor: pointer; accent-color: var(--primary); flex-shrink: 0; margin-top: 2px; }
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.5; }
+.continuity-box { background: rgba(190, 24, 93, 0.08); padding: 16px; border-radius: var(--radius-sm); margin-top: 16px; border-left: 3px solid var(--primary); }
+.continuity-box strong { color: var(--primary-deep); display: block; margin-bottom: 6px; }
+
+/* Flashcards & Quiz */
+.flashcard-container { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; text-align: center; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.flashcard { background: linear-gradient(135deg, rgba(252, 231, 243, 0.5), rgba(251, 207, 232, 0.3)); border-radius: var(--radius-md); padding: 32px; margin-bottom: 16px; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer; transition: all 0.4s ease; }
+.flashcard:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(190, 24, 93, 0.15); }
+.flashcard-front p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; }
+.flashcard-front button { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.flashcard-back { display: none; }
+.flashcard-back.active { display: block; }
+.flashcard-back p { font-size: 14px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; line-height: 1.5; }
+.flashcard-tip { background: rgba(255, 255, 255, 0.8); padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.flashcard-tip strong { color: var(--primary-deep); }
+.flashcard-nav { display: flex; justify-content: center; align-items: center; gap: 16px; }
+.flashcard-nav button { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(190, 24, 93, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease; }
+.flashcard-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.flashcard-nav span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(252, 231, 243, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(252, 231, 243, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(190, 24, 93, 0.3); }
+
+/* Navigation & Footer */
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(190, 24, 93, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(190, 24, 93, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(190, 24, 93, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.tradeoff-grid { grid-template-columns: 1fr; }
+.sentence-function-grid { grid-template-columns: 1fr; }
+.before-after-grid { grid-template-columns: 1fr; }
+.listening-strategy-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-08.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 8 Hub</span>
+</a>
+<div class="day-indicator">
+Day 53 / 56
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-08.html" class="day-tab">Overview</a>
+<a href="week-08-day-50.html" class="day-tab">Day 50</a>
+<a href="week-08-day-51.html" class="day-tab">Day 51</a>
+<a href="week-08-day-52.html" class="day-tab">Day 52</a>
+<a href="week-08-day-53.html" class="day-tab active">Day 53</a>
+<a href="week-08-day-54.html" class="day-tab">Day 54</a>
+<a href="week-08-day-55.html" class="day-tab">Day 55</a>
+<a href="week-08-day-56.html" class="day-tab">Day 56</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-08.html">Week 8</a> › Day 53
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">⚖️</span>
+<h1 class="day-title">Conflict Resolution</h1>
+</div>
+<p class="day-subtitle">Day 50 taught you presence. Day 51 taught you strategy. Day 52 taught you leading through uncertainty. Today, you learn <strong>how to combine all three when two people are in conflict</strong>. <strong>B2 managers see conflict as a problem to avoid. C1 executives see conflict as information to decode.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-scales"></i> Presence + Negotiation + Leadership</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 90 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> Integration Framework</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 4 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<strong>B2 Manager:</strong> Avoids conflict (creates resentment) OR escalates conflict (creates damage). Reacts emotionally.<br><br>
+<strong>C1 Executive:</strong> Navigates conflict strategically. Combines presence (calm authority), negotiation (finding mutual interests), and leadership (guiding to solution) to transform conflict into collaboration.<br><br>
+<em>"B2 managers see conflict as a problem to avoid. C1 executives see conflict as information to decode. The best leaders don't eliminate conflict — they transform it into clarity."</em>
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+Conflict Resolution = Strategic Decision-Making
+</div>
+<p>
+<strong>"Conflict resolution isn't about winning or losing. It's about making strategic decisions that preserve the relationship while solving the problem."</strong>
+<br><br>
+Every conflict requires you to make three decisions simultaneously:
+<br>• <strong>Presence Decision:</strong> How do I show up? (Calm? Firm? Empathetic?)
+<br>• <strong>Negotiation Decision:</strong> What are the real interests beneath the positions?
+<br>• <strong>Leadership Decision:</strong> How do I guide both parties to a solution?
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Day 50 taught you presence. Day 51 taught you strategy. Day 52 taught you leading through uncertainty. Day 53 teaches you <strong>how to combine all three when two people are in conflict</strong> — using presence to create safety, negotiation to find common ground, and leadership to guide the resolution.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (90 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">🧠</div>
+<div class="plan-title">Conflict Loop</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">The Axis</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">️</div>
+<div class="plan-title">5 Lenses</div>
+<div class="plan-time">25 min</div>
+<div class="plan-desc">Decision Areas</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔄</div>
+<div class="plan-title">Integration</div>
+<div class="plan-time">10 min</div>
+<div class="plan-desc">Presence → Negotiation → Leadership</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">⚠️</div>
+<div class="plan-title">Mistakes</div>
+<div class="plan-time">3 min</div>
+<div class="plan-desc">Common traps</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">10 min</div>
+<div class="plan-desc">8 Situations</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Reading</div>
+<div class="plan-time">18 min</div>
+<div class="plan-desc">2 Cases + Executive Breakdown</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Dialogues</div>
+<div class="plan-time">15 min</div>
+<div class="plan-desc">2 Long Scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎧</div>
+<div class="plan-title">Listening</div>
+<div class="plan-time">12 min</div>
+<div class="plan-desc">Deep Dive (8 steps)</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">10 min</div>
+<div class="plan-desc">Pushback Rounds</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎴</div>
+<div class="plan-title">Review</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Grammar + Quiz</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-clockwise"></i>
+The Conflict Resolution Loop
+</h2>
+<p class="section-desc">Different from Day 50-52. This loop focuses on <strong>balancing presence, negotiation, and leadership in conflict</strong>.</p>
+</div>
+<div class="loop-card">
+<div class="loop-step">
+<div class="loop-number">1</div>
+<div class="loop-content">
+<h4>Read the Conflict</h4>
+<p>What are the positions? What are the real interests beneath? <strong>(Ground in reality)</strong></p>
+</div>
+</div>
+<div class="loop-step">
+<div class="loop-number">2</div>
+<div class="loop-content">
+<h4>Choose the Lens</h4>
+<p>Which of the 5 lenses below applies to this moment? <strong>(Strategic choice)</strong></p>
+</div>
+</div>
+<div class="loop-step">
+<div class="loop-number">3</div>
+<div class="loop-content">
+<h4>Apply Integration Framework</h4>
+<p>Presence (create safety) → Negotiation (find interests) → Leadership (guide to solution). <strong>(The dual mandate)</strong></p>
+</div>
+</div>
+<div class="loop-step">
+<div class="loop-number">4</div>
+<div class="loop-content">
+<h4>Execute with Care</h4>
+<p>Deliver the resolution with both firmness and empathy. <strong>(Action)</strong></p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-eye"></i>
+5 Conflict Resolution Lenses
+</h2>
+<p class="section-desc">Every conflict requires five decisions. These are your 5 lenses: <strong>Energy, Negotiation, Focus, Timing, and Authority</strong>.</p>
+</div>
+
+<div class="lens-card">
+<div class="lens-header">
+<div class="lens-number">1</div>
+<div class="lens-content">
+<div class="lens-title">Energy (De-escalate vs Confront)</div>
+<div class="lens-question">"Does this moment require me to calm things down or address the issue directly?"</div>
+<div class="lens-meta">
+<span class="lens-rating">⭐⭐⭐⭐⭐ Very High</span>
+<span class="lens-context">The Energy Decision</span>
+<button class="audio-btn-small" onclick="playAudio('Does this moment require me to calm things down or address the issue directly?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-magnifying-glass"></i> Decision Cue</h4>
+<ul>
+<li>High emotion, low clarity → De-escalate (calm, ground, create safety).</li>
+<li>Low emotion, high clarity needed → Confront (address directly, name the issue).</li>
+<li>Mixed → De-escalate first, then confront.</li>
+</ul>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-house"></i> Life Example</h4>
+<p>Two family members arguing at dinner. <strong>Decision:</strong> De-escalate ("Let's take a breath") before confronting the real issue.</p>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-briefcase"></i> Business Example</h4>
+<p>Two senior developers in a heated code review. <strong>Decision:</strong> De-escalate ("I appreciate both your passion") before confronting the technical disagreement.</p>
+</div>
+<div class="register-table">
+<h4><i class="ph-duotone ph-speaker-high"></i> Register Progression</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div class="register-phrase">"Let's take a breath" / "Let's talk about what's really going on"</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div class="register-phrase">"I can see this is important to both of you. Let's step back."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div class="register-phrase">"I appreciate the passion. Let's step back and look at the real issue."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 Formal</span></div>
+<div class="register-phrase">"I recognize the intensity of this discussion. Let's ensure we address the core issue constructively."</div>
+</div>
+</div>
+<div class="tradeoff-grid">
+<div class="tradeoff-box gain">
+<strong>Gain (De-escalate)</strong>
+Psychological safety, reduced defensiveness.
+</div>
+<div class="tradeoff-box lose">
+<strong>Lose (De-escalate)</strong>
+May delay addressing the real issue.
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-warning"></i> Common Mistake</h4>
+<p>Confronting when emotions are high (escalates) or de-escalating when clarity is needed (avoids).</p>
+</div>
+<div class="reflection-box">
+<strong>Reflection:</strong> Am I reading the room's actual energy, or am I projecting my own discomfort onto them?
+</div>
+</div>
+
+<div class="lens-card">
+<div class="lens-header">
+<div class="lens-number">2</div>
+<div class="lens-content">
+<div class="lens-title">Negotiation (Positions vs Interests)</div>
+<div class="lens-question">"What are they saying (positions) vs what do they actually need (interests)?"</div>
+<div class="lens-meta">
+<span class="lens-rating">⭐⭐⭐⭐⭐ Very High</span>
+<span class="lens-context">The Negotiation Decision</span>
+<button class="audio-btn-small" onclick="playAudio('What are they saying versus what do they actually need?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-magnifying-glass"></i> Decision Cue</h4>
+<ul>
+<li>Stuck on positions → Dig for interests ("What's most important to you?").</li>
+<li>Clear interests but different positions → Find creative solutions.</li>
+<li>Both unclear → Separate them first.</li>
+</ul>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-house"></i> Life Example</h4>
+<p>Teenager wants to stay out late (position). Real interest: autonomy and trust from parents.</p>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-briefcase"></i> Business Example</h4>
+<p>Developer A wants React (position). Developer B wants Vue (position). Real interest: both want maintainable, performant code.</p>
+</div>
+<div class="register-table">
+<h4><i class="ph-duotone ph-speaker-high"></i> Register Progression</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div class="register-phrase">"What's really important to you here?"</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div class="register-phrase">"Help me understand what matters most in this decision."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div class="register-phrase">"Help me understand what's most important to you in this decision."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal"> Formal</span></div>
+<div class="register-phrase">"Could you elaborate on the underlying priorities driving your position?"</div>
+</div>
+</div>
+<div class="tradeoff-grid">
+<div class="tradeoff-box gain">
+<strong>Gain (Interests)</strong>
+Creative solutions, win-win outcomes.
+</div>
+<div class="tradeoff-box lose">
+<strong>Lose (Interests)</strong>
+Takes more time than just picking a position.
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-warning"></i> Common Mistake</h4>
+<p>Negotiating positions (creates winners/losers) instead of interests (creates collaboration).</p>
+</div>
+<div class="reflection-box">
+<strong>Reflection:</strong> Am I asking "what do you want?" (position) or "why do you want it?" (interest)?
+</div>
+</div>
+
+<div class="lens-card">
+<div class="lens-header">
+<div class="lens-number">3</div>
+<div class="lens-content">
+<div class="lens-title">Focus (Separate People from Problem)</div>
+<div class="lens-question">"Am I addressing the person or the problem?"</div>
+<div class="lens-meta">
+<span class="lens-rating">⭐⭐⭐⭐⭐ Very High</span>
+<span class="lens-context">The Focus Decision</span>
+<button class="audio-btn-small" onclick="playAudio('Am I addressing the person or the problem?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-magnifying-glass"></i> Decision Cue</h4>
+<ul>
+<li>Personal attacks → Separate ("Let's focus on the issue, not each other").</li>
+<li>Problem is clear but emotions are high → Acknowledge emotions, then focus on problem.</li>
+<li>Both tangled → Explicitly separate them.</li>
+</ul>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-house"></i> Life Example</h4>
+<p>Spouse says "You never help with the kids!" <strong>Decision:</strong> Separate ("I hear you're frustrated. Let's talk about how we can share the load better").</p>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-briefcase"></i> Business Example</h4>
+<p>Designer says "Engineers don't care about user experience!" <strong>Decision:</strong> Separate ("I appreciate your passion for UX. Let's look at how we can integrate it better into the development process").</p>
+</div>
+<div class="register-table">
+<h4><i class="ph-duotone ph-speaker-high"></i> Register Progression</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div class="register-phrase">"Let's focus on the issue, not each other"</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div class="register-phrase">"I can see this is frustrating. Let's look at the problem together."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional"> Professional</span></div>
+<div class="register-phrase">"I appreciate both your perspectives. Let's focus on solving the problem together."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 Formal</span></div>
+<div class="register-phrase">"I suggest we separate the interpersonal dynamics from the technical challenge at hand."</div>
+</div>
+</div>
+<div class="tradeoff-grid">
+<div class="tradeoff-box gain">
+<strong>Gain (Separate)</strong>
+Preserves relationships, focuses energy on solutions.
+</div>
+<div class="tradeoff-box lose">
+<strong>Lose (Separate)</strong>
+May feel like you're avoiding the interpersonal issue.
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-warning"></i> Common Mistake</h4>
+<p>Attacking the person (destroys trust) or ignoring the interpersonal dynamic (creates resentment).</p>
+</div>
+<div class="reflection-box">
+<strong>Reflection:</strong> Am I addressing the behavior or the character? The problem or the person?
+</div>
+</div>
+
+<div class="lens-card">
+<div class="lens-header">
+<div class="lens-number">4</div>
+<div class="lens-content">
+<div class="lens-title">Timing (Acknowledge vs Solve)</div>
+<div class="lens-question">"Does this person need to be heard first, or do they need a solution?"</div>
+<div class="lens-meta">
+<span class="lens-rating">⭐⭐⭐⭐ High</span>
+<span class="lens-context">The Timing Decision</span>
+<button class="audio-btn-small" onclick="playAudio('Does this person need to be heard first, or do they need a solution?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-magnifying-glass"></i> Decision Cue</h4>
+<ul>
+<li>High emotion, feeling unheard → Acknowledge first ("I hear you. That sounds frustrating.").</li>
+<li>Clear problem, ready for action → Solve ("Here's what we can do...").</li>
+<li>Both needed → Acknowledge, then solve.</li>
+</ul>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-house"></i> Life Example</h4>
+<p>Friend venting about work. <strong>Decision:</strong> Acknowledge ("That sounds really tough") before offering solutions.</p>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-briefcase"></i> Business Example</h4>
+<p>Team member frustrated about process. <strong>Decision:</strong> Acknowledge ("I understand this process is frustrating") before solving ("Let's look at how we can improve it").</p>
+</div>
+<div class="register-table">
+<h4><i class="ph-duotone ph-speaker-high"></i> Register Progression</h4>
+<div class="register-row">
+<div><span class="register-tag casual">🏠 Casual</span></div>
+<div class="register-phrase">"I hear you. That sounds tough." / "Let's figure this out together."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div class="register-phrase">"I understand this is frustrating. Let's work on a solution together."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div class="register-phrase">"I understand this is frustrating. Let's work on a solution together."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 Formal</span></div>
+<div class="register-phrase">"I acknowledge the concerns raised. Let's develop a remediation plan collaboratively."</div>
+</div>
+</div>
+<div class="tradeoff-grid">
+<div class="tradeoff-box gain">
+<strong>Gain (Acknowledge)</strong>
+Makes them feel heard, reduces defensiveness.
+</div>
+<div class="tradeoff-box lose">
+<strong>Lose (Acknowledge)</strong>
+May delay the solution.
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-warning"></i> Common Mistake</h4>
+<p>Solving before acknowledging (feels dismissive) or only acknowledging without solving (feels unhelpful).</p>
+</div>
+<div class="reflection-box">
+<strong>Reflection:</strong> Do they need my ears first, or my brain first?
+</div>
+</div>
+
+<div class="lens-card">
+<div class="lens-header">
+<div class="lens-number">5</div>
+<div class="lens-content">
+<div class="lens-title">Authority (Guide vs Decide)</div>
+<div class="lens-question">"Should I guide them to find their own solution, or should I decide for them?"</div>
+<div class="lens-meta">
+<span class="lens-rating">⭐⭐⭐⭐ High</span>
+<span class="lens-context">The Authority Decision</span>
+<button class="audio-btn-small" onclick="playAudio('Should I guide them to find their own solution, or should I decide for them?')"><i class="ph-duotone ph-speaker-high"></i></button>
+</div>
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-magnifying-glass"></i> Decision Cue</h4>
+<ul>
+<li>They have the capacity and ownership needed → Guide ("What do you think would work?").</li>
+<li>Time pressure or they lack capacity → Decide ("Here's what we're going to do").</li>
+<li>Mixed → Guide the framework, decide the non-negotiables.</li>
+</ul>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-house"></i> Life Example</h4>
+<p>Teenagers arguing about chores. <strong>Decision:</strong> Guide ("How can you two work this out?") unless it escalates.</p>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-briefcase"></i> Business Example</h4>
+<p>Two managers disagreeing on resource allocation. <strong>Decision:</strong> Guide ("What would a fair allocation look like?") but decide if they can't agree.</p>
+</div>
+<div class="register-table">
+<h4><i class="ph-duotone ph-speaker-high"></i> Register Progression</h4>
+<div class="register-row">
+<div><span class="register-tag casual"> Casual</span></div>
+<div class="register-phrase">"How can you two work this out?" / "Here's what I think we should do"</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag neutral">☕ Neutral</span></div>
+<div class="register-phrase">"I'd like you both to propose a solution. If you can't agree, I'll make the call."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag professional">💼 Professional</span></div>
+<div class="register-phrase">"I'd like you both to propose a solution. If you can't agree, I'll make the call."</div>
+</div>
+<div class="register-row">
+<div><span class="register-tag formal">📋 Formal</span></div>
+<div class="register-phrase">"I invite both parties to submit proposals. Should consensus prove elusive, I will render a final decision."</div>
+</div>
+</div>
+<div class="tradeoff-grid">
+<div class="tradeoff-box gain">
+<strong>Gain (Guide)</strong>
+Builds ownership, develops their problem-solving skills.
+</div>
+<div class="tradeoff-box lose">
+<strong>Lose (Guide)</strong>
+Takes more time, may not reach optimal solution.
+</div>
+</div>
+<div class="lens-subsection">
+<h4><i class="ph-duotone ph-warning"></i> Common Mistake</h4>
+<p>Deciding when they could have solved it themselves (creates dependency) or guiding when a decision is needed (creates frustration).</p>
+</div>
+<div class="reflection-box">
+<strong>Reflection:</strong> Do I have the relational capital and situational urgency to command right now?
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-arrows-clockwise"></i>
+Integration Framework: Presence → Negotiation → Leadership
+</h2>
+<p class="section-desc">The 3-step sequence that transforms conflict into collaboration.</p>
+</div>
+<div class="integration-card">
+<div class="integration-step">
+<h4><i class="ph-duotone ph-shield-check" style="--ph-color: var(--highlight-blue);"></i> Step 1: PRESENCE (Create Safety)</h4>
+<p><strong>Goal:</strong> Make both parties feel safe to speak honestly.<br>
+<strong>Tools:</strong> Calm tone, neutral body language, acknowledge emotions.<br>
+<strong>Language:</strong> "I appreciate both of you being here. I want to understand both perspectives."<br>
+<strong>Outcome:</strong> Reduced defensiveness, openness to dialogue.</p>
+</div>
+<div class="integration-step">
+<h4><i class="ph-duotone ph-handshake" style="--ph-color: var(--highlight-purple);"></i> Step 2: NEGOTIATION (Find Interests)</h4>
+<p><strong>Goal:</strong> Uncover the real needs beneath the positions.<br>
+<strong>Tools:</strong> Powerful questions, active listening, separate people from problem.<br>
+<strong>Language:</strong> "What's most important to you in this situation?" "Help me understand your concern."<br>
+<strong>Outcome:</strong> Clear interests, potential for win-win solutions.</p>
+</div>
+<div class="integration-step">
+<h4><i class="ph-duotone ph-crown" style="--ph-color: var(--highlight-green);"></i> Step 3: LEADERSHIP (Guide to Solution)</h4>
+<p><strong>Goal:</strong> Guide both parties to a mutually acceptable solution.<br>
+<strong>Tools:</strong> Frame options, acknowledge trade-offs, make decision if needed.<br>
+<strong>Language:</strong> "Here are the options I see. What would work for both of you?" "If you can't agree, here's what I'm going to decide."<br>
+<strong>Outcome:</strong> Resolution, preserved relationship, clear next steps.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-warning-circle"></i>
+3 Common Mistakes
+</h2>
+<p class="section-desc">Traps that destroy conflict resolution.</p>
+</div>
+<div class="mistakes-grid">
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 1: Taking sides</h4>
+<div class="mistake-wrong">❌ "I agree with Sarah on this."</div>
+<div class="mistake-right">✅ "I understand both your perspectives. Let's find a solution that works for everyone."</div>
+<div class="mistake-why">Why: Taking sides destroys your neutrality and makes the other party defensive.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 2: Rushing to solve</h4>
+<div class="mistake-wrong">❌ "Here's what we should do..." (before they feel heard)</div>
+<div class="mistake-right">✅ "I hear both your concerns. Let's make sure we understand the real issue before we solve it."</div>
+<div class="mistake-why">Why: Solutions imposed before understanding feel dismissive and create resistance.</div>
+</div>
+<div class="mistake-card">
+<h4><i class="ph-duotone ph-x-circle" style="--ph-color: #F56565;"></i> Mistake 3: Avoiding the conflict</h4>
+<div class="mistake-wrong">❌ "Let's just drop this and move on."</div>
+<div class="mistake-right">✅ "I know this is uncomfortable, but we need to address it to move forward effectively."</div>
+<div class="mistake-why">Why: Avoided conflicts fester and create bigger problems later.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+The Conflict Resolution Decoder (8 Situations)
+</h2>
+<p class="section-desc">Situation → 3 Choices → Executive Choice → Trade-off → When B is better.</p>
+</div>
+<div class="decoder-card">
+<h3> The Decision Decoder</h3>
+<div class="table-container">
+<table class="decoder-table">
+<thead>
+<tr><th>Situation</th><th>Option A (B2 Default)</th><th>Option B (Safe)</th><th>Option C (Executive)</th><th>Trade-off of C</th><th>When B is better?</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>1. Business: Two developers arguing about architecture</strong></td><td>Pick a side based on your preference.</td><td>Let them figure it out.</td><td>De-escalate → Find interests → Guide to solution.</td><td>Takes more time upfront.</td><td>When it's a minor technical detail.</td></tr>
+<tr><td><strong>2. Business: Manager vs IC on priorities</strong></td><td>Side with the manager (hierarchy).</td><td>Side with the IC (morale).</td><td>Separate people from problem → Find mutual interests.</td><td>Requires neutrality.</td><td>When there's a clear policy violation.</td></tr>
+<tr><td><strong>3. Business: Cross-team resource conflict</strong></td><td>Give resources to the louder team.</td><td>Split resources equally.</td><td>Understand each team's real needs → Allocate strategically.</td><td>Requires deep understanding.</td><td>When resources are truly limited.</td></tr>
+<tr><td><strong>4. Business: Personality clash between peers</strong></td><td>Tell them to work it out.</td><td>Separate them permanently.</td><td>Acknowledge emotions → Find common ground → Set working agreements.</td><td>Requires emotional intelligence.</td><td>When it's abusive behavior.</td></tr>
+<tr><td><strong>5. Life: Siblings arguing over inheritance</strong></td><td>Pick a side based on fairness.</td><td>Avoid the conversation.</td><td>Acknowledge grief → Find underlying needs → Guide to agreement.</td><td>Requires patience and neutrality.</td><td>When legal intervention is needed.</td></tr>
+<tr><td><strong>6. Life: Couple arguing about finances</strong></td><td>Take sides.</td><td>Avoid the topic.</td><td>De-escalate → Find shared goals → Create budget together.</td><td>Requires vulnerability.</td><td>When it's a one-time disagreement.</td></tr>
+<tr><td><strong>7. Life: Parent-teen conflict about curfew</strong></td><td>Enforce rules rigidly.</td><td>Give in to teen's demands.</td><td>Acknowledge teen's need for autonomy → Set boundaries with love.</td><td>Requires balancing authority and empathy.</td><td>When safety is at immediate risk.</td></tr>
+<tr><td><strong>8. Life: Friends disagreeing about plans</strong></td><td>Go with the majority.</td><td>Cancel the plans.</td><td>Find what each person really wants → Create compromise.</td><td>Requires creativity.</td><td>When it's a trivial preference.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box (2 Deep Cases + Executive Breakdown)
+</h2>
+<p class="section-desc">Analyze the trade-offs in complex Business and Life situations. Then dive deep into executive thinking.</p>
+</div>
+
+<div class="reading-card">
+<h3>📧 Case 1: Business - The Architecture Debate</h3>
+<div class="scenario-box">
+<strong>Context:</strong> Two senior developers are in a heated argument about whether to use microservices or monolith architecture. The debate has become personal. You're the Engineering Manager and need to resolve this.
+<br><br>
+<strong>Your Decision:</strong>
+- <strong>Lens 1 (De-escalate vs Confront):</strong> De-escalate first ("I appreciate both your passion").
+- <strong>Lens 2 (Positions vs Interests):</strong> Dig for interests (both want maintainable, scalable code).
+- <strong>Lens 3 (Separate People from Problem):</strong> Separate ("Let's focus on the technical issue, not each other").
+- <strong>Lens 4 (Acknowledge vs Solve):</strong> Acknowledge both perspectives before solving.
+- <strong>Lens 5 (Guide vs Decide):</strong> Guide them to find their own solution.
+<br><br>
+<strong>Integration Framework:</strong>
+1. <strong>Presence:</strong> "I appreciate both of you being here. I can see you both care deeply about this. Let's make sure we understand each other before we decide."
+2. <strong>Negotiation:</strong> "What's most important to you in this decision? What are your concerns about the other approach?"
+3. <strong>Leadership:</strong> "Here's what I'm hearing: both of you want maintainable code. Let's look at how we can achieve that with either approach. What would a hybrid solution look like?"
+</div>
+
+<div class="executive-breakdown">
+<h4>🎯 EXECUTIVE BREAKDOWN (Deep Analysis)</h4>
+<div class="breakdown-grid">
+<div class="breakdown-item">
+<div class="sentence">"I appreciate both of you being here."</div>
+<div class="analysis">
+<strong>🎯 Communication Goal:</strong> Create psychological safety.
+<strong>🧠 Hidden Message:</strong> "I'm not here to judge or take sides. I'm here to understand."
+<strong>️ Trade-off:</strong> Takes 10 seconds upfront, but prevents 30 minutes of defensiveness later.
+<strong>🔄 Better Alternative?</strong> "Let's just get to the point." (Faster, but creates immediate defensiveness).
+<strong>⭐ Why This Wins:</strong> Acknowledgment before action. Shows respect for their time and effort.
+</div>
+</div>
+<div class="breakdown-item">
+<div class="sentence">"I can see you both care deeply about this."</div>
+<div class="analysis">
+<strong>🎯 Communication Goal:</strong> Validate emotions.
+<strong>🧠 Hidden Message:</strong> "Your passion is a strength, not a problem. I'm not asking you to calm down."
+<strong>⚖️ Trade-off:</strong> May feel like you're avoiding the issue, but actually reduces emotional intensity.
+<strong>🔄 Better Alternative?</strong> "You're both being too emotional." (Direct, but escalates immediately).
+<strong>⭐ Why This Wins:</strong> Reframes emotion as investment. Makes them feel seen, not judged.
+</div>
+</div>
+<div class="breakdown-item">
+<div class="sentence">"Let's make sure we understand each other before we decide."</div>
+<div class="analysis">
+<strong>🎯 Communication Goal:</strong> Set the process.
+<strong>🧠 Hidden Message:</strong> "We're not rushing to a solution. Understanding comes first."
+<strong>⚖️ Trade-off:</strong> Delays the decision, but creates better decisions.
+<strong>🔄 Better Alternative?</strong> "Here's what we're going to do." (Faster, but creates resistance).
+<strong>⭐ Why This Wins:</strong> Establishes a collaborative process. Shows you value their input.
+</div>
+</div>
+<div class="breakdown-item">
+<div class="sentence">"What's most important to you in this decision?"</div>
+<div class="analysis">
+<strong>🎯 Communication Goal:</strong> Uncover interests beneath positions.
+<strong> Hidden Message:</strong> "I'm not asking what you want (position). I'm asking what you need (interest)."
+<strong>⚖️ Trade-off:</strong> Takes more time than just picking a side, but creates win-win solutions.
+<strong>🔄 Better Alternative?</strong> "Why do you want microservices?" (Positional question, creates defensiveness).
+<strong>⭐ Why This Wins:</strong> Interest-based question. Opens creative thinking.
+</div>
+</div>
+<div class="breakdown-item">
+<div class="sentence">"Here's what I'm hearing: both of you want maintainable code."</div>
+<div class="analysis">
+<strong>🎯 Communication Goal:</strong> Reflect understanding.
+<strong>🧠 Hidden Message:</strong> "I've listened deeply. I understand both of you at a fundamental level."
+<strong>⚖️ Trade-off:</strong> May feel like you're oversimplifying, but actually creates alignment.
+<strong>🔄 Better Alternative?</strong> "Alex wants microservices. Sam wants monolith." (Positional summary, reinforces conflict).
+<strong>⭐ Why This Wins:</strong> Interest-based reflection. Shows deep listening. Creates common ground.
+</div>
+</div>
+</div>
+</div>
+
+<div class="if-change-box">
+<h4>🔄 If I Change ONE Sentence...</h4>
+<div class="change"><strong>Original:</strong> "Let's make sure we understand each other before we decide."</div>
+<div class="change"><strong>Changed to:</strong> "Let's just decide and move on."</div>
+<div class="change"><strong>What changes?</strong></div>
+<div class="change">• <strong>Certainty:</strong> Goes from "we'll understand" to "we'll rush"</div>
+<div class="change">• <strong>Trust:</strong> Goes from "your input matters" to "your input doesn't matter"</div>
+<div class="change">• <strong>Leadership:</strong> Goes from "I'm guiding" to "I'm imposing"</div>
+<div class="change"><strong>This is executive judgement.</strong></div>
+</div>
+
+<div class="executive-reflection">
+<strong>Executive Reflection:</strong> What if they still can't agree after the discussion? (Answer: Then you make the decision as the leader. "I've heard both perspectives. Here's what I'm going to decide and why.")
+</div>
+</div>
+
+<div class="reading-card">
+<h3>🏠 Case 2: Life - The Sibling Inheritance Conflict</h3>
+<div class="scenario-box">
+<strong>Context:</strong> After a parent's death, two siblings are arguing over how to divide belongings. One wants to sell everything and split the money. The other wants to keep family heirlooms. The conflict is escalating.
+<br><br>
+<strong>Your Decision:</strong>
+- <strong>Lens 1 (De-escalate vs Confront):</strong> De-escalate ("I know this is emotional").
+- <strong>Lens 2 (Positions vs Interests):</strong> Find interests (both want to honor parent's memory, one needs money).
+- <strong>Lens 3 (Separate People from Problem):</strong> Separate grief from the practical decision.
+- <strong>Lens 4 (Acknowledge vs Solve):</strong> Acknowledge the grief first.
+- <strong>Lens 5 (Guide vs Decide):</strong> Guide them to find their own agreement.
+<br><br>
+<strong>Integration Framework:</strong>
+1. <strong>Presence:</strong> "I know this is really hard. We're all grieving, and that makes these decisions more difficult. Let's make sure we're taking care of each other."
+2. <strong>Negotiation:</strong> "What's most important to you about keeping these items? What do you need from the inheritance?"
+3. <strong>Leadership:</strong> "Here's what I'm hearing: we both want to honor Mom's memory. Let's look at which items have the most sentimental value and which could be sold. Can we create a list together?"
+</div>
+
+<div class="executive-breakdown">
+<h4>🎯 EXECUTIVE BREAKDOWN (Deep Analysis)</h4>
+<div class="breakdown-grid">
+<div class="breakdown-item">
+<div class="sentence">"I know this is really hard."</div>
+<div class="analysis">
+<strong>🎯 Communication Goal:</strong> Acknowledge emotion.
+<strong>🧠 Hidden Message:</strong> "I see your pain. I'm not here to rush you through it."
+<strong>️ Trade-off:</strong> Takes time upfront, but prevents emotional escalation.
+<strong>🔄 Better Alternative?</strong> "Let's just get this over with." (Faster, but creates resentment).
+<strong>⭐ Why This Wins:</strong> Validates grief before action. Shows empathy.
+</div>
+</div>
+<div class="breakdown-item">
+<div class="sentence">"We're all grieving, and that makes these decisions more difficult."</div>
+<div class="analysis">
+<strong>🎯 Communication Goal:</strong> Normalize the difficulty.
+<strong>🧠 Hidden Message:</strong> "Your struggle is not weakness. It's human."
+<strong>⚖️ Trade-off:</strong> May feel like you're making excuses, but actually reduces shame.
+<strong>🔄 Better Alternative?</strong> "You're being too emotional about this." (Direct, but creates shame).
+<strong>⭐ Why This Wins:</strong> Normalizes grief. Reduces defensiveness.
+</div>
+</div>
+<div class="breakdown-item">
+<div class="sentence">"Let's make sure we're taking care of each other."</div>
+<div class="analysis">
+<strong> Communication Goal:</strong> Reframe the conflict.
+<strong>🧠 Hidden Message:</strong> "We're not enemies. We're family facing a hard time together."
+<strong>⚖️ Trade-off:</strong> May feel like you're avoiding the practical issue, but actually creates collaboration.
+<strong>🔄 Better Alternative?</strong> "Let's just divide everything and be done." (Faster, but destroys relationships).
+<strong>⭐ Why This Wins:</strong> Reframes conflict as shared challenge. Creates unity.
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Normal → Executive + Sentence Function
+</h2>
+<p class="section-desc">Transform everyday communication into executive-level communication. Understand the function of each sentence.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Normal → Executive Rewrite</h3>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Normal (Business - Conflict): "You two need to stop arguing and just pick one approach."</div>
+<div class="sentence-function-grid">
+<div class="sentence-function">
+<div class="sentence">"I appreciate both your perspectives."</div>
+<div class="function">→ Function: Acknowledgment</div>
+</div>
+<div class="sentence-function">
+<div class="sentence">"I can see you both care deeply about this."</div>
+<div class="function">→ Function: Validation</div>
+</div>
+<div class="sentence-function">
+<div class="sentence">"Let's make sure we understand the real issue before we decide."</div>
+<div class="function">→ Function: Process setting</div>
+</div>
+<div class="sentence-function">
+<div class="sentence">"What's most important to each of you in this decision?"</div>
+<div class="function">→ Function: Interest discovery</div>
+</div>
+</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-task">📝 Before / After Analysis</div>
+<div class="before-after-grid">
+<div class="before-after normal">
+<div class="label">Normal</div>
+<div class="text">"We have some problems."</div>
+<div class="explanation">Emotion, vague</div>
+</div>
+<div class="before-after executive">
+<div class="label">Executive</div>
+<div class="text">"Here's where we are today."</div>
+<div class="explanation">Facts, grounding</div>
+</div>
+</div>
+<div class="before-after-grid" style="margin-top: 12px;">
+<div class="before-after normal">
+<div class="label">Normal</div>
+<div class="text">"We might fail."</div>
+<div class="explanation">Exaggeration, panic</div>
+</div>
+<div class="before-after executive">
+<div class="label">Executive</div>
+<div class="text">"We are facing significant risks."</div>
+<div class="explanation">Measured, realistic</div>
+</div>
+</div>
+<div class="reflection-box" style="margin-top: 12px;">
+<strong>Executive doesn't exaggerate. Executive doesn't hide.</strong>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-book-bookmark"></i>
+Executive Vocabulary Box (Executive Lexicon)
+</h2>
+<p class="section-desc">Words that carry executive weight during conflict. Use them to de-escalate, mediate, and resolve.</p>
+</div>
+<div class="vocab-card">
+<h3> The Executive Lexicon</h3>
+<div class="vocab-grid">
+<div class="vocab-item">
+<strong>de-escalate</strong>
+<span class="ipa">/diːˈɛs.kə.leɪt/</span> <span class="pos">(verb)</span>
+<div class="meaning">Làm dịu tình hình</div>
+<div class="example">"Let's de-escalate this before it gets worse."</div>
+</div>
+<div class="vocab-item">
+<strong>mediate</strong>
+<span class="ipa">/ˈmiː.di.eɪt/</span> <span class="pos">(verb)</span>
+<div class="meaning">Hòa giải, làm trung gian</div>
+<div class="example">"I need to mediate this conflict between the teams."</div>
+</div>
+<div class="vocab-item">
+<strong>acknowledge</strong>
+<span class="ipa">/əkˈnɒl.ɪdʒ/</span> <span class="pos">(verb)</span>
+<div class="meaning">Thừa nhận, công nhận</div>
+<div class="example">"I acknowledge your frustration. Let's work on this together."</div>
+</div>
+<div class="vocab-item">
+<strong>navigate</strong>
+<span class="ipa">/ˈnæv.ɪ.ɡeɪt/</span> <span class="pos">(verb)</span>
+<div class="meaning">Dẫn dắt qua tình huống phức tạp</div>
+<div class="example">"We need to navigate this conflict carefully."</div>
+</div>
+<div class="vocab-item">
+<strong>common ground</strong>
+<span class="ipa">/ˈkɒm.ən ɡraʊnd/</span> <span class="pos">(noun phrase)</span>
+<div class="meaning">Điểm chung</div>
+<div class="example">"Let's find some common ground to build on."</div>
+</div>
+<div class="vocab-item">
+<strong>win-win</strong>
+<span class="ipa">/ˈwɪn wɪn/</span> <span class="pos">(adjective)</span>
+<div class="meaning">Đôi bên cùng có lợi</div>
+<div class="example">"We need a win-win solution for both teams."</div>
+</div>
+<div class="vocab-item">
+<strong>facilitate</strong>
+<span class="ipa">/fəˈsɪl.ɪ.teɪt/</span> <span class="pos">(verb)</span>
+<div class="meaning">Tạo điều kiện, hỗ trợ</div>
+<div class="example">"My role is to facilitate this conversation, not take sides."</div>
+</div>
+<div class="vocab-item">
+<strong>resolution</strong>
+<span class="ipa">/rez.əˈluː.ʃən/</span> <span class="pos">(noun)</span>
+<div class="meaning">Giải pháp, sự giải quyết</div>
+<div class="example">"We need to reach a resolution that works for everyone."</div>
+</div>
+<div class="vocab-item">
+<strong>tension</strong>
+<span class="ipa">/ten.ʃən/</span> <span class="pos">(noun)</span>
+<div class="meaning">Căng thẳng</div>
+<div class="example">"I can sense there's some tension here. Let's address it."</div>
+</div>
+<div class="vocab-item">
+<strong>collaborate</strong>
+<span class="ipa">/kəˈlæb.ə.ret/</span> <span class="pos">(verb)</span>
+<div class="meaning">Hợp tác</div>
+<div class="example">"Let's collaborate on finding a solution together."</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Integrated Dialogues (Long Format - 14+ turns)
+</h2>
+<p class="section-desc">See how executives make strategic communication decisions in real life. Notice the resistance and the recalibration.</p>
+</div>
+
+<div class="story-card">
+<h3>💼 Dialogue 1: The Architecture Debate (Business)</h3>
+<div class="story-context">Context: Two senior developers (Alex and Sam) are arguing about microservices vs monolith. You're the Engineering Manager.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('d1')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="d1-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Thanks for both being here. I can see this is important to both of you. Before we dive in, I want to make sure we understand each other." <span class="move-highlight presence">Presence</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"Sam doesn't understand scalability. Microservices are the only way forward."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sam:</div>
+<div class="dialogue-text">"Alex is overcomplicating things. A monolith is simpler and faster to develop."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I appreciate both your perspectives. I can see you both care deeply about building great software. Let's step back. What's most important to each of you in this decision?" <span class="move-highlight negotiation">Negotiation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"I need the system to scale when we grow. I don't want to rebuild everything in a year."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sam:</div>
+<div class="dialogue-text">"I need us to ship features fast. We're losing customers because we're too slow."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Okay, so I'm hearing: Alex, you're focused on long-term scalability. Sam, you're focused on short-term speed. Both are valid concerns. What if we could find a way to address both?" <span class="move-highlight leadership">Leadership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"How? They're contradictory."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Are they? What if we start with a well-structured monolith now, but design it so we can extract services later if needed? That gives us speed now and scalability later." <span class="move-highlight leadership">Leadership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sam:</div>
+<div class="dialogue-text">"That could work. But we need clear boundaries in the code."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"Yeah, if we use modular design, we can extract later. I can live with that."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Great. So here's what I'm hearing: we'll go with a modular monolith now, with clear boundaries, and revisit microservices in 12 months if we need to. Does that work for both of you?" <span class="move-highlight leadership">Leadership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Alex:</div>
+<div class="dialogue-text">"Yeah, that works."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Sam:</div>
+<div class="dialogue-text">"Agreed."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Perfect. Let's document this decision and move forward. Thanks for working through this together."</div>
+</div>
+</div>
+<div class="decision-point">
+<strong>Decision Point Analysis</strong>
+<p><strong>Decision:</strong> Combined Presence (create safety) + Negotiation (find interests) + Leadership (guide to solution).</p>
+<p><strong>Alternative Decision:</strong> Pick a side based on your preference. (Risk: Loses the other party's buy-in).</p>
+<p><strong>Why this decision?</strong> Presence builds trust. Negotiation uncovers real needs. Leadership creates win-win.</p>
+<p><strong>Resistance handled:</strong> Alex pushed back with "They're contradictory." Leader recalibrated by offering a hybrid solution.</p>
+</div>
+</div>
+
+<div class="story-card">
+<h3>🏠 Dialogue 2: The Sibling Inheritance Conflict (Life)</h3>
+<div class="story-context">Context: Two siblings (Jordan and Taylor) arguing over parent's belongings after death. You're the third sibling mediating.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('d2')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="d2-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I know this is really hard. We're all grieving, and that makes these decisions more difficult. Let's make sure we're taking care of each other." <span class="move-highlight presence">Presence</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Jordan:</div>
+<div class="dialogue-text">"Taylor just wants to keep everything. We need to sell and split the money."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Taylor:</div>
+<div class="dialogue-text">"Jordan just wants money. These items have sentimental value."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"I hear both of you. Jordan, you need financial security. Taylor, you want to honor Mom's memory. Both are valid. Let's look at what's really important here." <span class="move-highlight negotiation">Negotiation</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Jordan:</div>
+<div class="dialogue-text">"I have debts to pay off. I need the money."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Taylor:</div>
+<div class="dialogue-text">"I want to keep Mom's jewelry and photos. Those are irreplaceable."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Okay, so I'm hearing: Jordan needs financial support. Taylor wants to preserve memories. What if we could do both? Let's make a list of items: which have sentimental value, which could be sold?" <span class="move-highlight leadership">Leadership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Jordan:</div>
+<div class="dialogue-text">"That could work. But I need a fair split."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Taylor:</div>
+<div class="dialogue-text">"I agree. Can we keep the jewelry and photos, and sell the furniture?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"That sounds like a good starting point. Let's create two lists: keep and sell. Then we can value the sell list and split it equally. Does that feel fair?" <span class="move-highlight leadership">Leadership</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Jordan:</div>
+<div class="dialogue-text">"Yeah, that's fair."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Taylor:</div>
+<div class="dialogue-text">"Agreed."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">You:</div>
+<div class="dialogue-text">"Great. Let's do this together. I'll bring snacks and we can go through everything this weekend. Thanks for working through this with me."</div>
+</div>
+</div>
+<div class="decision-point">
+<strong>Decision Point Analysis</strong>
+<p><strong>Decision:</strong> Presence (acknowledge grief) + Negotiation (find interests) + Leadership (guide to solution).</p>
+<p><strong>Alternative Decision:</strong> Just divide everything 50/50. (Risk: Destroys relationships, ignores real needs).</p>
+<p><strong>Why this decision?</strong> Presence honors grief. Negotiation uncovers real needs. Leadership creates fair solution.</p>
+<p><strong>Resistance handled:</strong> Both siblings pushed back with positional demands. Leader recalibrated by focusing on underlying interests.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-headphones"></i>
+Listening Deep Dive (8 Steps)
+</h2>
+<p class="section-desc">Transform passive comprehension into active communication analysis.</p>
+</div>
+<div class="listening-deep-dive">
+<h3> Audio</h3>
+<p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 16px;"><strong>Business Context:</strong> Listen to Dialogue 1 (The Architecture Debate)<br><strong>Life Context:</strong> Listen to Dialogue 2 (The Sibling Inheritance Conflict)</p>
+
+<div class="listening-section">
+<h4><i class="ph-duotone ph-file-text"></i> 📄 Transcript</h4>
+<div class="transcript-box">
+<p><strong>Business Dialogue Key Phrases:</strong></p>
+<p>• <span class="key-phrase">"I can see this is important to both of you."</span></p>
+<p>• <span class="key-phrase">"What's most important to each of you in this decision?"</span></p>
+<p>• <span class="key-phrase">"I'm hearing: Alex, you're focused on long-term scalability. Sam, you're focused on short-term speed."</span></p>
+<p>• <span class="key-phrase">"What if we could find a way to address both?"</span></p>
+<p>• <span class="key-phrase">"Does that work for both of you?"</span></p>
+<p style="margin-top: 12px;"><strong>Life Dialogue Key Phrases:</strong></p>
+<p>• <span class="key-phrase">"I know this is really hard. We're all grieving."</span></p>
+<p>• <span class="key-phrase">"Jordan, you need financial security. Taylor, you want to honor Mom's memory."</span></p>
+<p>• <span class="key-phrase">"What if we could do both?"</span></p>
+<p>• <span class="key-phrase">"Does that feel fair?"</span></p>
+</div>
+</div>
+
+<div class="listening-section">
+<h4><i class="ph-duotone ph-magnifying-glass"></i> 🔍 Listening Deep Dive </h4>
+<div class="deep-dive-grid">
+<div class="deep-dive-item">
+<div class="phrase">"I can see this is important to both of you."</div>
+<div class="analysis">
+<span class="arrow">↓</span> Not: "Let's just pick one and move on." (dismissive)
+<span class="arrow">↓</span> Not: "You're both being unreasonable." (judgmental)
+<span class="arrow">↓</span> Strategic choice: <strong>Acknowledgment + Validation</strong>
+<span class="arrow">↓</span> Effect: Reduces defensiveness, creates psychological safety
+<span class="arrow">↓</span> Leadership signal: "I'm here to understand, not to judge"
+</div>
+</div>
+<div class="deep-dive-item">
+<div class="phrase">"What's most important to each of you in this decision?"</div>
+<div class="analysis">
+<span class="arrow">↓</span> Not: "Why do you want microservices?" (positional)
+<span class="arrow">↓</span> Not: "Can you just agree on something?" (rushing)
+<span class="arrow">↓</span> Strategic choice: <strong>Interest-based question</strong>
+<span class="arrow">↓</span> Effect: Shifts from positions to underlying needs
+<span class="arrow">↓</span> Leadership signal: "I'm looking for win-win, not winners and losers"
+</div>
+</div>
+<div class="deep-dive-item">
+<div class="phrase">"I'm hearing: Alex, you're focused on long-term scalability. Sam, you're focused on short-term speed."</div>
+<div class="analysis">
+<span class="arrow">↓</span> Not: "Alex wants microservices. Sam wants monolith." (positional summary)
+<span class="arrow">↓</span> Strategic choice: <strong>Interest-based reflection</strong>
+<span class="arrow">↓</span> Effect: Shows deep listening, validates both perspectives
+<span class="arrow">↓</span> Leadership signal: "I understand both of you at a deeper level"
+</div>
+</div>
+<div class="deep-dive-item">
+<div class="phrase">"What if we could find a way to address both?"</div>
+<div class="analysis">
+<span class="arrow">↓</span> Not: "Here's what we should do." (imposing solution)
+<span class="arrow">↓</span> Strategic choice: <strong>Invitation to collaborate</strong>
+<span class="arrow">↓</span> Effect: Opens creative thinking, builds ownership
+<span class="arrow">↓</span> Leadership signal: "I believe we can find a solution together"
+</div>
+</div>
+</div>
+</div>
+
+<div class="listening-section">
+<h4><i class="ph-duotone ph-chat-text"></i> 💬 Executive Language Notes</h4>
+<div class="language-notes-grid">
+<div class="language-notes-box">
+<div class="phrase">"I appreciate both your perspectives."</div>
+<div class="note">• <strong>Sắc thái:</strong> Neutral, respectful</div>
+<div class="note">• <strong>Leadership framing:</strong> Establishes you as mediator, not judge</div>
+<div class="note">• <strong>Alternative:</strong> "I understand both your concerns." (more empathetic)</div>
+</div>
+<div class="language-notes-box">
+<div class="phrase">"Let's step back."</div>
+<div class="note">• <strong>Sắc thái:</strong> Calm, grounding</div>
+<div class="note">• <strong>Leadership framing:</strong> Creates space for reflection</div>
+<div class="note">• <strong>Alternative:</strong> "Let's take a breath." (more emotional)</div>
+</div>
+<div class="language-notes-box">
+<div class="phrase">"Does that work for both of you?"</div>
+<div class="note">• <strong>Sắc thái:</strong> Collaborative, checking agreement</div>
+<div class="note">• <strong>Leadership framing:</strong> Seeks consensus, not compliance</div>
+<div class="note">• <strong>Alternative:</strong> "Are we aligned on this?" (more formal)</div>
+</div>
+</div>
+</div>
+
+<div class="listening-section">
+<h4><i class="ph-duotone ph-microphone-stage"></i> 🎵 Pronunciation Deep Dive</h4>
+<div class="pronunciation-grid">
+<div class="pronunciation-deep-dive">
+<div class="phrase">"I can see this is important to both of you."</div>
+<div class="detail">• <strong>Stress:</strong> "important" and "both"</div>
+<div class="detail">• <strong>Pause:</strong> After "you" (let it sink in)</div>
+<div class="detail">• <strong>Pitch:</strong> Warm, empathetic (not flat)</div>
+<div class="detail">• <strong>Why:</strong> Shows you genuinely care about their concerns</div>
+</div>
+<div class="pronunciation-deep-dive">
+<div class="phrase">"What's most important to each of you in this decision?"</div>
+<div class="detail">• <strong>Stress:</strong> "most important" and "each"</div>
+<div class="detail">• <strong>Pause:</strong> Before "in this decision" (creates anticipation)</div>
+<div class="detail">• <strong>Pitch:</strong> Rising on "important" (inviting), falling on "decision" (grounding)</div>
+<div class="detail">• <strong>Why:</strong> Signals this is a powerful question, not small talk</div>
+</div>
+<div class="pronunciation-deep-dive">
+<div class="phrase">"Does that work for both of you?"</div>
+<div class="detail">• <strong>Stress:</strong> "work" and "both"</div>
+<div class="detail">• <strong>Pause:</strong> After "you" (wait for genuine response)</div>
+<div class="detail">• <strong>Pitch:</strong> Rising (genuine question, not rhetorical)</div>
+<div class="detail">• <strong>Why:</strong> Shows you're checking for real agreement, not just compliance</div>
+</div>
+</div>
+</div>
+
+<div class="listening-section">
+<h4><i class="ph-duotone ph-brain"></i> 🧠 Executive Listening Strategy</h4>
+<div class="listening-strategy-grid">
+<div class="listening-strategy-box">
+<div class="pass"><strong>Lần 1: Nghe Emotion</strong></div>
+<div class="detail">• <strong>Focus:</strong> Tone, energy, emotional state</div>
+<div class="detail">• <strong>Question:</strong> "How are they feeling right now?"</div>
+<div class="detail">• <strong>Signal:</strong> High emotion → De-escalate first</div>
+</div>
+<div class="listening-strategy-box">
+<div class="pass"><strong>Lần 2: Nghe Decision</strong></div>
+<div class="detail">• <strong>Focus:</strong> Key decisions, commitments, agreements</div>
+<div class="detail">• <strong>Question:</strong> "What are they committing to?"</div>
+<div class="detail">• <strong>Signal:</strong> Clear decisions → Move to action</div>
+</div>
+<div class="listening-strategy-box">
+<div class="pass"><strong>Lần 3: Nghe Structure</strong></div>
+<div class="detail">• <strong>Focus:</strong> Framework, sequence, logic</div>
+<div class="detail">• <strong>Question:</strong> "What's the underlying structure of their argument?"</div>
+<div class="detail">• <strong>Signal:</strong> Clear structure → Can guide to solution</div>
+</div>
+</div>
+</div>
+
+<div class="listening-section">
+<h4><i class="ph-duotone ph-user-sound"></i> 🗣️ Shadowing Challenge</h4>
+<div class="shadowing-box">
+<div class="instruction"><strong>Copy the leadership rhythm, not just the words:</strong></div>
+<div class="instruction">1. Listen to: "I appreciate both your perspectives. I can see you both care deeply about this."</div>
+<div class="instruction">2. Shadow: Match the warm, empathetic tone</div>
+<div class="instruction">3. Focus: Stress on "appreciate" and "care deeply"</div>
+<div class="instruction">4. Practice: Say it 3 times, each time focusing on different emotional quality</div>
+</div>
+</div>
+
+<div class="listening-section">
+<h4><i class="ph-duotone ph-check-circle"></i> ✅ Outcome-based Questions</h4>
+<div class="listening-question">
+<p>1. Why did the leader say "I can see this is important to both of you" instead of "Let's just decide"?</p>
+<div class="listening-answer">✅ To create psychological safety. Acknowledging their investment reduces defensiveness and opens them to collaboration.</div>
+</div>
+<div class="listening-question">
+<p>2. What was the strategic goal of asking "What's most important to each of you?"</p>
+<div class="listening-answer">✅ To shift from positions (microservices vs monolith) to interests (scalability vs speed). This opens creative thinking for win-win solutions.</div>
+</div>
+<div class="listening-question">
+<p>3. How did the leader handle the pushback when Alex said "They're contradictory"?</p>
+<div class="listening-answer">✅ Recalibrated by offering a hybrid solution (modular monolith now, extract services later). This preserved both interests.</div>
+</div>
+<div class="listening-question">
+<p>4. What was the trade-off of guiding them to find their own solution instead of deciding?</p>
+<div class="listening-answer">✅ Takes more time upfront, but builds ownership and commitment. They're more likely to execute well because they helped create the solution.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-code"></i>
+Strategic Grammar in Context
+</h2>
+<p class="section-desc">Grammar as a tool for conflict resolution. Each pattern serves a strategic goal.</p>
+</div>
+<div class="grammar-card">
+<h3>📝 Strategic Grammar Toolkit</h3>
+<div class="table-container">
+<table class="grammar-table">
+<thead>
+<tr><th>Strategic Goal</th><th>Language Pattern</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Create safety</strong></td><td>"I appreciate both..." / "I can see..."</td><td>"I appreciate both your perspectives. I can see this matters to you."</td></tr>
+<tr><td><strong>Find interests</strong></td><td>"What's most important to you...?"</td><td>"What's most important to you in this decision?"</td></tr>
+<tr><td><strong>Reflect understanding</strong></td><td>"I'm hearing..." / "So you're saying..."</td><td>"I'm hearing: you need X, and you need Y."</td></tr>
+<tr><td><strong>Guide to solution</strong></td><td>"What if we could...?" / "Does that work for...?"</td><td>"What if we could find a way to address both? Does that work for you?"</td></tr>
+<tr><td><strong>Make decision</strong></td><td>"Here's what I'm going to decide..."</td><td>"If you can't agree, here's what I'm going to decide and why."</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-microphone-stage"></i>
+Pronunciation Focus
+</h2>
+<p class="section-desc">The weight of sound in conflict resolution. How you deliver the message matters as much as the message itself.</p>
+</div>
+<div class="pronunciation-card">
+<h3>🎵 Strategic Pronunciation</h3>
+<div class="pronunciation-item">
+<strong>1. Warm Tone for Acknowledgment</strong>
+<span>"I appreciate both your perspectives." (Warm, genuine, not robotic)</span>
+</div>
+<div class="pronunciation-item">
+<strong>2. Stress on Key Words</strong>
+<span>"What's <strong>most important</strong> to <strong>each</strong> of you?" (Stress shows this is a powerful question)</span>
+</div>
+<div class="pronunciation-item">
+<strong>3. Pause for Impact</strong>
+<span>"I'm hearing... (pause) ...you need scalability, and you need speed." (Pause lets it sink in)</span>
+</div>
+<div class="pronunciation-item">
+<strong>4. Rising Intonation for Questions</strong>
+<span>"Does that work for both of you? " (Rising = genuine question, not rhetorical)</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios (with Pushback + Alternative + Common Mistake)
+</h2>
+<p class="section-desc">Each scenario has Round 1, Pushback, Round 2, Alternative Response, and Common Mistake.</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Professional - The Technical Debate</span>
+<h3>Scenario 1: Architecture Conflict</h3>
+<p class="scenario-context">Two developers arguing about microservices vs monolith. You need to mediate.</p>
+<div class="pushback-step r1">
+<strong>Round 1 (Presence + Negotiation):</strong>
+"I appreciate both your perspectives. I can see you both care deeply about this. What's most important to each of you?"
+</div>
+<div class="pushback-step pb">
+<strong>Pushback:</strong>
+"They're contradictory. We can't have both."
+</div>
+<div class="pushback-step r2">
+<strong>Round 2 (Leadership):</strong>
+"Are they? What if we could find a way to address both? Let's look at the underlying needs."
+</div>
+<div class="pushback-step alt">
+<strong>Alternative Response:</strong>
+"I've heard both perspectives. Here's what I'm going to decide and why." (When they truly can't agree)
+</div>
+<div class="pushback-step mistake">
+<strong>Common Mistake:</strong>
+Taking sides early. This destroys your neutrality.
+</div>
+</div>
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - The Family Inheritance</span>
+<h3>Scenario 2: Sibling Conflict</h3>
+<p class="scenario-context">Two siblings arguing over parent's belongings after death. You're mediating.</p>
+<div class="pushback-step r1">
+<strong>Round 1 (Presence + Negotiation):</strong>
+"I know this is really hard. We're all grieving. Let's make sure we're taking care of each other."
+</div>
+<div class="pushback-step pb">
+<strong>Pushback:</strong>
+"You're just trying to avoid the real issue."
+</div>
+<div class="pushback-step r2">
+<strong>Round 2 (Leadership):</strong>
+"I hear you. I'm not avoiding it. I want to make sure we understand each other before we decide. What's really important to you?"
+</div>
+<div class="pushback-step alt">
+<strong>Alternative Response:</strong>
+"Let's bring in a mediator." (When emotions are too high)
+</div>
+<div class="pushback-step mistake">
+<strong>Common Mistake:</strong>
+Rushing to solve before acknowledging grief.
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - The Resource Conflict</span>
+<h3>Scenario 3: Cross-Team Dispute</h3>
+<p class="scenario-context">Two managers fighting over limited resources. You need to allocate fairly.</p>
+<div class="pushback-step r1">
+<strong>Round 1 (Presence + Negotiation):</strong>
+"I understand both teams need resources. Let's look at what each team is trying to achieve."
+</div>
+<div class="pushback-step pb">
+<strong>Pushback:</strong>
+"Our project is more important!"
+</div>
+<div class="pushback-step r2">
+<strong>Round 2 (Leadership):</strong>
+"I hear that. Help me understand why this is critical for your team. What's the impact if you don't get the resources?"
+</div>
+<div class="pushback-step alt">
+<strong>Alternative Response:</strong>
+"Here's how we're going to allocate: Team A gets 60%, Team B gets 40%. Here's why." (When you must decide)
+</div>
+<div class="pushback-step mistake">
+<strong>Common Mistake:</strong>
+Splitting resources equally without understanding real needs.
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - Double Decision</span>
+<h3>Scenario 4: Morning & Afternoon</h3>
+<p class="scenario-context"><strong>Morning:</strong> Mediate conflict between two team members. <strong>Afternoon:</strong> Mediate conflict between family members.</p>
+<div class="pushback-step r1">
+<strong>Morning (Business - Presence + Negotiation + Leadership):</strong>
+"I appreciate both your perspectives. What's most important to each of you? Let's find a solution that works for both."
+</div>
+<div class="pushback-step r2">
+<strong>Afternoon (Life - Presence + Negotiation + Leadership):</strong>
+"I know this is emotional. Let's understand what's really important to each of you. How can we work this out together?"
+</div>
+<div class="pushback-step alt">
+<strong>Reflection:</strong>
+How did your tone, pace, and word choice change between the two? Business = structured, neutral. Life = emotional, warm.
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Reality Task: The Conflict Resolution Audit</h2>
+<p class="section-desc">Focus on Judgement, not patterns. Track your decisions and trade-offs.</p>
+</div>
+<div class="task-grid">
+<div class="task-card easy">
+<div class="task-level">EASY</div>
+<h3>📝 The Conflict Audit</h3>
+<div class="task-time">⏱️ 15 minutes</div>
+<p class="task-desc">Identify 1 conflict in your life or work. Apply the 5 lenses. What decisions are you making? Note the trade-offs.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Identify the conflict</li>
+<li>Apply the 5 lenses (Energy, Negotiation, Focus, Timing, Authority)</li>
+<li>What decisions are you making?</li>
+<li>Note the trade-offs</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Written audit with trade-offs</div>
+</div>
+<div class="task-card standard">
+<div class="task-level">STANDARD</div>
+<h3>🎭 The Mediation Practice</h3>
+<div class="task-time">⏱️ 30 minutes</div>
+<p class="task-desc">Role-play a conflict scenario with a friend. Practice the Integration Framework (Presence → Negotiation → Leadership). Get feedback on your approach.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Choose a conflict scenario (business or life)</li>
+<li>Practice all 3 steps of the Integration Framework</li>
+<li>Get feedback on your tone, questions, and guidance</li>
+<li>Note what worked and what didn't</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Role-play recording with feedback notes</div>
+</div>
+<div class="task-card challenge">
+<div class="task-level">CHALLENGE</div>
+<h3> The Real Mediation</h3>
+<div class="task-time">⏱️ 60 minutes</div>
+<p class="task-desc">This week, mediate an actual conflict. Use the lenses and framework in real-time. Note what worked, what didn't, and what you learned.</p>
+<div class="task-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Identify an actual conflict to mediate</li>
+<li>Apply the 5 lenses in real-time</li>
+<li>Use the Integration Framework (Presence → Negotiation → Leadership)</li>
+<li>Note what worked, what didn't</li>
+<li>What did you learn about your default style?</li>
+</ul>
+</div>
+<div class="task-deliverable"><strong>Deliverable:</strong> Reflection notes with strategic analysis</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-trophy"></i>
+Conflict Resolution Mastery</h2>
+<p class="section-desc">Check all that apply. Be honest with yourself.</p>
+</div>
+<div class="mastery-card">
+<h2>🎯 Mastery Checklist</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1">I de-escalate before confronting</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2">I find interests beneath positions</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3">I separate people from the problem</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4">I acknowledge before solving</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5">I guide when possible, decide when necessary</label>
+</div>
+<div class="continuity-box">
+<strong>Continuity Check:</strong>
+If you can consistently apply Presence → Negotiation → Leadership in conflicts, you are ready for Day 54: Difficult Decisions.
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-cards"></i>
+Flashcard Review</h2>
+<p class="section-desc">5 flashcards with strategic decisions. Front: Situation. Back: Decision Loop.</p>
+</div>
+<div class="flashcard-container">
+<div class="flashcard" onclick="this.querySelector('.flashcard-front').style.display='none'; this.querySelector('.flashcard-back').classList.add('active');">
+<div class="flashcard-front">
+<p>Situation: Two team members in heated argument</p>
+<button>Tap to reveal Decision Loop →</button>
+</div>
+<div class="flashcard-back">
+<p><strong>Wrong Instinct:</strong> Take sides or tell them to work it out.<br><br><strong>Executive Decision:</strong> De-escalate → Find interests → Guide to solution.<br><br><strong>Trade-off:</strong> Takes more time upfront, but preserves relationship and creates better solution.</p>
+<div class="flashcard-tip">
+<strong>💡 Tip:</strong> In conflict, presence builds trust. Negotiation uncovers real needs. Leadership creates win-win.
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button>← Prev</button>
+<span>1 / 5</span>
+<button>Next →</button>
+</div>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Conflict Resolution
+</h2>
+<p class="section-desc">9 situational questions. 6 Judgement + 2 Trade-off + 1 Vocabulary.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Judgement) Two developers arguing about architecture. Best opening?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Just pick one and move on."</div>
+<div class="quiz-option">B. "I appreciate both your perspectives. What's most important to each of you?"</div>
+<div class="quiz-option">C. "Alex is right. Microservices are the future."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Judgement) Siblings arguing over inheritance. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Just sell everything and split the money."</div>
+<div class="quiz-option">B. "I know this is hard. Let's understand what's really important to each of you."</div>
+<div class="quiz-option">C. "You're both being selfish."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) Team member says "The other team doesn't care about quality!" Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "That's not true. They care a lot."</div>
+<div class="quiz-option">B. "I hear your frustration. Let's focus on how we can improve quality together."</div>
+<div class="quiz-option">C. "Just work with what they give you."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) Two managers can't agree on resource allocation. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Split resources 50/50.</div>
+<div class="quiz-option">B. Understand each team's real needs, then allocate strategically.</div>
+<div class="quiz-option">C. Give resources to the louder manager.</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Judgement) Friend venting about work conflict. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Here's what you should do..."</div>
+<div class="quiz-option">B. "That sounds really tough. Tell me more."</div>
+<div class="quiz-option">C. "Just ignore it."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Judgement) Couple arguing about finances. Best approach?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Just stop fighting about money."</div>
+<div class="quiz-option">B. "I hear both your concerns. Let's look at our shared goals and create a budget together."</div>
+<div class="quiz-option">C. "You're both wrong."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Trade-off) What is the trade-off of guiding parties to find their own solution?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. You build ownership and develop their skills, but it takes more time.</div>
+<div class="quiz-option">B. You save time but they may not be committed to the solution.</div>
+<div class="quiz-option">C. There is no trade-off.</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Trade-off) What is the trade-off of acknowledging emotions before solving?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. You make them feel heard, but may delay the solution.</div>
+<div class="quiz-option">B. You solve faster but they may feel dismissed.</div>
+<div class="quiz-option">C. There is no trade-off.</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Vocabulary) Which word means "to make a situation less intense or hostile"?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. Mediate</div>
+<div class="quiz-option">B. De-escalate</div>
+<div class="quiz-option">C. Facilitate</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-08-day-52.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 52: Leading Through Uncertainty</div>
+</a>
+<a href="week-08-day-54.html" class="nav-card">
+<div class="nav-label">Next Day →</div>
+<div class="nav-title">Day 54: Difficult Decisions</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 53 Complete & Continue to Day 54</span>
+</button>
+<div class="complete-message">B2 managers see conflict as a problem to avoid. C1 executives see conflict as information to decode. ⚖️</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 8 · Day 53 · Conflict Resolution</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+function playDialogue(id) {
+const dialogues = {
+'d1': `You: Thanks for both being here. I can see this is important to both of you. Before we dive in, I want to make sure we understand each other. Alex: Sam doesn't understand scalability. Microservices are the only way forward. Sam: Alex is overcomplicating things. A monolith is simpler and faster to develop. You: I appreciate both your perspectives. I can see you both care deeply about building great software. Let's step back. What's most important to each of you in this decision? Alex: I need the system to scale when we grow. I don't want to rebuild everything in a year. Sam: I need us to ship features fast. We're losing customers because we're too slow. You: Okay, so I'm hearing: Alex, you're focused on long-term scalability. Sam, you're focused on short-term speed. Both are valid concerns. What if we could find a way to address both? Alex: How? They're contradictory. You: Are they? What if we start with a well-structured monolith now, but design it so we can extract services later if needed? That gives us speed now and scalability later. Sam: That could work. But we need clear boundaries in the code. Alex: Yeah, if we use modular design, we can extract later. I can live with that. You: Great. So here's what I'm hearing: we'll go with a modular monolith now, with clear boundaries, and revisit microservices in 12 months if we need to. Does that work for both of you? Alex: Yeah, that works. Sam: Agreed. You: Perfect. Let's document this decision and move forward. Thanks for working through this together.`,
+'d2': `You: I know this is really hard. We're all grieving, and that makes these decisions more difficult. Let's make sure we're taking care of each other. Jordan: Taylor just wants to keep everything. We need to sell and split the money. Taylor: Jordan just wants money. These items have sentimental value. You: I hear both of you. Jordan, you need financial security. Taylor, you want to honor Mom's memory. Both are valid. Let's look at what's really important here. Jordan: I have debts to pay off. I need the money. Taylor: I want to keep Mom's jewelry and photos. Those are irreplaceable. You: Okay, so I'm hearing: Jordan needs financial support. Taylor wants to preserve memories. What if we could do both? Let's make a list of items: which have sentimental value, which could be sold? Jordan: That could work. But I need a fair split. Taylor: I agree. Can we keep the jewelry and photos, and sell the furniture? You: That sounds like a good starting point. Let's create two lists: keep and sell. Then we can value the sell list and split it equally. Does that feel fair? Jordan: Yeah, that's fair. Taylor: Agreed. You: Great. Let's do this together. I'll bring snacks and we can go through everything this weekend. Thanks for working through this with me.`
+};
+if (dialogues[id]) playAudio(dialogues[id]);
+}
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-53')) {
+completed.push('day-53');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Day 53 Complete! Well done!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'B2 managers see conflict as a problem to avoid. C1 executives see conflict as information to decode. ⚖️';
+}
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-53')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Day 53 Completed</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
