@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 7 Day 49: Leadership Integration | Professional Fluency Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css">
+<style>
+:root {
+--primary: #6B21A8;
+--primary-bright: #581C87;
+--primary-soft: #F3E8FF;
+--primary-deep: #3B0764;
+--primary-light: #9333EA;
+--highlight-gold: #D97706;
+--highlight-green: #059669;
+--highlight-blue: #2563EB;
+--highlight-purple: #7C3AED;
+--highlight-orange: #DC2626;
+--green: #10B981;
+--green-soft: #D1FAE5;
+--green-deep: #065F46;
+--blue: #3B82F6;
+--blue-soft: #DBEAFE;
+--blue-deep: #1E40AF;
+--purple: #8B5CF6;
+--purple-soft: #F3E8FF;
+--purple-deep: #6B21A8;
+--orange: #F97316;
+--orange-soft: #FFEDD5;
+--orange-deep: #9A3412;
+--text-primary: #1E293B;
+--text-secondary: #334155;
+--text-muted: #64748B;
+--radius-sm: 12px;
+--radius-md: 18px;
+--radius-lg: 24px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', sans-serif;
+background: #FAFAFA;
+color: var(--text-primary);
+font-size: 15px;
+line-height: 1.3;
+min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.top-nav {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(30px);
+padding: 12px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.top-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-back {
+font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600;
+color: var(--text-primary); text-decoration: none;
+display: flex; align-items: center; gap: 8px;
+}
+.nav-back i { --ph-color: var(--primary-bright); }
+.day-indicator {
+font-size: 13px; color: var(--text-muted); font-weight: 500;
+display: flex; align-items: center; gap: 10px;
+}
+.progress-bar { width: 80px; height: 6px; background: rgba(0, 0, 0, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); border-radius: 3px; width: 100%; }
+
+.day-tabs-container {
+background: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+position: sticky; top: 57px; z-index: 99; padding: 12px 0;
+}
+.day-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 4px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tab {
+padding: 8px 18px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 20px; text-decoration: none; color: var(--text-secondary);
+font-size: 13px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease;
+}
+.day-tab:hover { background: rgba(255, 255, 255, 1); color: var(--primary-bright); }
+.day-tab.active {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white; border: none; box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3);
+}
+
+.day-header {
+background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 50%, #E9D5FF 100%);
+padding: 48px 0 40px; position: relative;
+}
+.day-header::after { content: '👑'; position: absolute; top: 40px; right: 40px; font-size: 4rem; opacity: 0.3; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.day-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-icon-inline { font-size: 2rem; }
+.day-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--text-primary); }
+.day-subtitle { font-size: 15px; color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; line-height: 1.3; }
+.day-subtitle strong { color: var(--primary-deep); }
+.day-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.meta-tag {
+background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px;
+font-size: 13px; font-weight: 500; color: var(--text-secondary);
+display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.meta-tag i { --ph-color: var(--primary-bright); }
+
+.content-area { background: #FAFAFA; padding: 40px 0; }
+.section { margin: 40px 0; }
+.section-header { margin-bottom: 28px; }
+.section-title {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 8px;
+display: flex; align-items: center; gap: 10px;
+}
+.section-title i { --ph-color: var(--primary-bright); }
+.section-desc { font-size: 14px; color: var(--text-secondary); max-width: 700px; line-height: 1.3; }
+
+.c1-insight {
+background: linear-gradient(135deg, rgba(243, 232, 255, 0.6), rgba(233, 213, 255, 0.25));
+border-radius: var(--radius-md);
+padding: 24px 28px;
+margin-bottom: 28px;
+border-left: 4px solid var(--primary);
+text-align: center;
+}
+.c1-insight .label {
+font-size: 10px; font-weight: 700; color: var(--primary-deep);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+.c1-insight .insight {
+font-family: 'Fraunces', serif;
+font-size: 1rem;
+font-weight: 500;
+color: var(--primary-deep);
+font-style: italic;
+line-height: 1.4;
+}
+
+.philosophy-section {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+border: 1px solid rgba(107, 33, 168, 0.2);
+}
+.philosophy-box {
+background: #FAF5FF;
+border-radius: var(--radius-md);
+padding: 20px;
+border-left: 4px solid var(--highlight-gold);
+margin-bottom: 20px;
+}
+.philosophy-title {
+font-weight: 600; color: var(--text-primary);
+margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px;
+}
+.philosophy-title i { --ph-color: var(--highlight-gold); }
+.philosophy-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.3; }
+.philosophy-box strong { color: var(--primary-deep); }
+
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.plan-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 16px; text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.plan-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.plan-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.plan-time {
+font-size: 11px; color: var(--primary-bright); font-weight: 600;
+margin-bottom: 4px; background: rgba(243, 232, 255, 0.5);
+padding: 2px 8px; border-radius: 10px; display: inline-block;
+}
+.plan-desc { font-size: 11px; color: var(--text-muted); }
+
+.story-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px; margin-bottom: 20px;
+border-left: 4px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.story-card h3 {
+font-family: 'Fraunces', serif; font-size: 1.15rem;
+margin-bottom: 8px; color: var(--text-primary);
+display: flex; align-items: center; gap: 10px;
+}
+.story-context {
+font-size: 12px; color: var(--text-muted);
+margin-bottom: 14px; font-style: italic;
+padding: 10px 14px;
+background: rgba(243, 232, 255, 0.3);
+border-radius: var(--radius-sm);
+}
+.story-dialogue {
+background: rgba(243, 232, 255, 0.2);
+padding: 18px; border-radius: var(--radius-sm);
+margin-bottom: 14px;
+border-left: 3px solid var(--primary);
+}
+.dialogue-turn {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(107, 33, 168, 0.1);
+}
+.dialogue-turn:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.dialogue-speaker {
+font-size: 12px; font-weight: 700;
+color: var(--primary-deep);
+margin-bottom: 4px;
+}
+.dialogue-text {
+font-size: 13px; color: var(--text-secondary);
+line-height: 1.3;
+}
+.dialogue-text strong { color: var(--primary-deep); font-weight: 600; }
+.move-highlight {
+display: inline-block;
+padding: 2px 8px;
+border-radius: 10px;
+font-size: 10px;
+font-weight: 700;
+margin-left: 8px;
+color: white;
+}
+.move-highlight.vision { background: var(--highlight-blue); }
+.move-highlight.purpose { background: var(--highlight-green); }
+.move-highlight.listen { background: var(--highlight-purple); }
+.move-highlight.recognize { background: var(--highlight-gold); }
+.move-highlight.conversation { background: var(--highlight-orange); }
+.move-highlight.decision { background: var(--blue-deep); }
+.story-audio-controls { 
+display: flex; 
+gap: 10px; 
+margin-bottom: 14px; 
+}
+.story-audio-btn {
+padding: 10px 20px; 
+border-radius: 20px;
+font-size: 13px; 
+font-weight: 600; 
+cursor: pointer;
+display: inline-flex; 
+align-items: center; 
+gap: 8px;
+border: none; 
+transition: all 0.3s ease;
+}
+.story-play-btn {
+background: linear-gradient(135deg, var(--primary), var(--primary-bright));
+color: white;
+}
+.story-play-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3); 
+}
+.story-stop-btn {
+background: rgba(245, 101, 101, 0.1); 
+color: #DC2626;
+border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.story-stop-btn:hover { 
+background: rgba(245, 101, 101, 0.2); 
+}
+.story-analysis {
+background: rgba(243, 232, 255, 0.3);
+border-radius: var(--radius-sm);
+padding: 16px;
+}
+.story-analysis h4 {
+font-family: 'Fraunces', serif; font-size: 0.95rem;
+margin-bottom: 10px; color: var(--text-primary);
+}
+.story-analysis ul { list-style: none; }
+.story-analysis li {
+padding: 4px 0; padding-left: 20px; position: relative;
+font-size: 13px; color: var(--text-secondary); line-height: 1.3;
+}
+.story-analysis li::before { content: '→'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+
+.decoder-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-purple);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.decoder-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.decoder-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 14px;
+}
+.decoder-table th {
+background: rgba(243, 232, 255, 0.5);
+padding: 10px 12px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: var(--purple-deep);
+border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+.decoder-table td {
+padding: 10px 12px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+font-size: 13px;
+color: var(--text-secondary);
+}
+.decoder-table td:last-child { font-weight: 600; color: var(--purple-deep); }
+
+.reading-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-blue);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.reading-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.email-box {
+background: #F8FAFC;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: var(--radius-sm);
+padding: 16px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.4;
+}
+.reading-questions {
+background: rgba(219, 234, 254, 0.3);
+padding: 16px;
+border-radius: var(--radius-sm);
+}
+.reading-questions h4 {
+font-size: 13px; font-weight: 700; color: var(--blue-deep);
+margin-bottom: 10px;
+}
+
+.micro-writing-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-green);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.micro-writing-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.rewrite-item {
+margin-bottom: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.rewrite-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.rewrite-task {
+font-size: 13px; color: #C53030; font-weight: 600;
+margin-bottom: 8px;
+}
+.rewrite-progression {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}
+.rewrite-level {
+padding: 10px;
+border-radius: var(--radius-sm);
+font-size: 12px;
+}
+.rewrite-level.weak { background: rgba(245, 101, 101, 0.08); border-left: 3px solid #F56565; }
+.rewrite-level.professional { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--highlight-green); }
+.rewrite-level strong { display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+.rewrite-level.weak strong { color: #C53030; }
+.rewrite-level.professional strong { color: var(--green-deep); }
+.rewrite-why {
+margin-top: 8px;
+padding: 8px;
+background: rgba(107, 33, 168, 0.08);
+border-radius: var(--radius-sm);
+font-size: 12px;
+color: var(--primary-deep);
+font-style: italic;
+}
+
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.scenario-card { 
+border-radius: var(--radius-md); 
+padding: 20px; 
+border: 2px solid;
+font-size: 13px;
+}
+.scenario-card.casual { background: rgba(209, 250, 229, 0.3); border-color: var(--green); }
+.scenario-card.professional { background: rgba(219, 234, 254, 0.3); border-color: var(--blue); }
+.scenario-card.mixed { background: rgba(243, 232, 255, 0.3); border-color: var(--purple); }
+.scenario-card.challenge { background: rgba(255, 237, 213, 0.3); border-color: var(--orange); }
+.scenario-badge {
+display: inline-block; padding: 4px 12px; border-radius: 12px;
+font-size: 11px; font-weight: 700; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: 10px; color: white;
+}
+.scenario-card.casual .scenario-badge { background: var(--green); }
+.scenario-card.professional .scenario-badge { background: var(--blue); }
+.scenario-card.mixed .scenario-badge { background: var(--purple); }
+.scenario-card.challenge .scenario-badge { background: var(--orange); }
+.scenario-card h3 { 
+font-family: 'Fraunces', serif; 
+font-size: 13px; 
+font-weight: 600;
+margin-bottom: 8px; 
+color: var(--text-primary); 
+}
+.scenario-context { 
+font-size: 13px; 
+color: var(--text-secondary); 
+margin-bottom: 12px; 
+line-height: 1.3; 
+}
+.scenario-requirements { 
+background: rgba(255, 255, 255, 0.8); 
+border-radius: var(--radius-sm); 
+padding: 12px; 
+margin-bottom: 12px; 
+}
+.scenario-requirements h4 { 
+font-size: 12px; 
+font-weight: 600; 
+color: var(--text-primary); 
+margin-bottom: 6px; 
+}
+.scenario-requirements ul { list-style: none; }
+.scenario-requirements li { 
+padding: 3px 0; 
+padding-left: 18px; 
+position: relative; 
+font-size: 13px; 
+color: var(--text-secondary); 
+line-height: 1.3; 
+}
+.scenario-requirements li::before { content: '•'; position: absolute; left: 0; color: var(--primary-bright); font-weight: 600; }
+.model-response {
+background: rgba(255, 255, 255, 0.9);
+border-radius: var(--radius-sm);
+padding: 12px;
+margin-bottom: 12px;
+border-left: 3px solid var(--highlight-green);
+}
+.model-response strong {
+color: var(--highlight-green);
+display: block;
+margin-bottom: 4px;
+font-size: 12px;
+}
+.model-response p {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.3;
+font-style: italic;
+}
+
+.grammar-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-md);
+padding: 24px;
+margin-bottom: 20px;
+border-left: 4px solid var(--highlight-gold);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.grammar-card h3 {
+font-family: 'Fraunces', serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--text-primary);
+margin-bottom: 14px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.grammar-item {
+margin-bottom: 12px;
+padding: 12px;
+background: rgba(254, 243, 199, 0.3);
+border-radius: var(--radius-sm);
+}
+.grammar-item strong {
+font-size: 13px; color: var(--primary-deep); display: block; margin-bottom: 4px;
+}
+.grammar-item span {
+font-size: 13px; color: var(--text-secondary);
+}
+
+.mastery-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: var(--radius-lg);
+padding: 32px; border: 2px solid var(--primary);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.mastery-card h2 {
+font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600;
+color: var(--text-primary); margin-bottom: 20px;
+display: flex; align-items: center; gap: 10px;
+}
+.mastery-item {
+display: flex; align-items: flex-start; gap: 12px;
+padding: 14px; background: rgba(243, 232, 255, 0.2);
+border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+.mastery-item input[type="checkbox"] {
+width: 20px; height: 20px; border: 2px solid var(--primary);
+border-radius: 4px; cursor: pointer; accent-color: var(--primary);
+flex-shrink: 0; margin-top: 2px;
+}
+.mastery-item label { font-size: 14px; color: var(--text-secondary); cursor: pointer; line-height: 1.3; }
+
+.celebration-card {
+background: linear-gradient(135deg, rgba(107, 33, 168, 0.1), rgba(147, 51, 234, 0.1));
+border-radius: var(--radius-lg);
+padding: 40px;
+margin: 40px 0;
+border: 2px solid var(--primary);
+text-align: center;
+}
+.celebration-card h2 {
+font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700;
+color: var(--primary-deep); margin-bottom: 16px;
+}
+.celebration-card p {
+font-size: 15px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;
+}
+.celebration-card ul {
+list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; text-align: left; margin-top: 20px;
+}
+.celebration-card li {
+padding: 10px; background: rgba(255, 255, 255, 0.8); border-radius: var(--radius-sm); font-size: 13px; color: var(--text-secondary);
+display: flex; align-items: center; gap: 8px;
+}
+.celebration-card li::before { content: '🏆'; }
+
+.quiz-section { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 32px; margin: 32px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.quiz-question { background: rgba(248, 250, 252, 0.8); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; border-left: 3px solid var(--primary); }
+.quiz-question h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 10px; color: var(--text-primary); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { padding: 10px; background: rgba(255, 255, 255, 0.9); border: 2px solid rgba(243, 232, 255, 0.5); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.3s ease; font-size: 13px; color: var(--text-secondary); line-height: 1.3; }
+.quiz-option:hover { border-color: var(--primary); background: rgba(243, 232, 255, 0.2); }
+.check-btn { background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; margin-top: 16px; box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3); }
+
+.day-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+.nav-card { background: rgba(255, 255, 255, 0.95); border-radius: var(--radius-md); padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.06); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+.nav-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(107, 33, 168, 0.15); }
+.nav-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.nav-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.complete-container { text-align: center; margin: 40px 0; }
+.complete-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-bright)); color: white; padding: 16px 32px; border-radius: 36px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 8px 28px rgba(107, 33, 168, 0.4); }
+.complete-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(107, 33, 168, 0.5); }
+.complete-btn i { font-size: 1.2rem; }
+.complete-message { margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+
+.footer { background: rgba(255, 255, 255, 0.95); padding: 32px 0 24px; text-align: center; margin-top: 48px; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.footer-fox { font-size: 2rem; margin-bottom: 12px; }
+.footer-title { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 6px; font-weight: 600; }
+.footer-tagline { color: var(--text-muted); font-size: 13px; }
+
+@media (max-width: 768px) {
+.day-title { font-size: 1.8rem; }
+.day-tabs-container { top: 52px; }
+.day-navigation { grid-template-columns: 1fr; }
+.scenario-grid { grid-template-columns: 1fr; }
+.rewrite-progression { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="container">
+<a href="week-07.html" class="nav-back">
+<i class="ph-duotone ph-arrow-left"></i>
+<span>Week 7 Hub</span>
+</a>
+<div class="day-indicator">
+Day 49 / 49
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+</div>
+</nav>
+
+<div class="day-tabs-container">
+<div class="container">
+<div class="day-tabs">
+<a href="week-07.html" class="day-tab">Overview</a>
+<a href="week-07-day-43.html" class="day-tab">Day 43</a>
+<a href="week-07-day-44.html" class="day-tab">Day 44</a>
+<a href="week-07-day-45.html" class="day-tab">Day 45</a>
+<a href="week-07-day-46.html" class="day-tab">Day 46</a>
+<a href="week-07-day-47.html" class="day-tab">Day 47</a>
+<a href="week-07-day-48.html" class="day-tab">Day 48</a>
+<a href="week-07-day-49.html" class="day-tab active">Day 49</a>
+</div>
+</div>
+</div>
+
+<header class="day-header">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a> › <a href="week-07.html">Week 7</a> › Day 49
+</div>
+<div class="day-title-row">
+<span class="day-icon-inline">👑</span>
+<h1 class="day-title">Leadership Integration</h1>
+</div>
+<p class="day-subtitle">The final day of Week 7. Today, you integrate all 6 leadership skills into one authentic presence. <strong>B2 leaders collect skills. C1 leaders embody presence.</strong></p>
+<div class="day-meta">
+<div class="meta-tag"><i class="ph-duotone ph-crown"></i> Milestone 7</div>
+<div class="meta-tag"><i class="ph-duotone ph-clock"></i> 60 minutes</div>
+<div class="meta-tag"><i class="ph-duotone ph-lightning"></i> Full Integration</div>
+<div class="meta-tag"><i class="ph-duotone ph-trophy"></i> Day 7 of 7</div>
+</div>
+</div>
+</header>
+
+<div class="content-area">
+<div class="container">
+
+<div class="c1-insight">
+<div class="label">💡 C1 Insight</div>
+<div class="insight">
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 12px; flex-wrap: wrap;">
+<div>
+<div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">B2 Leader</div>
+<div style="font-size: 14px;">Collects 6 skills. Uses them mechanically, pattern-by-pattern. (Sounds fake).</div>
+</div>
+<div>
+<div style="font-size: 12px; color: var(--primary-deep); margin-bottom: 4px;">C1 Leader</div>
+<div style="font-size: 14px;">Integrates 6 skills into 1 presence. Uses them fluidly, based on context. (Sounds authentic).</div>
+</div>
+</div>
+"B2 leaders collect skills. C1 leaders embody presence. After Week 7, you no longer think 'Which skill should I use?' You think 'What does this moment require?'"
+</div>
+</div>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-lightbulb"></i>
+Today's Philosophy
+</h2>
+<div class="philosophy-box">
+<div class="philosophy-title">
+<i class="ph-duotone ph-brain"></i>
+From Skills to Presence
+</div>
+<p>
+Leadership presence isn't about having 6 skills. It's the ability to <strong>read the situation</strong> and <strong>respond fluidly</strong> with the right skill at the right moment.
+<br><br>
+When you integrate correctly, people don't see you "using patterns." They see you <strong>leading naturally</strong>. They feel guided, heard, recognized, and respected.
+<br><br>
+<span style="color: var(--primary); font-weight: 600;">Important:</span> Integration doesn't mean using all 6 skills at once. It means knowing <strong>when to use which skill</strong>, and <strong>when to use none at all</strong>. Sometimes the most powerful leadership move is silence.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="philosophy-section">
+<h2 class="section-title">
+<i class="ph-duotone ph-calendar-check"></i>
+Today's Plan (60 min)
+</h2>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">🎭</div>
+<div class="plan-title">Simulation</div>
+<div class="plan-time">20 min</div>
+<div class="plan-desc">Full leadership scenario</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🔍</div>
+<div class="plan-title">Decoder</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Integration Decoder</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📖</div>
+<div class="plan-title">Read & Write</div>
+<div class="plan-time">7 min</div>
+<div class="plan-desc">Reading + Micro</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🗣️</div>
+<div class="plan-title">Speaking</div>
+<div class="plan-time">13 min</div>
+<div class="plan-desc">4 scenarios</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">📝</div>
+<div class="plan-title">Grammar</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Grammar + Pronunciation</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎯</div>
+<div class="plan-title">Self-Assess</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Are you a C1 Leader?</div>
+</div>
+<div class="plan-card">
+<div class="plan-icon">🎉</div>
+<div class="plan-title">Celebration</div>
+<div class="plan-time">5 min</div>
+<div class="plan-desc">Milestone 7</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats-circle"></i>
+Full Leadership Simulation
+</h2>
+<p class="section-desc">Leading a Team Through Crisis. Notice how the CEO integrates Vision, Purpose, Listening, Recognition, Difficult Conversations, and Difficult Decisions fluidly.</p>
+</div>
+
+<div class="story-card">
+<h3> Scenario: Leading a Team Through Crisis</h3>
+<div class="story-context">Context: You are the CEO of a 50-person startup. The company just lost its largest client (40% of revenue). The team is panicking. You need to lead them through this crisis.</div>
+<div class="story-audio-controls">
+<button class="story-audio-btn story-play-btn" onclick="playDialogue('simulation')">
+<i class="ph-duotone ph-speaker-high"></i> Nghe cả đoạn
+</button>
+<button class="story-audio-btn story-stop-btn" onclick="stopSpeaking()">
+<i class="ph-duotone ph-stop"></i> Dừng
+</button>
+</div>
+<div class="story-dialogue" id="simulation-dialogue">
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO (You):</div>
+<div class="dialogue-text">"Team, I want to share some difficult news with you transparently. We've lost our largest client, which represents 40% of our revenue. <strong>This is a critical moment for our company, and I want to be honest about what it means and what we're going to do about it.</strong>" <span class="move-highlight decision">Day 48</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 1:</div>
+<div class="dialogue-text">"What does this mean for our jobs?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>I hear your concern, and I want to address it directly.</strong> First, let me share our vision: <strong>We are not just a company that serves clients. We are a team that solves hard problems together.</strong> This setback doesn't define us — how we respond does." <span class="move-highlight listen">Day 45</span> <span class="move-highlight vision">Day 43</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 2:</div>
+<div class="dialogue-text">"But we're going to have to lay people off, aren't we?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>That's a valid question, and I don't want to sugarcoat it.</strong> Yes, we will need to make some difficult decisions. But before I share those, <strong>I want to recognize what this team has accomplished.</strong> You've built something incredible. Your work has mattered, and it continues to matter." <span class="move-highlight conversation">Day 47</span> <span class="move-highlight recognize">Day 46</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 3:</div>
+<div class="dialogue-text">"I've been here since day one. I've poured my heart into this company."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>I see that, and your dedication hasn't gone unnoticed.</strong> Your commitment is exactly what makes this team special. <strong>That's who we are — people who don't give up when it gets hard.</strong>" <span class="move-highlight listen">Day 45</span> <span class="move-highlight purpose">Day 44</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 4:</div>
+<div class="dialogue-text">"So what's the plan?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>Here's the difficult decision I've made.</strong> We need to reduce our headcount by 15% to survive this crisis. <strong>The trade-off is painful:</strong> we lose talented people now, but we save the company for the long term. <strong>I've weighed the options, and this is the path that gives us the best chance of recovery.</strong>" <span class="move-highlight decision">Day 48</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 1:</div>
+<div class="dialogue-text">"Who's getting laid off?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>I know this affects people deeply, and I don't take that lightly.</strong> I'll be having individual conversations today with those affected. <strong>I take full responsibility for this decision, and I welcome your questions.</strong>" <span class="move-highlight conversation">Day 47</span> <span class="move-highlight decision">Day 48</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 5:</div>
+<div class="dialogue-text">"How do we move forward?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>Here's what success looks like for us.</strong> In 6 months, we will have stabilized our revenue, retained our core team, and emerged stronger than before. <strong>We will get there by supporting each other, staying focused on our mission, and making hard choices when we need to.</strong>" <span class="move-highlight vision">Day 43</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 2:</div>
+<div class="dialogue-text">"What can we do to help?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>I'd like to hear your ideas.</strong> What do you think we should prioritize? <strong>Help me understand what matters most to you right now.</strong>" <span class="move-highlight listen">Day 45</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 3:</div>
+<div class="dialogue-text">"I think we should focus on retaining our best clients."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>That's a powerful insight.</strong> You're right — client retention is our top priority. <strong>Thank you for speaking up. That's exactly the kind of leadership we need right now.</strong>" <span class="move-highlight recognize">Day 46</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 4:</div>
+<div class="dialogue-text">"I'm worried about morale. How do we keep the team motivated?"</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>That's a valid concern.</strong> Morale will be tough, but <strong>here's how we'll address it:</strong> we'll have weekly check-ins, we'll be transparent about our progress, and we'll celebrate small wins along the way. <strong>We'll get through this by being honest with each other and supporting each other.</strong>" <span class="move-highlight conversation">Day 47</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 1:</div>
+<div class="dialogue-text">"I'm still processing this. It's a lot to take in."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>I understand. This is hard news, and it's okay to feel shocked, angry, or scared.</strong> Take the time you need to process. <strong>I'm here to talk whenever you're ready.</strong>" <span class="move-highlight conversation">Day 47</span></div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">Team Member 5:</div>
+<div class="dialogue-text">"Thank you for being honest with us."</div>
+</div>
+<div class="dialogue-turn">
+<div class="dialogue-speaker">CEO:</div>
+<div class="dialogue-text">"<strong>Thank you for trusting me.</strong> I know this is a difficult moment, but <strong>I believe in this team.</strong> We've faced challenges before, and we've overcome them. <strong>We will overcome this too.</strong>" <span class="move-highlight vision">Day 43</span></div>
+</div>
+</div>
+<div class="story-analysis">
+<h4>Analysis — Integrated Leadership:</h4>
+<ul>
+<li><strong>Day 48 (Decision):</strong> Framed the crisis transparently, named trade-offs, owned the decision.</li>
+<li><strong>Day 45 (Listening):</strong> Heard concerns, invited ideas, asked powerful questions.</li>
+<li><strong>Day 43 (Vision):</strong> Cast a compelling future ("In 6 months, we will have...").</li>
+<li><strong>Day 46 (Recognition):</strong> Recognized specific effort and dedication.</li>
+<li><strong>Day 44 (Purpose):</strong> Connected to identity ("That's who we are...").</li>
+<li><strong>Day 47 (Difficult Conv):</strong> Addressed hard news with empathy and safety.</li>
+<li><strong>Key insight:</strong> The CEO didn't use all skills at once. They read the room and responded with the right skill at the right moment.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-magnifying-glass"></i>
+The Integration Decoder (Signature Section)
+</h2>
+<p class="section-desc">When to use each leadership skill. Mechanical (B2) vs Integrated (C1).</p>
+</div>
+<div class="decoder-card">
+<h3>🔍 The Integration Decoder</h3>
+<table class="decoder-table">
+<thead>
+<tr><th>Situation</th><th>Best Skill</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Team needs direction</strong></td><td>Vision (Day 43)</td><td>"Here's where we're going..."</td></tr>
+<tr><td><strong>Team needs meaning</strong></td><td>Purpose (Day 44)</td><td>"This is who we are..."</td></tr>
+<tr><td><strong>Team has concerns</strong></td><td>Listening (Day 45)</td><td>"Help me understand..."</td></tr>
+<tr><td><strong>Team needs validation</strong></td><td>Recognition (Day 46)</td><td>"Your work has mattered..."</td></tr>
+<tr><td><strong>Team needs honesty</strong></td><td>Difficult Conversation (Day 47)</td><td>"I want to share some hard news..."</td></tr>
+<tr><td><strong>Team needs decisions</strong></td><td>Difficult Decision (Day 48)</td><td>"Here's the choice I've made..."</td></tr>
+<tr><td><strong>Team needs space</strong></td><td>Silence</td><td>(Say nothing. Just be present.)</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; font-weight: 700; color: var(--primary-deep); margin: 16px 0 10px 0;">Mechanical (B2) vs Integrated (C1):</p>
+<table class="decoder-table">
+<thead>
+<tr><th>Mechanical (B2)</th><th>Integrated (C1)</th></tr>
+</thead>
+<tbody>
+<tr><td>Uses all 6 skills in every conversation</td><td>Uses the right skill for the moment</td></tr>
+<tr><td>Sounds scripted and fake</td><td>Sounds natural and authentic</td></tr>
+<tr><td>Focuses on "using patterns"</td><td>Focuses on "serving the team"</td></tr>
+<tr><td>People feel managed</td><td>People feel led</td></tr>
+</tbody>
+</table>
+<p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">
+<strong>💡 How to use:</strong> 1. Read the room. 2. Ask "What does this moment require?" 3. Respond with the right skill. 4. Watch the team's trust increase.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-envelope-simple"></i>
+Reading Box: The Cold CEO vs The Integrated Leader
+</h2>
+<p class="section-desc">Read these two emails announcing the same crisis. Pause and analyze the difference before reading the model answer.</p>
+</div>
+<div class="reading-card">
+<h3>📧 Two Approaches to Crisis</h3>
+<div class="email-box">
+<strong>Email 1 (Cold CEO):</strong><br>
+Team,<br><br>
+We've lost our largest client. This is a significant setback. We will be implementing cost-cutting measures effective immediately, including headcount reductions.<br><br>
+HR will reach out to those affected.<br><br>
+- CEO
+<br><br><br>
+<strong>Email 2 (Integrated Leader):</strong><br>
+Team,<br><br>
+I want to share some difficult news with you transparently. We've lost our largest client, which represents 40% of our revenue. This is a critical moment for our company.<br><br>
+<strong>But let me be clear about who we are.</strong> We are a team that solves hard problems together. This setback doesn't define us — how we respond does.<br><br>
+<strong>I've made the difficult decision</strong> to reduce our headcount by 15% to survive this crisis. <strong>The trade-off is painful</strong>, but it gives us the best chance of recovery. <strong>I take full responsibility for this decision.</strong><br><br>
+<strong>I want to recognize what this team has accomplished.</strong> You've built something incredible. Your work has mattered, and it continues to matter.<br><br>
+<strong>Here's our vision for the next 6 months:</strong> we will stabilize our revenue, retain our core team, and emerge stronger than before.<br><br>
+I'll be having individual conversations today with those affected. <strong>I'm here to talk whenever you're ready.</strong><br><br>
+Thank you for trusting me. I believe in this team.<br><br>
+- CEO
+</div>
+<div class="reading-questions">
+<h4>🤔 Your Turn: Pause and Analyze</h4>
+<p style="margin-bottom: 10px;">Before reading the answer, ask yourself:</p>
+<p style="font-size: 13px; color: var(--text-secondary); margin-left: 20px; margin-bottom: 10px;">1. What's the difference between Email 1 and Email 2?<br>2. Which leadership skills does Email 2 integrate?</p>
+<p style="margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue-deep); margin-bottom: 10px;">✅ Model Answer:</p>
+<p style="font-size: 12px; color: var(--text-secondary); margin-left: 20px;">1. <strong>The difference:</strong> Email 1 is cold, unilateral, and defensive. It announces the decision without context, reasoning, or empathy. Email 2 is transparent, empathetic, and integrated. It frames the crisis, shares reasoning, acknowledges impact, recognizes the team, casts vision, and owns the decision.<br>2. <strong>Skills integrated:</strong> Email 2 integrates Vision (Day 43), Purpose (Day 44), Difficult Decision (Day 48), Recognition (Day 46), and Difficult Conversation (Day 47). It uses the right skill at the right moment, creating a leadership presence that feels authentic and human.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Micro Writing: Rewrite Cold Leadership to Integrated Leadership
+</h2>
+<p class="section-desc">Rewrite these cold leadership moments into integrated leadership communication.</p>
+</div>
+<div class="micro-writing-card">
+<h3>✍️ Cold → Integrated</h3>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Cold (Business): "We're changing our strategy. Effective immediately."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Cold</strong>"We're changing our strategy. Effective immediately."</div>
+<div class="rewrite-level professional"><strong>Integrated</strong>"Team, I want to share a difficult decision with you transparently. We face a choice between continuing our current strategy and pivoting to a new direction. Both have trade-offs. I've decided to pivot because [reasoning]. I know this affects people, and I don't take that lightly. Here's our vision for the next 6 months... I take full responsibility for this decision, and I welcome your questions."</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The integrated version frames the decision, shares reasoning, acknowledges impact, casts vision, and owns the decision. The cold version is defensive and destroys trust.</div>
+</div>
+<div class="rewrite-item">
+<div class="rewrite-task">❌ Cold (Life): "We're moving. I've decided."</div>
+<div class="rewrite-progression">
+<div class="rewrite-level weak"><strong>Cold</strong>"We're moving. I've decided."</div>
+<div class="rewrite-level professional"><strong>Integrated</strong>"Family, we're at a crossroads. If we move, we gain [benefit] but lose [cost]. I've decided to move because [reasoning]. I know this affects you deeply, and I don't take that lightly. Here's our vision for the next year... I take responsibility for this decision, and I want to hear your concerns."</div>
+</div>
+<div class="rewrite-why"><strong>WHY:</strong> The integrated version honors the family, explains the reasoning, acknowledges the emotional impact, casts vision, and invites dialogue. The cold version creates resentment.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-chats"></i>
+Speaking: 4 Scenarios
+</h2>
+<p class="section-desc">Practice integrated leadership in different contexts. Focus on reading the room and responding fluidly.</p>
+</div>
+<div class="scenario-grid">
+<div class="scenario-card casual">
+<span class="scenario-badge">🟢 Casual - 3-4 min</span>
+<h3>Scenario 1: Leading Your Family Through a Crisis</h3>
+<p class="scenario-context">Your family just faced a major setback (job loss, illness, or sudden move). You need to lead your family through the crisis with integrated leadership.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Integrate Vision + Purpose + Listening + Recognition + Difficult Conversation + Difficult Decision.
+<strong>📖 Model Opening:</strong> "Family, I want to share some difficult news with you..."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Frame the crisis honestly</li>
+<li>Cast a vision for recovery</li>
+<li>Listen to family concerns</li>
+<li>Recognize their strength</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card professional">
+<span class="scenario-badge">🔵 Neutral - 3-4 min</span>
+<h3>Scenario 2: Leading a Team Through Restructuring</h3>
+<p class="scenario-context">You are a manager leading a team through restructuring (layoffs, reorganization, or strategy pivot). The team is panicking.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Integrate all 6 leadership skills fluidly.
+<strong>📖 Model Opening:</strong> "Team, I want to share a difficult decision with you transparently..."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Make a difficult decision transparently</li>
+<li>Listen to team concerns</li>
+<li>Recognize their past work</li>
+<li>Cast a vision for the future</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card mixed">
+<span class="scenario-badge">🟣 Professional - 4-5 min</span>
+<h3>Scenario 3: Leading a Community Through Change</h3>
+<p class="scenario-context">You are the leader of a community (neighborhood, volunteer group, or professional organization). The community is facing a major change.</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Integrate Vision + Purpose + Listening + Recognition + Difficult Decision.
+<strong>📖 Model Opening:</strong> "We're at a crossroads, and I want to be transparent about what we're facing..."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Frame the change clearly</li>
+<li>Connect to community purpose</li>
+<li>Listen to member concerns</li>
+<li>Make a difficult decision transparently</li>
+</ul>
+</div>
+</div>
+<div class="scenario-card challenge">
+<span class="scenario-badge">🟠 Challenge - 5 min</span>
+<h3>Scenario 4: The Full Integration Challenge</h3>
+<p class="scenario-context">Morning: Lead family through crisis (Casual). Afternoon: Lead team through restructuring (Professional).</p>
+<div class="model-response">
+<strong>💡 Communication Goal:</strong> Shift register. Integrate all 6 skills in both contexts.
+<strong>📖 Model Opening (Life):</strong> "Family, we're facing a difficult moment..."
+<strong>📖 Model Opening (Business):</strong> "Team, I want to share a difficult decision with you transparently..."
+</div>
+<div class="scenario-requirements">
+<h4>Requirements:</h4>
+<ul>
+<li>Shift register flexibly</li>
+<li>Life = emotional ownership. Business = strategic transparency.</li>
+<li>Integrate all 6 skills in both</li>
+<li>Make it authentic and human in both</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-code"></i>
+Grammar in Context
+</h2>
+<p class="section-desc">Why we use these specific structures when leading with integrated presence.</p>
+</div>
+<div class="grammar-card">
+<h3>📝 Grammar for Integration</h3>
+<div class="grammar-item">
+<strong>1. Present Perfect for Completed Process ("I've weighed the options...")</strong>
+<span>We use "I've weighed...", "I've talked to...", "I've consulted..." to show a thorough process. It proves the decision wasn't made lightly.</span>
+</div>
+<div class="grammar-item">
+<strong>2. "I take responsibility" vs "The decision was made"</strong>
+<span>Active voice ("I take responsibility") shows ownership and courage. Passive voice ("The decision was made") sounds like avoidance and cowardice.</span>
+</div>
+<div class="grammar-item">
+<strong>3. Conditional for Vision ("In 6 months, we will have...")</strong>
+<span>We use "In 6 months, we will have..." to cast a compelling future. It shows confidence and direction.</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-target"></i>
+Self-Assessment: Are You a C1 Leader?</h2>
+<p class="section-desc">Check all that apply. Be honest with yourself.</p>
+</div>
+<div class="mastery-card">
+<h2>🎯 Leadership Integration Checklist</h2>
+<div class="mastery-item">
+<input type="checkbox" id="mastery1">
+<label for="mastery1"><strong>Vision (Day 43):</strong> I can cast a compelling vision for the future</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery2">
+<label for="mastery2"><strong>Purpose (Day 44):</strong> I can communicate our identity and values</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery3">
+<label for="mastery3"><strong>Listening (Day 45):</strong> I can listen deeply to understand concerns</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery4">
+<label for="mastery4"><strong>Recognition (Day 46):</strong> I can recognize specific actions and their impact</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery5">
+<label for="mastery5"><strong>Difficult Conv (Day 47):</strong> I can address hard issues with courage and empathy</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery6">
+<label for="mastery6"><strong>Difficult Dec (Day 48):</strong> I can make hard choices transparently</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery7">
+<label for="mastery7"><strong>Integration (Day 49):</strong> I can read situations and respond fluidly</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery8">
+<label for="mastery8"><strong>Integration (Day 49):</strong> I can use the right skill at the right moment</label>
+</div>
+<div class="mastery-item">
+<input type="checkbox" id="mastery9">
+<label for="mastery9"><strong>Integration (Day 49):</strong> I can lead with authentic presence, not mechanical patterns</label>
+</div>
+</div>
+<p style="margin-top: 16px; font-size: 14px; color: var(--text-secondary); text-align: center;">
+<strong>If you checked 7+ boxes, you're on your way to C1 leadership.</strong><br>
+<strong>If you checked 9 boxes, you're embodying C1 leadership presence.</strong>
+</p>
+</section>
+
+<section class="section">
+<div class="celebration-card">
+<h2>🎉 Milestone 7: Leadership Communication Complete!</h2>
+<p>Congratulations! You've completed Week 7. You've learned to lead with vision, purpose, empathy, and courage.</p>
+<p><strong>What you can now do:</strong></p>
+<ul>
+<li>Cast compelling visions that inspire</li>
+<li>Communicate purpose and identity</li>
+<li>Listen deeply and ask powerful questions</li>
+<li>Recognize specific actions and impact</li>
+<li>Have difficult conversations with courage</li>
+<li>Make difficult decisions transparently</li>
+<li>Integrate all skills into authentic leadership presence</li>
+</ul>
+<p style="margin-top: 20px;"><strong>Your leadership journey:</strong><br>
+Week 1-4: Foundation (Professional Communication)<br>
+Week 5: Strategic Workplace Communication<br>
+Week 6: Negotiation Thinking<br>
+<strong>Week 7: Leadership Communication ← You are here!</strong><br>
+Week 8: Advanced Leadership (Coming soon!)</p>
+</div>
+</section>
+
+<section class="quiz-section">
+<div class="section-header">
+<h2 class="section-title">
+<i class="ph-duotone ph-pencil-simple"></i>
+Quiz: Leadership Integration
+</h2>
+<p class="section-desc">9 situational questions. Choose the BEST response.</p>
+</div>
+<div class="quiz-question">
+<h4>1. (Judgement) Your team is panicking after a major setback. Best first move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Don't worry, everything will be fine."</div>
+<div class="quiz-option">B. "I hear your concern. Let me share our vision for how we'll overcome this."</div>
+<div class="quiz-option">C. "We need to work harder."</div>
+<div class="quiz-option">D. "This is just business."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>2. (Judgement) A team member asks why you made a difficult decision. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Because I'm the boss."</div>
+<div class="quiz-option">B. "I weighed the options, and this gives us the best chance of recovery. I take full responsibility."</div>
+<div class="quiz-option">C. "The board decided."</div>
+<div class="quiz-option">D. "We'll revisit this next quarter."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>3. (Judgement) Which response shows "Integrated Leadership (C1)"?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We've decided. Effective immediately."</div>
+<div class="quiz-option">B. "What does everyone think?" (but ignores input)</div>
+<div class="quiz-option">C. "Here's the difficult choice, here's my reasoning, I own this decision, and I recognize your hard work."</div>
+<div class="quiz-option">D. "Let's think about this more."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>4. (Judgement) After sharing a difficult decision, what's the best next move?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Any questions? No? Good."</div>
+<div class="quiz-option">B. "I know this affects people, and I don't take that lightly. I welcome your questions."</div>
+<div class="quiz-option">C. "This is just business."</div>
+<div class="quiz-option">D. "The decision has been made."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>5. (Judgement) A family member disagrees with your decision. Best response?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I've already decided, so drop it."</div>
+<div class="quiz-option">B. "I hear your concern. Here's why I made this choice, and I take responsibility for it. Let's talk through it."</div>
+<div class="quiz-option">C. "Fine, we'll do it your way."</div>
+<div class="quiz-option">D. "You don't understand the big picture."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>6. (Life) You must choose between a dream vacation and saving for a house. Best way to frame it?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "We're going to Europe."</div>
+<div class="quiz-option">B. "We're at a crossroads: dream vacation or house savings. Both matter, but we can't do both. I've chosen the house because..."</div>
+<div class="quiz-option">C. "What do you guys want to do?"</div>
+<div class="quiz-option">D. "Europe is too expensive."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>7. (Business) You must cut a beloved project. Best way to name the trade-off?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "Project X is a waste of time."</div>
+<div class="quiz-option">B. "Project X has potential, but our core product needs attention now. If we continue X, we risk the core."</div>
+<div class="quiz-option">C. "We don't have the budget."</div>
+<div class="quiz-option">D. "The board killed it."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>8. (Judgement) Which phrase shows "Mechanical Leadership (B2)"?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "I take full responsibility."</div>
+<div class="quiz-option">B. "Here's my reasoning."</div>
+<div class="quiz-option">C. "I've decided, and I welcome your questions."</div>
+<div class="quiz-option">D. "I've used all 6 leadership skills in this conversation."</div>
+</div>
+</div>
+<div class="quiz-question">
+<h4>9. (Judgement) Which phrase shows "Integrated Leadership (C1)"?</h4>
+<div class="quiz-options">
+<div class="quiz-option">A. "The board decided."</div>
+<div class="quiz-option">B. "It was out of my hands."</div>
+<div class="quiz-option">C. "I take full responsibility for this decision."</div>
+<div class="quiz-option">D. "Everyone agreed on this."</div>
+</div>
+</div>
+<button class="check-btn">
+<i class="ph-duotone ph-check"></i>
+Check Answers
+</button>
+</section>
+
+<div class="day-navigation">
+<a href="week-07-day-48.html" class="nav-card">
+<div class="nav-label">← Previous Day</div>
+<div class="nav-title">Day 48: Difficult Decisions</div>
+</a>
+<a href="week-08.html" class="nav-card">
+<div class="nav-label">Next Week →</div>
+<div class="nav-title">Week 8: Advanced Leadership</div>
+</a>
+</div>
+
+<div class="complete-container">
+<button class="complete-btn" onclick="markComplete()">
+<i class="ph-duotone ph-check-circle"></i>
+<span>Mark Day 49 Complete & Finish Week 7</span>
+</button>
+<div class="complete-message">B2 leaders collect skills. C1 leaders embody presence. 👑</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-fox">🦊</div>
+<div class="footer-title">Professional Fluency Roadmap</div>
+<div class="footer-tagline">Week 7 · Day 49 · Leadership Integration · Milestone 7 Complete!</div>
+</div>
+</footer>
+
+<script>
+let voices = [];
+let selectedVoice = null;
+
+function loadVoices() {
+voices = speechSynthesis.getVoices();
+selectedVoice =
+voices.find(v => v.name.includes('Google US English')) ||
+voices.find(v => v.name === 'Microsoft Zira' && v.lang === 'en-US') ||
+voices.find(v => v.name === 'Microsoft David' && v.lang === 'en-US') ||
+voices.find(v => v.lang === 'en-US') ||
+voices.find(v => v.lang.includes('en'));
+console.log('Selected voice:', selectedVoice?.name);
+}
+
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+speechSynthesis.onvoiceschanged = loadVoices;
+}
+setTimeout(loadVoices, 500);
+setTimeout(loadVoices, 1000);
+
+function playAudio(text) {
+if (!('speechSynthesis' in window)) {
+alert('Trình duyệt không hỗ trợ phát âm thanh');
+return;
+}
+speechSynthesis.cancel();
+setTimeout(() => {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'en-US';
+utterance.rate = 0.95;
+utterance.pitch = 1.05;
+utterance.volume = 1.0;
+if (selectedVoice) {
+utterance.voice = selectedVoice;
+}
+speechSynthesis.speak(utterance);
+}, 100);
+}
+
+function stopSpeaking() {
+if ('speechSynthesis' in window) {
+speechSynthesis.cancel();
+}
+}
+
+function playDialogue(type) {
+if (type === 'simulation') {
+const simText = `CEO: Team, I want to share some difficult news with you transparently. We've lost our largest client, which represents 40% of our revenue. This is a critical moment for our company, and I want to be honest about what it means and what we're going to do about it. Team Member 1: What does this mean for our jobs? CEO: I hear your concern, and I want to address it directly. First, let me share our vision: We are not just a company that serves clients. We are a team that solves hard problems together. This setback doesn't define us — how we respond does. Team Member 2: But we're going to have to lay people off, aren't we? CEO: That's a valid question, and I don't want to sugarcoat it. Yes, we will need to make some difficult decisions. But before I share those, I want to recognize what this team has accomplished. You've built something incredible. Your work has mattered, and it continues to matter. Team Member 3: I've been here since day one. I've poured my heart into this company. CEO: I see that, and your dedication hasn't gone unnoticed. Your commitment is exactly what makes this team special. That's who we are — people who don't give up when it gets hard. Team Member 4: So what's the plan? CEO: Here's the difficult decision I've made. We need to reduce our headcount by 15% to survive this crisis. The trade-off is painful: we lose talented people now, but we save the company for the long term. I've weighed the options, and this is the path that gives us the best chance of recovery. Team Member 1: Who's getting laid off? CEO: I know this affects people deeply, and I don't take that lightly. I'll be having individual conversations today with those affected. I take full responsibility for this decision, and I welcome your questions. Team Member 5: How do we move forward? CEO: Here's what success looks like for us. In 6 months, we will have stabilized our revenue, retained our core team, and emerged stronger than before. We will get there by supporting each other, staying focused on our mission, and making hard choices when we need to. Team Member 2: What can we do to help? CEO: I'd like to hear your ideas. What do you think we should prioritize? Help me understand what matters most to you right now. Team Member 3: I think we should focus on retaining our best clients. CEO: That's a powerful insight. You're right — client retention is our top priority. Thank you for speaking up. That's exactly the kind of leadership we need right now. Team Member 4: I'm worried about morale. How do we keep the team motivated? CEO: That's a valid concern. Morale will be tough, but here's how we'll address it: we'll have weekly check-ins, we'll be transparent about our progress, and we'll celebrate small wins along the way. We'll get through this by being honest with each other and supporting each other. Team Member 1: I'm still processing this. It's a lot to take in. CEO: I understand. This is hard news, and it's okay to feel shocked, angry, or scared. Take the time you need to process. I'm here to talk whenever you're ready. Team Member 5: Thank you for being honest with us. CEO: Thank you for trusting me. I know this is a difficult moment, but I believe in this team. We've faced challenges before, and we've overcome them. We will overcome this too.`;
+playAudio(simText);
+}
+}
+
+function markComplete() {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (!completed.includes('day-49')) {
+completed.push('day-49');
+localStorage.setItem('completedDays', JSON.stringify(completed));
+}
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-confetti"></i><span>🎉 Week 7 Complete! Milestone 7 Achieved!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+btn.style.boxShadow = '0 8px 28px rgba(16, 185, 129, 0.4)';
+const msg = document.querySelector('.complete-message');
+msg.textContent = 'B2 leaders collect skills. C1 leaders embody presence. 👑';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+if (completed.includes('day-49')) {
+const btn = document.querySelector('.complete-btn');
+btn.innerHTML = '<i class="ph-duotone ph-check-circle"></i><span>✅ Week 7 Completed - Milestone 7 Achieved!</span>';
+btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+}
+});
+</script>
+</body>
+</html>
